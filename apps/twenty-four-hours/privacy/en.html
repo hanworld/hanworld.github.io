@@ -5,239 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twenty Four Hours - Privacy Policy</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .lang-selector {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        .lang-selector a {
-            margin-left: 10px;
-            color: #666;
-            text-decoration: none;
-        }
-        .lang-selector a:hover {
-            color: #007AFF;
-        }
-        .lang-selector a.active {
-            color: #007AFF;
-            font-weight: bold;
-        }
-        h1 {
-            color: #1a1a2e;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-        .app-name {
-            color: #007AFF;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        .update-date {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #1a1a2e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 2px solid #007AFF;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #444;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f8f9fa;
-        }
-        .contact {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #666;
-            font-size: 14px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #333; line-height: 1.6; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background: #1e293b; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94a3b8; }
+        .breadcrumb { margin-top: 16px; font-size: 0.9rem; color: #94a3b8; }
+        .breadcrumb a { color: #cbd5e1; }
+        .lang-nav { margin-top: 12px; }
+        .lang-nav a { color: #cbd5e1; margin: 0 6px; font-size: 0.85rem; }
+        .lang-nav a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #f8fafc; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #475569; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #475569; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+        section li strong { color: #1e293b; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+        .info-table th { color: #1e293b; background: #f1f5f9; }
+        .info-table td { color: #475569; }
+
+        .contact-box { background: #f1f5f9; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box ul { margin-bottom: 0; }
+
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #cbd5e1; }
     </style>
 </head>
 <body>
+
+<header>
     <div class="container">
-        <div class="card">
-            <div class="lang-selector">
-                <a href="index.html">한국어</a>
-                <a href="en.html" class="active">English</a>
-                <a href="ja.html">日本語</a>
-                <a href="zh.html">中文</a>
-            </div>
-
-            <div style="display:inline-flex; align-items:center; gap:16px; margin-bottom:10px;">
-                <img src="../images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:14px;">
-                <div style="text-align:left;">
-                    <h1>Privacy Policy</h1>
-                    <div class="app-name">Twenty Four Hours</div>
-                </div>
-            </div>
-            <div class="update-date">Last Updated: January 26, 2025</div>
-
-            <p>Willee Project ("Developer") values the privacy of Twenty Four Hours ("App") users and complies with applicable privacy laws and regulations.</p>
-
-            <h2>1. Information We Collect</h2>
-
-            <h3>1.1 Required Information</h3>
-            <p>No information is collected for basic app functionality. Schedule data is stored only on your device.</p>
-
-            <h3>1.2 Optional Information</h3>
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Purpose</th>
-                    <th>Collection Timing</th>
-                </tr>
-                <tr>
-                    <td>Google Account (email)</td>
-                    <td>Cloud sync service</td>
-                    <td>When user enables sync</td>
-                </tr>
-                <tr>
-                    <td>Advertising ID</td>
-                    <td>Personalized advertising</td>
-                    <td>When ads are displayed</td>
-                </tr>
-                <tr>
-                    <td>Purchase Information</td>
-                    <td>In-app purchase processing and ad removal</td>
-                    <td>When making a purchase</td>
-                </tr>
-            </table>
-
-            <h2>2. Data Storage</h2>
-
-            <h3>2.1 Local Storage</h3>
-            <p>Schedule data, completion records, and app settings are stored locally on your device and are not transmitted to the developer's servers.</p>
-
-            <h3>2.2 Cloud Storage (Optional)</h3>
-            <p>If you enable cloud sync, your data is stored in your own Google Drive. The developer cannot access this data.</p>
-
-            <h2>3. Third-Party Services</h2>
-            <p>The app uses the following third-party services:</p>
-            <ul>
-                <li><strong>Google AdMob</strong>: Advertising (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
-                <li><strong>Google Play Billing</strong>: In-app purchase processing</li>
-                <li><strong>Google Drive API</strong>: Cloud sync (optional)</li>
-                <li><strong>Google Sign-In</strong>: Account authentication (optional)</li>
-            </ul>
-
-            <h2>4. Data Retention and Deletion</h2>
-            <ul>
-                <li>Local data: Automatically deleted when you uninstall the app.</li>
-                <li>Cloud data: You can delete it directly from Google Drive.</li>
-                <li>Advertising ID: Can be reset or disabled in device settings.</li>
-            </ul>
-
-            <h2>5. Your Rights</h2>
-            <p>You have the following rights:</p>
-            <ul>
-                <li>Choose whether to use cloud sync</li>
-                <li>Remove ads through in-app purchase</li>
-                <li>Delete all local data by uninstalling the app</li>
-                <li>Disconnect your Google account</li>
-            </ul>
-
-            <h2>6. Children's Privacy</h2>
-            <p>This app is not intended for children under 13 years of age, and we do not knowingly collect personal information from children.</p>
-
-            <h2>7. Account and Data Deletion</h2>
-            <p>You can delete your data at any time.</p>
-
-            <h3>7.1 Delete Local Data</h3>
-            <p>All data stored on your device (schedules, completion records, settings) will be automatically deleted when you uninstall the app.</p>
-            <ul>
-                <li><strong>Android</strong>: Settings → Apps → Twenty Four Hours → Uninstall</li>
-                <li><strong>Windows</strong>: Delete the app folder or remove via Control Panel</li>
-            </ul>
-
-            <h3>7.2 Delete Cloud Data</h3>
-            <p>To delete backup data stored in Google Drive:</p>
-            <ul>
-                <li>Go to <a href="https://drive.google.com" target="_blank">Google Drive</a></li>
-                <li>Navigate to "My Drive" → App data folder and delete "twenty_four_hours_backup.json.gz"</li>
-                <li>Or disconnect the app from <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
-            </ul>
-
-            <h3>7.3 Disconnect Google Account</h3>
-            <p>To disconnect your Google account from the app:</p>
-            <ul>
-                <li>In-app Settings → Cloud Sync → Sign Out</li>
-                <li>Or remove "Twenty Four Hours" access from <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
-            </ul>
-
-            <h3>7.4 Data Deletion Request</h3>
-            <p>If you have difficulty deleting data using the above methods, please contact us and we will assist you.</p>
-
-            <h2>8. Changes to This Policy</h2>
-            <p>This privacy policy may be updated due to legal requirements or service changes. We will notify you of significant changes through in-app notifications.</p>
-
-            <div class="contact">
-                <h2>9. Contact Us</h2>
-                <p>If you have any questions about privacy, please contact us:</p>
-                <ul>
-                    <li><strong>Developer</strong>: Willee Project</li>
-                    <li><strong>Email</strong>: mstaelee@gmail.com</li>
-                </ul>
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Privacy Policy</h1>
+                <p>Twenty Four Hours</p>
             </div>
         </div>
-        <footer>
-            &copy; 2025 Willee Project. All rights reserved.
-        </footer>
+        <div class="breadcrumb"><a href="/">Willee Project</a> &gt; <a href="../">Twenty Four Hours</a> &gt; Privacy Policy</div>
+        <div class="lang-nav">
+            <a href="index.html">한국어</a>
+            <a href="en.html" class="active">English</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
     </div>
+</header>
+
+<section>
+    <div class="container">
+        <p style="color:#64748b; font-size:0.9rem;">Last Updated: January 26, 2025</p>
+        <p>Willee Project ("Developer") values the privacy of Twenty Four Hours ("App") users and complies with applicable privacy laws and regulations.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Information We Collect</h2>
+        <h3>1.1 Required Information</h3>
+        <p>No information is collected for basic app functionality. Schedule data is stored only on your device.</p>
+        <h3>1.2 Optional Information</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>Purpose</th><th>Collection Timing</th></tr>
+            <tr><td>Google Account (email)</td><td>Cloud sync service</td><td>When user enables sync</td></tr>
+            <tr><td>Advertising ID</td><td>Personalized advertising</td><td>When ads are displayed</td></tr>
+            <tr><td>Purchase Information</td><td>In-app purchase processing and ad removal</td><td>When making a purchase</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Data Storage</h2>
+        <h3>2.1 Local Storage</h3>
+        <p>Schedule data, completion records, and app settings are stored locally on your device and are not transmitted to the developer's servers.</p>
+        <h3>2.2 Cloud Storage (Optional)</h3>
+        <p>If you enable cloud sync, your data is stored in your own Google Drive. The developer cannot access this data.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. Third-Party Services</h2>
+        <p>The app uses the following third-party services:</p>
+        <ul>
+            <li><strong>Google AdMob</strong>: Advertising (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
+            <li><strong>Google Play Billing</strong>: In-app purchase processing</li>
+            <li><strong>Google Drive API</strong>: Cloud sync (optional)</li>
+            <li><strong>Google Sign-In</strong>: Account authentication (optional)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Data Retention and Deletion</h2>
+        <ul>
+            <li>Local data: Automatically deleted when you uninstall the app.</li>
+            <li>Cloud data: You can delete it directly from Google Drive.</li>
+            <li>Advertising ID: Can be reset or disabled in device settings.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Your Rights</h2>
+        <p>You have the following rights:</p>
+        <ul>
+            <li>Choose whether to use cloud sync</li>
+            <li>Remove ads through in-app purchase</li>
+            <li>Delete all local data by uninstalling the app</li>
+            <li>Disconnect your Google account</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Children's Privacy</h2>
+        <p>This app is not intended for children under 13 years of age, and we do not knowingly collect personal information from children.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Account and Data Deletion</h2>
+        <p>You can delete your data at any time.</p>
+        <h3>7.1 Delete Local Data</h3>
+        <p>All data stored on your device (schedules, completion records, settings) will be automatically deleted when you uninstall the app.</p>
+        <ul>
+            <li><strong>Android</strong>: Settings → Apps → Twenty Four Hours → Uninstall</li>
+            <li><strong>Windows</strong>: Delete the app folder or remove via Control Panel</li>
+        </ul>
+        <h3>7.2 Delete Cloud Data</h3>
+        <p>To delete backup data stored in Google Drive:</p>
+        <ul>
+            <li>Go to <a href="https://drive.google.com" target="_blank">Google Drive</a></li>
+            <li>Navigate to "My Drive" → App data folder and delete "twenty_four_hours_backup.json.gz"</li>
+            <li>Or disconnect the app from <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+        </ul>
+        <h3>7.3 Disconnect Google Account</h3>
+        <p>To disconnect your Google account from the app:</p>
+        <ul>
+            <li>In-app Settings → Cloud Sync → Sign Out</li>
+            <li>Or remove "Twenty Four Hours" access from <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+        </ul>
+        <h3>7.4 Data Deletion Request</h3>
+        <p>If you have difficulty deleting data using the above methods, please contact us and we will assist you.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. Changes to This Policy</h2>
+        <p>This privacy policy may be updated due to legal requirements or service changes. We will notify you of significant changes through in-app notifications.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. Contact Us</h2>
+        <div class="contact-box">
+            <p>If you have any questions about privacy, please contact us:</p>
+            <ul>
+                <li><strong>Developer</strong>: Willee Project</li>
+                <li><strong>Email</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/">Home</a> | <a href="../">Twenty Four Hours</a></p>
+</footer>
+
 </body>
 </html>

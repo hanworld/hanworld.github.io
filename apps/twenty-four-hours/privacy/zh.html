@@ -5,239 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twenty Four Hours - 隐私政策</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .lang-selector {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        .lang-selector a {
-            margin-left: 10px;
-            color: #666;
-            text-decoration: none;
-        }
-        .lang-selector a:hover {
-            color: #007AFF;
-        }
-        .lang-selector a.active {
-            color: #007AFF;
-            font-weight: bold;
-        }
-        h1 {
-            color: #1a1a2e;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-        .app-name {
-            color: #007AFF;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        .update-date {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #1a1a2e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 2px solid #007AFF;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #444;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f8f9fa;
-        }
-        .contact {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #666;
-            font-size: 14px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #333; line-height: 1.6; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background: #1e293b; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94a3b8; }
+        .breadcrumb { margin-top: 16px; font-size: 0.9rem; color: #94a3b8; }
+        .breadcrumb a { color: #cbd5e1; }
+        .lang-nav { margin-top: 12px; }
+        .lang-nav a { color: #cbd5e1; margin: 0 6px; font-size: 0.85rem; }
+        .lang-nav a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #f8fafc; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #475569; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #475569; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+        section li strong { color: #1e293b; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+        .info-table th { color: #1e293b; background: #f1f5f9; }
+        .info-table td { color: #475569; }
+
+        .contact-box { background: #f1f5f9; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box ul { margin-bottom: 0; }
+
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #cbd5e1; }
     </style>
 </head>
 <body>
+
+<header>
     <div class="container">
-        <div class="card">
-            <div class="lang-selector">
-                <a href="index.html">한국어</a>
-                <a href="en.html">English</a>
-                <a href="ja.html">日本語</a>
-                <a href="zh.html" class="active">中文</a>
-            </div>
-
-            <div style="display:inline-flex; align-items:center; gap:16px; margin-bottom:10px;">
-                <img src="../images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:14px;">
-                <div style="text-align:left;">
-                    <h1>隐私政策</h1>
-                    <div class="app-name">Twenty Four Hours</div>
-                </div>
-            </div>
-            <div class="update-date">最后更新：2025年1月26日</div>
-
-            <p>Willee Project（以下简称"开发者"）重视Twenty Four Hours（以下简称"应用"）用户的隐私，并遵守相关法律法规。</p>
-
-            <h2>1. 我们收集的信息</h2>
-
-            <h3>1.1 必要信息</h3>
-            <p>使用应用基本功能无需收集任何信息。日程数据仅存储在您的设备上。</p>
-
-            <h3>1.2 可选信息</h3>
-            <table>
-                <tr>
-                    <th>项目</th>
-                    <th>收集目的</th>
-                    <th>收集时机</th>
-                </tr>
-                <tr>
-                    <td>Google账户信息（邮箱）</td>
-                    <td>提供云同步服务</td>
-                    <td>用户启用同步功能时</td>
-                </tr>
-                <tr>
-                    <td>广告标识符</td>
-                    <td>提供个性化广告</td>
-                    <td>显示广告时</td>
-                </tr>
-                <tr>
-                    <td>购买信息</td>
-                    <td>应用内购买处理和移除广告</td>
-                    <td>进行应用内购买时</td>
-                </tr>
-            </table>
-
-            <h2>2. 数据存储</h2>
-
-            <h3>2.1 本地存储</h3>
-            <p>日程数据、完成记录和应用设置存储在您的设备本地，不会传输到开发者的服务器。</p>
-
-            <h3>2.2 云存储（可选）</h3>
-            <p>如果您启用云同步功能，数据将存储在您自己的Google Drive中。开发者无法访问这些数据。</p>
-
-            <h2>3. 第三方服务</h2>
-            <p>应用使用以下第三方服务：</p>
-            <ul>
-                <li><strong>Google AdMob</strong>：广告服务（<a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a>）</li>
-                <li><strong>Google Play结算</strong>：应用内购买处理</li>
-                <li><strong>Google Drive API</strong>：云同步（可选）</li>
-                <li><strong>Google登录</strong>：账户验证（可选）</li>
-            </ul>
-
-            <h2>4. 数据保留和删除</h2>
-            <ul>
-                <li>本地数据：卸载应用时自动删除。</li>
-                <li>云数据：您可以直接从Google Drive中删除。</li>
-                <li>广告标识符：可在设备设置中重置或禁用。</li>
-            </ul>
-
-            <h2>5. 您的权利</h2>
-            <p>您拥有以下权利：</p>
-            <ul>
-                <li>选择是否使用云同步功能</li>
-                <li>通过应用内购买移除广告</li>
-                <li>通过卸载应用删除所有本地数据</li>
-                <li>断开Google账户连接</li>
-            </ul>
-
-            <h2>6. 儿童隐私</h2>
-            <p>本应用不面向13岁以下儿童，我们不会故意收集儿童的个人信息。</p>
-
-            <h2>7. 账户和数据删除</h2>
-            <p>您可以随时删除您的数据。</p>
-
-            <h3>7.1 删除本地数据</h3>
-            <p>设备上存储的所有数据（日程、完成记录、设置）将在卸载应用时自动删除。</p>
-            <ul>
-                <li><strong>Android</strong>：设置 → 应用 → Twenty Four Hours → 卸载</li>
-                <li><strong>Windows</strong>：删除应用文件夹或通过控制面板删除</li>
-            </ul>
-
-            <h3>7.2 删除云数据</h3>
-            <p>要删除存储在Google Drive中的备份数据：</p>
-            <ul>
-                <li>访问<a href="https://drive.google.com" target="_blank">Google Drive</a></li>
-                <li>在"我的云端硬盘"→ 应用数据文件夹中删除"twenty_four_hours_backup.json.gz"</li>
-                <li>或在<a href="https://myaccount.google.com/permissions" target="_blank">Google账户权限管理</a>中断开应用连接</li>
-            </ul>
-
-            <h3>7.3 断开Google账户连接</h3>
-            <p>要从应用断开Google账户连接：</p>
-            <ul>
-                <li>应用内设置 → 云同步 → 退出登录</li>
-                <li>或在<a href="https://myaccount.google.com/permissions" target="_blank">Google账户权限管理</a>中删除"Twenty Four Hours"的访问权限</li>
-            </ul>
-
-            <h3>7.4 数据删除请求</h3>
-            <p>如果您无法通过上述方法删除数据，请联系我们，我们将协助您完成删除。</p>
-
-            <h2>8. 政策变更</h2>
-            <p>本隐私政策可能因法律要求或服务变更而更新。如有重大变更，我们将通过应用内通知告知您。</p>
-
-            <div class="contact">
-                <h2>9. 联系我们</h2>
-                <p>如有任何隐私相关问题，请联系我们：</p>
-                <ul>
-                    <li><strong>开发者</strong>：Willee Project</li>
-                    <li><strong>邮箱</strong>：mstaelee@gmail.com</li>
-                </ul>
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>隐私政策</h1>
+                <p>Twenty Four Hours</p>
             </div>
         </div>
-        <footer>
-            &copy; 2025 Willee Project. All rights reserved.
-        </footer>
+        <div class="breadcrumb"><a href="/">Willee Project</a> &gt; <a href="../">Twenty Four Hours</a> &gt; 隐私政策</div>
+        <div class="lang-nav">
+            <a href="index.html">한국어</a>
+            <a href="en.html">English</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
     </div>
+</header>
+
+<section>
+    <div class="container">
+        <p style="color:#64748b; font-size:0.9rem;">最后更新：2025年1月26日</p>
+        <p>Willee Project（以下简称"开发者"）重视Twenty Four Hours（以下简称"应用"）用户的隐私，并遵守相关法律法规。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 我们收集的信息</h2>
+        <h3>1.1 必要信息</h3>
+        <p>使用应用基本功能无需收集任何信息。日程数据仅存储在您的设备上。</p>
+        <h3>1.2 可选信息</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>收集目的</th><th>收集时机</th></tr>
+            <tr><td>Google账户信息（邮箱）</td><td>提供云同步服务</td><td>用户启用同步功能时</td></tr>
+            <tr><td>广告标识符</td><td>提供个性化广告</td><td>显示广告时</td></tr>
+            <tr><td>购买信息</td><td>应用内购买处理和移除广告</td><td>进行应用内购买时</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 数据存储</h2>
+        <h3>2.1 本地存储</h3>
+        <p>日程数据、完成记录和应用设置存储在您的设备本地，不会传输到开发者的服务器。</p>
+        <h3>2.2 云存储（可选）</h3>
+        <p>如果您启用云同步功能，数据将存储在您自己的Google Drive中。开发者无法访问这些数据。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 第三方服务</h2>
+        <p>应用使用以下第三方服务：</p>
+        <ul>
+            <li><strong>Google AdMob</strong>：广告服务（<a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a>）</li>
+            <li><strong>Google Play结算</strong>：应用内购买处理</li>
+            <li><strong>Google Drive API</strong>：云同步（可选）</li>
+            <li><strong>Google登录</strong>：账户验证（可选）</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 数据保留和删除</h2>
+        <ul>
+            <li>本地数据：卸载应用时自动删除。</li>
+            <li>云数据：您可以直接从Google Drive中删除。</li>
+            <li>广告标识符：可在设备设置中重置或禁用。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 您的权利</h2>
+        <p>您拥有以下权利：</p>
+        <ul>
+            <li>选择是否使用云同步功能</li>
+            <li>通过应用内购买移除广告</li>
+            <li>通过卸载应用删除所有本地数据</li>
+            <li>断开Google账户连接</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 儿童隐私</h2>
+        <p>本应用不面向13岁以下儿童，我们不会故意收集儿童的个人信息。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 账户和数据删除</h2>
+        <p>您可以随时删除您的数据。</p>
+        <h3>7.1 删除本地数据</h3>
+        <p>设备上存储的所有数据（日程、完成记录、设置）将在卸载应用时自动删除。</p>
+        <ul>
+            <li><strong>Android</strong>：设置 → 应用 → Twenty Four Hours → 卸载</li>
+            <li><strong>Windows</strong>：删除应用文件夹或通过控制面板删除</li>
+        </ul>
+        <h3>7.2 删除云数据</h3>
+        <p>要删除存储在Google Drive中的备份数据：</p>
+        <ul>
+            <li>访问<a href="https://drive.google.com" target="_blank">Google Drive</a></li>
+            <li>在"我的云端硬盘"→ 应用数据文件夹中删除"twenty_four_hours_backup.json.gz"</li>
+            <li>或在<a href="https://myaccount.google.com/permissions" target="_blank">Google账户权限管理</a>中断开应用连接</li>
+        </ul>
+        <h3>7.3 断开Google账户连接</h3>
+        <p>要从应用断开Google账户连接：</p>
+        <ul>
+            <li>应用内设置 → 云同步 → 退出登录</li>
+            <li>或在<a href="https://myaccount.google.com/permissions" target="_blank">Google账户权限管理</a>中删除"Twenty Four Hours"的访问权限</li>
+        </ul>
+        <h3>7.4 数据删除请求</h3>
+        <p>如果您无法通过上述方法删除数据，请联系我们，我们将协助您完成删除。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 政策变更</h2>
+        <p>本隐私政策可能因法律要求或服务变更而更新。如有重大变更，我们将通过应用内通知告知您。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 联系我们</h2>
+        <div class="contact-box">
+            <p>如有任何隐私相关问题，请联系我们：</p>
+            <ul>
+                <li><strong>开发者</strong>：Willee Project</li>
+                <li><strong>邮箱</strong>：<a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/">首页</a> | <a href="../">Twenty Four Hours</a></p>
+</footer>
+
 </body>
 </html>
