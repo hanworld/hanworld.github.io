@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twenty Four Hours ユーザーマニュアル - Willee Project</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #333; line-height: 1.6; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background: #1e293b; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94a3b8; }
+        .breadcrumb { margin-top: 16px; font-size: 0.9rem; color: #94a3b8; }
+        .breadcrumb a { color: #cbd5e1; }
+        .lang-nav { margin-top: 12px; }
+        .lang-nav a { color: #cbd5e1; margin: 0 6px; font-size: 0.85rem; }
+        .lang-nav a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #f8fafc; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #475569; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #475569; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+        section li strong { color: #1e293b; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+        .info-table th { color: #1e293b; background: #f1f5f9; width: 30%; }
+        .info-table td { color: #475569; }
+
+        .tip-box { background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400e; }
+
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #cbd5e1; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Twenty Four Hours</h1>
+        <p>ユーザーマニュアル</p>
+        <div class="breadcrumb"><a href="/">Willee Project</a> &gt; <a href="./">Twenty Four Hours</a> &gt; マニュアル</div>
+        <div class="lang-nav">
+            <a href="manual_ko.html">한국어</a>
+            <a href="manual_en.html">English</a>
+            <a href="manual_ja.html" class="active">日本語</a>
+            <a href="manual_zh.html">中文</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>アプリ情報</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>Twenty Four Hours</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android, Windows</td></tr>
+        </table>
+        <p>24時間を一目で確認できるアナログ時計とスケジュール管理アプリです。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>メイン画面</h2>
+        <h3>アナログ時計</h3>
+        <ul>
+            <li>24時間形式のアナログ時計が画面上部に表示されます</li>
+            <li>スケジュールは時計の背景に色付きのアーク（弧）で表示されます</li>
+            <li>スケジュールのアークをタップすると詳細情報が表示されます</li>
+            <li>時計を<strong>ダブルタップ</strong>するとフルスクリーンモードに切り替わります</li>
+        </ul>
+        <h3>フルスクリーンモード</h3>
+        <ul>
+            <li>ダブルタップで開始/終了</li>
+            <li>スケジュールのアークをタップすると右下に詳細カードが表示されます</li>
+            <li><strong>左右スワイプ</strong>：時計スタイル変更（ミニマル ↔ クラシック）</li>
+            <li><strong>上下スワイプ</strong>：秒針スタイル変更（スムーズ ↔ チクタク）</li>
+        </ul>
+        <h3>デジタル時計</h3>
+        <ul>
+            <li>上部のアプリバーに現在時刻がHH:MM:SS形式で表示されます</li>
+        </ul>
+        <h3>スケジュールリストパネル</h3>
+        <ul>
+            <li>画面下部で現在と今日のスケジュールを確認できます</li>
+            <li><strong>現在</strong>：今進行中のスケジュール</li>
+            <li><strong>今日</strong>：今日のすべてのスケジュール</li>
+            <li>左右スワイプまたは上部ボタンで切り替えられます</li>
+            <li>➕ボタンで新しいスケジュールを追加できます</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>スケジュール管理</h2>
+        <h3>新規スケジュール作成</h3>
+        <ol>
+            <li>メイン画面の➕ボタンまたはスケジュール管理画面の➕ボタンをタップ</li>
+            <li>タイトルを入力（必須、前後の空白は自動的に削除されます）</li>
+            <li>詳細を入力（任意）</li>
+            <li>開始/終了の日付と時刻を設定</li>
+            <li>必要に応じて終日、繰り返し、重要度、色を設定</li>
+            <li>保存ボタンをタップ</li>
+        </ol>
+        <h3>終日イベント</h3>
+        <ul>
+            <li>終日トグルをオンにすると、時刻指定なしの終日スケジュールになります</li>
+            <li>複数日にわたる終日スケジュールも可能です</li>
+        </ul>
+        <h3>繰り返しスケジュール</h3>
+        <ul>
+            <li><strong>繰り返しタイプ</strong>：毎日、毎週、毎月、毎年</li>
+            <li><strong>繰り返し終了</strong>：続ける（無期限）、日付まで、回数</li>
+            <li><strong>毎週の繰り返し</strong>：複数の曜日を選択できます（デフォルト：開始曜日）
+                <ul>
+                    <li>すべての曜日を選択解除できます。曜日が選択されていない状態で保存すると警告が表示されます</li>
+                </ul>
+            </li>
+            <li><strong>注意</strong>：スケジュールの期間が繰り返し周期より長い場合、その繰り返しタイプは選択できません
+                <ul>
+                    <li>例：26時間のスケジュール → 毎日繰り返し不可</li>
+                    <li>例：8日間のスケジュール → 毎週繰り返し不可</li>
+                    <li>期間変更により繰り返し設定が解除された場合、警告メッセージが表示されます</li>
+                    <li>警告状態で保存すると確認ダイアログが表示されます</li>
+                </ul>
+            </li>
+            <li><strong>編集時の達成記録</strong>：繰り返しスケジュール編集時、過去の達成記録は保持され、無効な未来の記録のみ整理されます</li>
+        </ul>
+        <h3>重要度設定</h3>
+        <ul>
+            <li>★ <strong>自分らしく</strong>：続けるだけで十分です</li>
+            <li>★★ <strong>いい調子</strong>：やり遂げれば今日が輝きます</li>
+            <li>★★★ <strong>あなたならできる</strong>：きっと誇りに思えるはず</li>
+        </ul>
+        <h3>完了チェック</h3>
+        <ul>
+            <li>スケジュールリストのチェックボックスをタップして完了マークを付けられます</li>
+            <li>完了したスケジュールは取り消し線で表示されます</li>
+            <li>繰り返しスケジュールは各発生日ごとに個別にチェックできます</li>
+        </ul>
+        <h3>達成記録管理</h3>
+        <ul>
+            <li>⋮メニューから「達成記録」を選択</li>
+            <li>過去と未来の日付の完了状態を管理できます</li>
+        </ul>
+        <h3>スケジュールをコピー</h3>
+        <ul>
+            <li>⋮メニューから「スケジュールをコピー」を選択</li>
+            <li>すべての設定がコピーされた状態でスケジュールフォームが開きます</li>
+            <li>必要に応じて修正し、保存すると新しいスケジュールとして登録されます</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>統計</h2>
+        <p>統計画面でスケジュールの達成率を確認できます。</p>
+        <h3>期間選択</h3>
+        <ul>
+            <li>今日、今週、今月、今年、期間指定</li>
+        </ul>
+        <h3>計算範囲</h3>
+        <ul>
+            <li><strong>今日まで</strong>：選択した期間のうち今日までを計算（デフォルト）</li>
+            <li><strong>全期間</strong>：未来のスケジュールも含めて計算</li>
+        </ul>
+        <h3>統計情報</h3>
+        <ul>
+            <li>全体の進捗とフィードバックメッセージ</li>
+            <li>重要度別の達成率</li>
+            <li>詳細スケジュールリスト（展開可能）</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>設定</h2>
+        <h3>テーマ</h3>
+        <ul>
+            <li>システム設定、ライトモード、ダークモード</li>
+        </ul>
+        <h3>時計スタイル</h3>
+        <ul>
+            <li><strong>ミニマル</strong>：主要な時刻のみ表示（0, 6, 12, 18）</li>
+            <li><strong>クラシック</strong>：すべての時刻を表示（0-23）、外周に5分単位の点を表示</li>
+        </ul>
+        <h3>秒針スタイル</h3>
+        <ul>
+            <li><strong>スムーズ</strong>：滑らかに動く秒針</li>
+            <li><strong>チクタク</strong>：1秒ごとに動く秒針</li>
+        </ul>
+        <h3>言語</h3>
+        <ul>
+            <li>自動（システム）、한국어、English、日本語、中文</li>
+        </ul>
+        <h3>ディスプレイ（モバイル）</h3>
+        <ul>
+            <li><strong>画面を点灯したままにする</strong>：アプリ実行中、画面が自動でオフになりません</li>
+        </ul>
+        <h3>Windows</h3>
+        <ul>
+            <li><strong>常に手前に表示</strong>：他のウィンドウより前に表示されます</li>
+        </ul>
+        <h3>スケジュール管理</h3>
+        <ul>
+            <li><strong>過去のスケジュールのグループ化</strong>：なし、月別、年+月別</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリ開発を応援する</h2>
+        <p>アプリ開発を応援していただくと広告が永久に削除されます。（Androidのみ）</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>クラウド同期</h2>
+        <p>Googleアカウントでログインしてデータをクラウドにバックアップできます。（Androidのみ）</p>
+        <ul>
+            <li>複数デバイス間でデータを同期</li>
+            <li>手動同期方式</li>
+            <li>アプリ再インストール時にデータ復元可能</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>ヒント</h2>
+        <div class="tip-box">
+            <ul>
+                <li>時計を<strong>ダブルタップ</strong>するとフルスクリーンモードに切り替わります</li>
+                <li>フルスクリーンで<strong>スワイプ</strong>すると時計/秒針スタイルを変更できます</li>
+                <li>モバイルで画面を<strong>横向き</strong>にすると時計とスケジュールリストが左右に分かれます</li>
+                <li>スケジュールが重なると最大3レイヤーで表示され、4つ以上は「+N」バッジで表示されます</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/">ホーム</a> | <a href="./">Twenty Four Hours</a></p>
+</footer>
+
+</body>
+</html>

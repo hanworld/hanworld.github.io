@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twenty Four Hours User Manual - Willee Project</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #333; line-height: 1.6; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background: #1e293b; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94a3b8; }
+        .breadcrumb { margin-top: 16px; font-size: 0.9rem; color: #94a3b8; }
+        .breadcrumb a { color: #cbd5e1; }
+        .lang-nav { margin-top: 12px; }
+        .lang-nav a { color: #cbd5e1; margin: 0 6px; font-size: 0.85rem; }
+        .lang-nav a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #f8fafc; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #475569; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #475569; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+        section li strong { color: #1e293b; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+        .info-table th { color: #1e293b; background: #f1f5f9; width: 30%; }
+        .info-table td { color: #475569; }
+
+        .tip-box { background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400e; }
+
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #cbd5e1; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Twenty Four Hours</h1>
+        <p>User Manual</p>
+        <div class="breadcrumb"><a href="/">Willee Project</a> &gt; <a href="./">Twenty Four Hours</a> &gt; Manual</div>
+        <div class="lang-nav">
+            <a href="manual_ko.html">한국어</a>
+            <a href="manual_en.html" class="active">English</a>
+            <a href="manual_ja.html">日本語</a>
+            <a href="manual_zh.html">中文</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>App Information</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Twenty Four Hours</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Development</th><td>Willee Project</td></tr>
+            <tr><th>Platforms</th><td>Android, Windows</td></tr>
+        </table>
+        <p>An analog clock app that shows 24 hours at a glance with schedule management.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Main Screen</h2>
+        <h3>Analog Clock</h3>
+        <ul>
+            <li>A 24-hour analog clock is displayed at the top of the screen</li>
+            <li>Schedules are shown as colored arcs on the clock background</li>
+            <li>Tap a schedule arc to view its details</li>
+            <li><strong>Double-tap</strong> the clock to enter full-screen mode</li>
+        </ul>
+        <h3>Full-Screen Mode</h3>
+        <ul>
+            <li>Double-tap to enter/exit</li>
+            <li>Tap a schedule arc to show details card at bottom-right</li>
+            <li><strong>Horizontal swipe</strong>: Change clock style (Minimal ↔ Classic)</li>
+            <li><strong>Vertical swipe</strong>: Change second hand style (Smooth ↔ Tick-Tock)</li>
+        </ul>
+        <h3>Digital Clock</h3>
+        <ul>
+            <li>Current time is displayed in HH:MM:SS format in the app bar</li>
+        </ul>
+        <h3>Schedule List Panel</h3>
+        <ul>
+            <li>View current and today's schedules at the bottom of the screen</li>
+            <li><strong>Current</strong>: Schedules in progress right now</li>
+            <li><strong>Today</strong>: All schedules for today</li>
+            <li>Swipe left/right or use the buttons to switch</li>
+            <li>Tap ➕ to add a new schedule</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Schedule Management</h2>
+        <h3>Creating a New Schedule</h3>
+        <ol>
+            <li>Tap the ➕ button on the main screen or schedule list screen</li>
+            <li>Enter a title (required, leading/trailing spaces are automatically removed)</li>
+            <li>Enter description (optional)</li>
+            <li>Set start/end date and time</li>
+            <li>Set all-day, repeat, priority, and color as needed</li>
+            <li>Tap Save</li>
+        </ol>
+        <h3>All-Day Events</h3>
+        <ul>
+            <li>Turn on the all-day toggle to create a schedule without specific times</li>
+            <li>Multi-day all-day events are supported</li>
+        </ul>
+        <h3>Repeating Schedules</h3>
+        <ul>
+            <li><strong>Repeat type</strong>: Daily, Weekly, Monthly, Yearly</li>
+            <li><strong>Repeat end</strong>: Never, Until date, After count</li>
+            <li><strong>Weekly repeat</strong>: You can select multiple days of the week (default: start day)
+                <ul>
+                    <li>All days can be deselected; saving without any day selected will show a warning</li>
+                </ul>
+            </li>
+            <li><strong>Note</strong>: If the schedule duration exceeds the repeat cycle, that repeat type is disabled
+                <ul>
+                    <li>e.g., 26-hour schedule → Daily repeat unavailable</li>
+                    <li>e.g., 8-day schedule → Weekly repeat unavailable</li>
+                    <li>A warning message appears if repeat settings are reset due to duration change</li>
+                    <li>A confirmation dialog appears when saving with the warning active</li>
+                </ul>
+            </li>
+            <li><strong>Completion records on edit</strong>: Past completion records are preserved, only invalid future records are cleaned up</li>
+        </ul>
+        <h3>Priority Levels</h3>
+        <ul>
+            <li>★ <strong>Just be yourself</strong>: Being consistent is enough</li>
+            <li>★★ <strong>You're doing great</strong>: Complete it and your day will shine</li>
+            <li>★★★ <strong>You can do it</strong>: You'll be so proud when you finish</li>
+        </ul>
+        <h3>Completion Tracking</h3>
+        <ul>
+            <li>Tap the checkbox in the schedule list to mark as complete</li>
+            <li>Completed schedules are shown with a strikethrough</li>
+            <li>Repeating schedules can be checked individually for each occurrence</li>
+        </ul>
+        <h3>Completion Records</h3>
+        <ul>
+            <li>Select "Completion Records" from the ⋮ menu</li>
+            <li>Manage completion status for past and future dates</li>
+        </ul>
+        <h3>Copy Schedule</h3>
+        <ul>
+            <li>Select "Copy Schedule" from the ⋮ menu</li>
+            <li>The schedule form opens with all settings copied</li>
+            <li>Modify as needed and save to create a new schedule</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Statistics</h2>
+        <p>View your schedule completion rates in the Statistics screen.</p>
+        <h3>Period Selection</h3>
+        <ul>
+            <li>Today, This Week, This Month, This Year, Custom Period</li>
+        </ul>
+        <h3>Calculation Scope</h3>
+        <ul>
+            <li><strong>Until Today</strong>: Calculate only up to today (default)</li>
+            <li><strong>Entire Period</strong>: Include future schedules</li>
+        </ul>
+        <h3>Statistics Info</h3>
+        <ul>
+            <li>Overall progress with feedback message</li>
+            <li>Completion rate by priority</li>
+            <li>Detailed schedule list (expandable)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Settings</h2>
+        <h3>Theme</h3>
+        <ul>
+            <li>System Default, Light Mode, Dark Mode</li>
+        </ul>
+        <h3>Clock Style</h3>
+        <ul>
+            <li><strong>Minimal</strong>: Show main hours only (0, 6, 12, 18)</li>
+            <li><strong>Classic</strong>: Show all hours (0-23), with 5-minute dots on the outer edge</li>
+        </ul>
+        <h3>Second Hand Style</h3>
+        <ul>
+            <li><strong>Smooth</strong>: Smoothly moving second hand</li>
+            <li><strong>Tick-Tock</strong>: Second hand moves every second</li>
+        </ul>
+        <h3>Language</h3>
+        <ul>
+            <li>Auto (System), 한국어, English, 日本語, 中文</li>
+        </ul>
+        <h3>Display (Mobile)</h3>
+        <ul>
+            <li><strong>Keep Screen On</strong>: Screen won't turn off while the app is running</li>
+        </ul>
+        <h3>Windows</h3>
+        <ul>
+            <li><strong>Always on Top</strong>: Window stays above other windows</li>
+        </ul>
+        <h3>Schedule Management</h3>
+        <ul>
+            <li><strong>Past Schedule Grouping</strong>: None, Monthly, Year + Monthly</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Support Development</h2>
+        <p>Support the app development and ads will be permanently removed. (Android only)</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Cloud Sync</h2>
+        <p>Sign in with Google to backup your data to the cloud. (Android only)</p>
+        <ul>
+            <li>Sync data across multiple devices</li>
+            <li>Manual sync</li>
+            <li>Restore data after reinstalling the app</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Tips</h2>
+        <div class="tip-box">
+            <ul>
+                <li><strong>Double-tap</strong> the clock to enter full-screen mode</li>
+                <li><strong>Swipe</strong> in full-screen to change clock/second hand styles</li>
+                <li><strong>Rotate</strong> your mobile device to landscape for a split-screen layout</li>
+                <li>Overlapping schedules show up to 3 layers, with "+N" badge for 4 or more</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/">Home</a> | <a href="./">Twenty Four Hours</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twenty Four Hours 사용 설명서 - 윌리 프로젝트</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #333; line-height: 1.6; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background: #1e293b; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94a3b8; }
+        .breadcrumb { margin-top: 16px; font-size: 0.9rem; color: #94a3b8; }
+        .breadcrumb a { color: #cbd5e1; }
+        .lang-nav { margin-top: 12px; }
+        .lang-nav a { color: #cbd5e1; margin: 0 6px; font-size: 0.85rem; }
+        .lang-nav a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #f8fafc; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #475569; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #475569; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #475569; font-size: 0.95rem; }
+        section li strong { color: #1e293b; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; }
+        .info-table th { color: #1e293b; background: #f1f5f9; width: 30%; }
+        .info-table td { color: #475569; }
+
+        .tip-box { background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400e; }
+
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #cbd5e1; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Twenty Four Hours</h1>
+        <p>사용 설명서</p>
+        <div class="breadcrumb"><a href="/">윌리 프로젝트</a> &gt; <a href="./">Twenty Four Hours</a> &gt; 매뉴얼</div>
+        <div class="lang-nav">
+            <a href="manual_ko.html" class="active">한국어</a>
+            <a href="manual_en.html">English</a>
+            <a href="manual_ja.html">日本語</a>
+            <a href="manual_zh.html">中文</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>앱 정보</h2>
+        <table class="info-table">
+            <tr><th>앱 이름</th><td>Twenty Four Hours</td></tr>
+            <tr><th>버전</th><td>1.0.0</td></tr>
+            <tr><th>개발</th><td>Willee Project</td></tr>
+            <tr><th>지원 플랫폼</th><td>Android, Windows</td></tr>
+        </table>
+        <p>24시간을 한눈에 볼 수 있는 아날로그 시계와 일정 관리 앱입니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>메인 화면</h2>
+        <h3>아날로그 시계</h3>
+        <ul>
+            <li>24시간 형식의 아날로그 시계가 화면 상단에 표시됩니다</li>
+            <li>일정이 있으면 시계 배경에 색상 호(arc)로 표시됩니다</li>
+            <li>일정 호를 탭하면 해당 일정의 상세 정보를 볼 수 있습니다</li>
+            <li>시계를 <strong>더블 탭</strong>하면 전체 화면 모드로 전환됩니다</li>
+        </ul>
+        <h3>전체 화면 모드</h3>
+        <ul>
+            <li>시계를 더블 탭하여 진입/종료</li>
+            <li>일정 호를 탭하면 우측 하단에 상세 정보 카드가 표시됩니다</li>
+            <li><strong>좌우 스와이프</strong>: 시계 스타일 변경 (미니멀 ↔ 클래식)</li>
+            <li><strong>상하 스와이프</strong>: 초침 스타일 변경 (스무스 ↔ 틱톡)</li>
+        </ul>
+        <h3>디지털 시계</h3>
+        <ul>
+            <li>상단 앱바에 현재 시간이 HH:MM:SS 형식으로 표시됩니다</li>
+        </ul>
+        <h3>일정 목록 패널</h3>
+        <ul>
+            <li>화면 하단에 현재 일정과 오늘 일정을 확인할 수 있습니다</li>
+            <li><strong>현재</strong>: 지금 진행 중인 일정</li>
+            <li><strong>오늘</strong>: 오늘 하루의 모든 일정</li>
+            <li>좌우 스와이프 또는 상단 버튼으로 전환할 수 있습니다</li>
+            <li>➕ 버튼을 눌러 새 일정을 추가할 수 있습니다</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>일정 관리</h2>
+        <h3>새 일정 만들기</h3>
+        <ol>
+            <li>메인 화면의 ➕ 버튼 또는 일정 관리 화면에서 ➕ 버튼을 탭합니다</li>
+            <li>제목을 입력합니다 (필수, 좌우 공백은 자동으로 제거됩니다)</li>
+            <li>상세 내용을 입력합니다 (선택)</li>
+            <li>시작/종료 날짜와 시간을 설정합니다</li>
+            <li>필요시 종일, 반복, 중요도, 색상을 설정합니다</li>
+            <li>저장 버튼을 탭합니다</li>
+        </ol>
+        <h3>종일 일정</h3>
+        <ul>
+            <li>종일 토글을 켜면 시간 없이 하루 종일 일정으로 설정됩니다</li>
+            <li>여러 날에 걸친 종일 일정도 가능합니다</li>
+        </ul>
+        <h3>반복 일정</h3>
+        <ul>
+            <li><strong>반복 유형</strong>: 매일, 매주, 매월, 매년</li>
+            <li><strong>반복 종료</strong>: 계속(무기한), 특정 날짜까지, 특정 횟수</li>
+            <li><strong>매주 반복</strong>: 여러 요일을 선택할 수 있습니다 (기본값: 시작 요일)
+                <ul>
+                    <li>모든 요일을 선택 해제할 수 있으며, 요일 미선택 시 저장할 때 알림이 표시됩니다</li>
+                </ul>
+            </li>
+            <li><strong>참고</strong>: 일정 기간이 반복 주기보다 길면 해당 반복 유형은 선택할 수 없습니다
+                <ul>
+                    <li>예: 26시간 일정 → 매일 반복 불가</li>
+                    <li>예: 8일 일정 → 매주 반복 불가</li>
+                    <li>일정 기간 변경으로 반복 설정이 해제되면 경고 메시지가 표시됩니다</li>
+                    <li>경고 상태에서 저장 시 확인 다이얼로그가 표시됩니다</li>
+                </ul>
+            </li>
+            <li><strong>수정 시 완료 기록</strong>: 반복 일정 수정 시 과거 완료 기록은 유지되고, 미래의 무효한 기록만 정리됩니다</li>
+        </ul>
+        <h3>중요도 설정</h3>
+        <ul>
+            <li>★ <strong>그냥 너답게</strong>: 꾸준히 하는 것만으로 충분해</li>
+            <li>★★ <strong>잘 하고 있어</strong>: 해내면 오늘 하루가 빛날 거야</li>
+            <li>★★★ <strong>넌 할 수 있어</strong>: 해내면 정말 자랑스러울 거야</li>
+        </ul>
+        <h3>일정 완료 체크</h3>
+        <ul>
+            <li>일정 목록에서 체크박스를 탭하여 완료 표시를 할 수 있습니다</li>
+            <li>완료된 일정은 취소선으로 표시됩니다</li>
+            <li>반복 일정은 각 발생일마다 개별적으로 완료 체크가 가능합니다</li>
+        </ul>
+        <h3>달성 기록 관리</h3>
+        <ul>
+            <li>일정의 ⋮ 메뉴에서 "달성 기록"을 선택합니다</li>
+            <li>과거 및 미래 날짜의 완료 상태를 관리할 수 있습니다</li>
+        </ul>
+        <h3>일정 복사</h3>
+        <ul>
+            <li>일정의 ⋮ 메뉴에서 "일정 복사"를 선택합니다</li>
+            <li>일정 편집 화면이 열리며, 모든 설정이 복사된 상태로 표시됩니다</li>
+            <li>필요한 부분을 수정 후 저장하면 새 일정으로 등록됩니다</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>통계</h2>
+        <p>통계 화면에서 일정 달성률을 확인할 수 있습니다.</p>
+        <h3>기간 선택</h3>
+        <ul>
+            <li>오늘, 이번 주, 이번 달, 올해, 사용자 지정 기간</li>
+        </ul>
+        <h3>계산 범위</h3>
+        <ul>
+            <li><strong>오늘까지</strong>: 선택한 기간 중 오늘까지만 계산 (기본값)</li>
+            <li><strong>전체 기간</strong>: 미래 일정도 포함하여 계산</li>
+        </ul>
+        <h3>통계 정보</h3>
+        <ul>
+            <li>전체 진행률과 피드백 메시지</li>
+            <li>중요도별 달성률</li>
+            <li>상세 일정 목록 (펼쳐서 확인 가능)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>설정</h2>
+        <h3>테마</h3>
+        <ul>
+            <li>시스템 설정 따름, 라이트 모드, 다크 모드</li>
+        </ul>
+        <h3>시계 스타일</h3>
+        <ul>
+            <li><strong>미니멀</strong>: 주요 시간만 표시 (0, 6, 12, 18)</li>
+            <li><strong>클래식</strong>: 모든 시간 표시 (0-23), 외곽에 5분 단위 점 표시</li>
+        </ul>
+        <h3>초침 스타일</h3>
+        <ul>
+            <li><strong>스무스</strong>: 부드럽게 움직이는 초침</li>
+            <li><strong>틱-톡</strong>: 1초마다 움직이는 초침</li>
+        </ul>
+        <h3>언어</h3>
+        <ul>
+            <li>자동(시스템), 한국어, English, 日本語, 中文</li>
+        </ul>
+        <h3>화면 (모바일)</h3>
+        <ul>
+            <li><strong>화면 켜짐 유지</strong>: 앱 실행 중 화면이 자동으로 꺼지지 않습니다</li>
+        </ul>
+        <h3>Windows</h3>
+        <ul>
+            <li><strong>항상 위에 표시</strong>: 다른 창 위에 항상 표시됩니다</li>
+        </ul>
+        <h3>일정 관리</h3>
+        <ul>
+            <li><strong>지난 일정 그룹화</strong>: 없음, 월별, 연도+월별</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>개발 응원하기</h2>
+        <p>앱 개발을 응원해 주시면 광고가 영구적으로 제거됩니다. (Android만 지원)</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>클라우드 동기화</h2>
+        <p>Google 계정으로 로그인하여 데이터를 클라우드에 백업할 수 있습니다. (Android만 지원)</p>
+        <ul>
+            <li>여러 기기 간 데이터 동기화</li>
+            <li>수동 동기화 방식</li>
+            <li>앱 재설치 시 데이터 복원 가능</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>팁</h2>
+        <div class="tip-box">
+            <ul>
+                <li>시계를 <strong>더블 탭</strong>하면 전체 화면 모드로 전환됩니다</li>
+                <li>전체 화면에서 <strong>스와이프</strong>로 시계/초침 스타일을 변경할 수 있습니다</li>
+                <li>모바일에서 화면을 <strong>가로로 회전</strong>하면 시계와 일정 목록이 좌우로 나뉩니다</li>
+                <li>일정이 겹치면 최대 3개 레이어로 표시되고, 4개 이상은 "+N" 배지로 표시됩니다</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 윌리 프로젝트. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/">홈</a> | <a href="./">Twenty Four Hours</a></p>
+</footer>
+
+</body>
+</html>
