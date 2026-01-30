@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <title>Willee Project</title>
+    <style>
+        /* Willee Project 调色板
+           薄荷色: #2EC4B6 | 深薄荷色: #1D7A5F | 海军蓝: #1A365D
+           白色: #FFFFFF | 金色: #D4AF37 | 浅薄荷色: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 8px; word-break: keep-all; }
+        header p { font-size: 1.1rem; color: #94A3B8; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p, section ul { margin-bottom: 12px; }
+        section ul { padding-left: 20px; }
+
+        .app-list { list-style: none; padding: 0; }
+        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
+        .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
+        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; }
+
+        .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+        @media (max-width: 480px) { .values-grid { grid-template-columns: 1fr; } }
+        .value-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; text-align: center; }
+        .value-item strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .value-item span { color: #64748B; font-size: 0.9rem; }
+
+        .support-box { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
+        .support-box p { margin-bottom: 8px; }
+        .support-box p:last-child { margin-bottom: 0; }
+
+        .contact-info { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; }
+        .contact-info p { margin-bottom: 8px; }
+        .contact-info p:last-child { margin-bottom: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+        <div class="lang-switch">
+            <a href="/ko/">한국어</a>
+            <a href="/en/">EN</a>
+            <a href="/ja/">日本語</a>
+            <a href="/zh/" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/willee_project_logo.svg" alt="Willee Project 标志" style="height:5.5rem;">
+            <div style="text-align:left;">
+                <h1>Willee Project</h1>
+                <p>打造更好的应用</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>关于 Willee Project</h2>
+        <p>Willee Project 是一个致力于开发以用户为中心的移动应用程序和软件的组织。我们努力创造日常生活中有用的服务，并提供更好的用户体验。</p>
+        <div class="values-grid">
+            <div class="value-item">
+                <strong>以用户为中心的设计</strong>
+                <span>直观便捷的用户体验</span>
+            </div>
+            <div class="value-item">
+                <strong>跨平台支持</strong>
+                <span>Android、Windows 等多种环境</span>
+            </div>
+            <div class="value-item">
+                <strong>持续改进</strong>
+                <span>整合用户反馈并更新</span>
+            </div>
+            <div class="value-item">
+                <strong>隐私保护</strong>
+                <span>最小化数据收集和透明管理</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>应用服务</h2>
+        <ul class="app-list">
+            <li style="display:flex; align-items:center; gap:16px;">
+                <img src="/apps/twenty-four-hours/images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
+                <div>
+                    <h3><a href="/apps/twenty-four-hours/">Twenty Four Hours</a></h3>
+                    <p>一款将24小时模拟/数字时钟与日程管理相结合的跨平台应用。具有统计仪表板、云同步和多语言支持功能。</p>
+                    <div style="margin-top:8px;"><span class="badge">Android</span><span class="badge">Windows</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="support">
+    <div class="container">
+        <h2>客户支持</h2>
+        <div class="support-box">
+            <p><strong>联系方式:</strong> 电子邮件 (<a href="mailto:hanworld@willee.net">hanworld@willee.net</a>)</p>
+            <p><strong>响应时间:</strong> 1-3个工作日内</p>
+            <p><strong>应用支持页面:</strong></p>
+            <ul style="padding-left:20px; margin-top:4px;">
+                <li><a href="/apps/twenty-four-hours/">Twenty Four Hours</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <div class="contact-info">
+            <p><strong>组织名称:</strong> Willee Project</p>
+            <p><strong>电子邮件:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+            <p><strong>网站:</strong> <a href="https://www.willee.net">https://www.willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/zh/privacy.html">隐私政策</a> | <a href="/zh/terms.html">服务条款</a></p>
+</footer>
+
+</body>
+</html>
