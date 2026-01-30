@@ -21,10 +21,11 @@
         .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
         .breadcrumb a { color: #2EC4B6; }
         .breadcrumb a:hover { color: #D4AF37; }
-        .breadcrumb .container { display: flex; align-items: center; }
-        .lang-nav { margin-top: 12px; }
-        .lang-nav a { color: #94A3B8; margin: 0 6px; font-size: 0.85rem; }
-        .lang-nav a.active { color: #2EC4B6; font-weight: bold; border-bottom: 2px solid #2EC4B6; padding-bottom: 2px; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
 
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
@@ -53,7 +54,23 @@
 </head>
 <body>
 
-<nav class="breadcrumb"><div class="container"><a href="/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg><a href="../">Twenty Four Hours</a><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>マニュアル</div></nav>
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ja.html">Twenty Four Hours</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
 
 <header>
     <div class="container">
@@ -63,12 +80,6 @@
                 <h1>Twenty Four Hours</h1>
                 <p>ユーザーマニュアル</p>
             </div>
-        </div>
-        <div class="lang-nav">
-            <a href="ko.html">한국어</a>
-            <a href="en.html">English</a>
-            <a href="ja.html" class="active">日本語</a>
-            <a href="zh.html">中文</a>
         </div>
     </div>
 </header>
@@ -280,7 +291,7 @@
 
 <footer>
     <p>&copy; 2025 Willee Project. All rights reserved.</p>
-    <p style="margin-top:8px;"><a href="/">ホーム</a> | <a href="../">Twenty Four Hours</a></p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">Twenty Four Hours</a></p>
 </footer>
 
 </body>
