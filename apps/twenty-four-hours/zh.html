@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Twenty Four Hours - Willee Project</title>
+    <style>
+        /* Willee Project 调色板
+           薄荷色: #2EC4B6 | 深薄荷色: #1D7A5F | 海军蓝: #1A365D
+           白色: #FFFFFF | 金色: #D4AF37 | 浅薄荷色: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header img { width: 80px; margin-bottom: 12px; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-icon { width: 100px; height: 100px; background: #F0FDFC; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 20px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+        .screenshot-caption { color: #64748B; font-size: 0.85rem; text-align: center; margin-top: 8px; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Twenty Four Hours</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Twenty Four Hours</h1>
+        <p>陪伴您珍贵的一天，始终为您加油</p>
+        <div class="graphic-banner">
+            <img src="images/TwentyFourHours_graphic_image_001.png" alt="Twenty Four Hours - 一目了然您的一天，Visualize Your Day">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.png" alt="Twenty Four Hours 图标" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Twenty Four Hours</h2>
+                <p>24小时时钟 &amp; 日程管理应用</p>
+                <div>
+                    <span class="badge">Android</span>
+                    <span class="badge">Windows</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Twenty Four Hours是一款将24小时制模拟/数字时钟与日程管理功能相结合的跨平台应用。一目了然地查看全天时间，系统地管理日程，并通过统计数据确认完成情况。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>屏幕截图</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Twenty%20Four%20Hours_002.jpg" alt="24小时时钟主界面">
+            <img src="images/Twenty%20Four%20Hours_003.jpg" alt="日程详情">
+            <img src="images/Twenty%20Four%20Hours_004.jpg" alt="全屏模式">
+            <img src="images/Twenty%20Four%20Hours_005.jpg" alt="日程列表">
+            <img src="images/Twenty%20Four%20Hours_006.jpg" alt="日程编辑">
+            <img src="images/Twenty%20Four%20Hours_007.jpg" alt="统计仪表板">
+            <img src="images/Twenty%20Four%20Hours_008.jpg" alt="设置">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主要功能</h2>
+        <ul class="features">
+            <li>
+                <strong>24小时时钟</strong>
+                <span>同时显示模拟和数字时钟。可选择极简/经典风格，平滑/滴答秒针动画。双击切换全屏。</span>
+            </li>
+            <li>
+                <strong>日程管理</strong>
+                <span>创建、编辑、删除日程。支持重复日程（每日、每周、每月、每年）。全天事件、多日事件、3级优先级设置。</span>
+            </li>
+            <li>
+                <strong>统计仪表板</strong>
+                <span>按今日、本周、本月、今年、自定义期间分析日程完成率。提供按优先级的完成率统计。</span>
+            </li>
+            <li>
+                <strong>云同步</strong>
+                <span>通过Google登录进行Google Drive备份和恢复。在设备间安全同步数据。</span>
+            </li>
+            <li>
+                <strong>主题和多语言</strong>
+                <span>支持浅色/深色/系统主题。支持韩语、英语、日语、中文4种语言。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>支持平台</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>SDK 21+</span>
+            </div>
+            <div class="platform">
+                <strong>iOS</strong>
+                <span>即将推出</span>
+            </div>
+            <div class="platform">
+                <strong>Windows</strong>
+                <span>Desktop</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>使用手册</h2>
+        <p>查看Twenty Four Hours应用的使用手册。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Manual</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>ユーザーマニュアル</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>使用手册</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看Twenty Four Hours应用的隐私政策。</p>
+        <div class="platforms">
+            <a href="privacy/index.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>隐私政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <p>如有应用相关问题，请通过以下方式联系我们。</p>
+        <p><strong>电子邮件:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>开发:</strong> <a href="/zh/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="privacy/zh.html">隐私政策</a></p>
+</footer>
+
+</body>
+</html>

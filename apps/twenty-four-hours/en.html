@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Twenty Four Hours - Willee Project</title>
+    <style>
+        /* Willee Project Color Palette
+           Mint: #2EC4B6 | Dark Mint: #1D7A5F | Navy: #1A365D
+           White: #FFFFFF | Gold: #D4AF37 | Light Mint: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header img { width: 80px; margin-bottom: 12px; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-icon { width: 100px; height: 100px; background: #F0FDFC; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 20px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+        .screenshot-caption { color: #64748B; font-size: 0.85rem; text-align: center; margin-top: 8px; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Twenty Four Hours</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Twenty Four Hours</h1>
+        <p>Accompanying your precious day, always cheering you on</p>
+        <div class="graphic-banner">
+            <img src="images/TwentyFourHours_graphic_image_001.png" alt="Twenty Four Hours - Visualize Your Day">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.png" alt="Twenty Four Hours Icon" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Twenty Four Hours</h2>
+                <p>24-Hour Clock &amp; Schedule Management App</p>
+                <div>
+                    <span class="badge">Android</span>
+                    <span class="badge">Windows</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Twenty Four Hours is a cross-platform app that combines a 24-hour analog/digital clock with schedule management features. View your entire day at a glance, manage your schedules systematically, and track your achievements with statistics.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Twenty%20Four%20Hours_002.jpg" alt="24-hour clock main screen">
+            <img src="images/Twenty%20Four%20Hours_003.jpg" alt="Schedule details">
+            <img src="images/Twenty%20Four%20Hours_004.jpg" alt="Full screen mode">
+            <img src="images/Twenty%20Four%20Hours_005.jpg" alt="Schedule list">
+            <img src="images/Twenty%20Four%20Hours_006.jpg" alt="Schedule editor">
+            <img src="images/Twenty%20Four%20Hours_007.jpg" alt="Statistics dashboard">
+            <img src="images/Twenty%20Four%20Hours_008.jpg" alt="Settings">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>Key Features</h2>
+        <ul class="features">
+            <li>
+                <strong>24-Hour Clock</strong>
+                <span>Display analog &amp; digital clocks simultaneously. Choose between minimal/classic styles and smooth/tick-tock second hand animations. Double-tap for full screen mode.</span>
+            </li>
+            <li>
+                <strong>Schedule Management</strong>
+                <span>Create, edit, and delete schedules. Support for recurring events (daily, weekly, monthly, yearly). All-day events, multi-day events, and 3-level priority settings.</span>
+            </li>
+            <li>
+                <strong>Statistics Dashboard</strong>
+                <span>Analyze schedule completion rates by today, this week, this month, this year, or custom periods. View completion statistics by priority level.</span>
+            </li>
+            <li>
+                <strong>Cloud Sync</strong>
+                <span>Backup and restore via Google Drive with Google Sign-In. Securely sync data across devices.</span>
+            </li>
+            <li>
+                <strong>Themes &amp; Languages</strong>
+                <span>Light/Dark/System theme support. Available in Korean, English, Japanese, and Chinese.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>Supported Platforms</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>SDK 21+</span>
+            </div>
+            <div class="platform">
+                <strong>iOS</strong>
+                <span>Coming Soon</span>
+            </div>
+            <div class="platform">
+                <strong>Windows</strong>
+                <span>Desktop</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>User Manual</h2>
+        <p>Check out the user manual for Twenty Four Hours app.</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Manual</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>ユーザーマニュアル</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>使用手册</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>Privacy Policy</h2>
+        <p>Check out the privacy policy for Twenty Four Hours app.</p>
+        <div class="platforms">
+            <a href="privacy/index.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>隐私政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>For app-related inquiries, please contact us below.</p>
+        <p><strong>Email:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>Developer:</strong> <a href="/en/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="privacy/en.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
