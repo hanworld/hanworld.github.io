@@ -260,10 +260,32 @@
     <div class="container">
         <h2>Cloud Sync</h2>
         <p>Sign in with Google to backup your data to the cloud. (Android only)</p>
+        <h3>Basic Features</h3>
         <ul>
             <li>Sync data across multiple devices</li>
-            <li>Manual sync</li>
             <li>Restore data after reinstalling the app</li>
+        </ul>
+        <h3>Sync Methods</h3>
+        <ul>
+            <li><strong>Auto Sync</strong>: Automatically syncs 30 seconds after data changes</li>
+            <li><strong>Manual Sync</strong>: Tap "Manual sync" button in settings to sync immediately</li>
+        </ul>
+        <h3>Conflict Resolution</h3>
+        <ul>
+            <li>Conflicts may occur when changes are made on multiple devices simultaneously</li>
+            <li>When a conflict is detected during manual sync, a selection screen appears:
+                <ul>
+                    <li><strong>Keep This Device</strong>: Overwrite cloud with this device's data</li>
+                    <li><strong>Keep Cloud</strong>: Overwrite this device with cloud data</li>
+                    <li><strong>Merge</strong>: Combine both, keeping the newest version of each item (Recommended)</li>
+                </ul>
+            </li>
+            <li>Auto sync automatically merges when conflicts occur</li>
+        </ul>
+        <h3>Reset Cloud Data</h3>
+        <ul>
+            <li>Use "Reset cloud data" if sync issues occur</li>
+            <li>Deletes all cloud data and uploads current device data as fresh backup</li>
         </ul>
     </div>
 </section>
