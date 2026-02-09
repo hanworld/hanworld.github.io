@@ -68,7 +68,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 사업자등록번호: 157-05-00709
 - 통신판매업 신고번호: 제2026-화성동탄-1057호
 - 이메일: hanworld@willee.net
-- 웹사이트: https://www.willee.net
+- 웹사이트: https://willee.net
 
 ## 앱 목록
 ### Twenty Four Hours
