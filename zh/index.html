@@ -37,7 +37,8 @@
         .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
         .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
         .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
-        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
 
         .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
         @media (max-width: 480px) { .values-grid { grid-template-columns: 1fr; } }
