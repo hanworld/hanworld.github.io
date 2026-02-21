@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Good Timer User Manual - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/good-timer/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html">
+    <style>
+        /* Willee Project Color Palette
+           Mint: #2EC4B6 | Dark Mint: #1D7A5F | Navy: #1A365D
+           White: #FFFFFF | Gold: #D4AF37 | Light Mint: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; width: 30%; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../en.html">Good Timer</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Good Timer</h1>
+                <p>User Manual</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Good Timer</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platforms</th><td>Android, Windows</td></tr>
+        </table>
+        <p>Good Timer is a versatile timer app for everyday life. It provides a customizable interval timer and a stopwatch with lap recording, perfect for studying, exercising, cooking, meditation, and more.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Navigation</h2>
+        <p>Switch between screens using the tabs at the bottom (portrait) or left side (landscape).</p>
+        <table class="info-table">
+            <tr><th>Timer</th><td>Interval timer</td></tr>
+            <tr><th>Stopwatch</th><td>Stopwatch with lap recording</td></tr>
+            <tr><th>History</th><td>Usage history and statistics</td></tr>
+            <tr><th>Settings</th><td>App settings</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Timer</h2>
+        <h3>Basic Concept</h3>
+        <p>The timer consists of <strong>phases</strong> and <strong>rounds</strong>.</p>
+        <ul>
+            <li><strong>Phase</strong>: A segment with a name and duration (e.g., "Focus" 25 min, "Break" 5 min)</li>
+            <li><strong>Round</strong>: How many times to repeat the entire phase sequence</li>
+            <li>Up to 10 phases can be added</li>
+        </ul>
+        <p><strong>Example</strong>: Focus (25 min) &rarr; Break (5 min), repeated for 4 rounds</p>
+
+        <h3>Timer Screen</h3>
+        <p>The timer screen has two tabs.</p>
+        <p><strong>Timer Tab</strong></p>
+        <ul>
+            <li>Circular countdown display</li>
+            <li>Current phase name and remaining time</li>
+            <li>Round progress (e.g., "Round 2/4")</li>
+            <li>Start, Pause, Resume, Stop buttons</li>
+        </ul>
+        <p><strong>Settings Tab</strong></p>
+        <ul>
+            <li>Edit phase list (name, duration, color)</li>
+            <li>Add/remove/reorder phases</li>
+            <li>Adjust number of rounds</li>
+            <li>"Save as Preset" button</li>
+        </ul>
+
+        <h3>Timer Controls</h3>
+        <table class="info-table">
+            <tr><th>Idle</th><td>Start</td></tr>
+            <tr><th>Running</th><td>Pause</td></tr>
+            <tr><th>Paused</th><td>Resume, Stop</td></tr>
+            <tr><th>Stopped</th><td>Reset, Start</td></tr>
+            <tr><th>Completed</th><td>Reset, Start</td></tr>
+        </table>
+
+        <h3>Round Settings</h3>
+        <ul>
+            <li><strong>Finite rounds</strong>: Repeat 1&ndash;999 times</li>
+            <li><strong>Infinite rounds</strong>: Repeat until manually stopped</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Presets</h2>
+        <p>A preset is a saved timer configuration (phases + rounds) for quick reuse.</p>
+        <h3>Managing Presets</h3>
+        <ul>
+            <li>Tap the preset icon at the top of the timer screen</li>
+            <li><strong>Add</strong>: Tap the + button to create a new preset</li>
+            <li><strong>Apply</strong>: Tap a preset to load it into the timer</li>
+            <li><strong>Edit</strong>: Tap the edit icon</li>
+            <li><strong>Copy</strong>: Tap the copy icon to duplicate</li>
+            <li><strong>Delete</strong>: Tap the delete icon, then confirm</li>
+            <li><strong>Favorite</strong>: Tap the star icon to pin to the top</li>
+        </ul>
+        <h3>Default Presets</h3>
+        <p>The following presets are created automatically on first launch:</p>
+        <ul>
+            <li>Pomodoro (Focus 25 min + Break 5 min, 4 rounds)</li>
+            <li>Tabata (Exercise 20 sec + Rest 10 sec, 8 rounds)</li>
+            <li>Study 50/10 (Study 50 min + Break 10 min, 3 rounds)</li>
+            <li>Stretching (Exercise 30 sec + Rest 15 sec, 10 rounds)</li>
+            <li>Meditation (Preparation 1 min + Meditation 10 min + Wrap Up 1 min, 1 round)</li>
+            <li>5-4-3-2-1 Countdown (5 min &rarr; 4 min &rarr; 3 min &rarr; 2 min &rarr; 1 min, 1 round)</li>
+            <li>Cooking (Cooking 10 min + Simmering 5 min, 1 round)</li>
+            <li>Presentation (Presentation 15 min + Q&amp;A 5 min, 1 round)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Stopwatch</h2>
+        <h3>Basic Usage</h3>
+        <ol>
+            <li>Go to the Stopwatch tab</li>
+            <li>Tap <strong>Start</strong></li>
+            <li>Tap <strong>Lap</strong> while running to record splits</li>
+            <li>Tap <strong>Stop</strong> to finish</li>
+            <li>The session is automatically saved</li>
+        </ol>
+        <h3>Lap Recording</h3>
+        <ul>
+            <li>Tap the Lap button during timing to record a split</li>
+            <li>Fastest and slowest laps are highlighted</li>
+            <li>Tap the lap list after stopping to view detailed records</li>
+        </ul>
+        <h3>Labels</h3>
+        <p>Assign labels to stopwatch sessions for categorization.</p>
+        <ul>
+            <li>Tap the label chip above the timer to select or create a label</li>
+            <li>Recently used labels appear at the top</li>
+            <li>Long press a label to delete it (records are kept)</li>
+        </ul>
+        <h3>Today's History</h3>
+        <p>The second tab on the Stopwatch screen lets you quickly view sessions recorded today.</p>
+        <ul>
+            <li>Only stopwatch records created today are displayed</li>
+            <li>Shows label, date/time, and total elapsed time</li>
+            <li>Tap a session to view detailed lap records</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>History</h2>
+        <p>View timer and stopwatch usage history in the History tab.</p>
+        <h3>Time Period</h3>
+        <ul>
+            <li>Today</li>
+            <li>This Week</li>
+            <li>This Month</li>
+            <li>All Time</li>
+            <li>Custom (date range picker)</li>
+        </ul>
+        <h3>Timer History</h3>
+        <ul>
+            <li>Total sessions</li>
+            <li>Total active time</li>
+            <li>Total completed rounds</li>
+            <li>Detailed breakdown per session (phases, rounds, durations)</li>
+        </ul>
+        <h3>Stopwatch History</h3>
+        <ul>
+            <li>Total sessions</li>
+            <li>Total elapsed time</li>
+            <li>Total laps</li>
+            <li>Detailed lap records per session</li>
+        </ul>
+        <h3>Deleting Records</h3>
+        <ul>
+            <li>Individual session: swipe left or long press</li>
+            <li>Delete all: tap the delete button at the top right</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Settings</h2>
+        <h3>Theme</h3>
+        <ul>
+            <li><strong>System Default</strong>: Follows device settings</li>
+            <li><strong>Light Mode</strong>: Light background</li>
+            <li><strong>Dark Mode</strong>: Dark background</li>
+        </ul>
+        <h3>Language</h3>
+        <ul>
+            <li>Auto (follows device locale)</li>
+            <li>English, Korean, Japanese, Chinese</li>
+        </ul>
+        <h3>Sound &amp; Vibration</h3>
+        <ul>
+            <li><strong>Sound</strong>: Alert on phase transitions (on/off)</li>
+            <li><strong>Vibration</strong>: Haptic feedback on phase transitions (on/off)</li>
+        </ul>
+        <h3>Screen</h3>
+        <ul>
+            <li><strong>Keep Screen On</strong>: Prevents the screen from turning off while the timer or stopwatch is running</li>
+        </ul>
+        <h3>Cloud Sync</h3>
+        <p>Back up and sync your data via Google Drive.</p>
+        <p><strong>Before signing in:</strong></p>
+        <ul>
+            <li>Sign in with Google button</li>
+            <li>Restore from backup file (.gz or .json from device)</li>
+        </ul>
+        <p><strong>After signing in:</strong></p>
+        <ul>
+            <li>Connected Google account displayed</li>
+            <li><strong>Auto Sync</strong>: Automatically backs up when data changes</li>
+            <li><strong>Sync Now</strong>: Manual immediate sync</li>
+            <li><strong>Reset Cloud</strong>: Delete cloud data and re-upload from device</li>
+            <li><strong>Sign Out</strong>: Disconnect Google account</li>
+        </ul>
+        <h3>Support Development</h3>
+        <p>Support the developer through in-app purchases. Ads are removed after any purchase.</p>
+        <ul>
+            <li>Small Support</li>
+            <li>Warm Support</li>
+            <li>Big Support</li>
+        </ul>
+        <p>In-app purchases are not available on Windows.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Platform Guide</h2>
+        <table class="info-table">
+            <tr><th>Feature</th><td><strong>Android</strong></td><td><strong>Windows</strong></td></tr>
+            <tr><th>Ads</th><td>Yes (removed after support)</td><td>Coming soon</td></tr>
+            <tr><th>In-App Purchase</th><td>Supported</td><td>Coming soon</td></tr>
+            <tr><th>Cloud Sync</th><td>Supported</td><td>Coming soon</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Tips</h2>
+        <div class="tip-box">
+            <ul>
+                <li>Use presets to quickly load your frequently used timer configurations</li>
+                <li>Assign labels to stopwatch sessions to keep your records organized</li>
+                <li>Use infinite rounds to repeat as many times as you need</li>
+                <li>Enable Cloud Sync to share data across multiple devices</li>
+                <li>Check the History tab to review your usage statistics by time period</li>
+                <li>Set different colors for each phase to easily track timer progress at a glance</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Privacy Policy</h2>
+        <p>View the <a href="../privacy/en.html">Good Timer Privacy Policy</a>.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="../en.html">Good Timer</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

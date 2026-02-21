@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Good Timer 사용 설명서 - 윌리 프로젝트</title>
+    <link rel="canonical" href="https://willee.net/apps/good-timer/manual/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; width: 30%; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ko.html">Good Timer</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>매뉴얼</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Good Timer</h1>
+                <p>사용 설명서</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>앱 정보</h2>
+        <table class="info-table">
+            <tr><th>앱 이름</th><td>Good Timer</td></tr>
+            <tr><th>버전</th><td>1.0.0</td></tr>
+            <tr><th>개발</th><td>Willee Project</td></tr>
+            <tr><th>지원 플랫폼</th><td>Android, Windows</td></tr>
+        </table>
+        <p>Good Timer는 일상의 모든 순간에 함께하는 범용 타이머 앱입니다. 자유롭게 구성할 수 있는 인터벌 타이머와 랩 기록이 가능한 스톱워치를 제공하며, 학습, 운동, 요리, 명상 등 다양한 활동에 활용할 수 있습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>화면 구성</h2>
+        <p>앱 하단(세로 모드) 또는 좌측(가로 모드)의 탭으로 화면을 전환합니다.</p>
+        <table class="info-table">
+            <tr><th>타이머</th><td>인터벌 타이머</td></tr>
+            <tr><th>스톱워치</th><td>스톱워치 및 랩 기록</td></tr>
+            <tr><th>기록</th><td>사용 이력 및 통계</td></tr>
+            <tr><th>설정</th><td>앱 설정</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>타이머</h2>
+        <h3>기본 개념</h3>
+        <p>타이머는 <strong>페이즈(구간)</strong>와 <strong>라운드(반복)</strong>로 구성됩니다.</p>
+        <ul>
+            <li><strong>페이즈</strong>: 이름과 시간이 있는 하나의 구간 (예: "집중" 25분, "휴식" 5분)</li>
+            <li><strong>라운드</strong>: 전체 페이즈 순서를 몇 번 반복할지 설정</li>
+            <li>페이즈는 최대 10개까지 추가 가능</li>
+        </ul>
+        <p><strong>예시</strong>: 집중(25분) &rarr; 휴식(5분) 을 4라운드 반복</p>
+
+        <h3>타이머 화면</h3>
+        <p>타이머 화면은 두 개의 탭으로 구성됩니다.</p>
+        <p><strong>타이머 탭</strong></p>
+        <ul>
+            <li>원형 카운트다운 디스플레이</li>
+            <li>현재 페이즈 이름과 남은 시간</li>
+            <li>라운드 진행 상황 (예: "라운드 2/4")</li>
+            <li>시작, 일시정지, 재개, 정지 버튼</li>
+        </ul>
+        <p><strong>설정 탭</strong></p>
+        <ul>
+            <li>페이즈 목록 편집 (이름, 시간, 색상)</li>
+            <li>페이즈 추가/삭제/순서 변경</li>
+            <li>라운드 수 조정</li>
+            <li>"프리셋으로 저장" 버튼</li>
+        </ul>
+
+        <h3>타이머 조작</h3>
+        <table class="info-table">
+            <tr><th>대기</th><td>시작</td></tr>
+            <tr><th>실행 중</th><td>일시정지</td></tr>
+            <tr><th>일시정지</th><td>재개, 정지</td></tr>
+            <tr><th>정지됨</th><td>리셋, 시작</td></tr>
+            <tr><th>완료</th><td>리셋, 시작</td></tr>
+        </table>
+
+        <h3>라운드 설정</h3>
+        <ul>
+            <li><strong>유한 라운드</strong>: 1~999회 반복</li>
+            <li><strong>무한 라운드</strong>: 수동으로 정지할 때까지 반복</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>프리셋</h2>
+        <p>프리셋은 자주 사용하는 타이머 구성(페이즈 + 라운드)을 저장한 것입니다.</p>
+        <h3>프리셋 관리</h3>
+        <ul>
+            <li>타이머 화면 상단의 프리셋 아이콘을 탭하여 목록 확인</li>
+            <li><strong>추가</strong>: + 버튼으로 새 프리셋 생성</li>
+            <li><strong>적용</strong>: 프리셋을 탭하여 타이머에 적용</li>
+            <li><strong>편집</strong>: 편집 아이콘 탭</li>
+            <li><strong>복사</strong>: 복사 아이콘으로 복제</li>
+            <li><strong>삭제</strong>: 삭제 아이콘 탭 후 확인</li>
+            <li><strong>즐겨찾기</strong>: 별 아이콘으로 상단 고정</li>
+        </ul>
+        <h3>기본 프리셋</h3>
+        <p>최초 설치 시 다음 프리셋이 자동 생성됩니다:</p>
+        <ul>
+            <li>뽀모도로 (집중 25분 + 휴식 5분, 4라운드)</li>
+            <li>타바타 (운동 20초 + 휴식 10초, 8라운드)</li>
+            <li>학습 50/10 (학습 50분 + 휴식 10분, 3라운드)</li>
+            <li>스트레칭 (운동 30초 + 휴식 15초, 10라운드)</li>
+            <li>명상 (준비 1분 + 명상 10분 + 마무리 1분, 1라운드)</li>
+            <li>5-4-3-2-1 카운트다운 (5분 &rarr; 4분 &rarr; 3분 &rarr; 2분 &rarr; 1분, 1라운드)</li>
+            <li>요리 (조리 10분 + 뜸들이기 5분, 1라운드)</li>
+            <li>프레젠테이션 (발표 15분 + 질의응답 5분, 1라운드)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>스톱워치</h2>
+        <h3>기본 사용법</h3>
+        <ol>
+            <li>스톱워치 탭으로 이동</li>
+            <li><strong>시작</strong> 버튼 탭</li>
+            <li>실행 중 <strong>랩</strong> 버튼으로 구간 기록</li>
+            <li><strong>정지</strong> 버튼으로 종료</li>
+            <li>기록이 자동 저장됨</li>
+        </ol>
+        <h3>랩 기록</h3>
+        <ul>
+            <li>실행 중 랩 버튼을 탭하면 구간 시간이 기록됩니다</li>
+            <li>가장 빠른 랩과 가장 느린 랩이 표시됩니다</li>
+            <li>정지 후 랩 목록을 탭하면 상세 기록을 확인할 수 있습니다</li>
+        </ul>
+        <h3>라벨</h3>
+        <p>스톱워치 세션에 라벨을 지정하여 분류할 수 있습니다.</p>
+        <ul>
+            <li>타이머 위의 라벨 칩을 탭하여 선택/생성</li>
+            <li>최근 사용한 라벨이 상단에 표시됩니다</li>
+            <li>라벨 길게 누르면 삭제 가능 (기록은 유지)</li>
+        </ul>
+        <h3>오늘의 기록</h3>
+        <p>스톱워치 화면의 두 번째 탭에서 오늘 기록한 세션을 바로 확인할 수 있습니다.</p>
+        <ul>
+            <li>오늘 생성된 스톱워치 기록만 표시됩니다</li>
+            <li>라벨, 날짜/시간, 총 경과 시간이 표시됩니다</li>
+            <li>탭하면 랩 상세 기록을 확인할 수 있습니다</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>기록</h2>
+        <p>기록 탭에서 타이머와 스톱워치 사용 이력을 확인할 수 있습니다.</p>
+        <h3>조회 기간</h3>
+        <ul>
+            <li>오늘</li>
+            <li>이번 주</li>
+            <li>이번 달</li>
+            <li>전체</li>
+            <li>사용자 지정 (날짜 범위 선택)</li>
+        </ul>
+        <h3>타이머 기록</h3>
+        <ul>
+            <li>총 세션 수</li>
+            <li>총 활동 시간</li>
+            <li>총 완료 라운드 수</li>
+            <li>세션별 상세 기록 (페이즈, 라운드, 시간)</li>
+        </ul>
+        <h3>스톱워치 기록</h3>
+        <ul>
+            <li>총 세션 수</li>
+            <li>총 측정 시간</li>
+            <li>총 랩 수</li>
+            <li>세션별 랩 상세 기록</li>
+        </ul>
+        <h3>기록 삭제</h3>
+        <ul>
+            <li>개별 세션: 좌측으로 스와이프 또는 길게 누르기</li>
+            <li>전체 삭제: 우측 상단 삭제 버튼</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>설정</h2>
+        <h3>테마</h3>
+        <ul>
+            <li><strong>시스템 기본</strong>: 기기 설정에 따름</li>
+            <li><strong>라이트 모드</strong>: 밝은 배경</li>
+            <li><strong>다크 모드</strong>: 어두운 배경</li>
+        </ul>
+        <h3>언어</h3>
+        <ul>
+            <li>자동 (기기 설정에 따름)</li>
+            <li>한국어, English, 日本語, 中文</li>
+        </ul>
+        <h3>소리 및 진동</h3>
+        <ul>
+            <li><strong>소리</strong>: 페이즈 전환 시 알림음 (켜기/끄기)</li>
+            <li><strong>진동</strong>: 페이즈 전환 시 진동 (켜기/끄기)</li>
+        </ul>
+        <h3>화면</h3>
+        <ul>
+            <li><strong>화면 켜짐 유지</strong>: 타이머/스톱워치 실행 중 화면이 꺼지지 않음</li>
+        </ul>
+        <h3>클라우드 동기화</h3>
+        <p>Google Drive를 통해 데이터를 백업하고 동기화할 수 있습니다.</p>
+        <p><strong>로그인 전:</strong></p>
+        <ul>
+            <li>Google 로그인 버튼</li>
+            <li>백업 파일에서 복원 (기기의 .gz 또는 .json 파일)</li>
+        </ul>
+        <p><strong>로그인 후:</strong></p>
+        <ul>
+            <li>연결된 Google 계정 표시</li>
+            <li><strong>자동 동기화</strong>: 데이터 변경 시 자동 백업</li>
+            <li><strong>지금 동기화</strong>: 수동으로 즉시 동기화</li>
+            <li><strong>클라우드 초기화</strong>: 클라우드 데이터 삭제 후 재업로드</li>
+            <li><strong>로그아웃</strong>: Google 계정 연결 해제</li>
+        </ul>
+        <h3>앱 개발 응원하기</h3>
+        <p>인앱 결제로 개발을 응원할 수 있습니다. 응원하면 광고가 제거됩니다.</p>
+        <ul>
+            <li>작은 응원</li>
+            <li>따뜻한 응원</li>
+            <li>큰 응원</li>
+        </ul>
+        <p>Windows에서는 인앱 결제를 사용할 수 없습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>플랫폼별 안내</h2>
+        <table class="info-table">
+            <tr><th>기능</th><td><strong>Android</strong></td><td><strong>Windows</strong></td></tr>
+            <tr><th>광고</th><td>있음 (응원 시 제거)</td><td>준비중</td></tr>
+            <tr><th>인앱 결제</th><td>지원</td><td>준비중</td></tr>
+            <tr><th>클라우드 동기화</th><td>지원</td><td>준비중</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>팁</h2>
+        <div class="tip-box">
+            <ul>
+                <li>프리셋을 활용하면 자주 사용하는 타이머 설정을 빠르게 불러올 수 있습니다</li>
+                <li>스톱워치에 라벨을 지정하면 기록을 체계적으로 관리할 수 있습니다</li>
+                <li>무한 라운드를 사용하면 원하는 만큼 반복할 수 있습니다</li>
+                <li>클라우드 동기화를 사용하면 여러 기기에서 데이터를 공유할 수 있습니다</li>
+                <li>기록 탭에서 기간별로 사용 이력을 확인해 보세요</li>
+                <li>페이즈별로 다른 색상을 설정하면 타이머 진행 상황을 한눈에 파악할 수 있습니다</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>개인정보처리방침</h2>
+        <p><a href="../privacy/ko.html">Good Timer 개인정보처리방침</a>을 확인할 수 있습니다.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 윌리 프로젝트. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="../ko.html">Good Timer</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

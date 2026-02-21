@@ -192,6 +192,120 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/twenty-four-hours/manual/en.html"/>
   </url>
 
+  <!-- Good Timer 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/good-timer/ko.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/en.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/ja.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/zh.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/en.html"/>
+  </url>
+
+  <!-- Good Timer 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/good-timer/manual/ko.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/manual/en.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/manual/ja.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/manual/zh.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html"/>
+  </url>
+
+  <!-- Good Timer 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/good-timer/privacy/ko.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/privacy/en.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/privacy/ja.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/good-timer/privacy/zh.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/privacy/en.html"/>
+  </url>
+
   <!-- Twenty Four Hours 개인정보처리방침 -->
   <url>
     <loc>https://willee.net/apps/twenty-four-hours/privacy/ko.html</loc>

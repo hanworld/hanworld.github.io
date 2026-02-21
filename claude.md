@@ -25,7 +25,25 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   ├── privacy.html
 │   └── terms.html
 ├── apps/
-│   └── twenty-four-hours/  # Twenty Four Hours 앱
+│   ├── twenty-four-hours/  # Twenty Four Hours 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   ├── privacy/        # 개인정보처리방침
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── good-timer/         # Good Timer 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -75,6 +93,11 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 24시간 아날로그 시계 + 일정 관리 앱
 - 플랫폼: Android, Windows
 - Google Play / Microsoft Store 배포
+
+### Good Timer
+- 범용 타이머 & 스톱워치 앱 (인터벌 타이머, 프리셋, 기록/통계)
+- 플랫폼: Android, Windows (미출시)
+- 패키지 ID: net.willee.goodtimer
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정

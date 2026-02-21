@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Good Timer 使用手册 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/good-timer/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/manual/en.html">
+    <style>
+        /* Willee Project 调色板
+           薄荷: #2EC4B6 | 深薄荷: #1D7A5F | 藏青: #1A365D
+           白色: #FFFFFF | 金色: #D4AF37 | 浅薄荷: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; width: 30%; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; }
+        .tip-box ul { margin-bottom: 0; }
+        .tip-box li { color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">Good Timer</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Good Timer</h1>
+                <p>使用手册</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>Good Timer</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android, Windows</td></tr>
+        </table>
+        <p>Good Timer 是一款适用于日常生活的通用计时器应用。提供可自由配置的间隔计时器和支持分段记录的秒表，适用于学习、运动、烹饪、冥想等各种活动。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>界面导航</h2>
+        <p>通过底部（竖屏）或左侧（横屏）的标签页切换界面。</p>
+        <table class="info-table">
+            <tr><th>计时器</th><td>间隔计时器</td></tr>
+            <tr><th>秒表</th><td>秒表和分段记录</td></tr>
+            <tr><th>记录</th><td>使用记录和统计</td></tr>
+            <tr><th>设置</th><td>应用设置</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>计时器</h2>
+        <h3>基本概念</h3>
+        <p>计时器由<strong>阶段</strong>和<strong>轮次</strong>组成。</p>
+        <ul>
+            <li><strong>阶段</strong>: 具有名称和时长的一个区间（例如："专注"25分钟、"休息"5分钟）</li>
+            <li><strong>轮次</strong>: 整个阶段序列重复的次数</li>
+            <li>最多可添加10个阶段</li>
+        </ul>
+        <p><strong>示例</strong>: 专注（25分钟）&rarr; 休息（5分钟），重复4轮</p>
+
+        <h3>计时器界面</h3>
+        <p>计时器界面由两个标签组成。</p>
+        <p><strong>计时器标签</strong></p>
+        <ul>
+            <li>圆形倒计时显示</li>
+            <li>当前阶段名称和剩余时间</li>
+            <li>轮次进度（例如："第2轮/共4轮"）</li>
+            <li>开始、暂停、继续、停止按钮</li>
+        </ul>
+        <p><strong>设置标签</strong></p>
+        <ul>
+            <li>编辑阶段列表（名称、时长、颜色）</li>
+            <li>添加/删除/重排阶段</li>
+            <li>调整轮次数</li>
+            <li>"保存为预设"按钮</li>
+        </ul>
+
+        <h3>计时器操作</h3>
+        <table class="info-table">
+            <tr><th>待机</th><td>开始</td></tr>
+            <tr><th>运行中</th><td>暂停</td></tr>
+            <tr><th>已暂停</th><td>继续、停止</td></tr>
+            <tr><th>已停止</th><td>重置、开始</td></tr>
+            <tr><th>已完成</th><td>重置、开始</td></tr>
+        </table>
+
+        <h3>轮次设置</h3>
+        <ul>
+            <li><strong>有限轮次</strong>: 重复1~999次</li>
+            <li><strong>无限轮次</strong>: 手动停止前持续重复</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>预设</h2>
+        <p>预设是保存的计时器配置（阶段+轮次），方便快速使用。</p>
+        <h3>预设管理</h3>
+        <ul>
+            <li>点击计时器界面顶部的预设图标查看列表</li>
+            <li><strong>添加</strong>: 点击+按钮创建新预设</li>
+            <li><strong>应用</strong>: 点击预设加载到计时器</li>
+            <li><strong>编辑</strong>: 点击编辑图标</li>
+            <li><strong>复制</strong>: 点击复制图标进行复制</li>
+            <li><strong>删除</strong>: 点击删除图标后确认</li>
+            <li><strong>收藏</strong>: 点击星标图标置顶</li>
+        </ul>
+        <h3>默认预设</h3>
+        <p>首次启动时自动创建以下预设：</p>
+        <ul>
+            <li>番茄钟（专注25分钟+休息5分钟，4轮）</li>
+            <li>Tabata（运动20秒+休息10秒，8轮）</li>
+            <li>学习 50/10（学习50分钟+休息10分钟，3轮）</li>
+            <li>拉伸（运动30秒+休息15秒，10轮）</li>
+            <li>冥想（准备1分钟+冥想10分钟+收尾1分钟，1轮）</li>
+            <li>5-4-3-2-1 倒计时（5分钟&rarr;4分钟&rarr;3分钟&rarr;2分钟&rarr;1分钟，1轮）</li>
+            <li>烹饪（烹饪10分钟+焖煮5分钟，1轮）</li>
+            <li>演讲（演讲15分钟+问答5分钟，1轮）</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>秒表</h2>
+        <h3>基本使用</h3>
+        <ol>
+            <li>切换到秒表标签</li>
+            <li>点击<strong>开始</strong>按钮</li>
+            <li>运行中点击<strong>分段</strong>按钮记录分段时间</li>
+            <li>点击<strong>停止</strong>按钮结束</li>
+            <li>记录自动保存</li>
+        </ol>
+        <h3>分段记录</h3>
+        <ul>
+            <li>计时中点击分段按钮记录区间时间</li>
+            <li>最快和最慢分段会被标注</li>
+            <li>停止后点击分段列表可查看详细记录</li>
+        </ul>
+        <h3>标签</h3>
+        <p>为秒表会话分配标签进行分类管理。</p>
+        <ul>
+            <li>点击计时器上方的标签标记进行选择/创建</li>
+            <li>最近使用的标签显示在顶部</li>
+            <li>长按标签可删除（记录保留）</li>
+        </ul>
+        <h3>今日记录</h3>
+        <p>秒表界面的第二个标签页可以快速查看今天记录的会话。</p>
+        <ul>
+            <li>仅显示今天创建的秒表记录</li>
+            <li>显示标签、日期/时间和总经过时间</li>
+            <li>点击可查看详细的分段记录</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>记录</h2>
+        <p>在记录标签中查看计时器和秒表的使用记录。</p>
+        <h3>查看周期</h3>
+        <ul>
+            <li>今天</li>
+            <li>本周</li>
+            <li>本月</li>
+            <li>全部</li>
+            <li>自定义（日期范围选择）</li>
+        </ul>
+        <h3>计时器记录</h3>
+        <ul>
+            <li>总会话数</li>
+            <li>总活动时间</li>
+            <li>总完成轮次</li>
+            <li>每个会话的详细记录（阶段、轮次、时长）</li>
+        </ul>
+        <h3>秒表记录</h3>
+        <ul>
+            <li>总会话数</li>
+            <li>总计时时间</li>
+            <li>总分段数</li>
+            <li>每个会话的分段详细记录</li>
+        </ul>
+        <h3>删除记录</h3>
+        <ul>
+            <li>单个会话：左滑或长按</li>
+            <li>全部删除：右上角删除按钮</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>设置</h2>
+        <h3>主题</h3>
+        <ul>
+            <li><strong>跟随系统</strong>: 根据设备设置</li>
+            <li><strong>浅色模式</strong>: 浅色背景</li>
+            <li><strong>深色模式</strong>: 深色背景</li>
+        </ul>
+        <h3>语言</h3>
+        <ul>
+            <li>自动（跟随设备语言）</li>
+            <li>English、한국어、日本語、中文</li>
+        </ul>
+        <h3>声音和振动</h3>
+        <ul>
+            <li><strong>声音</strong>: 阶段切换时提示音（开/关）</li>
+            <li><strong>振动</strong>: 阶段切换时振动反馈（开/关）</li>
+        </ul>
+        <h3>屏幕</h3>
+        <ul>
+            <li><strong>保持屏幕常亮</strong>: 计时器/秒表运行时屏幕不会关闭</li>
+        </ul>
+        <h3>云同步</h3>
+        <p>通过 Google Drive 备份和同步数据。</p>
+        <p><strong>登录前：</strong></p>
+        <ul>
+            <li>Google 登录按钮</li>
+            <li>从备份文件恢复（设备上的 .gz 或 .json 文件）</li>
+        </ul>
+        <p><strong>登录后：</strong></p>
+        <ul>
+            <li>显示已连接的 Google 账户</li>
+            <li><strong>自动同步</strong>: 数据变更时自动备份</li>
+            <li><strong>立即同步</strong>: 手动即时同步</li>
+            <li><strong>重置云端</strong>: 删除云端数据并重新上传</li>
+            <li><strong>退出登录</strong>: 断开 Google 账户连接</li>
+        </ul>
+        <h3>支持开发</h3>
+        <p>通过应用内购买支持开发者。购买后将移除广告。</p>
+        <ul>
+            <li>小小支持</li>
+            <li>温暖支持</li>
+            <li>大大支持</li>
+        </ul>
+        <p>Windows 平台不支持应用内购买。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>平台指南</h2>
+        <table class="info-table">
+            <tr><th>功能</th><td><strong>Android</strong></td><td><strong>Windows</strong></td></tr>
+            <tr><th>广告</th><td>有（支持后移除）</td><td>即将推出</td></tr>
+            <tr><th>应用内购买</th><td>支持</td><td>即将推出</td></tr>
+            <tr><th>云同步</th><td>支持</td><td>即将推出</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>使用技巧</h2>
+        <div class="tip-box">
+            <ul>
+                <li>利用预设可以快速加载常用的计时器配置</li>
+                <li>为秒表会话分配标签，可以系统地管理记录</li>
+                <li>使用无限轮次可以按需重复任意次数</li>
+                <li>开启云同步可以在多个设备之间共享数据</li>
+                <li>在记录标签中按时间段查看使用统计</li>
+                <li>为每个阶段设置不同颜色，可以一目了然地了解计时器进度</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看 <a href="../privacy/zh.html">Good Timer 隐私政策</a>。</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="../zh.html">Good Timer</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

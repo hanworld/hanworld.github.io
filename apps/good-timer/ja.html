@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Good Timer - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/good-timer/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/good-timer/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/good-timer/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/good-timer/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/good-timer/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/good-timer/en.html">
+    <style>
+        /* Willee Project カラーパレット
+           ミント: #2EC4B6 | ダークミント: #1D7A5F | ネイビー: #1A365D
+           ホワイト: #FFFFFF | ゴールド: #D4AF37 | ライトミント: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header img { width: 80px; margin-bottom: 12px; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 20px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Good Timer</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Good Timer</h1>
+        <p>日常のあらゆる瞬間に寄り添うタイマーアプリ</p>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.png" alt="Good Timer アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Good Timer</h2>
+                <p>汎用タイマー &amp; ストップウォッチアプリ</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                    <span class="badge">Windows (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Good Timerは、自由に設定できるインターバルタイマーとラップ記録が可能なストップウォッチを備えた汎用タイマーアプリです。学習、運動、料理、瞑想など、さまざまな活動に活用できます。よく使う設定をプリセットとして保存し、履歴と統計で使用状況を確認できます。</p>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>インターバルタイマー</strong>
+                <span>フェーズ（区間）とラウンド（繰り返し）で自由に構成。最大10個のフェーズ、有限/無限ラウンド対応。</span>
+            </li>
+            <li>
+                <strong>ストップウォッチ</strong>
+                <span>ラップ記録とラベル分類に対応。最速/最遅ラップのハイライト、セッション自動保存。</span>
+            </li>
+            <li>
+                <strong>プリセット</strong>
+                <span>よく使うタイマー設定を保存して素早く再利用。ポモドーロ、タバタなどのデフォルトプリセット付き。</span>
+            </li>
+            <li>
+                <strong>履歴＆統計</strong>
+                <span>タイマー、ストップウォッチの使用履歴を表示。期間別（今日、今週、今月、全期間）の統計を提供。</span>
+            </li>
+            <li>
+                <strong>クラウド同期</strong>
+                <span>Google Driveによるバックアップと復元。複数デバイス間でデータを安全に同期。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+            <div class="platform">
+                <strong>iOS</strong>
+                <span>対応予定</span>
+            </div>
+            <div class="platform">
+                <strong>Windows</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>Good Timerアプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Manual</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>ユーザーマニュアル</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>使用手册</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>Good Timerアプリのプライバシーポリシーをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>中文</strong>
+                <span>隐私政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリ関連のお問い合わせは以下までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
