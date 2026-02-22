@@ -59,6 +59,12 @@
         .platform strong { display: block; font-size: 1rem; color: #1A365D; }
         .platform span { color: #64748B; font-size: 0.85rem; }
 
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
         footer a:hover { color: #D4AF37; }
@@ -86,6 +92,9 @@
     <div class="container">
         <h1>Good Timer</h1>
         <p>A timer app for every moment of your day</p>
+        <div class="graphic-banner">
+            <img src="images/GoodTimer_graphic_image_001.png" alt="Good Timer - Make Every Moment Count">
+        </div>
     </div>
 </header>
 
@@ -103,6 +112,22 @@
             </div>
         </div>
         <p style="margin-top:20px;">Good Timer is a versatile timer app featuring a customizable interval timer and a stopwatch with lap recording. Perfect for studying, exercising, cooking, meditation, and more. Save frequently used configurations as presets and track your usage with history and statistics.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="images/GoodTimer_001.png" alt="Timer Running">
+            <img src="images/GoodTimer_002.png" alt="Interval Settings">
+            <img src="images/GoodTimer_003.png" alt="Presets">
+            <img src="images/GoodTimer_004.png" alt="Stopwatch">
+            <img src="images/GoodTimer_005.png" alt="Timer History">
+            <img src="images/GoodTimer_006.png" alt="Stopwatch Record Detail">
+            <img src="images/GoodTimer_007.png" alt="Stopwatch History">
+            <img src="images/GoodTimer_008.png" alt="Settings">
+        </div>
     </div>
 </section>
 
