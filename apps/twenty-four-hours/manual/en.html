@@ -267,9 +267,52 @@
         <ul>
             <li><strong>Always on Top</strong>: Window stays above other windows</li>
         </ul>
+        <h3>Notifications</h3>
+        <ul>
+            <li><strong>Notification Sound</strong>: Plays a sound when a schedule starts/ends (default: on)</li>
+            <li><strong>Notification Vibration</strong>: Vibrates when a schedule starts/ends (mobile only, default: on)</li>
+        </ul>
         <h3>Schedule Management</h3>
         <ul>
             <li><strong>Past Schedule Grouping</strong>: None, Monthly, Year + Monthly</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Notifications</h2>
+        <p>Receive notifications when your schedules start and end.</p>
+        <h3>Notification Methods</h3>
+        <ul>
+            <li><strong>While using the app (foreground)</strong>: A snackbar notification appears at the top of the screen with a sound</li>
+            <li><strong>While not using the app (background)</strong>: Displayed as a system notification</li>
+        </ul>
+        <h3>Notification Sounds</h3>
+        <ul>
+            <li>Different sounds play for schedule start and end</li>
+            <li>You can turn off notification sounds in Settings</li>
+        </ul>
+        <h3>Vibration (Mobile)</h3>
+        <ul>
+            <li>Schedule start: Short double vibration</li>
+            <li>Schedule end: Long single vibration</li>
+            <li>You can turn off vibration in Settings</li>
+        </ul>
+        <h3>Simultaneous Schedules</h3>
+        <ul>
+            <li>When multiple schedules start or end at the same time, they are grouped into a single notification</li>
+            <li>e.g., "Meeting +2 more"</li>
+        </ul>
+        <h3>Platform Notes</h3>
+        <table class="info-table">
+            <tr><th>Platform</th><th>System Notifications</th><th>Sound</th><th>Vibration</th></tr>
+            <tr><td>Android</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Windows</td><td>❌ (in-app only)</td><td>✅</td><td>❌</td></tr>
+        </table>
+        <ul>
+            <li><strong>Android</strong>: Notification permission must be granted on first launch</li>
+            <li><strong>Windows</strong>: System notifications are not supported; notifications are shown in-app with sound</li>
         </ul>
     </div>
 </section>

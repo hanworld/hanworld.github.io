@@ -267,9 +267,52 @@
         <ul>
             <li><strong>항상 위에 표시</strong>: 다른 창 위에 항상 표시됩니다</li>
         </ul>
+        <h3>알림</h3>
+        <ul>
+            <li><strong>알림 소리</strong>: 일정 시작/종료 시 알림음을 재생합니다 (기본값: 켜짐)</li>
+            <li><strong>알림 진동</strong>: 일정 시작/종료 시 진동으로 알려줍니다 (모바일만, 기본값: 켜짐)</li>
+        </ul>
         <h3>일정 관리</h3>
         <ul>
             <li><strong>지난 일정 그룹화</strong>: 없음, 월별, 연도+월별</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>알림</h2>
+        <p>일정의 시작 시간과 종료 시간에 알림을 받을 수 있습니다.</p>
+        <h3>알림 방식</h3>
+        <ul>
+            <li><strong>앱 사용 중 (포그라운드)</strong>: 화면 상단에 스낵바 알림이 표시되며 알림음이 재생됩니다</li>
+            <li><strong>앱 미사용 중 (백그라운드)</strong>: 시스템 알림으로 표시됩니다</li>
+        </ul>
+        <h3>알림음</h3>
+        <ul>
+            <li>일정 시작과 종료 시 서로 다른 알림음이 재생됩니다</li>
+            <li>설정에서 알림 소리를 끌 수 있습니다</li>
+        </ul>
+        <h3>진동 (모바일)</h3>
+        <ul>
+            <li>일정 시작: 짧은 이중 진동</li>
+            <li>일정 종료: 긴 단일 진동</li>
+            <li>설정에서 진동을 끌 수 있습니다</li>
+        </ul>
+        <h3>동시 일정</h3>
+        <ul>
+            <li>같은 시간에 시작하거나 종료하는 일정이 여러 개인 경우, 하나의 알림으로 묶어서 표시됩니다</li>
+            <li>예: "회의 외 2건"</li>
+        </ul>
+        <h3>플랫폼별 참고 사항</h3>
+        <table class="info-table">
+            <tr><th>플랫폼</th><th>시스템 알림</th><th>소리</th><th>진동</th></tr>
+            <tr><td>Android</td><td>✅</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Windows</td><td>❌ (앱 내 알림만)</td><td>✅</td><td>❌</td></tr>
+        </table>
+        <ul>
+            <li><strong>Android</strong>: 최초 실행 시 알림 권한을 허용해야 합니다</li>
+            <li><strong>Windows</strong>: 시스템 알림은 지원되지 않으며, 앱 내 알림과 소리로 알려줍니다</li>
         </ul>
     </div>
 </section>
