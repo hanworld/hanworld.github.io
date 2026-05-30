@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>塔罗哟 使用手册 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/tarotyo/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html">
+    <style>
+        /* Willee Project 调色板
+           薄荷: #2EC4B6 | 深薄荷: #1D7A5F | 藏青: #1A365D
+           白色: #FFFFFF | 金色: #D4AF37 | 浅薄荷: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">塔罗哟</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="塔罗哟" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>塔罗哟</h1>
+                <p>使用手册</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>塔罗哟 (TarotYo)</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android</td></tr>
+        </table>
+        <p>感谢您使用塔罗哟（TarotYo）。本文档将分步骤为您介绍应用的使用方法。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>塔罗哟是一款什么样的应用？</h2>
+        <p>塔罗哟会为您抽取 78 张塔罗牌，并将抽牌结果整理成可供 ChatGPT 等 AI 解读的<strong>提示词（问题文本）</strong>。</p>
+        <ul>
+            <li>应用本身并不直接解读卡牌。解读由 ChatGPT（或其他 AI）协助完成。</li>
+            <li>它并非给出既定答案，而是为了<strong>娱乐、心理慰藉与整理思绪</strong>而设计的内容。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>初次开始</h2>
+        <ol>
+            <li>首次启动应用时，会显示简单的<strong>使用指南</strong>。确认内容后，点击<strong>「我明白了，开始吧」</strong>即可进入主页面。</li>
+            <li>画面始终以<strong>竖屏模式</strong>运行。</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>界面构成</h2>
+        <p>画面底部设有 3 个标签。</p>
+        <table class="info-table">
+            <tr><th>抽牌</th><td>确定问题并抽牌，生成提示词。</td></tr>
+            <tr><th>卡牌一览</th><td>浏览全部 78 张塔罗牌。</td></tr>
+            <tr><th>设置</th><td>设置卡牌背面、语言与使用指南。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>抽牌（核心功能）</h2>
+        <p>抽牌分为 6 个步骤进行。</p>
+
+        <h3>第 1 步 · 选择牌阵</h3>
+        <p>请挑选与问题性质相符的<strong>牌阵（卡牌排列）</strong>。</p>
+        <table class="info-table">
+            <tr><th>牌阵</th><th>卡牌数</th><th>适用场景</th></tr>
+            <tr><td>三张牌</td><td>3 张</td><td>想简单看一下整体走势时</td></tr>
+            <tr><td>二选一</td><td>5 张</td><td>在两个选择之间犹豫时</td></tr>
+            <tr><td>情境建议</td><td>5 张</td><td>想获得具体的走势与建议时</td></tr>
+            <tr><td>人际关系</td><td>7 张</td><td>想看两人之间的关系与心意时</td></tr>
+            <tr><td>凯尔特十字</td><td>10 张</td><td>想多角度深入了解状况时</td></tr>
+        </table>
+
+        <h3>第 2 步 · 输入问题</h3>
+        <p>请输入您想了解的事情。问题越具体越好。（例如：「跳槽到新公司对我来说是好选择吗？」）也可以不输入问题直接继续。</p>
+
+        <h3>第 3 步 · 选择卡牌</h3>
+        <p>左右滑动以浏览呈扇形展开的卡牌，按牌阵所需的张数，选出您心中所向的卡牌。</p>
+
+        <h3>第 4 步 · 确认所选</h3>
+        <p>确认所选的卡牌。如果想重新选择，可以返回上一步。</p>
+
+        <h3>第 5 步 · 生成提示词</h3>
+        <p>稍等片刻，包含卡牌与位置（牌位）含义的提示词便会生成。</p>
+
+        <h3>第 6 步 · 结果</h3>
+        <p>您将收到生成完成的提示词。</p>
+        <ul>
+            <li><strong>复制提示词</strong>：将提示词复制到剪贴板。</li>
+            <li><strong>打开 ChatGPT</strong>：通过浏览器或应用打开 ChatGPT。</li>
+        </ul>
+        <div class="tip-box">
+            <p>点击画面左上角的主页按钮，可随时回到最初。</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>在 ChatGPT 中获得解读</h2>
+        <ol>
+            <li>在结果画面点击<strong>复制提示词</strong>。</li>
+            <li>点击<strong>打开 ChatGPT</strong> 以打开 ChatGPT。（可能需要登录。）</li>
+            <li>在输入框中粘贴后发送，即可获得卡牌解读。</li>
+        </ol>
+        <div class="tip-box">
+            <p>塔罗哟不会将提示词自动发送至 ChatGPT。请您亲自粘贴后使用。</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>卡牌一览</h2>
+        <p>在<strong>卡牌一览</strong>标签中，您可以浏览全部 78 张塔罗牌。</p>
+        <ul>
+            <li><strong>大阿尔卡纳</strong> 22 张</li>
+            <li><strong>小阿尔卡纳</strong> 56 张（权杖、圣杯、宝剑、钱币 4 种）</li>
+        </ul>
+        <p>点击卡牌即可放大查看。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>设置</h2>
+        <table class="info-table">
+            <tr><th>卡牌背面设计</th><td>选择抽牌时显示的卡牌背面。</td></tr>
+            <tr><th>语言设置</th><td>在韩语、英语、日语、中文中选择，或跟随系统默认值。</td></tr>
+            <tr><th>使用指南</th><td>提供应用介绍，以及用户手册、隐私政策的链接。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>广告说明</h2>
+        <p>塔罗哟免费提供，画面底部会显示<strong>横幅广告</strong>。在欧洲经济区（EEA）等部分地区，首次启动时可能会显示有关广告个性化的<strong>同意请求</strong>，是否同意可随时在<strong>设置 &gt; 广告同意管理</strong>中更改。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>注意事项</h2>
+        <p>塔罗哟的结果仅供<strong>娱乐与心理慰藉</strong>之用。对于医疗、法律、财务等需要专业判断的事情，请务必咨询专业人士。请不要过度依赖结果，以轻松的心情享受即可。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>您可以查看 <a href="../privacy/zh.html">塔罗哟 隐私政策</a>。</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="../zh.html">塔罗哟</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

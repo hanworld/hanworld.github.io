@@ -43,7 +43,25 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── good-timer/         # Good Timer 앱
+│   ├── good-timer/         # Good Timer 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   ├── privacy/        # 개인정보처리방침
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── tarotyo/            # 타로요(TarotYo) 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -98,6 +116,12 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 범용 타이머 & 스톱워치 앱 (인터벌 타이머, 프리셋, 기록/통계)
 - 플랫폼: Android, Windows (미출시)
 - 패키지 ID: net.willee.goodtimer
+
+### TarotYo (타로요)
+- 타로 카드 리딩 + ChatGPT 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
+- 앱이 직접 카드를 해석하지 않고 AI가 해석할 프롬프트를 생성
+- 플랫폼: Android (출시 예정)
+- 패키지 ID: net.willee.tarotyo
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정

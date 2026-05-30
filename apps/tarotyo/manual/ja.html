@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>タロヨ ユーザーマニュアル - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/tarotyo/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html">
+    <style>
+        /* Willee Project カラーパレット
+           ミント: #2EC4B6 | ダークミント: #1D7A5F | ネイビー: #1A365D
+           ホワイト: #FFFFFF | ゴールド: #D4AF37 | ライトミント: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ja.html">タロヨ</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="タロヨ" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>タロヨ</h1>
+                <p>ユーザーマニュアル</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>タロヨ (TarotYo)</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>タロヨ(TarotYo)をご利用いただきありがとうございます。この文書では、アプリの使い方を順を追ってご案内します。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>タロヨはどんなアプリですか?</h2>
+        <p>タロヨは、タロットカード78枚を引き、その結果を ChatGPT のような AI が解釈できる<strong>プロンプト(質問文)</strong>に仕上げてくれるツールです。</p>
+        <ul>
+            <li>アプリが直接カードを解釈するわけではありません。解釈は ChatGPT(または他の AI)が手伝います。</li>
+            <li>決まった答えを示すものではなく、<strong>楽しみと心の安らぎ、考えの整理</strong>のためのコンテンツです。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>はじめに</h2>
+        <ol>
+            <li>アプリを初めて起動すると、簡単な<strong>ご利用案内</strong>が表示されます。内容を確認し、<strong>「わかりました、始めます」</strong>を押すとホーム画面に入ります。</li>
+            <li>画面は常に<strong>縦向き</strong>で動作します。</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>画面構成</h2>
+        <p>画面下部には3つのタブがあります。</p>
+        <table class="info-table">
+            <tr><th>カード引き</th><td>質問を決めてカードを引き、プロンプトを作成します。</td></tr>
+            <tr><th>カード一覧</th><td>タロット78枚を見て回ります。</td></tr>
+            <tr><th>設定</th><td>カードの裏面・言語・ご利用案内を設定します。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>カードを引く (中心機能)</h2>
+        <p>カード引きは6つのステップで進みます。</p>
+
+        <h3>ステップ1 · スプレッド選択</h3>
+        <p>質問の性質に合った<strong>スプレッド(カードの並べ方)</strong>を選びます。</p>
+        <table class="info-table">
+            <tr><th>スプレッド</th><th>カード枚数</th><th>こんな時に</th></tr>
+            <tr><td>スリーカード</td><td>3枚</td><td>全体の流れを手軽に見たい時に</td></tr>
+            <tr><td>二者択一</td><td>5枚</td><td>二つの選択肢で迷っている時に</td></tr>
+            <tr><td>状況アドバイス</td><td>5枚</td><td>具体的な流れと助言が欲しい時に</td></tr>
+            <tr><td>人間関係</td><td>7枚</td><td>二人の関係と心を見たい時に</td></tr>
+            <tr><td>ケルト十字</td><td>10枚</td><td>状況を多角的に深く読み解きたい時に</td></tr>
+        </table>
+
+        <h3>ステップ2 · 質問の入力</h3>
+        <p>気になることを入力します。質問は具体的であるほど良い結果が得られます。(例:「新しい職場へ転職することは私にとって良い選択でしょうか?」)質問なしで進めることもできます。</p>
+
+        <h3>ステップ3 · カード選択</h3>
+        <p>扇状に広げられたカードを左右にスワイプしながら、心が引かれるカードをスプレッドの枚数だけ選びます。</p>
+
+        <h3>ステップ4 · 選択の確認</h3>
+        <p>選んだカードを確認します。選び直したい場合は、前のステップに戻ることができます。</p>
+
+        <h3>ステップ5 · プロンプト生成</h3>
+        <p>しばらく待つと、カードとポジション(位置)の意味を盛り込んだプロンプトが作成されます。</p>
+
+        <h3>ステップ6 · 結果</h3>
+        <p>完成したプロンプトを受け取ります。</p>
+        <ul>
+            <li><strong>プロンプトをコピー</strong>: プロンプトをクリップボードにコピーします。</li>
+            <li><strong>ChatGPT を開く</strong>: ChatGPT をブラウザまたはアプリで開きます。</li>
+        </ul>
+        <div class="tip-box">
+            <p>画面左上のホームボタンを押すと、いつでも最初に戻ることができます。</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>ChatGPT で解釈を受ける</h2>
+        <ol>
+            <li>結果画面で<strong>プロンプトをコピー</strong>を押します。</li>
+            <li><strong>ChatGPT を開く</strong>で ChatGPT を開きます。(ログインが必要な場合があります。)</li>
+            <li>入力欄に貼り付けて送信すると、カードの解釈を受け取ることができます。</li>
+        </ol>
+        <div class="tip-box">
+            <p>タロヨはプロンプトを ChatGPT へ自動送信しません。ご自身で貼り付けてご利用ください。</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>カード一覧</h2>
+        <p><strong>カード一覧</strong>タブでは、タロット78枚をすべて見ることができます。</p>
+        <ul>
+            <li><strong>大アルカナ</strong> 22枚</li>
+            <li><strong>小アルカナ</strong> 56枚 (ワンド・カップ・ソード・ペンタクルの4種)</li>
+        </ul>
+        <p>カードを押すと大きく表示できます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>設定</h2>
+        <table class="info-table">
+            <tr><th>カード裏面デザイン</th><td>カードを引く時に見える裏面を選びます。</td></tr>
+            <tr><th>言語設定</th><td>韓国語・英語・日本語・中国語から選ぶか、システム既定に従います。</td></tr>
+            <tr><th>ご利用案内</th><td>アプリの紹介と、ユーザーマニュアル・プライバシーポリシーへのリンクを提供します。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>広告について</h2>
+        <p>タロヨは無料で提供され、画面下部に<strong>バナー広告</strong>が表示されます。欧州経済領域(EEA)など一部の地域では、初回起動時に広告のパーソナライズに関する<strong>同意のリクエスト</strong>が表示される場合があり、同意の可否は<strong>設定 &gt; 広告同意の管理</strong>からいつでも変更できます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>ご注意</h2>
+        <p>タロヨの結果は<strong>楽しみと心の安らぎ</strong>のためのものです。医療・法律・財務など専門的な判断が必要な事柄については、必ず専門家にご相談ください。結果に頼りすぎず、リラックスした気持ちでお楽しみください。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p><a href="../privacy/ja.html">タロヨ プライバシーポリシー</a>をご確認いただけます。</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">タロヨ</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

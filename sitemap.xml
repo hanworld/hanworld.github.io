@@ -344,4 +344,118 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/twenty-four-hours/privacy/en.html"/>
   </url>
 
+  <!-- TarotYo 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/tarotyo/ko.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/en.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/ja.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/zh.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/en.html"/>
+  </url>
+
+  <!-- TarotYo 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/tarotyo/manual/ko.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/manual/en.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/manual/ja.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/manual/zh.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/manual/en.html"/>
+  </url>
+
+  <!-- TarotYo 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/tarotyo/privacy/ko.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/privacy/en.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/privacy/ja.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tarotyo/privacy/zh.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tarotyo/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tarotyo/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tarotyo/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
+  </url>
+
 </urlset>
