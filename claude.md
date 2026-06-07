@@ -120,8 +120,9 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ### TarotYo (타로요)
 - 타로 카드 리딩 + ChatGPT 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
 - 앱이 직접 카드를 해석하지 않고 AI가 해석할 프롬프트를 생성
-- 플랫폼: Android (출시 예정)
+- 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.tarotyo
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.tarotyo
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정
