@@ -61,7 +61,25 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── tarotyo/            # 타로요(TarotYo) 앱
+│   ├── tarotyo/            # 타로요(TarotYo) 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   ├── privacy/        # 개인정보처리방침
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── board-games/        # 보드게임(Board Games) 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -123,6 +141,12 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.tarotyo
 - Google Play: https://play.google.com/store/apps/details?id=net.willee.tarotyo
+
+### Board Games (보드게임)
+- 오목·오델로·체커·백개먼·커넥트 포·점 잇기·틱택토 등 7가지 보드게임을 한 앱에 담은 게임 모음
+- AI 대전(알파-베타 탐색, 3단계 난이도) + 로컬 2인 대전, 서버 없이 오프라인 동작
+- 플랫폼: Android (Google Play 출시 예정)
+- 패키지 ID: net.willee.boardgames
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정

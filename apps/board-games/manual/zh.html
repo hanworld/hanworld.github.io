@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>棋盘游戏 使用手册 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/board-games/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html">
+    <style>
+        /* Willee Project 配色
+           薄荷绿: #2EC4B6 | 深薄荷: #1D7A5F | 藏青: #1A365D
+           白色: #FFFFFF | 金色: #D4AF37 | 浅薄荷: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">棋盘游戏</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="棋盘游戏" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>棋盘游戏</h1>
+                <p>使用手册</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>棋盘游戏 (Board Games)</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android</td></tr>
+        </table>
+        <p>七款棋盘游戏，装在一个应用里。<strong>一个人就和 AI 下，两个人就用一台设备。</strong></p>
+        <ul>
+            <li>无需注册，无需登录。打开就能玩。</li>
+            <li><strong>没有网络也能对局。</strong> 网络只用来加载屏幕底部的广告。</li>
+            <li>语言跟随手机设置。支持简体中文、韩语、英语、日语。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 选择游戏</h2>
+        <p>打开应用进入<strong>大厅</strong>，游戏卡片竖着排开。点一张卡片，会从下方升起该游戏的规则和<strong>对局设置</strong>。</p>
+        <p><strong>最近玩过的游戏会排到上面。</strong> 但只有真正落过子的游戏才算 —— 只是打开看看规则再退出，顺序不会变。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 对局设置</h2>
+        <table class="info-table">
+            <tr><th>要选的</th><th>选项</th><th>说明</th></tr>
+            <tr><td><strong>对手</strong></td><td>对战 AI / 双人对战</td><td>“双人对战”是两个人轮流用同一台设备。</td></tr>
+            <tr><td><strong>难度</strong></td><td>简单 / 普通 / 困难</td><td>只在对战 AI 时出现。</td></tr>
+            <tr><td><strong>先手</strong></td><td>我先走 / AI 先走</td><td>只在对战 AI 时出现。</td></tr>
+        </table>
+        <p>点<strong>开始</strong>，棋盘就打开了。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 看懂对局界面</h2>
+        <p>界面从上到下分四层。</p>
+        <h3>1. 对局双方</h3>
+        <p>最上方并排的两格。<strong>轮到谁，谁就亮起来。</strong> 部分游戏还会显示分数。</p>
+        <table class="info-table">
+            <tr><th>游戏</th><th>数字的含义</th></tr>
+            <tr><td>黑白棋</td><td>你当前的棋子数</td></tr>
+            <tr><td>西洋跳棋</td><td>你还剩下的棋子数</td></tr>
+            <tr><td>西洋双陆棋</td><td>你已经移出棋盘的棋子数</td></tr>
+            <tr><td>点格棋</td><td>你占到的方格数</td></tr>
+        </table>
+        <p>五子棋、四子棋、井字棋没有可计的分数，因此不显示数字。</p>
+        <h3>2. 状态栏</h3>
+        <p>告诉你此刻在发生什么：<strong>轮到我</strong>、<strong>AI 思考中…</strong>、<strong>正在掷骰子…</strong>。规则生效时，前面会出现<strong>金色文字</strong>。</p>
+        <table class="info-table">
+            <tr><th>金色文字</th><th>含义</th></tr>
+            <tr><td>无处可下，跳过回合</td><td>（黑白棋）你无子可下，回合被跳过</td></tr>
+            <tr><td>连续跳吃</td><td>（西洋跳棋）必须从刚才的落点继续跳吃</td></tr>
+            <tr><td>中栏有棋子待进场</td><td>（西洋双陆棋）必须先让被击回的棋子重新进场</td></tr>
+        </table>
+        <h3>3. 棋盘</h3>
+        <p>位于中间。点这里落子。</p>
+        <h3>4. 悔棋 · 重新开始</h3>
+        <p>下方的两个按钮。见下一节。</p>
+        <p>对局结束后，<strong>结果面板</strong>会盖住棋盘，显示胜负和比分。你可以<strong>返回大厅</strong>，或按<strong>重新开始</strong>用同样的设置再来一局。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 悔棋与重新开始</h2>
+        <p><strong>悔棋</strong> —— 回退到你上一次该走的时候。AI 的应手也会一并撤回。如果没有可回退的回合，按钮会变灰。</p>
+        <div class="tip-box">
+            <p><strong>骰子不能悔。</strong> 在西洋双陆棋里，悔棋不会退回到掷骰之前。如果每次点数不满意都能退回去重掷，那就不是悔棋，是作弊。</p>
+        </div>
+        <p><strong>重新开始</strong> —— 把棋盘摆回初始状态。设置（对手、难度、先手）保持不变。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 七款游戏</h2>
+
+        <h3>五子棋 —— 先连成五子者获胜</h3>
+        <p>轮流在交叉点上落子。先在横、竖或斜线上连成五子者获胜。采用无禁手的自由规则，连成六子以上同样算赢。</p>
+        <div class="tip-box">
+            <p><strong>点两次才落子。</strong> 棋盘格子密集，手指很难一次点准。先点一次选定位置，<strong>再点同一处</strong>才会落子。点别处则把瞄准移过去。</p>
+        </div>
+
+        <h3>黑白棋 —— 翻来覆去，最后子多者胜</h3>
+        <p>落子时若能把对方的棋子夹在自己的两子之间，被夹住的棋子会全部翻成自己的颜色。无法翻子的位置不能落子。</p>
+        <p>若一方无处可下，就跳过该回合（状态栏会显示<strong>无处可下，跳过回合</strong>）。双方都无处可下时对局结束，棋子多的一方获胜。</p>
+
+        <h3>西洋跳棋 —— 跳吃对手，抵达底线即加冕</h3>
+        <p>棋子每次沿对角线向前走一格。跳过对方棋子即可吃掉它。</p>
+        <p><strong>能吃时必须吃</strong>，落点若还能继续吃，就要连续跳吃（状态栏会显示<strong>连续跳吃</strong>）。走到对方底线的棋子会加冕为王，可以后退。</p>
+        <p>吃光对方所有棋子，或让对方无子可动，即获胜。</p>
+
+        <h3>西洋双陆棋 —— 骰子开路，先移出所有棋子者获胜</h3>
+        <p>掷骰子，按点数移动棋子。能走的点数必须尽量用完；掷出对子时可以走四步。</p>
+        <p>若落到只有一枚对方棋子的点上，该棋子会被击回中栏。中栏里的棋子必须先重新进场，否则不能移动其他棋子（状态栏会显示<strong>中栏有棋子待进场</strong>）。</p>
+        <p>当十五枚棋子全部集中到自家内区后，就可以开始把棋子移出棋盘。<strong>先移出全部十五枚者获胜。</strong></p>
+        <div class="tip-box">
+            <p>西洋双陆棋多出两个按钮。<br>
+            <strong>撤回</strong> —— 只撤销本回合已经移动的部分（在确定回合之前）。<br>
+            <strong>跳过</strong> —— 只有当掷出的点数无棋可走时才会出现。</p>
+        </div>
+
+        <h3>四子棋 —— 先连成四子者获胜</h3>
+        <p>选择一列落子，棋子会因重力落到该列最下方的空格。先在横、竖或斜线上连成四子者获胜。棋盘填满仍无人连成，则为平局。</p>
+
+        <h3>点格棋 —— 占到更多方格者获胜</h3>
+        <p>轮流连接相邻的两个点。<strong>画上方格第四条边的人占据该方格，并可以再走一步。</strong> 占到方格更多的一方获胜。</p>
+
+        <h3>井字棋 —— 先连成三子者获胜</h3>
+        <p>轮流在空格中落子。先让自己的三个标记在横、竖或斜线上连成一线者获胜。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 语言</h2>
+        <p><strong>完全跟随手机的语言设置。</strong> 应用内没有语言选择项。</p>
+        <p>支持简体中文、韩语、英语、日语。如果手机设置为其他语言，应用会以<strong>英语</strong>显示。如果手机上列了多种语言，应用会从上往下找，用第一个能匹配的。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 广告与隐私</h2>
+        <p>屏幕最下方有一条横幅广告。无论在大厅还是在对局中，都是<strong>同一条</strong>。</p>
+        <p>如果您身处欧洲等地区，首次打开应用时会出现<strong>广告同意窗口</strong>。即使不同意，应用的功能也完全一样，不受影响。</p>
+        <p>本应用没有注册也没有账号，开发者不收集任何个人信息。详情请参阅<a href="../privacy/zh.html">隐私政策</a>。</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="../zh.html">棋盘游戏</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

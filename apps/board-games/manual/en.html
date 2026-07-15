@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Board Games User Manual - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/board-games/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html">
+    <style>
+        /* Willee Project Color Palette
+           Mint: #2EC4B6 | Dark Mint: #1D7A5F | Navy: #1A365D
+           White: #FFFFFF | Gold: #D4AF37 | Light Mint: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../en.html">Board Games</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Board Games" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Board Games</h1>
+                <p>User Manual</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Board Games</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>Seven board games in one app. <strong>Play the AI on your own, or a friend on one device.</strong></p>
+        <ul>
+            <li>No sign-up, no login. Open it and play.</li>
+            <li><strong>The games work without an internet connection.</strong> The internet is only used to fetch the ad at the bottom of the screen.</li>
+            <li>The language follows your phone's settings. Korean, English, Japanese and Chinese (Simplified) are supported.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Choosing a game</h2>
+        <p>Opening the app takes you to the <strong>lobby</strong>, a list of game cards. Tap a card and a <strong>setup sheet</strong> slides up with that game's rules.</p>
+        <p><strong>Games you played recently move to the top.</strong> Only games you actually made a move in count — if you open one, read the rules and back out, the order stays as it was.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Setting up a match</h2>
+        <table class="info-table">
+            <tr><th>Choice</th><th>Options</th><th>Notes</th></tr>
+            <tr><td><strong>Opponent</strong></td><td>vs AI / 2 players</td><td>"2 players" means two people taking turns on the same phone.</td></tr>
+            <tr><td><strong>Difficulty</strong></td><td>Easy / Normal / Hard</td><td>Only shown when playing the AI.</td></tr>
+            <tr><td><strong>First move</strong></td><td>I go first / AI goes first</td><td>Only shown when playing the AI.</td></tr>
+        </table>
+        <p>Tap <strong>Start</strong> to open the board.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. Reading the match screen</h2>
+        <p>The screen has four bands, top to bottom.</p>
+        <h3>1. The two players</h3>
+        <p>A pair of chips at the top. <strong>Whoever has the move lights up.</strong> Some games show a score alongside.</p>
+        <table class="info-table">
+            <tr><th>Game</th><th>What the number means</th></tr>
+            <tr><td>Othello</td><td>How many discs you hold right now</td></tr>
+            <tr><td>Checkers</td><td>How many of your pieces are still alive</td></tr>
+            <tr><td>Backgammon</td><td>How many checkers you have borne off</td></tr>
+            <tr><td>Dots and Boxes</td><td>How many boxes you have claimed</td></tr>
+        </table>
+        <p>Gomoku, Connect Four and Tic-Tac-Toe have nothing to count, so no number is shown.</p>
+        <h3>2. The status line</h3>
+        <p>What is happening right now: <strong>Your turn</strong>, <strong>AI is thinking…</strong>, <strong>Rolling the dice…</strong>. When a rule fires, a note in <strong>gold</strong> appears in front of it.</p>
+        <table class="info-table">
+            <tr><th>Gold note</th><th>What it means</th></tr>
+            <tr><td>No moves — turn skipped</td><td>(Othello) You had no legal move, so your turn passed</td></tr>
+            <tr><td>Chain jump</td><td>(Checkers) You must keep capturing from where you just landed</td></tr>
+            <tr><td>Checker on the bar</td><td>(Backgammon) You must re-enter your knocked-out checker first</td></tr>
+        </table>
+        <h3>3. The board</h3>
+        <p>In the middle. This is where you tap to play.</p>
+        <h3>4. Undo and Restart</h3>
+        <p>The two buttons at the bottom. See the next section.</p>
+        <p>When the game ends a <strong>result panel</strong> covers the board with the outcome and the score. From there you can go back to the <strong>Lobby</strong> or <strong>Restart</strong> for another game with the same settings.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Undo and Restart</h2>
+        <p><strong>Undo</strong> rewinds to your last decision. The AI's reply is taken back with it. If there is no turn of yours to go back to, the button is greyed out.</p>
+        <div class="tip-box">
+            <p><strong>You cannot undo a dice roll.</strong> In Backgammon, undo will not rewind past the point where the dice were thrown. If you could take back every roll you didn't like and throw again, that would not be an undo — it would be cheating.</p>
+        </div>
+        <p><strong>Restart</strong> sets the board back to the start. Your settings (opponent, difficulty, who opens) stay as they were.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. The seven games</h2>
+
+        <h3>Gomoku — First to five in a row wins</h3>
+        <p>Take turns placing stones on the intersections. The first to line up five in a row — across, down, or diagonally — wins. This is the free-style rule with no forbidden moves, so a row of six or more also wins.</p>
+        <div class="tip-box">
+            <p><strong>Tap twice to place a stone.</strong> The board is dense and hard to hit precisely with a fingertip, so tap once to aim and <strong>tap the same point again</strong> to commit. Tapping elsewhere moves your aim there instead.</p>
+        </div>
+
+        <h3>Othello — Flip and be flipped, most wins</h3>
+        <p>Place a disc so that a line of your opponent's discs is trapped between it and another of your own — every trapped disc flips to your colour. You may not play where nothing would flip.</p>
+        <p>If you have no legal move your turn is skipped (the status line shows <strong>No moves — turn skipped</strong>). When neither side can move the game ends, and whoever has more discs wins.</p>
+
+        <h3>Checkers — Jump, capture, and be crowned</h3>
+        <p>Pieces move one square diagonally forward. Jump over an opponent's piece to capture it.</p>
+        <p><strong>Capturing is compulsory</strong>, and if another capture is open from where you land you must keep jumping (the status line shows <strong>Chain jump</strong>). Reach the far row and your piece is crowned a king, which may also move backwards.</p>
+        <p>Capture every enemy piece, or leave your opponent with no legal move, to win.</p>
+
+        <h3>Backgammon — Bear off all fifteen to win</h3>
+        <p>Roll the dice and move your checkers by the numbers shown. You must use as many of the dice as you legally can, and a double lets you move four times.</p>
+        <p>Land on a point held by a lone enemy checker and it is knocked out to the bar. A checker on the bar has to re-enter before you may move any other (the status line shows <strong>Checker on the bar</strong>).</p>
+        <p>Once all fifteen of your checkers are home you may start bearing them off. <strong>Bear all fifteen off first to win.</strong></p>
+        <div class="tip-box">
+            <p>Backgammon has two extra buttons.<br>
+            <strong>Take back</strong> — undoes only what you have moved this turn, before you commit it.<br>
+            <strong>Pass</strong> — appears only when the roll leaves you nothing you can legally play.</p>
+        </div>
+
+        <h3>Connect Four — Drop four in a row to win</h3>
+        <p>Pick a column and drop a disc — it falls to the lowest empty slot in that column. The first to line up four — across, down, or diagonally — wins. If the board fills up with no line, the game is a draw.</p>
+
+        <h3>Dots and Boxes — Claim the most boxes to win</h3>
+        <p>Take turns joining two neighbouring dots with a line. <strong>Whoever draws the fourth side of a box claims it and immediately plays again.</strong> The player holding more boxes wins.</p>
+
+        <h3>Tic-Tac-Toe — First to three in a row wins</h3>
+        <p>Take turns marking an empty square. The first to line up three of their own marks — across, down, or diagonally — wins.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Language</h2>
+        <p><strong>The app follows your phone's language settings.</strong> There is no language picker inside the app.</p>
+        <p>Korean, English, Japanese and Chinese (Simplified) are supported. If your phone is set to any other language, the app is shown in <strong>English</strong>. If you have several languages listed on your phone, the app walks down the list and uses the first one it can match.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Ads and privacy</h2>
+        <p>A single banner sits at the bottom of the screen. It is <strong>the same one banner</strong> whether you are in the lobby or in a game.</p>
+        <p>If you are in Europe and some other regions, a <strong>consent dialog</strong> appears the first time you open the app. Declining changes nothing about what you can do in the app.</p>
+        <p>This app has no sign-up and no account, and the developer collects no personal data at all. See the <a href="../privacy/en.html">Privacy Policy</a> for the detail.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="../en.html">Board Games</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

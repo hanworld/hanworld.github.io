@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>ボードゲーム 取扱説明書 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/board-games/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html">
+    <style>
+        /* Willee Project カラーパレット
+           ミント: #2EC4B6 | ダークミント: #1D7A5F | ネイビー: #1A365D
+           ホワイト: #FFFFFF | ゴールド: #D4AF37 | ライトミント: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ja.html">ボードゲーム</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="ボードゲーム" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>ボードゲーム</h1>
+                <p>取扱説明書</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>ボードゲーム (Board Games)</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>七つのボードゲームを一つのアプリに。<strong>一人ならAIと、二人なら一台で。</strong></p>
+        <ul>
+            <li>会員登録もログインもありません。開いたらすぐ遊べます。</li>
+            <li><strong>インターネットがなくても対局できます。</strong> ネットは画面下の広告を取ってくるときだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・韓国語・英語・中国語(簡体字)に対応しています。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. ゲームを選ぶ</h2>
+        <p>アプリを開くと<strong>ロビー</strong>が出ます。ゲームのカードが縦に並んでいます。カードを押すと、そのゲームのルールとともに<strong>対局設定</strong>が下から上がってきます。</p>
+        <p><strong>最近遊んだゲームが上に来ます。</strong> ただし実際に一手でも打ったゲームだけを数えます — 開いてルールを読んだだけで戻れば、並び順は変わりません。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 対局の設定</h2>
+        <table class="info-table">
+            <tr><th>選ぶもの</th><th>値</th><th>説明</th></tr>
+            <tr><td><strong>対戦相手</strong></td><td>AIと対戦 / 二人で</td><td>「二人で」は一台の端末を交代で使う方式です。</td></tr>
+            <tr><td><strong>難易度</strong></td><td>やさしい / ふつう / むずかしい</td><td>AIと対戦するときだけ出ます。</td></tr>
+            <tr><td><strong>先手</strong></td><td>自分が先手 / AIが先手</td><td>AIと対戦するときだけ出ます。</td></tr>
+        </table>
+        <p><strong>開始</strong>を押すと盤が開きます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 対局画面の見方</h2>
+        <p>画面は上から下へ四段です。</p>
+        <h3>1. 対局者の二枠</h3>
+        <p>いちばん上に並ぶ二つの枠です。<strong>手番の側が明るく灯ります。</strong> ゲームによっては点数も並びます。</p>
+        <table class="info-table">
+            <tr><th>ゲーム</th><th>数字の意味</th></tr>
+            <tr><td>オセロ</td><td>今の自分の石の数</td></tr>
+            <tr><td>チェッカー</td><td>まだ残っている自分の駒の数</td></tr>
+            <tr><td>バックギャモン</td><td>盤の外へ上げた駒の数</td></tr>
+            <tr><td>ドット＆ボックス</td><td>取った箱の数</td></tr>
+        </table>
+        <p>五目並べ・コネクトフォー・三目並べには数えるものがないので、数字は出ません。</p>
+        <h3>2. 状態表示</h3>
+        <p>今なにが起きているかを伝えます: <strong>自分の番</strong>、<strong>AIが考え中…</strong>、<strong>サイコロを振っています…</strong>。ルール上の出来事があると、<strong>金色の文字</strong>が前に付きます。</p>
+        <table class="info-table">
+            <tr><th>金色の文字</th><th>意味</th></tr>
+            <tr><td>置ける場所がなく手番を飛ばしました</td><td>(オセロ) 置ける場所がなく、手番が飛ばされました</td></tr>
+            <tr><td>連続ジャンプ</td><td>(チェッカー) 着地した場所からさらに取り続けなければなりません</td></tr>
+            <tr><td>バーに駒があります</td><td>(バックギャモン) バーの駒を先に戻さなければなりません</td></tr>
+        </table>
+        <h3>3. 盤</h3>
+        <p>中央。ここをタップして打ちます。</p>
+        <h3>4. 待った・やり直す</h3>
+        <p>下の二つのボタン。次の節で説明します。</p>
+        <p>対局が終わると<strong>結果の画面</strong>が盤を覆います。勝敗と点数が出て、<strong>ロビーへ</strong>戻るか、<strong>やり直す</strong>で同じ設定のままもう一局打てます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 待ったとやり直し</h2>
+        <p><strong>待った</strong> — 自分が選ぶ番まで巻き戻します。AIの応手も一緒に取り消されます。戻る先の自分の番がなければボタンは押せません。</p>
+        <div class="tip-box">
+            <p><strong>サイコロは戻せません。</strong> バックギャモンの「待った」は、サイコロを振った地点より前へは戻りません。気に入らない目が出るたびに戻して振り直せるなら、それは待ったではなくズルです。</p>
+        </div>
+        <p><strong>やり直す</strong> — 盤を最初から並べ直します。設定(対戦相手・難易度・先手)はそのままです。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 七つのゲーム</h2>
+
+        <h3>五目並べ — 先に五つ並べた方が勝ち</h3>
+        <p>交互に交点へ石を置きます。縦・横・斜めのいずれかで先に五つ並べた方が勝ちです。禁じ手なしの自由ルールなので、六つ以上並んでも勝ちになります。</p>
+        <div class="tip-box">
+            <p><strong>二度タップで確定します。</strong> 盤の目が細かく、指では一度に正確に狙えません。一度タップして位置を決め、<strong>同じ場所をもう一度タップ</strong>して確定します。別の場所を押すと狙いがそちらへ移ります。</p>
+        </div>
+
+        <h3>オセロ — 返して返されて、多い方が勝ち</h3>
+        <p>自分の石と自分の石で相手の石を挟むように置くと、挟まれた石がすべて自分の色に返ります。返せない場所には置けません。</p>
+        <p>置ける場所がまったくない場合は手番を飛ばします(状態表示に<strong>置ける場所がなく手番を飛ばしました</strong>と出ます)。両者とも置けなくなれば対局は終わり、石の多い方が勝ちです。</p>
+
+        <h3>チェッカー — 跳び越えて取り、最奥で王になる</h3>
+        <p>駒は斜め前に一マスずつ進みます。相手の駒を跳び越すと取れます。</p>
+        <p><strong>取れるときは必ず取らなければならず</strong>、着地した場所からさらに取れるなら続けて跳びます(状態表示に<strong>連続ジャンプ</strong>と出ます)。相手陣の最終列に届くとキングになり、後ろへも進めます。</p>
+        <p>相手の駒をすべて取るか、相手を動けなくすれば勝ちです。</p>
+
+        <h3>バックギャモン — 先にすべての駒を上げた方が勝ち</h3>
+        <p>サイコロを振り、出た目の数だけ駒を進めます。使える目はできる限り使い切らなければならず、ゾロ目(ダブル)なら四回動かせます。</p>
+        <p>相手の駒が一つだけの地点に乗ると、その駒はバーに送られます。バーの駒を盤に戻すまで、ほかの駒は動かせません(状態表示に<strong>バーに駒があります</strong>と出ます)。</p>
+        <p>自分の駒十五個をすべてホームボードに集めると、盤の外へ上げ始められます。<strong>先に十五個すべて上げた方が勝ちです。</strong></p>
+        <div class="tip-box">
+            <p>バックギャモンにはボタンが二つ増えます。<br>
+            <strong>戻す</strong> — この手番で動かした分だけを取り消します(手番を確定する前まで)。<br>
+            <strong>パス</strong> — 出た目でどこにも動かせないときだけ現れます。</p>
+        </div>
+
+        <h3>コネクトフォー — 落として先に四つ並べたら勝ち</h3>
+        <p>列を選んで石を落とします。石は重力に従い、その列のいちばん下の空きマスに積まれます。縦・横・斜めのいずれかで先に四つ並べた方が勝ちです。盤が埋まっても並ばなければ引き分けです。</p>
+
+        <h3>ドット＆ボックス — 箱を多く取った方が勝ち</h3>
+        <p>交互に隣り合う二つの点を線で結びます。<strong>箱の四辺目を引いた人がその箱を取り、続けてもう一度打てます。</strong> 箱を多く取った方が勝ちです。</p>
+
+        <h3>三目並べ — 先に三つ並べた方が勝ち</h3>
+        <p>交互に空いているマスへ印を置きます。縦・横・斜めのいずれかで自分の印を先に三つ並べた方が勝ちです。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 言語</h2>
+        <p><strong>端末の言語設定にそのまま従います。</strong> アプリの中に言語を選ぶ場所はありません。</p>
+        <p>日本語・韓国語・英語・中国語(簡体字)に対応しています。端末がそれ以外の言語なら<strong>英語</strong>で表示されます。端末に複数の言語を登録している場合は、上から順に見て最初に合ったものを使います。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 広告とプライバシー</h2>
+        <p>画面のいちばん下にバナーが一本入ります。ロビーでも対局中でも<strong>同じ一本</strong>です。</p>
+        <p>ヨーロッパなどにお住まいの方には、初めて開いたときに<strong>広告の同意画面</strong>が出ます。同意されなくても、アプリの機能はまったく同じようにお使いいただけます。</p>
+        <p>このアプリに会員登録もアカウントもなく、開発者は個人情報を一切収集しません。詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">ボードゲーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

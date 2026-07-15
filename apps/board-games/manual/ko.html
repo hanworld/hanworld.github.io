@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>보드게임 사용 설명서 - 윌리 프로젝트</title>
+    <link rel="canonical" href="https://willee.net/apps/board-games/manual/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; }
+        .info-table th { color: #1A365D; background: #F0FDFC; }
+        .info-table td { color: #64748B; }
+
+        .tip-box { background: #FEF9E7; border: 1px solid #D4AF37; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; }
+        .tip-box p { margin: 0; color: #92400E; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ko.html">보드게임</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>매뉴얼</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="보드게임" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>보드게임</h1>
+                <p>사용 설명서</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>앱 정보</h2>
+        <table class="info-table">
+            <tr><th>앱 이름</th><td>보드게임 (Board Games)</td></tr>
+            <tr><th>버전</th><td>1.0.0</td></tr>
+            <tr><th>개발</th><td>Willee Project</td></tr>
+            <tr><th>지원 플랫폼</th><td>Android</td></tr>
+        </table>
+        <p>일곱 가지 보드게임을 한 앱에. <strong>혼자면 AI와, 둘이면 한 기기로.</strong></p>
+        <ul>
+            <li>회원가입도, 로그인도 없습니다. 켜면 바로 놀 수 있습니다.</li>
+            <li><strong>인터넷 없이도 게임은 됩니다.</strong> 인터넷은 화면 아래 광고를 받아올 때만 씁니다.</li>
+            <li>언어는 폰 설정을 따릅니다. 한국어·영어·일본어·중국어(간체)를 지원합니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 게임 고르기</h2>
+        <p>앱을 켜면 <strong>로비</strong>가 나옵니다. 게임 카드가 세로로 늘어서 있습니다. 카드를 누르면 그 게임의 규칙과 함께 <strong>대전 설정</strong>이 아래에서 올라옵니다.</p>
+        <p><strong>최근에 논 게임이 위로 올라옵니다.</strong> 단, 한 수라도 실제로 둔 게임만 셉니다 — 열어서 규칙만 읽고 나오면 순서는 그대로입니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 대전 설정</h2>
+        <table class="info-table">
+            <tr><th>고를 것</th><th>값</th><th>설명</th></tr>
+            <tr><td><strong>상대</strong></td><td>AI와 대전 / 둘이서</td><td>‘둘이서’는 한 폰을 번갈아 쓰는 방식입니다.</td></tr>
+            <tr><td><strong>난이도</strong></td><td>쉬움 / 보통 / 어려움</td><td>AI와 대전할 때만 나옵니다.</td></tr>
+            <tr><td><strong>선공</strong></td><td>내가 먼저 / AI가 먼저</td><td>AI와 대전할 때만 나옵니다.</td></tr>
+        </table>
+        <p><strong>시작</strong>을 누르면 판이 열립니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 대국 화면 읽는 법</h2>
+        <p>화면은 위에서 아래로 넉 줄입니다.</p>
+        <h3>1. 두 사람</h3>
+        <p>위쪽에 나란히 놓인 두 칸입니다. <strong>지금 둘 차례인 쪽이 밝게 켜집니다.</strong> 게임에 따라 점수도 함께 뜹니다.</p>
+        <table class="info-table">
+            <tr><th>게임</th><th>칸에 뜨는 숫자</th></tr>
+            <tr><td>오델로</td><td>지금 내 돌의 수</td></tr>
+            <tr><td>체커</td><td>아직 살아 있는 내 말의 수</td></tr>
+            <tr><td>백개먼</td><td>판 밖으로 빼낸 말의 수</td></tr>
+            <tr><td>점 잇기</td><td>가져간 상자의 수</td></tr>
+        </table>
+        <p>오목·커넥트 포·틱택토에는 셀 점수가 없어서 숫자가 뜨지 않습니다.</p>
+        <h3>2. 상태줄</h3>
+        <p>지금 무슨 일이 벌어지고 있는지 알려 줍니다: <strong>내 차례</strong>, <strong>AI가 생각 중…</strong>, <strong>주사위를 굴립니다…</strong>. 규칙상 특별한 일이 벌어지면 <strong>금색 글씨</strong>가 앞에 붙습니다.</p>
+        <table class="info-table">
+            <tr><th>금색 글씨</th><th>뜻</th></tr>
+            <tr><td>둘 곳이 없어 건너뜀</td><td>(오델로) 둘 곳이 없어 차례가 그냥 넘어갔습니다</td></tr>
+            <tr><td>연속 점프</td><td>(체커) 방금 잡은 자리에서 계속 잡아야 합니다</td></tr>
+            <tr><td>바에 말이 있습니다</td><td>(백개먼) 쫓겨난 말부터 다시 들여보내야 합니다</td></tr>
+        </table>
+        <h3>3. 판</h3>
+        <p>가운데. 여기를 눌러 둡니다.</p>
+        <h3>4. 무르기 · 다시하기</h3>
+        <p>아래쪽 버튼 둘. 다음 절에서 설명합니다.</p>
+        <p>판이 끝나면 <strong>결과 창</strong>이 판을 덮습니다. 승패와 점수가 뜨고, <strong>로비로</strong> 나가거나 <strong>다시하기</strong>로 같은 설정에서 한 판 더 둘 수 있습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 무르기와 다시하기</h2>
+        <p><strong>무르기</strong> — 내가 고를 차례로 되돌립니다. AI가 둔 응수도 함께 걷힙니다. 되돌아갈 내 차례가 없으면 버튼이 꺼집니다.</p>
+        <div class="tip-box">
+            <p><strong>주사위는 무를 수 없습니다.</strong> 백개먼에서 무르기는 주사위를 굴린 지점보다 앞으로는 가지 않습니다. 마음에 안 드는 눈이 나올 때마다 무르고 다시 굴릴 수 있다면, 그건 무르기가 아니라 치트입니다.</p>
+        </div>
+        <p><strong>다시하기</strong> — 판을 처음부터 다시 놓습니다. 설정(상대·난이도·선공)은 그대로입니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 일곱 가지 게임</h2>
+
+        <h3>오목 — 다섯 개를 먼저 이으면 이긴다</h3>
+        <p>번갈아 교차점에 돌을 놓습니다. 가로·세로·대각선으로 다섯 개를 먼저 이으면 이깁니다. 금수 없는 자유 규칙이라 여섯 개 이상 이어져도 승리입니다.</p>
+        <div class="tip-box">
+            <p><strong>두 번 눌러 확정합니다.</strong> 판이 촘촘해서 손가락으로 한 번에 정확히 짚기 어렵습니다. 한 번 눌러 자리를 잡고, <strong>같은 자리를 한 번 더 눌러야</strong> 돌이 놓입니다. 다른 자리를 누르면 조준이 그쪽으로 옮겨 갑니다.</p>
+        </div>
+
+        <h3>오델로 — 뒤집고 뒤집혀, 마지막에 많으면 이긴다</h3>
+        <p>내 돌과 내 돌 사이에 상대 돌이 끼도록 놓으면, 끼인 돌이 모두 내 것으로 뒤집힙니다. 뒤집을 수 없는 자리에는 둘 수 없습니다.</p>
+        <p>둘 곳이 아예 없으면 차례를 건너뜁니다(상태줄에 <strong>둘 곳이 없어 건너뜀</strong>이 뜹니다). 양쪽 다 둘 곳이 없으면 판이 끝나고, 돌이 많은 쪽이 이깁니다.</p>
+
+        <h3>체커 — 뛰어넘어 잡고, 끝까지 가면 왕이 된다</h3>
+        <p>대각선으로 한 칸씩 전진합니다. 상대 말을 뛰어넘으면 잡습니다.</p>
+        <p><strong>잡을 수 있으면 반드시 잡아야 하고</strong>, 잡은 자리에서 또 잡을 수 있으면 연달아 잡습니다(상태줄에 <strong>연속 점프</strong>가 뜹니다). 상대 진영 끝줄에 닿으면 왕이 되어 뒤로도 갈 수 있습니다.</p>
+        <p>상대 말을 다 잡거나, 상대가 둘 곳이 없게 만들면 이깁니다.</p>
+
+        <h3>백개먼 — 주사위가 길을 열고, 다 빼내면 이긴다</h3>
+        <p>주사위를 굴려 나온 눈만큼 말을 옮깁니다. 눈은 쓸 수 있는 만큼 다 써야 하고, 같은 눈이 나오면(더블) 네 번 둡니다.</p>
+        <p>상대 말이 혼자 있는 점에 올라타면 그 말을 바로 쫓아냅니다. 쫓겨난 말은 처음부터 다시 들어와야 하고, 그동안 다른 말은 건드릴 수 없습니다(상태줄에 <strong>바에 말이 있습니다</strong>가 뜹니다).</p>
+        <p>내 말을 홈보드에 다 모으면 판 밖으로 빼내기 시작합니다. <strong>15개를 먼저 다 빼내면 이깁니다.</strong></p>
+        <div class="tip-box">
+            <p>백개먼에는 버튼이 둘 더 있습니다.<br>
+            <strong>되돌리기</strong> — 이번 차례에 옮긴 것만 되돌립니다(차례를 넘기기 전까지).<br>
+            <strong>넘기기</strong> — 나온 눈으로 옮길 곳이 하나도 없을 때만 나타납니다.</p>
+        </div>
+
+        <h3>커넥트 포 — 떨어뜨려 넷을 먼저 이으면 이긴다</h3>
+        <p>열을 골라 돌을 떨어뜨립니다. 돌은 중력을 따라 그 열의 가장 아래 빈칸에 쌓입니다. 가로·세로·대각선으로 넷을 먼저 이으면 이깁니다. 판이 다 차도록 아무도 못 이으면 무승부입니다.</p>
+
+        <h3>점 잇기 — 상자를 더 많이 가져가면 이긴다</h3>
+        <p>번갈아 이웃한 두 점을 잇습니다. <strong>상자의 네 번째 변을 그은 사람이 그 상자를 가져가고 한 번 더 둡니다.</strong> 상자를 더 많이 가진 쪽이 승리합니다.</p>
+
+        <h3>틱택토 — 3개를 먼저 잇는 사람이 이긴다</h3>
+        <p>번갈아 빈 칸에 표시를 놓습니다. 가로·세로·대각선으로 같은 표시 3개를 먼저 이으면 이깁니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 언어</h2>
+        <p><strong>폰의 언어 설정을 그대로 따릅니다.</strong> 앱 안에 언어를 고르는 곳은 따로 없습니다.</p>
+        <p>한국어·영어·일본어·중국어(간체)를 지원합니다. 폰이 그 밖의 언어로 되어 있으면 <strong>영어</strong>로 나옵니다. 폰에 언어를 여러 개 올려 두셨다면 위에서부터 훑어 가장 먼저 맞는 것을 씁니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 광고와 개인정보</h2>
+        <p>화면 맨 아래에 배너 한 줄이 붙습니다. 로비든 대국 화면이든 <strong>같은 배너 하나</strong>입니다.</p>
+        <p>유럽 등에 계신 분께는 앱을 처음 켤 때 <strong>광고 동의 창</strong>이 뜹니다. 동의하지 않으셔도 앱은 똑같이 다 쓰실 수 있습니다.</p>
+        <p>이 앱은 회원가입도 계정도 없고, 개발자는 어떤 개인정보도 수집하지 않습니다. 자세한 내용은 <a href="../privacy/ko.html">개인정보처리방침</a>을 보십시오.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 윌리 프로젝트. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="../ko.html">보드게임</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

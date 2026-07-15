@@ -458,4 +458,118 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tarotyo/privacy/en.html"/>
   </url>
 
+  <!-- Board Games 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/board-games/ko.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/en.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/ja.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/zh.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/en.html"/>
+  </url>
+
+  <!-- Board Games 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/board-games/manual/ko.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/manual/en.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/manual/ja.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/manual/zh.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/manual/en.html"/>
+  </url>
+
+  <!-- Board Games 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/board-games/privacy/ko.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/privacy/en.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/privacy/ja.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/board-games/privacy/zh.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/privacy/en.html"/>
+  </url>
+
 </urlset>
