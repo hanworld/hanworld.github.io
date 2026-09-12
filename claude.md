@@ -136,11 +136,12 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 패키지 ID: net.willee.goodtimer
 
 ### TarotYo (타로요)
-- 타로 카드 리딩 + ChatGPT 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
+- 타로 카드 리딩 + AI 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
 - 앱이 직접 카드를 해석하지 않고 AI가 해석할 프롬프트를 생성
 - 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.tarotyo
 - Google Play: https://play.google.com/store/apps/details?id=net.willee.tarotyo
+- **타사 AI 서비스명 표기 금지** (2026-09 OpenAI 상표권 신고 대응): 페이지 제목·설명·배너 alt 등에 ChatGPT/GPT/OpenAI 등 특정 서비스명을 쓰지 않고 일반 명사 "AI"로 표기. 매뉴얼의 선택 가능 서비스 나열(설명적 용도) 1회 + 비제휴 고지만 허용
 
 ### Board Games (보드게임)
 - 오목·오델로·체커·백개먼·커넥트 포·점 잇기·틱택토 등 7가지 보드게임을 한 앱에 담은 게임 모음
