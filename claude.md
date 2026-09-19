@@ -126,9 +126,10 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ## 앱 목록
 ### Twenty Four Hours
-- 24시간 아날로그 시계 + 일정 관리 앱
-- 플랫폼: Android, Windows
-- Google Play / Microsoft Store 배포
+- 24시간 아날로그 시계 + 일정 관리 앱 (v1.0.2: 인앱 결제 종료, 배너 광고로 운영)
+- 플랫폼: Android만 지원 (Google Play 출시)
+- 패키지 ID: net.willee.twentyfourhours
+- 홈페이지에 Windows/iOS 등 타 플랫폼 '지원 예정'·'심사 대기중' 표기 금지 (2026-09-19 전부 삭제)
 
 ### Good Timer
 - 범용 타이머 & 스톱워치 앱 (인터벌 타이머, 프리셋, 기록/통계)
