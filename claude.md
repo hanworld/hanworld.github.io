@@ -132,9 +132,11 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 홈페이지에 Windows/iOS 등 타 플랫폼 '지원 예정'·'심사 대기중' 표기 금지 (2026-09-19 전부 삭제)
 
 ### Good Timer
-- 범용 타이머 & 스톱워치 앱 (인터벌 타이머, 프리셋, 기록/통계)
-- 플랫폼: Android, Windows (미출시)
+- 범용 타이머 & 스톱워치 앱 (인터벌 타이머, 프리셋, 기록/통계) (v1.0.1: 인앱 결제(개발 응원) 종료, 배너 광고로 운영)
+- 플랫폼: Android만 지원 (Google Play 출시)
 - 패키지 ID: net.willee.goodtimer
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.goodtimer
+- 홈페이지에 Windows/iOS 등 타 플랫폼 '출시 예정'·'지원 예정' 표기 금지 (2026-09-20 전부 삭제)
 
 ### TarotYo (타로요)
 - 타로 카드 리딩 + AI 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
