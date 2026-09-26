@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
-    <title>ボードゲーム 取扱説明書 - Willee Project</title>
+    <title>ボードゲーム 使い方ガイド - Willee Project</title>
     <link rel="canonical" href="https://willee.net/apps/board-games/manual/ja.html">
     <link rel="alternate" hreflang="ko" href="https://willee.net/apps/board-games/manual/ko.html">
     <link rel="alternate" hreflang="en" href="https://willee.net/apps/board-games/manual/en.html">
@@ -83,7 +83,7 @@
             <img src="../images/app_icon.png" alt="ボードゲーム" style="width:60px; height:60px; border-radius:14px;">
             <div style="text-align:left;">
                 <h1>ボードゲーム</h1>
-                <p>取扱説明書</p>
+                <p>使い方ガイド</p>
             </div>
         </div>
     </div>
@@ -136,36 +136,36 @@
         <p>いちばん上に並ぶ二つの枠です。<strong>手番の側が明るく灯ります。</strong> ゲームによっては点数も並びます。</p>
         <table class="info-table">
             <tr><th>ゲーム</th><th>数字の意味</th></tr>
-            <tr><td>オセロ</td><td>今の自分の石の数</td></tr>
+            <tr><td>リバーシ</td><td>今の自分の石の数</td></tr>
             <tr><td>チェッカー</td><td>まだ残っている自分の駒の数</td></tr>
             <tr><td>バックギャモン</td><td>盤の外へ上げた駒の数</td></tr>
             <tr><td>ドット＆ボックス</td><td>取った箱の数</td></tr>
         </table>
-        <p>五目並べ・コネクトフォー・三目並べには数えるものがないので、数字は出ません。</p>
+        <p>五目並べ・四目並べ・三目並べには数えるものがないので、数字は出ません。</p>
         <h3>2. 状態表示</h3>
-        <p>今なにが起きているかを伝えます: <strong>自分の番</strong>、<strong>AIが考え中…</strong>、<strong>サイコロを振っています…</strong>。ルール上の出来事があると、<strong>金色の文字</strong>が前に付きます。</p>
+        <p>今なにが起きているかを伝えます：<strong>自分の番</strong>、<strong>AIが考え中…</strong>、<strong>サイコロを振っています…</strong>。ルール上の出来事があると、<strong>金色の文字</strong>が前に付きます。</p>
         <table class="info-table">
             <tr><th>金色の文字</th><th>意味</th></tr>
-            <tr><td>置ける場所がなく手番を飛ばしました</td><td>(オセロ) 置ける場所がなく、手番が飛ばされました</td></tr>
+            <tr><td>置けないためパス</td><td>(リバーシ) 相手に置ける場所がなく、同じ側がもう一度打ちます</td></tr>
             <tr><td>連続ジャンプ</td><td>(チェッカー) 着地した場所からさらに取り続けなければなりません</td></tr>
             <tr><td>バーに駒があります</td><td>(バックギャモン) バーの駒を先に戻さなければなりません</td></tr>
         </table>
         <h3>3. 盤</h3>
         <p>中央。ここをタップして打ちます。</p>
-        <h3>4. 待った・やり直す</h3>
+        <h3>4. 待った・最初から</h3>
         <p>下の二つのボタン。次の節で説明します。</p>
-        <p>対局が終わると<strong>結果の画面</strong>が盤を覆います。勝敗と点数が出て、<strong>ロビーへ</strong>戻るか、<strong>やり直す</strong>で同じ設定のままもう一局打てます。</p>
+        <p>対局が終わると<strong>結果の画面</strong>が盤を覆います。勝敗と点数が出て、<strong>ロビーへ</strong>戻るか、<strong>最初から</strong>で同じ設定のままもう一局打てます。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>4. 待ったとやり直し</h2>
+        <h2>4. 「待った」と「最初から」</h2>
         <p><strong>待った</strong> — 自分が選ぶ番まで巻き戻します。AIの応手も一緒に取り消されます。戻る先の自分の番がなければボタンは押せません。</p>
         <div class="tip-box">
-            <p><strong>サイコロは戻せません。</strong> バックギャモンの「待った」は、サイコロを振った地点より前へは戻りません。気に入らない目が出るたびに戻して振り直せるなら、それは待ったではなくズルです。</p>
+            <p><strong>サイコロの目は、そのときのまま戻ります。</strong> バックギャモンで「待った」をすると、直前の自分の番に、その番で出た目のまま戻ります。</p>
         </div>
-        <p><strong>やり直す</strong> — 盤を最初から並べ直します。設定(対戦相手・難易度・先手)はそのままです。</p>
+        <p><strong>最初から</strong> — 盤を初期配置に戻します。設定(対戦相手・難易度・先手)はそのままです。</p>
     </div>
 </section>
 
@@ -179,11 +179,11 @@
             <p><strong>二度タップで確定します。</strong> 盤の目が細かく、指では一度に正確に狙えません。一度タップして位置を決め、<strong>同じ場所をもう一度タップ</strong>して確定します。別の場所を押すと狙いがそちらへ移ります。</p>
         </div>
 
-        <h3>オセロ — 返して返されて、多い方が勝ち</h3>
+        <h3>リバーシ — 返して返されて、多い方が勝ち</h3>
         <p>自分の石と自分の石で相手の石を挟むように置くと、挟まれた石がすべて自分の色に返ります。返せない場所には置けません。</p>
-        <p>置ける場所がまったくない場合は手番を飛ばします(状態表示に<strong>置ける場所がなく手番を飛ばしました</strong>と出ます)。両者とも置けなくなれば対局は終わり、石の多い方が勝ちです。</p>
+        <p>置ける場所がまったくない場合は手番を飛ばします(状態表示に<strong>置けないためパス</strong>と出ます)。両者とも置けなくなれば対局は終わり、石の多い方が勝ちです。</p>
 
-        <h3>チェッカー — 跳び越えて取り、最奥で王になる</h3>
+        <h3>チェッカー — 跳び越えて取り、最終列でキングになる</h3>
         <p>駒は斜め前に一マスずつ進みます。相手の駒を跳び越すと取れます。</p>
         <p><strong>取れるときは必ず取らなければならず</strong>、着地した場所からさらに取れるなら続けて跳びます(状態表示に<strong>連続ジャンプ</strong>と出ます)。相手陣の最終列に届くとキングになり、後ろへも進めます。</p>
         <p>相手の駒をすべて取るか、相手を動けなくすれば勝ちです。</p>
@@ -195,10 +195,10 @@
         <div class="tip-box">
             <p>バックギャモンにはボタンが二つ増えます。<br>
             <strong>戻す</strong> — この手番で動かした分だけを取り消します(手番を確定する前まで)。<br>
-            <strong>パス</strong> — 出た目でどこにも動かせないときだけ現れます。</p>
+            <strong>打つ手がありません — パス</strong> — 出た目でどこにも動かせないときだけ現れます。</p>
         </div>
 
-        <h3>コネクトフォー — 落として先に四つ並べたら勝ち</h3>
+        <h3>四目並べ — 落として先に四つ並べたら勝ち</h3>
         <p>列を選んで石を落とします。石は重力に従い、その列のいちばん下の空きマスに積まれます。縦・横・斜めのいずれかで先に四つ並べた方が勝ちです。盤が埋まっても並ばなければ引き分けです。</p>
 
         <h3>ドット＆ボックス — 箱を多く取った方が勝ち</h3>

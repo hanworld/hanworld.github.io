@@ -136,17 +136,17 @@
         <p>A pair of chips at the top. <strong>Whoever has the move lights up.</strong> Some games show a score alongside.</p>
         <table class="info-table">
             <tr><th>Game</th><th>What the number means</th></tr>
-            <tr><td>Othello</td><td>How many discs you hold right now</td></tr>
+            <tr><td>Reversi</td><td>How many discs you hold right now</td></tr>
             <tr><td>Checkers</td><td>How many of your pieces are still alive</td></tr>
             <tr><td>Backgammon</td><td>How many checkers you have borne off</td></tr>
             <tr><td>Dots and Boxes</td><td>How many boxes you have claimed</td></tr>
         </table>
-        <p>Gomoku, Connect Four and Tic-Tac-Toe have nothing to count, so no number is shown.</p>
+        <p>Gomoku, Four in a Row and Tic-Tac-Toe have nothing to count, so no number is shown.</p>
         <h3>2. The status line</h3>
         <p>What is happening right now: <strong>Your turn</strong>, <strong>AI is thinking…</strong>, <strong>Rolling the dice…</strong>. When a rule fires, a note in <strong>gold</strong> appears in front of it.</p>
         <table class="info-table">
             <tr><th>Gold note</th><th>What it means</th></tr>
-            <tr><td>No moves — turn skipped</td><td>(Othello) You had no legal move, so your turn passed</td></tr>
+            <tr><td>No moves — turn skipped</td><td>(Reversi) The other side had no legal move, so it was skipped and the same side plays again</td></tr>
             <tr><td>Chain jump</td><td>(Checkers) You must keep capturing from where you just landed</td></tr>
             <tr><td>Checker on the bar</td><td>(Backgammon) You must re-enter your knocked-out checker first</td></tr>
         </table>
@@ -163,9 +163,9 @@
         <h2>4. Undo and Restart</h2>
         <p><strong>Undo</strong> rewinds to your last decision. The AI's reply is taken back with it. If there is no turn of yours to go back to, the button is greyed out.</p>
         <div class="tip-box">
-            <p><strong>You cannot undo a dice roll.</strong> In Backgammon, undo will not rewind past the point where the dice were thrown. If you could take back every roll you didn't like and throw again, that would not be an undo — it would be cheating.</p>
+            <p><strong>The dice come back as they were.</strong> In Backgammon, undo takes you back to your previous turn with the same numbers that were rolled for it.</p>
         </div>
-        <p><strong>Restart</strong> sets the board back to the start. Your settings (opponent, difficulty, who opens) stay as they were.</p>
+        <p><strong>Restart</strong> sets the board back to the start. Your settings (opponent, difficulty, first move) stay as they were.</p>
     </div>
 </section>
 
@@ -179,7 +179,7 @@
             <p><strong>Tap twice to place a stone.</strong> The board is dense and hard to hit precisely with a fingertip, so tap once to aim and <strong>tap the same point again</strong> to commit. Tapping elsewhere moves your aim there instead.</p>
         </div>
 
-        <h3>Othello — Flip and be flipped, most wins</h3>
+        <h3>Reversi — Flip and be flipped, most discs wins</h3>
         <p>Place a disc so that a line of your opponent's discs is trapped between it and another of your own — every trapped disc flips to your colour. You may not play where nothing would flip.</p>
         <p>If you have no legal move your turn is skipped (the status line shows <strong>No moves — turn skipped</strong>). When neither side can move the game ends, and whoever has more discs wins.</p>
 
@@ -195,10 +195,10 @@
         <div class="tip-box">
             <p>Backgammon has two extra buttons.<br>
             <strong>Take back</strong> — undoes only what you have moved this turn, before you commit it.<br>
-            <strong>Pass</strong> — appears only when the roll leaves you nothing you can legally play.</p>
+            <strong>No legal moves — pass</strong> — appears only when the roll leaves you nothing you can legally play.</p>
         </div>
 
-        <h3>Connect Four — Drop four in a row to win</h3>
+        <h3>Four in a Row — Drop and line up four first to win</h3>
         <p>Pick a column and drop a disc — it falls to the lowest empty slot in that column. The first to line up four — across, down, or diagonally — wins. If the board fills up with no line, the game is a draw.</p>
 
         <h3>Dots and Boxes — Claim the most boxes to win</h3>
@@ -220,10 +220,10 @@
 <section>
     <div class="container">
         <h2>7. Ads and privacy</h2>
-        <p>A single banner sits at the bottom of the screen. It is <strong>the same one banner</strong> whether you are in the lobby or in a game.</p>
-        <p>If you are in Europe and some other regions, a <strong>consent dialog</strong> appears the first time you open the app. Declining changes nothing about what you can do in the app.</p>
-        <p>The consent you set can be changed at any time from the <strong>app info (ⓘ) button at the top of the lobby → Ad consent</strong>.</p>
-        <p>This app has no sign-up and no account, and the developer collects no personal data at all. See the <a href="../privacy/en.html">Privacy Policy</a> for the detail.</p>
+        <p>A single banner sits at the bottom of the screen. It is <strong>one and the same banner</strong> whether you are in the lobby or in a game.</p>
+        <p>If you are in Europe or certain other regions, a <strong>consent dialog</strong> appears the first time you open the app. Declining changes nothing about what you can do in the app.</p>
+        <p>The consent you set can be changed at any time from the <strong>App info (ⓘ) button at the top right of the lobby → Ad consent</strong>.</p>
+        <p>This app has no sign-up and no account, and the developer collects no personal data at all. See the <a href="../privacy/en.html">Privacy Policy</a> for details.</p>
     </div>
 </section>
 

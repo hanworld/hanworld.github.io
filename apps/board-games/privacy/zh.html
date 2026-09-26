@@ -89,7 +89,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-07-15</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-09-25</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。</li>
@@ -119,9 +119,10 @@
         <h3>只保存在设备内的内容</h3>
         <table class="info-table">
             <tr><th>是什么</th><th>内容</th><th>保存在哪</th><th>何时删除</th></tr>
-            <tr><td>最近玩过的游戏</td><td>游戏标识的列表（如 <code>omok</code>、<code>othello</code>）</td><td>设备内部存储</td><td>卸载应用时一并删除</td></tr>
+            <tr><td>最近玩过的游戏</td><td>游戏标识的列表（如 <code>omok</code>、<code>checkers</code>）</td><td>设备内部存储</td><td>卸载应用时一并删除</td></tr>
         </table>
         <p>它只用于一件事：把您最近玩过的游戏排到大厅上方。它无法识别任何人，而且<strong>从不离开您的设备</strong>。</p>
+        <p>此外，广告 SDK（Google）会在设备上保存同意记录（如在欧洲地区所作的广告同意选择）以及广告所需的标识符。开发者无法查看其内容。</p>
     </div>
 </section>
 
@@ -131,10 +132,12 @@
         <p>屏幕最下方有一条横幅广告，由 <strong>Google AdMob</strong> 投放。为此，Google 及其广告合作伙伴会处理以下信息。</p>
         <table class="info-table">
             <tr><th>处理什么</th><th>用于什么</th></tr>
-            <tr><td>广告 ID（Android 广告 ID）</td><td>投放广告、控制展示频次、衡量效果；在您同意时用于个性化</td></tr>
+            <tr><td>广告 ID（Android 广告 ID）、应用组 ID，以及（如适用）与设备上已登录账号相关的标识符</td><td>投放广告、控制展示频次、衡量效果；数据分析；防止欺诈与滥用；在您同意时用于个性化</td></tr>
             <tr><td>IP 地址</td><td>投放广告；根据 IP 推测的大致位置（国家/城市级别）</td></tr>
             <tr><td>设备与应用信息（机型、系统版本、语言、屏幕尺寸、应用版本）</td><td>挑选适合屏幕的广告；防止欺诈与滥用</td></tr>
             <tr><td>广告互动（展示、点击）</td><td>衡量效果；防止无效点击</td></tr>
+            <tr><td>应用使用信息（应用启动、点按、视频观看等互动）</td><td>投放广告、衡量效果；数据分析；防止欺诈与滥用</td></tr>
+            <tr><td>诊断信息（应用启动时间、卡顿率、耗电量等性能信息）</td><td>投放广告；分析应用与广告 SDK 的性能；防止欺诈与滥用</td></tr>
         </table>
         <p><strong>开发者不会收到其中任何一项。</strong> Google 也会作为<strong>独立的数据控制者</strong>处理这些信息。详情请参阅 Google 的文档。</p>
         <ul>
@@ -150,7 +153,7 @@
         <p>如果您身处欧洲经济区、英国或瑞士，<strong>首次打开应用时会出现同意窗口</strong>，通过 Google 认证的同意管理工具（UMP）向您征求。</p>
         <ul>
             <li><strong>如果您同意</strong> — 可能会看到根据兴趣定制的个性化广告。</li>
-            <li><strong>如果您不同意</strong> — 应用照常使用，功能一样不少。广告会变成非个性化的。但请注意，<strong>即便如此</strong>，为了投放广告和防止欺诈，仍会处理最少量的信息（IP 地址、大致位置、设备信息）。“非个性化”不等于“什么都不处理”。</li>
+            <li><strong>如果您不同意</strong> — 应用照常使用，功能一样不少。广告会变成非个性化的。但请注意，<strong>即便如此</strong>，为了投放广告、避免同一广告出现过于频繁以及防止欺诈，仍会处理最少量的信息（IP 地址、大致位置、设备信息、广告标识符等）。“非个性化”不等于“什么都不处理”。</li>
         </ul>
         <h3>如果您改变主意</h3>
         <table class="info-table">
@@ -212,7 +215,7 @@
 <section>
     <div class="container">
         <h2>9. 儿童</h2>
-        <p>本应用<strong>不面向儿童。</strong> 在 Google Play 上按面向普通用户登记。开发者不会在知情的情况下收集儿童的个人信息。</p>
+        <p>本应用<strong>不面向儿童。</strong> 在 Google Play 上按面向 13 岁及以上用户登记。开发者不会在知情的情况下收集儿童的个人信息。</p>
         <p>如果您是 16 岁以下（依成员国不同为 13 至 16 岁）儿童的家长或监护人，对孩子使用本应用有所顾虑，请写信到 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>。</p>
     </div>
 </section>
@@ -220,7 +223,7 @@
 <section>
     <div class="container">
         <h2>10. 政策变更</h2>
-        <p>如果我们修改本政策，会连同新的生效日期一并发布在本页面。重大变更时也会在应用内告知。</p>
+        <p>如果我们修改本政策，会连同新的生效日期一并发布在本页面。重大变更时也会通过应用的更新说明告知。</p>
     </div>
 </section>
 
@@ -233,7 +236,7 @@
                 <li><strong>邮箱</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-07-15</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-09-25</p>
     </div>
 </section>
 

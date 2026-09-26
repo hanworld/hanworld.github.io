@@ -89,7 +89,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective: 2026-07-15</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective: 2026-09-25</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account.</li>
@@ -119,9 +119,10 @@
         <h3>What is stored on your device only</h3>
         <table class="info-table">
             <tr><th>What</th><th>Contents</th><th>Where</th><th>When it goes</th></tr>
-            <tr><td>Recently played</td><td>A list of game labels (e.g. <code>omok</code>, <code>othello</code>)</td><td>Your device's internal storage</td><td>Deleted when you uninstall the app</td></tr>
+            <tr><td>Recently played</td><td>A list of game labels (e.g. <code>omok</code>, <code>checkers</code>)</td><td>Your device's internal storage</td><td>Deleted when you uninstall the app</td></tr>
         </table>
         <p>It is used for one thing: putting the games you played most recently at the top of the lobby. It identifies nobody, and <strong>it never leaves your device.</strong></p>
+        <p>Separately, the ad SDK (Google) stores its own data on your device: consent records (such as your ad consent choice in Europe) and the identifiers needed for advertising. The developer cannot see what they contain.</p>
     </div>
 </section>
 
@@ -131,12 +132,14 @@
         <p>A single banner sits at the bottom of the screen. The ads are served by <strong>Google AdMob</strong>. To do that, Google and its advertising partners process the following.</p>
         <table class="info-table">
             <tr><th>What</th><th>What it is used for</th></tr>
-            <tr><td>Advertising ID (Android Advertising ID)</td><td>Serving ads, capping how often you see one, measuring performance; personalisation if you consent</td></tr>
+            <tr><td>Advertising ID (Android Advertising ID), app set ID and, where applicable, identifiers related to accounts signed in on the device</td><td>Serving ads, capping how often you see one, measuring performance; analytics; preventing fraud and abuse; personalisation if you consent</td></tr>
             <tr><td>IP address</td><td>Delivering the ad; approximate location inferred from the IP (country/city level)</td></tr>
             <tr><td>Device and app information (model, OS version, language, screen size, app version)</td><td>Choosing an ad that fits the screen; preventing fraud and abuse</td></tr>
             <tr><td>Ad interactions (impressions, clicks)</td><td>Measuring performance; preventing invalid clicks</td></tr>
+            <tr><td>App usage information (interactions such as app launches, taps and video views)</td><td>Serving ads, measuring performance; analytics; preventing fraud and abuse</td></tr>
+            <tr><td>Diagnostic information (performance data such as app launch time, hang rate and energy usage)</td><td>Serving ads; analysing the performance of the app and the ad SDK; preventing fraud and abuse</td></tr>
         </table>
-        <p><strong>The developer never receives any of this.</strong> Google also processes it as an <strong>independent controller</strong>. Their documents explain the detail:</p>
+        <p><strong>The developer never receives any of this.</strong> Google also processes it as an <strong>independent controller</strong>. See Google's documents for details:</p>
         <ul>
             <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
             <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a></li>
@@ -150,12 +153,12 @@
         <p>If you are in the EEA, the UK or Switzerland, a <strong>consent dialog appears the first time you open the app</strong>. It is presented through a Google-certified consent management platform (UMP).</p>
         <ul>
             <li><strong>If you consent</strong> — you may be shown personalised ads.</li>
-            <li><strong>If you don't</strong> — the app still works exactly the same. Ads become non-personalised. But note that <strong>even then</strong>, a minimum of data (IP address, approximate location, device information) is still processed to deliver the ad and prevent fraud. "Non-personalised" does not mean "nothing is processed".</li>
+            <li><strong>If you don't</strong> — the app still works exactly the same. Ads become non-personalised. But note that <strong>even then</strong>, a minimum of data (IP address, approximate location, device information, advertising identifiers and the like) is still processed to deliver ads, cap how often you see the same one and prevent fraud. "Non-personalised" does not mean "nothing is processed".</li>
         </ul>
         <h3>If you change your mind</h3>
         <table class="info-table">
             <tr><th>Where</th><th>How</th></tr>
-            <tr><td>In the app</td><td>The <strong>app info (ⓘ) button at the top of the lobby → Ad consent</strong> — reopen the consent dialog at any time and change your answer</td></tr>
+            <tr><td>In the app</td><td>The <strong>app info (ⓘ) button at the top right of the lobby → Ad consent</strong> — reopen the consent dialog at any time and change your answer</td></tr>
             <tr><td>On your device</td><td>Android Settings → Privacy → Ads → reset or delete your advertising ID</td></tr>
             <tr><td>Leaving</td><td>Uninstalling the app also removes the play history stored on your device</td></tr>
         </table>
@@ -212,7 +215,7 @@
 <section>
     <div class="container">
         <h2>9. Children</h2>
-        <p>This app is <strong>not directed at children.</strong> It is listed on Google Play for a general audience. The developer does not knowingly collect personal data from children.</p>
+        <p>This app is <strong>not directed at children.</strong> It is listed on Google Play for users aged 13 and over. The developer does not knowingly collect personal data from children.</p>
         <p>If you are the parent or guardian of a child under 16 (13–16 depending on the member state) and have a concern about their use of this app, please write to <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>.</p>
     </div>
 </section>
@@ -220,7 +223,7 @@
 <section>
     <div class="container">
         <h2>10. Changes to this policy</h2>
-        <p>If we change this policy we will post the new version here with a new effective date. Significant changes will also be announced inside the app.</p>
+        <p>If we change this policy we will post the new version here with a new effective date. Significant changes will also be announced in the app's update notes.</p>
     </div>
 </section>
 
@@ -233,7 +236,7 @@
                 <li><strong>Email</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective: 2026-07-15</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective: 2026-09-25</p>
     </div>
 </section>
 
