@@ -149,8 +149,9 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ### Board Games (보드게임)
 - 오목·리버시·체커·백개먼·사목·점 잇기·틱택토 등 7가지 보드게임을 한 앱에 담은 게임 모음
 - AI 대전(알파-베타 탐색, 3단계 난이도) + 로컬 2인 대전, 서버 없이 오프라인 동작
-- 플랫폼: Android (Google Play 출시 예정)
+- 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.boardgames
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.boardgames
 - **상표 게임명 표기 금지** (2026-09-25 출시 전 변경): Othello(메가하우스)·Connect Four(해즈브로)는 등록 상표라 일반 명칭으로 표기 — 리버시/Reversi/リバーシ/黑白棋, 사목/Four in a Row/四目並べ/四子棋. 오델로·オセロ·커넥트 포·コネクトフォー 등으로 되돌리지 말 것
 
 ## 페이지 공통 요소
