@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Nums to One 玩法說明 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">Nums to One</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Nums to One</h1>
+                <p>玩法說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/NumsToOne_zh-Hant_01_classic.webp" alt="經典 — 湊出 24 的瞬間">
+            <img src="../images/NumsToOne_zh-Hant_02_rush.webp" alt="極速 — 連擊">
+            <img src="../images/NumsToOne_zh-Hant_03_daily.webp" alt="每日挑戰 — 結果畫面">
+            <img src="../images/NumsToOne_zh-Hant_04_home.webp" alt="首頁 — 經典·極速·每日挑戰">
+            <img src="../images/NumsToOne_zh-Hant_05_records.webp" alt="紀錄">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>Nums to One</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>用加減乘除把數字卡片合在一起，湊出<strong>唯一的目標數</strong>的益智遊戲。預設目標是 24。</p>
+        <ul>
+            <li>無需註冊，無需登入。打開就能直接玩第一道題。</li>
+            <li><strong>沒有網路也能玩。</strong> 只有底部廣告和使用統計會用到網路。</li>
+            <li>語言跟隨裝置設定。支援中文（繁體、簡體）、英文、韓文和日文，也可以在設定中自行選擇。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 規則</h2>
+        <p>用<strong>全部</strong> 4 張卡片湊出目標數。選兩張卡片，用一種運算把它們合成一張新卡片。合三次後，如果最後一張就是目標數，即為完成。</p>
+        <table class="info-table">
+            <tr><th>運算</th><th>規則</th></tr>
+            <tr><td>+ 加</td><td>兩數相加</td></tr>
+            <tr><td>− 減</td><td><strong>用大數減小數</strong>，與點按的先後無關</td></tr>
+            <tr><td>× 乘</td><td>兩數相乘</td></tr>
+            <tr><td>÷ 除</td><td><strong>用大數除以小數，且只有能整除時才可以。</strong> 0 與其他數相除得 0。0 與 0 不能相除</td></tr>
+        </table>
+        <p>結果一定是 0 或以上的整數，不會出現負數或分數。</p>
+        <p>如果最後一張不是目標數，卡片會晃動，然後<strong>回到最初的 4 張</strong>。題目不變，再試一次就好。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 操作</h2>
+        <p>依 <strong>卡片 → 運算 → 卡片</strong> 的順序點按。新卡片會出現在第二張卡片的位置。</p>
+        <ul>
+            <li>卡片 → 卡片 → 運算、運算 → 卡片 → 卡片的順序也可以。</li>
+            <li>再點一次已選的卡片可以放下它；再點一次已選的運算可以取消。</li>
+        </ul>
+        <p>底部的按鈕：</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>復原</strong></td><td>復原最後一次合併</td></tr>
+            <tr><td><strong>重來</strong></td><td>回到最初的 4 張卡片</td></tr>
+            <tr><td><strong>提示</strong></td><td>每點一次多給一步幫助（見下表）</td></tr>
+            <tr><td><strong>跳過</strong></td><td>跳過這道題，進入下一題</td></tr>
+        </table>
+        <table class="info-table">
+            <tr><th>提示</th><th>顯示什麼</th></tr>
+            <tr><td>第 1 步</td><td>應先合併的兩張卡片會發光</td></tr>
+            <tr><td>第 2 步</td><td>那兩張卡片要用的運算也會發光</td></tr>
+            <tr><td>第 3 步</td><td>從頭展示答案。這算作跳過，而不是完成</td></tr>
+        </table>
+        <p>如果用目前的卡片已經湊不出目標數，<strong>復原</strong>會以金色發光來代替提示，此時不消耗提示步數。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 模式</h2>
+        <h3>經典 — 不限時</h3>
+        <ul>
+            <li>目標可選 <strong>10 · 24 · 36</strong>。解出 30 題 24 的題目後解鎖 36。</li>
+            <li>題目難度（1~5 星）會隨你的程度升降。不用提示又解得快，題目會變難；使用提示或跳過，題目會變簡單。</li>
+            <li>上方顯示題目難度、本次已解題數和連續答對數。跳過或查看答案會中斷連續紀錄（使用提示解出的不會中斷）。</li>
+        </ul>
+        <h3>極速 — 60 秒</h3>
+        <ul>
+            <li>在 60 秒內盡量多解。從簡單的題目開始，逐漸變難。</li>
+            <li><strong>得分</strong> = （難度 × 100 + 速度獎勵）× 連擊倍率
+                <ul>
+                    <li>速度獎勵：10 秒內解出時，每快 1 秒得 10 分</li>
+                    <li>連擊倍率：每連續答對一題增加 0.1，最高 2 倍</li>
+                </ul>
+            </li>
+            <li>跳過會<strong>減少 2 秒</strong>並中斷連擊。極速模式沒有提示。</li>
+            <li>播放成功動畫時計時會暫停，暫時離開應用程式時也會暫停。</li>
+            <li>最後 10 秒計時器會變紅，並發出秒針聲。</li>
+        </ul>
+        <h3>每日挑戰 — 今日 3 題</h3>
+        <ul>
+            <li>每天都有同樣的 3 道題，<strong>全世界所有人在同一天解同樣的題目</strong>（以裝置日期為準）。</li>
+            <li>不限時，記錄 3 題的總用時。可以使用提示，但會顯示在結果中。</li>
+            <li>每天只能玩一次。中途離開時該局作廢，需要從頭再解。完成後再次點按會打開結果畫面。</li>
+            <li>結果標記：🟩 不用提示解出，🟨 使用提示解出，⬛ 跳過或查看了答案</li>
+            <li>每完成一天，連續紀錄（🔥）就會延續。可以用<strong>分享</strong>傳送結果，例如：</li>
+        </ul>
+        <pre class="share-example">Nums to One #42  🔥7
+🟩🟩🟨  1:42</pre>
+        <p>結果卡片和分享文字中的 <strong>#42</strong> 是每日挑戰的編號。發布當天為 #1，之後每天加 1，編號相同就是同一天的同樣題目。主畫面和每日挑戰畫面顯示的是今天的日期，而不是編號。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 紀錄</h2>
+        <p>點按主畫面右上角的長條圖按鈕打開。可查看極速模式最高分和局數、已解題數、平均用時、各難度正確率以及每日挑戰的連續紀錄。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 設定</h2>
+        <p>點按主畫面右上角的<strong>齒輪</strong>打開。遊戲中可以用右上角的調整按鈕，直接變更聲音、震動和特效。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>音效</td><td>開關卡片、運算和成功的聲音</td></tr>
+            <tr><td>震動</td><td>開關選擇或合併卡片時的震動</td></tr>
+            <tr><td>減少特效</td><td>關閉碎片、晃動和閃爍效果</td></tr>
+            <tr><td>語言</td><td>跟隨裝置語言或自行選擇</td></tr>
+            <tr><td>隱私權選項</td><td>重新開啟廣告同意視窗。僅在需要同意的地區（如歐洲）顯示</td></tr>
+            <tr><td>關於</td><td>版本、本說明、隱私權政策、開放原始碼授權</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 廣告與紀錄保存</h2>
+        <ul>
+            <li>畫面最下方有一條橫幅廣告。在極速模式遊玩期間和首次引導中會撤下廣告，只保留位置。</li>
+            <li>紀錄和設定儲存在裝置內。如果開啟了裝置的 Google 備份，會一併備份，更換裝置後也能接著玩。解除安裝應用程式會刪除裝置上的紀錄。</li>
+            <li>詳情請參閱<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 聯絡方式</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="../zh.html">Nums to One</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

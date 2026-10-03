@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://willee.net/ko/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://willee.net/en/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://willee.net/ja/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://willee.net/zh/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -570,6 +570,148 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/board-games/privacy/ja.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/board-games/privacy/zh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/board-games/privacy/en.html"/>
+  </url>
+
+  <!-- Nums to One 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/ko.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/ja.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/zh.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/en.html"/>
+  </url>
+
+  <!-- Nums to One 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/manual/ko.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/manual/en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/manual/ja.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/manual/zh.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/manual/zh-Hant.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html"/>
+  </url>
+
+  <!-- Nums to One 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/privacy/ko.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/privacy/en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/privacy/ja.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/privacy/zh.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/nums-to-one/privacy/zh-Hant.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
   </url>
 
 </urlset>

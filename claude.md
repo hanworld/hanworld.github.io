@@ -79,22 +79,42 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── board-games/        # 보드게임(Board Games) 앱
+│   ├── board-games/        # 보드게임(Board Games) 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   ├── privacy/        # 개인정보처리방침
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   └── zh.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── nums-to-one/        # Nums to One 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
 │       ├── ja.html
 │       ├── zh.html
-│       ├── manual/         # 사용 설명서
+│       ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
 │       │   ├── ko.html
 │       │   ├── en.html
 │       │   ├── ja.html
-│       │   └── zh.html
-│       ├── privacy/        # 개인정보처리방침
+│       │   ├── zh.html
+│       │   └── zh-Hant.html
+│       ├── privacy/        # 개인정보처리방침 (번체 zh-Hant 포함 5개 언어)
 │       │   ├── ko.html
 │       │   ├── en.html
 │       │   ├── ja.html
-│       │   └── zh.html
+│       │   ├── zh.html
+│       │   └── zh-Hant.html
 │       └── images/
 │           └── app_icon.png
 └── images/
@@ -107,6 +127,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - English (en)
 - 日本語 (ja)
 - 中文 (zh)
+- 예외: Nums to One의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정)
 
 ## 색상 팔레트
 ```css
@@ -153,6 +174,13 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 패키지 ID: net.willee.boardgames
 - Google Play: https://play.google.com/store/apps/details?id=net.willee.boardgames
 - **상표 게임명 표기 금지** (2026-09-25 출시 전 변경): Othello(메가하우스)·Connect Four(해즈브로)는 등록 상표라 일반 명칭으로 표기 — 리버시/Reversi/リバーシ/黑白棋, 사목/Four in a Row/四目並べ/四子棋. 오델로·オセロ·커넥트 포·コネクトフォー 등으로 되돌리지 말 것
+
+### Nums to One
+- 숫자 카드 4장을 사칙연산으로 합쳐 목표값(기본 24)을 만드는 숫자 퍼즐. 클래식(시간 제한 없음)·러시(60초)·데일리(매일 3문제) 모드
+- 플랫폼: Android (Google Play 출시 예정 — 홈페이지에는 '출시 예정' 배지. 출시되면 스토어 링크로 교체)
+- 패키지 ID: net.willee.numstoone
+- 원본 문서: 앱 저장소 `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`. 앱의 앱 정보 화면이 `apps/nums-to-one/{manual,privacy}/{언어}.html`을 열므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
+- **"24 Game" 표기 금지** (Suntex 상표): 게임 방식을 설명할 때만 24를 씀("Make 24", "24 만들기")
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정

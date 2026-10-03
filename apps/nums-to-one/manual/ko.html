@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Nums to One 사용 설명서 - 윌리 프로젝트</title>
+    <link rel="canonical" href="https://willee.net/apps/nums-to-one/manual/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/nums-to-one/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/nums-to-one/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/nums-to-one/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/nums-to-one/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/nums-to-one/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ko.html">Nums to One</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>매뉴얼</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Nums to One</h1>
+                <p>사용 설명서</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/NumsToOne_ko_01_classic.webp" alt="클래식 — 24를 만든 순간">
+            <img src="../images/NumsToOne_ko_02_rush.webp" alt="러시 — 콤보">
+            <img src="../images/NumsToOne_ko_03_daily.webp" alt="데일리 — 결과 화면">
+            <img src="../images/NumsToOne_ko_04_home.webp" alt="홈 — 클래식·러시·데일리">
+            <img src="../images/NumsToOne_ko_05_records.webp" alt="기록">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>앱 정보</h2>
+        <table class="info-table">
+            <tr><th>앱 이름</th><td>Nums to One</td></tr>
+            <tr><th>버전</th><td>1.0.0</td></tr>
+            <tr><th>개발</th><td>Willee Project</td></tr>
+            <tr><th>지원 플랫폼</th><td>Android</td></tr>
+        </table>
+        <p>숫자 카드를 사칙연산으로 합쳐 <strong>목표 숫자 하나</strong>를 만드는 퍼즐입니다. 기본 목표는 24입니다.</p>
+        <ul>
+            <li>회원가입도, 로그인도 없습니다. 켜면 바로 첫 문제가 나옵니다.</li>
+            <li><strong>인터넷 없이도 게임은 됩니다.</strong> 인터넷은 화면 아래 광고와 이용 통계를 보낼 때만 씁니다.</li>
+            <li>언어는 기기 설정을 따릅니다. 한국어·영어·일본어·중국어(간체·번체)를 지원하고, 설정에서 직접 고를 수도 있습니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 규칙</h2>
+        <p>카드 4장을 <strong>모두</strong> 써서 목표 숫자를 만듭니다. 두 장을 골라 연산 하나로 합치면 결과가 카드 한 장이 됩니다. 이렇게 세 번 합쳐 마지막 한 장이 목표 숫자면 성공입니다.</p>
+        <table class="info-table">
+            <tr><th>연산</th><th>규칙</th></tr>
+            <tr><td>+ 더하기</td><td>두 수를 더합니다</td></tr>
+            <tr><td>− 빼기</td><td><strong>큰 수에서 작은 수를 뺍니다.</strong> 고른 순서와 관계없습니다</td></tr>
+            <tr><td>× 곱하기</td><td>두 수를 곱합니다</td></tr>
+            <tr><td>÷ 나누기</td><td><strong>큰 수를 작은 수로 나누며, 나누어떨어질 때만</strong> 됩니다. 0과 다른 수를 나누면 0입니다. 0끼리는 나눌 수 없습니다</td></tr>
+        </table>
+        <p>결과는 늘 0 이상의 정수입니다. 음수나 분수는 나오지 않습니다.</p>
+        <p>마지막 한 장이 목표 숫자가 아니면 카드가 흔들린 뒤 <strong>처음 4장으로 돌아갑니다.</strong> 문제는 그대로이니 다시 풀면 됩니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 조작</h2>
+        <p><strong>카드 → 연산 → 카드</strong> 순서로 누릅니다. 결과 카드는 두 번째로 누른 카드 자리에 생깁니다.</p>
+        <ul>
+            <li>카드 → 카드 → 연산, 연산 → 카드 → 카드 순서도 됩니다.</li>
+            <li>고른 카드를 다시 누르면 내려놓습니다. 고른 연산을 다시 누르면 취소됩니다.</li>
+        </ul>
+        <p>아래쪽 보조 버튼 줄:</p>
+        <table class="info-table">
+            <tr><th>버튼</th><th>하는 일</th></tr>
+            <tr><td><strong>되돌리기</strong></td><td>마지막 합치기 하나를 되돌립니다</td></tr>
+            <tr><td><strong>처음부터</strong></td><td>처음 카드 4장으로 돌아갑니다</td></tr>
+            <tr><td><strong>힌트</strong></td><td>누를 때마다 한 단계씩 도와줍니다(아래 표)</td></tr>
+            <tr><td><strong>건너뛰기</strong></td><td>이 문제를 넘기고 다음 문제로 갑니다</td></tr>
+        </table>
+        <table class="info-table">
+            <tr><th>힌트</th><th>보여 주는 것</th></tr>
+            <tr><td>1단계</td><td>먼저 합칠 카드 두 장이 빛납니다</td></tr>
+            <tr><td>2단계</td><td>그 두 장에 쓸 연산까지 빛납니다</td></tr>
+            <tr><td>3단계</td><td>정답을 처음부터 보여 줍니다. 푼 것으로 치지 않고 건너뛴 것으로 칩니다</td></tr>
+        </table>
+        <p>지금 카드로는 목표를 만들 수 없으면 힌트 대신 <strong>되돌리기</strong>가 금색으로 빛납니다. 이때는 힌트 단계가 줄지 않습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 모드</h2>
+        <h3>클래식 — 시간 제한 없음</h3>
+        <ul>
+            <li>목표 <strong>10 · 24 · 36</strong> 가운데 고릅니다. 36은 24 문제를 30개 풀면 열립니다.</li>
+            <li>실력에 맞춰 문제의 등급(별 1~5개)이 오르내립니다. 힌트 없이 빨리 풀수록 어려운 문제가 나오고, 힌트를 쓰거나 건너뛰면 쉬워집니다.</li>
+            <li>위쪽에 문제 등급, 이번에 푼 문제 수, 연속 정답 수가 보입니다. 연속 정답은 건너뛰거나 정답을 보면 끊깁니다(힌트를 쓰고 푼 것은 이어집니다).</li>
+        </ul>
+        <h3>러시 — 60초</h3>
+        <ul>
+            <li>60초 동안 최대한 많이 풉니다. 쉬운 문제부터 시작해 점점 어려워집니다.</li>
+            <li><strong>점수</strong> = (등급 × 100 + 속도 보너스) × 콤보 배율
+                <ul>
+                    <li>속도 보너스: 10초 안에 풀면 빨리 푼 1초마다 10점</li>
+                    <li>콤보 배율: 연속 정답마다 0.1씩 올라 최대 2배</li>
+                </ul>
+            </li>
+            <li>건너뛰면 <strong>2초가 줄고</strong> 콤보가 끊깁니다. 러시에는 힌트가 없습니다.</li>
+            <li>성공 연출이 나오는 동안에는 시계가 멈춥니다. 앱을 잠시 나가도 멈춥니다.</li>
+            <li>마지막 10초에는 타이머가 빨개지고 초침 소리가 납니다.</li>
+        </ul>
+        <h3>데일리 — 오늘의 3문제</h3>
+        <ul>
+            <li>날마다 같은 3문제가 나옵니다. <strong>전 세계 모두가 같은 날 같은 문제</strong>를 풉니다(기기의 날짜 기준).</li>
+            <li>시간 제한은 없고 세 문제를 푼 총시간을 잽니다. 힌트를 쓸 수 있지만 결과에 표시됩니다.</li>
+            <li>하루에 한 번만 할 수 있습니다. 중간에 나가면 그 판은 버리고 처음부터 다시 풉니다. 다 마친 뒤 다시 누르면 결과 화면이 열립니다.</li>
+            <li>결과 표시: 🟩 힌트 없이 풂, 🟨 힌트를 쓰고 풂, ⬛ 건너뛰었거나 정답을 봄</li>
+            <li>마칠 때마다 연속 기록(🔥)이 이어집니다. <strong>공유</strong>로 결과를 보낼 수 있습니다. 예:</li>
+        </ul>
+        <pre class="share-example">Nums to One #42  🔥7
+🟩🟩🟨  1:42</pre>
+        <p>결과 카드와 공유 글의 <strong>#42</strong>는 데일리 번호입니다. 출시일이 #1이고 하루에 하나씩 늘어나, 번호가 같으면 같은 날 같은 문제입니다. 홈과 데일리 화면에는 번호 대신 오늘 날짜가 보입니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 기록</h2>
+        <p>홈 오른쪽 위 막대 그래프 단추로 엽니다. 러시 최고 점수와 판 수, 푼 문제 수, 평균 풀이 시간, 등급별 정답률, 데일리 연속 기록을 보여 줍니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 설정</h2>
+        <p>홈 오른쪽 위 <strong>톱니바퀴</strong>로 엽니다. 게임 중에는 오른쪽 위 조절 단추로 소리·진동·효과만 바로 바꿀 수 있습니다.</p>
+        <table class="info-table">
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>효과음</td><td>카드·연산·성공 소리를 켜고 끕니다</td></tr>
+            <tr><td>진동</td><td>카드를 고르거나 합칠 때의 진동을 켜고 끕니다</td></tr>
+            <tr><td>효과 줄이기</td><td>파편, 흔들림, 화면 깜빡임을 끕니다</td></tr>
+            <tr><td>언어</td><td>기기 언어를 따르거나 직접 고릅니다</td></tr>
+            <tr><td>개인정보 보호 옵션</td><td>광고 동의를 다시 엽니다. 동의가 필요한 지역(유럽 등)에서만 보입니다</td></tr>
+            <tr><td>앱 정보</td><td>버전, 이 설명서, 개인정보처리방침, 오픈소스 라이선스</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 광고와 기록 보관</h2>
+        <ul>
+            <li>화면 맨 아래에 배너 광고 한 줄이 붙습니다. 러시를 하는 동안과 첫 실행 안내에서는 광고를 내리고 자리만 비워 둡니다.</li>
+            <li>기록과 설정은 기기 안에 저장됩니다. 기기의 Google 백업이 켜져 있으면 백업에 함께 들어가, 기기를 바꿔도 이어서 할 수 있습니다. 앱을 지우면 기기의 기록도 지워집니다.</li>
+            <li>자세한 내용은 <a href="../privacy/ko.html">개인정보처리방침</a>을 보십시오.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 문의</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="../ko.html">Nums to One</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
