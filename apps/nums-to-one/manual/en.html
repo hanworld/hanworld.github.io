@@ -153,6 +153,7 @@
         <ul>
             <li>Card → card → operator and operator → card → card work too.</li>
             <li>Tap a selected card again to put it down. Tap the selected operator again to cancel it.</li>
+            <li>Each merge stays in the <strong>step log</strong> next to the target card (for example 7 ÷ 7 = 1). The card and operator you're picking show there too, and when you solve, the whole expression appears on one line.</li>
         </ul>
         <p>The row of buttons at the bottom:</p>
         <table class="info-table">
@@ -168,6 +169,7 @@
             <tr><td>Step 2</td><td>The operator for those two cards lights up too</td></tr>
             <tr><td>Step 3</td><td>Shows the whole answer. This counts as skipped, not solved</td></tr>
         </table>
+        <p>The dots under the Hint button show how many steps you've used. After step 2 the button reads <strong>Show answer</strong>. The move that steps 1 and 2 point to also appears faintly in the step log.</p>
         <p>If the target can no longer be made from your current cards, <strong>Undo</strong> glows gold instead of a hint, and no hint step is used.</p>
     </div>
 </section>
@@ -177,13 +179,14 @@
         <h2>3. Modes</h2>
         <h3>Classic — no timer</h3>
         <ul>
-            <li>Choose a target of <strong>10, 24 or 36</strong>. 36 unlocks after you solve 30 puzzles of 24.</li>
+            <li>On the home screen, choose a target of <strong>10, 24 or 36</strong> and tap <strong>Play</strong>. Your choice is remembered. 36 unlocks after you solve 30 puzzles of 24.</li>
             <li>Puzzle tiers (1–5 stars) follow your skill. Solving quickly without hints brings harder puzzles; using hints or skipping makes them easier.</li>
             <li>The top bar shows the puzzle's tier, how many you've solved this session and your streak. The streak ends when you skip or reveal the answer (solving with hints keeps it going).</li>
         </ul>
         <h3>Rush — 60 seconds</h3>
         <ul>
             <li>Solve as many as you can in 60 seconds. Puzzles start easy and get harder.</li>
+            <li>A <strong>3 · 2 · 1</strong> countdown comes first. The clock doesn't run during it.</li>
             <li><strong>Score</strong> = (tier × 100 + speed bonus) × combo multiplier
                 <ul>
                     <li>Speed bonus: 10 points for every second under 10 seconds</li>
@@ -197,13 +200,14 @@
         <h3>Daily — today's three puzzles</h3>
         <ul>
             <li>The same three puzzles every day, <strong>the same for everyone in the world</strong> (by your device's date).</li>
-            <li>No time limit; your total time for the three is recorded. You can use hints, but they show in your result.</li>
+            <li>No time limit; your total time for the three is recorded and shown at the top as you play. You can use hints, but they show in your result.</li>
             <li>You can play once a day. If you leave midway, that attempt is dropped and you start over. After you finish, tapping Daily opens your result.</li>
-            <li>Result marks: 🟩 solved without hints, 🟨 solved with hints, ⬛ skipped or answer revealed</li>
-            <li>Each day you finish keeps your streak (🔥) going. Tap <strong>Share</strong> to send your result, for example:</li>
+            <li>Result marks: a check (green) solved without hints, a bulb (yellow) solved with hints, an X (gray) skipped or answer revealed. The shared text uses 🟩🟨⬛.</li>
+            <li>Each day you finish keeps your streak going. The app shows it with a calendar check; the shared text uses 🔥. Tap <strong>Share</strong> to send your result, for example:</li>
         </ul>
         <pre class="share-example">Nums to One #42  🔥7
 🟩🟩🟨  1:42</pre>
+        <p>The result screen shows how long until the next Daily. A new Daily opens at midnight on your device's clock.</p>
         <p><strong>#42</strong> on the result card and in the shared text is the Daily number. Launch day was #1 and it goes up by one each day, so the same number means the same day's puzzles. The home and Daily screens show today's date instead.</p>
     </div>
 </section>
@@ -211,7 +215,12 @@
 <section>
     <div class="container">
         <h2>4. Records</h2>
-        <p>Tap the bar chart button at the top right of the home screen. It shows your Rush best score and games played, puzzles solved, average solve time, success rate by tier and Daily streak.</p>
+        <p>Tap the bar chart button at the top right of the home screen. The top shows puzzles solved, average solve time, your Rush best score with games played, and your Daily streak. Below that:</p>
+        <ul>
+            <li><strong>Classic:</strong> your skill for targets 10, 24 and 36 (1–5 stars) and how many different puzzles you've solved out of the total</li>
+            <li><strong>Success rate by tier:</strong> a bar for each tier</li>
+            <li><strong>Daily:</strong> a calendar of the last 5 weeks. Finished days are green; today has a gold outline.</li>
+        </ul>
     </div>
 </section>
 
