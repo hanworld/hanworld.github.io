@@ -177,8 +177,9 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Nums to One
 - 숫자 카드 4장을 사칙연산으로 합쳐 목표값(기본 24)을 만드는 숫자 퍼즐. 클래식(시간 제한 없음)·러시(60초)·데일리(매일 3문제) 모드
-- 플랫폼: Android (Google Play 출시 예정 — 홈페이지에는 '출시 예정' 배지. 출시되면 스토어 링크로 교체)
+- 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.numstoone
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.numstoone
 - 원본 문서: 앱 저장소 `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`. 앱의 앱 정보 화면이 `apps/nums-to-one/{manual,privacy}/{언어}.html`을 열므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **"24 Game" 표기 금지** (Suntex 상표): 게임 방식을 설명할 때만 24를 씀("Make 24", "24 만들기")
 
