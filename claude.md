@@ -205,7 +205,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Tenmates
 - 판의 숫자 중 같은 숫자이거나 합이 10인 짝을 지워 판을 비우는 숫자 퍼즐. Classic(시간 제한 없음, 5×4~9×12)·Rush(90초)·Daily(매일 한 판) 모드
-- 플랫폼: Android (출시 예정 — 2026-10-09 플레이 내부 테스트)
+- 플랫폼: Android (Google Play 출시, 2026-10-09)
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.tenmates
 - 패키지 ID: net.willee.tenmates
 - 원본 문서: 앱 저장소(A30.Tenmates) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/tenmates/{manual,privacy}/{언어}.html`을 열므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **경쟁작 게임 이름 표기 금지**: Number Match·넘버 매치·ナンバーマッチ, Take Ten, Ten Pair, Ten Match 등 다른 회사 게임 이름을 쓰지 않음(앱 저장소 `listing.md` 규칙)
