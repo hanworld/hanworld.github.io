@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Tenmates: How to Play - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/tenmates/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Tenmates</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Tenmates</h1>
+                <p>How to Play</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Tenmates_en_01_home.webp" alt="Home — Classic, Rush and Daily">
+            <img src="../images/Tenmates_en_02_classic.webp" alt="Classic — playing">
+            <img src="../images/Tenmates_en_03_classic_clear.webp" alt="Classic — board cleared">
+            <img src="../images/Tenmates_en_04_daily.webp" alt="Daily — playing">
+            <img src="../images/Tenmates_en_05_daily_result.webp" alt="Daily — result">
+            <img src="../images/Tenmates_en_06_rush.webp" alt="Rush — playing">
+            <img src="../images/Tenmates_en_07_rush_result.webp" alt="Rush — result (new best)">
+            <img src="../images/Tenmates_en_08_records.webp" alt="Records">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Tenmates</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>A number puzzle: find pairs of numbers that are <strong>the same</strong> or <strong>add up to 10</strong>, clear them, and empty the board.</p>
+        <ul>
+            <li>No sign-up, no login. The first time you open the app, a short guide teaches the rules on a small board.</li>
+            <li><strong>The game works offline.</strong> The internet is used only for the ad at the bottom and for usage statistics.</li>
+            <li>The language follows your device. English, Korean, Japanese and Chinese (Simplified and Traditional) are supported, and you can also pick one in Settings.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Rules</h2>
+        <ul>
+            <li>Tap two numbers one after the other to clear them. They must be <strong>the same</strong> (7 and 7) or <strong>add up to 10</strong> (3 and 7).</li>
+            <li><strong>Trios</strong>: three numbers in a line that add up to 10 clear all at once (for example 2, 3 and 5).</li>
+            <li>Clear every number on the board (empty the board) to win.</li>
+        </ul>
+        <h3>Which two numbers make a pair</h3>
+        <ul>
+            <li>Numbers that <strong>touch</strong> horizontally, vertically or diagonally make a pair.</li>
+            <li>Numbers on the same row, column or diagonal also pair up when <strong>only cleared cells lie between them</strong>. If a number you haven't cleared yet is in between, they don't.</li>
+            <li><strong>The end of each row connects to the start of the next.</strong> In reading order (left to right, top to bottom), numbers pair across rows when only cleared cells lie between them. When you clear such a pair, light runs along the cells out of the end of the row and into the start of the next, with a '›' where it leaves and enters.</li>
+            <li>Trios work the same way: the three numbers must follow one another along one line.</li>
+        </ul>
+        <p>Cleared cells stay as faint dots, so you can spot pairs with only cleared cells between them. <strong>When a row is empty, it disappears</strong> and the rows below move up.</p>
+        <h3>Stuck? Add numbers</h3>
+        <p>If there are no numbers you can clear, the <strong>＋</strong> button at the bottom <strong>adds the remaining numbers, in reading order, to the end of the board.</strong> The number on the button is how many adds you have left: <strong>3 per board</strong> in Classic and Daily, unlimited in Rush. Empty spots in an unfinished last row show as dots, like cleared cells (the next add fills them).</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Controls</h2>
+        <ul>
+            <li>Tap a number to select it, then tap its pair to clear both.</li>
+            <li>If they don't pair, both cells give a little shake and the second one becomes selected.</li>
+            <li>Tap a selected cell again to deselect it.</li>
+            <li><strong>Trios</strong>: if two cells that don't pair could make a trio with one more cell, both stay selected while the game waits for the third. The order doesn't matter. Two cells that pair are cleared as a pair first.</li>
+            <li>When the board gets long, drag the board up and down. The info at the top and the buttons at the bottom stay put.</li>
+        </ul>
+        <p>Buttons at the bottom (Classic and Daily):</p>
+        <table class="info-table">
+            <tr><th>Button</th><th>What it does</th></tr>
+            <tr><td><strong>Undo</strong></td><td>Takes back your last move (a clear or an add), one at a time. Unlimited</td></tr>
+            <tr><td><strong>Hint</strong></td><td>Lights up a pair on a path that can still empty the board. Unlimited</td></tr>
+            <tr><td><strong>＋ Add</strong></td><td>Adds the remaining numbers to the end of the board. The number is how many adds are left</td></tr>
+        </table>
+        <ul>
+            <li>A hint doesn't just show any pair you can clear now. It shows <strong>a pair on a path that empties the board</strong>. For pairs across rows, it also shows the path the light takes.</li>
+            <li>When you need to add numbers, the <strong>＋</strong> button gets a gold ring and a <strong>'Time to add numbers'</strong> bubble.</li>
+            <li>If the adds you have left can no longer empty the board, a <strong>'Can't clear it from here'</strong> window opens. <strong>Undo to a clearable spot</strong> takes you back, in one go, to the nearest point where the board can still be emptied (the window says how many steps), and the next pair lights up there. You can also pick <strong>Start over</strong> or <strong>New board</strong> (Classic only), or close the window with <strong>Keep playing</strong>.</li>
+            <li>On boards that would take too long to work out, the hint shows a pair you can clear right now instead.</li>
+        </ul>
+        <p>The <strong>Restart</strong> button (↻) on the right of the top bar:</p>
+        <table class="info-table">
+            <tr><th>Choice</th><th>What happens</th></tr>
+            <tr><td><strong>Start this board over</strong></td><td>Puts the board back the way it started. In Classic, the time and hints start over too. In Daily, the day's time and hints keep counting</td></tr>
+            <tr><td><strong>New board</strong> (Classic only)</td><td>Leaves this board and plays another board of the same size. A board you leave doesn't count as cleared</td></tr>
+        </table>
+        <h3>Out of adds</h3>
+        <p>If there are no numbers you can clear and you've used every add, the <strong>Out of adds</strong> panel appears. This try counts as a loss and can't be undone: <strong>Start over</strong> or pick a <strong>New board</strong>. In Daily, <strong>Give up</strong> takes the place of New board. Tap <strong>Hint</strong> before you get stuck: even a board that can no longer be emptied can be taken back to where it still can.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. Modes</h2>
+        <h3>Classic — no timer</h3>
+        <ul>
+            <li>On the Classic card on the home screen, pick a board size (<strong>5×4 · 7×4 · 9×4</strong>, then <strong>9×5 to 9×12</strong>, one row more each time: 11 sizes in all) and tap <strong>Play</strong>. If you left a board after clearing some numbers, the button says <strong>Continue</strong>.</li>
+            <li>At first only 5×4 is open. <strong>Clear enough boards on your largest size and the next size opens</strong> (3 boards on 5×4, 5 on 7×4, 8 on 9×4, 10 on 9×5, 7 on 9×6, 6 on 9×7, 5 on 9×8 and 9×9, 4 on 9×10 and 9×11). Bigger boards take longer, so they need fewer. A newly opened size gets a <strong>NEW</strong> badge.</li>
+            <li>The more boards you clear at one size, the harder its boards slowly get.</li>
+            <li>The board preview on the card hides the numbers behind '?' and shows only the board's shape.</li>
+            <li>No clock is shown while you play. The result shows your time, and each size keeps its best time.</li>
+            <li>Your board is saved automatically. Leave and come back to continue, one board per size. If you leave before clearing any numbers, the board goes back to how it started (adds, time and hints start over too).</li>
+        </ul>
+        <h3>Rush — 90 seconds, growing boards</h3>
+        <ul>
+            <li>A <strong>3 · 2 · 1</strong> countdown comes first. Rush always starts on a 5×4 board.</li>
+            <li>Empty a board to <strong>earn extra time</strong> (0.5 seconds per cell of that board, for example +18 seconds for 9×4) and <strong>the next board is one size bigger</strong> (5×4 → 7×4 → 9×4 → 9×5 → 9×6).</li>
+            <li>Adds are unlimited. There are no hints or undos.</li>
+            <li><strong>Score</strong>: 10 per pair, 30 per trio, 30 per row removed, and stage × 100 for emptying a board.</li>
+            <li>In the last 10 seconds, the time turns red and ticks. Leaving the app pauses Rush; tap <strong>Resume</strong> when you come back.</li>
+        </ul>
+        <h3>Daily — today's board</h3>
+        <ul>
+            <li>A new 9×4 board every day. <strong>Everyone in the world plays the same board on the same day</strong> (by your device's date).</li>
+            <li>There is no time limit. The time you've spent so far shows at the top. You can use hints, but they show in your result.</li>
+            <li>Leave and come back the same day to continue. <strong>Start this board over</strong> keeps counting the time and hints. If you leave before clearing any numbers, the board goes back to how it started, and the time and hints keep counting.</li>
+            <li>On a board that's out of adds, you can <strong>Start over</strong> (the time and hints keep counting) or <strong>Give up</strong>. Give up asks once more, then records the day as a loss (❌).</li>
+            <li>Each day you empty the board continues your streak. A day you give up ends it.</li>
+            <li><strong>Share</strong> on the result screen sends your result. For example:</li>
+        </ul>
+        <pre class="share-example">Tenmates Daily #12 ✅ 4:12
+Adds 1 · Hints 0
+🔥 5-day streak</pre>
+        <p>✅ means you emptied the board (❌ if you gave up), followed by your time. The second line shows the adds and hints you used, and the third your streak (shown from two days on). <strong>#12</strong> is the Daily number: launch day is #1 and it goes up by one each day, so the same number means the same board. The result screen shows the time until the next Daily, which opens at midnight on your device's clock.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Records</h2>
+        <p>Open them with the <strong>trophy</strong> button at the top right of the home screen. It shows how many boards you've cleared.</p>
+        <ul>
+            <li><strong>Boards cleared</strong>: the boards you emptied in Classic and Daily, in big numbers.</li>
+            <li><strong>Classic</strong>: boards cleared and best time for each size. Locked sizes show 'Locked'.</li>
+            <li><strong>Rush</strong>: best score, furthest stage and games played</li>
+            <li><strong>Daily</strong>: streak, best streak and days cleared. The calendar marks the days you cleared (mint) and the days you gave up (coral outline).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Settings</h2>
+        <p>Open them with the <strong>gear</strong> at the top right of the home screen. During a game, the slider button on the right of the top bar changes sound, vibration, effects and large numbers right away.</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Sound effects</td><td>Turns the sounds for selecting and clearing numbers on or off. Clearing pairs in a row raises the pitch a little each time</td></tr>
+            <tr><td>Vibration</td><td>Turns vibration for selecting and clearing numbers on or off</td></tr>
+            <tr><td>Reduce effects</td><td>Turns all effects down at once (a shorter clearing animation, without movement). While it's on, the effect switches below are greyed out and shown as off. It also follows your device's remove-animations setting</td></tr>
+            <tr><td>Effect switches</td><td>Under Reduce effects, turn each effect on or off: <strong>Shaking</strong> (the board's thump when a row clears, nearby cells bouncing, cells that don't pair shaking), <strong>Flashing</strong> (flashes, glow and sparkles, the blinking hint), <strong>Particles</strong> (shards and confetti), <strong>Pop-up text</strong> (combo, praise and other words on the board), <strong>Motion</strong> (two numbers gliding together, rows sweeping away; when off, numbers fade in place). If shaking or flashing bothers you, turn off just that effect</td></tr>
+            <tr><td>Large numbers</td><td>Draws the numbers on the board bigger. Other text follows your device's font size setting</td></tr>
+            <tr><td>How to play</td><td>Replays the first-run guide</td></tr>
+            <tr><td>Language</td><td>Follow the device language or pick one</td></tr>
+            <tr><td>Privacy options</td><td>Opens the ad consent window again. Shown only where consent is required (such as Europe)</td></tr>
+            <tr><td>About</td><td>Version, this guide, the privacy policy and open-source licenses</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Ads and your records</h2>
+        <ul>
+            <li>A single banner ad sits at the very bottom of the screen. While you play Rush and during the first-run guide, the ad is removed and only its space is kept.</li>
+            <li>Your records and settings are stored on your device. If your device's Google backup is on, they are included in the backup, so you can carry on after switching devices. Uninstalling the app deletes the records on the device.</li>
+            <li>For details, see the <a href="../privacy/en.html">Privacy Policy</a>.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Contact</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

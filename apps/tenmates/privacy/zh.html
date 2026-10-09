@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Tenmates - 隐私政策</title>
+    <link rel="canonical" href="https://willee.net/apps/tenmates/privacy/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Tenmates</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>隐私政策</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>隐私政策</h1>
+                <p>Tenmates</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-09</strong></p>
+        <h2 style="margin-top:16px;">一目了然</h2>
+        <ul>
+            <li>无需注册，无需登录，没有账号。我们不会询问您的姓名、邮箱或电话号码。</li>
+            <li>开发者<strong>没有服务器。</strong> 游戏记录和设置保存在<strong>您的设备内</strong>。</li>
+            <li>离开设备的只有以下三项 Google 服务：
+                <ul>
+                    <li>屏幕底部的<strong>横幅广告</strong>（Google AdMob）</li>
+                    <li>用于改进应用的<strong>使用统计</strong>（Google Analytics for Firebase）</li>
+                    <li>应用停止运行时的<strong>错误报告</strong>（Firebase Crashlytics）</li>
+                </ul>
+            </li>
+            <li>在欧洲经济区（EEA）、英国和瑞士，我们会在展示广告前<strong>征求您的同意</strong>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 谁在处理</h2>
+        <table class="info-table">
+            <tr><th>数据控制者</th><td>Willee Project</td></tr>
+            <tr><th>应用</th><td>Tenmates (<code>net.willee.tenmates</code>)</td></tr>
+            <tr><th>联系方式</th><td><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 保存在设备内的内容</h2>
+        <table class="info-table">
+            <tr><th>是什么</th><th>内容</th></tr>
+            <tr><td>游戏记录</td><td>已解锁的盘面尺寸，各尺寸的成功局数、最佳用时和成功盘面的编号，进行中的盘面（每个尺寸一盘，以及当天的每日挑战一盘），极速模式的最高分、最远关卡和局数，每日挑战的结果（成功的日子和放弃的日子）与连续记录，在主页最后选择的盘面尺寸，是否完成了首次引导</td></tr>
+            <tr><td>设置</td><td>音效、振动、减少特效、各项特效的开关、大号数字、语言</td></tr>
+        </table>
+        <p>这些信息不会发送给开发者，卸载应用时一并删除。</p>
+        <p><strong>设备备份。</strong> 如果您开启了设备的 Google 备份（Android 自动备份），上述记录和设置会包含在该备份中，在更换设备或重新安装应用时恢复。备份保存在您自己的 Google 账号中，开发者无法查看。如不需要，可在 Android 设置的备份菜单中关闭。</p>
+        <p>此外，广告 SDK 和 Firebase 会在设备上保存同意记录（如在欧洲地区所作的同意选择）以及下表中的标识符。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 使用统计和错误报告（Firebase）</h2>
+        <p>我们只接收改进应用所需的信息。<strong>其中不包含姓名、邮箱等个人信息</strong>，开发者在 Firebase 控制台中以统计的形式查看以下信息。</p>
+        <h3>使用统计 — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
+            <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备第二天是否再次使用（留存率）</td></tr>
+            <tr><td>游戏事件</td><td>盘面的编号、尺寸、结果和用时，添加数字、提示与撤销的次数，新解锁的盘面尺寸，极速模式的分数和关卡，完成首次引导，点按分享按钮</td><td>根据实际游玩调整盘面难度（等级），改进各模式</td></tr>
+            <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和游玩时长</td></tr>
+            <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
+        </table>
+        <ul>
+            <li><strong>使用统计不使用您的广告 ID。</strong> 广告 ID 只用于下方第 4 节的广告。</li>
+            <li>按用户的记录会在 <strong>2 个月</strong>后自动删除（Google Analytics 数据保留设置）。之后只留下无法对应到任何人的汇总数字。</li>
+        </ul>
+        <h3>错误报告 — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>用于什么</th></tr>
+            <tr><td>出错的代码位置（堆栈跟踪）、出错时间</td><td>修复错误</td></tr>
+            <tr><td>机型、Android 版本、应用版本、内存与存储空间状态</td><td>找出哪些设备受到影响</td></tr>
+            <tr><td>Crashlytics 安装 ID（随机 ID）</td><td>统计同一错误在多少台设备上发生</td></tr>
+        </table>
+        <p>错误报告会在 <strong>90 天</strong>后删除。</p>
+        <p>Google 代表开发者处理这些信息。详情请参阅 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 中的隐私与安全</a>。</p>
+        <h3>与广告的关联</h3>
+        <p>使用统计已与广告（第 4 节，Google AdMob）关联，开发者会把广告收入与使用指标（用户数、回访等）放在一起查看。Google 可能会用关联的使用统计来改进 AdMob 的功能、提高广告收入。这里同样不使用广告 ID。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 广告（Google AdMob）</h2>
+        <p>屏幕最下方有一条横幅广告（在极速模式游玩期间和首次引导中会撤下广告）。广告由 <strong>Google AdMob</strong> 投放，为此 Google 及其广告合作伙伴会处理以下信息。</p>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>用于什么</th></tr>
+            <tr><td>广告 ID（Android 广告 ID）、应用组 ID，以及（如适用）与设备上已登录账号相关的标识符</td><td>投放广告、控制展示频次、衡量效果；数据分析；防止欺诈与滥用；在您同意时用于个性化</td></tr>
+            <tr><td>IP 地址</td><td>投放广告；根据 IP 推测的大致位置（国家/城市级别）</td></tr>
+            <tr><td>设备与应用信息（机型、系统版本、语言、屏幕尺寸、应用版本）</td><td>挑选适合屏幕的广告；防止欺诈与滥用</td></tr>
+            <tr><td>广告互动（展示、点击）</td><td>衡量效果；防止无效点击</td></tr>
+            <tr><td>应用使用信息（应用启动、点按等互动）</td><td>投放广告、衡量效果；数据分析；防止欺诈与滥用</td></tr>
+            <tr><td>诊断信息（应用启动时间、卡顿率等性能信息）</td><td>投放广告；分析应用与广告 SDK 的性能；防止欺诈与滥用</td></tr>
+        </table>
+        <p><strong>开发者不会收到这些信息，</strong> 只会收到广告收入等汇总报告。Google 也会作为<strong>独立的数据控制者</strong>处理这些信息。详情请参阅 Google 的文档。</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a></li>
+            <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用来自使用我们服务的网站或应用的信息</a></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 同意 — 给予、更改、撤回</h2>
+        <p>如果您身处欧洲经济区、英国或瑞士，<strong>首次打开应用时会出现同意窗口</strong>。我们通过 Google 认证的同意管理工具（UMP）征求您的同意，您的选择同时适用于广告和使用统计。</p>
+        <ul>
+            <li><strong>如果您同意</strong> — 可能会看到根据您的兴趣定制的个性化广告。</li>
+            <li><strong>即使您不同意</strong> — 也可以照常使用应用的全部功能，广告将是非个性化的。但<strong>即便如此</strong>，为了展示广告、避免同一广告出现过于频繁以及防止欺诈，仍会处理最少的信息（IP 地址、大致位置、设备信息、广告标识符等）。“非个性化”并不意味着“不处理任何信息”。</li>
+        </ul>
+        <h3>如果您改变了主意</h3>
+        <table class="info-table">
+            <tr><th>在哪里</th><th>怎么做</th></tr>
+            <tr><td>在应用中</td><td>主页右上角的<strong>设置（齿轮）→ 隐私选项</strong> — 随时重新打开同意窗口并更改选择（仅在需要同意的地区显示）</td></tr>
+            <tr><td>在设备上</td><td>Android 设置 → 隐私 → 广告 → 重置或删除广告 ID</td></tr>
+            <tr><td>完全停止</td><td>卸载应用后，设备上的记录和应用实例 ID 会一并删除</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 分享</h2>
+        <p>在结果画面点按<strong>分享</strong>时，结果文字（例如 <code>Tenmates 每日挑战 #12 ✅ 4:12</code>）会交给设备的分享面板。发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 处理的法律依据（GDPR 第 6 条）</h2>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>依据</th></tr>
+            <tr><td>个性化广告</td><td><strong>同意</strong>（第 6 条第 1 款 (a) 项），通过上述同意窗口获得</td></tr>
+            <tr><td>非个性化广告、防止欺诈与滥用、投放广告</td><td>视当地法律而定，为<strong>同意</strong>或<strong>正当利益</strong>（第 6 条第 1 款 (f) 项）</td></tr>
+            <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第 6 条第 1 款 (f) 项）：为了修复应用错误并调整盘面难度。也包括为了靠广告运营这款免费应用，把广告收入与使用指标放在一起查看。在欧洲经济区，统计的存储会按您在同意窗口中的选择受到限制。</td></tr>
+            <tr><td>设备内的游戏记录</td><td>不会传给开发者，因此开发者方面不存在处理</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 跨境传输</h2>
+        <p>使用统计、错误报告和广告信息在 Google 的服务器上处理，包括韩国和欧洲经济区以外的地区（例如美国）。Google 表示，此时会依据欧盟标准合同条款（SCC）等法律认可的传输机制进行。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 保存多久</h2>
+        <ul>
+            <li><strong>使用统计</strong> — 按用户的记录在 2 个月后删除。</li>
+            <li><strong>错误报告</strong> — 90 天后删除。</li>
+            <li><strong>设备内</strong> — 直到卸载应用为止（进入设备备份的内容遵循 Google 的备份政策）。</li>
+            <li><strong>广告</strong> — 遵循 Google 的保留政策，请参阅上方 Google 的文档。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 您的权利</h2>
+        <p>如果您身处欧洲经济区或英国，GDPR（第 15 至 22 条）赋予您以下权利：</p>
+        <ul>
+            <li>访问、更正、删除</li>
+            <li>限制处理、反对处理</li>
+            <li>数据可携带</li>
+            <li>随时撤回同意（撤回之前的处理仍然有效）</li>
+            <li>向监管机构投诉</li>
+        </ul>
+        <p><strong>向哪里提出请求。</strong> 开发者不知道您的姓名或联系方式，因此无法在使用统计中找出特定用户的记录。卸载应用后，应用实例 ID 会被删除，之后的记录不会与之前的记录关联，剩余记录会在上述保存期限过后删除。关于广告信息的请求，需要向实际持有数据的 <strong>Google</strong> 提出（请参阅 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。如果不清楚该向哪里提出什么请求，请写信至 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>，我们会尽力为您指引。</p>
+        <p><strong>投诉。</strong> 身处欧洲经济区的用户可向所在国的数据保护监管机构投诉；身处英国的用户可向信息专员办公室（ICO）投诉。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. 儿童</h2>
+        <p>本应用<strong>不面向儿童。</strong> 在 Google Play 上按面向 13 岁及以上用户登记。开发者不会在知情的情况下收集儿童的个人信息。</p>
+        <p>如果您是 16 岁以下（依成员国不同为 13 至 16 岁）儿童的家长或监护人，对孩子使用本应用有所顾虑，请联系 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>12. 政策变更</h2>
+        <p>如果我们修改本政策，会在本页面公布并注明新的生效日期。重大变更时，也会通过应用更新说明告知您。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>13. 联系方式</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-09</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

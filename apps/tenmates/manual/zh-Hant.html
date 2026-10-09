@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Tenmates 玩法說明 - Willee Project</title>
+    <link rel="canonical" href="https://willee.net/apps/tenmates/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Tenmates</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Tenmates</h1>
+                <p>玩法說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Tenmates_zh-Hant_01_home.webp" alt="主畫面 — 經典·極速·每日挑戰">
+            <img src="../images/Tenmates_zh-Hant_02_classic.webp" alt="經典 — 遊戲中">
+            <img src="../images/Tenmates_zh-Hant_03_classic_clear.webp" alt="經典 — 盤面清空">
+            <img src="../images/Tenmates_zh-Hant_04_daily.webp" alt="每日挑戰 — 遊戲中">
+            <img src="../images/Tenmates_zh-Hant_05_daily_result.webp" alt="每日挑戰 — 結果畫面">
+            <img src="../images/Tenmates_zh-Hant_06_rush.webp" alt="極速 — 遊戲中">
+            <img src="../images/Tenmates_zh-Hant_07_rush_result.webp" alt="極速 — 結果（新紀錄）">
+            <img src="../images/Tenmates_zh-Hant_08_records.webp" alt="紀錄">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>Tenmates</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>在盤面上找出<strong>相同</strong>或<strong>相加等於 10</strong> 的兩個數字，把它們消除，直到清空盤面的數字益智遊戲。</p>
+        <ul>
+            <li>不需要註冊，也不需要登入。第一次打開時，會先用一個小盤面的首次引導帶你熟悉規則。</li>
+            <li><strong>沒有網路也能玩。</strong> 只有畫面下方的廣告和傳送使用統計時才會用到網路。</li>
+            <li>語言跟隨裝置設定。支援中文（繁體、簡體）、英文、韓文、日文，也可以在設定中直接選擇。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 規則</h2>
+        <ul>
+            <li>依序點擊兩個數字，就能把它們消除。兩個數字必須<strong>相同</strong>（7 和 7）或<strong>相加等於 10</strong>（3 和 7）。</li>
+            <li><strong>三連消</strong>：連成一線的三個數字相加等於 10，就能一次消除（例如 2、3、5）。</li>
+            <li>消除盤面上的所有數字（清空盤面）就算成功。</li>
+        </ul>
+        <h3>哪兩個數字可以配對</h3>
+        <ul>
+            <li>橫向、縱向或斜向<strong>相鄰</strong>的兩個數字可以配對。</li>
+            <li>在同一列、同一行或同一斜線上，<strong>中間只隔著已消除的格子</strong>時，離得再遠也能配對。中間只要還有一個沒消除的數字，就不能配對。</li>
+            <li><strong>每列的末尾與下一列的開頭相連。</strong> 依閱讀順序（從左到右、從上到下）中間只隔著已消除的格子時，跨列也能配對。消除這樣的配對時，光會沿著格子從列尾流出、從下一列開頭流入，出入的位置會標上「›」。</li>
+            <li>三連消也一樣：三個數字必須在一條線上依序相連。</li>
+        </ul>
+        <p>已消除的格子會留下淡淡的點，方便你一眼看出中間只隔著已消除格子的配對。<strong>一列全部消除後，這一列就會消失</strong>，下面的列會往上移。</p>
+        <h3>卡住時：新增數字</h3>
+        <p>沒有可以消除的數字時，用下方的 <strong>＋</strong> 按鈕<strong>把剩下的數字依閱讀順序接到盤面末尾。</strong> 按鈕上的數字是剩餘次數。經典和每日挑戰每盤 <strong>3 次</strong>，極速不限次數。最後一列沒填滿的空位會顯示成和已消除格子一樣的點（下次新增會填進去）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 操作</h2>
+        <ul>
+            <li>點一下數字就會選取，再點能和它配對的數字，兩個就會一起消除。</li>
+            <li>如果不能配對，兩個格子會輕輕晃動，第二次點的格子會變成新的選取格。</li>
+            <li>再點一次已選取的格子可以取消選取。</li>
+            <li><strong>三連消</strong>：兩個不能配對的格子如果再加一格就能組成三連消，會保持兩格都選取，等你點第三格。點的順序不限。能配對的兩格會先依配對消除。</li>
+            <li>盤面變長時，可以只上下滑動盤面。上方的資訊和下方的按鈕會固定不動。</li>
+        </ul>
+        <p>下方按鈕（經典、每日挑戰）：</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>復原</strong></td><td>一步一步撤回最近的操作（消除、新增數字）。不限次數</td></tr>
+            <tr><td><strong>提示</strong></td><td>點亮一條還能清空盤面的路線上的配對。不限次數</td></tr>
+            <tr><td><strong>＋ 新增</strong></td><td>把剩下的數字接到盤面末尾。按鈕上的數字是剩餘次數</td></tr>
+        </table>
+        <ul>
+            <li>提示不是隨便指出一個現在能消的配對，而是<strong>能清空盤面的路線上的配對</strong>。如果是跨列配對，還會顯示光走的路線。</li>
+            <li>需要新增數字時，<strong>＋</strong> 按鈕會出現金色邊框，並跳出<strong>「該新增數字了」</strong>提示框。</li>
+            <li>如果剩餘的新增次數已經無法清空盤面，會跳出<strong>「照這樣無法清空」</strong>視窗。點<strong>復原到能清空的位置</strong>，會一次退回到還能清空的位置（視窗裡會顯示要復原幾步），並在那裡點亮下一個配對。也可以選<strong>從頭再來</strong>或<strong>換一盤</strong>（僅經典），或點<strong>繼續玩</strong>只關閉視窗。</li>
+            <li>遇到計算太久的盤面時，會改為提示一個現在就能消除的配對。</li>
+        </ul>
+        <p>上方列右側的<strong>重新開始</strong>（↻）按鈕：</p>
+        <table class="info-table">
+            <tr><th>選項</th><th>內容</th></tr>
+            <tr><td><strong>這一盤從頭開始</strong></td><td>把盤面恢復到最初的樣子重新開始。經典模式的用時和提示也會重新計算，每日挑戰則繼續累計當天的用時和提示</td></tr>
+            <tr><td><strong>換一盤</strong>（僅經典）</td><td>放棄這一盤，換同一尺寸的另一盤。放棄的盤面不算成功</td></tr>
+        </table>
+        <h3>卡住的盤面</h3>
+        <p>沒有可以消除的數字、新增次數也用完時，會出現<strong>「新增次數已用完」</strong>面板。這次算作失敗，不能復原。可以<strong>從頭再來</strong>，或是<strong>換一盤</strong>。每日挑戰沒有<strong>換一盤</strong>，而是<strong>放棄</strong>。卡住之前點<strong>提示</strong>，即使已經無法清空的盤面，也能退回到還能清空的位置。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 模式</h2>
+        <h3>經典 — 不限時</h3>
+        <ul>
+            <li>在主畫面的經典卡片上選擇盤面尺寸（<strong>5×4 · 7×4 · 9×4</strong>，以及每次多一列的 <strong>9×5～9×12</strong>，共 11 種），然後點<strong>開始</strong>。如果有已經消除過數字的盤面，按鈕會變成<strong>繼續</strong>。</li>
+            <li>一開始只開放 5×4。<strong>在最大的盤面上成功一定局數後，就會解鎖下一個尺寸</strong>（5×4 成功 3 局、7×4 成功 5 局、9×4 成功 8 局、9×5 成功 10 局、9×6 成功 7 局、9×7 成功 6 局、9×8 和 9×9 成功 5 局、9×10 和 9×11 成功 4 局）。大盤面一局較長，所以需要的局數較少。新解鎖的尺寸會標上 <strong>NEW</strong>。</li>
+            <li>在同一尺寸上成功得越多，出現的盤面會慢慢變難。</li>
+            <li>卡片上的盤面預覽用「?」遮住數字，只顯示盤面的形狀。</li>
+            <li>遊玩時不顯示時間。用時會在結果中顯示，每個尺寸都會保存最佳用時。</li>
+            <li>進行中的盤面會自動儲存。離開後再回來，可以依尺寸繼續。如果一個數字都沒消除就離開，盤面會回到最初的樣子（新增次數、用時和提示也重新計算）。</li>
+        </ul>
+        <h3>極速 — 盤面越來越大的 90 秒</h3>
+        <ul>
+            <li>開始前會倒數 <strong>3 · 2 · 1</strong>。總是從 5×4 的盤面開始。</li>
+            <li>清空盤面就能<strong>增加時間</strong>（該盤面的格數 × 0.5 秒，例如 9×4 加 18 秒），<strong>下一盤會大一級</strong>（5×4 → 7×4 → 9×4 → 9×5 → 9×6）。</li>
+            <li>新增數字不限次數，沒有提示和復原。</li>
+            <li><strong>分數</strong>：配對 10 分，三連消 30 分，每消失一列 30 分，清空盤面得關卡 × 100 分</li>
+            <li>最後 10 秒時間會變紅，並發出讀秒聲。暫時離開應用程式會暫停，回來後點<strong>繼續</strong>就會接著進行。</li>
+        </ul>
+        <h3>每日挑戰 — 今日盤面</h3>
+        <ul>
+            <li>每天一個 9×4 的盤面。<strong>全世界的人在同一天玩同一個盤面</strong>（以裝置日期為準）。</li>
+            <li>不限時，上方會顯示目前用掉的時間。可以使用提示，但會記在結果裡。</li>
+            <li>當天之內離開再回來，可以繼續玩。即使選擇<strong>這一盤從頭開始</strong>，用時和提示也會繼續累計。如果一個數字都沒消除就離開，盤面會回到最初的樣子，用時和提示繼續累計。</li>
+            <li>在卡住的盤面上可以<strong>從頭再來</strong>（用時和提示會繼續累計），或點<strong>放棄</strong>。放棄會再確認一次，當天就記為失敗（❌）。</li>
+            <li>每清空一天的盤面，連續紀錄就會延續。放棄的那天會中斷連續紀錄。</li>
+            <li>在結果畫面點<strong>分享</strong>可以傳送結果。例如：</li>
+        </ul>
+        <pre class="share-example">Tenmates 每日挑戰 #12 ✅ 4:12
+新增 1 · 提示 0
+🔥 連續5天</pre>
+        <p>✅ 表示清空了盤面（放棄則是 ❌），旁邊是用時。第二行是使用的新增和提示次數，第三行是連續紀錄（兩天以上才顯示）。<strong>#12</strong> 是每日挑戰的編號：發布日是 #1，每天加一，編號相同就是同一個盤面。結果畫面會顯示距離下次每日挑戰的時間。新的每日挑戰在裝置時間的午夜開放。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 紀錄</h2>
+        <p>從主畫面右上角的<strong>獎盃</strong>按鈕打開。按鈕上顯示成功局數。</p>
+        <ul>
+            <li><strong>成功局數</strong>：用大字顯示在經典和每日挑戰中清空的盤面數。</li>
+            <li><strong>經典</strong>：各尺寸的成功局數和最佳用時。未解鎖的尺寸顯示「未解鎖」。</li>
+            <li><strong>極速</strong>：最高分、最遠關卡、遊戲局數</li>
+            <li><strong>每日挑戰</strong>：連續、最長連續、成功天數。日曆上會標出成功的日子（薄荷綠）和放棄的日子（珊瑚色邊框）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 設定</h2>
+        <p>點主畫面右上角的<strong>齒輪</strong>打開。遊戲中，可以用上方列右側的調整按鈕直接變更聲音、震動、特效和大號數字。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>音效</td><td>開關選取和消除數字時的聲音。連續消除配對時，聲音會一點一點升高</td></tr>
+            <tr><td>震動</td><td>開關選取和消除數字時的震動</td></tr>
+            <tr><td>減少特效</td><td>一次減少所有特效（消除動畫變短，沒有移動）。開啟時，下面的特效開關會顯示為關閉並變淡。也會遵循裝置的「移除動畫」設定</td></tr>
+            <tr><td>特效開關</td><td>在「減少特效」下面分別開關每種特效：<strong>晃動</strong>（消除一列時盤面「咚」地下沉、旁邊的格子彈起、不是配對的格子晃動）、<strong>閃光</strong>（閃光、光芒、閃爍，提示的閃動）、<strong>碎片與彩紙</strong>、<strong>連擊與稱讚文字</strong>、<strong>動畫</strong>（兩個數字靠攏相遇、一列被掃走的動畫；關閉後會在原地短暫消失）。如果晃動或閃光讓你不舒服，只關閉那一項就好</td></tr>
+            <tr><td>大號數字</td><td>放大顯示盤面上的數字。其他文字的大小跟隨裝置的字型大小設定</td></tr>
+            <tr><td>玩法</td><td>再看一次首次引導</td></tr>
+            <tr><td>語言</td><td>跟隨系統，或直接選擇</td></tr>
+            <tr><td>隱私權選項</td><td>重新打開廣告同意視窗。只在需要徵得同意的地區（如歐洲）顯示</td></tr>
+            <tr><td>關於</td><td>版本、本說明、隱私權政策、開放原始碼授權</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 廣告與紀錄的保存</h2>
+        <ul>
+            <li>畫面最下方有一條橫幅廣告。在極速模式遊玩期間和首次引導中會撤下廣告，只保留位置。</li>
+            <li>紀錄和設定儲存在裝置裡。如果開啟了裝置的 Google 備份，紀錄會一起備份，換裝置後也能繼續玩。刪除應用程式後，裝置上的紀錄也會刪除。</li>
+            <li>詳情請參閱<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 聯絡我們</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
