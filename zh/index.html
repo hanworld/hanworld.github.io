@@ -6,12 +6,24 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <title>Willee Project</title>
+    <meta name="description" content="Willee Project 致力于开发以用户为中心的移动应用：Twenty Four Hours、Good Timer、塔罗哟、棋盘游戏、Nums to One、Tenmates。">
+    <meta name="theme-color" content="#122847">
     <link rel="canonical" href="https://willee.net/zh/">
     <link rel="alternate" hreflang="ko" href="https://willee.net/ko/">
     <link rel="alternate" hreflang="en" href="https://willee.net/en/">
     <link rel="alternate" hreflang="ja" href="https://willee.net/ja/">
     <link rel="alternate" hreflang="zh" href="https://willee.net/zh/">
     <link rel="alternate" hreflang="x-default" href="https://willee.net/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Willee Project">
+    <meta property="og:description" content="Willee Project 致力于开发以用户为中心的移动应用：Twenty Four Hours、Good Timer、塔罗哟、棋盘游戏、Nums to One、Tenmates。">
+    <meta property="og:url" content="https://willee.net/zh/">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         /* Willee Project 调色板
            薄荷色: #2EC4B6 | 深薄荷色: #1D7A5F | 海军蓝: #1A365D
@@ -33,10 +45,15 @@
         section p, section ul { margin-bottom: 12px; }
         section ul { padding-left: 20px; }
 
-        .app-list { list-style: none; padding: 0; }
-        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
-        .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
-        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
+        .app-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        @media (max-width: 640px) { .app-list { grid-template-columns: 1fr; } }
+        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .app-head { display: flex; align-items: center; gap: 14px; }
+        .app-head:hover { text-decoration: none; }
+        .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
+        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h3 { color: #1D7A5F; }
+        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
 
@@ -50,9 +67,9 @@
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
 
-        .contact-info { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; }
-        .contact-info p { margin-bottom: 8px; }
-        .contact-info p:last-child { margin-bottom: 0; }
+        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
+        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
+        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -67,6 +84,7 @@
         .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
         .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
     </style>
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
 
@@ -123,53 +141,53 @@
     <div class="container">
         <h2>应用服务</h2>
         <ul class="app-list">
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/twenty-four-hours/images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/twenty-four-hours/zh.html">Twenty Four Hours</a></h3>
-                    <p>一款将24小时模拟/数字时钟与日程管理相结合的应用。具有统计仪表板、云同步和多语言支持功能。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/twenty-four-hours/zh.html">
+                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Twenty Four Hours</h3>
+                </a>
+                <p>一款将24小时模拟/数字时钟与日程管理相结合的应用。具有统计仪表板、云同步和多语言支持功能。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/good-timer/images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/good-timer/zh.html">Good Timer</a></h3>
-                    <p>提供可自由配置的间隔计时器和支持分段记录的秒表的通用计时器应用。支持预设、记录/统计和云同步。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/good-timer/zh.html">
+                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Good Timer</h3>
+                </a>
+                <p>提供可自由配置的间隔计时器和支持分段记录的秒表的通用计时器应用。支持预设、记录/统计和云同步。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tarotyo/images/app_icon.png" alt="塔罗哟" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tarotyo/zh.html">塔罗哟</a></h3>
-                    <p>抽取 78 张塔罗牌，并生成可供 AI 聊天工具解读的提示词的塔罗解读应用。5 种牌阵、卡牌浏览、多语言支持。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tarotyo/zh.html">
+                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>塔罗哟</h3>
+                </a>
+                <p>抽取 78 张塔罗牌，并生成可供 AI 聊天工具解读的提示词的塔罗解读应用。5 种牌阵、卡牌浏览、多语言支持。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/board-games/images/app_icon.png" alt="棋盘游戏" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/board-games/zh.html">棋盘游戏</a></h3>
-                    <p>将五子棋、黑白棋、西洋跳棋、西洋双陆棋、四子棋、点格棋、井字棋等七款棋盘游戏装进一个应用的游戏合集。AI 对战（三档难度）与本地双人对战，支持离线、多语言。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/board-games/zh.html">
+                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>棋盘游戏</h3>
+                </a>
+                <p>将五子棋、黑白棋、西洋跳棋、西洋双陆棋、四子棋、点格棋、井字棋等七款棋盘游戏装进一个应用的游戏合集。AI 对战（三档难度）与本地双人对战，支持离线、多语言。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/nums-to-one/images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/nums-to-one/zh.html">Nums to One</a></h3>
-                    <p>用加减乘除把 4 张数字卡片凑成 24 的数字益智游戏。经典、极速（60 秒）、每日挑战（每天 3 题）三种模式，分步提示，支持离线、多语言。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/nums-to-one/zh.html">
+                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Nums to One</h3>
+                </a>
+                <p>用加减乘除把 4 张数字卡片凑成 24 的数字益智游戏。经典、极速（60 秒）、每日挑战（每天 3 题）三种模式，分步提示，支持离线、多语言。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tenmates/images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tenmates/zh.html">Tenmates</a></h3>
-                    <p>消除相同或相加为 10 的数字、清空盘面的数字益智游戏。经典、极速（90 秒）、每日挑战（每天一盘）三种模式，会往前看的提示，支持离线、多语言。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tenmates/zh.html">
+                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Tenmates</h3>
+                </a>
+                <p>消除相同或相加为 10 的数字、清空盘面的数字益智游戏。经典、极速（90 秒）、每日挑战（每天一盘）三种模式，会往前看的提示，支持离线、多语言。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
         </ul>
     </div>
@@ -178,11 +196,12 @@
 <section id="support">
     <div class="container">
         <h2>客户支持</h2>
-        <div class="support-box">
-            <p><strong>联系方式:</strong> 电子邮件 (<a href="mailto:hanworld@willee.net">hanworld@willee.net</a>)</p>
+        <div class="support-box" id="contact">
+            <p><strong>电子邮件:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>响应时间:</strong> 1-3个工作日内</p>
+            <p><strong>组织名称:</strong> Willee Project</p>
             <p><strong>应用支持页面:</strong></p>
-            <ul style="padding-left:20px; margin-top:4px;">
+            <ul class="support-links">
                 <li><a href="/apps/twenty-four-hours/zh.html">Twenty Four Hours</a></li>
                 <li><a href="/apps/good-timer/zh.html">Good Timer</a></li>
                 <li><a href="/apps/tarotyo/zh.html">塔罗哟</a></li>
@@ -190,17 +209,6 @@
                 <li><a href="/apps/nums-to-one/zh.html">Nums to One</a></li>
                 <li><a href="/apps/tenmates/zh.html">Tenmates</a></li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>联系我们</h2>
-        <div class="contact-info">
-            <p><strong>组织名称:</strong> Willee Project</p>
-            <p><strong>电子邮件:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
-            <p><strong>网站:</strong> <a href="https://willee.net">https://willee.net</a></p>
         </div>
     </div>
 </section>

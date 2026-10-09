@@ -8,6 +8,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ```
 /
 ├── index.html              # 루트 (브라우저 언어 감지 후 리다이렉트)
+├── css/
+│   └── common.css          # 모든 페이지 공통 스타일 (아래 '공통 스타일·검색 정보')
 ├── ko/                     # 한국어
 │   ├── index.html
 │   ├── privacy.html
@@ -139,8 +141,11 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │           └── app_icon.png
 └── images/
     ├── favicon.ico
-    └── apple-touch-icon.png
+    ├── apple-touch-icon.png
+    └── og_image.png        # 공유 미리보기 그림 (메인·회사 방침/약관)
 ```
+
+앱 `images/`의 `app_icon.png`는 원본이라 페이지에서 쓰지 않는다. 화면에는 `app_icon.webp`(300px)를 쓴다.
 
 ## 다국어 지원
 - 한국어 (ko) - 기본
@@ -211,8 +216,29 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 원본 문서: 앱 저장소(A30.Tenmates) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/tenmates/{manual,privacy}/{언어}.html`을 열므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **경쟁작 게임 이름 표기 금지**: Number Match·넘버 매치·ナンバーマッチ, Take Ten, Ten Pair, Ten Match 등 다른 회사 게임 이름을 쓰지 않음(앱 저장소 `listing.md` 규칙)
 
+## 공통 스타일·검색 정보 (2026-10-09)
+- **공통 스타일:** 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
+- **`<head>` 틀:**
+  - `<title>` 바로 다음에 `<meta name="description">`과 `<meta name="theme-color" content="#122847">`를 둔다.
+  - hreflang 목록 다음에는 공유 미리보기 태그를 둔다: `og:type`, `og:site_name`(ko는 윌리 프로젝트), `og:title`(=title), `og:description`(=description), `og:url`(=canonical), `og:image`(+width·height), `og:locale`, `twitter:card`.
+  - 새 페이지도 같은 틀로 만든다.
+- **설명 문구:**
+  - 소개 페이지는 overview 첫 문장(들)을 쓴다.
+  - 설명서는 "제목 — 앱 정보 첫 문장"으로 쓴다.
+  - 방침은 언어별 정형 문구를 쓴다.
+  - 메인은 앱 이름을 나열한다. **새 앱을 추가하면 메인 4개 언어 description에 앱 이름도 넣는다.**
+- **공유 그림:**
+  - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
+  - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
+  - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
+- **이미지:**
+  - 스크린샷과 배너는 WebP로 둔다.
+  - 스크린샷 `<img>`에는 원본 크기 `width`·`height`와 `loading="lazy" decoding="async"`를 넣는다.
+  - 머리글 배너에는 `width`·`height`만 넣는다.
+
 ## 페이지 공통 요소
-- **Breadcrumb**: 언어 선택 포함, sticky 상단 고정
+- **Breadcrumb**: 언어 선택 포함, sticky 상단 고정. 폰에서는 홈 링크를 집 아이콘만 남기고, 설명서·방침은 현재 페이지 이름(머리글에 크게 있음)을 뺀다(`common.css`)
 - **Footer**:
   - Copyright (2026)
   - 사업자등록번호 / 통신판매업 신고번호

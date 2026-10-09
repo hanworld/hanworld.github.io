@@ -6,12 +6,24 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <title>Willee Project</title>
+    <meta name="description" content="Willee Projectはユーザー中心のモバイルアプリを開発しています。Twenty Four Hours、Good Timer、タロヨ、ボードゲーム、Nums to One、Tenmatesをご紹介します。">
+    <meta name="theme-color" content="#122847">
     <link rel="canonical" href="https://willee.net/ja/">
     <link rel="alternate" hreflang="ko" href="https://willee.net/ko/">
     <link rel="alternate" hreflang="en" href="https://willee.net/en/">
     <link rel="alternate" hreflang="ja" href="https://willee.net/ja/">
     <link rel="alternate" hreflang="zh" href="https://willee.net/zh/">
     <link rel="alternate" hreflang="x-default" href="https://willee.net/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Willee Project">
+    <meta property="og:description" content="Willee Projectはユーザー中心のモバイルアプリを開発しています。Twenty Four Hours、Good Timer、タロヨ、ボードゲーム、Nums to One、Tenmatesをご紹介します。">
+    <meta property="og:url" content="https://willee.net/ja/">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         /* Willee Project カラーパレット
            ミント: #2EC4B6 | ダークミント: #1D7A5F | ネイビー: #1A365D
@@ -33,10 +45,15 @@
         section p, section ul { margin-bottom: 12px; }
         section ul { padding-left: 20px; }
 
-        .app-list { list-style: none; padding: 0; }
-        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
-        .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
-        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
+        .app-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        @media (max-width: 640px) { .app-list { grid-template-columns: 1fr; } }
+        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .app-head { display: flex; align-items: center; gap: 14px; }
+        .app-head:hover { text-decoration: none; }
+        .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
+        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h3 { color: #1D7A5F; }
+        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
 
@@ -50,9 +67,9 @@
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
 
-        .contact-info { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; }
-        .contact-info p { margin-bottom: 8px; }
-        .contact-info p:last-child { margin-bottom: 0; }
+        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
+        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
+        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -67,6 +84,7 @@
         .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
         .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
     </style>
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
 
@@ -123,53 +141,53 @@
     <div class="container">
         <h2>アプリサービス</h2>
         <ul class="app-list">
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/twenty-four-hours/images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/twenty-four-hours/ja.html">Twenty Four Hours</a></h3>
-                    <p>24時間アナログ/デジタル時計とスケジュール管理を組み合わせたアプリ。統計ダッシュボード、クラウド同期、多言語対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/twenty-four-hours/ja.html">
+                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Twenty Four Hours</h3>
+                </a>
+                <p>24時間アナログ/デジタル時計とスケジュール管理を組み合わせたアプリ。統計ダッシュボード、クラウド同期、多言語対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/good-timer/images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/good-timer/ja.html">Good Timer</a></h3>
-                    <p>自由に設定できるインターバルタイマーとラップ記録が可能なストップウォッチを備えた汎用タイマーアプリ。プリセット、履歴/統計、クラウド同期対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/good-timer/ja.html">
+                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Good Timer</h3>
+                </a>
+                <p>自由に設定できるインターバルタイマーとラップ記録が可能なストップウォッチを備えた汎用タイマーアプリ。プリセット、履歴/統計、クラウド同期対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tarotyo/images/app_icon.png" alt="タロヨ" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tarotyo/ja.html">タロヨ</a></h3>
-                    <p>タロットカード78枚を引き、AIチャットが解釈できるプロンプトを作成するタロットリーディングアプリ。5種類のスプレッド、カード一覧、多言語対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tarotyo/ja.html">
+                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>タロヨ</h3>
+                </a>
+                <p>タロットカード78枚を引き、AIチャットが解釈できるプロンプトを作成するタロットリーディングアプリ。5種類のスプレッド、カード一覧、多言語対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/board-games/images/app_icon.png" alt="ボードゲーム" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/board-games/ja.html">ボードゲーム</a></h3>
-                    <p>五目並べ・リバーシ・チェッカー・バックギャモン・四目並べ・ドット＆ボックス・三目並べなど7つのボードゲームを一つのアプリに。AI対戦(3段階の難易度)とローカル2人対戦、オフライン対応、多言語対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/board-games/ja.html">
+                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>ボードゲーム</h3>
+                </a>
+                <p>五目並べ・リバーシ・チェッカー・バックギャモン・四目並べ・ドット＆ボックス・三目並べなど7つのボードゲームを一つのアプリに。AI対戦(3段階の難易度)とローカル2人対戦、オフライン対応、多言語対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/nums-to-one/images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/nums-to-one/ja.html">Nums to One</a></h3>
-                    <p>4枚の数字カードを四則演算で合わせて24を作る数字パズル。クラシック・ラッシュ(60秒)・デイリー(毎日3問)の3つのモード、段階的なヒント、オフライン対応、多言語対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/nums-to-one/ja.html">
+                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Nums to One</h3>
+                </a>
+                <p>4枚の数字カードを四則演算で合わせて24を作る数字パズル。クラシック・ラッシュ(60秒)・デイリー(毎日3問)の3つのモード、段階的なヒント、オフライン対応、多言語対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tenmates/images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tenmates/ja.html">Tenmates</a></h3>
-                    <p>同じ数字か合計10のペアを消して盤面を空にする数字パズル。クラシック・ラッシュ(90秒)・デイリー(毎日1面)の3つのモード、先を読むヒント、オフライン対応、多言語対応。</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tenmates/ja.html">
+                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Tenmates</h3>
+                </a>
+                <p>同じ数字か合計10のペアを消して盤面を空にする数字パズル。クラシック・ラッシュ(90秒)・デイリー(毎日1面)の3つのモード、先を読むヒント、オフライン対応、多言語対応。</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
         </ul>
     </div>
@@ -178,11 +196,12 @@
 <section id="support">
     <div class="container">
         <h2>カスタマーサポート</h2>
-        <div class="support-box">
-            <p><strong>お問い合わせ方法:</strong> メール (<a href="mailto:hanworld@willee.net">hanworld@willee.net</a>)</p>
+        <div class="support-box" id="contact">
+            <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>返信時間:</strong> 営業日1〜3日以内</p>
+            <p><strong>組織名:</strong> Willee Project</p>
             <p><strong>アプリ別サポートページ:</strong></p>
-            <ul style="padding-left:20px; margin-top:4px;">
+            <ul class="support-links">
                 <li><a href="/apps/twenty-four-hours/ja.html">Twenty Four Hours</a></li>
                 <li><a href="/apps/good-timer/ja.html">Good Timer</a></li>
                 <li><a href="/apps/tarotyo/ja.html">タロヨ</a></li>
@@ -190,17 +209,6 @@
                 <li><a href="/apps/nums-to-one/ja.html">Nums to One</a></li>
                 <li><a href="/apps/tenmates/ja.html">Tenmates</a></li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>お問い合わせ</h2>
-        <div class="contact-info">
-            <p><strong>組織名:</strong> Willee Project</p>
-            <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
-            <p><strong>ウェブサイト:</strong> <a href="https://willee.net">https://willee.net</a></p>
         </div>
     </div>
 </section>

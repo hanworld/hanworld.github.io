@@ -6,12 +6,24 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <title>Willee Project</title>
+    <meta name="description" content="Willee Project builds user-centered mobile apps: Twenty Four Hours, Good Timer, TarotYo, Board Games, Nums to One and Tenmates, with guides and support.">
+    <meta name="theme-color" content="#122847">
     <link rel="canonical" href="https://willee.net/en/">
     <link rel="alternate" hreflang="ko" href="https://willee.net/ko/">
     <link rel="alternate" hreflang="en" href="https://willee.net/en/">
     <link rel="alternate" hreflang="ja" href="https://willee.net/ja/">
     <link rel="alternate" hreflang="zh" href="https://willee.net/zh/">
     <link rel="alternate" hreflang="x-default" href="https://willee.net/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Willee Project">
+    <meta property="og:description" content="Willee Project builds user-centered mobile apps: Twenty Four Hours, Good Timer, TarotYo, Board Games, Nums to One and Tenmates, with guides and support.">
+    <meta property="og:url" content="https://willee.net/en/">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         /* Willee Project Color Palette
            Mint: #2EC4B6 | Dark Mint: #1D7A5F | Navy: #1A365D
@@ -33,10 +45,15 @@
         section p, section ul { margin-bottom: 12px; }
         section ul { padding-left: 20px; }
 
-        .app-list { list-style: none; padding: 0; }
-        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
-        .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
-        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
+        .app-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        @media (max-width: 640px) { .app-list { grid-template-columns: 1fr; } }
+        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .app-head { display: flex; align-items: center; gap: 14px; }
+        .app-head:hover { text-decoration: none; }
+        .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
+        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h3 { color: #1D7A5F; }
+        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
 
@@ -50,9 +67,9 @@
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
 
-        .contact-info { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; }
-        .contact-info p { margin-bottom: 8px; }
-        .contact-info p:last-child { margin-bottom: 0; }
+        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
+        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
+        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -67,6 +84,7 @@
         .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
         .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
     </style>
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
 
@@ -123,53 +141,53 @@
     <div class="container">
         <h2>App Services</h2>
         <ul class="app-list">
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/twenty-four-hours/images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/twenty-four-hours/en.html">Twenty Four Hours</a></h3>
-                    <p>An app combining 24-hour analog/digital clock with schedule management. Features statistics dashboard, cloud sync, and multi-language support.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/twenty-four-hours/en.html">
+                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Twenty Four Hours</h3>
+                </a>
+                <p>An app combining 24-hour analog/digital clock with schedule management. Features statistics dashboard, cloud sync, and multi-language support.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/good-timer/images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/good-timer/en.html">Good Timer</a></h3>
-                    <p>A versatile timer app with customizable interval timer and stopwatch with lap recording. Features presets, history/statistics, and cloud sync.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/good-timer/en.html">
+                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Good Timer</h3>
+                </a>
+                <p>A versatile timer app with customizable interval timer and stopwatch with lap recording. Features presets, history/statistics, and cloud sync.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tarotyo/images/app_icon.png" alt="TarotYo" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tarotyo/en.html">TarotYo</a></h3>
-                    <p>A tarot reading app that draws from the 78 tarot cards and creates prompts an AI chatbot can interpret. Five spreads, card browsing, and multilingual support.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tarotyo/en.html">
+                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>TarotYo</h3>
+                </a>
+                <p>A tarot reading app that draws from the 78 tarot cards and creates prompts an AI chatbot can interpret. Five spreads, card browsing, and multilingual support.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/board-games/images/app_icon.png" alt="Board Games" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/board-games/en.html">Board Games</a></h3>
-                    <p>A collection of seven board games in one app — Gomoku, Reversi, Checkers, Backgammon, Four in a Row, Dots and Boxes, and Tic-Tac-Toe. Play vs AI (three difficulties) or a friend on one device, offline, with multilingual support.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/board-games/en.html">
+                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Board Games</h3>
+                </a>
+                <p>A collection of seven board games in one app — Gomoku, Reversi, Checkers, Backgammon, Four in a Row, Dots and Boxes, and Tic-Tac-Toe. Play vs AI (three difficulties) or a friend on one device, offline, with multilingual support.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/nums-to-one/images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/nums-to-one/en.html">Nums to One</a></h3>
-                    <p>A number puzzle: merge four number cards with + − × ÷ to make 24. Three modes — Classic, Rush (60 seconds) and Daily (three puzzles a day) — with step-by-step hints, offline play and multilingual support.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/nums-to-one/en.html">
+                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Nums to One</h3>
+                </a>
+                <p>A number puzzle: merge four number cards with + − × ÷ to make 24. Three modes — Classic, Rush (60 seconds) and Daily (three puzzles a day) — with step-by-step hints, offline play and multilingual support.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tenmates/images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tenmates/en.html">Tenmates</a></h3>
-                    <p>A number puzzle: clear pairs that are equal or add up to 10 to empty the board. Three modes — Classic, Rush (90 seconds) and Daily (one board a day) — with hints that think ahead, offline play and multilingual support.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tenmates/en.html">
+                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Tenmates</h3>
+                </a>
+                <p>A number puzzle: clear pairs that are equal or add up to 10 to empty the board. Three modes — Classic, Rush (90 seconds) and Daily (one board a day) — with hints that think ahead, offline play and multilingual support.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
         </ul>
     </div>
@@ -178,11 +196,12 @@
 <section id="support">
     <div class="container">
         <h2>Customer Support</h2>
-        <div class="support-box">
-            <p><strong>Contact Method:</strong> Email (<a href="mailto:hanworld@willee.net">hanworld@willee.net</a>)</p>
+        <div class="support-box" id="contact">
+            <p><strong>Email:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>Response Time:</strong> Within 1-3 business days</p>
+            <p><strong>Organization:</strong> Willee Project</p>
             <p><strong>App Support Pages:</strong></p>
-            <ul style="padding-left:20px; margin-top:4px;">
+            <ul class="support-links">
                 <li><a href="/apps/twenty-four-hours/en.html">Twenty Four Hours</a></li>
                 <li><a href="/apps/good-timer/en.html">Good Timer</a></li>
                 <li><a href="/apps/tarotyo/en.html">TarotYo</a></li>
@@ -190,17 +209,6 @@
                 <li><a href="/apps/nums-to-one/en.html">Nums to One</a></li>
                 <li><a href="/apps/tenmates/en.html">Tenmates</a></li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p><strong>Organization:</strong> Willee Project</p>
-            <p><strong>Email:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
-            <p><strong>Website:</strong> <a href="https://willee.net">https://willee.net</a></p>
         </div>
     </div>
 </section>

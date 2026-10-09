@@ -6,12 +6,24 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <title>윌리 프로젝트</title>
+    <meta name="description" content="윌리 프로젝트는 사용자 중심의 모바일 앱을 만듭니다. Twenty Four Hours, Good Timer, 타로요, 보드게임, Nums to One, Tenmates를 소개합니다.">
+    <meta name="theme-color" content="#122847">
     <link rel="canonical" href="https://willee.net/ko/">
     <link rel="alternate" hreflang="ko" href="https://willee.net/ko/">
     <link rel="alternate" hreflang="en" href="https://willee.net/en/">
     <link rel="alternate" hreflang="ja" href="https://willee.net/ja/">
     <link rel="alternate" hreflang="zh" href="https://willee.net/zh/">
     <link rel="alternate" hreflang="x-default" href="https://willee.net/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="윌리 프로젝트">
+    <meta property="og:description" content="윌리 프로젝트는 사용자 중심의 모바일 앱을 만듭니다. Twenty Four Hours, Good Timer, 타로요, 보드게임, Nums to One, Tenmates를 소개합니다.">
+    <meta property="og:url" content="https://willee.net/ko/">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         /* 윌리 프로젝트 색상 팔레트
            민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
@@ -33,10 +45,15 @@
         section p, section ul { margin-bottom: 12px; }
         section ul { padding-left: 20px; }
 
-        .app-list { list-style: none; padding: 0; }
-        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
-        .app-list li h3 { font-size: 1.1rem; margin-bottom: 4px; color: #1A365D; }
-        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; }
+        .app-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        @media (max-width: 640px) { .app-list { grid-template-columns: 1fr; } }
+        .app-list li { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .app-head { display: flex; align-items: center; gap: 14px; }
+        .app-head:hover { text-decoration: none; }
+        .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
+        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h3 { color: #1D7A5F; }
+        .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
 
@@ -50,9 +67,9 @@
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
 
-        .contact-info { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; }
-        .contact-info p { margin-bottom: 8px; }
-        .contact-info p:last-child { margin-bottom: 0; }
+        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
+        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
+        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -67,6 +84,7 @@
         .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
         .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
     </style>
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
 
@@ -88,7 +106,7 @@
             <img src="../images/willee_project_logo.svg" alt="윌리 프로젝트 로고" style="height:5.5rem;">
             <div style="text-align:left;">
                 <h1>윌리 프로젝트</h1>
-                <p>Willee Project</p>
+                <p>더 나은 앱을 만듭니다</p>
             </div>
         </div>
     </div>
@@ -123,53 +141,53 @@
     <div class="container">
         <h2>앱 서비스</h2>
         <ul class="app-list">
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/twenty-four-hours/images/app_icon.png" alt="Twenty Four Hours" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/twenty-four-hours/ko.html">Twenty Four Hours</a></h3>
-                    <p>24시간 아날로그/디지털 시계와 일정 관리를 결합한 앱. 통계 대시보드, 클라우드 동기화, 다국어 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/twenty-four-hours/ko.html">
+                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Twenty Four Hours</h3>
+                </a>
+                <p>24시간 아날로그/디지털 시계와 일정 관리를 결합한 앱. 통계 대시보드, 클라우드 동기화, 다국어 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/good-timer/images/app_icon.png" alt="Good Timer" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/good-timer/ko.html">Good Timer</a></h3>
-                    <p>자유롭게 구성할 수 있는 인터벌 타이머와 랩 기록이 가능한 스톱워치를 제공하는 범용 타이머 앱. 프리셋, 기록/통계, 클라우드 동기화 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/good-timer/ko.html">
+                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Good Timer</h3>
+                </a>
+                <p>자유롭게 구성할 수 있는 인터벌 타이머와 랩 기록이 가능한 스톱워치를 제공하는 범용 타이머 앱. 프리셋, 기록/통계, 클라우드 동기화 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tarotyo/images/app_icon.png" alt="타로요" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tarotyo/ko.html">타로요</a></h3>
-                    <p>타로 카드 78장을 뽑아 AI 챗봇이 해석할 수 있는 프롬프트를 만들어 주는 타로 리딩 앱. 5가지 스프레드, 카드 구경, 다국어 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tarotyo/ko.html">
+                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>타로요</h3>
+                </a>
+                <p>타로 카드 78장을 뽑아 AI 챗봇이 해석할 수 있는 프롬프트를 만들어 주는 타로 리딩 앱. 5가지 스프레드, 카드 구경, 다국어 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/board-games/images/app_icon.png" alt="보드게임" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/board-games/ko.html">보드게임</a></h3>
-                    <p>오목·리버시·체커·백개먼·사목·점 잇기·틱택토 등 7가지 보드게임을 한 앱에 담은 게임 모음. AI 대전(3단계 난이도)과 로컬 2인 대전, 오프라인 플레이, 다국어 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/board-games/ko.html">
+                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>보드게임</h3>
+                </a>
+                <p>오목·리버시·체커·백개먼·사목·점 잇기·틱택토 등 7가지 보드게임을 한 앱에 담은 게임 모음. AI 대전(3단계 난이도)과 로컬 2인 대전, 오프라인 플레이, 다국어 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/nums-to-one/images/app_icon.png" alt="Nums to One" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/nums-to-one/ko.html">Nums to One</a></h3>
-                    <p>숫자 카드 4장을 사칙연산으로 합쳐 24를 만드는 숫자 퍼즐. 클래식·러시(60초)·데일리(매일 3문제) 세 가지 모드, 단계별 힌트, 오프라인 플레이, 다국어 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/nums-to-one/ko.html">
+                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Nums to One</h3>
+                </a>
+                <p>숫자 카드 4장을 사칙연산으로 합쳐 24를 만드는 숫자 퍼즐. 클래식·러시(60초)·데일리(매일 3문제) 세 가지 모드, 단계별 힌트, 오프라인 플레이, 다국어 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
-            <li style="display:flex; align-items:center; gap:16px;">
-                <img src="/apps/tenmates/images/app_icon.png" alt="Tenmates" style="width:60px; height:60px; border-radius:12px; flex-shrink:0;">
-                <div>
-                    <h3><a href="/apps/tenmates/ko.html">Tenmates</a></h3>
-                    <p>같은 숫자이거나 합이 10인 짝을 지워 판을 비우는 숫자 퍼즐. Classic·Rush(90초)·Daily(매일 한 판) 세 가지 모드, 앞을 내다보는 힌트, 오프라인 플레이, 다국어 지원.</p>
-                    <div style="margin-top:8px;"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-                </div>
+            <li>
+                <a class="app-head" href="/apps/tenmates/ko.html">
+                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                    <h3>Tenmates</h3>
+                </a>
+                <p>같은 숫자이거나 합이 10인 짝을 지워 판을 비우는 숫자 퍼즐. Classic·Rush(90초)·Daily(매일 한 판) 세 가지 모드, 앞을 내다보는 힌트, 오프라인 플레이, 다국어 지원.</p>
+                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
             </li>
         </ul>
     </div>
@@ -178,11 +196,12 @@
 <section id="support">
     <div class="container">
         <h2>고객 지원</h2>
-        <div class="support-box">
-            <p><strong>문의 방법:</strong> 이메일 (<a href="mailto:hanworld@willee.net">hanworld@willee.net</a>)</p>
+        <div class="support-box" id="contact">
+            <p><strong>이메일:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>응답 시간:</strong> 영업일 기준 1~3일 이내</p>
+            <p><strong>조직명:</strong> 윌리 프로젝트 (Willee Project)</p>
             <p><strong>앱별 지원 페이지:</strong></p>
-            <ul style="padding-left:20px; margin-top:4px;">
+            <ul class="support-links">
                 <li><a href="/apps/twenty-four-hours/ko.html">Twenty Four Hours</a></li>
                 <li><a href="/apps/good-timer/ko.html">Good Timer</a></li>
                 <li><a href="/apps/tarotyo/ko.html">타로요</a></li>
@@ -190,17 +209,6 @@
                 <li><a href="/apps/nums-to-one/ko.html">Nums to One</a></li>
                 <li><a href="/apps/tenmates/ko.html">Tenmates</a></li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>연락처</h2>
-        <div class="contact-info">
-            <p><strong>조직명:</strong> 윌리 프로젝트 (Willee Project)</p>
-            <p><strong>이메일:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
-            <p><strong>웹사이트:</strong> <a href="https://willee.net">https://willee.net</a></p>
         </div>
     </div>
 </section>
