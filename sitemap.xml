@@ -714,4 +714,146 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/nums-to-one/privacy/en.html"/>
   </url>
 
+  <!-- Tenmates 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/tenmates/ko.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/en.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/ja.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/zh.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/en.html"/>
+  </url>
+
+  <!-- Tenmates 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/tenmates/manual/ko.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/manual/en.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/manual/ja.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/manual/zh.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/manual/zh-Hant.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/manual/en.html"/>
+  </url>
+
+  <!-- Tenmates 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/tenmates/privacy/ko.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/privacy/en.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/privacy/ja.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/privacy/zh.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/tenmates/privacy/zh-Hant.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/tenmates/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/tenmates/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tenmates/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tenmates/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
+  </url>
+
 </urlset>
