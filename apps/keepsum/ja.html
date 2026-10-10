@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Keepsum - Willee Project</title>
+    <meta name="description" content="Keepsumは「合計」を合わせる論理パズルです。盤面の数字は、残すか消すかのどちらか。正しい数字だけを残して、すべての行と列の和を外に書かれた合計に合わせましょう。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/keepsum/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Keepsum - Willee Project">
+    <meta property="og:description" content="Keepsumは「合計」を合わせる論理パズルです。盤面の数字は、残すか消すかのどちらか。正しい数字だけを残して、すべての行と列の和を外に書かれた合計に合わせましょう。">
+    <meta property="og:url" content="https://willee.net/apps/keepsum/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/keepsum/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Keepsum</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Keepsum</h1>
+        <p>合計が合う数字だけを残そう。</p>
+        <div class="graphic-banner">
+            <img src="images/Keepsum_ja_feature.webp" alt="Keepsum — 合計が合う数字だけを残そう。行と列の和を、外の合計に合わせよう" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Keepsum アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Keepsum</h2>
+                <p>合計を合わせる数字パズル · クラシック · デイリー · ラッシュ</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Keepsumは「合計」を合わせる論理パズルです。盤面の数字は、残すか消すかのどちらか。正しい数字だけを残して、すべての行と列の和を外に書かれた合計に合わせましょう。残す数字は丸で囲み、ほかは消します。和が合った行・列にはチェックが付き、残した数字だけで合計が合ったら、合計を押してその行・列の残りをまとめて消せます。どの問題も答えはひとつだけ。当てずっぽうなしで、順に考えていけば必ず解けます。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Keepsum_ja_01_home.webp" alt="ホーム — クラシック・デイリー・ラッシュ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_02_classic_hint.webp" alt="クラシック — 理由つきのヒント" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_03_classic_result.webp" alt="クラシック — クリア(ベスト更新・新しいサイズ解放)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_04_daily.webp" alt="デイリー — プレイ中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_05_daily_result.webp" alt="デイリー — 結果画面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_06_rush.webp" alt="ラッシュ — プレイ中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_07_rush_result.webp" alt="ラッシュ — 結果(ベスト更新)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_ja_08_records.webp" alt="記録" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>3つのモード</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>クラシック</strong><span>時間制限なし。クリアするほど大きな盤面が開く(5×5〜9×9)</span></div>
+            <div class="mode-item"><strong>デイリー</strong><span>毎日新しい7×7の問題がひとつ、みんな同じ問題。連続記録とシェア</span></div>
+            <div class="mode-item"><strong>ラッシュ</strong><span>持ち時間3分。5×5の問題を1問解くごとに30秒増える</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>理由を教えるヒント</strong>
+                <span>まず見る行・列を示し、次に決めるマスと理由を教えます。答えと違うマスも見つけてくれるので、当てずっぽうではなく考え方が身につきます。</span>
+            </li>
+            <li>
+                <strong>ライフなしで、じっくり</strong>
+                <span>間違えても問題は終わりません。クラシックとデイリーのヒントと「戻す」は無料・無制限です。</span>
+            </li>
+            <li>
+                <strong>好みでオンにできる補助機能</strong>
+                <span>今の和を表示、残りを自動で消す、ミスをすぐに表示、行と列のガイド、数字を大きく。なぞって行・列をまとめて塗ることもできます。</span>
+            </li>
+            <li>
+                <strong>紙と鉛筆の手ざわり</strong>
+                <span>紙と鉛筆のような効果音、やさしい演出とバイブレーション。いらない演出だけオフにしたり、「エフェクトを減らす」でまとめて控えめにしたりできます。</span>
+            </li>
+            <li>
+                <strong>オフラインで遊べる</strong>
+                <span>会員登録もログインも不要。インターネットがなくても遊べます。</span>
+            </li>
+            <li>
+                <strong>多言語対応</strong>
+                <span>日本語・韓国語・英語・中国語(簡体字・繁体字)に対応し、端末の言語に従うか、設定で選べます。</span>
+            </li>
+            <li>
+                <strong>無料で提供</strong>
+                <span>画面下の小さなバナー広告1本で無料提供。ラッシュのプレイ中は広告を外します。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>Keepsum アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>Keepsum アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

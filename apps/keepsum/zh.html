@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Keepsum - Willee Project</title>
+    <meta name="description" content="Keepsum 是一款凑“和”的逻辑益智游戏。盘面上的每个数字不是保留就是消除。只留下对的数字，让每一行和每一列加起来都等于旁边的目标和。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/keepsum/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Keepsum - Willee Project">
+    <meta property="og:description" content="Keepsum 是一款凑“和”的逻辑益智游戏。盘面上的每个数字不是保留就是消除。只留下对的数字，让每一行和每一列加起来都等于旁边的目标和。">
+    <meta property="og:url" content="https://willee.net/apps/keepsum/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/keepsum/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Keepsum</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Keepsum</h1>
+        <p>只留下加起来刚好的数字。</p>
+        <div class="graphic-banner">
+            <img src="images/Keepsum_zh_feature.webp" alt="Keepsum — 只留下加起来刚好的数字。让每行每列的和等于目标和" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Keepsum 图标" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Keepsum</h2>
+                <p>数字求和逻辑益智游戏 · 经典 · 每日挑战 · 极速</p>
+                <div>
+                    <span class="badge">Android (即将推出)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Keepsum 是一款凑“和”的逻辑益智游戏。盘面上的每个数字不是保留就是消除。只留下对的数字，让每一行和每一列加起来都等于旁边的目标和。给要保留的数字画圈，其余的消除。凑对的行和列会打勾；只用保留的数字就已经凑够目标和时，点按目标和就能一次消除这一行（列）剩下的格子。每道题都只有一个答案，不用猜，一步步推理一定能解开。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Keepsum_zh_01_home.webp" alt="主页 — 经典·每日挑战·极速" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_02_classic_hint.webp" alt="经典 — 附带理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_03_classic_result.webp" alt="经典 — 成功（新纪录、解锁新尺寸）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_04_daily.webp" alt="每日挑战 — 游戏中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_05_daily_result.webp" alt="每日挑战 — 结果画面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_06_rush.webp" alt="极速 — 游戏中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_07_rush_result.webp" alt="极速 — 结果（新纪录）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Keepsum_zh_08_records.webp" alt="记录" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>三种模式</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>经典</strong><span>不限时。解开越多，解锁的盘面越大（5×5到9×9）</span></div>
+            <div class="mode-item"><strong>每日挑战</strong><span>每天一道新的7×7题目，所有人都一样。延续连续记录并分享</span></div>
+            <div class="mode-item"><strong>极速</strong><span>从3分钟开始，每解开一道5×5的题加30秒</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主要功能</h2>
+        <ul class="features">
+            <li>
+                <strong>会说明理由的提示</strong>
+                <span>卡住时，提示会先指出要看的一行，接着告诉你要定的格子和理由。它也会找出和答案不同的格子，让你学会推理，而不是靠猜。</span>
+            </li>
+            <li>
+                <strong>没有生命值，慢慢来</strong>
+                <span>出错也不会结束题目。经典和每日挑战的提示与撤销都免费、不限次数。</span>
+            </li>
+            <li>
+                <strong>可选的辅助功能</strong>
+                <span>显示当前的和、自动消除其余数字、立即显示错误、行列辅助线、大号数字。拖动就能一次涂满一整行或一整列。</span>
+            </li>
+            <li>
+                <strong>纸笔质感</strong>
+                <span>纸笔质感的音效、柔和的动画与振动。可以只关掉不想要的特效，也可以用“减少特效”一次全部减少。</span>
+            </li>
+            <li>
+                <strong>离线畅玩</strong>
+                <span>无需注册，无需登录，没有网络也能玩。</span>
+            </li>
+            <li>
+                <strong>多语言支持</strong>
+                <span>支持中文（简体、繁体）、英语、韩语和日语，跟随设备语言，也可在设置中选择。</span>
+            </li>
+            <li>
+                <strong>免费提供</strong>
+                <span>只有屏幕底部一条小横幅广告，极速模式游玩时会撤下。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>支持平台</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>即将推出</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>使用手册</h2>
+        <p>查看 Keepsum 应用的使用手册。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看 Keepsum 应用的隐私政策。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <p>有关应用的咨询请通过以下方式联系我们。</p>
+        <p><strong>邮箱:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>开发:</strong> <a href="/zh/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="privacy/zh.html">隐私政策</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

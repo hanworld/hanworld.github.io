@@ -856,4 +856,146 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tenmates/privacy/en.html"/>
   </url>
 
+  <!-- Keepsum 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/keepsum/ko.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/en.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/ja.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/zh.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/en.html"/>
+  </url>
+
+  <!-- Keepsum 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/keepsum/manual/ko.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/manual/en.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/manual/ja.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/manual/zh.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/manual/zh-Hant.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/manual/en.html"/>
+  </url>
+
+  <!-- Keepsum 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/keepsum/privacy/ko.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/privacy/en.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/privacy/ja.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/privacy/zh.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/keepsum/privacy/zh-Hant.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
+  </url>
+
 </urlset>
