@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Keepsum - 개인정보처리방침</title>
+    <meta name="description" content="Keepsum 앱의 개인정보처리방침입니다. 앱이 다루는 정보와 그 이용 목적, 보관과 삭제, 문의 방법을 안내합니다.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/keepsum/privacy/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/keepsum/privacy/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/keepsum/privacy/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/keepsum/privacy/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/keepsum/privacy/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/keepsum/privacy/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="Keepsum - 개인정보처리방침">
+    <meta property="og:description" content="Keepsum 앱의 개인정보처리방침입니다. 앱이 다루는 정보와 그 이용 목적, 보관과 삭제, 문의 방법을 안내합니다.">
+    <meta property="og:url" content="https://willee.net/apps/keepsum/privacy/ko.html">
+    <meta property="og:image" content="https://willee.net/apps/keepsum/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Keepsum</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>개인정보처리방침</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Keepsum" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>개인정보처리방침</h1>
+                <p>Keepsum</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026-10-10</strong></p>
+        <h2 style="margin-top:16px;">한눈에</h2>
+        <ul>
+            <li>회원가입도, 로그인도, 계정도 없습니다. 이름·이메일·전화번호를 묻지 않습니다.</li>
+            <li>개발자는 <strong>서버를 두지 않습니다.</strong> 게임 기록과 설정은 <strong>기기 안에</strong> 저장됩니다.</li>
+            <li>기기 밖으로 나가는 것은 Google 서비스 세 가지입니다.
+                <ul>
+                    <li>화면 아래 <strong>배너 광고</strong>(Google AdMob)</li>
+                    <li>앱을 고치는 데 쓰는 <strong>이용 통계</strong>(Google Analytics for Firebase)</li>
+                    <li>앱이 멈췄을 때의 <strong>오류 보고</strong>(Firebase Crashlytics)</li>
+                </ul>
+            </li>
+            <li>유럽경제지역(EEA)·영국·스위스에서는 광고를 띄우기 전에 <strong>동의를 여쭙습니다.</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 누가 처리하나</h2>
+        <table class="info-table">
+            <tr><th>개인정보 관리자</th><td>Willee Project</td></tr>
+            <tr><th>앱</th><td>Keepsum (<code>net.willee.keepsum</code>)</td></tr>
+            <tr><th>문의</th><td><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 기기 안에 저장되는 것</h2>
+        <table class="info-table">
+            <tr><th>무엇</th><th>내용</th></tr>
+            <tr><td>게임 기록</td><td>연 판 크기(새로 연 크기 표시 포함), 크기별 성공한 판 수·최고 시간·평균을 내는 시간 합계·성공한 판의 번호, 푸는 중인 판과 그 판에서 정한 칸의 순서(크기마다 하나와 그날의 Daily 하나), Rush 최고 기록(푼 판 수)·도전 횟수, Daily 결과(푼 날·쓴 시간·힌트 수)와 연속 기록, 홈에서 마지막으로 고른 판 크기, 첫 실행 안내를 마쳤는지</td></tr>
+            <tr><td>설정</td><td>효과음·진동·효과 줄이기·효과마다 켜고 끄기, 판 설정(큰 숫자·실수 바로 보기·현재 합 보기·나머지 자동 지우기·가로·세로줄 표시), 언어</td></tr>
+        </table>
+        <p>이 정보는 개발자에게 전송되지 않습니다. 앱을 지우면 함께 사라집니다.</p>
+        <p><strong>기기 백업.</strong> 기기의 Google 백업(Android 자동 백업)을 켜 두셨다면 위 기록과 설정이 그 백업에 함께 들어가, 기기를 바꾸거나 앱을 다시 설치할 때 되살아납니다. 백업은 이용자의 Google 계정에 저장되며 개발자는 볼 수 없습니다. 원하지 않으시면 Android 설정의 백업 메뉴에서 끄실 수 있습니다.</p>
+        <p>이와 별도로 광고 SDK와 Firebase가 동의 기록(유럽 지역의 동의 결과 등)과 아래 표의 식별자를 기기에 저장합니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 이용 통계와 오류 보고 (Firebase)</h2>
+        <p>앱을 고치는 데 필요한 만큼만 받습니다. <strong>이름·이메일 같은 개인정보는 없고</strong>, 개발자는 아래 정보를 Firebase 콘솔에서 통계로 봅니다.</p>
+        <h3>이용 통계 — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>예</th><th>무엇에 쓰나</th></tr>
+            <tr><td>앱 인스턴스 ID</td><td>앱을 설치할 때 만들어지는 무작위 ID</td><td>같은 기기가 다음 날 다시 왔는지(재방문율) 세기</td></tr>
+            <tr><td>게임 이벤트</td><td>판의 번호·크기·등급·결과·걸린 시간, 힌트·되돌리기 횟수, 새로 연 판 크기, Rush에서 푼 판 수·마지막 등급·플레이 시간, 첫 실행 안내를 마침, 공유 단추를 누름</td><td>판 난이도(등급)를 실제 플레이에 맞춰 고치기, 모드 개선</td></tr>
+            <tr><td>앱 사용</td><td>앱 실행, 사용 시간, 앱 업데이트</td><td>재방문율과 플레이 시간 파악</td></tr>
+            <tr><td>기기·앱 정보</td><td>기종, Android 버전, 앱 버전, 언어, 나라(IP 주소로 짐작. IP 주소 자체는 저장하지 않음)</td><td>기기별 문제 찾기, 언어별 이용 파악</td></tr>
+        </table>
+        <ul>
+            <li><strong>광고 ID는 이용 통계에 쓰지 않습니다.</strong> 광고 ID는 아래 4장의 광고에만 쓰입니다.</li>
+            <li>이용자 단위 기록은 <strong>2개월</strong> 뒤 자동으로 지워집니다(Google 애널리틱스 데이터 보관 설정). 그 뒤에는 누구의 것인지 알 수 없는 집계 숫자만 남습니다.</li>
+        </ul>
+        <h3>오류 보고 — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>무엇에 쓰나</th></tr>
+            <tr><td>오류가 난 코드 위치(스택 트레이스), 오류 시각</td><td>오류 고치기</td></tr>
+            <tr><td>기종, Android 버전, 앱 버전, 메모리·저장 공간 상태</td><td>어떤 기기에서 생기는지 찾기</td></tr>
+            <tr><td>Crashlytics 설치 ID(무작위 ID)</td><td>같은 오류가 몇 대에서 생기는지 세기</td></tr>
+        </table>
+        <p>오류 보고는 <strong>90일</strong> 뒤 지워집니다.</p>
+        <p>Google은 이 정보를 개발자를 대신해 처리합니다. 자세한 내용은 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보 보호</a>를 보십시오.</p>
+        <h3>광고와의 연결</h3>
+        <p>이용 통계를 광고(4장, Google AdMob)와 연결해 두었습니다. 개발자는 광고 수익을 이용 지표(이용자 수, 재방문 등)와 함께 봅니다. Google은 연결된 이용 통계를 AdMob 기능을 개선하고 광고 수익을 높이는 데 쓸 수 있습니다. 광고 ID는 여기에도 쓰지 않습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 광고 (Google AdMob)</h2>
+        <p>화면 맨 아래 배너 한 줄이 붙습니다(Rush를 하는 동안과 첫 실행 안내에서는 광고를 내립니다). 광고는 <strong>Google AdMob</strong>이 가져오고, 이때 Google과 그 광고 파트너가 다음을 처리합니다.</p>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>무엇에 쓰나</th></tr>
+            <tr><td>광고 ID(Android 광고 ID), 앱 세트 ID, (해당하는 경우) 기기에 로그인된 계정 관련 식별자</td><td>광고 노출·빈도 조절·성과 측정, 분석, 사기·남용 막기, 동의한 경우 개인화</td></tr>
+            <tr><td>IP 주소</td><td>광고 전송, IP로 짐작하는 대략적 위치(나라·도시 수준)</td></tr>
+            <tr><td>기기·앱 정보(기종, 운영체제 버전, 언어, 화면 크기, 앱 버전)</td><td>화면에 맞는 광고 고르기, 사기·남용 막기</td></tr>
+            <tr><td>광고와의 상호작용(노출, 클릭)</td><td>성과 측정, 부정 클릭 막기</td></tr>
+            <tr><td>앱 사용 정보(앱 실행, 탭 같은 상호작용)</td><td>광고 노출·성과 측정, 분석, 사기·남용 막기</td></tr>
+            <tr><td>진단 정보(앱 실행 시간, 멈춤 비율 같은 성능 정보)</td><td>광고 노출, 앱·광고 SDK 성능 분석, 사기·남용 막기</td></tr>
+        </table>
+        <p><strong>개발자는 이 정보를 받지 않습니다.</strong> 광고 수익 같은 집계 보고만 받습니다. Google은 이 정보를 <strong>독립적인 관리자로서도</strong> 처리합니다. 자세한 내용은 Google의 문서를 보십시오.</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
+            <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 서비스를 사용하는 사이트·앱에서 수집한 정보를 Google이 사용하는 방법</a></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 동의 — 주고, 바꾸고, 거두기</h2>
+        <p>유럽경제지역·영국·스위스에 계신 분께는 <strong>앱을 처음 켤 때 동의 창</strong>이 뜹니다. Google이 인증한 동의 관리 도구(UMP)로 여쭙고, 고르신 내용은 광고와 이용 통계 양쪽에 적용됩니다.</p>
+        <ul>
+            <li><strong>동의하시면</strong> — 관심사에 맞춘 개인화 광고가 나올 수 있습니다.</li>
+            <li><strong>동의하지 않으셔도</strong> — 앱은 똑같이 다 쓰실 수 있습니다. 광고는 개인화되지 않은 것으로 나옵니다. 다만 <strong>이 경우에도</strong> 광고를 띄우고, 같은 광고가 너무 자주 나오지 않게 하고, 사기를 막기 위해 최소한의 정보(IP 주소, 대략적 위치, 기기 정보, 광고 식별자 등)는 처리됩니다. 개인화되지 않은 광고가 아무것도 처리하지 않는다는 뜻은 아닙니다.</li>
+        </ul>
+        <h3>마음이 바뀌셨다면</h3>
+        <table class="info-table">
+            <tr><th>방법</th><th>어떻게</th></tr>
+            <tr><td>앱에서</td><td>홈 오른쪽 위 <strong>설정(톱니바퀴) → 개인정보 보호 옵션</strong> — 언제든 동의 창을 다시 열어 바꾸실 수 있습니다(동의가 필요한 지역에서만 보입니다)</td></tr>
+            <tr><td>기기에서</td><td>Android 설정 → 개인정보 보호 → 광고 → 광고 ID 재설정 또는 삭제</td></tr>
+            <tr><td>그만두기</td><td>앱을 지우면 기기에 남은 기록과 앱 인스턴스 ID도 함께 사라집니다</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 공유</h2>
+        <p>결과 화면의 <strong>공유</strong> 단추를 누르시면, 결과 글(예: <code>Keepsum Daily #12 ✅ 6:41</code>)을 기기의 공유 창으로 넘깁니다. 어디로 보낼지는 이용자가 고르고, 앱이 직접 어디로 보내지는 않습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 처리의 법적 근거 (GDPR 제6조)</h2>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>근거</th></tr>
+            <tr><td>개인화 광고</td><td><strong>동의</strong> (제6조 제1항 (a)). 위 동의 창에서 받습니다.</td></tr>
+            <tr><td>개인화되지 않은 광고, 사기·남용 방지, 광고 전송</td><td>해당 지역 법에 따라 <strong>동의</strong> 또는 <strong>정당한 이익</strong> (제6조 제1항 (f))</td></tr>
+            <tr><td>이용 통계, 오류 보고</td><td><strong>정당한 이익</strong> (제6조 제1항 (f)): 앱의 오류를 고치고 판 난이도를 맞추기 위해서입니다. 무료 앱을 광고로 운영하려고 광고 수익을 이용 지표와 함께 보는 것도 포함합니다. 유럽경제지역에서는 동의 창의 선택에 따라 통계 저장이 제한됩니다.</td></tr>
+            <tr><td>기기 안의 게임 기록</td><td>개발자에게 전달되지 않으므로 개발자 쪽 처리가 없습니다</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 국외 이전</h2>
+        <p>이용 통계·오류 보고·광고 정보는 Google의 서버(미국 등 대한민국과 유럽경제지역 밖 포함)에서 처리됩니다. Google은 이때 유럽연합 표준계약조항(SCC) 등 법이 인정하는 이전 수단을 사용한다고 밝히고 있습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 얼마나 오래 보관하나</h2>
+        <ul>
+            <li><strong>이용 통계</strong> — 이용자 단위 기록은 2개월 뒤 지워집니다.</li>
+            <li><strong>오류 보고</strong> — 90일 뒤 지워집니다.</li>
+            <li><strong>기기 안</strong> — 앱을 지울 때까지(기기 백업에 들어간 것은 Google 백업 정책을 따릅니다).</li>
+            <li><strong>광고</strong> — Google의 보관 정책을 따릅니다. 위 Google 문서를 보십시오.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 이용자의 권리</h2>
+        <p>유럽경제지역·영국에 계신 분은 GDPR(제15~22조)에 따라 다음 권리를 가집니다.</p>
+        <ul>
+            <li>열람, 정정, 삭제</li>
+            <li>처리의 제한, 처리에 대한 반대</li>
+            <li>데이터 이동</li>
+            <li>동의를 언제든 거둘 권리(거두기 전까지의 처리는 유효합니다)</li>
+            <li>감독기관에 민원을 제기할 권리</li>
+        </ul>
+        <p><strong>어디에 요청해야 하나.</strong> 개발자는 이름이나 연락처를 모르므로, 이용 통계에서 특정 이용자의 기록을 찾아낼 수 없습니다. 앱을 지우면 앱 인스턴스 ID가 사라져 그 뒤의 기록과 이어지지 않고, 남은 기록은 위 보관 기간이 지나면 지워집니다. 광고 정보에 관한 요청은 실제 데이터를 쥔 <strong>Google</strong>에 하셔야 합니다(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 참고). 무엇을 어디에 요청해야 할지 모르시겠으면 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>으로 물어보십시오. 아는 대로 안내해 드립니다.</p>
+        <p><strong>민원.</strong> 유럽경제지역 거주자는 거주국의 개인정보 감독기관에, 영국 거주자는 정보위원회(ICO)에 민원을 제기하실 수 있습니다. 대한민국에서는 개인정보침해 신고센터(privacy.kisa.or.kr, 국번 없이 118)에 신고하실 수 있습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. 아동</h2>
+        <p>이 앱은 <strong>아동을 대상으로 하지 않습니다.</strong> Google Play에도 만 13세 이상 이용자용으로 등록되어 있습니다. 개발자는 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+        <p>만 16세 미만(회원국에 따라 13~16세) 아동의 보호자께서 자녀가 이 앱을 쓰는 것이 걱정되시면, <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>으로 연락 주십시오.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>12. 방침이 바뀌면</h2>
+        <p>이 방침을 고치면 이 페이지에 새 시행일과 함께 올립니다. 크게 바뀔 때는 앱 업데이트 안내로도 알려 드립니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>13. 문의</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026-10-10</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
