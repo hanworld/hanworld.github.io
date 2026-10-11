@@ -238,7 +238,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Keepsum
 - 숫자로 가득 찬 판에서 남길 숫자와 지울 숫자를 골라 모든 가로줄·세로줄의 합을 단서와 맞추는 논리 퍼즐. Classic(시간 제한 없음, 5×5~9×9)·Daily(매일 7×7 한 판)·Rush(3분, 한 판 풀 때마다 +30초) 모드
-- 플랫폼: Android (출시 예정 — 2026-10-11 플레이 내부 테스트)
+- 플랫폼: Android (Google Play 출시, 2026-10-11)
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.keepsum
 - 패키지 ID: net.willee.keepsum
 - 원본 문서: 앱 저장소(A32.Keepsum) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/keepsum/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지에 `privacy/en.html`이 등록되어 있으므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **경쟁작 게임 이름 표기 금지**: Number Sums·ナンバーサム, Sumplete, Rullo 등 다른 회사 게임 이름과 'Number Sum(s)'처럼 그에 가까운 말을 쓰지 않음(앱 저장소 `listing.md` 규칙)
