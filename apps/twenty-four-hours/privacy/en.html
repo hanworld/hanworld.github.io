@@ -105,7 +105,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">Last Updated: September 19, 2026</p>
+        <p style="color:#64748b; font-size:0.9rem;">Last Updated: October 14, 2026</p>
         <p>Willee Project ("Developer") values the privacy of Twenty Four Hours ("App") users and complies with applicable privacy laws and regulations.</p>
     </div>
 </section>
@@ -114,7 +114,7 @@
     <div class="container">
         <h2>1. Information We Collect</h2>
         <h3>1.1 Required Information</h3>
-        <p>No information is collected for basic app functionality. Schedule data is stored only on your device.</p>
+        <p>There is no sign-up, and we do not ask for personal information such as your name or email to use the app's basic features. Schedule data is stored only on your device. However, the Android app sends Google (Firebase) the usage statistics and crash reports we use to improve the app (see section 3).</p>
         <h3>1.2 Optional Information</h3>
         <table class="info-table">
             <tr><th>Item</th><th>Purpose</th><th>Collection Timing</th></tr>
@@ -136,10 +136,42 @@
 
 <section>
     <div class="container">
-        <h2>3. Third-Party Services</h2>
+        <h2>3. Usage Statistics and Crash Reports (Firebase)</h2>
+        <p>The Android app sends the information below to Google Firebase, limited to what we need to improve the app. <strong>It does not send personal information such as your name or email, or the contents of your schedules</strong>, and we see this information only as statistics in the Firebase console.</p>
+        <h3>3.1 Usage Statistics — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>Examples</th><th>Purpose</th></tr>
+            <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back (retention)</td></tr>
+            <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and time spent</td></tr>
+            <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
+        </table>
+        <ul>
+            <li><strong>Usage statistics do not use your advertising ID.</strong> The advertising ID is used only for Google AdMob ads.</li>
+            <li>Data at the level of individual users is <strong>deleted automatically after 2 months</strong> (Google Analytics data retention setting). After that, only aggregate numbers that cannot be linked to anyone remain.</li>
+            <li>In the European Economic Area (EEA), the UK and Switzerland, a consent window appears the first time you open the app, and your choices apply to both ads and usage statistics.</li>
+        </ul>
+        <h3>3.2 Crash Reports — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>Purpose</th></tr>
+            <tr><td>Where in the code the error happened (stack trace), time of the error</td><td>Fixing the error</td></tr>
+            <tr><td>Device model, Android version, app version, memory and storage status</td><td>Finding which devices are affected</td></tr>
+            <tr><td>Crashlytics installation ID (a random ID)</td><td>Counting how many devices hit the same error</td></tr>
+        </table>
+        <p>Crash reports are <strong>deleted automatically after 90 days</strong>.</p>
+        <p>Google processes this data on our behalf on Google's servers, including outside Korea and the EEA (for example in the United States). For details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
+        <h3>3.3 Linked to Ads</h3>
+        <p>Usage statistics are linked to ads (Google AdMob), so we can see ad revenue together with usage metrics (number of users, return visits, etc.). Google may use the linked usage statistics to improve AdMob features and the app's ad revenue. The advertising ID is not used here either.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Third-Party Services</h2>
         <p>The app uses the following third-party services:</p>
         <ul>
             <li><strong>Google AdMob</strong>: Advertising (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+            <li><strong>Google Analytics for Firebase</strong>: Usage statistics (Android)</li>
+            <li><strong>Firebase Crashlytics</strong>: Crash reports (Android)</li>
             <li><strong>Google Drive API</strong>: Cloud sync (optional)</li>
             <li><strong>Google Sign-In</strong>: Account authentication (optional)</li>
         </ul>
@@ -148,10 +180,12 @@
 
 <section>
     <div class="container">
-        <h2>4. Data Retention and Deletion</h2>
+        <h2>5. Data Retention and Deletion</h2>
         <ul>
             <li>Local data: Automatically deleted when you uninstall the app.</li>
             <li>Cloud data: You can delete it directly from Google Drive.</li>
+            <li>Usage statistics: User-level data is automatically deleted after 2 months.</li>
+            <li>Crash reports: Automatically deleted after 90 days.</li>
             <li>Advertising ID: Can be reset or disabled in device settings.</li>
         </ul>
     </div>
@@ -159,12 +193,12 @@
 
 <section>
     <div class="container">
-        <h2>5. Your Rights</h2>
+        <h2>6. Your Rights</h2>
         <p>You have the following rights:</p>
         <ul>
             <li>Choose whether to use cloud sync</li>
-            <li>Change your consent for personalized ads (Privacy Options in the app settings, or your device settings)</li>
-            <li>Delete all local data by uninstalling the app</li>
+            <li>Change your consent for ads and usage statistics (Privacy Options in the app settings, or your device settings)</li>
+            <li>Delete all local data by uninstalling the app (this also deletes the app instance ID)</li>
             <li>Disconnect your Google account</li>
         </ul>
         <h3>Additional Rights for European Users (EEA/UK/Switzerland)</h3>
@@ -178,55 +212,64 @@
             <li><strong>Right to Withdraw Consent</strong>: You may withdraw your consent for data processing at any time. This does not affect the lawfulness of processing based on consent before its withdrawal.</li>
             <li><strong>Right to Lodge a Complaint</strong>: You have the right to lodge a complaint with your local data protection supervisory authority.</li>
         </ul>
-        <p><strong>Legal Basis for Processing</strong>: We process your personal data based on your consent (e.g., enabling cloud sync, displaying personalized ads). You can withdraw consent at any time through the app settings or device settings.</p>
+        <p><strong>Legal Basis for Processing (GDPR Article 6)</strong>:</p>
+        <table class="info-table">
+            <tr><th>Processing</th><th>Legal Basis</th></tr>
+            <tr><td>Cloud sync</td><td><strong>Consent</strong> (Art. 6(1)(a)), obtained when you enable cloud sync</td></tr>
+            <tr><td>Personalized ads</td><td><strong>Consent</strong> (Art. 6(1)(a)), obtained in the consent window the first time you open the app</td></tr>
+            <tr><td>Non-personalized ads, fraud and abuse prevention, ad delivery</td><td><strong>Consent</strong> or <strong>legitimate interests</strong> (Art. 6(1)(f)), depending on local law</td></tr>
+            <tr><td>Usage statistics, crash reports</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): fixing errors in the app and improving it. It also covers viewing ad revenue together with usage metrics, to keep this free app running on ads. In the EEA, storage for statistics is limited according to your choice in the consent window.</td></tr>
+        </table>
+        <p>You can withdraw consent at any time through Privacy Options in the app settings or your device settings.</p>
+        <p>We do not know your name or contact details, so we cannot find a specific person's records in the usage statistics. When you uninstall the app, its app instance ID is removed, so later data cannot be linked to earlier data, and the remaining data is deleted after the retention periods above.</p>
         <p>To exercise any of these rights, please contact us at <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>6. Children's Privacy</h2>
+        <h2>7. Children's Privacy</h2>
         <p>This app is not intended for children under 13 years of age, and we do not knowingly collect personal information from children.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>7. Account and Data Deletion</h2>
+        <h2>8. Account and Data Deletion</h2>
         <p>You can delete your data at any time.</p>
-        <h3>7.1 Delete Local Data</h3>
+        <h3>8.1 Delete Local Data</h3>
         <p>All data stored on your device (schedules, completion records, settings) will be automatically deleted when you uninstall the app.</p>
         <ul>
             <li><strong>Android</strong>: Settings → Apps → Twenty Four Hours → Uninstall</li>
         </ul>
-        <h3>7.2 Delete Cloud Data</h3>
+        <h3>8.2 Delete Cloud Data</h3>
         <p>To delete backup data stored in Google Drive:</p>
         <ul>
             <li>Go to <a href="https://drive.google.com" target="_blank" rel="noopener">Google Drive</a></li>
             <li>Navigate to "My Drive" → App data folder and delete "twenty_four_hours_backup.json.gz"</li>
             <li>Or disconnect the app from <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions</a></li>
         </ul>
-        <h3>7.3 Disconnect Google Account</h3>
+        <h3>8.3 Disconnect Google Account</h3>
         <p>To disconnect your Google account from the app:</p>
         <ul>
             <li>In-app Settings → Cloud Sync → Sign Out</li>
             <li>Or remove "Twenty Four Hours" access from <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions</a></li>
         </ul>
-        <h3>7.4 Data Deletion Request</h3>
+        <h3>8.4 Data Deletion Request</h3>
         <p>If you have difficulty deleting data using the above methods, please contact us and we will assist you.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>8. Changes to This Policy</h2>
+        <h2>9. Changes to This Policy</h2>
         <p>This privacy policy may be updated due to legal requirements or service changes. We will notify you of significant changes through in-app notifications.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>9. Contact Us</h2>
+        <h2>10. Contact Us</h2>
         <div class="contact-box">
             <p>If you have any questions about privacy, please contact us:</p>
             <ul>

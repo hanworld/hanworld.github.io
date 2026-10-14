@@ -105,7 +105,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">最后更新：2026年9月19日</p>
+        <p style="color:#64748b; font-size:0.9rem;">最后更新：2026年10月14日</p>
         <p>Willee Project（以下简称"开发者"）重视Twenty Four Hours（以下简称"应用"）用户的隐私，并遵守相关法律法规。</p>
     </div>
 </section>
@@ -114,7 +114,7 @@
     <div class="container">
         <h2>1. 我们收集的信息</h2>
         <h3>1.1 必要信息</h3>
-        <p>使用应用基本功能无需收集任何信息。日程数据仅存储在您的设备上。</p>
+        <p>无需注册，使用应用基本功能时我们不会询问您的姓名、邮箱等个人信息。日程数据仅存储在您的设备上。不过，Android应用会向Google（Firebase）发送用于改进应用的使用统计和错误报告（见第3节）。</p>
         <h3>1.2 可选信息</h3>
         <table class="info-table">
             <tr><th>项目</th><th>收集目的</th><th>收集时机</th></tr>
@@ -136,10 +136,42 @@
 
 <section>
     <div class="container">
-        <h2>3. 第三方服务</h2>
+        <h2>3. 使用统计和错误报告（Firebase）</h2>
+        <p>Android应用只将改进应用所需的以下信息发送到Google Firebase。<strong>不会发送姓名、邮箱等个人信息和日程内容</strong>，开发者只在Firebase控制台中以统计的形式查看这些信息。</p>
+        <h3>3.1 使用统计 — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>例子</th><th>使用目的</th></tr>
+            <tr><td>应用实例ID</td><td>安装应用时生成的随机ID</td><td>统计同一台设备是否再次使用（留存率）</td></tr>
+            <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和使用时长</td></tr>
+            <tr><td>设备与应用信息</td><td>机型、Android版本、应用版本、语言、国家（根据IP地址推测；不保存IP地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
+        </table>
+        <ul>
+            <li><strong>使用统计不使用您的广告ID。</strong> 广告ID只用于Google AdMob广告。</li>
+            <li>按用户的记录会在<strong>2个月</strong>后自动删除（Google Analytics数据保留设置）。之后只留下无法对应到任何人的汇总数字。</li>
+            <li>在欧洲经济区（EEA）、英国和瑞士，首次打开应用时会出现同意窗口，您的选择同时适用于广告和使用统计。</li>
+        </ul>
+        <h3>3.2 错误报告 — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>使用目的</th></tr>
+            <tr><td>出错的代码位置（堆栈跟踪）、出错时间</td><td>修复错误</td></tr>
+            <tr><td>机型、Android版本、应用版本、内存与存储空间状态</td><td>找出哪些设备受到影响</td></tr>
+            <tr><td>Crashlytics安装ID（随机ID）</td><td>统计同一错误在多少台设备上发生</td></tr>
+        </table>
+        <p>错误报告会在<strong>90天</strong>后自动删除。</p>
+        <p>Google代表开发者在Google的服务器上处理这些信息，包括韩国和欧洲经济区以外的地区（例如美国）。详情请参阅<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase中的隐私与安全</a>。</p>
+        <h3>3.3 与广告的关联</h3>
+        <p>使用统计已与广告（Google AdMob）关联，开发者会把广告收入与使用指标（用户数、回访等）放在一起查看。Google可能会用关联的使用统计来改进AdMob的功能、提高广告收入。这里同样不使用广告ID。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 第三方服务</h2>
         <p>应用使用以下第三方服务：</p>
         <ul>
             <li><strong>Google AdMob</strong>：广告服务（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google隐私政策</a>）</li>
+            <li><strong>Google Analytics for Firebase</strong>：使用统计（Android）</li>
+            <li><strong>Firebase Crashlytics</strong>：错误报告（Android）</li>
             <li><strong>Google Drive API</strong>：云同步（可选）</li>
             <li><strong>Google登录</strong>：账户验证（可选）</li>
         </ul>
@@ -148,10 +180,12 @@
 
 <section>
     <div class="container">
-        <h2>4. 数据保留和删除</h2>
+        <h2>5. 数据保留和删除</h2>
         <ul>
             <li>本地数据：卸载应用时自动删除。</li>
             <li>云数据：您可以直接从Google Drive中删除。</li>
+            <li>使用统计：按用户的记录在2个月后自动删除。</li>
+            <li>错误报告：90天后自动删除。</li>
             <li>广告标识符：可在设备设置中重置或禁用。</li>
         </ul>
     </div>
@@ -159,12 +193,12 @@
 
 <section>
     <div class="container">
-        <h2>5. 您的权利</h2>
+        <h2>6. 您的权利</h2>
         <p>您拥有以下权利：</p>
         <ul>
             <li>选择是否使用云同步功能</li>
-            <li>更改个性化广告同意设置（应用设置中的隐私选项或设备设置）</li>
-            <li>通过卸载应用删除所有本地数据</li>
+            <li>更改广告和使用统计的同意设置（应用设置中的隐私选项或设备设置）</li>
+            <li>通过卸载应用删除所有本地数据（应用实例ID也会一并删除）</li>
             <li>断开Google账户连接</li>
         </ul>
         <h3>欧洲用户的额外权利（EEA/英国/瑞士）</h3>
@@ -178,55 +212,64 @@
             <li><strong>撤回同意权</strong>：您可以随时撤回对数据处理的同意。这不影响撤回前基于同意的处理的合法性。</li>
             <li><strong>向监管机构投诉权</strong>：您有权向当地数据保护监管机构提出投诉。</li>
         </ul>
-        <p><strong>处理的法律依据</strong>：我们基于您的同意处理您的个人数据（例如：启用云同步、显示个性化广告）。您可以随时通过应用设置或设备设置撤回同意。</p>
+        <p><strong>处理的法律依据（GDPR第6条）</strong>：</p>
+        <table class="info-table">
+            <tr><th>处理</th><th>依据</th></tr>
+            <tr><td>云同步</td><td><strong>同意</strong>（第6条第1款(a)项），在您启用云同步功能时获得</td></tr>
+            <tr><td>个性化广告</td><td><strong>同意</strong>（第6条第1款(a)项），在首次打开应用时通过同意窗口获得</td></tr>
+            <tr><td>非个性化广告、防止欺诈与滥用、投放广告</td><td>视当地法律而定，为<strong>同意</strong>或<strong>正当利益</strong>（第6条第1款(f)项）</td></tr>
+            <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第6条第1款(f)项）：为了修复应用错误并改进应用。也包括为了靠广告运营这款免费应用，把广告收入与使用指标放在一起查看。在欧洲经济区，统计的存储会按您在同意窗口中的选择受到限制。</td></tr>
+        </table>
+        <p>您可以随时通过应用设置中的隐私选项或设备设置撤回同意。</p>
+        <p>开发者不知道您的姓名或联系方式，因此无法在使用统计中找出特定用户的记录。卸载应用后，应用实例ID会被删除，之后的记录不会与之前的记录关联，剩余记录会在上述保留期限过后删除。</p>
         <p>如需行使上述任何权利，请联系 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>6. 儿童隐私</h2>
+        <h2>7. 儿童隐私</h2>
         <p>本应用不面向13岁以下儿童，我们不会故意收集儿童的个人信息。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>7. 账户和数据删除</h2>
+        <h2>8. 账户和数据删除</h2>
         <p>您可以随时删除您的数据。</p>
-        <h3>7.1 删除本地数据</h3>
+        <h3>8.1 删除本地数据</h3>
         <p>设备上存储的所有数据（日程、完成记录、设置）将在卸载应用时自动删除。</p>
         <ul>
             <li><strong>Android</strong>：设置 → 应用 → Twenty Four Hours → 卸载</li>
         </ul>
-        <h3>7.2 删除云数据</h3>
+        <h3>8.2 删除云数据</h3>
         <p>要删除存储在Google Drive中的备份数据：</p>
         <ul>
             <li>访问<a href="https://drive.google.com" target="_blank" rel="noopener">Google Drive</a></li>
             <li>在"我的云端硬盘"→ 应用数据文件夹中删除"twenty_four_hours_backup.json.gz"</li>
             <li>或在<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google账户权限管理</a>中断开应用连接</li>
         </ul>
-        <h3>7.3 断开Google账户连接</h3>
+        <h3>8.3 断开Google账户连接</h3>
         <p>要从应用断开Google账户连接：</p>
         <ul>
             <li>应用内设置 → 云同步 → 退出登录</li>
             <li>或在<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google账户权限管理</a>中删除"Twenty Four Hours"的访问权限</li>
         </ul>
-        <h3>7.4 数据删除请求</h3>
+        <h3>8.4 数据删除请求</h3>
         <p>如果您无法通过上述方法删除数据，请联系我们，我们将协助您完成删除。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>8. 政策变更</h2>
+        <h2>9. 政策变更</h2>
         <p>本隐私政策可能因法律要求或服务变更而更新。如有重大变更，我们将通过应用内通知告知您。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>9. 联系我们</h2>
+        <h2>10. 联系我们</h2>
         <div class="contact-box">
             <p>如有任何隐私相关问题，请联系我们：</p>
             <ul>
