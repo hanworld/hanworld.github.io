@@ -102,7 +102,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">Last Updated: September 20, 2026</p>
+        <p style="color:#64748b; font-size:0.9rem;">Last Updated: October 16, 2026</p>
         <p>Willee Project ("Developer") is committed to protecting the privacy of Good Timer ("App") users. This Privacy Policy explains what information the App collects, how it is used, and how it is protected.</p>
     </div>
 </section>
@@ -111,13 +111,34 @@
     <div class="container">
         <h2>1. Information We Collect</h2>
         <h3>1.1 Automatically Collected Information</h3>
-        <p>The App does not use any analytics tools or tracking SDKs. However, the following services may automatically collect certain information:</p>
+        <p>The App does not ask for personal information such as your name or email to use its basic features. However, the Android app automatically collects certain information through the following services:</p>
         <p><strong>Advertising</strong></p>
         <ul>
             <li>The App serves ads through Google AdMob.</li>
             <li>AdMob may collect device advertising identifiers (GAID) and ad interaction data.</li>
             <li>For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
         </ul>
+        <p><strong>Usage Statistics — Google Analytics for Firebase</strong></p>
+        <p>The App sends Google Firebase only the information we need to improve the App. <strong>It does not send personal information such as your name or email, or your timers and records</strong>, and we see this information only as statistics in the Firebase console.</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>Examples</th><th>Purpose</th></tr>
+            <tr><td>App instance ID</td><td>A random ID created when the App is installed</td><td>Counting whether the same device comes back (retention)</td></tr>
+            <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and time spent</td></tr>
+            <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
+        </table>
+        <ul>
+            <li><strong>Usage statistics do not use your advertising ID.</strong> The advertising ID is used only for Google AdMob ads.</li>
+            <li>Usage statistics are linked to ads (Google AdMob), so we can see ad revenue together with usage metrics (number of users, return visits, etc.). Google may use the linked usage statistics to improve AdMob features and the App's ad revenue. The advertising ID is not used here either.</li>
+            <li>In the European Economic Area (EEA), the UK and Switzerland, a consent window appears the first time you open the App, and your choices apply to both ads and usage statistics.</li>
+        </ul>
+        <p><strong>Crash Reports — Firebase Crashlytics</strong></p>
+        <table class="info-table">
+            <tr><th>Item</th><th>Purpose</th></tr>
+            <tr><td>Where in the code the error happened (stack trace), time of the error</td><td>Fixing the error</td></tr>
+            <tr><td>Device model, Android version, app version, memory and storage status</td><td>Finding which devices are affected</td></tr>
+            <tr><td>Crashlytics installation ID (a random ID)</td><td>Counting how many devices hit the same error</td></tr>
+        </table>
+        <p>Google processes usage statistics and crash reports on our behalf on Google's servers, including outside Korea and the EEA (for example in the United States). For details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
         <h3>1.2 Information You Provide</h3>
         <p><strong>Google Account Information (when using Cloud Sync)</strong></p>
         <ul>
@@ -144,6 +165,8 @@
             <tr><td>Timer/Stopwatch data</td><td>Providing core App functionality</td></tr>
             <tr><td>Google Account info</td><td>Google Drive cloud sync</td></tr>
             <tr><td>Advertising identifier</td><td>Ad delivery</td></tr>
+            <tr><td>Usage statistics</td><td>Improving the App, viewing ad revenue together with usage metrics</td></tr>
+            <tr><td>Crash reports</td><td>Finding and fixing errors</td></tr>
             <tr><td>App settings</td><td>Maintaining user preferences</td></tr>
         </table>
     </div>
@@ -156,6 +179,8 @@
         <table class="info-table">
             <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Processed</th></tr>
             <tr><td>Google AdMob</td><td>Google LLC</td><td>Ad delivery</td><td>Device ad identifier, ad interactions</td></tr>
+            <tr><td>Google Analytics for Firebase</td><td>Google LLC</td><td>Usage statistics</td><td>App instance ID, app usage, device and app info</td></tr>
+            <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reports</td><td>Stack trace, device and app info, Crashlytics installation ID</td></tr>
             <tr><td>Google Drive API</td><td>Google LLC</td><td>Cloud sync</td><td>Timer/Stopwatch data</td></tr>
             <tr><td>Google Sign-In</td><td>Google LLC</td><td>Authentication</td><td>Email, display name</td></tr>
         </table>
@@ -183,6 +208,12 @@
             <li>Data collected by Google AdMob is managed according to Google's policies.</li>
             <li>You can limit ad personalization in your device settings.</li>
         </ul>
+        <h3>4.4 Usage Statistics and Crash Reports</h3>
+        <ul>
+            <li>User-level usage statistics are <strong>deleted automatically after 2 months</strong> (Google Analytics data retention setting). After that, only aggregate numbers that cannot be linked to anyone remain.</li>
+            <li>Crash reports are <strong>deleted automatically after 90 days</strong>.</li>
+            <li>Uninstalling the App removes its app instance ID, so later data cannot be linked to earlier data.</li>
+        </ul>
     </div>
 </section>
 
@@ -195,6 +226,7 @@
             <li><strong>Deletion</strong>: Delete records within the App or uninstall the App entirely.</li>
             <li><strong>Opt out of Sync</strong>: Choose not to use Google Drive sync.</li>
             <li><strong>Limit Ads</strong>: Restrict ad tracking in your device settings.</li>
+            <li><strong>Change Consent</strong>: In the EEA, the UK and Switzerland, change your consent for ads and usage statistics at any time in "Privacy Options" in the App settings.</li>
         </ul>
     </div>
 </section>
@@ -208,7 +240,9 @@
             <tr><th>Processing Activity</th><th>Legal Basis</th></tr>
             <tr><td>Core App features (Timer/Stopwatch)</td><td>Performance of contract (Art. 6(1)(b))</td></tr>
             <tr><td>Cloud sync</td><td>Consent (Art. 6(1)(a))</td></tr>
-            <tr><td>Ad delivery</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+            <tr><td>Personalized ads</td><td>Consent (Art. 6(1)(a)), obtained in the consent window the first time you open the App</td></tr>
+            <tr><td>Non-personalized ads, fraud and abuse prevention, ad delivery</td><td>Consent or legitimate interest (Art. 6(1)(f)), depending on local law</td></tr>
+            <tr><td>Usage statistics, crash reports</td><td>Legitimate interest (Art. 6(1)(f)): fixing errors in the App and improving it. This also covers viewing ad revenue together with usage metrics, to keep this free App running on ads. In the EEA, storage for statistics is limited according to your choice in the consent window.</td></tr>
         </table>
         <h3>6.2 Additional Rights</h3>
         <ul>
@@ -221,8 +255,10 @@
             <li><strong>Right to Withdraw Consent</strong>: You may withdraw consent at any time for consent-based processing. For cloud sync, you can withdraw by signing out of your Google account.</li>
             <li><strong>Right to Lodge a Complaint</strong>: You may file a complaint with the data protection supervisory authority in your country of residence.</li>
         </ul>
+        <p>We do not know your name or contact details, so we cannot find a specific person's records in the usage statistics or crash reports. When you uninstall the App, its app instance ID is removed, so later data cannot be linked to earlier data, and the remaining data is deleted after the retention periods in section 4.4.</p>
         <h3>6.3 International Data Transfers</h3>
         <p>When using Cloud Sync, your data may be transferred to servers outside the EEA through your Google Drive. These transfers are protected under Google's Data Processing Terms and Standard Contractual Clauses.</p>
+        <p>Usage statistics and crash reports from the Android app are also processed on Google's servers outside the EEA (for example in the United States), protected under the Firebase Data Processing and Security Terms and Standard Contractual Clauses.</p>
     </div>
 </section>
 

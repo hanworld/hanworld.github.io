@@ -102,7 +102,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">最終更新日: 2026年9月20日</p>
+        <p style="color:#64748b; font-size:0.9rem;">最終更新日: 2026年10月16日</p>
         <p>Willee Project（以下「開発者」）は、Good Timer（以下「アプリ」）のユーザーのプライバシーを大切に保護します。本プライバシーポリシーは、アプリが収集する情報、使用目的、保護方法について説明します。</p>
     </div>
 </section>
@@ -111,13 +111,34 @@
     <div class="container">
         <h2>1. 収集する情報</h2>
         <h3>1.1 自動的に収集される情報</h3>
-        <p>アプリは分析ツールやトラッキングSDKを使用しません。ただし、以下のサービスを通じて一部の情報が自動的に収集される場合があります。</p>
+        <p>アプリの基本機能のご利用にあたって、氏名やメールアドレスなどの個人情報をおうかがいすることはありません。ただし、Androidアプリは以下のサービスを通じて一部の情報を自動的に収集します。</p>
         <p><strong>広告</strong></p>
         <ul>
             <li>アプリはGoogle AdMobを通じて広告を配信します。</li>
             <li>AdMobは端末の広告識別子（GAID）、広告インタラクションデータなどを収集する場合があります。</li>
             <li>詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>をご参照ください。</li>
         </ul>
+        <p><strong>利用統計 — Google Analytics for Firebase</strong></p>
+        <p>アプリの改善に必要な分だけ、次の情報をGoogle Firebaseに送信します。<strong>氏名やメールアドレスなどの個人情報と、タイマーや記録の内容は送信せず</strong>、開発者はこれらの情報をFirebaseコンソールで統計としてのみ見ます。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>例</th><th>利用目的</th></tr>
+            <tr><td>アプリインスタンスID</td><td>アプリのインストール時に作られるランダムなID</td><td>同じ端末で再び使われたか（継続率）を数える</td></tr>
+            <tr><td>アプリの利用</td><td>アプリの起動、利用時間、アプリのアップデート</td><td>継続率と利用時間の把握</td></tr>
+            <tr><td>端末・アプリの情報</td><td>機種、Androidのバージョン、アプリのバージョン、言語、国（IPアドレスから推定。IPアドレスそのものは保存しません）</td><td>機種ごとの不具合を見つける、言語ごとの利用の把握</td></tr>
+        </table>
+        <ul>
+            <li><strong>利用統計には広告IDを使いません。</strong>広告IDはGoogle AdMobの広告にだけ使われます。</li>
+            <li>利用統計を広告（Google AdMob）と連携しています。開発者は広告収益を利用指標（ユーザー数、再訪など）とあわせて見ます。Googleは連携した利用統計を、AdMobの機能の改善と広告収益の向上に使うことがあります。ここでも広告IDは使いません。</li>
+            <li>欧州経済領域（EEA）・英国・スイスでは、アプリを初めて開いたときに同意の画面が表示され、お選びいただいた内容は広告と利用統計の両方に適用されます。</li>
+        </ul>
+        <p><strong>エラー報告 — Firebase Crashlytics</strong></p>
+        <table class="info-table">
+            <tr><th>項目</th><th>利用目的</th></tr>
+            <tr><td>エラーが起きたコードの位置（スタックトレース）、エラーの時刻</td><td>エラーの修正</td></tr>
+            <tr><td>機種、Androidのバージョン、アプリのバージョン、メモリと空き容量の状態</td><td>どの端末で起きるかを見つける</td></tr>
+            <tr><td>CrashlyticsのインストールID（ランダムなID）</td><td>同じエラーが何台で起きたかを数える</td></tr>
+        </table>
+        <p>Googleは利用統計とエラー報告を開発者に代わって、Googleのサーバー（韓国と欧州経済領域の外、たとえば米国を含む）で取り扱います。詳細は<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebaseのプライバシーとセキュリティ</a>をご参照ください。</p>
         <h3>1.2 ユーザーが提供する情報</h3>
         <p><strong>Googleアカウント情報（クラウド同期使用時）</strong></p>
         <ul>
@@ -144,6 +165,8 @@
             <tr><td>タイマー/ストップウォッチデータ</td><td>アプリの核心機能の提供</td></tr>
             <tr><td>Googleアカウント情報</td><td>Google Driveクラウド同期</td></tr>
             <tr><td>広告識別子</td><td>広告配信</td></tr>
+            <tr><td>利用統計</td><td>アプリの改善、広告収益を利用指標とあわせて見る</td></tr>
+            <tr><td>エラー報告</td><td>エラーの発見と修正</td></tr>
             <tr><td>アプリ設定</td><td>ユーザー設定の維持</td></tr>
         </table>
     </div>
@@ -156,6 +179,8 @@
         <table class="info-table">
             <tr><th>サービス</th><th>提供元</th><th>目的</th><th>処理情報</th></tr>
             <tr><td>Google AdMob</td><td>Google LLC</td><td>広告配信</td><td>端末広告識別子、広告インタラクション</td></tr>
+            <tr><td>Google Analytics for Firebase</td><td>Google LLC</td><td>利用統計</td><td>アプリインスタンスID、アプリの利用、端末・アプリの情報</td></tr>
+            <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>エラー報告</td><td>スタックトレース、端末・アプリの情報、CrashlyticsのインストールID</td></tr>
             <tr><td>Google Drive API</td><td>Google LLC</td><td>クラウド同期</td><td>タイマー/ストップウォッチデータ</td></tr>
             <tr><td>Google Sign-In</td><td>Google LLC</td><td>認証</td><td>メール、表示名</td></tr>
         </table>
@@ -183,6 +208,12 @@
             <li>Google AdMobが収集したデータはGoogleのポリシーに従って管理されます。</li>
             <li>端末設定で広告のパーソナライズを制限できます。</li>
         </ul>
+        <h3>4.4 利用統計とエラー報告</h3>
+        <ul>
+            <li>利用統計のユーザー単位の記録は<strong>2か月</strong>で自動的に削除されます（Googleアナリティクスのデータ保持の設定）。その後は、誰のものか分からない集計の数字だけが残ります。</li>
+            <li>エラー報告は<strong>90日</strong>で自動的に削除されます。</li>
+            <li>アプリをアンインストールするとアプリインスタンスIDも消え、その後の情報は以前の情報と結び付きません。</li>
+        </ul>
     </div>
 </section>
 
@@ -195,6 +226,7 @@
             <li><strong>データの削除</strong>: アプリ内で記録を削除、またはアプリ自体を削除できます。</li>
             <li><strong>同期の拒否</strong>: Google Drive同期を使用しないことを選択できます。</li>
             <li><strong>広告の制限</strong>: 端末設定で広告トラッキングを制限できます。</li>
+            <li><strong>同意の変更</strong>: 欧州経済領域（EEA）・英国・スイスでは、アプリ設定の「プライバシーオプション」で、広告と利用統計への同意をいつでも変更できます。</li>
         </ul>
     </div>
 </section>
@@ -208,7 +240,9 @@
             <tr><th>処理活動</th><th>法的根拠</th></tr>
             <tr><td>アプリの核心機能（タイマー/ストップウォッチ）</td><td>契約の履行（第6条1項b号）</td></tr>
             <tr><td>クラウド同期</td><td>同意（第6条1項a号）</td></tr>
-            <tr><td>広告配信</td><td>正当な利益（第6条1項f号）</td></tr>
+            <tr><td>パーソナライズ広告</td><td>同意（第6条1項a号）。アプリを初めて開いたときの同意画面でいただきます</td></tr>
+            <tr><td>パーソナライズされていない広告、不正防止、広告配信</td><td>現地の法律に応じて同意または正当な利益（第6条1項f号）</td></tr>
+            <tr><td>利用統計、エラー報告</td><td>正当な利益（第6条1項f号）：アプリのエラーを直し、アプリを改善するためです。広告で運営する無料アプリを続けるために、広告収益を利用指標とあわせて見ることも含みます。欧州経済領域では、同意画面でお選びいただいた内容に応じて統計の保存が制限されます。</td></tr>
         </table>
         <h3>6.2 追加権利</h3>
         <ul>
@@ -221,8 +255,10 @@
             <li><strong>同意撤回権</strong>: 同意に基づく処理について、いつでも同意を撤回できます。クラウド同期の場合、Googleアカウントのサインアウトで撤回できます。</li>
             <li><strong>監督機関への苦情申立権</strong>: 居住国のデータ保護監督機関に苦情を申し立てることができます。</li>
         </ul>
+        <p>開発者はユーザーの氏名や連絡先を知らないため、利用統計とエラー報告から特定の方の記録を探すことはできません。アプリをアンインストールするとアプリインスタンスIDが消え、その後の情報は以前の情報と結び付かず、残った情報は4.4の保持期間が過ぎると削除されます。</p>
         <h3>6.3 国際データ移転</h3>
         <p>クラウド同期を使用する場合、Google Driveを通じてEEA外のサーバーにデータが転送される場合があります。この転送はGoogleのデータ処理規約および標準契約条項によって保護されます。</p>
+        <p>Androidアプリの利用統計とエラー報告も、Googleのサーバー（米国などEEA外を含む）で処理され、Firebaseのデータ処理およびセキュリティ規約と標準契約条項によって保護されます。</p>
     </div>
 </section>
 
