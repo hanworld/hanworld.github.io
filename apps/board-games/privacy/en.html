@@ -102,14 +102,14 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective: 2026-09-25</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective: 2026-10-16</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account.</li>
-            <li>The developer <strong>collects nothing and runs no server.</strong></li>
-            <li>The only thing that leaves your device is the <strong>banner ad (Google AdMob)</strong> at the bottom of the screen.</li>
-            <li>Your play history stays <strong>on your device</strong> and is never transmitted.</li>
-            <li>In the European Economic Area, the UK and Switzerland, <strong>we ask for your consent</strong> before showing ads.</li>
+            <li>The developer <strong>never asks for or receives personal data such as your name or email, and runs no server.</strong></li>
+            <li>Two things leave your device: the <strong>banner ad (Google AdMob)</strong> at the bottom of the screen, and the <strong>usage statistics and crash reports (Google Firebase)</strong> we use to fix and improve the app.</li>
+            <li>Your play history stays <strong>on your device.</strong> Which games you play and how you play them is never sent anywhere.</li>
+            <li>In the European Economic Area, the UK and Switzerland, <strong>we ask for your consent</strong> before showing ads, and your choice also applies to usage statistics.</li>
         </ul>
     </div>
 </section>
@@ -127,15 +127,16 @@
 
 <section>
     <div class="container">
-        <h2>2. What the developer collects — nothing</h2>
-        <p>This app <strong>has no server.</strong> The developer does not collect, receive or store any personal data. We never ask for your name, email, phone number, contacts, photos or precise location, and nothing about how you play reaches us.</p>
+        <h2>2. What the developer receives — no personal data</h2>
+        <p>This app <strong>has no server.</strong> We never ask for your name, email, phone number, contacts, photos or precise location, and nothing about how you play reaches us.</p>
+        <p>All the developer sees is the <strong>usage statistics and crash reports</strong> in Google Firebase (section 4). They contain no names or contact details either, and we only look at them in the Firebase console as statistics and lists of errors.</p>
         <h3>What is stored on your device only</h3>
         <table class="info-table">
             <tr><th>What</th><th>Contents</th><th>Where</th><th>When it goes</th></tr>
             <tr><td>Recently played</td><td>A list of game labels (e.g. <code>omok</code>, <code>checkers</code>)</td><td>Your device's internal storage</td><td>Deleted when you uninstall the app</td></tr>
         </table>
         <p>It is used for one thing: putting the games you played most recently at the top of the lobby. It identifies nobody, and <strong>it never leaves your device.</strong></p>
-        <p>Separately, the ad SDK (Google) stores its own data on your device: consent records (such as your ad consent choice in Europe) and the identifiers needed for advertising. The developer cannot see what they contain.</p>
+        <p>Separately, the ad SDK (Google) stores its own data on your device: consent records (such as your ad consent choice in Europe) and the identifiers needed for advertising. The Firebase SDK briefly stores the app instance ID and any usage statistics or crash reports it has not sent yet. The developer cannot see what is stored on your device.</p>
     </div>
 </section>
 
@@ -162,29 +163,61 @@
 
 <section>
     <div class="container">
-        <h2>4. Consent — giving it, changing it, taking it back</h2>
-        <p>If you are in the EEA, the UK or Switzerland, a <strong>consent dialog appears the first time you open the app</strong>. It is presented through a Google-certified consent management platform (UMP).</p>
+        <h2>4. Usage statistics and crash reports (Google Firebase)</h2>
+        <p>The app sends Google Firebase only what we need to fix and improve it. <strong>It never sends personal data such as your name or email, or your play history (which games you play and how).</strong></p>
+        <h3>4.1 Usage statistics — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>What</th><th>Example</th><th>What it is used for</th></tr>
+            <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back (retention)</td></tr>
+            <tr><td>App usage</td><td>App launches, time spent in the app, app updates, ad impressions</td><td>Understanding retention and usage time</td></tr>
+            <tr><td>Device and app information</td><td>Model, Android version, app version, language, country (inferred from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems; understanding usage by language</td></tr>
+        </table>
+        <ul>
+            <li><strong>Your advertising ID is not used for usage statistics.</strong> It is used only for Google AdMob ads (section 3).</li>
+            <li>Records tied to individual users are deleted automatically after <strong>2 months</strong> (Google Analytics data retention setting). After that, only aggregate numbers that cannot be linked to anyone remain.</li>
+            <li>In the EEA, the UK and Switzerland, the choice you make in the consent dialog shown the first time you open the app (section 5) applies to both ads and usage statistics.</li>
+        </ul>
+        <h3>4.2 Crash reports — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>What</th><th>What it is used for</th></tr>
+            <tr><td>Where in the code the error happened (stack trace), time of the error</td><td>Fixing the error</td></tr>
+            <tr><td>Model, Android version, app version, memory and storage status</td><td>Finding which devices are affected</td></tr>
+            <tr><td>Crashlytics installation ID (a random ID)</td><td>Counting how many devices hit the same error</td></tr>
+        </table>
+        <p>Crash reports are deleted automatically after <strong>90 days</strong>.</p>
+        <p>Google processes this information <strong>on the developer's behalf</strong> on Google's servers, including servers outside Korea and the European Economic Area (such as in the United States). For details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>.</p>
+        <h3>4.3 Link with advertising</h3>
+        <p>Usage statistics are linked with advertising (Google AdMob). The developer looks at ad revenue together with usage metrics (number of users, returning users and so on). Google may use the linked usage statistics to improve AdMob features and increase ad revenue. Your advertising ID is not used here either.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Consent — giving it, changing it, taking it back</h2>
+        <p>If you are in the EEA, the UK or Switzerland, a <strong>consent dialog appears the first time you open the app</strong>. It is presented through a Google-certified consent management platform (UMP). Your choice applies to <strong>both ads and usage statistics</strong>.</p>
         <ul>
             <li><strong>If you consent</strong> — you may be shown personalised ads.</li>
-            <li><strong>If you don't</strong> — the app still works exactly the same. Ads become non-personalised. But note that <strong>even then</strong>, a minimum of data (IP address, approximate location, device information, advertising identifiers and the like) is still processed to deliver ads, cap how often you see the same one and prevent fraud. "Non-personalised" does not mean "nothing is processed".</li>
+            <li><strong>If you don't</strong> — the app still works exactly the same. Ads become non-personalised, and storage of usage statistics is limited. But note that <strong>even then</strong>, a minimum of data (IP address, approximate location, device information, advertising identifiers and the like) is still processed to deliver ads, cap how often you see the same one and prevent fraud. "Non-personalised" does not mean "nothing is processed".</li>
         </ul>
+        <p>Crash reports (4.2) are sent regardless of this choice, because we need them to fix crashes and errors in the app (section 6).</p>
         <h3>If you change your mind</h3>
         <table class="info-table">
             <tr><th>Where</th><th>How</th></tr>
             <tr><td>In the app</td><td>The <strong>app info (ⓘ) button at the top right of the lobby → Ad consent</strong> — reopen the consent dialog at any time and change your answer</td></tr>
             <tr><td>On your device</td><td>Android Settings → Privacy → Ads → reset or delete your advertising ID</td></tr>
-            <tr><td>Leaving</td><td>Uninstalling the app also removes the play history stored on your device</td></tr>
+            <tr><td>Leaving</td><td>Uninstalling the app also removes the play history and the app instance ID stored on your device</td></tr>
         </table>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>5. Legal basis (GDPR Art. 6)</h2>
+        <h2>6. Legal basis (GDPR Art. 6)</h2>
         <table class="info-table">
             <tr><th>For what</th><th>Basis</th></tr>
             <tr><td>Personalised advertising</td><td><strong>Consent</strong> — Art. 6(1)(a), collected through the dialog above</td></tr>
             <tr><td>Non-personalised advertising, fraud prevention, ad delivery</td><td><strong>Consent</strong> or <strong>legitimate interests</strong> — Art. 6(1)(f), depending on your jurisdiction</td></tr>
+            <tr><td>Usage statistics, crash reports</td><td><strong>Legitimate interests</strong> — Art. 6(1)(f): fixing errors and improving the app, including looking at ad revenue together with usage metrics to run a free, ad-supported app. Storage of usage statistics is limited according to your choice in the consent dialog.</td></tr>
             <tr><td>Play history on your device</td><td>Never reaches the developer, so there is no processing on our side</td></tr>
         </table>
     </div>
@@ -192,26 +225,31 @@
 
 <section>
     <div class="container">
-        <h2>6. International transfers</h2>
-        <p>The developer receives no data at all, so <strong>nothing is transferred to us.</strong></p>
-        <p>Google may transfer data outside the EEA (including to the United States) as part of serving ads. Google states that it relies on lawful transfer mechanisms such as the EU Standard Contractual Clauses. See the Google documents linked above.</p>
+        <h2>7. International transfers</h2>
+        <p>The developer runs no server, so <strong>no data is transferred to servers of ours.</strong></p>
+        <ul>
+            <li><strong>Usage statistics and crash reports</strong> — Google LLC processes them on the developer's behalf on Google's servers (including in the United States). They are sent over the internet from time to time while you use the app, and the items in section 4 are kept for the periods given there.</li>
+            <li><strong>Advertising</strong> — Google may transfer data outside the EEA (including to the United States) as part of serving ads.</li>
+        </ul>
+        <p>Google states that it relies on lawful transfer mechanisms such as the EU Standard Contractual Clauses. See the Google and Firebase documents linked above.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>7. How long data is kept</h2>
+        <h2>8. How long data is kept</h2>
         <ul>
-            <li><strong>The developer</strong> — nothing is kept. There is no server.</li>
+            <li><strong>The developer</strong> — keeps nothing of its own. There is no server.</li>
+            <li><strong>Usage statistics and crash reports (Firebase)</strong> — records tied to individual users in usage statistics are deleted after 2 months, and crash reports after 90 days.</li>
             <li><strong>On your device</strong> — until you uninstall the app.</li>
-            <li><strong>Google</strong> — according to Google's own retention policy. See the Google documents above.</li>
+            <li><strong>Advertising (Google)</strong> — according to Google's own retention policy. See the Google documents above.</li>
         </ul>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>8. Your rights</h2>
+        <h2>9. Your rights</h2>
         <p>If you are in the EEA or the UK, the GDPR (Art. 15–22) gives you the right to:</p>
         <ul>
             <li>access, rectify and erase your data</li>
@@ -220,14 +258,14 @@
             <li>withdraw consent at any time (processing done before you withdrew stays lawful)</li>
             <li>lodge a complaint with a supervisory authority</li>
         </ul>
-        <p><strong>Where to send a request.</strong> The developer holds none of your data, so requests to access or erase it have to go to <strong>Google</strong>, who actually holds it (see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>). If you are not sure who to ask, write to <a href="mailto:hanworld@willee.net">hanworld@willee.net</a> and we will point you in the right direction.</p>
+        <p><strong>Where to send a request.</strong> Requests about the data used for advertising have to go to <strong>Google</strong>, who actually holds it (see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>). As for usage statistics and crash reports, the developer does not know your name or contact details, so we cannot pick out a particular user's records. Uninstalling the app removes the app instance ID, so later records are no longer linked to earlier ones, and the remaining records are deleted once the retention periods above have passed. If you are not sure who to ask, write to <a href="mailto:hanworld@willee.net">hanworld@willee.net</a> and we will point you in the right direction.</p>
         <p><strong>Complaints.</strong> If you live in the EEA you may complain to your national data protection authority; in the UK, to the Information Commissioner's Office (ICO).</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>9. Children</h2>
+        <h2>10. Children</h2>
         <p>This app is <strong>not directed at children.</strong> It is listed on Google Play for users aged 13 and over. The developer does not knowingly collect personal data from children.</p>
         <p>If you are the parent or guardian of a child under 16 (13–16 depending on the member state) and have a concern about their use of this app, please write to <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>.</p>
     </div>
@@ -235,21 +273,21 @@
 
 <section>
     <div class="container">
-        <h2>10. Changes to this policy</h2>
+        <h2>11. Changes to this policy</h2>
         <p>If we change this policy we will post the new version here with a new effective date. Significant changes will also be announced in the app's update notes.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>11. Contact</h2>
+        <h2>12. Contact</h2>
         <div class="contact-box">
             <p>For questions about how your data is handled, please contact us.</p>
             <ul>
                 <li><strong>Email</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective: 2026-09-25</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective: 2026-10-16</p>
     </div>
 </section>
 

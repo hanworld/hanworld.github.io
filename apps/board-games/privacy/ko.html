@@ -102,14 +102,14 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026년 9월 25일</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026년 10월 16일</strong></p>
         <h2 style="margin-top:16px;">한눈에</h2>
         <ul>
             <li>회원가입도, 로그인도, 계정도 없습니다.</li>
-            <li>개발자는 <strong>어떤 개인정보도 수집하지 않고, 서버도 두고 있지 않습니다.</strong></li>
-            <li>기기 밖으로 나가는 것은 화면 아래 <strong>배너 광고(Google AdMob)</strong> 하나뿐입니다.</li>
-            <li>게임 기록은 <strong>기기 안에만</strong> 남고 어디로도 전송되지 않습니다.</li>
-            <li>유럽경제지역(EEA)·영국·스위스에서는 광고를 띄우기 전에 <strong>동의를 여쭙습니다.</strong></li>
+            <li>개발자는 <strong>이름·이메일 같은 개인정보를 묻지도 받지도 않고, 서버도 두고 있지 않습니다.</strong></li>
+            <li>기기 밖으로 나가는 것은 두 가지입니다. 화면 아래 <strong>배너 광고(Google AdMob)</strong>, 그리고 앱을 고치는 데 쓰는 <strong>이용 통계와 오류 보고(Google Firebase)</strong>.</li>
+            <li>게임 기록은 <strong>기기 안에만</strong> 남습니다. 어떤 게임을 어떻게 두었는지는 어디로도 보내지 않습니다.</li>
+            <li>유럽경제지역(EEA)·영국·스위스에서는 광고를 띄우기 전에 <strong>동의를 여쭙고</strong>, 고르신 내용은 이용 통계에도 적용됩니다.</li>
         </ul>
     </div>
 </section>
@@ -127,15 +127,16 @@
 
 <section>
     <div class="container">
-        <h2>2. 개발자가 수집하는 정보 — 없습니다</h2>
-        <p>이 앱에는 <strong>서버가 없습니다.</strong> 개발자는 이용자의 개인정보를 수집하지도, 전송받지도, 보관하지도 않습니다. 이름·이메일·전화번호·연락처·사진·정확한 위치를 묻지 않으며, 게임을 어떻게 두었는지도 개발자에게 전달되지 않습니다.</p>
+        <h2>2. 개발자가 받는 정보 — 개인정보는 없습니다</h2>
+        <p>이 앱에는 <strong>서버가 없습니다.</strong> 개발자는 이름·이메일·전화번호·연락처·사진·정확한 위치를 묻지 않으며, 게임을 어떻게 두었는지도 개발자에게 전달되지 않습니다.</p>
+        <p>개발자가 보는 것은 Google Firebase의 <strong>이용 통계와 오류 보고</strong>(4장)뿐입니다. 거기에도 이름이나 연락처는 없고, 개발자는 Firebase 콘솔에서 그것을 통계와 오류 목록으로만 봅니다.</p>
         <h3>기기 안에만 저장되는 것</h3>
         <table class="info-table">
             <tr><th>무엇</th><th>내용</th><th>어디에</th><th>언제 지워지나</th></tr>
             <tr><td>최근에 논 게임</td><td>게임 이름표 목록 (예: <code>omok</code>, <code>checkers</code>)</td><td>기기 내부 저장소</td><td>앱을 지우면 함께 사라집니다</td></tr>
         </table>
         <p>로비에서 최근에 논 게임을 위로 올리는 데에만 씁니다. 개인을 알아볼 수 있는 내용이 아니고, <strong>기기 밖으로 나가지 않습니다.</strong></p>
-        <p>이와 별도로 광고 SDK(Google)가 동의 기록(유럽 지역의 광고 동의 결과 등)과 광고에 필요한 식별자를 기기에 저장합니다. 개발자는 그 내용을 볼 수 없습니다.</p>
+        <p>이와 별도로 광고 SDK(Google)가 동의 기록(유럽 지역의 광고 동의 결과 등)과 광고에 필요한 식별자를 기기에 저장하고, Firebase SDK가 앱 인스턴스 ID와 아직 보내지 못한 이용 통계·오류 보고를 기기에 잠시 저장합니다. 개발자는 기기에 저장된 그 내용을 볼 수 없습니다.</p>
     </div>
 </section>
 
@@ -162,29 +163,61 @@
 
 <section>
     <div class="container">
-        <h2>4. 동의 — 주고, 바꾸고, 거두기</h2>
-        <p>유럽경제지역·영국·스위스에 계신 분께는 <strong>앱을 처음 켤 때 동의 창</strong>이 뜹니다. Google이 인증한 동의 관리 도구(UMP)로 여쭙습니다.</p>
+        <h2>4. 이용 통계와 오류 보고 (Google Firebase)</h2>
+        <p>앱은 앱을 고치는 데 필요한 만큼만 아래 정보를 Google Firebase로 보냅니다. <strong>이름·이메일 같은 개인정보와 게임 기록(어떤 게임을 어떻게 두었는지)은 보내지 않습니다.</strong></p>
+        <h3>4.1 이용 통계 — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>예</th><th>무엇에 쓰나</th></tr>
+            <tr><td>앱 인스턴스 ID</td><td>앱을 설치할 때 만들어지는 무작위 ID</td><td>같은 기기가 다시 왔는지(재방문율) 세기</td></tr>
+            <tr><td>앱 사용</td><td>앱 실행, 사용 시간, 앱 업데이트, 광고 노출</td><td>재방문율과 사용 시간 파악</td></tr>
+            <tr><td>기기·앱 정보</td><td>기종, Android 버전, 앱 버전, 언어, 나라(IP 주소로 짐작. IP 주소 자체는 저장하지 않음)</td><td>기기별 문제 찾기, 언어별 이용 파악</td></tr>
+        </table>
+        <ul>
+            <li><strong>광고 ID는 이용 통계에 쓰지 않습니다.</strong> 광고 ID는 Google AdMob 광고(3장)에만 쓰입니다.</li>
+            <li>이용자 단위 기록은 <strong>2개월</strong> 뒤 자동으로 지워집니다(Google 애널리틱스 데이터 보관 설정). 그 뒤에는 누구의 것인지 알 수 없는 집계 숫자만 남습니다.</li>
+            <li>유럽경제지역·영국·스위스에서는 앱을 처음 켤 때 뜨는 동의 창(5장)에서 고르신 내용이 광고와 이용 통계 양쪽에 적용됩니다.</li>
+        </ul>
+        <h3>4.2 오류 보고 — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>무엇을</th><th>무엇에 쓰나</th></tr>
+            <tr><td>오류가 난 코드 위치(스택 트레이스), 오류 시각</td><td>오류 고치기</td></tr>
+            <tr><td>기종, Android 버전, 앱 버전, 메모리·저장 공간 상태</td><td>어떤 기기에서 생기는지 찾기</td></tr>
+            <tr><td>Crashlytics 설치 ID (무작위 ID)</td><td>같은 오류가 몇 대에서 생기는지 세기</td></tr>
+        </table>
+        <p>오류 보고는 <strong>90일</strong> 뒤 자동으로 지워집니다.</p>
+        <p>Google은 이 정보를 <strong>개발자를 대신해</strong> 처리하며, Google의 서버(미국 등 대한민국과 유럽경제지역 밖 포함)에서 처리합니다. 자세한 내용은 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보 보호</a>를 보십시오.</p>
+        <h3>4.3 광고와의 연결</h3>
+        <p>이용 통계를 광고(Google AdMob)와 연결해 두었습니다. 개발자는 광고 수익을 이용 지표(이용자 수, 재방문 등)와 함께 봅니다. Google은 연결된 이용 통계를 AdMob 기능을 개선하고 광고 수익을 높이는 데 쓸 수 있습니다. 광고 ID는 여기에도 쓰지 않습니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 동의 — 주고, 바꾸고, 거두기</h2>
+        <p>유럽경제지역·영국·스위스에 계신 분께는 <strong>앱을 처음 켤 때 동의 창</strong>이 뜹니다. Google이 인증한 동의 관리 도구(UMP)로 여쭙습니다. 고르신 내용은 <strong>광고와 이용 통계 양쪽에</strong> 적용됩니다.</p>
         <ul>
             <li><strong>동의하시면</strong> — 관심사에 맞춘 개인화 광고가 나올 수 있습니다.</li>
-            <li><strong>동의하지 않으셔도</strong> — 앱은 똑같이 다 쓰실 수 있습니다. 광고는 개인화되지 않은 것으로 나옵니다. 다만 <strong>이 경우에도</strong> 광고를 띄우고, 같은 광고가 너무 자주 나오지 않게 하고, 사기를 막기 위해 최소한의 정보(IP 주소, 대략적 위치, 기기 정보, 광고 식별자 등)는 처리됩니다. 개인화되지 않은 광고가 아무것도 처리하지 않는다는 뜻은 아닙니다.</li>
+            <li><strong>동의하지 않으셔도</strong> — 앱은 똑같이 다 쓰실 수 있습니다. 광고는 개인화되지 않은 것으로 나오고, 이용 통계의 저장도 제한됩니다. 다만 <strong>이 경우에도</strong> 광고를 띄우고, 같은 광고가 너무 자주 나오지 않게 하고, 사기를 막기 위해 최소한의 정보(IP 주소, 대략적 위치, 기기 정보, 광고 식별자 등)는 처리됩니다. 개인화되지 않은 광고가 아무것도 처리하지 않는다는 뜻은 아닙니다.</li>
         </ul>
+        <p>오류 보고(4.2)는 이 선택과 상관없이 보냅니다. 앱이 멈추거나 오류가 나는 것을 고치는 데 필요하기 때문입니다(6장).</p>
         <h3>마음이 바뀌셨다면</h3>
         <table class="info-table">
             <tr><th>방법</th><th>어떻게</th></tr>
             <tr><td>앱에서</td><td>로비 오른쪽 위 <strong>앱 정보(ⓘ) → 광고 동의</strong> — 언제든 동의 창을 다시 열어 바꾸실 수 있습니다</td></tr>
             <tr><td>기기에서</td><td>Android 설정 → 개인정보 보호 → 광고 → 광고 ID 재설정 또는 삭제</td></tr>
-            <tr><td>그만두기</td><td>앱을 지우면 기기에 남은 게임 기록도 함께 사라집니다</td></tr>
+            <tr><td>그만두기</td><td>앱을 지우면 기기에 남은 게임 기록과 앱 인스턴스 ID도 함께 사라집니다</td></tr>
         </table>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>5. 처리의 법적 근거 (GDPR 제6조)</h2>
+        <h2>6. 처리의 법적 근거 (GDPR 제6조)</h2>
         <table class="info-table">
             <tr><th>무엇을</th><th>근거</th></tr>
             <tr><td>개인화 광고</td><td><strong>동의</strong> (제6조 제1항 (a)). 위 동의 창에서 받습니다.</td></tr>
             <tr><td>개인화되지 않은 광고, 사기·남용 방지, 광고 전송</td><td>해당 지역 법에 따라 <strong>동의</strong> 또는 <strong>정당한 이익</strong> (제6조 제1항 (f))</td></tr>
+            <tr><td>이용 통계, 오류 보고</td><td><strong>정당한 이익</strong> (제6조 제1항 (f)). 앱의 오류를 고치고 앱을 개선하기 위해서입니다. 무료 앱을 광고로 운영하려고 광고 수익을 이용 지표와 함께 보는 것도 포함합니다. 이용 통계는 동의 창의 선택에 따라 저장이 제한됩니다.</td></tr>
             <tr><td>기기 안의 게임 기록</td><td>개발자에게 전달되지 않으므로 개발자 쪽 처리가 없습니다</td></tr>
         </table>
     </div>
@@ -192,26 +225,31 @@
 
 <section>
     <div class="container">
-        <h2>6. 국외 이전</h2>
-        <p>개발자는 어떤 데이터도 받지 않으므로, <strong>개발자에게로의 국외 이전은 없습니다.</strong></p>
-        <p>Google은 광고 처리 과정에서 데이터를 유럽경제지역 밖(미국 등)으로 옮길 수 있습니다. Google은 이때 유럽연합 표준계약조항(SCC) 등 법이 인정하는 이전 수단을 사용한다고 밝히고 있습니다. 자세한 내용은 위 Google 문서를 보십시오.</p>
+        <h2>7. 국외 이전</h2>
+        <p>개발자는 서버가 없으므로 <strong>개발자의 서버로 옮겨지는 데이터는 없습니다.</strong></p>
+        <ul>
+            <li><strong>이용 통계·오류 보고</strong> — Google LLC가 개발자를 대신해 Google의 서버(미국 등)에서 처리합니다. 앱을 쓰는 동안 인터넷으로 수시로 보내지며, 4장의 항목을 4장의 기간 동안 보관합니다.</li>
+            <li><strong>광고</strong> — Google은 광고 처리 과정에서 데이터를 유럽경제지역 밖(미국 등)으로 옮길 수 있습니다.</li>
+        </ul>
+        <p>Google은 이때 유럽연합 표준계약조항(SCC) 등 법이 인정하는 이전 수단을 사용한다고 밝히고 있습니다. 자세한 내용은 위 Google·Firebase 문서를 보십시오.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>7. 얼마나 오래 보관하나</h2>
+        <h2>8. 얼마나 오래 보관하나</h2>
         <ul>
-            <li><strong>개발자</strong> — 보관하는 것이 없습니다. 서버가 없습니다.</li>
+            <li><strong>개발자</strong> — 서버가 없어 따로 보관하는 것이 없습니다.</li>
+            <li><strong>이용 통계·오류 보고(Firebase)</strong> — 이용 통계의 이용자 단위 기록은 2개월, 오류 보고는 90일 뒤 자동으로 지워집니다.</li>
             <li><strong>기기 안</strong> — 앱을 지울 때까지.</li>
-            <li><strong>Google</strong> — Google의 보관 정책을 따릅니다. 위 Google 문서를 보십시오.</li>
+            <li><strong>광고(Google)</strong> — Google의 보관 정책을 따릅니다. 위 Google 문서를 보십시오.</li>
         </ul>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>8. 이용자의 권리</h2>
+        <h2>9. 이용자의 권리</h2>
         <p>유럽경제지역·영국에 계신 분은 GDPR(제15~22조)에 따라 다음 권리를 가집니다.</p>
         <ul>
             <li>열람, 정정, 삭제</li>
@@ -220,14 +258,14 @@
             <li>동의를 언제든 거둘 권리 (거두기 전까지의 처리는 유효합니다)</li>
             <li>감독기관에 민원을 제기할 권리</li>
         </ul>
-        <p><strong>어디에 요청해야 하나.</strong> 개발자는 여러분의 데이터를 하나도 갖고 있지 않으므로, 열람·삭제 같은 요청은 실제 데이터를 쥔 <strong>Google</strong>에 하셔야 합니다 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 참고). 무엇을 어디에 요청해야 할지 모르시겠으면 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>로 물어보십시오. 아는 대로 안내해 드립니다.</p>
+        <p><strong>어디에 요청해야 하나.</strong> 광고에 쓰이는 데이터는 실제로 그것을 쥔 <strong>Google</strong>에 요청하셔야 합니다(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 참고). 이용 통계와 오류 보고는, 개발자가 이름이나 연락처를 모르므로 특정 이용자의 기록을 찾아낼 수 없습니다. 앱을 지우면 앱 인스턴스 ID가 사라져 그 뒤의 기록과 이어지지 않고, 남은 기록은 위 보관 기간이 지나면 지워집니다. 무엇을 어디에 요청해야 할지 모르시겠으면 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>로 물어보십시오. 아는 대로 안내해 드립니다.</p>
         <p><strong>민원.</strong> 유럽경제지역 거주자는 거주국의 개인정보 감독기관에, 영국 거주자는 정보위원회(ICO)에 민원을 제기하실 수 있습니다. 대한민국에서는 개인정보침해 신고센터(privacy.kisa.or.kr, 국번 없이 118)에 신고하실 수 있습니다.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>9. 아동</h2>
+        <h2>10. 아동</h2>
         <p>이 앱은 <strong>아동을 대상으로 하지 않습니다.</strong> Google Play에도 만 13세 이상 이용자용으로 등록되어 있습니다. 개발자는 아동의 개인정보를 알면서 수집하지 않습니다.</p>
         <p>만 16세 미만(회원국에 따라 13~16세) 아동의 보호자께서 자녀가 이 앱을 쓰는 것이 걱정되시면, <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>로 연락 주십시오.</p>
     </div>
@@ -235,21 +273,21 @@
 
 <section>
     <div class="container">
-        <h2>10. 방침이 바뀌면</h2>
+        <h2>11. 방침이 바뀌면</h2>
         <p>이 방침을 고치면 이 페이지에 새 시행일과 함께 올립니다. 크게 바뀔 때는 앱 업데이트 안내로도 알려 드립니다.</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>11. 문의</h2>
+        <h2>12. 문의</h2>
         <div class="contact-box">
             <p>개인정보 처리에 관한 문의는 아래로 연락해 주세요.</p>
             <ul>
                 <li><strong>이메일</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026년 9월 25일</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026년 10월 16일</p>
     </div>
 </section>
 

@@ -102,14 +102,14 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-09-25</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-16</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。</li>
-            <li>开发者<strong>不收集任何个人信息，也没有服务器。</strong></li>
-            <li>唯一离开设备的，只有屏幕底部的<strong>横幅广告（Google AdMob）</strong>。</li>
-            <li>游戏记录<strong>只留在设备内</strong>，不会被发送到任何地方。</li>
-            <li>在欧洲经济区（EEA）、英国和瑞士，我们会在展示广告前<strong>征求您的同意</strong>。</li>
+            <li>开发者<strong>不会询问也不会接收您的姓名、邮箱等个人信息，也没有服务器。</strong></li>
+            <li>离开设备的只有两样：屏幕底部的<strong>横幅广告（Google AdMob）</strong>，以及用于改进应用的<strong>使用统计和错误报告（Google Firebase）</strong>。</li>
+            <li>游戏记录<strong>只留在设备内</strong>。您玩了哪些游戏、怎么下的棋，不会被发送到任何地方。</li>
+            <li>在欧洲经济区（EEA）、英国和瑞士，我们会在展示广告前<strong>征求您的同意</strong>，您的选择也同样适用于使用统计。</li>
         </ul>
     </div>
 </section>
@@ -127,15 +127,16 @@
 
 <section>
     <div class="container">
-        <h2>2. 开发者收集的信息 — 没有</h2>
-        <p>这个应用<strong>没有服务器。</strong> 开发者不收集、不接收、不保存任何个人信息。我们不会询问您的姓名、邮箱、电话、通讯录、照片或精确位置，您怎么下棋也不会传到开发者这里。</p>
+        <h2>2. 开发者收到的信息 — 没有个人信息</h2>
+        <p>这个应用<strong>没有服务器。</strong> 我们不会询问您的姓名、邮箱、电话、通讯录、照片或精确位置，您怎么下棋也不会传到开发者这里。</p>
+        <p>开发者能看到的只有 Google Firebase 中的<strong>使用统计和错误报告</strong>（第4节）。其中同样没有姓名或联系方式，开发者只在 Firebase 控制台中以统计数字和错误列表的形式查看。</p>
         <h3>只保存在设备内的内容</h3>
         <table class="info-table">
             <tr><th>是什么</th><th>内容</th><th>保存在哪</th><th>何时删除</th></tr>
             <tr><td>最近玩过的游戏</td><td>游戏标识的列表（如 <code>omok</code>、<code>checkers</code>）</td><td>设备内部存储</td><td>卸载应用时一并删除</td></tr>
         </table>
         <p>它只用于一件事：把您最近玩过的游戏排到大厅上方。它无法识别任何人，而且<strong>从不离开您的设备</strong>。</p>
-        <p>此外，广告 SDK（Google）会在设备上保存同意记录（如在欧洲地区所作的广告同意选择）以及广告所需的标识符。开发者无法查看其内容。</p>
+        <p>此外，广告 SDK（Google）会在设备上保存同意记录（如在欧洲地区所作的广告同意选择）以及广告所需的标识符；Firebase SDK 会在设备上暂存应用实例 ID 以及尚未发送的使用统计和错误报告。开发者无法查看设备上保存的这些内容。</p>
     </div>
 </section>
 
@@ -162,29 +163,61 @@
 
 <section>
     <div class="container">
-        <h2>4. 同意 — 给予、更改、撤回</h2>
-        <p>如果您身处欧洲经济区、英国或瑞士，<strong>首次打开应用时会出现同意窗口</strong>，通过 Google 认证的同意管理工具（UMP）向您征求。</p>
+        <h2>4. 使用统计和错误报告（Google Firebase）</h2>
+        <p>应用只把改进应用所需的以下信息发送到 Google Firebase。<strong>不会发送姓名、邮箱等个人信息，也不会发送游戏记录（玩了哪些游戏、怎么下的棋）。</strong></p>
+        <h3>4.1 使用统计 — Google Analytics for Firebase</h3>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
+            <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备是否再次使用（留存率）</td></tr>
+            <tr><td>应用使用</td><td>应用启动、使用时长、应用更新、广告展示</td><td>了解留存率和使用时长</td></tr>
+            <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
+        </table>
+        <ul>
+            <li><strong>使用统计不使用您的广告 ID。</strong> 广告 ID 只用于 Google AdMob 广告（第3节）。</li>
+            <li>按用户的记录会在<strong>2个月</strong>后自动删除（Google Analytics 数据保留设置）。之后只留下无法对应到任何人的汇总数字。</li>
+            <li>在欧洲经济区、英国和瑞士，您在首次打开应用时出现的同意窗口（第5节）中所作的选择，同时适用于广告和使用统计。</li>
+        </ul>
+        <h3>4.2 错误报告 — Firebase Crashlytics</h3>
+        <table class="info-table">
+            <tr><th>处理什么</th><th>用于什么</th></tr>
+            <tr><td>出错的代码位置（堆栈跟踪）、出错时间</td><td>修复错误</td></tr>
+            <tr><td>机型、Android 版本、应用版本、内存与存储空间状态</td><td>找出哪些设备受到影响</td></tr>
+            <tr><td>Crashlytics 安装 ID（随机 ID）</td><td>统计同一错误在多少台设备上发生</td></tr>
+        </table>
+        <p>错误报告会在<strong>90天</strong>后自动删除。</p>
+        <p>Google <strong>代表开发者</strong>在 Google 的服务器上处理这些信息，包括韩国和欧洲经济区以外的地区（例如美国）。详情请参阅 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 中的隐私与安全</a>。</p>
+        <h3>4.3 与广告的关联</h3>
+        <p>使用统计已与广告（Google AdMob）关联，开发者会把广告收入与使用指标（用户数、回访等）放在一起查看。Google 可能会用关联的使用统计来改进 AdMob 的功能、提高广告收入。这里同样不使用广告 ID。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 同意 — 给予、更改、撤回</h2>
+        <p>如果您身处欧洲经济区、英国或瑞士，<strong>首次打开应用时会出现同意窗口</strong>，通过 Google 认证的同意管理工具（UMP）向您征求。您的选择<strong>同时适用于广告和使用统计</strong>。</p>
         <ul>
             <li><strong>如果您同意</strong> — 可能会看到根据兴趣定制的个性化广告。</li>
-            <li><strong>如果您不同意</strong> — 应用照常使用，功能一样不少。广告会变成非个性化的。但请注意，<strong>即便如此</strong>，为了投放广告、避免同一广告出现过于频繁以及防止欺诈，仍会处理最少量的信息（IP 地址、大致位置、设备信息、广告标识符等）。“非个性化”不等于“什么都不处理”。</li>
+            <li><strong>如果您不同意</strong> — 应用照常使用，功能一样不少。广告会变成非个性化的，使用统计的保存也会受到限制。但请注意，<strong>即便如此</strong>，为了投放广告、避免同一广告出现过于频繁以及防止欺诈，仍会处理最少量的信息（IP 地址、大致位置、设备信息、广告标识符等）。“非个性化”不等于“什么都不处理”。</li>
         </ul>
+        <p>错误报告（4.2）不受这一选择影响，照常发送，因为修复应用的卡死和错误需要它（第6节）。</p>
         <h3>如果您改变主意</h3>
         <table class="info-table">
             <tr><th>在哪里</th><th>怎么做</th></tr>
             <tr><td>在应用中</td><td>大厅右上角的<strong>应用信息（ⓘ）→ 广告同意</strong> — 随时重新打开同意窗口并更改您的选择</td></tr>
             <tr><td>在设备上</td><td>Android 设置 → 隐私 → 广告 → 重置或删除广告 ID</td></tr>
-            <tr><td>彻底停止</td><td>卸载应用，设备上的游戏记录也会一并消失</td></tr>
+            <tr><td>彻底停止</td><td>卸载应用，设备上的游戏记录和应用实例 ID 也会一并消失</td></tr>
         </table>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>5. 处理的法律依据（GDPR 第6条）</h2>
+        <h2>6. 处理的法律依据（GDPR 第6条）</h2>
         <table class="info-table">
             <tr><th>处理什么</th><th>依据</th></tr>
             <tr><td>个性化广告</td><td><strong>同意</strong>（第6条第1款(a)项）。通过上述同意窗口取得。</td></tr>
             <tr><td>非个性化广告、防欺诈、广告投放</td><td>依所在地区法律，为<strong>同意</strong>或<strong>正当利益</strong>（第6条第1款(f)项）</td></tr>
+            <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第6条第1款(f)项）：为了修复应用的错误并改进应用，也包括为了以广告运营免费应用，而把广告收入与使用指标放在一起查看。使用统计的保存会依您在同意窗口中的选择受到限制。</td></tr>
             <tr><td>设备内的游戏记录</td><td>不会传到开发者处，因此开发者一方不存在处理行为</td></tr>
         </table>
     </div>
@@ -192,26 +225,31 @@
 
 <section>
     <div class="container">
-        <h2>6. 跨境传输</h2>
-        <p>开发者不接收任何数据，因此<strong>不存在向开发者的跨境传输。</strong></p>
-        <p>Google 在投放广告的过程中，可能会将数据传输至欧洲经济区之外（包括美国）。Google 声明其依据欧盟标准合同条款（SCC）等法律认可的传输机制进行。详情请参阅上方 Google 的文档。</p>
+        <h2>7. 跨境传输</h2>
+        <p>开发者没有服务器，因此<strong>没有数据被传输到开发者的服务器。</strong></p>
+        <ul>
+            <li><strong>使用统计和错误报告</strong> — 由 Google LLC 代表开发者在 Google 的服务器（包括美国）上处理。在您使用应用期间通过网络随时发送，第4节中的项目按第4节所述的期限保存。</li>
+            <li><strong>广告</strong> — Google 在投放广告的过程中，可能会将数据传输至欧洲经济区之外（包括美国）。</li>
+        </ul>
+        <p>Google 声明其依据欧盟标准合同条款（SCC）等法律认可的传输机制进行。详情请参阅上方 Google 和 Firebase 的文档。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>7. 保存多久</h2>
+        <h2>8. 保存多久</h2>
         <ul>
-            <li><strong>开发者</strong> — 什么都不保存。没有服务器。</li>
+            <li><strong>开发者</strong> — 没有服务器，自己不保存任何东西。</li>
+            <li><strong>使用统计和错误报告（Firebase）</strong> — 使用统计中按用户的记录在2个月后、错误报告在90天后自动删除。</li>
             <li><strong>设备内</strong> — 直到您卸载应用。</li>
-            <li><strong>Google</strong> — 遵循 Google 自己的保存政策。请参阅上方 Google 的文档。</li>
+            <li><strong>广告（Google）</strong> — 遵循 Google 自己的保存政策。请参阅上方 Google 的文档。</li>
         </ul>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>8. 您的权利</h2>
+        <h2>9. 您的权利</h2>
         <p>如果您身处欧洲经济区或英国，GDPR（第15至22条）赋予您以下权利：</p>
         <ul>
             <li>访问、更正、删除</li>
@@ -220,14 +258,14 @@
             <li>随时撤回同意（撤回之前的处理仍然有效）</li>
             <li>向监管机构投诉</li>
         </ul>
-        <p><strong>该向谁提出。</strong> 开发者手上没有您的任何数据，因此访问或删除的请求需要向真正持有数据的 <strong>Google</strong> 提出（参见 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。如果您不确定该找谁，请写信到 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>，我们会尽力为您指路。</p>
+        <p><strong>该向谁提出。</strong> 与广告有关的数据，需要向真正持有数据的 <strong>Google</strong> 提出（参见 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。至于使用统计和错误报告，开发者并不知道您的姓名或联系方式，因此无法找出特定用户的记录。卸载应用后，应用实例 ID 随之消失，之后的记录不会再与之前的记录相连，剩下的记录也会在上述保存期限届满后删除。如果您不确定该找谁，请写信到 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>，我们会尽力为您指路。</p>
         <p><strong>投诉。</strong> 身处欧洲经济区的用户可向所在国的数据保护监管机构投诉；身处英国的用户可向信息专员办公室（ICO）投诉。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>9. 儿童</h2>
+        <h2>10. 儿童</h2>
         <p>本应用<strong>不面向儿童。</strong> 在 Google Play 上按面向 13 岁及以上用户登记。开发者不会在知情的情况下收集儿童的个人信息。</p>
         <p>如果您是 16 岁以下（依成员国不同为 13 至 16 岁）儿童的家长或监护人，对孩子使用本应用有所顾虑，请写信到 <a href="mailto:hanworld@willee.net">hanworld@willee.net</a>。</p>
     </div>
@@ -235,21 +273,21 @@
 
 <section>
     <div class="container">
-        <h2>10. 政策变更</h2>
+        <h2>11. 政策变更</h2>
         <p>如果我们修改本政策，会连同新的生效日期一并发布在本页面。重大变更时也会通过应用的更新说明告知。</p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>11. 联系我们</h2>
+        <h2>12. 联系我们</h2>
         <div class="contact-box">
             <p>有关个人信息处理的咨询，请通过以下方式联系我们。</p>
             <ul>
                 <li><strong>邮箱</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-09-25</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-16</p>
     </div>
 </section>
 
