@@ -53,6 +53,11 @@
         section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
         section li strong { color: #1A365D; }
 
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
         .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
         .contact-box p { margin-bottom: 8px; }
         .contact-box ul { margin-bottom: 0; }
@@ -97,7 +102,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">Effective date: May 31, 2026</p>
+        <p style="color:#64748b; font-size:0.9rem;">Effective date: October 16, 2026</p>
         <p>Willee Project (hereinafter the "Developer") values the personal information of users of TarotYo (hereinafter the "App") and complies with applicable laws, including Korea's Personal Information Protection Act (PIPA) and the EU General Data Protection Regulation (GDPR). This policy explains what information the App processes and how.</p>
     </div>
 </section>
@@ -118,7 +123,7 @@
         <ul>
             <li>The App <strong>has no sign-up and does not operate its own servers.</strong> It does not directly collect personally identifying information such as your name, email, or phone number.</li>
             <li>App settings are stored <strong>only on the user's device.</strong></li>
-            <li>The only path by which data is transmitted externally is <strong>advertising (Google AdMob).</strong></li>
+            <li>Data is transmitted externally through only two paths: <strong>advertising (Google AdMob)</strong> and <strong>usage statistics and crash reports (Google Firebase)</strong>, which we use to fix and improve the App. Your questions, the cards you draw, and prompts are not sent anywhere.</li>
         </ul>
     </div>
 </section>
@@ -148,6 +153,34 @@
             <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
             <li>How Google uses data from partners' sites and apps: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
         </ul>
+        <h3>3.4 Usage statistics (Google Analytics for Firebase)</h3>
+        <p>The App sends the information below to Google Firebase, limited to what we need to fix and improve the App. <strong>It does not send personal information such as your name or email, or your questions, the cards you draw, or prompts</strong>, and the Developer sees this information only as statistics in the Firebase console.</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>Examples</th><th>Purpose</th></tr>
+            <tr><td>App instance ID</td><td>A random ID created when the App is installed</td><td>Counting whether the same device comes back (retention)</td></tr>
+            <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and time spent</td></tr>
+            <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
+        </table>
+        <ul>
+            <li><strong>Usage statistics do not use your advertising ID.</strong> The advertising ID is used only for Google AdMob ads.</li>
+            <li>Data at the level of individual users is <strong>deleted automatically after 2 months</strong> (Google Analytics data retention setting). After that, only aggregate numbers that cannot be linked to anyone remain.</li>
+            <li>In the European Economic Area (EEA), the UK and Switzerland, a consent window appears the first time you open the App, and your choices apply to both ads and usage statistics.</li>
+        </ul>
+        <h3>3.5 Crash reports (Firebase Crashlytics)</h3>
+        <p>When an error occurs in the App, the App sends the information below to Google Firebase.</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>Purpose</th></tr>
+            <tr><td>Where in the code the error happened (stack trace), time of the error</td><td>Fixing the error</td></tr>
+            <tr><td>Device model, Android version, app version, memory and storage status</td><td>Finding which devices are affected</td></tr>
+            <tr><td>Crashlytics installation ID (a random ID)</td><td>Counting how many devices hit the same error</td></tr>
+        </table>
+        <p>Crash reports are <strong>deleted automatically after 90 days</strong>.</p>
+        <p>Google processes the information in 3.4 and 3.5 <strong>on the Developer's behalf (as a processor)</strong> on Google's servers, including outside Korea and the EEA (for example, in the United States).</p>
+        <ul>
+            <li>Privacy and Security in Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+        </ul>
+        <h3>3.6 Usage statistics linked to ads</h3>
+        <p>Usage statistics are linked to ads (Google AdMob), so the Developer can see ad revenue together with usage metrics (number of users, return visits, etc.). Google may use the linked usage statistics to improve AdMob features and the App's ad revenue. The advertising ID is not used here either.</p>
     </div>
 </section>
 
@@ -157,6 +190,7 @@
         <ul>
             <li>Serving and measuring ads to provide a free service</li>
             <li>Providing App features (saving settings, displaying language, etc.)</li>
+            <li>Fixing errors in and improving the App (usage statistics and crash reports)</li>
             <li>Maintaining service quality and preventing fraudulent use (advertising partners)</li>
         </ul>
     </div>
@@ -169,6 +203,7 @@
         <ul>
             <li><strong>Consent (Article 6(1)(a))</strong>: Ad personalization and use of advertising identifiers. On first launch, consent is requested through a consent management platform (Google UMP), and consent may be withdrawn at any time.</li>
             <li><strong>Legitimate interests (Article 6(1)(f))</strong>: Serving non-personalized ads, security, and prevention of fraudulent use.</li>
+            <li><strong>Legitimate interests (Article 6(1)(f))</strong>: Usage statistics and crash reports, to fix errors in the App and improve it. This also covers viewing ad revenue together with usage metrics, to keep this free App running on ads. Storage for usage statistics is limited according to your choice in the consent window.</li>
             <li>Storing local settings on the device serves to provide the service the user has requested.</li>
         </ul>
     </div>
@@ -177,9 +212,11 @@
 <section>
     <div class="container">
         <h2>6. Third-Party Provision and Advertising Partners</h2>
-        <p>The App does not sell personal information. The following partner is involved in providing advertising.</p>
+        <p>The App does not sell personal information. The following services are involved in providing advertising and improving the App.</p>
         <ul>
             <li><strong>Google AdMob / Google advertising partners</strong> — Serving and measuring ads</li>
+            <li><strong>Google Analytics for Firebase</strong> — Usage statistics (3.4)</li>
+            <li><strong>Firebase Crashlytics</strong> — Crash reports (3.5)</li>
         </ul>
         <p>EEA users can review the list of advertising partners and the purposes of processing on the consent screen shown on first launch.</p>
     </div>
@@ -188,7 +225,7 @@
 <section>
     <div class="container">
         <h2>7. International Data Transfers</h2>
-        <p>Google may transfer users' information outside the EEA or the user's country of residence (for example, to the United States) for processing. In such cases, Google applies lawful safeguards such as the EU Standard Contractual Clauses (SCC). For details, please refer to the Google Privacy Policy above.</p>
+        <p>Google may transfer users' information related to advertising, usage statistics, and crash reports outside the EEA or the user's country of residence (for example, to the United States) for processing. In such cases, Google applies lawful safeguards such as the EU Standard Contractual Clauses (SCC). For details, please refer to the Google Privacy Policy and the Firebase privacy information above.</p>
     </div>
 </section>
 
@@ -197,6 +234,8 @@
         <h2>8. Retention Period</h2>
         <ul>
             <li>The App does not store personal information on its own. Local settings on the device remain on the device until the user uninstalls the App.</li>
+            <li>Usage statistics: User-level data is automatically deleted after 2 months.</li>
+            <li>Crash reports: Automatically deleted after 90 days.</li>
             <li>The retention period for information processed through advertising follows Google's policies.</li>
         </ul>
     </div>
@@ -207,10 +246,11 @@
         <h2>9. Rights of Users (Data Subjects)</h2>
         <p>Users have the following rights under applicable law. For users to whom the GDPR applies, these include the right of access, the right to rectification, the right to erasure ("right to be forgotten"), the right to restriction of processing, the right to object, the right to data portability, and the right to withdraw consent.</p>
         <ul>
-            <li><strong>Changing/withdrawing consent to ad personalization</strong>: You can change this at any time under the App's <strong>Settings &gt; Manage Ad Consent.</strong></li>
+            <li><strong>Changing/withdrawing consent for ads and usage statistics</strong>: You can change this at any time under the App's <strong>Settings &gt; Manage Ad Consent</strong> (shown in the EEA, the UK and Switzerland, where the consent window appears).</li>
             <li><strong>Resetting/deleting the advertising identifier</strong>: You can reset or delete the advertising ID in your device settings (Android: Settings &gt; Privacy &gt; Ads).</li>
             <li>To exercise other rights or to make an inquiry: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
         </ul>
+        <p>The Developer does not know your name or contact details, so we cannot find a specific person's records in the usage statistics or crash reports. When you uninstall the App, its app instance ID and Crashlytics installation ID are removed, so later data cannot be linked to earlier data, and the remaining data is deleted after the retention periods in Section 8.</p>
     </div>
 </section>
 
@@ -244,7 +284,7 @@
                 <li><strong>Email</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: May 31, 2026</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: October 16, 2026</p>
     </div>
 </section>
 

@@ -53,6 +53,11 @@
         section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
         section li strong { color: #1A365D; }
 
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
         .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
         .contact-box p { margin-bottom: 8px; }
         .contact-box ul { margin-bottom: 0; }
@@ -97,7 +102,7 @@
 
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;">発効日: 2026年5月31日</p>
+        <p style="color:#64748b; font-size:0.9rem;">発効日: 2026年10月16日</p>
         <p>Willee Project(以下「開発者」)は、タロヨ(TarotYo、以下「アプリ」)を利用される方の個人情報を大切に取り扱い、韓国個人情報保護法(PIPA)および EU 一般データ保護規則(GDPR)などの関連法令を遵守します。本ポリシーは、アプリがどのような情報をどのように取り扱うかを説明します。</p>
     </div>
 </section>
@@ -118,7 +123,7 @@
         <ul>
             <li>アプリには<strong>会員登録がなく、独自のサーバーを運用していません。</strong>氏名・メール・電話番号といった個人を識別する情報を直接収集することはありません。</li>
             <li>アプリの設定値は<strong>利用者の端末内にのみ</strong>保存されます。</li>
-            <li>外部へデータが渡される唯一の経路は<strong>広告(Google AdMob)</strong>です。</li>
+            <li>外部へデータが渡される経路は、<strong>広告(Google AdMob)</strong>と、アプリの修正と改善に使う<strong>利用統計・エラー報告(Google Firebase)</strong>の2つです。質問の内容・引いたカード・プロンプトはどこにも送信しません。</li>
         </ul>
     </div>
 </section>
@@ -148,6 +153,34 @@
             <li>Google プライバシーポリシー: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
             <li>Google がパートナーのサイト・アプリでデータを使用する方法: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
         </ul>
+        <h3>3.4 利用統計 (Google Analytics for Firebase)</h3>
+        <p>アプリは、アプリの修正と改善に必要な分だけ、以下の情報を Google Firebase に送信します。<strong>氏名やメールアドレスなどの個人情報と、質問の内容・引いたカード・プロンプトは送信せず</strong>、開発者はこれらの情報を Firebase コンソールで統計としてのみ見ます。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>例</th><th>利用目的</th></tr>
+            <tr><td>アプリインスタンス ID</td><td>アプリのインストール時に作られるランダムな ID</td><td>同じ端末で再び使われたか(継続率)を数える</td></tr>
+            <tr><td>アプリの利用</td><td>アプリの起動、利用時間、アプリのアップデート</td><td>継続率と利用時間の把握</td></tr>
+            <tr><td>端末・アプリの情報</td><td>機種、Android のバージョン、アプリのバージョン、言語、国(IP アドレスから推定。IP アドレスそのものは保存しません)</td><td>機種ごとの不具合を見つける、言語ごとの利用の把握</td></tr>
+        </table>
+        <ul>
+            <li><strong>利用統計には広告 ID を使いません。</strong>広告 ID は Google AdMob の広告にだけ使われます。</li>
+            <li>利用者単位の記録は<strong>2か月</strong>で自動的に削除されます(Google アナリティクスのデータ保持の設定)。その後は、誰のものか分からない集計の数字だけが残ります。</li>
+            <li>欧州経済領域(EEA)・英国・スイスでは、アプリを初めて開いたときに同意画面が表示され、お選びいただいた内容は広告と利用統計の両方に適用されます。</li>
+        </ul>
+        <h3>3.5 エラー報告 (Firebase Crashlytics)</h3>
+        <p>アプリでエラーが起きると、以下の情報を Google Firebase に送信します。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>利用目的</th></tr>
+            <tr><td>エラーが起きたコードの位置(スタックトレース)、エラーの時刻</td><td>エラーの修正</td></tr>
+            <tr><td>機種、Android のバージョン、アプリのバージョン、メモリと空き容量の状態</td><td>どの端末で起きるかを見つける</td></tr>
+            <tr><td>Crashlytics のインストール ID(ランダムな ID)</td><td>同じエラーが何台で起きたかを数える</td></tr>
+        </table>
+        <p>エラー報告は<strong>90日</strong>で自動的に削除されます。</p>
+        <p>3.4 と 3.5 の情報は、<strong>Google が開発者に代わって(処理者として)</strong>、Google のサーバー(韓国と欧州経済領域の外、たとえば米国を含む)で取り扱います。</p>
+        <ul>
+            <li>Firebase のプライバシーとセキュリティ: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+        </ul>
+        <h3>3.6 利用統計と広告の連携</h3>
+        <p>利用統計を広告(Google AdMob)と連携しています。開発者は広告収益を利用指標(利用者数、再訪など)とあわせて見ます。Google は連携した利用統計を、AdMob の機能の改善と広告収益の向上に使うことがあります。ここでも広告 ID は使いません。</p>
     </div>
 </section>
 
@@ -157,6 +190,7 @@
         <ul>
             <li>無料サービス提供のための広告配信および測定</li>
             <li>アプリ機能(設定の保存、言語表示など)の提供</li>
+            <li>アプリのエラーの修正と改善(利用統計・エラー報告)</li>
             <li>サービス品質の維持および不正利用の防止(広告パートナー)</li>
         </ul>
     </div>
@@ -169,6 +203,7 @@
         <ul>
             <li><strong>同意(第6条第1項(a))</strong>: 広告のパーソナライズおよび広告識別子の使用。初回起動時に同意管理プラットフォーム(Google UMP)を通じて同意をリクエストし、同意はいつでも撤回できます。</li>
             <li><strong>正当な利益(第6条第1項(f))</strong>: 非パーソナライズ広告の配信、セキュリティおよび不正利用の防止。</li>
+            <li><strong>正当な利益(第6条第1項(f))</strong>: 利用統計とエラー報告。アプリのエラーを直し、アプリを改善するためで、広告で無料アプリを運営するために広告収益を利用指標とあわせて見ることも含みます。同意画面での選択に応じて、利用統計の保存が制限されます。</li>
             <li>端末のローカル設定の保存は、利用者が要求したサービスを提供するためのものです。</li>
         </ul>
     </div>
@@ -177,9 +212,11 @@
 <section>
     <div class="container">
         <h2>6. 第三者提供および広告パートナー</h2>
-        <p>アプリは個人情報を販売しません。広告提供のために、以下のパートナーが関与します。</p>
+        <p>アプリは個人情報を販売しません。広告の提供とアプリの改善のために、以下のサービスが関与します。</p>
         <ul>
             <li><strong>Google AdMob / Google 広告パートナー</strong> — 広告の配信および測定</li>
+            <li><strong>Google Analytics for Firebase</strong> — 利用統計(3.4)</li>
+            <li><strong>Firebase Crashlytics</strong> — エラー報告(3.5)</li>
         </ul>
         <p>EEA の利用者は、初回起動時に表示される同意画面で、広告パートナーの一覧と取り扱いの目的を確認できます。</p>
     </div>
@@ -188,7 +225,7 @@
 <section>
     <div class="container">
         <h2>7. 国際的なデータ移転</h2>
-        <p>Google は、利用者の情報を EEA または利用者の居住国の外(例: 米国)へ移転して取り扱う場合があります。この場合、Google は EU 標準契約条項(SCC)などの適法な保護措置を適用します。詳細については、上記の Google プライバシーポリシーをご参照ください。</p>
+        <p>Google は、広告と利用統計・エラー報告に関わる利用者の情報を EEA または利用者の居住国の外(例: 米国)へ移転して取り扱う場合があります。この場合、Google は EU 標準契約条項(SCC)などの適法な保護措置を適用します。詳細については、上記の Google プライバシーポリシーと Firebase のプライバシーの案内をご参照ください。</p>
     </div>
 </section>
 
@@ -197,6 +234,8 @@
         <h2>8. 保管期間</h2>
         <ul>
             <li>アプリは個人情報を独自に保存することはありません。端末のローカル設定は、利用者がアプリを削除するまで端末内に残ります。</li>
+            <li>利用統計: 利用者単位の記録は2か月で自動的に削除されます。</li>
+            <li>エラー報告: 90日で自動的に削除されます。</li>
             <li>広告を通じて取り扱われた情報の保管期間は、Google のポリシーに従います。</li>
         </ul>
     </div>
@@ -207,10 +246,11 @@
         <h2>9. 利用者(データ主体)の権利</h2>
         <p>利用者は関連法令に基づき、以下の権利を有します。GDPR が適用される利用者の場合は、アクセス権、訂正権、消去権(「忘れられる権利」)、処理制限権、異議申立権、データポータビリティ権、同意撤回権を含みます。</p>
         <ul>
-            <li><strong>広告パーソナライズの同意の変更/撤回</strong>: アプリの<strong>設定 &gt; 広告同意の管理</strong>からいつでも変更できます。</li>
+            <li><strong>広告・利用統計の同意の変更/撤回</strong>: アプリの<strong>設定 &gt; 広告同意の管理</strong>からいつでも変更できます(同意画面が表示される欧州経済領域・英国・スイスで表示されます)。</li>
             <li><strong>広告識別子のリセット/削除</strong>: 端末の設定(Android: 設定 &gt; プライバシー &gt; 広告)で、広告 ID をリセットまたは削除できます。</li>
             <li>その他の権利の行使またはお問い合わせ: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
         </ul>
+        <p>開発者は氏名や連絡先を知らないため、利用統計とエラー報告から特定の利用者の記録を見つけることはできません。アプリを削除するとアプリインスタンス ID と Crashlytics のインストール ID が消え、それ以降の記録とはつながらず、残った記録は「8. 保管期間」の期間が過ぎると削除されます。</p>
     </div>
 </section>
 
@@ -244,7 +284,7 @@
                 <li><strong>メール</strong>: <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></li>
             </ul>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">発効日: 2026年5月31日</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">発効日: 2026年10月16日</p>
     </div>
 </section>
 
