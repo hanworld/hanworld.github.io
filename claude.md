@@ -276,3 +276,15 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 모든 페이지의 footer에 사업자등록번호 표시
 - 언어별 링크는 해당 언어 페이지로 연결 유지
 - 앱 페이지에서 개인정보처리방침은 각 언어별 파일로 연결 (ko.html, en.html, ja.html, zh.html)
+
+## Willee 운영 정보
+
+> 윌리 조직 v5.0: 이 저장소는 홈페이지 세션이 맡는다. 다른 저장소는 읽기만 하고(`git --no-optional-locks`), Basecamp 문서는 Basecamp 세션에 변경 요청을 보낸다. 규칙: `~/.claude/skills/_shared/agent-spawning-policy.md`
+
+- 프로젝트: A00.WilleeProject · PCode WP-A00-WLPJ-R-20161202 · YouTrack A00_WLPJ
+- 저장소: git@github.com:hanworld/hanworld.github.io.git · 문서 저장소: D:\01.Willee Project\01.Project\A00.WilleeProject
+- 스택: 정적 사이트(GitHub Pages, willee.net)
+- 빌드: 없음 (master에 푸시하면 GitHub Pages가 게시)
+- 그림: none
+
+_Last updated: 2026-10-16 by /wp-init (v5.0)_
