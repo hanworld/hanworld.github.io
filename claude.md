@@ -9,7 +9,10 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 /
 ├── index.html              # 루트 (브라우저 언어 감지 후 리다이렉트)
 ├── css/
-│   └── common.css          # 모든 페이지 공통 스타일 (아래 '공통 스타일·검색 정보')
+│   └── common.css          # 모든 페이지 공통 스타일 (아래 '공통 스타일·검색 정보'·'디자인')
+├── fonts/                  # Pretendard·Pretendard JP (OFL, 글자 묶음별 woff2)
+│   ├── pretendard.css      # common.css가 불러옴
+│   └── pretendard-jp.css   # 일본어 페이지만 연결
 ├── ko/                     # 한국어
 │   ├── index.html
 │   ├── privacy.html
@@ -195,8 +198,10 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 예외: Nums to One·Tenmates·Keepsum·Cagewise의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정, Tenmates는 2026-10-09, Keepsum은 2026-10-10, Cagewise는 2026-10-18)
 
 ## 색상 팔레트
+회사 대표색은 **티파니민트**다(2026-10-18). 흰 바탕에서 글자색으로 쓰면 읽기 어려우니 남색 위 강조·단추·배지에 쓰고, 흰 바탕 링크는 진한 청록(#0B7C77)을 쓴다.
 ```css
-민트: #2EC4B6
+티파니민트: #81D8D0 (대표색)
+민트: #2EC4B6 (로고)
 다크민트: #1D7A5F
 네이비: #1A365D
 화이트: #FFFFFF
@@ -292,6 +297,13 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
   - 스크린샷과 배너는 WebP로 둔다.
   - 스크린샷 `<img>`에는 원본 크기 `width`·`height`와 `loading="lazy" decoding="async"`를 넣는다.
   - 머리글 배너에는 `width`·`height`만 넣는다.
+
+## 디자인 (2026-10-18)
+- **모양:** 남색 머리띠·메뉴줄·꼬리말에 티파니민트 강조, 둥근 카드와 그림자. 메인·소개는 넓게(1080px, 앱 카드 3열), 설명서·방침은 읽기 좋은 폭(800px) 그대로.
+- **색:** `common.css` 맨 위 변수(`--tiffany`, `--bg`, `--card`, `--ink`, `--text`, `--muted`, `--link` 등)로만 쓴다. 다크 모드는 `prefers-color-scheme: dark`에서 변수만 바꾼다. 페이지 안 `<style>`의 색은 `common.css`가 같은 선택자로 덮는다. 새 이름표를 만들면 `common.css`에도 변수로 색을 준다.
+- **글꼴:** 한국어·영어는 Pretendard, 일본어는 Pretendard JP(일본어 페이지는 `common.css` 앞에 `<link rel="stylesheet" href="/fonts/pretendard-jp.css">`), 중국어는 기기 글꼴(Pretendard의 한국식 한자가 섞이지 않게). 글꼴은 `/fonts/`에 직접 두고 다른 서버에서 불러오지 않는다.
+- **내려받기 단추:** 소개 페이지 머리글의 한 줄 소개 아래에 `<div class="store-cta">`를 둔다. 출시 전에는 `<span>Google Play 출시 예정</span>`, 출시 뒤에는 스토어 링크(`<a>` + 내려받기 아이콘). '출시 예정'을 스토어 링크로 바꿀 때 이 단추도 함께 바꾼다.
+- **폰:** 언어 고르기는 PC에서만 알약 모양이고, 폰에서는 글자만 둔다(메뉴줄을 한 줄로 지키려고).
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정. 폰에서는 홈 링크를 집 아이콘만 남기고, 설명서·방침은 현재 페이지 이름(머리글에 크게 있음)을 뺀다(`common.css`)
