@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Cagewise 玩法說明 - Willee Project</title>
+    <meta name="description" content="Cagewise 玩法說明 — 在9×9的盤面上填入1到9，這是一款在數獨的基礎上加入籠子（用虛線框起來的一組格子及其和）的邏輯益智遊戲，也就是殺手數獨。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cagewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cagewise 玩法說明 - Willee Project">
+    <meta property="og:description" content="Cagewise 玩法說明 — 在9×9的盤面上填入1到9，這是一款在數獨的基礎上加入籠子（用虛線框起來的一組格子及其和）的邏輯益智遊戲，也就是殺手數獨。">
+    <meta property="og:url" content="https://willee.net/apps/cagewise/manual/zh-Hant.html">
+    <meta property="og:image" content="https://willee.net/apps/cagewise/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Cagewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Cagewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Cagewise</h1>
+                <p>玩法說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Cagewise_zh-Hant_01_home.webp" alt="首頁 — 經典·每日挑戰" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_02_classic_hint.webp" alt="經典 — 附帶理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_03_classic_result.webp" alt="經典 — 成功（新紀錄）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_04_daily.webp" alt="每日挑戰 — 遊戲中（籠子組合助手）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_05_daily_result.webp" alt="每日挑戰 — 結果畫面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_06_records.webp" alt="紀錄" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_zh-Hant_07_tutorial.webp" alt="新手教學 — 用6×6的小盤面熟悉規則" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>Cagewise</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>在9×9的盤面上填入1到9，這是一款在數獨的基礎上加入<strong>籠子</strong>（用虛線框起來的一組格子及其和）的邏輯益智遊戲，也就是殺手數獨。以籠子的和為線索，一步步推理就能解開。</p>
+        <ul>
+            <li>每道題都只有一個答案，只出不用猜、一步步推理就能解開的題。</li>
+            <li>沒有生命值。出錯也不會結束這道題，提示和復原都不限次數，也沒有時間限制。</li>
+            <li>不需要註冊，也不需要登入。第一次打開時，會先用一個6×6的小盤面進行新手教學，帶你熟悉規則。點按<strong>跳過</strong>可以隨時結束。</li>
+            <li><strong>沒有網路也能玩。</strong> 只有畫面下方的廣告，以及傳送使用統計和錯誤報告時才會用到網路。</li>
+            <li>語言跟隨裝置設定。支援中文（繁體、簡體）、英文、韓文、日文，也可以在設定中直接選擇。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 規則</h2>
+        <ul>
+            <li>盤面是9×9格，用粗線分成九個3×3格的<strong>宮</strong>。</li>
+            <li>每一<strong>行</strong>、每一<strong>列</strong>、每一<strong>宮</strong>都要填入1到9各一次。</li>
+            <li>用虛線框起來的一組格子是一個<strong>籠子</strong>。籠子裡的小數字是它的<strong>和</strong>，籠子裡的數字加起來必須等於這個和。</li>
+            <li>同一個籠子裡不會出現重複的數字。</li>
+            <li><strong>入門</strong>難度的題一開始就有幾個給定的數字（用粗體顯示，不能更改）。從<strong>簡單</strong>起沒有給定的數字，只靠籠子的和來解。</li>
+            <li>所有格子都和答案一致時就成功了。答案只有一個，不用猜就能推出來。</li>
+            <li>沒有生命值。填錯數字也不會結束這道題。</li>
+        </ul>
+        <h3>籠子的標記</h3>
+        <ul>
+            <li>籠子的和寫在籠子最上方（同樣高時取最左邊）那一格的左上角。</li>
+            <li>點按一格後，這一格所在的行、列、宮會淡淡亮起，這一格所在籠子的虛線會變粗變深。</li>
+            <li>籠子填滿且和對上時，虛線會連成實線，和的旁邊會打<strong>勾</strong>。不只靠顏色，也用形狀提示。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解題要點</h2>
+        <p>新手教學用6×6的盤面展示這三點。提示中的名稱是<strong>籠子組合</strong>、<strong>隱性唯一</strong>、<strong>45法則</strong>。</p>
+        <ul>
+            <li><strong>只有一種組合的籠子</strong>：有些籠子用不同的數字湊出和，只有一種辦法。兩格的和是3，只能是1和2；兩格的和是17，只能是8和9；三格的和是6，只能是1、2、3。雖然不知道哪個數字在哪一格，但這幾格能填的數字是確定的，可以記成筆記。組合有好幾種時，所有組合裡都沒有的數字不能填進這個籠子（兩格的和是6，只能是1+5或2+4，所以不能有3和6）。</li>
+            <li><strong>隱性唯一</strong>：在一行、一列或一宮裡，如果某個數字只有一個格子可以放，那一格就是這個數字。</li>
+            <li><strong>45法則</strong>：每一行、每一列、每一宮的數字加起來都是1到9的和45。如果一行裡有幾個籠子完整地落在這一行內，用45減去它們的和，就能知道剩下格子的和。例如一行裡完整包含和為20、13、8的三個籠子，只剩一格，那一格就是45 − 20 − 13 − 8 = 4。新手教學的盤面是6×6，每行的和是1到6相加的21，所以教的是「21法則」。</li>
+        </ul>
+        <p>更難的要點，會由提示連同理由一起告訴你（見第4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li>點按盤面上的格子選中它，再點按盤面正下方的數字按鈕，就會在這一格填入該數字。
+                <ul>
+                    <li>在已經填著同一個數字的格子裡再點按這個數字，會清除它。</li>
+                    <li>給定的數字不能更改或清除。</li>
+                    <li>盤面上9個都填完的數字，按鈕會變淡。</li>
+                </ul>
+            </li>
+            <li><strong>先選數字</strong>（設定）：先選好數字（選中的按鈕會變成實心），再依序點按格子，就會填入這個數字。再點按同一個數字按鈕，就取消選擇。</li>
+            <li><strong>筆記</strong>：點按<strong>筆記</strong>按鈕，它會變成<strong>筆記 開</strong>，數字按鈕上的數字會變小。這時選中一格再點按數字，就會在這一格寫上小小的候選數；再點按同一個數字會刪掉它。已經填了數字的格子不能寫筆記。再點按<strong>筆記 開</strong>就關閉。</li>
+            <li>填入數字後，這一格的筆記會清掉。如果設定中的<strong>自動整理筆記</strong>開著，同一行、列、宮和籠子的格子的筆記裡，這個數字也會被刪去。</li>
+        </ul>
+        <p>下方的按鈕：</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>復原</strong></td><td>一步步復原最後做的操作。不限次數</td></tr>
+            <tr><td><strong>清除</strong></td><td>清除選中格子裡的數字或筆記</td></tr>
+            <tr><td><strong>筆記</strong></td><td>開關筆記書寫</td></tr>
+            <tr><td><strong>提示</strong></td><td>告訴你下一步該做什麼和理由。不限次數（見第4章）</td></tr>
+        </table>
+        <p>上方一行右側的<strong>重新開始</strong>（↻）按鈕：</p>
+        <table class="info-table">
+            <tr><th>選項</th><th>內容</th></tr>
+            <tr><td><strong>這一題從頭開始</strong></td><td>清掉所有已填的數字和筆記，回到最初。經典模式的用時和提示也從頭算，每日挑戰則繼續累計當天的用時和提示。還沒有填數字或寫筆記時，這一項會變淡、不能點按</td></tr>
+            <tr><td><strong>換一題</strong>（僅經典）</td><td>放棄這一題，換一道同難度的題。放棄的題不算成功</td></tr>
+        </table>
+        <p>旁邊的<strong>快速設定</strong>按鈕會打開一個面板，不離開遊戲畫面就能改音效、震動、特效和盤面設定（見第5章）。點按面板上方或往下拉就能關閉。最右邊是<strong>退出</strong>（門的形狀），退出時正在解的題會自動儲存。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 提示</h2>
+        <p><strong>提示</strong>按鈕分兩步告訴你下一步該做什麼。提示不限次數，免費使用。</p>
+        <ul>
+            <li>第一步：讓要看的地方在盤面上亮起來（例如「在這一行中，找出只有一個位置可放的數字。」）。提示框上的名稱是<strong>提示</strong>。</li>
+            <li>第二步：再點按一次<strong>提示</strong>，會顯示理由和該做的事（例如「在這一行中，6只能放在這一格。」），並附上所用要點的名稱（<strong>最後一格</strong>、<strong>唯一候選數</strong>、<strong>隱性唯一</strong>、<strong>籠子組合</strong>、<strong>45法則</strong>、<strong>區塊排除</strong>、<strong>籠子區塊</strong>、<strong>數對·三鏈數</strong>、<strong>45法則（多個區域）</strong>、<strong>內外格之差</strong>、<strong>拆分籠子</strong>、<strong>組合比對</strong>）。要填的格子裡會淡淡地顯示數字，要刪去的候選數會在盤面上用紅色劃掉。</li>
+            <li>點按<strong>套用</strong>（再點按一次<strong>提示</strong>也可以），盤面就會照提示變化。填數字類的提示會填入那個數字；刪候選數類的提示會改寫那些格子的筆記（原本沒有筆記的格子會寫上剩下的候選數）。</li>
+            <li>刪候選數類的提示還有一個<strong>到下一個數字</strong>按鈕。點按後，會把直到下一個數字能填為止的所有刪除一次寫進筆記，並直接以第二步顯示那個填數字的提示。復原一次就能全部還原。</li>
+            <li>如果有和答案不同的數字，會先告訴你那一格（名稱為<strong>改正錯誤</strong>，直接顯示第二步）。有好幾格時，從最先填的那一格開始。點按<strong>套用</strong>會清除那一格，不會替你填入答案。如果所有格子都填滿了卻沒有成功，代表哪裡填錯了，點按<strong>提示</strong>看看。</li>
+            <li>沒有錯誤的格子時，會告訴你現在能用的最簡單的要點。提示只根據盤面上的數字重新推理，所以即使筆記有誤，提示也是對的，筆記裡已經顯示出來的刪除會被跳過。</li>
+            <li>打開提示的次數會記在結果和分享的文字裡。每打開一次提示算一次（進入第二步或套用不另算），<strong>到下一個數字</strong>再算一次。提示顯示期間，點按格子或數字，或者使用清除、復原，提示就會關閉。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 輔助功能與盤面設定</h2>
+        <p>在設定的<strong>盤面與輸入</strong>和<strong>輔助功能</strong>中開關。遊戲中可以用<strong>快速設定</strong>馬上更改。</p>
+        <ul>
+            <li><strong>顯示規則衝突</strong>（預設開啟）：馬上標出違反規則的數字。包括同一行、列、宮或籠子裡有重複的數字，以及超過籠子的和的情況（籠子還有空格卻已經達到和，也算超過）。格子會變紅，數字下面會劃線；和不對的籠子，它的和也會變紅。填入的數字違反規則時，還會有簡短的聲音和震動（在音效和震動開啟時）。它不看答案，所以還沒有違反規則的錯誤數字不會被標出。</li>
+            <li><strong>籠子組合助手</strong>（預設關閉）：選中一格後，盤面上方的條裡會顯示這個籠子的和、格數，以及湊出這個和的所有數字組合。根據盤面上已有的數字判斷不可能的組合會變淡並劃上橫線。點按組合，這些數字就會作為筆記加到所選籠子的每個空格裡（原有的筆記保留，每一格中，同一行、列、宮、籠子裡已經填了的數字不會加入）。復原一次就能還原。它只根據盤面上的數字篩選，所以不會替你解題。</li>
+            <li><strong>立即顯示錯誤</strong>（預設關閉）：填入和答案不同的數字時，馬上用同樣的方式（紅色格子和數字底線）標出。</li>
+            <li><strong>自動整理筆記</strong>（預設開啟）：填入數字後，從同一行、列、宮和籠子的格子的筆記中刪去這個數字。復原一次就會一起還原。</li>
+            <li><strong>醒目顯示相同數字</strong>（預設開啟）：在盤面和筆記中，讓選中格子裡的數字（在「先選數字」中則是選中的數字）醒目顯示。</li>
+            <li><strong>大號數字</strong>（預設關閉）：把盤面上的數字畫大一些。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 模式</h2>
+        <h3>經典 — 自選難度，不限時</h3>
+        <ul>
+            <li>在首頁經典卡片上方的分頁（<strong>1</strong>～<strong>6</strong>）中選擇難度，點按<strong>開始</strong>。有進行中的題時會顯示<strong>繼續</strong>。分頁下方會顯示所選難度的名稱（入門、簡單、普通、困難、專家、大師），第一次玩建議從<strong>入門</strong>開始。</li>
+            <li>所有難度一開始就開放。難度越高，需要用到的要點越難。遊戲畫面上方的點（●）和名稱就是這道題的難度。</li>
+            <li>題目會從還沒解過的題裡隨機出。</li>
+            <li>卡片上的盤面預覽只顯示目前這道題的籠子形狀和已填數字的格子，數字和和都被遮住。下面一行會顯示這個難度的成功題數和最佳用時。</li>
+            <li>解題時不顯示時間。解開題目後，結果卡片會顯示用時、最佳用時（打破紀錄時會蓋上<strong>新紀錄</strong>印章）、成功的題數和用過的提示。點按<strong>下一題</strong>會接著出同一難度的下一道題。</li>
+            <li>進行中的題會自動儲存。離開或重新打開應用程式後，每個難度都能接著解，復原紀錄也會恢復。離開應用程式期間不計時。沒填數字也沒寫筆記就離開的話，下次會從頭開始（用時和提示也從頭算）。</li>
+        </ul>
+        <h3>每日挑戰 — 今日的題</h3>
+        <ul>
+            <li>每天出一道9×9的題。簡單、普通、困難輪流出現，遊戲畫面上方會顯示編號和難度（例如 #12 · 困難）。<strong>全世界的人在同一天解同一道題</strong>（以裝置日期為準）。新的每日挑戰會在裝置時間的午夜開放。</li>
+            <li>沒有時間限制，上方會顯示到目前為止的用時。可以使用提示，用過的次數會留在結果裡。</li>
+            <li>當天之內離開再回來也能接著解。即使選擇<strong>這一題從頭開始</strong>，用時和提示也會繼續累計。日期變了以後，沒解完的昨天的題會消失，新的題會開放。</li>
+            <li>每解開一天，連續紀錄就會延續；中間空一天就會中斷。沒有生命值，提示也不限次數，所以沒有失敗。</li>
+            <li>首頁的<strong>每日挑戰</strong>卡片會顯示這一週的七天，解開的日子會打勾。點按卡片可以解今天的題，已經解開的話則查看結果。</li>
+            <li>結果畫面會顯示每日挑戰的編號、用時、提示、目前連續和最長連續，以及距下次每日挑戰的時間。可以用<strong>分享</strong>傳送結果。例如：</li>
+        </ul>
+        <pre class="share-example">Cagewise Daily #12 ✅ 18:41
+提示1次
+🔥 連續5天</pre>
+        <p><strong>#12</strong>是每日挑戰的編號，旁邊是用時（分:秒）。第二行是用過的提示次數（沒用過則是「未用提示」），第三行是連續紀錄（兩天以上才顯示）。第一行在任何語言中都一樣。編號從上架那天的#1開始每天加一，編號相同就是同一道題。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 紀錄</h2>
+        <p>點按首頁右上角的<strong>獎盃</strong>按鈕打開。按鈕上會顯示成功的題數。</p>
+        <ul>
+            <li>最上方：<strong>成功題數</strong>（經典與每日挑戰）的合計，以及經典和每日挑戰各自的數量</li>
+            <li><strong>經典</strong>：各難度的<strong>成功</strong>題數、<strong>最佳</strong>用時、<strong>平均</strong>用時。還沒解過題的難度會變淡，用時顯示為「—」。</li>
+            <li><strong>每日挑戰</strong>：<strong>目前連續</strong>、<strong>最長連續</strong>、<strong>解題天數</strong>。下方的月曆（用兩側的箭頭按月翻頁）會用勾標出解開的日子，今天會有銅色的圈。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>點按首頁右上角的<strong>齒輪</strong>打開。分為四組。遊戲中可以用<strong>快速設定</strong>按鈕馬上更改前三組。</p>
+        <h3>聲音與特效</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>音效</td><td>開關填入、清除數字，完成籠子、行、宮，以及解開題目時等的聲音。接連完成行和宮時，聲音會一個音一個音地升高</td></tr>
+            <tr><td>震動</td><td>填入或清除數字時輕輕震動，完成籠子或行、宮時更強一些，解開題目時震動較長。可以開關</td></tr>
+            <tr><td>減少特效</td><td>一次減少所有特效。開啟期間，下方的三個特效按鈕會以關閉的樣子變淡。也會依照裝置的「移除動畫」設定</td></tr>
+            <tr><td>動畫 · 光效 · 彩紙</td><td>三個連在一起的按鈕，逐項開關特效。開啟的按鈕上會有勾，長按會顯示說明。<strong>動畫</strong>是填入的數字和完成的籠子，<strong>光效</strong>是完成行、宮和解開題目，<strong>彩紙</strong>是解開題目時。沒有整個盤面晃動的特效</td></tr>
+        </table>
+        <h3>盤面與輸入</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>大號數字</td><td>把盤面上的數字畫大一些。預設關閉</td></tr>
+            <tr><td>先選數字</td><td>先選數字，再點按格子填入。預設關閉，預設是先點按格子的方式</td></tr>
+            <tr><td>自動整理筆記</td><td>填入數字後，從同一行、列、宮和籠子的筆記中刪去。預設開啟</td></tr>
+            <tr><td>醒目顯示相同數字</td><td>在盤面上醒目顯示所選數字。預設開啟</td></tr>
+        </table>
+        <h3>輔助功能</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>顯示規則衝突</td><td>標出重複的數字和超過總和的籠子。預設開啟</td></tr>
+            <tr><td>籠子組合助手</td><td>顯示所選籠子能填的數字組合。預設關閉</td></tr>
+            <tr><td>立即顯示錯誤</td><td>立即標出與答案不同的數字。預設關閉</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>語言</td><td>跟隨裝置語言（預設），或從清單中直接選擇</td></tr>
+            <tr><td>隱私權選項</td><td>再次打開廣告同意視窗。只在需要同意的地區（例如歐洲）顯示</td></tr>
+            <tr><td>玩法</td><td>再看一次新手教學</td></tr>
+            <tr><td>關於</td><td>版本、本說明（<strong>玩法說明</strong>）、隱私權政策、開放原始碼授權</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 廣告與紀錄的保存</h2>
+        <ul>
+            <li>畫面最下方有一條橫幅廣告。在新手教學中會撤下廣告，只保留位置。遊戲沒有網路也能玩，網路只用於廣告、使用統計和錯誤報告。</li>
+            <li>應用程式內沒有任何付費項目。</li>
+            <li>紀錄和設定儲存在裝置中。如果開啟了裝置的 Google 備份（Android 自動備份），會一起備份，換裝置後也能接著玩。解除安裝應用程式會刪除裝置中的紀錄。</li>
+            <li>詳情請參閱<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 聯絡我們</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

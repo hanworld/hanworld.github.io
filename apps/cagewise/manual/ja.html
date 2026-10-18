@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Cagewise 遊び方 - Willee Project</title>
+    <meta name="description" content="Cagewise 遊び方 — 9×9の盤面に1〜9を入れるナンプレに、ケージ（点線で囲んだマスのまとまりと、その合計）を加えた論理パズル、キラーナンプレです。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cagewise/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cagewise 遊び方 - Willee Project">
+    <meta property="og:description" content="Cagewise 遊び方 — 9×9の盤面に1〜9を入れるナンプレに、ケージ（点線で囲んだマスのまとまりと、その合計）を加えた論理パズル、キラーナンプレです。">
+    <meta property="og:url" content="https://willee.net/apps/cagewise/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/cagewise/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Cagewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Cagewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Cagewise</h1>
+                <p>遊び方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Cagewise_ja_01_home.webp" alt="ホーム — クラシック・デイリー" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_02_classic_hint.webp" alt="クラシック — 理由つきのヒント" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_03_classic_result.webp" alt="クラシック — クリア（ベスト更新）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_04_daily.webp" alt="デイリー — プレイ中（ケージの組み合わせ表示）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_05_daily_result.webp" alt="デイリー — 結果画面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_06_records.webp" alt="記録" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cagewise_ja_07_tutorial.webp" alt="チュートリアル — 6×6の盤面でルールを覚える" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>Cagewise</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>9×9の盤面に1〜9を入れるナンプレに、<strong>ケージ</strong>（点線で囲んだマスのまとまりと、その合計）を加えた論理パズル、キラーナンプレです。ケージの合計を手がかりに、順に考えていけば解けます。</p>
+        <ul>
+            <li>どの問題も答えはひとつだけで、当てずっぽうなしで順に考えていけば解ける問題だけが出ます。</li>
+            <li>ライフはありません。間違えても問題は終わらず、ヒントと戻すは回数無制限です。時間制限もありません。</li>
+            <li>会員登録もログインもありません。初めて開くと、小さな盤面（6×6）でルールを覚えるチュートリアルから始まります。<strong>スキップ</strong>でいつでも終えられます。</li>
+            <li><strong>インターネットがなくても遊べます。</strong> インターネットは画面下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. ルール</h2>
+        <ul>
+            <li>盤面は9×9マスで、太い線で3×3マスずつに分かれた<strong>ブロック</strong>が9つあります。</li>
+            <li>すべての<strong>行</strong>、<strong>列</strong>、<strong>ブロック</strong>に、1〜9が1つずつ入ります。</li>
+            <li>点線で囲んだマスのまとまりが<strong>ケージ</strong>です。ケージに小さく書かれた数字が<strong>合計</strong>で、ケージの中の数字をすべて足すとその合計になります。</li>
+            <li>1つのケージの中に同じ数字は2回入りません。</li>
+            <li><strong>入門</strong>の問題には、最初から入っている数字が少しあります（太字で表示され、変えられません）。<strong>やさしい</strong>からは最初の数字はなく、ケージの合計だけで解きます。</li>
+            <li>すべてのマスが答えと同じになればクリアです。答えはひとつだけで、当てずっぽうなしで解けます。</li>
+            <li>ライフはありません。間違った数字を入れても問題は終わりません。</li>
+        </ul>
+        <h3>ケージの見方</h3>
+        <ul>
+            <li>ケージの合計は、ケージのいちばん上（高さが同じならいちばん左）のマスの左上の角に書かれています。</li>
+            <li>マスを選ぶと、そのマスと同じ行・列・ブロックがうっすら明るくなり、そのマスが入っているケージの点線が太く濃くなります。</li>
+            <li>ケージをすべて埋めて合計が合うと、点線が実線につながり、合計のとなりに<strong>チェック</strong>が付きます。色だけでなく形でも分かります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解き方のコツ</h2>
+        <p>チュートリアルが6×6の盤面で見せる3つです。ヒントでは<strong>ケージの組み合わせ</strong>、<strong>隠れシングル</strong>、<strong>45の法則</strong>という名前で出てきます。</p>
+        <ul>
+            <li><strong>組み合わせが1つだけのケージ</strong>: 異なる数字で合計を作る方法が1つしかないケージがあります。2マスの合計が3なら1と2、2マスの合計が17なら8と9、3マスの合計が6なら1・2・3だけです。どのマスにどの数字が入るかは分からなくても、そのマスに入る数字は決まるので、メモに書いておきます。組み合わせが複数あっても、どの組み合わせにも含まれない数字は、そのケージには入りません（2マスの合計が6なら1+5か2+4だけなので、3と6は入りません）。</li>
+            <li><strong>隠れシングル</strong>: 行・列・ブロックのひとつで、ある数字が入れるマスが1つしかなければ、そのマスがその数字です。</li>
+            <li><strong>45の法則</strong>: 行・列・ブロックの数字を全部足すと、1から9の合計の45になります。1本の行の中にケージが丸ごと入っているときは、45からその合計を引くと、残りのマスの合計が分かります。たとえば、ある行に合計20・13・8のケージ3つが丸ごと入っていて、残りのマスが1つなら、そのマスは 45 − 20 − 13 − 8 = 4 です。チュートリアルの盤面は6×6で、行の合計は1〜6を足した21なので、「21の法則」を学びます。</li>
+        </ul>
+        <p>もっと難しいコツは、ヒントが理由といっしょに教えてくれます（4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li>盤面のマスを押して選び、盤面のすぐ下の数字ボタンを押すと、そのマスに数字が入ります。
+                <ul>
+                    <li>すでにその数字が入っているマスで同じ数字をもう一度押すと、消えます。</li>
+                    <li>最初から入っている数字は、変えたり消したりできません。</li>
+                    <li>盤面に9個すべて入れた数字は、ボタンが薄くなります。</li>
+                </ul>
+            </li>
+            <li><strong>数字を先に選ぶ</strong>（設定）: 数字を先に選んでおき（選んだボタンは塗りつぶしになります）、マスを順に押すとその数字が入ります。同じ数字ボタンをもう一度押すと、選んだ状態が解けます。</li>
+            <li><strong>メモ</strong>: <strong>メモ</strong>ボタンを押すと<strong>メモ オン</strong>に変わり、数字ボタンの数字が小さくなります。この状態でマスを選んで数字を押すと、そのマスに小さな候補の数字が書かれ、同じ数字をもう一度押すと消えます。数字が入っているマスにはメモを書けません。<strong>メモ オン</strong>をもう一度押すとオフになります。</li>
+            <li>数字を入れると、そのマスのメモは消えます。設定の<strong>メモの自動整理</strong>がオンなら、同じ行・列・ブロック・ケージのマスのメモからもその数字が消えます。</li>
+        </ul>
+        <p>下のボタン:</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>すること</th></tr>
+            <tr><td><strong>戻す</strong></td><td>最後にしたことを1つずつ戻します。回数無制限です</td></tr>
+            <tr><td><strong>消す</strong></td><td>選んだマスの数字やメモを消します</td></tr>
+            <tr><td><strong>メモ</strong></td><td>メモの書き込みをオン・オフします</td></tr>
+            <tr><td><strong>ヒント</strong></td><td>次にすることを理由といっしょに教えます。回数無制限です（4章）</td></tr>
+        </table>
+        <p>上の行の右にある<strong>やり直す</strong>（↻）ボタン:</p>
+        <table class="info-table">
+            <tr><th>選ぶもの</th><th>内容</th></tr>
+            <tr><td><strong>この問題を最初から</strong></td><td>入れた数字とメモをすべて消して最初に戻します。クラシックはかかった時間とヒントも最初から数え、デイリーはその日の時間とヒントをそのまま数えます。まだ数字もメモもなければ薄く表示されて押せません</td></tr>
+            <tr><td><strong>新しい問題</strong>（クラシックのみ）</td><td>この問題をやめて、同じ難易度の別の問題を解きます。やめた問題はクリアに数えません</td></tr>
+        </table>
+        <p>その隣の<strong>クイック設定</strong>ボタンは、効果音・バイブレーション・演出・盤面の設定（5章）をゲーム画面のまま変えられる画面を開きます。上のほうを押すか、下に引くと閉じます。いちばん右は<strong>終了</strong>（ドアの形）で、終了しても解いている問題は自動で保存されます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. ヒント</h2>
+        <p><strong>ヒント</strong>ボタンが、次にすることを2段階で教えます。ヒントは回数無制限で無料です。</p>
+        <ul>
+            <li>1段目: 見る場所を盤面で光らせます（例:「この行で、入る場所が1マスしかない数字を探しましょう。」）。吹き出しの名札は<strong>ヒント</strong>です。</li>
+            <li>2段目: <strong>ヒント</strong>をもう一度押すと、理由とすることを見せます（例:「この行で6が入れるのは、このマスだけです。」）。使った考え方の名札が付きます（<strong>最後の1マス</strong>、<strong>唯一の候補</strong>、<strong>隠れシングル</strong>、<strong>ケージの組み合わせ</strong>、<strong>45の法則</strong>、<strong>ロックされた候補</strong>、<strong>ケージのロック</strong>、<strong>ペア・トリプル</strong>、<strong>45の法則（複数）</strong>、<strong>内側と外側の差</strong>、<strong>ケージの分割</strong>、<strong>組み合わせの照合</strong>）。入れるマスには数字がうっすら表示され、消す候補は盤面に赤く斜線で示されます。</li>
+            <li><strong>適用</strong>を押すと（<strong>ヒント</strong>をもう一度押してもかまいません）、ヒントのとおりに盤面が変わります。数字を入れるヒントはその数字を入れ、候補を消すヒントはそのマスのメモを書きかえます（メモがなかったマスには残る候補が書かれます）。</li>
+            <li>候補を消すヒントには<strong>次の数字まで</strong>ボタンもあります。押すと、次の数字を入れられるようになるまでの消去をまとめてメモに反映し、その数字を入れるヒントをすぐ2段目で見せます。戻す1回でまとめて戻ります。</li>
+            <li>答えと違う数字があると、そのマスから教えます（名札<strong>ミスを直す</strong>。最初から2段目の表示です）。いくつもあれば、先に入れたマスからです。<strong>適用</strong>するとそのマスを消し、答えは入れません。すべてのマスを埋めたのにクリアにならないときは、どこかが違っているので、<strong>ヒント</strong>を押してみてください。</li>
+            <li>間違ったマスがなければ、今使えるいちばんやさしい考え方を教えます。ヒントは盤面にある数字だけを見て考え直すので、メモが間違っていてもヒントは正しく、メモにすでに表れている消去は飛ばします。</li>
+            <li>ヒントを開いた回数は、結果とシェアの文に残ります。ヒントを1回開くごとに1回と数え（2段目に進むことや適用は別に数えません）、<strong>次の数字まで</strong>はさらに1回と数えます。ヒントが出ている間にマスや数字を押したり、消す・戻すをしたりすると、ヒントは閉じます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. アシストと盤面設定</h2>
+        <p>設定の<strong>盤面と入力</strong>と<strong>アシスト</strong>でオン・オフします。ゲーム中は<strong>クイック設定</strong>ですぐに変えられます。</p>
+        <ul>
+            <li><strong>ルール違反を表示</strong>（最初はオン）: ルールを破った数字をすぐに表示します。同じ行・列・ブロック・ケージに同じ数字がある場合と、ケージの合計を超えた場合です（空きマスが残っているのにすでに合計に達している場合も、超えたものとして扱います）。マスが赤くなって数字に下線が引かれ、合計がずれたケージは合計も赤くなります。数字を入れた瞬間にルールに反していると、短い音とバイブレーションも出ます（効果音・バイブレーションがオンのとき）。答えは見ないので、まだルールを破っていない間違った数字は表示されません。</li>
+            <li><strong>ケージの組み合わせ表示</strong>（最初はオフ）: マスを選ぶと、盤面の上の帯に、そのケージの合計とマス数、その合計を作る数字の組み合わせがすべて出ます。盤面にある数字から見て成り立たない組み合わせは薄くなり、取り消し線が引かれます。組み合わせを押すと、その数字が選んだケージの空きマスにメモとして加わります（すでにあるメモはそのままで、マスごとに同じ行・列・ブロック・ケージにすでに入っている数字は除きます）。戻す1回で戻ります。盤面にある数字だけで絞り込むので、解くのを代わりにしてくれるわけではありません。</li>
+            <li><strong>ミスをすぐに表示</strong>（最初はオフ）: 答えと違う数字を入れるとすぐに、同じ方法（赤いマスと数字の下線）で表示します。</li>
+            <li><strong>メモの自動整理</strong>（最初はオン）: 数字を入れると、同じ行・列・ブロック・ケージのマスのメモからその数字を消します。戻す1回でまとめて戻ります。</li>
+            <li><strong>同じ数字をハイライト</strong>（最初はオン）: 選んだマスの数字（数字を先に選ぶときは選んだ数字）を、盤面とメモで光らせます。</li>
+            <li><strong>数字を大きく</strong>（最初はオフ）: 盤面の数字を大きく表示します。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. モード</h2>
+        <h3>クラシック — 難易度を選ぶ、時間制限なし</h3>
+        <ul>
+            <li>ホームのクラシックのカードの上のタブ（<strong>1</strong>〜<strong>6</strong>）で難易度を選び、<strong>プレイ</strong>を押します。途中の問題があれば<strong>続きから</strong>になります。タブの下に選んだ難易度の名前（入門・やさしい・ふつう・むずかしい・エキスパート・マスター）が出て、初めての方には<strong>入門</strong>がおすすめです。</li>
+            <li>難易度は最初からすべて選べます。難易度が高いほど、難しい考え方が必要になります。ゲーム画面の上にある点（●）と名前が、その問題の難易度です。</li>
+            <li>まだ解いていない問題の中から、ランダムに出ます。</li>
+            <li>カードの盤面プレビューは、今の問題のケージの形と数字を入れたマスだけを見せ、数字と合計は隠します。その下の行には、その難易度でクリアした問題の数とベストタイムが出ます。</li>
+            <li>解いている間は時間を表示しません。問題を解くと、結果のカードに、かかった時間、ベストタイム（更新したときは<strong>ベスト更新</strong>のスタンプ）、クリアした問題の数、使ったヒントが出ます。<strong>次の問題</strong>を押すと、同じ難易度の次の問題に進みます。</li>
+            <li>解いている問題は自動で保存されます。抜けても、アプリを開き直しても、難易度ごとに続きから解け、戻すの記録も戻ります。アプリを離れている間は時間が進みません。数字もメモも入れずに抜けると、次は最初から（時間とヒントも最初から）始まります。</li>
+        </ul>
+        <h3>デイリー — 今日の問題</h3>
+        <ul>
+            <li>毎日9×9の問題がひとつ出ます。やさしい・ふつう・むずかしいが順番に回り、ゲーム画面の上に番号と難易度が出ます（例: #12 · むずかしい）。<strong>世界中のみんなが同じ日に同じ問題</strong>を解きます（端末の日付が基準）。新しいデイリーは端末の時刻で午前0時に開きます。</li>
+            <li>時間制限はなく、これまでにかかった時間が上に出ます。ヒントを使え、使った回数は結果に残ります。</li>
+            <li>その日のうちなら、抜けても続きから解けます。<strong>この問題を最初から</strong>にしても、時間とヒントはそのまま数えます。日付が変わると、解きかけの前日の問題は消えて、新しい問題が開きます。</li>
+            <li>解いた日ごとに連続記録が続き、1日空けると途切れます。ライフがなくヒントが無制限なので、失敗はありません。</li>
+            <li>ホームの<strong>デイリー</strong>のカードには今週の7日が出て、解いた日にはチェックが付きます。カードを押すと、今日の問題を解くか、すでに解いていれば結果が見られます。</li>
+            <li>結果画面には、デイリーの番号、かかった時間、ヒント、現在の連続と最長連続、次のデイリーまでの時間が出ます。<strong>シェア</strong>で結果を送れます。例:</li>
+        </ul>
+        <pre class="share-example">Cagewise Daily #12 ✅ 18:41
+ヒント1回
+🔥 5日連続</pre>
+        <p><strong>#12</strong>はデイリーの番号で、その隣はかかった時間（分:秒）です。2行目は使ったヒントの回数（なければ「ヒントなし」）、3行目は連続記録です（2日以上のときだけ）。1行目はどの言語でも同じです。番号は配信開始日が#1で1日ずつ増えるので、番号が同じなら同じ問題です。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 記録</h2>
+        <p>ホーム右上の<strong>トロフィー</strong>ボタンで開きます。ボタンにはクリアした問題の数が出ます。</p>
+        <ul>
+            <li>いちばん上: <strong>クリアした問題</strong>（クラシックとデイリー）の合計と、クラシック・デイリーに分けた数</li>
+            <li><strong>クラシック</strong>: 難易度ごとの<strong>クリア</strong>数、<strong>ベスト</strong>タイム、<strong>平均</strong>タイム。まだ解いた問題がない難易度は薄く表示され、時間は「—」です。</li>
+            <li><strong>デイリー</strong>: <strong>現在の連続</strong>、<strong>最長連続</strong>、<strong>解いた日</strong>。下のカレンダー（両わきの矢印で1か月ずつ切りかえます）に、解いた日がチェックで出て、今日には銅色の枠が付きます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>ホーム右上の<strong>歯車</strong>で開きます。グループは4つです。ゲーム中は<strong>クイック設定</strong>ボタンで、前の3つのグループをすぐに変えられます。</p>
+        <h3>サウンドとエフェクト</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>数字を入れる・消すとき、ケージ・行・ブロックが完成したとき、問題を解いたときなどの音をオン・オフします。行やブロックが続けて完成すると、音が1音ずつ高くなります</td></tr>
+            <tr><td>バイブレーション</td><td>数字を入れる・消すときは軽く、ケージや行・ブロックが完成すると強く、問題を解くと長く震えます。オン・オフします</td></tr>
+            <tr><td>エフェクトを減らす</td><td>すべての演出をまとめて控えめにします。オンの間は下の3つの演出ボタンがオフの見た目で薄くなります。端末のアニメーションを無効にする設定にも従います</td></tr>
+            <tr><td>動き・光・紙吹雪</td><td>3つのボタンをつないだ帯で、演出ごとにオン・オフします。オンのボタンにはチェックが付き、長押しすると説明が出ます。<strong>動き</strong>は入れた数字と完成したケージ、<strong>光</strong>は行・ブロックの完成と問題のクリア、<strong>紙吹雪</strong>は問題を解いたときです。盤面全体が揺れる演出はありません</td></tr>
+        </table>
+        <h3>盤面と入力</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>数字を大きく</td><td>盤面の数字を大きく表示します。最初はオフです</td></tr>
+            <tr><td>数字を先に選ぶ</td><td>数字を先に選び、マスを押して入れます。最初はオフで、マスを先に押す方法が標準です</td></tr>
+            <tr><td>メモの自動整理</td><td>数字を入れると、行・ブロック・ケージのメモから消します。最初はオンです</td></tr>
+            <tr><td>同じ数字をハイライト</td><td>選んだ数字を盤面で光らせます。最初はオンです</td></tr>
+        </table>
+        <h3>アシスト</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>ルール違反を表示</td><td>重複した数字と合計を超えたケージを示します。最初はオンです</td></tr>
+            <tr><td>ケージの組み合わせ表示</td><td>選んだケージに入る数字の組み合わせを表示します。最初はオフです</td></tr>
+            <tr><td>ミスをすぐに表示</td><td>答えと違う数字をすぐに表示します。最初はオフです</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>言語</td><td>端末の言語に従う（最初の設定）か、一覧から選びます</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意画面をもう一度開きます。同意が必要な地域（ヨーロッパなど）でだけ表示されます</td></tr>
+            <tr><td>遊び方</td><td>チュートリアルをもう一度見ます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明（<strong>遊び方</strong>）、プライバシーポリシー、オープンソースライセンス</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 広告と記録の保管</h2>
+        <ul>
+            <li>画面のいちばん下にバナー広告が一本入ります。チュートリアルでは広告を外し、場所だけ空けておきます。ゲームはインターネットがなくても遊べ、インターネットは広告と利用統計・エラー報告にだけ使います。</li>
+            <li>アプリ内で支払うものはありません。</li>
+            <li>記録と設定は端末の中に保存されます。端末のGoogleバックアップ（Androidの自動バックアップ）がオンなら一緒にバックアップされ、端末を替えても続きから遊べます。アプリを削除すると端末の記録も消えます。</li>
+            <li>詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
