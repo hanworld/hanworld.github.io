@@ -998,4 +998,146 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/keepsum/privacy/en.html"/>
   </url>
 
+  <!-- Cagewise 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/cagewise/ko.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/en.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/ja.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/zh.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/en.html"/>
+  </url>
+
+  <!-- Cagewise 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/cagewise/manual/ko.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/manual/en.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/manual/ja.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/manual/zh.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/manual/zh-Hant.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/manual/en.html"/>
+  </url>
+
+  <!-- Cagewise 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/cagewise/privacy/ko.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/privacy/en.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/privacy/ja.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/privacy/zh.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/cagewise/privacy/zh-Hant.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+
 </urlset>

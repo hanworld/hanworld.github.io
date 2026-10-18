@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Cagewise - Willee Project</title>
+    <meta name="description" content="Cagewise 是一款靠推理来解的杀手数独。填错数字也不会中断这一局，每条提示都附带理由，每天还有一道新的每日挑战。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cagewise/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cagewise - Willee Project">
+    <meta property="og:description" content="Cagewise 是一款靠推理来解的杀手数独。填错数字也不会中断这一局，每条提示都附带理由，每天还有一道新的每日挑战。">
+    <meta property="og:url" content="https://willee.net/apps/cagewise/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/cagewise/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Cagewise</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Cagewise</h1>
+        <p>靠推理解开的杀手数独</p>
+        <div class="graphic-banner">
+            <img src="images/Cagewise_zh_feature.webp" alt="Cagewise — 靠推理解开的杀手数独。没有生命值，提示会讲清理由" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Cagewise 图标" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Cagewise</h2>
+                <p>杀手数独 · 经典 · 每日挑战</p>
+                <div>
+                    <span class="badge">Android (即将推出)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Cagewise 是一款靠推理来解的杀手数独。填错数字也不会中断这一局，每条提示都附带理由，每天还有一道新的每日挑战。在9×9的盘面上，让每一行、每一列、每一个3×3的宫都填入1到9各一次。虚线框起来的“笼子”就是线索：笼子里的数字加起来等于角上的小数字，同一个笼子里不会有重复的数字。每一题的答案都是唯一的，靠逻辑就能一步步解开。所有题目在放进应用之前都用求解器检验过，不用靠猜。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Cagewise_zh_01_home.webp" alt="主页 — 经典·每日挑战" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_02_classic_hint.webp" alt="经典 — 附带理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_03_classic_result.webp" alt="经典 — 成功（新纪录）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_04_daily.webp" alt="每日挑战 — 游戏中（笼子组合助手）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_05_daily_result.webp" alt="每日挑战 — 结果画面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_06_records.webp" alt="记录" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cagewise_zh_07_tutorial.webp" alt="新手教学 — 用6×6的小盘面熟悉规则" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>两种模式</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>经典</strong><span>不限时。从入门到大师共六个难度，一开始就全部开放</span></div>
+            <div class="mode-item"><strong>每日挑战</strong><span>每天一道新题，所有人都一样。简单、普通、困难轮流出现。延续连续记录并分享</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主要功能</h2>
+        <ul class="features">
+            <li>
+                <strong>提示会讲清理由</strong>
+                <span>点按一次提示，会指出该看的地方；再点按一次，会告诉你该做什么和理由。每条提示都会标出用到的解题要点（笼子组合、隐性唯一、45法则、区块排除等），边玩边就能学会这些方法。</span>
+            </li>
+            <li>
+                <strong>没有生命值，也不赶时间</strong>
+                <span>没有生命值，也没有时间限制。填错的数字随时可以改。提示和撤销想用多少次都行，全部免费。</span>
+            </li>
+            <li>
+                <strong>笼子组合助手</strong>
+                <span>选中一格，就会显示这个笼子能填的所有数字组合，点按组合即可写入笔记。显示规则冲突、立即显示错误、高亮相同数字、先选数字、大号数字也可随时开关。</span>
+            </li>
+            <li>
+                <strong>6×6新手教学</strong>
+                <span>第一次打开会有新手教学，用一个6×6的小盘面讲解笼子和它的和。随时可以跳过，也能在设置的“玩法”里重看。</span>
+            </li>
+            <li>
+                <strong>铜铃音效</strong>
+                <span>柔和的铜铃音效、振动和轻巧的动画。每种特效都可单独关闭，开启“减少特效”还能一次调低全部。规则冲突、错误和完成的笼子，除了颜色，还用形状来标示。</span>
+            </li>
+            <li>
+                <strong>离线畅玩</strong>
+                <span>无需注册，无需登录，没有网络也能玩（包括每日挑战）。</span>
+            </li>
+            <li>
+                <strong>多语言支持</strong>
+                <span>支持中文（简体、繁体）、英语、韩语和日语，跟随设备语言，也可在设置中选择。</span>
+            </li>
+            <li>
+                <strong>免费提供</strong>
+                <span>只有屏幕底部一条小横幅广告，应用内没有任何付费项目。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>支持平台</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>即将推出</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>使用手册</h2>
+        <p>查看 Cagewise 应用的使用手册。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看 Cagewise 应用的隐私政策。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <p>有关应用的咨询请通过以下方式联系我们。</p>
+        <p><strong>邮箱:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>开发:</strong> <a href="/zh/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="privacy/zh.html">隐私政策</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

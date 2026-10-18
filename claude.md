@@ -139,7 +139,27 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── keepsum/            # Keepsum 앱
+│   ├── keepsum/            # Keepsum 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   ├── zh.html
+│   │   │   └── zh-Hant.html
+│   │   ├── privacy/        # 개인정보처리방침 (번체 zh-Hant 포함 5개 언어)
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   ├── zh.html
+│   │   │   └── zh-Hant.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── cagewise/           # Cagewise 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -172,7 +192,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - English (en)
 - 日本語 (ja)
 - 中文 (zh)
-- 예외: Nums to One·Tenmates·Keepsum의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정, Tenmates는 2026-10-09, Keepsum은 2026-10-10)
+- 예외: Nums to One·Tenmates·Keepsum·Cagewise의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정, Tenmates는 2026-10-09, Keepsum은 2026-10-10, Cagewise는 2026-10-18)
 
 ## 색상 팔레트
 ```css
@@ -244,6 +264,14 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 원본 문서: 앱 저장소(A32.Keepsum) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/keepsum/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지에 `privacy/en.html`이 등록되어 있으므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **경쟁작 게임 이름 표기 금지**: Number Sums·ナンバーサム, Sumplete, Rullo 등 다른 회사 게임 이름과 'Number Sum(s)'처럼 그에 가까운 말을 쓰지 않음(앱 저장소 `listing.md` 규칙)
 
+### Cagewise
+- 9×9 판에 1~9를 채우는 스도쿠에 케이지(점선으로 묶은 칸 무리와 그 합)를 더한 킬러 스도쿠. Classic(시간 제한 없음, 입문~마스터 여섯 등급)·Daily(매일 한 판, 쉬움·보통·어려움이 차례로) 모드
+- 플랫폼: Android (출시 예정 — 2026-10-18 플레이 내부 테스트)
+- 패키지 ID: net.willee.cagewise
+- 원본 문서: 앱 저장소(A33.Cagewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/cagewise/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지와 Play Console에 `privacy/en.html`이 등록되어 있으므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
+- **다른 회사 게임 이름·상표 표기 금지**: Sudoku.com, KenKen, KenDoku, Kakuro 등을 쓰지 않음. 일본어는 '数独'(니콜리 상표) 대신 'ナンプレ'만 씀(앱 저장소 `listing.md` 규칙)
+- 한국어는 '생명 없이' 대신 '실수 제한 없이'로 씀(2026-10-18 사용자 의견, 앱 저장소 `listing.md`)
+
 ## 공통 스타일·검색 정보 (2026-10-09)
 - **공통 스타일:** 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
 - **`<head>` 틀:**
@@ -258,7 +286,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
-  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
   - 스크린샷과 배너는 WebP로 둔다.
