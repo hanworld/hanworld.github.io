@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://willee.net/ko/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://willee.net/en/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://willee.net/ja/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://willee.net/zh/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -1001,7 +1001,7 @@
   <!-- Cagewise 앱 페이지 -->
   <url>
     <loc>https://willee.net/apps/cagewise/ko.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
@@ -1010,7 +1010,7 @@
   </url>
   <url>
     <loc>https://willee.net/apps/cagewise/en.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
@@ -1019,7 +1019,7 @@
   </url>
   <url>
     <loc>https://willee.net/apps/cagewise/ja.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>
@@ -1028,7 +1028,7 @@
   </url>
   <url>
     <loc>https://willee.net/apps/cagewise/zh.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/cagewise/ko.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/cagewise/en.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/cagewise/ja.html"/>

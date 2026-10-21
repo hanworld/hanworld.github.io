@@ -271,7 +271,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Cagewise
 - 9×9 판에 1~9를 채우는 스도쿠에 케이지(점선으로 묶은 칸 무리와 그 합)를 더한 킬러 스도쿠. Classic(시간 제한 없음, 입문~마스터 여섯 등급)·Daily(매일 한 판, 쉬움·보통·어려움이 차례로) 모드
-- 플랫폼: Android (출시 예정 — 2026-10-18 플레이 내부 테스트)
+- 플랫폼: Android (Google Play 출시, 2026-10-21)
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.cagewise
 - 패키지 ID: net.willee.cagewise
 - 원본 문서: 앱 저장소(A33.Cagewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/cagewise/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지와 Play Console에 `privacy/en.html`이 등록되어 있으므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: Sudoku.com, KenKen, KenDoku, Kakuro 등을 쓰지 않음. 일본어는 '数独'(니콜리 상표) 대신 'ナンプレ'만 씀(앱 저장소 `listing.md` 규칙)
