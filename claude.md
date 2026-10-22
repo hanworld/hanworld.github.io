@@ -182,7 +182,12 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── minewise/           # Minewise 앱 (설명서·방침 먼저, 소개 페이지는 나중)
+│   └── minewise/           # Minewise 앱
+│       ├── index.html      # 한국어로 리다이렉트
+│       ├── ko.html
+│       ├── en.html
+│       ├── ja.html
+│       ├── zh.html
 │       ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
 │       │   ├── ko.html
 │       │   ├── en.html
@@ -295,10 +300,11 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Minewise
 - 숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐(모든 판이 찍지 않고 논리만으로 풀림). Classic(시간 제한 없음, 다섯 등급 9×9~16×30)·하드(지뢰를 밟으면 끝, 힌트 없음)·Daily(매일 작은·중간·큰 판 셋) 모드
-- 플랫폼: Android (출시 전 — 2026-10-22 설명서·방침만 먼저 게시)
+- 플랫폼: Android (출시 예정 — 플레이 내부 테스트 중)
 - 패키지 ID: net.willee.minewise
 - 원본 문서: 앱 저장소(A34.Minewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/minewise/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: 'Microsoft Minesweeper', 'Hexcells' 등을 쓰지 않음. 'minesweeper'·'지뢰찾기'·'マインスイーパー'·'扫雷'·'踩地雷'는 장르 이름으로만 씀(앱 저장소 `docs/README.md` 규칙)
+- 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음. 쓸 수 있는 것은 '전면·영상(·보상형) 광고 없음'까지(A34 요청, 앱 저장소 `listing.md`)
 
 ## 공통 스타일·검색 정보 (2026-10-09)
 - **공통 스타일:** 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.

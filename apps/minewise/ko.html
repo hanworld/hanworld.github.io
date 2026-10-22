@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Minewise - 윌리 프로젝트</title>
+    <meta name="description" content="Minewise(마인와이즈)는 추측 없는 지뢰찾기 퍼즐입니다. 모든 판이 빛나는 시작 칸에서 출발해 논리만으로 끝까지 풀리므로, 반반 찍기로 승부가 갈리는 판이 없습니다.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/minewise/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="Minewise - 윌리 프로젝트">
+    <meta property="og:description" content="Minewise(마인와이즈)는 추측 없는 지뢰찾기 퍼즐입니다. 모든 판이 빛나는 시작 칸에서 출발해 논리만으로 끝까지 풀리므로, 반반 찍기로 승부가 갈리는 판이 없습니다.">
+    <meta property="og:url" content="https://willee.net/apps/minewise/ko.html">
+    <meta property="og:image" content="https://willee.net/apps/minewise/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Minewise</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Minewise</h1>
+        <p>추측 없는 지뢰찾기. 모든 판이 논리만으로 풀려요.</p>
+        <div class="store-cta"><span>Google Play 출시 예정</span></div>
+        <div class="graphic-banner">
+            <img src="images/Minewise_ko_feature.webp" alt="Minewise — 추측 없는 지뢰찾기. 모든 판이 논리만으로 풀려요. 지뢰를 밟아도 계속, 이유를 알려 주는 힌트" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Minewise 아이콘" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Minewise</h2>
+                <p>추측 없는 지뢰찾기 · Classic · 하드 · Daily</p>
+                <div>
+                    <span class="badge">Android (출시 예정)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Minewise(마인와이즈)는 추측 없는 지뢰찾기 퍼즐입니다. 모든 판이 빛나는 시작 칸에서 출발해 논리만으로 끝까지 풀리므로, 반반 찍기로 승부가 갈리는 판이 없습니다. 지뢰가 아닌 칸을 모두 열면 끝납니다. 숫자는 둘레 여덟 칸에 있는 지뢰의 수이고, 지뢰가 확실한 칸에는 깃발을 꽂습니다. 판은 미리 만들어 두고, 앱에 넣기 전에 솔버로 전부 다시 풀어 확인했습니다. 그래서 짚어 낼 다음 수가 언제나 있습니다.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Minewise_ko_01_home.webp" alt="홈 — Classic·하드·Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_02_classic_hint.webp" alt="Classic — 힌트와 이유" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_03_classic_result.webp" alt="Classic — 다 풀었어요(새 기록)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_04_classic_big.webp" alt="Classic — 16×30 큰 판 푸는 중" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_05_daily_result.webp" alt="Daily — 결과(완벽)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_06_hard.webp" alt="하드 — 지뢰를 밟으면 끝, 힌트 없음" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Minewise_ko_07_tutorial.webp" alt="첫 실행 안내 — 7×7 판으로 규칙 익히기" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>세 가지 모드</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>Classic</strong><span>시간 제한 없음. 9×9·지뢰 10개부터 16×30·지뢰 99개까지 다섯 등급이 처음부터 모두 열림</span></div>
+            <div class="mode-item"><strong>하드</strong><span>같은 다섯 등급을 고전 규칙으로. 지뢰를 밟으면 끝, 힌트 없음. 성공률·가장 빠른 시간·연속 성공 기록</span></div>
+            <div class="mode-item"><strong>Daily</strong><span>하루 세 판(9×9·12×16·16×30), 모두에게 같은 판. 하나만 풀어도 연속 기록이 이어지고 결과 공유</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>주요 기능</h2>
+        <ul class="features">
+            <li>
+                <strong>첫 누름부터 찍을 일이 없는 판</strong>
+                <span>시작 칸은 늘 빈 칸이라 첫 누름부터 넓게 열립니다. 시작 칸에서 마지막 칸까지 한 수씩 따져 풀 수 있습니다.</span>
+            </li>
+            <li>
+                <strong>지뢰를 밟아도 계속</strong>
+                <span>Classic과 Daily에서는 지뢰를 밟아도 판이 이어집니다. 밟은 칸은 터진 지뢰로 남고 실수가 하나 늘 뿐입니다. 가장 빠른 시간은 실수 없이 푼 판만 세고, 실수도 힌트도 없이 풀면 '완벽' 도장이 찍힙니다.</span>
+            </li>
+            <li>
+                <strong>이유를 보여 주는 힌트</strong>
+                <span>힌트를 누르면 살펴볼 숫자가 밝혀지고, 한 번 더 누르면 다음에 열 칸과 이유를 알려 줍니다. 힌트마다 근거가 된 요령의 이름(한 숫자, 두 숫자, 남은 지뢰 수 등)이 붙고, 틀린 깃발이 있으면 그것부터 짚어 줍니다. 힌트는 무제한이고 무료입니다.</span>
+            </li>
+            <li>
+                <strong>손가락으로 하기 편하게</strong>
+                <span>누르면 열고, 길게 누르면 깃발을 꽂습니다. 설정에서 [열기|깃발] 단추로 바꿀 수 있습니다. 모든 판을 두 손가락으로 키우고 끌어서 옮길 수 있고, 큰 숫자, 시간 보기, '실수 바로 보기'도 고를 수 있습니다.</span>
+            </li>
+            <li>
+                <strong>다섯 단계 첫 실행 안내</strong>
+                <span>처음 켜면 작은 판으로 다섯 단계 안내가 나옵니다. 건너뛰거나 설정에서 다시 볼 수 있습니다.</span>
+            </li>
+            <li>
+                <strong>맑은 유리 소리</strong>
+                <span>맑은 유리 소리, 진동, 판을 풀면 번지는 빛. 움직임·빛·색종이를 하나씩 끄거나 '효과 줄이기'로 한꺼번에 줄일 수 있습니다. 실수와 완성은 색뿐 아니라 모양으로도 표시합니다.</span>
+            </li>
+            <li>
+                <strong>오프라인 플레이</strong>
+                <span>계정도 로그인도 없습니다. Daily를 포함해 인터넷 없이도 게임이 됩니다.</span>
+            </li>
+            <li>
+                <strong>다국어 지원</strong>
+                <span>한국어, English, 日本語, 中文(간체·번체)을 지원하며 기기 언어를 따르거나 설정에서 직접 고를 수 있습니다.</span>
+            </li>
+            <li>
+                <strong>무료 제공</strong>
+                <span>광고는 화면 맨 아래의 작은 배너 하나뿐입니다. 전면·영상·보상형 광고가 없고, 앱 안에서 결제하는 것도 없습니다.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>지원 플랫폼</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>출시 예정</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>사용 설명서</h2>
+        <p>Minewise의 사용 설명서를 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>개인정보처리방침</h2>
+        <p>Minewise의 개인정보처리방침을 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>문의</h2>
+        <p>앱 관련 문의사항은 아래로 연락해주세요.</p>
+        <p><strong>이메일:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>개발:</strong> <a href="/ko/">윌리 프로젝트 (Willee Project)</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="privacy/ko.html">개인정보처리방침</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

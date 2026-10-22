@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://willee.net/ko/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://willee.net/en/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://willee.net/ja/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://willee.net/zh/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -1138,6 +1138,148 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/cagewise/privacy/zh.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cagewise/privacy/zh-Hant.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cagewise/privacy/en.html"/>
+  </url>
+
+  <!-- Minewise 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/minewise/ko.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/en.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/ja.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/zh.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/en.html"/>
+  </url>
+
+  <!-- Minewise 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/minewise/manual/ko.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/manual/en.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/manual/ja.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/manual/zh.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/manual/zh-Hant.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html"/>
+  </url>
+
+  <!-- Minewise 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/minewise/privacy/ko.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/privacy/en.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/privacy/ja.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/privacy/zh.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/minewise/privacy/zh-Hant.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/privacy/en.html"/>
   </url>
 
 </urlset>
