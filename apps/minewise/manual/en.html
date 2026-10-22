@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Minewise: How to Play - Willee Project</title>
+    <meta name="description" content="Minewise: How to Play — Minewise is a no-guess minesweeper puzzle: use the number clues to avoid the mines and open every cell that isn't one.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/minewise/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Minewise: How to Play - Willee Project">
+    <meta property="og:description" content="Minewise: How to Play — Minewise is a no-guess minesweeper puzzle: use the number clues to avoid the mines and open every cell that isn't one.">
+    <meta property="og:url" content="https://willee.net/apps/minewise/manual/en.html">
+    <meta property="og:image" content="https://willee.net/apps/minewise/images/og_image_en.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Minewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Minewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Minewise</h1>
+                <p>How to Play</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Minewise_en_01_home.webp" alt="Home — Classic, Hard and Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_02_classic_hint.webp" alt="Classic — a hint with its reason" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_03_classic_result.webp" alt="Classic — cleared (new best)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_04_classic_big.webp" alt="Classic — playing a big 16×30 board" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_05_daily_result.webp" alt="Daily — result (Perfect)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_06_hard.webp" alt="Hard — a mine ends it, no hints" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_en_07_tutorial.webp" alt="Tutorial — learning the rules on a 7×7 board" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Minewise</td></tr>
+            <tr><th>Version</th><td>1.0.1</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>Minewise is a no-guess minesweeper puzzle: use the number clues to avoid the mines and open every cell that isn't one. Every board starts at a glowing start cell and can be solved from there to the end by logic alone, without guessing.</p>
+        <ul>
+            <li>A mine never ends a board (except on Hard). The cell stays as a blown mine and only your mistakes go up. Hints are free and unlimited, and there is no time limit.</li>
+            <li>No sign-up, no login. The first time you open the app, a short tutorial ("Learn to play") teaches the rules on a small 7×7 board. You can end it any time with <strong>Skip</strong>.</li>
+            <li><strong>The game works offline.</strong> The internet is used only for the ad at the bottom, usage statistics and crash reports.</li>
+            <li>The language follows your device. English, Korean, Japanese and Chinese (Simplified and Traditional) are supported, and you can also pick one in Settings.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Rules</h2>
+        <ul>
+            <li>The board is a grid of square cells with some mines hidden among them. The number of mines is fixed for each board and shown on screen.</li>
+            <li>When you <strong>open</strong> a cell that isn't a mine, it shows how many mines are in the eight cells around it. A 0 is left blank and opens its neighbors by itself (and keeps going while blank cells connect).</li>
+            <li>A <strong>flag</strong> marks a cell you think is a mine. A flagged cell doesn't open when you tap it.</li>
+            <li>When every cell that isn't a mine is open, the board is <strong>cleared</strong>. You don't need to flag all the mines.</li>
+            <li>Every board has one <strong>glowing start cell</strong>. It is always empty, so a wide area opens. At first only that cell can be tapped (tap another cell and you are told "Open the glowing cell first").</li>
+            <li>Every board can be solved from the start cell to the end by the numbers alone, without guessing. You never reach a spot where you have to guess.</li>
+            <li><strong>A mine doesn't end the board</strong> (except on Hard, chapter 6). The cell stays as a blown mine and your mistakes go up by one. There is no undo. If you tap a number to open around it while its flags are wrong (chapter 3), a mine opens and counts as a mistake.</li>
+            <li><strong>Best times count only boards with no mistakes.</strong> A board cleared with no mistakes and no hints gets a <strong>Perfect</strong> stamp.</li>
+        </ul>
+        <h3>Reading the board</h3>
+        <ul>
+            <li>Closed cells are raised green tiles; open cells sit lower and are light. Each number has its own color.</li>
+            <li>The glowing cell is the start cell. A hint lights the next cell to open in the same way.</li>
+            <li>Flags are amber (orange-yellow).</li>
+            <li>A blown mine shows as a red cell with a mine and a dotted ring, so it is marked by shape as well as color.</li>
+            <li>A wrong flag (a flag on a cell that isn't a mine) gets a cream-colored X over it. You see it when <strong>Show mistakes right away</strong> is on, when a hint points it out, and when a Hard board ends.</li>
+            <li>Numbers under an amber cover and cells ringed in amber are what a hint is working from (chapter 4).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Solving tips</h2>
+        <p>The tutorial teaches the basics on a 7×7 board in five steps: <strong>Start cell → Numbers and flags → Open around → Two numbers → On your own</strong>. At each step it highlights the numbers and mines to look at, and only the cell you should tap responds. Hints name the idea they use with a tag: <strong>One number</strong>, <strong>Two numbers</strong>, <strong>Several numbers</strong>, <strong>Mines left</strong> or <strong>Every layout</strong>. Here is what each one means.</p>
+        <ul>
+            <li><strong>One number</strong>: a number counts the mines in the eight cells around it. If it has exactly as many closed cells around it as mines it still needs, they are all mines (a 1 with only one closed cell around it means that cell is a mine). If all of its mines are already found, the other closed cells around it are safe. It helps to flag the mines you find.</li>
+            <li><strong>Two numbers</strong>: look at two neighboring numbers together. For example, if every closed cell around the upper 1 also touches the lower 1, the upper 1's mine is in a cell they both touch, and that mine is the lower 1's mine too. So the cells touching only the lower 1 are safe. When the numbers differ, work out how many mines the shared cells must hold.</li>
+            <li><strong>Several numbers</strong>: look at several numbers together and think about the mine layouts that fit all of them. Some cells are safe (or mines) in every such layout.</li>
+            <li><strong>Mines left</strong>: the number of mines left on the whole board is a clue too. If all the mines are found, every other cell is safe; if the mines left equal the closed cells, they are all mines. If one number (or a few) uses up all the mines left, the other closed cells are safe.</li>
+            <li><strong>Every layout</strong>: the rare case where you have to think through every layout of the closed cells.</li>
+        </ul>
+        <p>Level 1 boards can be solved with <strong>One number</strong> and <strong>Two numbers</strong> alone. From Level 2 on, some boards also need <strong>Several numbers</strong> and <strong>Mines left</strong>. Hints show the harder ideas, with their reasons (chapter 4).</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. Controls</h2>
+        <ul>
+            <li>At first only the <strong>glowing start cell</strong> can be tapped. Opening it starts the clock.</li>
+            <li><strong>Tap</strong>: tap a closed cell to open it. It is decided when you lift your finger, and the cell under your finger lights up. If your finger slides a long way, nothing opens (it counts as moving the board).</li>
+            <li><strong>Long press</strong> (control A, the default): long-press a closed cell to plant a flag, and long-press a flagged cell to remove it. A ring fills while you hold, and the flag is planted when it is full. Pick the hold time in Settings (350 ms at first).</li>
+            <li><strong>[Open|Flag] buttons</strong> (control B): choose <strong>[Open|Flag] buttons</strong> under <strong>Controls</strong> in Settings and an [Open|Flag] switch appears below the board. With [Open] chosen, tapping a cell opens it; with [Flag] chosen, tapping a closed cell plants or removes a flag. Long press isn't used.</li>
+            <li><strong>Tap a number to open around it</strong> (on at first): tap an open number, and when the flags around it (blown mines count too) match the number, the other closed cells around it open at once. If a flag is wrong, a mine opens, and every mine that opens counts as a mistake. If the flag count doesn't match, nothing opens.</li>
+            <li><strong>Zoom and move</strong>: on every board, pinch with two fingers to zoom in and out, and drag to move. Big boards (12×20 and up, Levels 4 and 5) open slightly zoomed in with the glowing start cell in the middle. When a second finger touches down, the first finger's tap is discarded, so zooming never opens a cell or plants a flag.</li>
+            <li>Remove a flag by long-pressing it again (with control B, pick [Flag] and tap it again).</li>
+        </ul>
+        <p>At the left of the top bar you see the mode and level (for example Classic · Level 3), and below it the level dots with the board size and mines (for example 12×16 · 36 mines). Daily shows the Daily number (#12) and the board size. The buttons at the right:</p>
+        <table class="info-table">
+            <tr><th>Button</th><th>What it does</th></tr>
+            <tr><td><strong>Restart</strong> (↻)</td><td>Opens a sheet where you pick <strong>Restart this board</strong> or <strong>New board</strong> (below)</td></tr>
+            <tr><td><strong>Quick settings</strong></td><td>Opens a sheet for changing sounds, vibration, effects, controls and board options (chapter 5) without leaving the game. Tap above the sheet or drag it down to close it</td></tr>
+            <tr><td><strong>Exit</strong> (the door)</td><td>Goes back home. Your board is saved automatically</td></tr>
+        </table>
+        <p>The row right above the board:</p>
+        <ul>
+            <li>The number next to the flag is the <strong>mines left</strong> (all mines − flags − blown mines). If a flag is wrong, it won't match the real count.</li>
+            <li>When you have mistakes, <strong>Mistakes</strong> n appears; when you have used hints, a lightbulb and the count follow.</li>
+            <li>At the right is the time (hide it with <strong>Show time</strong> in Settings).</li>
+            <li>The strip above that shows hint bubbles and messages (chapter 4).</li>
+        </ul>
+        <p>The row below the board:</p>
+        <table class="info-table">
+            <tr><th>Button</th><th>What it does</th></tr>
+            <tr><td><strong>Hint</strong></td><td>Tells you the next cell to open, with the reason. Unlimited (chapter 4). It can't be tapped before the start cell is open or after the board is over</td></tr>
+            <tr><td><strong>[Open|Flag]</strong></td><td>Shown only with control B. Chooses whether a tap opens a cell or plants a flag</td></tr>
+        </table>
+        <p>The <strong>Restart</strong> sheet:</p>
+        <table class="info-table">
+            <tr><th>Choice</th><th>What happens</th></tr>
+            <tr><td><strong>Restart this board</strong></td><td>Puts the board back as it was before the start cell was opened. In Classic, the time, mistakes and hints start over; in Daily, the day's time, mistakes and hints keep counting. Greyed out until the start cell is open. Not on Hard</td></tr>
+            <tr><td><strong>New board</strong> (Classic and Hard)</td><td>Leaves this board and gives you another one of the same level. The board you left doesn't count as cleared (see chapter 6 for Hard). Not in Daily</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Hints</h2>
+        <p>The <strong>Hint</strong> button tells you the next cell to open, and why. Hints are free and unlimited (not on Hard). You can use them once the start cell is open.</p>
+        <p>You press the same button three times: <strong>Hint</strong> → <strong>Show cell</strong> → <strong>Apply</strong>.</p>
+        <ul>
+            <li>Step 1: tap <strong>Hint</strong> and it tells you only where to look. The numbers it works from get an amber cover, and the mines they rely on (mines that can already be found) are shown with an amber ring and dot (for example 'Look at the two highlighted numbers together. There's a safe cell to open.' If it relies on mines, 'Ringed cells are mines.' is added). The tag on the bubble names the idea used (<strong>One number</strong>, <strong>Two numbers</strong>, <strong>Several numbers</strong>, <strong>Mines left</strong>, <strong>Every layout</strong>).</li>
+            <li>Step 2: the button becomes <strong>Show cell</strong>. Tap it and the cell to open glows, with the reason (for example 'Every closed cell around the upper 1 also touches the lower 1. So the cell touching only the lower 1 is safe.'). When two numbers are the same, they are told apart by position: upper, lower, left, right and so on.</li>
+            <li>Step 3: the button becomes <strong>Apply</strong>. Tap it to plant flags on the mines it relied on (if you haven't) and open that cell.</li>
+            <li>If you have a wrong flag, the hint points to it first (tag <strong>Wrong flag</strong>). The earliest one you planted comes first, and an X appears over it. The button becomes <strong>Apply</strong> at once, and it takes that flag off.</li>
+            <li>A hint works only from the open cells and blown mines. It doesn't use your flags as evidence, so a hint is right even if you have planted no flags or the wrong ones. Flags are used only to point out a wrong flag and to prefer a cell that relies on mines you have already flagged. The cell shown is one that is easy to work out (relying on few mines and a simple idea).</li>
+            <li>The number of hints you use shows above the board and in the result, and it goes into the shared text of a Daily board. A hint counts when you ask for it (step 1); going to step 2 or applying doesn't count again, but closing it and asking again counts once more.</li>
+            <li>A hint closes when you tap the close (X) on its bubble, or when you open a cell or plant a flag.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Assists and board options</h2>
+        <p>Turn them on or off under <strong>Controls</strong> and <strong>Board</strong> in Settings. During a game, change them right away with <strong>Quick settings</strong>.</p>
+        <ul>
+            <li><strong>Tap a number to open around it</strong> (on at first): when you tap an open number and the flags around it match the number, the other closed cells open (chapter 3). Off, tapping a number does nothing.</li>
+            <li><strong>Show mistakes right away</strong> (off at first): puts an X on a wrong flag (a flag on a cell that isn't a mine) right away. It isn't used on Hard. Off, a wrong flag isn't pointed out until a hint does.</li>
+            <li><strong>Show time</strong> (on at first): shows the time above the board. Off, the time just isn't shown. It is still counted, and your time appears in the result.</li>
+            <li><strong>Big numbers</strong> (off at first): draws the numbers on the board bigger.</li>
+            <li><strong>Long-press time (ms)</strong> (350 at first): pick 250, 300, 350, 400 or 500. It is used only with Tap · long press.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Modes</h2>
+        <h3>Classic — pick a level, no time limit</h3>
+        <ul>
+            <li>On the home screen, make sure <strong>Classic</strong> is chosen in the switch at the top of the <strong>Classic</strong> card. Pick a level with the tabs (<strong>1</strong>–<strong>5</strong>) and tap <strong>Play</strong>. If you have a board in progress, the button says <strong>Continue</strong>. If you are new, start with Level 1.</li>
+            <li>Levels are set by board size (columns × rows) and the number of mines. The higher the level, the bigger the board and the more mines. All levels are open from the start.</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>Level</th><th>Board size</th><th>Mines</th></tr>
+            <tr><td>1</td><td>9×9</td><td>10</td></tr>
+            <tr><td>2</td><td>9×12</td><td>17</td></tr>
+            <tr><td>3</td><td>12×16</td><td>36</td></tr>
+            <tr><td>4</td><td>12×20</td><td>50</td></tr>
+            <tr><td>5</td><td>16×30</td><td>99</td></tr>
+        </table>
+        <ul>
+            <li>The tabs show the level number and board size. The board preview in the middle of the card shows the board you are working on (opened cells, flags and blown mines; no numbers), and swiping it sideways moves to the next or previous level. Below it you see the chosen level and a record line (for example 'Level 3 · 12×16 · 36 mines', 'Best 03:41 · Cleared 12 · Perfect 3').</li>
+            <li>Boards come at random from the ones you haven't cleared yet. A cleared board doesn't come back, and once you have cleared every board of a level, the one you cleared the longest time ago comes first.</li>
+            <li>When you clear a board, the result card shows your time, <strong>Mistakes</strong>, <strong>Hints</strong>, <strong>Best</strong> (with a <strong>New best</strong> stamp when you beat your old record) and the number of boards <strong>Cleared</strong>. With no mistakes and no hints you get a <strong>Perfect</strong> stamp, and with mistakes it tells you "Boards with mistakes don't count toward the best time". <strong>Next board</strong> takes you to the next board of the same level.</li>
+            <li>A board in progress is saved automatically. Leave, or even restart the app, and you carry on where you left off on each level. The clock doesn't run while you're away. If you leave before opening the start cell, the same board waits for you.</li>
+        </ul>
+        <h3>Hard — a mine ends it</h3>
+        <ul>
+            <li>Pick <strong>Hard</strong> in the [Classic | Hard] switch at the top of the Classic card on the home screen to play the same five levels (the board sizes and mines in the table above) by the classic rules. With Hard chosen, the chosen level tab and the button below turn into the dark Hard look with an amber rim, and the button says <strong>Try</strong> (<strong>Continue</strong> if you have a board in progress). Classic and Hard look at the same level.</li>
+            <li><strong>A mine ends the board</strong> (a loss). Every hidden mine is shown, and wrong flags get an X. The result says "You hit a mine" and shows the percentage of <strong>Safe cells opened</strong>.</li>
+            <li><strong>There are no hints.</strong> In place of the Hint button, the row below the board has a strip saying "A mine ends it · No hints". <strong>Show mistakes right away</strong> isn't used either. Tap a number to open around it still works (if a flag is wrong, a mine opens and it is a loss).</li>
+            <li>There is no limit on boards. <strong>Next board</strong> on the result takes you on. A board you have finished on Hard (win or loss) doesn't come back, and a board in progress in Classic is avoided where possible.</li>
+            <li>Leaving midway is not a loss. The board in progress is saved for each level, and you carry on later.</li>
+            <li>The Restart sheet has only <strong>New board</strong> (restarting the same board would mean you already know the cells you saw). <strong>If you choose New board after opening the start cell, that board counts as a loss.</strong> The sheet says so. Before the start cell is open, it doesn't count.</li>
+            <li>The result card shows <strong>Best</strong> (wins only, with a <strong>New best</strong> stamp when you beat your old record), <strong>Win streak</strong>, <strong>Win rate</strong> and <strong>Wins</strong> (wins/boards finished). They are collected for each level on the Records screen too (chapter 7). Sharing is only in Daily.</li>
+        </ul>
+        <h3>Daily — today's three boards</h3>
+        <ul>
+            <li>Every day, everyone gets the same three boards: <strong>Small</strong> (9×9 · 10 mines), <strong>Medium</strong> (12×16 · 36 mines) and <strong>Large</strong> (16×30 · 99 mines). <strong>Everyone in the world gets the same boards on the same day</strong> (by your device's date). A new Daily opens at midnight on your device's clock.</li>
+            <li>You play each board separately, and each keeps its own result. The rules are the same as Classic (a mistake never ends a board, and hints are unlimited). Since a board never ends in a loss, there is no failing.</li>
+            <li>There's no time limit; the time you've spent is shown above the board (you can hide it in Settings).</li>
+            <li>Within the day, you can leave and come back. <strong>Restart this board</strong> keeps counting the day's time, mistakes and hints (it is the only choice when restarting). When the day changes, yesterday's unfinished boards disappear and new ones open.</li>
+            <li>Clear any one of the day's three boards and the day counts toward your <strong>streak</strong>; miss a day and it breaks.</li>
+            <li>The <strong>Daily</strong> card on the home screen shows the number and date (for example #12 · Oct 22), your streak, today's three boards and this week's seven days. Each of the three boards shows its name, size and status (<strong>New</strong>, <strong>Continue</strong>, or a check and your time once cleared); tap it to play it, or to see the result of a cleared one. This week's seven days show the weekday, the date and a dot for each of the day's three boards (a filled dot for a cleared board, and a thick outline on today).</li>
+            <li>The result screen shows the board's size, your time, <strong>Mistakes</strong>, <strong>Hints</strong>, <strong>Streak</strong> (in days), this week's seven days and the time until the next Daily. With no mistakes and no hints you get a <strong>Perfect</strong> stamp, and beating your longest streak puts a <strong>New best</strong> stamp on the streak. Send your result with <strong>Share</strong> (one board at a time). For example:</li>
+        </ul>
+        <pre class="share-example">Minewise Daily Small #12 ✅ 03:41
+Mistakes 0 · Hints 1
+🔥 5-day streak</pre>
+        <p><strong>#12</strong> is the Daily number, followed by your time (minutes:seconds, or hours:minutes:seconds past an hour). 'Minewise Daily' in the first line is the same in every language, and the board size is added so people who played the same board can compare. The second line shows your mistakes and hints and the third your streak (shown from two days on). The first Daily is #1 and the number goes up by one each day, so the same number means the same boards.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Records</h2>
+        <p>Open them with the <strong>trophy</strong> button at the top right of the home screen. It shows how many boards you've cleared.</p>
+        <ul>
+            <li>At the top: <strong>Total boards cleared</strong> (Classic, Hard and Daily), and the numbers for Classic, Hard and Daily</li>
+            <li><strong>Classic</strong>: for each level (board size), boards <strong>Cleared</strong>, <strong>Best</strong> time (only boards cleared with no mistakes), <strong>Average</strong> time and <strong>Perfect</strong> boards (cleared with no mistakes and no hints). Levels with nothing cleared yet are dimmed, with '-' for the times.</li>
+            <li><strong>Hard</strong>: for each level, <strong>Wins</strong> (wins/boards finished), <strong>Win rate</strong>, <strong>Best</strong> time (wins only) and <strong>Best streak</strong> (the longest win streak)</li>
+            <li><strong>Daily</strong>: <strong>Streak</strong>, <strong>Longest streak</strong>, <strong>Days cleared</strong> and <strong>Boards cleared</strong>. The calendar below (use the arrows on either side to change month) shows the days you cleared as filled circles, and today has an outline.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. Settings</h2>
+        <p>Open them with the <strong>gear</strong> at the top right of the home screen. There are four groups. During a game, the <strong>Quick settings</strong> button changes the first three right away.</p>
+        <h3>Sound and effects</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Sound effects</td><td>Turns on or off the sounds for opening cells, planting and removing flags, opening around a number, hitting a mine, hints, clearing a board and the result stamps</td></tr>
+            <tr><td>Vibration</td><td>A short tap for planting a flag, a lighter one for removing it, a heavy one for hitting a mine, and a long one when you clear a board. Turns it on or off</td></tr>
+            <tr><td>Reduce effects</td><td>Turns all effects down at once. While it is on, Motion, Light and Confetti below count as off</td></tr>
+            <tr><td>Motion · Light · Confetti</td><td>Turn each effect on or off. <strong>Motion</strong> is the opening ripple, flag bounce and defusing, <strong>Light</strong> is the start-cell glow, blasts and the cleared-board glow, and <strong>Confetti</strong> is the result screen. The board never shakes</td></tr>
+        </table>
+        <h3>Controls</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Controls</td><td>Pick <strong>Tap · long press</strong> (the default) or <strong>[Open|Flag] buttons</strong> (chapter 3)</td></tr>
+            <tr><td>Long-press time (ms)</td><td>Pick 250, 300, 350, 400 or 500. 350 at first. Used only with Tap · long press</td></tr>
+            <tr><td>Tap a number to open around it</td><td>Opens the other cells when the flags around a number match it. On at first</td></tr>
+        </table>
+        <h3>Board</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Show time</td><td>Shows the time above the board. On at first</td></tr>
+            <tr><td>Show mistakes right away</td><td>Puts an X on wrong flags right away (not on Hard). Off at first</td></tr>
+            <tr><td>Big numbers</td><td>Draws the numbers on the board bigger. Off at first</td></tr>
+        </table>
+        <h3>General</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Language</td><td>Follows your device language (the default), or pick one from the list</td></tr>
+            <tr><td>Privacy options</td><td>Opens the ad consent window again. Shown only where consent is required (such as Europe)</td></tr>
+            <tr><td>How to play</td><td>A short rules screen: goal, numbers, the glowing start cell, controls, mistakes, hints, Daily and Hard</td></tr>
+            <tr><td>Replay the tutorial</td><td>Plays the tutorial ("Learn to play") again</td></tr>
+            <tr><td>About</td><td>Version, this guide (<strong>How to play</strong>), the privacy policy and open-source licenses</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. Ads and your records</h2>
+        <ul>
+            <li>A single banner ad sits at the very bottom of the screen. During the tutorial the ad is removed and only its space is kept. That one banner is the only ad. The game works without the internet; the internet is used only for the ad, usage statistics and crash reports.</li>
+            <li>There are no in-app purchases.</li>
+            <li>Your records and settings are stored on your device. If your device's Google backup (Android automatic backup) is on, they are included in the backup, so you can carry on after switching devices. Uninstalling the app deletes the records on the device.</li>
+            <li>For details, see the <a href="../privacy/en.html">Privacy Policy</a>.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. Contact</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

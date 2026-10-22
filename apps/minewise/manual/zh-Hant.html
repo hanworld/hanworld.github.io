@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Minewise 玩法說明 - Willee Project</title>
+    <meta name="description" content="Minewise 玩法說明 — Minewise 是一款無需猜測的踩地雷益智遊戲：只靠數字線索避開地雷，打開所有不是地雷的格子。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Minewise 玩法說明 - Willee Project">
+    <meta property="og:description" content="Minewise 玩法說明 — Minewise 是一款無需猜測的踩地雷益智遊戲：只靠數字線索避開地雷，打開所有不是地雷的格子。">
+    <meta property="og:url" content="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <meta property="og:image" content="https://willee.net/apps/minewise/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Minewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Minewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Minewise</h1>
+                <p>玩法說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Minewise_zh-Hant_01_home.webp" alt="首頁 — Classic·困難·Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_02_classic_hint.webp" alt="Classic — 附帶理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_03_classic_result.webp" alt="Classic — 過關（新紀錄）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_04_classic_big.webp" alt="Classic — 正在玩16×30的大盤面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_05_daily_result.webp" alt="Daily — 結果（完美）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_06_hard.webp" alt="困難 — 踩到地雷就結束，沒有提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_zh-Hant_07_tutorial.webp" alt="新手教學 — 用7×7的小盤面熟悉規則" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>Minewise</td></tr>
+            <tr><th>版本</th><td>1.0.1</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>Minewise 是一款無需猜測的踩地雷益智遊戲：只靠數字線索避開地雷，打開所有不是地雷的格子。每個盤面都從發光的起始格開始，不用猜，只靠邏輯就能一路解到最後。</p>
+        <ul>
+            <li>踩到地雷也不會結束盤面（困難模式除外）。踩到的格子會留下爆炸的地雷，只會增加失誤。提示不限次數、免費使用，也沒有時間限制。</li>
+            <li>不需要註冊，也不需要登入。第一次打開時，會先用一個7×7的小盤面進行新手教學，帶你熟悉規則。點擊<strong>略過</strong>可以隨時結束。</li>
+            <li><strong>沒有網路也能玩。</strong> 只有畫面下方的廣告，以及傳送使用統計和錯誤報告時才會用到網路。</li>
+            <li>語言跟隨裝置設定。支援中文（繁體、簡體）、英文、韓文、日文，也可以在設定中直接選擇。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 規則</h2>
+        <ul>
+            <li>盤面是縱橫排列的方形格子，其中一部分藏著地雷。每個盤面的地雷數是固定的，並顯示在畫面上。</li>
+            <li><strong>打開</strong>不是地雷的格子，會顯示周圍八個格子裡的地雷數。如果是0，就不顯示數字而是空白格，並自動打開周圍的格子（空白格連在一起時會一直打開下去）。</li>
+            <li><strong>旗子</strong>插在你認為是地雷的格子上。插了旗子的格子，點擊也不會打開。</li>
+            <li>打開所有不是地雷的格子，就<strong>過關</strong>了。不必把地雷都插上旗子。</li>
+            <li>每個盤面都有一個<strong>發光的起始格</strong>。起始格總是空白格，所以一開始會打開一大片。一開始只能點擊這一格（點擊其他格子會提示「請先打開發光的格子」）。</li>
+            <li>每個盤面都能從起始格到最後，只靠數字、不用猜就解開。不會出現不猜就打不開的局面。</li>
+            <li><strong>踩到地雷也不會結束</strong>（困難模式除外，見第6章）。踩到的格子會留下爆炸的地雷，失誤增加一次。沒有復原。如果旗子插錯了還點擊數字一次打開（見第3章），地雷會被打開，打開幾個地雷就算幾次失誤。</li>
+            <li><strong>最佳紀錄只計算沒有失誤的盤面。</strong> 沒有失誤也沒有使用提示就過關時，結果上會蓋上<strong>完美</strong>印章。</li>
+        </ul>
+        <h3>盤面怎麼看</h3>
+        <ul>
+            <li>未打開的格子是凸起的綠色方塊，已打開的格子顏色較淺、位置較低。數字依大小各有不同的顏色。</li>
+            <li>發光的格子是起始格。提示告訴你下一步要打開哪一格時，也會用同樣的光。</li>
+            <li>旗子是琥珀色（偏橙的黃色）。</li>
+            <li>踩到的地雷顯示為紅色格子，上面有地雷圖案和虛線圓環。不只靠顏色，也用形狀提示。</li>
+            <li>插錯的旗子（插在不是地雷的格子上的旗子）上會疊一個奶油色的 X。開啟<strong>立即顯示失誤</strong>時、提示指出它時、困難模式的盤面結束時可以看到。</li>
+            <li>蓋著琥珀色罩子的數字和圍著琥珀色框的格子，是提示推理所依據的內容（見第4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解題要點</h2>
+        <p>教學用一個7×7的盤面，分五步教你基礎：<strong>起始格 → 數字與插旗 → 一次打開 → 兩個數字 → 獨立完成</strong>。每一步都會讓要看的數字和地雷亮起，只有該點擊的格子才有反應。提示會用名稱告訴你用了哪種要點：<strong>一個數字</strong>、<strong>兩個數字</strong>、<strong>多個數字</strong>、<strong>剩餘地雷數</strong>、<strong>所有佈雷方式</strong>。它們的意思如下。</p>
+        <ul>
+            <li><strong>一個數字</strong>：已打開格子上的數字，是周圍八個格子裡的地雷數。如果周圍未打開的格子數等於還沒找到的地雷數，這些格子就全是地雷（1的周圍只有一個未打開的格子時，那一格就是地雷）。反過來，如果周圍的地雷已經全部找到，其餘未打開的格子就是安全的。把找到的地雷插上旗子會很方便。</li>
+            <li><strong>兩個數字</strong>：把相鄰的兩個數字放在一起看。例如，上面的1周圍未打開的格子都在下面的1的周圍，那麼上面的1的地雷就在兩個數字共同挨著的格子裡，這顆地雷也正是下面的1的地雷。所以只挨著下面的1的格子是安全的。數字不同時，要推算共同挨著的格子裡該有幾顆地雷。</li>
+            <li><strong>多個數字</strong>：把多個數字放在一起看，想想滿足所有數字的佈雷方式。有些格子在任何一種方式中都安全（或都是地雷）。</li>
+            <li><strong>剩餘地雷數</strong>：整個盤面的剩餘地雷數也是線索。地雷全部找到時，其餘格子都是安全的；剩餘地雷數等於未打開的格子數時，它們全是地雷。如果一個數字（或幾個數字）用掉了全部剩餘地雷，其他未打開的格子就是安全的。</li>
+            <li><strong>所有佈雷方式</strong>：需要把未打開格子的所有佈雷方式都考慮一遍，這種情況非常少見。</li>
+        </ul>
+        <p>等級1的盤面只靠<strong>一個數字</strong>和<strong>兩個數字</strong>就能解開。從等級2起，有些盤面還需要<strong>多個數字</strong>和<strong>剩餘地雷數</strong>。更難的要點，會由提示連同理由一起告訴你（見第4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li>一開始只能點擊<strong>發光的起始格</strong>。打開它之後，計時開始。</li>
+            <li><strong>點擊</strong>：點擊未打開的格子就會打開它。手指抬起時才確定，按住時手指下的格子會亮起。手指拖動較遠時不會打開（視為想移動盤面）。</li>
+            <li><strong>長按</strong>（操作 A，預設）：長按未打開的格子會插旗，長按已插旗的格子會拔掉。按住時圓環會逐漸變滿，變滿時旗子就插上了。長按時間在設定中選擇（預設 350 毫秒）。</li>
+            <li><strong>[打開|插旗]按鈕</strong>（操作 B）：在設定的<strong>操作</strong>中選擇<strong>[打開|插旗]按鈕</strong>後，盤面下方會出現[打開|插旗]按鈕。選中[打開]時，點擊格子就打開它；選中[插旗]時，點擊未打開的格子會插上或拔掉旗子。此時不使用長按。</li>
+            <li><strong>點擊數字打開周圍</strong>（預設開啟）：點擊已打開的數字，當它周圍的旗子數（含踩到的地雷）與數字相同時，會一次打開周圍所有未打開的格子。如果旗子插錯了，地雷會被打開，打開幾個地雷就算幾次失誤。旗子數不同時不會打開。</li>
+            <li><strong>縮放與移動</strong>：所有盤面都可以用兩指張開、捏合來放大縮小，並拖動來移動。12×20 及以上的大盤面（等級4、5）一開始會稍微放大，並把發光的起始格放在正中間。出現第二根手指時，這一次點擊會被丟棄，所以縮放時的手指不會打開格子或插旗。</li>
+            <li>拔掉旗子要再次長按（操作 B 則選中[插旗]後再點擊一次）。</li>
+        </ul>
+        <p>頂部一行左側顯示模式名稱和等級（例如 Classic · 等級3），下面是等級圓點和盤面大小·地雷數（例如 12×16 · 地雷36）。Daily 顯示 Daily 編號（#12）和盤面種類。右側的按鈕如下。</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>重來</strong>（↻）</td><td>打開選擇<strong>這一局從頭開始</strong>或<strong>新的一局</strong>的面板（見下）</td></tr>
+            <tr><td><strong>快速設定</strong></td><td>打開一個面板，不離開遊戲畫面就能改音效、震動、特效、操作和盤面設定（見第5章）。點擊面板上方或往下拉就能關閉</td></tr>
+            <tr><td><strong>退出</strong>（門的形狀）</td><td>回到首頁。正在解的盤面會自動儲存</td></tr>
+        </table>
+        <p>盤面正上方的一行：</p>
+        <ul>
+            <li>旗子圖示旁的數字是<strong>剩餘地雷</strong>數（地雷總數 − 旗子數 − 踩到的地雷數）。如果有插錯的旗子，可能與實際不符。</li>
+            <li>有失誤時會出現<strong>失誤</strong> n，用過提示後會接著出現燈泡圖示和使用次數。</li>
+            <li>右側是時間（可以在設定中用<strong>顯示時間</strong>隱藏）。</li>
+            <li>再上面一條是提示氣泡和通知的位置（見第4章）。</li>
+        </ul>
+        <p>盤面下方的一行：</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>提示</strong></td><td>告訴你下一個要打開的格子和理由。不限次數（見第4章）。打開起始格之前和盤面結束之後不能點擊</td></tr>
+            <tr><td><strong>[打開|插旗]</strong></td><td>只在操作 B 時顯示。決定點擊格子是打開還是插旗</td></tr>
+        </table>
+        <p><strong>重來</strong>面板：</p>
+        <table class="info-table">
+            <tr><th>選項</th><th>內容</th></tr>
+            <tr><td><strong>這一局從頭開始</strong></td><td>把盤面恢復到打開起始格之前的樣子。Classic 的用時、失誤和提示也從頭算，Daily 則繼續累計當天的用時、失誤和提示。打開起始格之前會變淡、不能點擊。困難模式沒有這一項</td></tr>
+            <tr><td><strong>新的一局</strong>（Classic 和困難）</td><td>放棄這一局，換一局同等級的。放棄的盤面不算過關（困難模式見第6章）。Daily 沒有這一項</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 提示</h2>
+        <p><strong>提示</strong>按鈕會告訴你下一個要打開的格子，並說明理由。提示不限次數，免費使用（困難模式除外）。打開起始格之後才能使用。</p>
+        <p>同一個按鈕要按三次：<strong>提示</strong> → <strong>查看格子</strong> → <strong>套用</strong>。</p>
+        <ul>
+            <li>第一步：點擊<strong>提示</strong>，只會告訴你要看的地方。作為依據的數字會蓋上琥珀色的罩子，它們所依靠的地雷（已經能找出的地雷）會用琥珀色的框和點標出（例如「把兩個標亮的數字放在一起看。有可以打開的格子」。有所依靠的地雷時，會加上「帶框的格子是地雷」）。氣泡上的名稱是所用的要點（<strong>一個數字</strong>、<strong>兩個數字</strong>、<strong>多個數字</strong>、<strong>剩餘地雷數</strong>、<strong>所有佈雷方式</strong>）。</li>
+            <li>第二步：按鈕變成<strong>查看格子</strong>。點擊後，要打開的格子會發光，並給出理由（例如「上面的1周圍未打開的格子也都挨著下面的1。所以只挨著下面的1的格子是安全的」）。兩個數字相同時，會用上、下、左、右這樣的位置詞來區分。</li>
+            <li>第三步：按鈕變成<strong>套用</strong>。點擊後，會在所依靠的地雷上插旗（如果還沒插），並打開那個格子。</li>
+            <li>如果有插錯的旗子，會先指出它（名稱<strong>插錯的旗</strong>）。從最先插的開始，並在那面旗子上疊一個 X。按鈕會直接變成<strong>套用</strong>，點擊後拔掉那面旗子。</li>
+            <li>提示只根據已打開的格子和踩到的地雷來推理。它不把旗子當作依據，所以即使一面旗子也沒插，或者旗子插錯了，提示也永遠是對的。旗子只用來指出插錯的旗，以及優先選出依靠已插旗地雷的格子。給出的格子是容易推出的格子（依靠的地雷少，要點也簡單）。</li>
+            <li>用過的提示次數會顯示在盤面上方一行和結果裡，也會寫進 Daily 的分享文字。請求提示時（第一步）算一次；進入第二步或套用不另算，關閉後再請求會多算一次。</li>
+            <li>點擊氣泡上的關閉（X），或者打開格子、插旗，提示就會關閉。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 輔助功能與盤面設定</h2>
+        <p>在設定的<strong>操作</strong>和<strong>盤面</strong>中開關。遊戲中可以用<strong>快速設定</strong>馬上更改。</p>
+        <ul>
+            <li><strong>點擊數字打開周圍</strong>（預設開啟）：點擊已打開的數字，如果周圍的旗子數與數字相同，就會打開其餘未打開的格子（見第3章）。關閉後，點擊數字沒有任何反應。</li>
+            <li><strong>立即顯示失誤</strong>（預設關閉）：馬上在插錯的旗子（插在不是地雷的格子上的旗子）上標出 X。困難模式不使用。關閉時，插錯的旗子要等提示指出才會告訴你。</li>
+            <li><strong>顯示時間</strong>（預設開啟）：在盤面上方顯示時間。關閉後只是不顯示，時間仍在計算。過關盤面的用時會顯示在結果裡。</li>
+            <li><strong>大號數字</strong>（預設關閉）：把盤面上的數字畫大一些。</li>
+            <li><strong>長按時間(毫秒)</strong>（預設 350）：從 250、300、350、400、500 中選擇。只在「點擊 · 長按」的操作方式下使用。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 模式</h2>
+        <h3>Classic — 自選等級，不限時</h3>
+        <ul>
+            <li>在首頁 <strong>Classic</strong> 卡片上方的切換中選中 <strong>Classic</strong>，在分頁（<strong>1</strong>～<strong>5</strong>）中選擇等級，點擊<strong>開始</strong>。有進行中的盤面時會顯示<strong>繼續</strong>。第一次玩建議從等級1開始。</li>
+            <li>等級依盤面大小（橫×縱）和地雷數劃分。等級越高，盤面越大，地雷越多。所有等級一開始就開放。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>等級</th><th>盤面大小</th><th>地雷數</th></tr>
+            <tr><td>1</td><td>9×9</td><td>10</td></tr>
+            <tr><td>2</td><td>9×12</td><td>17</td></tr>
+            <tr><td>3</td><td>12×16</td><td>36</td></tr>
+            <tr><td>4</td><td>12×20</td><td>50</td></tr>
+            <tr><td>5</td><td>16×30</td><td>99</td></tr>
+        </table>
+        <ul>
+            <li>分頁上顯示等級編號和盤面大小。卡片中間的盤面預覽顯示正在解的盤面的樣子（已打開的格子、旗子、踩到的地雷；不畫數字），向兩側滑動可以切換到下一個或上一個等級。下面一行顯示所選等級和一行紀錄（例如「等級3 · 12×16 · 地雷36」，「最佳 03:41 · 過關 12 · 完美 3」）。</li>
+            <li>盤面會從還沒過關的盤面裡隨機出。過關過的盤面不會再出現；某個等級的盤面全部過關後，會從最早過關的那一局開始再出。</li>
+            <li>過關後，結果卡片會顯示用時、<strong>失誤</strong>、<strong>提示</strong>、<strong>最佳</strong>（超過原來的紀錄時會蓋上<strong>新紀錄</strong>印章）和<strong>過關</strong>的盤面數。沒有失誤也沒有使用提示時會蓋上<strong>完美</strong>印章，有失誤時會提示「有失誤的盤面不計入最佳紀錄」。點擊<strong>下一局</strong>會接著出同一等級的下一局。</li>
+            <li>進行中的盤面會自動儲存。離開或重新打開應用程式後，每個等級都能接著解。離開應用程式期間不計時。如果在打開起始格之前離開，同一個盤面會原樣等著你。</li>
+        </ul>
+        <h3>困難 — 踩到地雷就結束</h3>
+        <ul>
+            <li>在首頁 Classic 卡片上方的[Classic | 困難]切換中選中<strong>困難</strong>，就用經典規則解同樣的五個等級（上表的盤面大小和地雷數）。選中困難後，所選等級的分頁和下面的按鈕會變成深色底、琥珀色邊框的困難樣式，按鈕變成<strong>挑戰</strong>（有進行中的盤面時為<strong>繼續</strong>）。Classic 和困難看的是同一個等級。</li>
+            <li><strong>踩到地雷，這一局就結束了</strong>（失敗）。所有藏著的地雷都會顯示出來，插錯的旗子上會有 X。結果會顯示「踩到地雷了」和<strong>已打開的安全格</strong>的比例。</li>
+            <li><strong>沒有提示。</strong> 盤面下方一行沒有提示按鈕，取而代之的是「踩到地雷就結束 · 沒有提示」的條。<strong>立即顯示失誤</strong>也不使用。點擊數字打開周圍仍然可用（旗子插錯時地雷會被打開，算失敗）。</li>
+            <li>盤面數量沒有限制。點擊結果裡的<strong>下一局</strong>就能接著玩。在困難模式中結束的盤面（成功或失敗）不會再出現，在 Classic 中進行到一半的盤面也會盡量避開。</li>
+            <li>中途離開不算失敗。每個等級正在解的盤面會儲存下來，之後可以接著解。</li>
+            <li>重來面板裡只有<strong>新的一局</strong>（把同一局從頭開始，就會帶著已經看過的格子開始）。<strong>打開起始格之後選擇新的一局，這一局會記為失敗。</strong> 面板裡也這樣寫著。打開起始格之前不計。</li>
+            <li>結果卡片會顯示<strong>最佳</strong>（只算成功的盤面，超過原來的紀錄時蓋上<strong>新紀錄</strong>印章）、<strong>連續成功</strong>、<strong>成功率</strong>和<strong>成功</strong>（成功的盤面/結束的盤面）。紀錄畫面裡也按等級彙總（見第7章）。分享只有 Daily 才有。</li>
+        </ul>
+        <h3>Daily — 今天的三個盤面</h3>
+        <ul>
+            <li>每天所有人拿到同樣的三個盤面：<strong>小盤面</strong>（9×9 · 地雷10）、<strong>中盤面</strong>（12×16 · 地雷36）、<strong>大盤面</strong>（16×30 · 地雷99）。<strong>全世界的人在同一天解同樣的盤面</strong>（以裝置日期為準）。新的 Daily 會在裝置時間的午夜開放。</li>
+            <li>每個盤面分開解，結果也各自儲存。規則和 Classic 一樣（失誤不會結束盤面，提示不限次數）。盤面不會以失敗告終，所以沒有失敗。</li>
+            <li>沒有時間限制，到目前為止的用時顯示在盤面上方（可以在設定中隱藏）。</li>
+            <li>當天之內離開再回來也能接著解。即使選擇<strong>這一局從頭開始</strong>，當天的用時、失誤和提示也會繼續累計（重來時只有這一項）。日期變了以後，沒解完的昨天的盤面會消失，新的盤面會開放。</li>
+            <li>當天的三個盤面只要過關其中一個，這一天就計入<strong>連續</strong>；中間空一天就會中斷。</li>
+            <li>首頁的 <strong>Daily</strong> 卡片會顯示編號和日期（例如 #12 · 10月22日）、連續天數、今天的三個盤面和這一週的七天。每個盤面的格子上顯示盤面名稱、大小和狀態（<strong>未開始</strong>、<strong>繼續</strong>，過關的盤面顯示打勾和用時），點擊後可以開始解，或查看已過關盤面的結果。這一週的七天顯示星期、日期和當天三個盤面的圓點（過關的盤面是實心圓點，今天是粗邊框）。</li>
+            <li>結果畫面會顯示盤面大小、用時、<strong>失誤</strong>、<strong>提示</strong>、<strong>連續</strong>（天數）、這一週的七天和距下次 Daily 的時間。沒有失誤也沒有使用提示時會蓋上<strong>完美</strong>印章，超過最長連續時，連續一欄會蓋上<strong>新紀錄</strong>印章。可以用<strong>分享</strong>傳送結果（一次一個盤面）。例如：</li>
+        </ul>
+        <pre class="share-example">Minewise Daily 小盤面 #12 ✅ 03:41
+失誤 0 · 提示 1
+🔥 連續5天</pre>
+        <p><strong>#12</strong>是 Daily 的編號，旁邊是用時（分:秒，超過一小時則為時:分:秒）。第一行的「Minewise Daily」在任何語言中都一樣，並寫上盤面種類，方便解同一個盤面的人互相比較。第二行是失誤和提示的次數，第三行是連續紀錄（兩天以上才顯示）。第一個 Daily 是 #1，之後每天加一，編號相同就是同樣的盤面。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 紀錄</h2>
+        <p>點擊首頁右上角的<strong>獎盃</strong>按鈕打開。按鈕上會顯示過關的盤面數。</p>
+        <ul>
+            <li>最上方：<strong>過關盤面總數</strong>（Classic、困難和 Daily）的合計，以及 Classic、困難、Daily 各自的數量</li>
+            <li><strong>Classic</strong>：各等級（盤面大小）的<strong>過關</strong>數、<strong>最佳</strong>用時（只計算沒有失誤的盤面）、<strong>平均</strong>用時和<strong>完美</strong>盤面數（沒有失誤也沒有使用提示的盤面）。還沒有過關的等級會變淡，用時顯示為「-」。</li>
+            <li><strong>困難</strong>：各等級的<strong>成功</strong>（成功的盤面/結束的盤面）、<strong>成功率</strong>、<strong>最佳</strong>用時（只算成功的盤面）和<strong>最佳連續</strong>（最長的連續成功）</li>
+            <li><strong>Daily</strong>：<strong>連續</strong>、<strong>最長連續</strong>、<strong>過關天數</strong>、<strong>過關盤面</strong>。下方的月曆（用兩側的箭頭按月翻頁）會用實心圓標出過關的日子，今天會有邊框。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>點擊首頁右上角的<strong>齒輪</strong>打開。分為四組。遊戲中可以用<strong>快速設定</strong>按鈕馬上更改前三組。</p>
+        <h3>聲音與效果</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>音效</td><td>開關打開格子、插旗和拔旗、點擊數字打開周圍、踩到地雷、提示、盤面過關和結果印章等的聲音</td></tr>
+            <tr><td>震動</td><td>插旗時短促，拔旗時更輕，踩到地雷時沉重，盤面過關時較長。可以開關</td></tr>
+            <tr><td>減少特效</td><td>一次減少所有特效。開啟期間，下面的動畫、光效、彩紙都相當於關閉</td></tr>
+            <tr><td>動畫 · 光效 · 彩紙</td><td>逐項開關特效。<strong>動畫</strong>是打開的波紋、插旗彈跳和拆除，<strong>光效</strong>是起始格的光、爆炸和過關的光，<strong>彩紙</strong>是結果畫面。沒有整個盤面晃動的特效</td></tr>
+        </table>
+        <h3>操作</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>操作方式</td><td>在<strong>點擊 · 長按</strong>（預設）和<strong>[打開|插旗]按鈕</strong>中選擇（見第3章）</td></tr>
+            <tr><td>長按時間(毫秒)</td><td>從 250、300、350、400、500 中選擇。預設 350。只在點擊 · 長按時使用</td></tr>
+            <tr><td>點擊數字打開周圍</td><td>周圍的旗子數與數字相同時，打開其餘的格子。預設開啟</td></tr>
+        </table>
+        <h3>盤面</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>顯示時間</td><td>在盤面上方顯示時間。預設開啟</td></tr>
+            <tr><td>立即顯示失誤</td><td>立即在插錯的旗子上標出 X（困難模式除外）。預設關閉</td></tr>
+            <tr><td>大號數字</td><td>把盤面上的數字畫大一些。預設關閉</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>語言</td><td>跟隨系統（預設），或從清單中直接選擇</td></tr>
+            <tr><td>隱私權選項</td><td>再次打開廣告同意視窗。只在需要同意的地區（例如歐洲）顯示</td></tr>
+            <tr><td>玩法說明</td><td>簡短的規則畫面：目標、數字、發光的起始格、操作、失誤、提示、Daily 和困難</td></tr>
+            <tr><td>重新查看教學</td><td>再玩一次新手教學</td></tr>
+            <tr><td>關於</td><td>版本、本說明（<strong>玩法說明</strong>）、隱私權政策、開放原始碼授權</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 廣告與紀錄的保存</h2>
+        <ul>
+            <li>畫面最下方有一條橫幅廣告。在新手教學中會撤下廣告，只保留位置。廣告只有這一條。遊戲沒有網路也能玩，網路只用於廣告、使用統計和錯誤報告。</li>
+            <li>應用程式內沒有任何付費項目。</li>
+            <li>紀錄和設定儲存在裝置中。如果開啟了裝置的 Google 備份（Android 自動備份），會一起備份，換裝置後也能接著玩。解除安裝應用程式會刪除裝置中的紀錄。</li>
+            <li>詳情請參閱<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 聯絡我們</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

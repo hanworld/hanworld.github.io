@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Minewise 사용 설명서 - 윌리 프로젝트</title>
+    <meta name="description" content="Minewise 사용 설명서 — 숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐입니다.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/minewise/manual/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="Minewise 사용 설명서 - 윌리 프로젝트">
+    <meta property="og:description" content="Minewise 사용 설명서 — 숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐입니다.">
+    <meta property="og:url" content="https://willee.net/apps/minewise/manual/ko.html">
+    <meta property="og:image" content="https://willee.net/apps/minewise/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Minewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>매뉴얼</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Minewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Minewise</h1>
+                <p>사용 설명서</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Minewise_ko_01_home.webp" alt="홈 — Classic·하드·Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_02_classic_hint.webp" alt="Classic — 힌트와 이유" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_03_classic_result.webp" alt="Classic — 다 풀었어요(새 기록)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_04_classic_big.webp" alt="Classic — 16×30 큰 판 푸는 중" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_05_daily_result.webp" alt="Daily — 결과(완벽)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_06_hard.webp" alt="하드 — 지뢰를 밟으면 끝, 힌트 없음" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ko_07_tutorial.webp" alt="첫 실행 안내 — 7×7 판으로 규칙 익히기" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>앱 정보</h2>
+        <table class="info-table">
+            <tr><th>앱 이름</th><td>Minewise</td></tr>
+            <tr><th>버전</th><td>1.0.1</td></tr>
+            <tr><th>개발</th><td>Willee Project</td></tr>
+            <tr><th>지원 플랫폼</th><td>Android</td></tr>
+        </table>
+        <p>숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐입니다. 모든 판은 빛나는 시작 칸에서 시작해 찍지 않고 논리만으로 끝까지 풀립니다.</p>
+        <ul>
+            <li>지뢰를 밟아도 판이 끝나지 않습니다(하드 판은 빼고). 밟은 칸은 터진 지뢰로 남고 실수만 늡니다. 힌트는 횟수 제한 없이 무료이고, 시간 제한도 없습니다.</li>
+            <li>회원가입도, 로그인도 없습니다. 처음 켜면 작은 판(7×7) 하나로 규칙을 익히는 첫 실행 안내(처음 풀어 보기)부터 시작합니다. <strong>건너뛰기</strong>로 언제든 마칠 수 있습니다.</li>
+            <li><strong>인터넷 없이도 게임은 됩니다.</strong> 인터넷은 화면 아래 광고와 이용 통계·오류 보고를 보낼 때만 씁니다.</li>
+            <li>언어는 기기 설정을 따릅니다. 한국어·영어·일본어·중국어(간체·번체)를 지원하고, 설정에서 직접 고를 수도 있습니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 규칙</h2>
+        <ul>
+            <li>판은 네모 칸이 가로세로로 놓여 있고, 그 가운데 일부에 지뢰가 숨어 있습니다. 지뢰 수는 판마다 정해져 있고 화면에 보입니다.</li>
+            <li>지뢰가 아닌 칸을 <strong>열면</strong> 둘레 여덟 칸에 있는 지뢰 수가 숫자로 나옵니다. 0이면 숫자 대신 빈 칸이 되고, 둘레를 저절로 엽니다(빈 칸이 이어지면 계속 열립니다).</li>
+            <li><strong>깃발</strong>은 지뢰라고 생각하는 칸에 꽂습니다. 깃발이 꽂힌 칸은 눌러도 열리지 않습니다.</li>
+            <li>지뢰가 아닌 칸을 모두 열면 <strong>다 푼 것</strong>입니다. 깃발을 다 꽂지 않아도 됩니다.</li>
+            <li>모든 판에는 <strong>빛나는 시작 칸</strong>이 하나 있습니다. 시작 칸은 늘 빈 칸이라 처음에 넓게 열립니다. 처음에는 그 칸만 눌립니다(다른 칸을 누르면 '빛나는 칸부터 열어요'라고 알려 줍니다).</li>
+            <li>모든 판은 시작 칸부터 끝까지 찍지 않고 숫자만으로 풀립니다. 찍어야만 열 수 있는 곳이 생기는 판은 나오지 않습니다.</li>
+            <li><strong>지뢰를 밟아도 판이 끝나지 않습니다</strong>(하드 판은 빼고, 6장). 밟은 칸은 터진 지뢰로 남고 실수가 하나 늡니다. 되돌리기는 없습니다. 깃발이 틀린 숫자를 눌러 한꺼번에 열면(3장) 지뢰가 열려, 열린 지뢰 수만큼 실수가 됩니다.</li>
+            <li><strong>최고 기록은 실수 없이 푼 판만 셉니다.</strong> 실수도 힌트도 없이 풀면 결과에 <strong>완벽</strong> 도장이 찍힙니다.</li>
+        </ul>
+        <h3>판 보는 법</h3>
+        <ul>
+            <li>닫힌 칸은 초록색으로 도톰하게 솟아 있고, 열린 칸은 밝고 낮게 내려앉아 있습니다. 숫자는 숫자마다 색이 다릅니다.</li>
+            <li>빛나는 칸은 시작 칸입니다. 힌트가 열 칸을 알려 줄 때도 같은 빛이 납니다.</li>
+            <li>깃발은 호박색(주황빛 노랑)입니다.</li>
+            <li>터진 지뢰는 붉은 칸에 지뢰 그림과 점선 고리가 보입니다. 색만이 아니라 모양으로도 알려 줍니다.</li>
+            <li>틀린 깃발(지뢰가 아닌 칸에 꽂은 깃발)에는 크림색 X가 겹칩니다. <strong>실수 바로 보기</strong>를 켰을 때, 힌트가 짚을 때, 하드 판이 끝났을 때 보입니다.</li>
+            <li>호박색 덮개를 씌운 숫자와 호박색 테를 두른 칸은 힌트가 따지는 근거입니다(4장).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 풀이 요령</h2>
+        <p>첫 실행 안내가 7×7 판 하나로 기본을 알려 줍니다. <strong>시작 칸 → 숫자와 깃발 → 한꺼번에 열기 → 두 숫자 → 혼자 풀기</strong>의 다섯 단계이고, 단계마다 볼 숫자와 지뢰를 밝혀 주며 눌러야 할 칸만 눌립니다. 힌트는 쓴 요령을 이름표로 달아 알려 줍니다. <strong>한 숫자</strong>, <strong>두 숫자</strong>, <strong>여러 숫자</strong>, <strong>남은 지뢰 수</strong>, <strong>모든 배치</strong>의 다섯 가지이고, 뜻은 다음과 같습니다.</p>
+        <ul>
+            <li><strong>한 숫자</strong>: 열린 칸의 숫자는 둘레 여덟 칸에 있는 지뢰 수입니다. 둘레의 닫힌 칸 수가 아직 못 찾은 지뢰 수와 같으면 그 칸들은 모두 지뢰입니다(1 둘레에 닫힌 칸이 하나뿐이면 그 칸이 지뢰입니다). 반대로 둘레의 지뢰를 이미 다 찾았으면 나머지 닫힌 칸은 안전합니다. 찾은 지뢰에는 깃발을 꽂아 두면 편합니다.</li>
+            <li><strong>두 숫자</strong>: 이웃한 두 숫자를 함께 봅니다. 예를 들어 위 1의 닫힌 칸이 모두 아래 1의 둘레에도 있으면, 위 1의 지뢰는 두 숫자가 함께 닿은 칸에 있고 그 지뢰가 아래 1의 지뢰이기도 합니다. 그러니 아래 1에만 닿은 칸은 안전합니다. 숫자가 서로 다를 때는 함께 닿은 칸에 지뢰가 몇 개 있어야 하는지를 따집니다.</li>
+            <li><strong>여러 숫자</strong>: 숫자 여러 개를 함께 보고, 모두를 맞추는 지뢰 배치를 따집니다. 어느 배치에서도 안전하거나 어느 배치에서도 지뢰인 칸이 있습니다.</li>
+            <li><strong>남은 지뢰 수</strong>: 판 전체의 남은 지뢰 수도 단서입니다. 지뢰를 다 찾았으면 나머지 칸은 모두 안전하고, 남은 지뢰 수가 닫힌 칸 수와 같으면 모두 지뢰입니다. 숫자 하나(또는 몇 개)가 남은 지뢰를 모두 쓰면 다른 닫힌 칸은 안전합니다.</li>
+            <li><strong>모든 배치</strong>: 닫힌 칸의 배치를 모두 따져야 하는 아주 드문 경우입니다.</li>
+        </ul>
+        <p>1등급 판은 <strong>한 숫자</strong>와 <strong>두 숫자</strong>만으로 풀립니다. 2등급부터는 <strong>여러 숫자</strong>와 <strong>남은 지뢰 수</strong>까지 필요한 판이 나올 수 있습니다. 더 어려운 요령은 힌트가 이유와 함께 알려 줍니다(4장).</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 조작</h2>
+        <ul>
+            <li>처음에는 <strong>빛나는 시작 칸</strong>만 눌립니다. 시작 칸을 열면 시간이 흐르기 시작합니다.</li>
+            <li><strong>누르기</strong>: 닫힌 칸을 누르면 엽니다. 손가락을 뗄 때 정해지고, 누르는 동안 닿은 칸이 밝아집니다. 손가락을 끌어 많이 움직이면 열지 않습니다(판을 옮기려는 손짓으로 봅니다).</li>
+            <li><strong>길게 누르기</strong>(조작 A, 처음 값): 닫힌 칸을 길게 누르면 깃발을 꽂고, 깃발이 꽂힌 칸을 길게 누르면 뺍니다. 누르는 동안 고리가 차오르고, 다 차면 깃발이 꽂힙니다. 길게 누르는 시간은 설정에서 고릅니다(처음 350ms).</li>
+            <li><strong>[열기|깃발] 단추</strong>(조작 B): 설정의 <strong>조작</strong>에서 <strong>[열기|깃발] 단추</strong>를 고르면, 판 아래에 [열기|깃발] 단추가 생깁니다. [열기]를 고르면 누르는 칸을 열고, [깃발]을 고르면 누르는 닫힌 칸에 깃발을 꽂거나 뺍니다. 이때는 길게 누르기를 쓰지 않습니다.</li>
+            <li><strong>숫자 눌러 한꺼번에 열기</strong>(처음 켬): 열린 숫자를 누르면, 그 둘레의 깃발 수(터진 지뢰 포함)가 숫자와 같을 때 둘레의 닫힌 칸을 한꺼번에 엽니다. 깃발이 틀렸으면 지뢰가 열리고, 열린 지뢰 수만큼 실수가 됩니다. 깃발 수가 다르면 열지 않습니다.</li>
+            <li><strong>확대·이동</strong>: 모든 판을 두 손가락으로 벌리고 오므려 확대·축소하고, 끌어서 옮깁니다. 12×20 이상의 큰 판(4·5등급)은 처음에 조금 확대해, 빛나는 시작 칸을 가운데에 두고 시작합니다. 손가락이 둘이 되면 그 누름은 버려지므로, 확대하는 손가락이 칸을 열거나 깃발을 꽂지 않습니다.</li>
+            <li>깃발은 다시 길게 눌러(조작 B는 [깃발]을 고르고 다시 눌러) 뺍니다.</li>
+        </ul>
+        <p>위쪽 줄 왼쪽에는 모드 이름과 등급(예: Classic · 3등급)이, 그 아래에는 등급 점과 판 크기·지뢰 수(예: 12×16 · 지뢰 36)가 보입니다. Daily는 Daily 번호(#12)와 판 종류가 보입니다. 오른쪽 단추는 다음과 같습니다.</p>
+        <table class="info-table">
+            <tr><th>단추</th><th>하는 일</th></tr>
+            <tr><td><strong>다시 하기</strong>(↻)</td><td><strong>이 판 처음부터</strong>와 <strong>새 판</strong>을 고르는 창을 엽니다(아래)</td></tr>
+            <tr><td><strong>빠른 설정</strong></td><td>효과음·진동·효과·조작·판 설정(5장)을 게임 화면에서 바로 바꾸는 창을 엽니다. 창 위쪽을 누르거나 끌어 내리면 닫힙니다</td></tr>
+            <tr><td><strong>나가기</strong>(문 모양)</td><td>홈으로 나갑니다. 푸는 판은 저절로 저장됩니다</td></tr>
+        </table>
+        <p>판 바로 위 줄:</p>
+        <ul>
+            <li>깃발 그림 옆 숫자는 <strong>남은 지뢰 수</strong>입니다(전체 지뢰 수 − 깃발 − 터진 지뢰). 틀린 깃발이 있으면 실제와 다를 수 있습니다.</li>
+            <li>실수가 있으면 <strong>실수</strong> n이, 힌트를 썼으면 전구 그림과 쓴 횟수가 이어서 보입니다.</li>
+            <li>오른쪽에는 시간이 보입니다(설정의 <strong>시간 보기</strong>로 숨길 수 있습니다).</li>
+            <li>그 위의 띠에 힌트 말풍선과 안내가 뜹니다(4장).</li>
+        </ul>
+        <p>판 아래 줄:</p>
+        <table class="info-table">
+            <tr><th>단추</th><th>하는 일</th></tr>
+            <tr><td><strong>힌트</strong></td><td>다음에 열 칸을 이유와 함께 알려 줍니다. 횟수 제한이 없습니다(4장). 시작 칸을 열기 전과 판이 끝난 뒤에는 누를 수 없습니다</td></tr>
+            <tr><td><strong>[열기|깃발]</strong></td><td>조작 B일 때만 보입니다. 누르는 칸을 열지 깃발을 꽂을지 정합니다</td></tr>
+        </table>
+        <p><strong>다시 하기</strong> 창:</p>
+        <table class="info-table">
+            <tr><th>고를 것</th><th>내용</th></tr>
+            <tr><td><strong>이 판 처음부터</strong></td><td>판을 시작 칸을 열기 전 모습으로 되돌립니다. Classic은 시간·실수·힌트도 처음부터 세고, Daily는 그날 쓴 시간·실수·힌트를 이어서 셉니다. 시작 칸을 열기 전에는 흐리게 꺼져 있습니다. 하드 판에는 없습니다</td></tr>
+            <tr><td><strong>새 판</strong>(Classic·하드)</td><td>이 판은 그만두고 같은 등급의 다른 판을 풉니다. 그만둔 판은 성공으로 세지 않습니다(하드는 6장). Daily에는 없습니다</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 힌트</h2>
+        <p><strong>힌트</strong> 단추가 다음에 열 칸 하나를 이유와 함께 알려 줍니다. 힌트는 횟수 제한 없이 무료입니다(하드 판은 빼고). 시작 칸을 연 뒤부터 쓸 수 있습니다.</p>
+        <p>같은 자리의 단추를 세 번 누릅니다. <strong>힌트</strong> → <strong>칸 보기</strong> → <strong>적용</strong>입니다.</p>
+        <ul>
+            <li>1단계: <strong>힌트</strong>를 누르면 볼 곳만 알려 줍니다. 근거가 되는 숫자에는 호박색 덮개가 씌워지고, 그 숫자가 기대는 지뢰(이미 찾을 수 있는 지뢰)는 호박색 테와 점으로 밝혀집니다(예: '밝힌 두 숫자를 함께 보세요. 열어도 되는 칸이 있어요'. 기대는 지뢰가 있으면 '테를 두른 칸은 지뢰예요'가 붙습니다). 말풍선의 이름표는 쓰인 요령입니다(<strong>한 숫자</strong>, <strong>두 숫자</strong>, <strong>여러 숫자</strong>, <strong>남은 지뢰 수</strong>, <strong>모든 배치</strong>).</li>
+            <li>2단계: 단추가 <strong>칸 보기</strong>로 바뀝니다. 누르면 열 칸이 빛나고 이유가 나옵니다(예: '위 1의 닫힌 칸은 모두 아래 1에도 닿아 있어요. 그래서 아래 1에만 닿은 칸은 안전해요'). 같은 두 숫자는 위·아래·왼쪽·오른쪽 같은 자리 말로 가려 부릅니다.</li>
+            <li>3단계: 단추가 <strong>적용</strong>으로 바뀝니다. 누르면 기대는 지뢰에 깃발을 꽂고(아직 안 꽂았다면) 그 칸을 엽니다.</li>
+            <li>틀린 깃발이 있으면 그것부터 알려 줍니다(이름표 <strong>틀린 깃발</strong>). 먼저 꽂은 깃발부터이고, 그 깃발에 X가 겹쳐 보입니다. 단추는 바로 <strong>적용</strong>이 되고, 누르면 그 깃발을 뺍니다.</li>
+            <li>힌트는 열린 칸과 터진 지뢰만 보고 따집니다. 깃발은 근거로 쓰지 않으므로, 깃발을 하나도 꽂지 않았거나 깃발이 틀려도 힌트는 늘 맞습니다. 깃발은 틀린 깃발을 짚고, 이미 깃발을 꽂은 지뢰에 기대는 칸을 먼저 고르는 데만 씁니다. 알려 주는 칸은 따지기 쉬운 칸(기대는 지뢰가 적고 쉬운 요령)입니다.</li>
+            <li>쓴 힌트 수는 판 위 줄과 결과에 남고, Daily 공유 글에도 들어갑니다. 힌트를 청할 때(1단계) 하나로 셉니다. 2단계로 넘기거나 적용하는 것은 따로 세지 않고, 닫았다가 다시 청하면 하나 더 셉니다.</li>
+            <li>말풍선의 닫기(X)를 누르거나, 칸을 열거나 깃발을 꽂으면 힌트가 닫힙니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 도움 기능과 판 설정</h2>
+        <p>설정의 <strong>조작</strong>과 <strong>판</strong> 묶음에서 켜고 끕니다. 게임 중에는 <strong>빠른 설정</strong>에서 바로 바꿀 수 있습니다.</p>
+        <ul>
+            <li><strong>숫자 눌러 한꺼번에 열기</strong>(처음 켬): 열린 숫자를 누르면 둘레의 깃발 수가 숫자와 같을 때 나머지 닫힌 칸을 엽니다(3장). 끄면 숫자를 눌러도 아무 일도 없습니다.</li>
+            <li><strong>실수 바로 보기</strong>(처음 꺼짐): 틀린 깃발(지뢰가 아닌 칸에 꽂은 깃발)에 바로 X를 그립니다. 하드 판에서는 쓰이지 않습니다. 끄면 틀린 깃발은 힌트가 짚을 때까지 알려 주지 않습니다.</li>
+            <li><strong>시간 보기</strong>(처음 켬): 판 위에 시간을 보입니다. 끄면 시간이 보이지 않을 뿐 시간은 계속 잽니다. 푼 판의 걸린 시간은 결과에 나옵니다.</li>
+            <li><strong>큰 숫자</strong>(처음 꺼짐): 판의 숫자를 크게 그립니다.</li>
+            <li><strong>길게 누르는 시간(ms)</strong>(처음 350): 250·300·350·400·500 가운데 고릅니다. 누르기·길게 누르기 조작에서만 쓰입니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 모드</h2>
+        <h3>Classic — 등급 고르기, 시간 제한 없음</h3>
+        <ul>
+            <li>홈의 <strong>Classic</strong> 카드 맨 위 전환에서 <strong>Classic</strong>을 고른 상태로, 등급 탭(<strong>1</strong>~<strong>5</strong>)에서 등급을 고르고 <strong>플레이</strong>를 누릅니다. 풀던 판이 있으면 <strong>이어 하기</strong>가 됩니다. 처음이라면 1등급을 권합니다.</li>
+            <li>등급은 판 크기(가로×세로)와 지뢰 수로 나뉩니다. 등급이 높을수록 판이 크고 지뢰가 많습니다. 등급은 처음부터 모두 열려 있습니다.</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>등급</th><th>판 크기</th><th>지뢰 수</th></tr>
+            <tr><td>1</td><td>9×9</td><td>10</td></tr>
+            <tr><td>2</td><td>9×12</td><td>17</td></tr>
+            <tr><td>3</td><td>12×16</td><td>36</td></tr>
+            <tr><td>4</td><td>12×20</td><td>50</td></tr>
+            <tr><td>5</td><td>16×30</td><td>99</td></tr>
+        </table>
+        <ul>
+            <li>탭에는 등급 번호와 판 크기가 보입니다. 카드 가운데의 판 미리보기는 지금 푸는 판의 모습(연 칸·깃발·터진 지뢰. 숫자는 그리지 않습니다)이고, 옆으로 밀면 다음·이전 등급으로 넘어갑니다. 그 아래에 고른 등급과 기록 한 줄이 보입니다(예: '3등급 · 12×16 · 지뢰 36', '최고 03:41 · 성공 12판 · 완벽 3판').</li>
+            <li>아직 풀지 않은 판 가운데에서 무작위로 나옵니다. 푼 판은 다시 나오지 않고, 그 등급의 판을 다 풀면 가장 오래전에 푼 판부터 다시 나옵니다.</li>
+            <li>판을 풀면 결과 카드가 나옵니다. 걸린 시간, <strong>실수</strong>, <strong>힌트</strong>, <strong>최고</strong>(이전 기록을 넘으면 <strong>새 기록</strong> 도장), <strong>성공</strong>한 판 수가 보입니다. 실수도 힌트도 없으면 <strong>완벽</strong> 도장이 찍히고, 실수가 있으면 '실수한 판은 최고 기록에 들지 않아요'라고 알려 줍니다. <strong>다음 판</strong>을 누르면 같은 등급의 다음 판으로 이어집니다.</li>
+            <li>푸는 판은 저절로 저장됩니다. 나갔다 와도, 앱을 껐다 켜도 등급마다 이어서 풉니다. 앱을 나가 있는 동안은 시간이 흐르지 않습니다. 시작 칸을 열기 전에 나가면 같은 판이 그대로 기다립니다.</li>
+        </ul>
+        <h3>하드 — 지뢰를 밟으면 끝</h3>
+        <ul>
+            <li>홈 Classic 카드 맨 위의 [Classic | 하드] 전환에서 <strong>하드</strong>를 고르면, 같은 다섯 등급(위 표의 판 크기와 지뢰 수)을 고전 규칙으로 풉니다. 하드를 고르면 고른 등급 탭과 아래 단추가 어두운 바탕에 호박색 테를 두른 하드 모양이 되고, 단추는 <strong>도전</strong>이 됩니다(푸는 판이 있으면 <strong>이어 하기</strong>). Classic과 하드는 같은 등급을 봅니다.</li>
+            <li><strong>지뢰를 밟으면 판이 끝납니다</strong>(실패). 숨은 지뢰가 모두 드러나고, 틀린 깃발에는 X가 붙습니다. 결과에는 '지뢰를 밟았어요'와 연 안전 칸의 비율이 나옵니다.</li>
+            <li><strong>힌트가 없습니다.</strong> 판 아래 줄에는 힌트 단추 대신 '지뢰를 밟으면 끝나요 · 힌트 없음' 띠가 있습니다. <strong>실수 바로 보기</strong>도 쓰이지 않습니다. 숫자 눌러 한꺼번에 열기는 쓸 수 있습니다(깃발이 틀리면 지뢰가 열려 실패입니다).</li>
+            <li>판 수에는 제한이 없습니다. 결과에서 <strong>다음 판</strong>으로 이어서 합니다. 하드에서 끝낸 판(성공과 실패)은 다시 나오지 않고, Classic에서 푸는 중인 판도 되도록 피합니다.</li>
+            <li>중간에 나가도 실패가 아닙니다. 등급마다 푸는 판이 저장되어 이어서 풉니다.</li>
+            <li>다시 하기 창에는 <strong>새 판</strong>만 있습니다(같은 판을 처음부터 하면 이미 본 칸을 알고 시작하게 됩니다). <strong>시작 칸을 연 뒤에 새 판을 고르면 그 판은 실패로 셉니다.</strong> 창에도 그렇게 적혀 있습니다. 시작 칸을 열기 전에는 세지 않습니다.</li>
+            <li>결과 카드에는 <strong>최고</strong>(성공한 판만, 이전 기록을 넘으면 <strong>새 기록</strong> 도장), <strong>연속 성공</strong>, <strong>성공률</strong>, <strong>성공</strong>(성공한 판/끝낸 판)이 보입니다. 기록 화면에도 등급마다 모입니다(7장). 공유는 Daily에만 있습니다.</li>
+        </ul>
+        <h3>Daily — 오늘의 판 셋</h3>
+        <ul>
+            <li>날마다 모두가 같은 판 셋을 받습니다. <strong>작은 판</strong>(9×9 · 지뢰 10), <strong>중간 판</strong>(12×16 · 지뢰 36), <strong>큰 판</strong>(16×30 · 지뢰 99)입니다. <strong>전 세계 모두가 같은 날 같은 판</strong>을 풉니다(기기의 날짜 기준). 새 Daily는 기기 시각으로 자정에 열립니다.</li>
+            <li>판마다 따로 풀고, 결과도 판마다 따로 남습니다. 규칙은 Classic과 같습니다(실수해도 판이 끝나지 않고, 힌트는 무제한). 판이 끝나지 않으니 실패는 없습니다.</li>
+            <li>시간 제한은 없고, 지금까지 쓴 시간이 판 위쪽에 보입니다(설정에서 숨길 수 있습니다).</li>
+            <li>그날 안에는 나갔다 와도 이어서 풉니다. <strong>이 판 처음부터</strong>를 해도 그날 쓴 시간·실수·힌트는 이어서 셉니다(다시 하기에는 이것만 있습니다). 날이 바뀌면 풀다 만 어제 판은 사라지고 새 판이 열립니다.</li>
+            <li>그날의 세 판 가운데 하나라도 풀면 그날이 <strong>연속</strong>으로 이어지고, 하루를 거르면 끊깁니다.</li>
+            <li>홈의 <strong>Daily</strong> 카드에는 번호와 날짜(예: #12 · 10월 22일), 연속 일 수, 오늘의 세 판, 이번 주 일곱 칸이 보입니다. 세 판의 칸에는 판 이름·크기와 상태(<strong>새 판</strong>, <strong>이어 하기</strong>, 푼 판은 체크와 걸린 시간)가 보이고, 누르면 판을 풀거나 푼 판의 결과를 봅니다. 이번 주 일곱 칸에는 요일과 날짜, 그날 세 판의 점이 보입니다(푼 판은 채운 점, 오늘은 굵은 테두리).</li>
+            <li>결과 화면에는 판 종류와 크기, 걸린 시간, <strong>실수</strong>, <strong>힌트</strong>, <strong>연속</strong>(일 수), 이번 주 일곱 칸, 다음 Daily까지 남은 시간이 보입니다. 실수도 힌트도 없으면 <strong>완벽</strong> 도장이 찍히고, 가장 긴 연속을 넘으면 연속 칸에 <strong>새 기록</strong> 도장이 찍힙니다. <strong>공유</strong>로 결과를 보낼 수 있습니다(판마다 따로). 예:</li>
+        </ul>
+        <pre class="share-example">Minewise Daily 작은 판 #12 ✅ 03:41
+실수 0 · 힌트 1
+🔥 5일 연속</pre>
+        <p><strong>#12</strong>는 Daily 번호이고, 그 옆은 걸린 시간(분:초, 한 시간이 넘으면 시:분:초)입니다. 첫 줄의 'Minewise Daily'는 어느 언어에서나 같고, 같은 판을 푼 사람끼리 견주도록 판 종류를 함께 적습니다. 둘째 줄은 실수 수와 힌트 수, 셋째 줄은 연속 기록입니다(이틀 이상일 때만). 번호는 첫 Daily가 열린 날이 #1이고 하루에 하나씩 늘어나, 번호가 같으면 같은 판입니다.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 기록</h2>
+        <p>홈 오른쪽 위의 <strong>트로피</strong> 단추로 엽니다. 단추에는 성공한 판 수가 보입니다.</p>
+        <ul>
+            <li>맨 위: <strong>성공한 판</strong>(Classic·하드·Daily)의 합계와, Classic·하드·Daily로 나눈 수</li>
+            <li><strong>Classic</strong>: 등급(판 크기)마다 <strong>성공</strong>한 판 수, <strong>최고</strong> 시간(실수 없이 푼 판만), <strong>평균</strong> 시간, <strong>완벽</strong>한 판 수(실수도 힌트도 없이 푼 판). 아직 푼 판이 없는 등급은 흐리게 보이고 시간은 '-'입니다.</li>
+            <li><strong>하드</strong>: 등급마다 <strong>성공</strong>(성공한 판/끝낸 판), <strong>성공률</strong>, <strong>최고</strong> 시간(성공한 판만), <strong>최고 연속</strong>(가장 긴 연속 성공)</li>
+            <li><strong>Daily</strong>: <strong>연속</strong>, <strong>가장 긴 연속</strong>, <strong>푼 날</strong>, <strong>푼 판</strong>. 아래 달력(양옆 화살표로 한 달씩 넘깁니다)에 푼 날이 채운 동그라미로 보이고, 오늘에는 테두리가 둘러집니다.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 설정</h2>
+        <p>홈 오른쪽 위 <strong>톱니바퀴</strong>로 엽니다. 묶음은 넷입니다. 게임 중에는 <strong>빠른 설정</strong> 단추로 앞의 세 묶음을 바로 바꿀 수 있습니다.</p>
+        <h3>소리와 효과</h3>
+        <table class="info-table">
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>효과음</td><td>칸을 열고 깃발을 꽂고 뺄 때, 숫자를 눌러 한꺼번에 열 때, 지뢰를 밟을 때, 힌트·판 완성·결과 도장 같은 소리를 켜고 끕니다</td></tr>
+            <tr><td>진동</td><td>깃발을 꽂을 때는 짧게, 뺄 때는 더 가볍게, 지뢰를 밟을 때는 무겁게, 판을 다 풀면 길게 울립니다. 켜고 끕니다</td></tr>
+            <tr><td>효과 줄이기</td><td>모든 효과를 한 번에 줄입니다. 켜 두는 동안 아래 움직임·빛·색종이는 꺼진 것과 같습니다</td></tr>
+            <tr><td>움직임 · 빛 · 색종이</td><td>효과마다 켜고 끕니다. <strong>움직임</strong>은 열기 물결·깃발 튐·해체, <strong>빛</strong>은 시작 칸의 숨·터짐·완성의 빛, <strong>색종이</strong>는 결과 화면입니다. 판 전체가 흔들리는 효과는 없습니다</td></tr>
+        </table>
+        <h3>조작</h3>
+        <table class="info-table">
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>조작</td><td><strong>누르기·길게 누르기</strong>(처음 값)와 <strong>[열기|깃발] 단추</strong> 가운데 고릅니다(3장)</td></tr>
+            <tr><td>길게 누르는 시간(ms)</td><td>250·300·350·400·500 가운데 고릅니다. 처음 값은 350입니다. 누르기·길게 누르기일 때만 씁니다</td></tr>
+            <tr><td>숫자 눌러 한꺼번에 열기</td><td>둘레의 깃발 수가 숫자와 같으면 나머지 칸을 엽니다. 처음에는 켜져 있습니다</td></tr>
+        </table>
+        <h3>판</h3>
+        <table class="info-table">
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>시간 보기</td><td>판 위에 시간을 보입니다. 처음에는 켜져 있습니다</td></tr>
+            <tr><td>실수 바로 보기</td><td>틀린 깃발에 바로 X를 그립니다(하드 판은 빼고). 처음에는 꺼져 있습니다</td></tr>
+            <tr><td>큰 숫자</td><td>판의 숫자를 크게 그립니다. 처음에는 꺼져 있습니다</td></tr>
+        </table>
+        <h3>일반</h3>
+        <table class="info-table">
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>언어</td><td>기기 언어를 따르거나(처음 값) 목록에서 직접 고릅니다</td></tr>
+            <tr><td>개인정보 보호 옵션</td><td>광고 동의를 다시 엽니다. 동의가 필요한 지역(유럽 등)에서만 보입니다</td></tr>
+            <tr><td>규칙 보기</td><td>목표·숫자·빛나는 시작 칸·조작·실수·힌트·Daily·하드의 짧은 규칙을 봅니다</td></tr>
+            <tr><td>첫 실행 안내 다시 보기</td><td>첫 실행 안내(처음 풀어 보기)를 다시 합니다</td></tr>
+            <tr><td>앱 정보</td><td>버전, 이 설명서(<strong>게임 방법</strong>), 개인정보처리방침, 오픈소스 라이선스</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 광고와 기록 보관</h2>
+        <ul>
+            <li>화면 맨 아래에 배너 광고 한 줄이 붙습니다. 첫 실행 안내에서는 광고를 내리고 자리만 비워 둡니다. 광고는 이 한 줄뿐입니다. 게임은 인터넷 없이 되고, 인터넷은 광고와 이용 통계·오류 보고에만 쓰입니다.</li>
+            <li>앱 안에서 결제하는 것은 없습니다.</li>
+            <li>기록과 설정은 기기 안에 저장됩니다. 기기의 Google 백업(Android 자동 백업)이 켜져 있으면 백업에 함께 들어가, 기기를 바꿔도 이어서 할 수 있습니다. 앱을 지우면 기기의 기록도 지워집니다.</li>
+            <li>자세한 내용은 <a href="../privacy/ko.html">개인정보처리방침</a>을 보십시오.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 문의</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

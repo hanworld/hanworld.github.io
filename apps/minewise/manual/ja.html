@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Minewise 遊び方 - Willee Project</title>
+    <meta name="description" content="Minewise 遊び方 — 数字の手がかりだけで地雷を避け、地雷ではないマスをすべて開ける、推測のいらないマインスイーパーです。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/minewise/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/minewise/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/minewise/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/minewise/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/minewise/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/minewise/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/minewise/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Minewise 遊び方 - Willee Project">
+    <meta property="og:description" content="Minewise 遊び方 — 数字の手がかりだけで地雷を避け、地雷ではないマスをすべて開ける、推測のいらないマインスイーパーです。">
+    <meta property="og:url" content="https://willee.net/apps/minewise/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/minewise/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Minewise</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Minewise" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Minewise</h1>
+                <p>遊び方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Minewise_ja_01_home.webp" alt="ホーム — Classic・ハード・Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_02_classic_hint.webp" alt="Classic — 理由つきのヒント" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_03_classic_result.webp" alt="Classic — クリア（新記録）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_04_classic_big.webp" alt="Classic — 16×30の大きな盤面をプレイ中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_05_daily_result.webp" alt="Daily — 結果（完璧）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_06_hard.webp" alt="ハード — 地雷を踏んだら終わり、ヒントなし" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Minewise_ja_07_tutorial.webp" alt="チュートリアル — 7×7の盤面でルールを覚える" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>Minewise</td></tr>
+            <tr><th>バージョン</th><td>1.0.1</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>数字の手がかりだけで地雷を避け、地雷ではないマスをすべて開ける、推測のいらないマインスイーパーです。どの盤面も光るスタートマスから始まり、当てずっぽうなしで、論理だけで最後まで解けます。</p>
+        <ul>
+            <li>地雷を踏んでも盤面は終わりません（ハードを除く）。踏んだマスは爆発した地雷として残り、ミスが増えるだけです。ヒントは回数無制限で無料、時間制限もありません。</li>
+            <li>会員登録もログインもありません。初めて開くと、小さな盤面（7×7）でルールを覚えるチュートリアル（「はじめてのプレイ」）から始まります。<strong>スキップ</strong>でいつでも終えられます。</li>
+            <li><strong>インターネットがなくても遊べます。</strong> インターネットは画面下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. ルール</h2>
+        <ul>
+            <li>盤面は四角いマスが縦横に並び、その中のいくつかに地雷が隠れています。地雷の数は盤面ごとに決まっていて、画面に表示されます。</li>
+            <li>地雷ではないマスを<strong>開ける</strong>と、周りの8マスにある地雷の数が数字で出ます。0なら数字のかわりに空白になり、周りを自動で開けます（空白がつながっていれば続けて開きます）。</li>
+            <li><strong>旗</strong>は、地雷だと思うマスに立てます。旗の立ったマスは、タップしても開きません。</li>
+            <li>地雷ではないマスをすべて開けると<strong>クリア</strong>です。すべての地雷に旗を立てなくても大丈夫です。</li>
+            <li>どの盤面にも<strong>光るスタートマス</strong>が1つあります。スタートマスはいつも空白なので、最初に広く開きます。最初はそのマスだけがタップできます（ほかのマスをタップすると「まず光るマスを開けましょう」と出ます）。</li>
+            <li>どの盤面も、スタートマスから最後まで、当てずっぽうなしで数字だけで解けます。推測しないと開けられない場面になる盤面は出ません。</li>
+            <li><strong>地雷を踏んでも盤面は終わりません</strong>（ハードを除く、6章）。踏んだマスは爆発した地雷として残り、ミスが1つ増えます。取り消す機能はありません。旗が間違っている数字でまとめて開けると（3章）、地雷が開いて、開いた地雷の数だけミスになります。</li>
+            <li><strong>ベスト記録はミスなしでクリアした盤面だけを数えます。</strong> ミスもヒントもなしでクリアすると、結果に<strong>完璧</strong>のスタンプが押されます。</li>
+        </ul>
+        <h3>盤面の見方</h3>
+        <ul>
+            <li>閉じたマスは緑色でふっくらと盛り上がり、開いたマスは明るく低く沈んでいます。数字は数字ごとに色が違います。</li>
+            <li>光るマスはスタートマスです。ヒントが次に開けるマスを教えるときも、同じ光になります。</li>
+            <li>旗は琥珀色（オレンジがかった黄色）です。</li>
+            <li>爆発した地雷は、赤いマスに地雷の絵と点線の輪が出ます。色だけでなく形でも分かります。</li>
+            <li>間違った旗（地雷ではないマスに立てた旗）には、クリーム色の×が重なります。<strong>ミスをすぐ表示</strong>をオンにしたとき、ヒントが指摘したとき、ハードの盤面が終わったときに見えます。</li>
+            <li>琥珀色のおおいをかけた数字と、琥珀色の枠で囲んだマスは、ヒントが考える根拠です（4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解き方のコツ</h2>
+        <p>チュートリアルは、7×7の盤面で「スタートマス → 数字と旗 → まとめて開ける → 2つの数字 → ひとりで解く」の5段階で基本を教えます。段階ごとに見る数字と地雷を光らせ、タップするマスだけが反応します。ヒントは使った考え方を名札で教えます。<strong>1つの数字</strong>、<strong>2つの数字</strong>、<strong>複数の数字</strong>、<strong>残りの地雷数</strong>、<strong>すべての配置</strong>の5つで、意味は次のとおりです。</p>
+        <ul>
+            <li><strong>1つの数字</strong>: 開いたマスの数字は、周りの8マスにある地雷の数です。周りの閉じたマスの数が、まだ見つかっていない地雷の数と同じなら、そのマスはすべて地雷です（1の周りの閉じたマスが1つだけなら、そのマスが地雷です）。逆に、周りの地雷がすでにすべて見つかっていれば、残りの閉じたマスは安全です。見つけた地雷には旗を立てておくと便利です。</li>
+            <li><strong>2つの数字</strong>: 隣り合う2つの数字を一緒に見ます。たとえば、上の1の閉じたマスがすべて下の1の周りにもあるなら、上の1の地雷は2つの数字が共有するマスにあり、その地雷が下の1の地雷でもあります。だから、下の1だけに接するマスは安全です。数字が違うときは、共有するマスに地雷が何個あるはずかを考えます。</li>
+            <li><strong>複数の数字</strong>: 複数の数字を一緒に見て、すべてに合う地雷の配置を考えます。どの配置でも安全な（またはどの配置でも地雷の）マスがあります。</li>
+            <li><strong>残りの地雷数</strong>: 盤面全体の残りの地雷の数もヒントです。地雷がすべて見つかっていれば残りのマスはすべて安全で、残りの地雷数が閉じたマスの数と同じならすべて地雷です。数字1つ（または数個）が残りの地雷をすべて使うなら、ほかの閉じたマスは安全です。</li>
+            <li><strong>すべての配置</strong>: 閉じたマスの配置をすべて考えなければならない、とてもまれな場合です。</li>
+        </ul>
+        <p>レベル1の盤面は、<strong>1つの数字</strong>と<strong>2つの数字</strong>だけで解けます。レベル2からは、<strong>複数の数字</strong>や<strong>残りの地雷数</strong>まで必要な盤面も出ます。もっと難しいコツは、ヒントが理由といっしょに教えてくれます（4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li>最初は<strong>光るスタートマス</strong>だけがタップできます。スタートマスを開けると、時間が進み始めます。</li>
+            <li><strong>タップ</strong>: 閉じたマスをタップすると開きます。指を離したときに決まり、押している間は触れたマスが明るくなります。指を大きく動かすと開きません（盤面を動かす操作とみなします）。</li>
+            <li><strong>長押し</strong>（操作A、最初の設定）: 閉じたマスを長押しすると旗を立て、旗の立ったマスを長押しすると外します。押している間は輪が満ちていき、満ちると旗が立ちます。長押しの時間は設定で選びます（最初は350ms）。</li>
+            <li><strong>[開ける|旗]ボタン</strong>（操作B）: 設定の<strong>操作</strong>で<strong>[開ける|旗]ボタン</strong>を選ぶと、盤面の下に[開ける|旗]ボタンが出ます。[開ける]を選んでいればタップしたマスを開け、[旗]を選んでいればタップした閉じたマスに旗を立てたり外したりします。このときは長押しを使いません。</li>
+            <li><strong>数字をタップして周りを開ける</strong>（最初はオン）: 開いた数字をタップすると、その周りの旗の数（爆発した地雷も含む）が数字と同じとき、周りの閉じたマスをまとめて開けます。旗が間違っていると地雷が開き、開いた地雷の数だけミスになります。旗の数が違うときは開きません。</li>
+            <li><strong>拡大・移動</strong>: すべての盤面で、2本の指で広げたりつまんだりして拡大・縮小し、ドラッグで動かします。12×20以上の大きな盤面（レベル4・5）は、最初に少し拡大して、光るスタートマスを真ん中に置いて始まります。指が2本になるとそのタップは捨てられるので、拡大中の指がマスを開けたり旗を立てたりすることはありません。</li>
+            <li>旗は、もう一度長押しして（操作Bは[旗]を選んでもう一度タップして）外します。</li>
+        </ul>
+        <p>画面上部の行の左には、モード名とレベル（例: Classic · レベル3）、その下にレベルの点と盤面の大きさ・地雷の数（例: 12×16・地雷36）が出ます。DailyにはDailyの番号（#12）と盤面の種類が出ます。右のボタンは次のとおりです。</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>すること</th></tr>
+            <tr><td><strong>やり直す</strong>（↻）</td><td><strong>この盤面を最初から</strong>と<strong>新しい盤面</strong>を選ぶ画面を開きます（下）</td></tr>
+            <tr><td><strong>クイック設定</strong></td><td>効果音・バイブレーション・演出・操作・盤面の設定（5章）をゲーム画面のまま変えられる画面を開きます。上のほうを押すか、下に引くと閉じます</td></tr>
+            <tr><td><strong>戻る</strong>（ドアの形）</td><td>ホームに戻ります。解いている盤面は自動で保存されます</td></tr>
+        </table>
+        <p>盤面のすぐ上の行:</p>
+        <ul>
+            <li>旗の絵の横の数字は<strong>残りの地雷</strong>の数です（全体の地雷数 − 旗 − 爆発した地雷）。間違った旗があると、実際とずれることがあります。</li>
+            <li>ミスがあると<strong>ミス</strong> n が、ヒントを使うと電球の絵と使った回数が続いて出ます。</li>
+            <li>右には時間が出ます（設定の<strong>時間を表示</strong>で隠せます）。</li>
+            <li>その上の帯に、ヒントの吹き出しやお知らせが出ます（4章）。</li>
+        </ul>
+        <p>盤面の下の行:</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>すること</th></tr>
+            <tr><td><strong>ヒント</strong></td><td>次に開けるマスを理由といっしょに教えます。回数無制限です（4章）。スタートマスを開ける前と、盤面が終わったあとは押せません</td></tr>
+            <tr><td><strong>[開ける|旗]</strong></td><td>操作Bのときだけ出ます。タップしたマスを開けるか、旗を立てるかを決めます</td></tr>
+        </table>
+        <p><strong>やり直す</strong>の画面:</p>
+        <table class="info-table">
+            <tr><th>選ぶもの</th><th>内容</th></tr>
+            <tr><td><strong>この盤面を最初から</strong></td><td>盤面をスタートマスを開ける前の状態に戻します。Classicは時間・ミス・ヒントも最初から数え、Dailyはその日の時間・ミス・ヒントをそのまま数えます。スタートマスを開ける前は薄く表示されて押せません。ハードにはありません</td></tr>
+            <tr><td><strong>新しい盤面</strong>（Classicとハード）</td><td>この盤面をやめて、同じレベルの別の盤面を解きます。やめた盤面はクリアに数えません（ハードは6章）。Dailyにはありません</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. ヒント</h2>
+        <p><strong>ヒント</strong>ボタンが、次に開けるマス1つを理由といっしょに教えます。ヒントは回数無制限で無料です（ハードを除く）。スタートマスを開けてから使えます。</p>
+        <p>同じ場所のボタンを3回押します。<strong>ヒント</strong> → <strong>マスを見る</strong> → <strong>適用</strong>です。</p>
+        <ul>
+            <li>1段目: <strong>ヒント</strong>を押すと、見る場所だけを教えます。根拠になる数字には琥珀色のおおいがかかり、その数字が頼る地雷（すでに見つけられる地雷）は琥珀色の枠と点で示されます（例:「ハイライトした2つの数字を一緒に見てください。開けてもよいマスがあります」。頼る地雷があるときは「枠で囲んだマスは地雷です」が付きます）。吹き出しの名札は使った考え方です（<strong>1つの数字</strong>、<strong>2つの数字</strong>、<strong>複数の数字</strong>、<strong>残りの地雷数</strong>、<strong>すべての配置</strong>）。</li>
+            <li>2段目: ボタンが<strong>マスを見る</strong>に変わります。押すと、開けるマスが光り、理由が出ます（例:「上の1の閉じたマスはすべて下の1にも接しています。だから下の1だけに接するマスは安全です」）。同じ2つの数字は、上・下・左・右のような位置の言葉で呼び分けます。</li>
+            <li>3段目: ボタンが<strong>適用</strong>に変わります。押すと、頼る地雷に旗を立て（まだなら）、そのマスを開けます。</li>
+            <li>間違った旗があれば、それから教えます（名札<strong>間違った旗</strong>）。先に立てた旗からで、その旗に×が重なります。ボタンはすぐ<strong>適用</strong>になり、押すとその旗を外します。</li>
+            <li>ヒントは、開いたマスと爆発した地雷だけを見て考えます。旗は根拠に使わないので、旗を1つも立てていなくても、旗が間違っていても、ヒントは常に正しいです。旗は、間違った旗の指摘と、すでに旗を立てた地雷に頼るマスを先に選ぶことにだけ使います。教えるマスは、考えやすいマス（頼る地雷が少なく、易しい考え方）です。</li>
+            <li>使ったヒントの回数は、盤面の上の行と結果に残り、Dailyのシェアの文にも入ります。ヒントを頼んだとき（1段目）に1回と数えます。2段目に進むことや適用は別に数えず、閉じてからもう一度頼むと1回増えます。</li>
+            <li>吹き出しの閉じる（×）を押すか、マスを開けたり旗を立てたりすると、ヒントは閉じます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. アシストと盤面設定</h2>
+        <p>設定の<strong>操作</strong>と<strong>盤面</strong>でオン・オフします。ゲーム中は<strong>クイック設定</strong>ですぐに変えられます。</p>
+        <ul>
+            <li><strong>数字をタップして周りを開ける</strong>（最初はオン）: 開いた数字をタップして、周りの旗の数が数字と同じなら、残りの閉じたマスを開けます（3章）。オフにすると、数字をタップしても何も起きません。</li>
+            <li><strong>ミスをすぐ表示</strong>（最初はオフ）: 間違った旗（地雷ではないマスに立てた旗）にすぐ×を付けます。ハードでは使いません。オフのときは、間違った旗はヒントが指摘するまで教えません。</li>
+            <li><strong>時間を表示</strong>（最初はオン）: 盤面の上に時間を表示します。オフにしても時間は数え続けます。クリアした盤面のかかった時間は結果に出ます。</li>
+            <li><strong>大きな数字</strong>（最初はオフ）: 盤面の数字を大きく表示します。</li>
+            <li><strong>長押しの時間(ms)</strong>（最初は350）: 250・300・350・400・500から選びます。タップ・長押しの操作のときだけ使います。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. モード</h2>
+        <h3>Classic — レベルを選ぶ、時間制限なし</h3>
+        <ul>
+            <li>ホームのClassicカードの上の切り替えで<strong>Classic</strong>を選んだ状態で、タブ（<strong>1</strong>〜<strong>5</strong>）でレベルを選び、<strong>プレイ</strong>を押します。途中の盤面があれば<strong>続きから</strong>になります。初めてならレベル1がおすすめです。</li>
+            <li>レベルは盤面の大きさ（横×縦）と地雷の数で分かれます。レベルが高いほど、盤面が大きく地雷が多くなります。レベルは最初からすべて選べます。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>レベル</th><th>盤面の大きさ</th><th>地雷の数</th></tr>
+            <tr><td>1</td><td>9×9</td><td>10</td></tr>
+            <tr><td>2</td><td>9×12</td><td>17</td></tr>
+            <tr><td>3</td><td>12×16</td><td>36</td></tr>
+            <tr><td>4</td><td>12×20</td><td>50</td></tr>
+            <tr><td>5</td><td>16×30</td><td>99</td></tr>
+        </table>
+        <ul>
+            <li>タブにはレベルの番号と盤面の大きさが出ます。カード真ん中の盤面プレビューは、今解いている盤面の様子（開けたマス・旗・爆発した地雷。数字は描きません）で、横にスワイプすると次・前のレベルに切り替わります。その下に選んだレベルと記録の行が出ます（例: 「レベル3 · 12×16・地雷36」、「ベスト 03:41 · クリア 12 · 完璧 3」）。</li>
+            <li>まだクリアしていない盤面の中からランダムに出ます。クリアした盤面は出ません。そのレベルの盤面をすべてクリアしたら、いちばん前にクリアした盤面からまた出ます。</li>
+            <li>盤面をクリアすると結果カードが出ます。かかった時間、<strong>ミス</strong>、<strong>ヒント</strong>、<strong>ベスト</strong>（前の記録を超えると<strong>新記録</strong>のスタンプ）、<strong>クリア</strong>した盤面の数が出ます。ミスもヒントもなければ<strong>完璧</strong>のスタンプが押され、ミスがあれば「ミスのある盤面はベスト記録に入りません」と出ます。<strong>次の盤面</strong>を押すと、同じレベルの次の盤面に進みます。</li>
+            <li>解いている盤面は自動で保存されます。抜けても、アプリを開き直しても、レベルごとに続きから解けます。アプリを離れている間は時間が進みません。スタートマスを開ける前に抜けた場合は、同じ盤面がそのまま待っています。</li>
+        </ul>
+        <h3>ハード — 地雷を踏んだら終わり</h3>
+        <ul>
+            <li>ホームのClassicカードの上の[Classic | ハード]の切り替えで<strong>ハード</strong>を選ぶと、同じ5つのレベル（上の表の盤面の大きさと地雷の数）を昔ながらのルールで解きます。ハードを選ぶと、選んだレベルのタブと下のボタンが、暗い地に琥珀色の枠のハードの見た目になり、ボタンは<strong>挑戦</strong>になります（途中の盤面があれば<strong>続きから</strong>）。Classicとハードは同じレベルを見ています。</li>
+            <li><strong>地雷を踏むと盤面が終わります</strong>（失敗）。隠れていた地雷がすべて現れ、間違った旗には×が付きます。結果には「地雷を踏みました」と、<strong>開けた安全なマス</strong>の割合が出ます。</li>
+            <li><strong>ヒントはありません。</strong> 盤面の下の行には、ヒントボタンのかわりに「地雷を踏んだら終わり・ヒントなし」の帯があります。<strong>ミスをすぐ表示</strong>も使いません。数字をタップして周りを開けるは使えます（旗が間違っていると地雷が開いて失敗です）。</li>
+            <li>盤面の数に制限はありません。結果の<strong>次の盤面</strong>で続けて遊べます。ハードで終えた盤面（成功も失敗も）は出ません。Classicで解いている途中の盤面も、なるべく避けます。</li>
+            <li>途中で抜けても失敗ではありません。レベルごとに解いている盤面が保存され、続きから解けます。</li>
+            <li>やり直す画面には<strong>新しい盤面</strong>だけがあります（同じ盤面を最初からやり直すと、見たマスを知ったまま始めることになるため）。<strong>スタートマスを開けたあとに新しい盤面を選ぶと、その盤面は失敗として数えます。</strong> 画面にもそう書いてあります。スタートマスを開ける前は数えません。</li>
+            <li>結果カードには、<strong>ベスト</strong>（成功した盤面だけ。前の記録を超えると<strong>新記録</strong>のスタンプ）、<strong>連続成功</strong>、<strong>成功率</strong>、<strong>成功</strong>（成功した盤面/終えた盤面）が出ます。記録の画面にもレベルごとに集まります（7章）。シェアはDailyにだけあります。</li>
+        </ul>
+        <h3>Daily — 今日の盤面3つ</h3>
+        <ul>
+            <li>毎日、全員が同じ3つの盤面を受け取ります。<strong>小さな盤面</strong>（9×9・地雷10）、<strong>中間の盤面</strong>（12×16・地雷36）、<strong>大きな盤面</strong>（16×30・地雷99）です。<strong>世界中のみんなが同じ日に同じ盤面</strong>を解きます（端末の日付が基準）。新しいDailyは端末の時刻で午前0時に開きます。</li>
+            <li>盤面ごとに別々に解き、結果も盤面ごとに残ります。ルールはClassicと同じです（ミスをしても盤面は終わらず、ヒントは無制限）。盤面が失敗で終わることはないので、失敗はありません。</li>
+            <li>時間制限はなく、これまでにかかった時間が盤面の上に出ます（設定で隠せます）。</li>
+            <li>その日のうちなら、抜けても続きから解けます。<strong>この盤面を最初から</strong>にしても、その日の時間・ミス・ヒントはそのまま数えます（やり直す画面にはこれだけがあります）。日付が変わると、解きかけの前日の盤面は消えて、新しい盤面が開きます。</li>
+            <li>その日の3つの盤面のうち1つでもクリアすれば、その日が<strong>連続</strong>につながり、1日空けると途切れます。</li>
+            <li>ホームの<strong>Daily</strong>カードには、番号と日付（例: #12 · 10月22日）、連続の日数、今日の3つの盤面、今週の7日が出ます。3つの盤面のマスには、盤面の名前・大きさと状態（<strong>未プレイ</strong>、<strong>続きから</strong>、クリアした盤面はチェックとかかった時間）が出て、押すと盤面を解くか、クリアした盤面の結果が見られます。今週の7日には、曜日と日付、その日の3つの盤面の点が出ます（クリアした盤面は塗りつぶした点、今日は太い枠）。</li>
+            <li>結果画面には、盤面の大きさ、かかった時間、<strong>ミス</strong>、<strong>ヒント</strong>、<strong>連続</strong>（日数）、今週の7日、次のDailyまでの時間が出ます。ミスもヒントもなければ<strong>完璧</strong>のスタンプが押され、最長の連続を超えると連続のマスに<strong>新記録</strong>のスタンプが押されます。<strong>シェア</strong>で結果を送れます（盤面ごとに別々）。例:</li>
+        </ul>
+        <pre class="share-example">Minewise Daily 小さな盤面 #12 ✅ 03:41
+ミス 0・ヒント 1
+🔥 5日連続</pre>
+        <p><strong>#12</strong>はDailyの番号で、その隣はかかった時間（分:秒。1時間を超えると時:分:秒）です。1行目の「Minewise Daily」はどの言語でも同じで、同じ盤面を解いた人どうしで比べられるように盤面の種類も書きます。2行目はミスとヒントの数、3行目は連続記録です（2日以上のときだけ）。最初のDailyが#1で1日ずつ増えるので、番号が同じなら同じ盤面です。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 記録</h2>
+        <p>ホーム右上の<strong>トロフィー</strong>ボタンで開きます。ボタンにはクリアした盤面の数が出ます。</p>
+        <ul>
+            <li>いちばん上: <strong>クリアした盤面の合計</strong>（Classic・ハード・Daily）と、Classic・ハード・Dailyに分けた数</li>
+            <li><strong>Classic</strong>: レベル（盤面の大きさ）ごとの<strong>クリア</strong>数、<strong>ベスト</strong>タイム（ミスなしでクリアした盤面だけ）、<strong>平均</strong>タイム、<strong>完璧</strong>な盤面の数（ミスもヒントもなしでクリアした盤面）。まだクリアした盤面がないレベルは薄く表示され、時間は「-」です。</li>
+            <li><strong>ハード</strong>: レベルごとの<strong>成功</strong>（成功した盤面/終えた盤面）、<strong>成功率</strong>、<strong>ベスト</strong>タイム（成功した盤面だけ）、<strong>最高連続</strong>（最長の連続成功）</li>
+            <li><strong>Daily</strong>: <strong>連続</strong>、<strong>最長連続</strong>、<strong>クリアした日</strong>、<strong>クリアした盤面</strong>。下のカレンダー（両わきの矢印で1か月ずつ切りかえます）に、クリアした日が塗りつぶした丸で出て、今日には枠が付きます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>ホーム右上の<strong>歯車</strong>で開きます。グループは4つです。ゲーム中は<strong>クイック設定</strong>ボタンで、前の3つのグループをすぐに変えられます。</p>
+        <h3>音と演出</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>マスを開けるとき、旗を立てる・外すとき、数字をタップして周りを開けるとき、地雷を踏んだとき、ヒント・盤面のクリア・結果のスタンプなどの音をオン・オフします</td></tr>
+            <tr><td>バイブレーション</td><td>旗を立てるときは短く、外すときはもっと軽く、地雷を踏んだときは重く、盤面をクリアすると長く震えます。オン・オフします</td></tr>
+            <tr><td>エフェクトを減らす</td><td>すべての演出をまとめて控えめにします。オンの間は、下の動き・光・紙吹雪はオフと同じになります</td></tr>
+            <tr><td>動き・光・紙吹雪</td><td>演出ごとにオン・オフします。<strong>動き</strong>は開くときの波紋・旗の弾み・解除、<strong>光</strong>はスタートマスの光・爆発・クリアの光、<strong>紙吹雪</strong>は結果画面です。盤面全体が揺れる演出はありません</td></tr>
+        </table>
+        <h3>操作</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>操作</td><td><strong>タップ・長押し</strong>（最初の設定）か<strong>[開ける|旗]ボタン</strong>から選びます（3章）</td></tr>
+            <tr><td>長押しの時間(ms)</td><td>250・300・350・400・500から選びます。最初は350です。タップ・長押しのときだけ使います</td></tr>
+            <tr><td>数字をタップして周りを開ける</td><td>周りの旗の数が数字と同じなら、残りのマスを開けます。最初はオンです</td></tr>
+        </table>
+        <h3>盤面</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>時間を表示</td><td>盤面の上に時間を表示します。最初はオンです</td></tr>
+            <tr><td>ミスをすぐ表示</td><td>間違った旗にすぐ×を付けます（ハードを除く）。最初はオフです</td></tr>
+            <tr><td>大きな数字</td><td>盤面の数字を大きく表示します。最初はオフです</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>言語</td><td>端末の言語に従う（最初の設定）か、一覧から選びます</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意画面をもう一度開きます。同意が必要な地域（ヨーロッパなど）でだけ表示されます</td></tr>
+            <tr><td>遊び方</td><td>目的・数字・光るスタートマス・操作・ミス・ヒント・Daily・ハードの短いルール画面です</td></tr>
+            <tr><td>チュートリアルをもう一度</td><td>チュートリアル（「はじめてのプレイ」）をもう一度遊びます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明（<strong>遊び方</strong>）、プライバシーポリシー、オープンソースライセンス</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 広告と記録の保管</h2>
+        <ul>
+            <li>画面のいちばん下にバナー広告が一本入ります。チュートリアルでは広告を外し、場所だけ空けておきます。広告はこの一本だけです。ゲームはインターネットがなくても遊べ、インターネットは広告と利用統計・エラー報告にだけ使います。</li>
+            <li>アプリ内で支払うものはありません。</li>
+            <li>記録と設定は端末の中に保存されます。端末のGoogleバックアップ（Androidの自動バックアップ）がオンなら一緒にバックアップされ、端末を替えても続きから遊べます。アプリを削除すると端末の記録も消えます。</li>
+            <li>詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

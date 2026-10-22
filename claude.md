@@ -162,12 +162,27 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── cagewise/           # Cagewise 앱
-│       ├── index.html      # 한국어로 리다이렉트
-│       ├── ko.html
-│       ├── en.html
-│       ├── ja.html
-│       ├── zh.html
+│   ├── cagewise/           # Cagewise 앱
+│   │   ├── index.html      # 한국어로 리다이렉트
+│   │   ├── ko.html
+│   │   ├── en.html
+│   │   ├── ja.html
+│   │   ├── zh.html
+│   │   ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   ├── zh.html
+│   │   │   └── zh-Hant.html
+│   │   ├── privacy/        # 개인정보처리방침 (번체 zh-Hant 포함 5개 언어)
+│   │   │   ├── ko.html
+│   │   │   ├── en.html
+│   │   │   ├── ja.html
+│   │   │   ├── zh.html
+│   │   │   └── zh-Hant.html
+│   │   └── images/
+│   │       └── app_icon.png
+│   └── minewise/           # Minewise 앱 (설명서·방침 먼저, 소개 페이지는 나중)
 │       ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
 │       │   ├── ko.html
 │       │   ├── en.html
@@ -195,7 +210,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - English (en)
 - 日本語 (ja)
 - 中文 (zh)
-- 예외: Nums to One·Tenmates·Keepsum·Cagewise의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정, Tenmates는 2026-10-09, Keepsum은 2026-10-10, Cagewise는 2026-10-18)
+- 예외: Nums to One·Tenmates·Keepsum·Cagewise·Minewise의 manual·privacy만 번체 중국어(zh-Hant)까지 5개 언어. 앱이 번체 이용자에게 `zh-Hant.html`을 연다. 소개 페이지와 메인은 4개 언어 그대로 (2026-10-04 결정, Tenmates는 2026-10-09, Keepsum은 2026-10-10, Cagewise는 2026-10-18, Minewise는 2026-10-22)
 
 ## 색상 팔레트
 회사 대표색은 **티파니민트**다(2026-10-18). 흰 바탕에서 글자색으로 쓰면 읽기 어려우니 남색 위 강조·단추·배지에 쓰고, 흰 바탕 링크는 진한 청록(#0B7C77)을 쓴다.
@@ -278,6 +293,13 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **다른 회사 게임 이름·상표 표기 금지**: Sudoku.com, KenKen, KenDoku, Kakuro 등을 쓰지 않음. 일본어는 '数独'(니콜리 상표) 대신 'ナンプレ'만 씀(앱 저장소 `listing.md` 규칙)
 - 한국어는 '생명 없이' 대신 '실수 제한 없이'로 씀(2026-10-18 사용자 의견, 앱 저장소 `listing.md`)
 
+### Minewise
+- 숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐(모든 판이 찍지 않고 논리만으로 풀림). Classic(시간 제한 없음, 다섯 등급 9×9~16×30)·하드(지뢰를 밟으면 끝, 힌트 없음)·Daily(매일 작은·중간·큰 판 셋) 모드
+- 플랫폼: Android (출시 전 — 2026-10-22 설명서·방침만 먼저 게시)
+- 패키지 ID: net.willee.minewise
+- 원본 문서: 앱 저장소(A34.Minewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/minewise/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
+- **다른 회사 게임 이름·상표 표기 금지**: 'Microsoft Minesweeper', 'Hexcells' 등을 쓰지 않음. 'minesweeper'·'지뢰찾기'·'マインスイーパー'·'扫雷'·'踩地雷'는 장르 이름으로만 씀(앱 저장소 `docs/README.md` 규칙)
+
 ## 공통 스타일·검색 정보 (2026-10-09)
 - **공통 스타일:** 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
 - **`<head>` 틀:**
@@ -292,7 +314,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
-  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
   - 스크린샷과 배너는 WebP로 둔다.
