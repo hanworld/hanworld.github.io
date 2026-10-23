@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Huestar 遊び方 - Willee Project</title>
+    <meta name="description" content="Huestar 遊び方 — 色のエリアに分かれた盤面の、各行・各列・各エリアに星を置く論理パズル（スターバトル）です。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/huestar/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/huestar/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/huestar/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/huestar/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/huestar/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/huestar/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/huestar/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Huestar 遊び方 - Willee Project">
+    <meta property="og:description" content="Huestar 遊び方 — 色のエリアに分かれた盤面の、各行・各列・各エリアに星を置く論理パズル（スターバトル）です。">
+    <meta property="og:url" content="https://willee.net/apps/huestar/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/huestar/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Huestar</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Huestar" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Huestar</h1>
+                <p>遊び方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Huestar_ja_01_home.webp" alt="ホーム — Classic・Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_02_classic_hint.webp" alt="Classic — 理由つきのヒント" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_03_classic_result.webp" alt="Classic — 完成（完璧・新記録）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_04_two_stars.webp" alt="Classic — 星2つの10×10の盤面をプレイ中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_05_daily_result.webp" alt="Daily — 結果（完璧・7日連続）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_06_glow.webp" alt="Classic — エリアが光る10×10の盤面（ほぼ解けたところ）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_ja_07_tutorial.webp" alt="チュートリアル — 5×5の盤面でルールを覚える" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>Huestar</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>色のエリアに分かれた盤面の、各行・各列・各エリアに星を置く論理パズル（スターバトル）です。どの盤面も答えは1つだけで、推測なしに論理だけで最後まで解けます。</p>
+        <ul>
+            <li>ライフはなく、ミスの数も数えません。ヒントは回数無制限で無料、時間制限もありません。</li>
+            <li>会員登録もログインもありません。初めて開くと、小さな盤面（5×5）でルールを覚える<strong>チュートリアル</strong>から始まります。<strong>スキップ</strong>でいつでも終えられます。</li>
+            <li><strong>インターネットがなくても遊べます。</strong> インターネットは画面下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. ルール</h2>
+        <ul>
+            <li>盤面は四角いマスが縦横に並び、太い線で区切られた<strong>色のエリア</strong>が、盤面の行数と同じ数だけあります。</li>
+            <li><strong>各行・各列・各エリアに星を1つずつ</strong>置きます。レベル6（星2つの盤面）は<strong>2つずつ</strong>置きます。</li>
+            <li><strong>星どうしは隣り合えません。</strong> 縦・横だけでなく、斜めに隣り合うマスにも星を一緒に置けません。</li>
+            <li>すべての星を正しく置けば<strong>完成</strong>です。点はすべて打たなくてもかまいません。間違った星を外して答えと同じになった場合も完成です。</li>
+            <li><strong>点</strong>は「ここには星が置けない」という自分用の印です。解くのに必須ではありませんが、星が置けないとわかったマスに印をつけておくと、残りのマスが見やすくなります。</li>
+            <li>どの盤面も答えは1つだけで、推測なしに論理だけで最後まで解けます。推測しないと決められないマスが出てくる盤面は出ません。</li>
+            <li>ライフはなく、ミスは数えません。間違った星を置いても盤面は続き、「元に戻す」は何回でも使えます。</li>
+            <li><strong>ベストタイムはヒントなしでクリアした盤面だけを数えます。</strong> ヒントなしで解くと、結果に<strong>完璧</strong>のスタンプが押されます。</li>
+        </ul>
+        <h3>盤面の見方</h3>
+        <ul>
+            <li>エリアはそれぞれ宝石のような色で、色ガラスのように塗られています。エリアの間は太い黒の鉛線、同じエリアの中のマスの間は細い線です。色だけでなく、太い線でもエリアを分けています。</li>
+            <li>星が埋まったエリア（ぶつかった星がないとき）は、光を受けたガラスのように明るくなります。</li>
+            <li>色の見分けがつきにくいときは、設定の<strong>エリアの模様</strong>をオンにしてください。エリアごとに違う線の模様が重なります。</li>
+            <li><strong>ルール違反</strong>（最初はオン）: 隣り合った星は赤い星になって二重の輪が付き、星が多すぎる行・列・エリアや、残りのマスで星を置ききれなくなった行・列・エリアには、斜めの縞模様が付きます。ルールだけを見て知らせ、答えは見ません。</li>
+            <li>白い光を重ねた行・列・エリアと、淡い光と点線の枠で囲んだマスは、ヒントが指しているところです（4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解き方のコツ</h2>
+        <p>チュートリアルは、5×5の盤面1つで基本を教えます。<strong>エリア → 隣り合わない → 点を打つ → 行 → 列 → ひとりで解く</strong>の6段階で、段階ごとに見る場所を光らせ、決めるマスだけがタップできます。ヒントは使った考え方を名札で教えます。やさしいものから順に、次のとおりです。</p>
+        <ul>
+            <li><strong>星の周り</strong>: 星の周りの8マスには星を置けません。</li>
+            <li><strong>埋まった行・列</strong>、<strong>埋まったエリア</strong>: 星が埋まった行・列・エリアの残りのマスには、星を置けません。</li>
+            <li><strong>残りのマス</strong>: 行・列・エリアで星を置けるマスが、まだ必要な星の数と同じだけしか残っていなければ、そのマスはすべて星です。</li>
+            <li><strong>すべてに接するマス</strong>: ある行・列・エリアの残りのマスすべてに接するマスに星を置くと、その行・列・エリアに星を置くマスがなくなります。だから、そのマスには星を置けません。</li>
+            <li><strong>閉じ込められたエリア</strong>、<strong>閉じ込められた行・列</strong>: 1つのエリアの残りのマスがすべて1本の行（または列）の中にあれば、そのエリアの星がその行の星になります。だから、その行のほかのマスには星を置けません（行とエリアを入れ替えても同じです）。</li>
+            <li><strong>置いてみる</strong>: あるマスに星を置いてみると、その周りと、星が埋まる行・列・エリアの残りのマスが使えなくなり、どこかの行・列・エリアで星を置くマスが足りなくなります。だから、そのマスには星を置けません。</li>
+            <li><strong>2行・列に収まる2エリア</strong>、<strong>2エリアに収まる2行・列</strong>: 閉じ込められたエリアを2つに広げたものです。2つのエリアの残りのマスが2本の行（または列）の中にあれば、その行のほかのマスには星を置けません。</li>
+            <li><strong>3つ以上の閉じ込め</strong>: 同じ考え方を3つ以上のエリアに広げたものです。</li>
+            <li><strong>2×2ブロック</strong>（星2つの盤面）: 行・列・エリアの残りのマスを、まだ必要な星の数と同じ数の2×2ブロックで覆えるとき、2×2ブロックごとに星がちょうど1つです。</li>
+        </ul>
+        <p>レベル1は<strong>置いてみる</strong>までで解けます。レベルが上がるほど、閉じ込めを広げた考え方まで必要な盤面が出ます。難しい考え方は、ヒントが理由といっしょに教えてくれます（4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li><strong>操作A</strong>（最初の設定）: マスをタップするたびに、<strong>空白 → 点 → 星 → 空白</strong>と変わります。自動の点が打たれたマスは点として扱われ、タップすると星になります。</li>
+            <li><strong>操作B</strong>: 設定の<strong>操作</strong>で<strong>B タップ・長押し</strong>を選ぶと、タップで星を置いたり外したり、長押しで点を打ったり消したりできます。盤面の下の「<strong>[点|星]</strong>」で、タップと長押しの役割を入れ替えられます。長押ししている間は輪が満ちていき、長押しの時間は設定で選びます（最初は350ms）。</li>
+            <li><strong>なぞって点を打つ</strong>: 空白のマスの上を指でなぞると、通ったマスに点を打ちます。点からなぞり始めると、通った点を消します。盤面の中だけで受け付けます。</li>
+            <li><strong>自動の点</strong>（最初はオン）: 星を置くと、星の周りと、星が埋まった行・列・エリアの残りのマスに、自動で点が打たれます。自分で打った点より少し小さく淡く見え、星を外すと一緒に消えます。</li>
+            <li><strong>元に戻す</strong>: 盤面の下の<strong>元に戻す</strong>で、最後にした操作を取り消します。回数に上限はなく、1回のなぞりは1回で戻ります。</li>
+            <li>指を離したときに決まります。指が2本触れると、そのタップは捨てられます。</li>
+        </ul>
+        <p>画面上部の行の左には、モード名と盤面（例: Classic、レベル3 · 8×8と星の絵）が出ます。星の絵の数が、行・列・エリアごとに置く星の数です（星2つの盤面は★★）。DailyにはDailyの番号（#12）と盤面の種類が出ます。右のボタンは次のとおりです。</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>すること</th></tr>
+            <tr><td><strong>やり直す</strong>（↻）</td><td><strong>この盤面を最初から</strong>と<strong>新しい盤面</strong>を選ぶ画面を開きます（下）</td></tr>
+            <tr><td><strong>クイック設定</strong></td><td>演出・操作・アシスト機能（5章・8章）をゲーム画面のまま変えられる画面を開きます。上のほうを押すか、下に引くと閉じます</td></tr>
+            <tr><td><strong>戻る</strong>（ドアの形）</td><td>ホームに戻ります。解いている盤面は自動で保存されます</td></tr>
+        </table>
+        <p>盤面のすぐ上の行:</p>
+        <ul>
+            <li>星の絵の横の数字は<strong>置いた星の数 / 全部で置く星の数</strong>です（例: 4 / 8）。星2つの盤面は星の絵が2つです。</li>
+            <li>電球の絵の横の数字は使ったヒントの数です。</li>
+            <li>右には時間が出ます（設定の<strong>時間を表示</strong>で隠せます）。</li>
+            <li>その上の帯に、ヒントの吹き出しやお知らせが出ます（4章）。まだ手を付けていない盤面には、ルールが1行出ます。</li>
+        </ul>
+        <p>盤面の下の行:</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>すること</th></tr>
+            <tr><td><strong>元に戻す</strong></td><td>最後にした操作を取り消します。取り消すものがないときは薄く表示されて押せません</td></tr>
+            <tr><td><strong>ヒント</strong></td><td>次の一手を理由といっしょに教えます。押すたびに<strong>ヒント → 表示 → 適用</strong>と変わります（4章）</td></tr>
+            <tr><td><strong>[点|星]</strong></td><td>操作Bのときだけ出ます。タップで星を置くか、点を打つかを決めます</td></tr>
+        </table>
+        <p><strong>やり直す</strong>画面:</p>
+        <table class="info-table">
+            <tr><th>選ぶもの</th><th>内容</th></tr>
+            <tr><td><strong>この盤面を最初から</strong></td><td>盤面を最初の状態に戻します。Classicは時間・ヒントも最初から数え、Dailyはその日の時間・ヒントをそのまま数えます。まだ手を付けていない盤面では薄く表示されて押せません</td></tr>
+            <tr><td><strong>新しい盤面</strong>（Classic）</td><td>この盤面をやめて、同じレベルの別の盤面を解きます。やめた盤面はクリアに数えません。Dailyにはありません</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. ヒント</h2>
+        <p><strong>ヒント</strong>ボタンが、解き方の次の一歩を理由といっしょに教えます。ヒントは回数無制限で無料です。</p>
+        <p>同じ場所のボタンを3回押します。<strong>ヒント</strong> → <strong>表示</strong> → <strong>適用</strong>です。</p>
+        <ul>
+            <li>1段目: <strong>ヒント</strong>を押すと、見る場所だけを教えます。根拠になる行・列・エリアに白い光が重なり、内側に枠が付きます。吹き出しの名札は使った考え方です（2章）。例:「ハイライトしたエリアの残りのマスが、どの行にあるか見てください。」</li>
+            <li>2段目: ボタンが<strong>表示</strong>に変わります。押すと、決めるマスに淡い光と点線の枠が付き、置く星は薄い星、打つ点は薄い点で表示されて、理由が出ます。理由には色の名前や行・列の番号を使わず、ハイライトした場所を指して説明します。</li>
+            <li>3段目: ボタンが<strong>適用</strong>に変わります。押すと、そのとおりに星を置くか点を打ちます。「元に戻す」1回で戻ります。</li>
+            <li><strong>間違った印</strong>があれば、それから教えます（名札<strong>間違った星</strong>、<strong>間違った点</strong>）。答えにない星や、答えの星のマスに打った点を、先に置いたものから指摘します。ボタンはすぐ<strong>適用</strong>になり、押すとその印を消します。</li>
+            <li>点だけを決める段階が続くときは、吹き出しの<strong>次の星まで</strong>を押すと、その点をまとめて打ち、次に星を決める段階をすぐに見せます。</li>
+            <li>ヒントは、正しく置かれた星と、そこから決まる点だけを根拠に考えます。自分が打った点は根拠に使わないので、点を1つも打っていなくても、点が間違っていても、ヒントは常に正しいです。すでに自分の盤面で全部見えている段階は飛ばします。</li>
+            <li>使ったヒントの数は、盤面の上の行と結果に残り、Dailyのシェアの文にも入ります。ヒントを頼んだとき（1段目）に1回と数えます。表示と適用は別に数えず、閉じてからもう一度頼むと1回増えます。次の星までも、新しく頼むときだけ数えます。</li>
+            <li>吹き出しの閉じる（×）を押すか、マスをタップすると、ヒントは閉じます。これ以上見せるヒントがないときは「これ以上のヒントはありません」と出ます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. アシスト機能</h2>
+        <p>設定の<strong>盤面と操作</strong>と<strong>アシスト機能</strong>のグループでオン・オフします。ゲーム中は<strong>クイック設定</strong>ですぐに変えられます。</p>
+        <ul>
+            <li><strong>自動の点</strong>（最初はオン）: 星の周りと、星が埋まった行・列・エリアに自動で点を打ちます（3章）。オフにすると、自分で打った点だけが見えます。</li>
+            <li><strong>ルール違反を表示</strong>（最初はオン）: 隣り合った星と、星が多すぎる、または星を置くマスが足りない行・列・エリアを示します（1章）。</li>
+            <li><strong>ミスをすぐ表示</strong>（最初はオフ）: 答えと違う星にすぐ印をつけます。オフのときは、間違った星はヒントが指摘するまで教えません。</li>
+            <li><strong>時間を表示</strong>（最初はオン）: 盤面の上に時間を表示します。オフにしても時間は数え続けます。解いた盤面のかかった時間は結果に出ます。</li>
+            <li><strong>エリアの模様</strong>（最初はオフ）: エリアごとに違う線の模様を重ねます（色の見分けがつきにくいとき）。</li>
+            <li><strong>長押しの時間(ms)</strong>（最初は350）: 250・300・350・400・500から選びます。操作Bのときだけ出ます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. モード</h2>
+        <h3>Classic — レベルを選ぶ、時間制限なし</h3>
+        <ul>
+            <li>ホームの<strong>Classic</strong>カードで、レベルのタブ（<strong>1</strong>〜<strong>6</strong>）からレベルを選び、<strong>プレイ</strong>を押します。途中の盤面があれば<strong>続きから</strong>になります。初めてならレベル1がおすすめです。</li>
+            <li>レベルは盤面の大きさと星の数で分かれます。レベルは最初からすべて選べて、レベルごとに盤面が2,000個あります。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>レベル</th><th>盤面の大きさ</th><th>行・列・エリアごとの星</th></tr>
+            <tr><td>1</td><td>6×6</td><td>1つ</td></tr>
+            <tr><td>2</td><td>7×7</td><td>1つ</td></tr>
+            <tr><td>3</td><td>8×8</td><td>1つ</td></tr>
+            <tr><td>4</td><td>9×9</td><td>1つ</td></tr>
+            <tr><td>5</td><td>10×10</td><td>1つ</td></tr>
+            <tr><td>6</td><td>10×10</td><td>2つ</td></tr>
+        </table>
+        <ul>
+            <li>タブにはレベルの番号と盤面の大きさが出て、星2つの盤面には小さな星が2つ付きます。カード真ん中の盤面プレビューは今解いている盤面の様子（置いた星と点）で、横にスワイプすると次・前のレベルに切り替わります。その下に選んだレベルと記録の行が出ます（例:「レベル3 · 8×8 · 星1つ」、「ベスト 03:41 · クリア 12 · 完璧 3」）。</li>
+            <li>まだ解いていない盤面の中からランダムに出て、盤面を回転したり反転したりして、エリアの色も入れ替えて出します。解いた盤面は出ず、そのレベルの盤面をすべて解いたら、いちばん前に解いた盤面からまた出ます。</li>
+            <li>盤面を解くと、光が2度広がってから結果カードが出ます。かかった時間、<strong>ヒント</strong>、<strong>ベスト</strong>（ヒントなしで解いた盤面だけ。前の記録を超えると<strong>新記録</strong>のスタンプ）、<strong>クリア</strong>した盤面の数が出ます。ヒントなしで解くと<strong>完璧</strong>のスタンプが押されます。<strong>次の盤面</strong>を押すと、同じレベルの次の盤面に進みます。</li>
+            <li>解いている盤面は自動で保存されます。抜けても、アプリを閉じて開き直しても、レベルごとに続きから解けます。時間は盤面の画面を開くと進み、アプリを離れている間や画面を離れている間は進みません。手を付けずに抜けた盤面は、時間も残さず、そのまま待っています。</li>
+        </ul>
+        <h3>Daily — 今日の盤面3つ</h3>
+        <ul>
+            <li>毎日、全員が同じ3つの盤面を受け取ります。<strong>小さな盤面</strong>（6×6）、<strong>中くらいの盤面</strong>（8×8）、<strong>大きな盤面</strong>（10×10）で、すべて星1つの盤面です。<strong>世界中のみんなが同じ日に同じ盤面</strong>を解きます（端末の日付が基準）。新しいDailyは端末の時刻で午前0時に開きます。</li>
+            <li>盤面ごとに別々に解き、結果も盤面ごとに残ります。ルールはClassicと同じです（ライフはなく、ヒントは無制限）。</li>
+            <li>時間制限はなく、これまでにかかった時間が盤面の上に出ます（設定で隠せます）。</li>
+            <li>その日のうちなら、抜けても続きから解けます。<strong>この盤面を最初から</strong>にしても、その日の時間・ヒントはそのまま数えます（やり直す画面にはこれだけがあります）。日付が変わると、解きかけの前日の盤面は消えて、新しい盤面が開きます。</li>
+            <li>その日の3つの盤面のうち1つでも解けば、その日が<strong>連続</strong>につながり、1日空けると途切れます。</li>
+            <li>ホームの<strong>Daily</strong>カードには、Dailyの番号と今日の日付、連続の日数、今日の3つの盤面、今週の7日が出ます。3つの盤面のマスには、盤面の名前・大きさと状態（<strong>新しい盤面</strong>、<strong>続きから</strong>、解いた盤面は星明かりのマスとかかった時間）が出て、押すと盤面を解くか、解いた盤面の結果が見られます。今週の7日には、曜日と日付、その日の3つの盤面の星が出ます（解いた盤面は塗りつぶした星、今日は太い枠）。</li>
+            <li>結果画面には、盤面の種類と大きさ、かかった時間、<strong>ヒント</strong>、<strong>連続</strong>（日数）、<strong>今日</strong>解いた盤面の数、今週の7日、次のDailyまでの時間が出ます。ヒントなしで解くと<strong>完璧</strong>のスタンプが押され、最長の連続を超えると連続のマスに<strong>新記録</strong>のスタンプが押されます。<strong>シェア</strong>で結果を送れます（盤面ごとに別々）。例:</li>
+        </ul>
+        <pre class="share-example">Huestar Daily #12 · 中 ✅ 03:41
+ヒント 0
+🔥 5日連続</pre>
+        <p><strong>#12</strong>はDailyの番号で、その隣は盤面の種類とかかった時間（分:秒。1時間を超えると時:分:秒）です。1行目の「Huestar Daily」はどの言語でも同じです。2行目はヒントの数、3行目は連続記録です（2日以上のときだけ）。盤面の絵は答えがわかってしまうので入れません。番号は最初のDailyが開いた日が#1で、1日ずつ増えるので、番号と盤面の種類が同じなら同じ盤面です。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 記録</h2>
+        <p>ホーム右上の<strong>トロフィー</strong>ボタンで開きます。ボタンにはクリアした盤面の数が出ます。</p>
+        <ul>
+            <li>いちばん上: <strong>クリアした盤面</strong>（Classic・Daily）の合計と、ClassicとDailyに分けた数</li>
+            <li><strong>Classic</strong>: レベルごとの<strong>クリア</strong>数、<strong>ベスト</strong>タイム（ヒントなしで解いた盤面だけ）、<strong>平均</strong>タイム（すべての盤面）、<strong>完璧</strong>な盤面の数（ヒントなしで解いた盤面）。まだクリアした盤面がないレベルは薄く表示され、時間は「-」です。</li>
+            <li><strong>Daily</strong>: <strong>連続</strong>、<strong>最長連続</strong>、<strong>クリア日数</strong>、<strong>クリア</strong>。下のカレンダー（両わきのボタンで1か月ずつ切りかえます）で、解いた日は星明かりのマスにその日解いた盤面の数だけ星が付き、今日には枠が付きます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>ホーム右上の<strong>歯車</strong>で開きます。グループは4つです。ゲーム中は<strong>クイック設定</strong>ボタンで、前の3つのグループをすぐに変えられます。</p>
+        <h3>音と演出</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>星を置く・外す、点を打つ、エリアが埋まる、ルール違反、ヒント、元に戻す、盤面の完成、結果のガラスのかけらなどの音をオン・オフします</td></tr>
+            <tr><td>バイブレーション</td><td>星を置くときは短く、外すときはもっと軽く、エリアが埋まるときは2回、盤面を解き終えると長く震えます。オン・オフします</td></tr>
+            <tr><td>エフェクトを減らす</td><td>すべての演出をまとめて控えめにします。オンの間は、下の動き・光の演出・ガラスの紙吹雪はオフと同じになります</td></tr>
+            <tr><td>動き · 光の演出 · ガラスの紙吹雪</td><td>演出ごとにオン・オフします。<strong>動き</strong>は星の弾み・結果カード、<strong>光の演出</strong>は星のきらめき・エリアが埋まる光・完成の光、<strong>ガラスの紙吹雪</strong>は結果画面に舞うガラスのかけらです。盤面全体が揺れる演出はありません</td></tr>
+        </table>
+        <h3>盤面と操作</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>操作</td><td><strong>A タップで切替</strong>（最初の設定）と<strong>B タップ・長押し</strong>から選びます（3章）</td></tr>
+            <tr><td>長押しの時間(ms)</td><td>250・300・350・400・500から選びます。最初は350です。操作Bのときだけ出ます</td></tr>
+        </table>
+        <h3>アシスト機能</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>自動の点</td><td>星の周りと、星が埋まった行・列・エリアに自動で点を打ちます。最初はオンです</td></tr>
+            <tr><td>ルール違反を表示</td><td>隣り合った星と、行き詰まった行・列・エリアを示します。最初はオンです</td></tr>
+            <tr><td>ミスをすぐ表示</td><td>答えと違う星にすぐ印をつけます。最初はオフです</td></tr>
+            <tr><td>時間を表示</td><td>盤面の上に時間を表示します。最初はオンです</td></tr>
+            <tr><td>エリアの模様</td><td>エリアごとに違う線の模様を重ねます。最初はオフです</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>言語</td><td>端末の言語に従う（最初の設定）か、一覧から選びます</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意画面をもう一度開きます。同意が必要な地域（ヨーロッパなど）でだけ表示されます</td></tr>
+            <tr><td>遊び方</td><td>ルール、操作、アシスト機能（ヒント・自動の点・ルール違反・ライフなし）の短い説明を見ます</td></tr>
+            <tr><td>チュートリアルをもう一度</td><td>チュートリアルをもう一度行います</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明書（<strong>遊び方</strong>）、プライバシーポリシー、オープンソースライセンス</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 広告と記録の保管</h2>
+        <ul>
+            <li>画面のいちばん下にバナー広告が一本入ります。チュートリアルでは広告を外し、場所だけ空けておきます。広告はこの一本だけです。ゲームはインターネットがなくても遊べ、インターネットは広告と利用統計・エラー報告にだけ使います。</li>
+            <li>アプリ内で支払うものはありません。</li>
+            <li>記録と設定は端末の中に保存されます。端末のGoogleバックアップ（Androidの自動バックアップ）がオンなら一緒にバックアップされ、端末を替えても続きから遊べます。アプリを削除すると端末の記録も消えます。</li>
+            <li>詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

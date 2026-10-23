@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Huestar 玩法说明 - Willee Project</title>
+    <meta name="description" content="Huestar 玩法说明 — Huestar 是一款在被分成颜色区域的盘面上，让每一行、每一列、每个区域都放上星星的逻辑谜题（Star Battle）。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/huestar/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/huestar/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/huestar/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/huestar/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/huestar/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/huestar/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/huestar/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Huestar 玩法说明 - Willee Project">
+    <meta property="og:description" content="Huestar 玩法说明 — Huestar 是一款在被分成颜色区域的盘面上，让每一行、每一列、每个区域都放上星星的逻辑谜题（Star Battle）。">
+    <meta property="og:url" content="https://willee.net/apps/huestar/manual/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/huestar/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Huestar</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Huestar" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Huestar</h1>
+                <p>玩法说明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Huestar_zh_01_home.webp" alt="主页 — Classic·Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_02_classic_hint.webp" alt="Classic — 附带理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_03_classic_result.webp" alt="Classic — 完成（完美·新纪录）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_04_two_stars.webp" alt="Classic — 正在玩2颗星的10×10盘面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_05_daily_result.webp" alt="Daily — 结果（完美·连续7天）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_06_glow.webp" alt="Classic — 区域亮起的10×10盘面（快要解完）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Huestar_zh_07_tutorial.webp" alt="新手教程 — 用5×5的小盘面熟悉规则" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>Huestar</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android</td></tr>
+        </table>
+        <p>Huestar 是一款在被分成颜色区域的盘面上，让每一行、每一列、每个区域都放上星星的逻辑谜题（Star Battle）。每个盘面都只有一个答案，不靠猜测、只靠逻辑就能解到最后。</p>
+        <ul>
+            <li>没有生命值，也不统计失误次数。提示不限次数、免费使用，也没有时间限制。</li>
+            <li>无需注册，也无需登录。第一次打开时，会先用一个5×5的小盘面进行<strong>新手教程</strong>，带你熟悉规则。点击<strong>跳过</strong>可以随时结束。</li>
+            <li><strong>没有网络也能玩。</strong> 只有屏幕下方的广告，以及发送使用统计和错误报告时才会用到网络。</li>
+            <li>语言跟随设备设置。支持中文（简体、繁体）、英语、韩语、日语，也可以在设置中直接选择。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 规则</h2>
+        <ul>
+            <li>盘面是纵横排列的方形格子，被粗线分成与行数相同数量的<strong>颜色区域</strong>。</li>
+            <li><strong>每行、每列、每个区域各放一颗星</strong>。等级6（双星盘面）则<strong>各放两颗</strong>。</li>
+            <li><strong>星星之间不能相邻。</strong> 不仅横向、纵向，斜向相邻的格子里也不能同时放星星。</li>
+            <li>所有星星都放对，就<strong>完成</strong>了。圆点不必打满。把放错的星星拿掉后正好与答案一致，也算完成。</li>
+            <li><strong>圆点</strong>是你自己的标记，表示“这里不能放星星”。解题时并非必须，但把已经排除的格子标出来，剩下的格子会更容易看清。</li>
+            <li>每个盘面都只有一个答案，不靠猜测、只靠逻辑就能解到最后。不会出现必须靠猜才能确定某个格子的盘面。</li>
+            <li>没有生命值，也不统计失误。放错星星，盘面也不会结束，撤销不限次数。</li>
+            <li><strong>最佳用时只计算没有使用提示的盘面。</strong> 不使用提示就解开时，结果上会盖上<strong>完美</strong>印章。</li>
+        </ul>
+        <h3>盘面怎么看</h3>
+        <ul>
+            <li>每个区域都像宝石色的彩色玻璃一样，涂着各自的颜色。区域之间是粗黑的铅线，同一区域内的格子之间是细线。区域不只靠颜色来区分，也靠粗线来分隔。</li>
+            <li>星星放满的区域（没有冲突的星星时）会像被光照到的玻璃一样亮起来。</li>
+            <li>颜色难以分辨时，请打开设置中的<strong>区域花纹</strong>。每个区域都会叠上不同的线条花纹。</li>
+            <li><strong>规则冲突</strong>（默认开启）：相邻的星星会变成带双层圆环的红色星星；星星过多，或剩下的格子放不下所需星星的行、列、区域，会铺上斜向条纹。只依据规则来提示，不参考答案。</li>
+            <li>盖着白光的行、列、区域，以及带柔光和虚线框的格子，是提示所指的地方（见第4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解题要点</h2>
+        <p>新手教程用一个5×5的盘面教你基础，分六步：<strong>区域 → 不能相邻 → 打圆点 → 行 → 列 → 独立完成</strong>。每一步都会让要看的地方亮起，只有该点击的格子才有反应。提示会用名称告诉你用了哪种要点。从最容易的开始，如下。</p>
+        <ul>
+            <li><strong>星星周围</strong>：星星周围的八个格子里不能放星星。</li>
+            <li><strong>已满的行或列</strong>、<strong>已满的区域</strong>：星星已经放满的行、列、区域，剩下的格子里不能放星星。</li>
+            <li><strong>剩下的格子</strong>：行、列、区域里还能放星星的格子，数量正好等于还需要的星星数时，这些格子全都是星星。</li>
+            <li><strong>都相邻的格子</strong>：如果某个格子与某行、某列或某个区域剩下的所有格子都相邻，在这个格子里放星星，那一行、一列或一个区域就没有地方放星星了。所以这个格子里不能放星星。</li>
+            <li><strong>受限的区域</strong>、<strong>受限的行或列</strong>：如果一个区域剩下的格子都在同一行（或同一列）里，这个区域的星星就是那一行的星星。所以那一行的其他格子里不能放星星（行和区域互换也一样）。</li>
+            <li><strong>试放</strong>：试着在某个格子里放星星，它的周围，以及因此放满的行、列、区域里剩下的格子都会被排除，结果某一行、某一列或某个区域就没有足够的格子放星星了。所以这个格子里不能放星星。</li>
+            <li><strong>两行或两列里的两个区域</strong>、<strong>两个区域里的两行或两列</strong>：把“受限”的想法扩大到两个。如果两个区域剩下的格子都在两行（或两列）里，这两行的其他格子里不能放星星。</li>
+            <li><strong>三个以上受限</strong>：同样的想法，扩大到三个以上的区域。</li>
+            <li><strong>2×2方块</strong>（双星盘面）：如果行、列、区域剩下的格子，可以用与还需要的星星数相同数量的2×2方块盖住，那么每个2×2方块里正好有一颗星。</li>
+        </ul>
+        <p>等级1的盘面用到<strong>试放</strong>为止就能解开。等级越高，越会出现需要用到扩大后的“受限”想法的盘面。更难的要点，会由提示连同理由一起告诉你（见第4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li><strong>操作方式 A</strong>（默认）：每次点击格子，会按 <strong>空白 → 圆点 → 星星 → 空白</strong> 切换。显示着自动圆点的格子视为圆点，点击后变成星星。</li>
+            <li><strong>操作方式 B</strong>：在设置的<strong>操作方式</strong>中选择 <strong>B 点击/长按</strong> 后，点击放置或拿掉星星，长按放置或擦掉圆点。可以用盘面下方的 <strong>[圆点|星星]</strong> 互换点击和长按的作用。长按时圆环会逐渐变满，长按时间在设置中选择（默认 350 毫秒）。</li>
+            <li><strong>拖动打圆点</strong>：在空白格子上拖动手指，经过的格子会打上圆点。从圆点开始拖动，会擦掉经过的圆点。只在盘面内有效。</li>
+            <li><strong>自动圆点</strong>（默认开启）：放下星星后，星星周围，以及星星已放满的行、列、区域里剩下的格子，会自动打上圆点。它们看起来比你自己打的圆点稍小、稍淡，拿掉星星时会一起消失。</li>
+            <li><strong>撤销</strong>：用盘面下方的<strong>撤销</strong>取消最后一步操作。次数不限，一次拖动只需撤销一次。</li>
+            <li>手指抬起时才确定。如果有第二根手指碰到屏幕，这一次点击会被丢弃。</li>
+        </ul>
+        <p>顶部一行左侧显示模式名称和盘面（例如 Classic，等级3 · 8×8 和星星图案）。星星图案的数量就是每行、每列、每个区域要放的星星数（双星盘面显示 ★★）。Daily 显示 Daily 编号（#12）和盘面种类。右侧的按钮如下。</p>
+        <table class="info-table">
+            <tr><th>按钮</th><th>作用</th></tr>
+            <tr><td><strong>重来</strong>（↻）</td><td>打开选择<strong>这一局从头开始</strong>或<strong>新的一局</strong>的面板（见下）</td></tr>
+            <tr><td><strong>快捷设置</strong></td><td>打开一个面板，不离开游戏画面就能更改效果、操作方式和辅助设置（见第5、8章）。点击面板上方或往下拉就能关闭</td></tr>
+            <tr><td><strong>退出</strong>（门的形状）</td><td>回到主页。正在解的盘面会自动保存</td></tr>
+        </table>
+        <p>盘面正上方的一行：</p>
+        <ul>
+            <li>星星图案旁的数字是<strong>已放星星数 / 需放星星总数</strong>（例如 4 / 8）。双星盘面的星星图案有两颗。</li>
+            <li>灯泡图案旁的数字是已使用的提示次数。</li>
+            <li>右侧是时间（可以在设置中用<strong>显示时间</strong>隐藏）。</li>
+            <li>再上面一条是提示气泡和通知的位置（见第4章）。还没有开始操作的盘面会在这里显示一行规则。</li>
+        </ul>
+        <p>盘面下方的一行：</p>
+        <table class="info-table">
+            <tr><th>按钮</th><th>作用</th></tr>
+            <tr><td><strong>撤销</strong></td><td>取消最后一步操作。没有可撤销的内容时会变淡、不能点击</td></tr>
+            <tr><td><strong>提示</strong></td><td>告诉你下一步和理由。每点一次会依次变成 <strong>提示 → 查看 → 采用</strong>（见第4章）</td></tr>
+            <tr><td><strong>[圆点|星星]</strong></td><td>只在操作方式 B 时显示。决定点击是放星星还是打圆点</td></tr>
+        </table>
+        <p><strong>重来</strong>面板：</p>
+        <table class="info-table">
+            <tr><th>选项</th><th>内容</th></tr>
+            <tr><td><strong>这一局从头开始</strong></td><td>把盘面恢复到最初的样子。Classic 的用时和提示也从头算，Daily 则继续累计当天的用时和提示。还没有开始操作的盘面会变淡、不能点击</td></tr>
+            <tr><td><strong>新的一局</strong>（Classic）</td><td>放弃这一局，换一局同等级的盘面。放弃的盘面不算完成。Daily 没有这一项</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 提示</h2>
+        <p><strong>提示</strong>按钮会告诉你解题的下一步，并说明理由。提示不限次数，免费使用。</p>
+        <p>同一个按钮要按三次：<strong>提示</strong> → <strong>查看</strong> → <strong>采用</strong>。</p>
+        <ul>
+            <li>第一步：点击<strong>提示</strong>，只会告诉你要看的地方。作为依据的行、列、区域会盖上白光，内侧还会加一圈边框。气泡上的名称是所用的要点（见第2章）。例如：“看看高亮的区域剩下的格子在哪些行里。”</li>
+            <li>第二步：按钮变成<strong>查看</strong>。点击后，要确定的格子会出现柔光和虚线框，要放的星星显示为淡淡的星星，要打的圆点显示为淡淡的圆点，同时给出理由。理由里不用颜色名称或行、列的编号，而是指向高亮的地方。</li>
+            <li>第三步：按钮变成<strong>采用</strong>。点击后，会照此放上星星或打上圆点。撤销一次即可还原。</li>
+            <li>如果有<strong>错误的标记</strong>，会先指出它们（名称<strong>错误的星星</strong>、<strong>错误的圆点</strong>）。不在答案里的星星，以及打在答案星星所在格子上的圆点，会从最先放下的开始逐个指出。按钮会直接变成<strong>采用</strong>，点击后擦掉那个标记。</li>
+            <li>当接下来有几步都只是确定圆点时，点击气泡里的<strong>直到下一颗星</strong>，就会一次打上这些圆点，并直接显示接下来确定星星的那一步。</li>
+            <li>提示只根据放对的星星，以及由它们推出的圆点来推理。你自己打的圆点不会被当作依据，所以即使一个圆点也没打，或者圆点打错了，提示也永远是对的。盘面上已经全部看得到的步骤会被跳过。</li>
+            <li>用过的提示次数会显示在盘面上方一行和结果里，也会写进 Daily 的分享文字。请求提示时（第一步）算一次。查看和采用不另算，关闭后再请求会多算一次。直到下一颗星也只在新请求时才算。</li>
+            <li>点击气泡上的关闭（X），或者点击格子，提示就会关闭。没有更多提示可以显示时，会提示“没有更多提示了”。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 辅助设置</h2>
+        <p>在设置的<strong>盘面与操作</strong>和<strong>辅助设置</strong>中开关。游戏中可以用<strong>快捷设置</strong>马上更改。</p>
+        <ul>
+            <li><strong>自动圆点</strong>（默认开启）：在星星周围，以及星星已放满的行、列、区域里自动打圆点（见第3章）。关闭后，只显示你自己打的圆点。</li>
+            <li><strong>显示规则冲突</strong>（默认开启）：显示相邻的星星，以及星星过多或剩余格子不够放的行、列、区域（见第1章）。</li>
+            <li><strong>立即显示失误</strong>（默认关闭）：马上标出与答案不同的星星。关闭时，放错的星星要等提示指出才会告诉你。</li>
+            <li><strong>显示时间</strong>（默认开启）：在盘面上方显示时间。关闭后只是不显示，时间仍在计算。解开的盘面的用时会显示在结果里。</li>
+            <li><strong>区域花纹</strong>（默认关闭）：给每个区域叠上不同的线条花纹（颜色难以分辨时）。</li>
+            <li><strong>长按时间(毫秒)</strong>（默认 350）：从 250、300、350、400、500 中选择。只在操作方式 B 时显示。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 模式</h2>
+        <h3>Classic — 自选等级，不限时</h3>
+        <ul>
+            <li>在主页的 <strong>Classic</strong> 卡片上，用等级分页（<strong>1</strong>～<strong>6</strong>）选择等级，点击<strong>开始</strong>。有进行中的盘面时会显示<strong>继续</strong>。第一次玩建议从等级1开始。</li>
+            <li>等级按盘面大小和星星数划分。所有等级一开始就开放，每个等级有2,000个盘面。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>等级</th><th>盘面大小</th><th>每行、每列、每个区域的星星数</th></tr>
+            <tr><td>1</td><td>6×6</td><td>1颗</td></tr>
+            <tr><td>2</td><td>7×7</td><td>1颗</td></tr>
+            <tr><td>3</td><td>8×8</td><td>1颗</td></tr>
+            <tr><td>4</td><td>9×9</td><td>1颗</td></tr>
+            <tr><td>5</td><td>10×10</td><td>1颗</td></tr>
+            <tr><td>6</td><td>10×10</td><td>2颗</td></tr>
+        </table>
+        <ul>
+            <li>分页上显示等级编号和盘面大小，双星盘面还会带两颗小星星。卡片中间的盘面预览显示正在解的盘面的样子（已放的星星和圆点），向两侧滑动可以切换到下一个或上一个等级。下面一行显示所选等级和一行记录（例如“等级3 · 8×8 · 1颗星”，“最佳 03:41 · 完成 12 · 完美 3”）。</li>
+            <li>盘面会从还没解开的盘面里随机选出，并经过旋转或翻转、重新搭配区域颜色后给出。解开过的盘面不会再出现；某个等级的盘面全部解开后，会从最早解开的那一局开始再次出现。</li>
+            <li>解开盘面后，光会向外扩散两次，然后出现结果卡片。上面有用时、<strong>提示</strong>、<strong>最佳</strong>（只算没有使用提示的盘面；超过原来的纪录时会盖上<strong>新纪录</strong>印章）和<strong>完成</strong>的盘面数。没有使用提示就解开时会盖上<strong>完美</strong>印章。点击<strong>下一局</strong>会接着出同一等级的下一局。</li>
+            <li>进行中的盘面会自动保存。离开或关闭再打开应用后，每个等级都能接着解。打开盘面画面后开始计时，离开应用或离开画面期间不计时。没有操作就离开的盘面不会留下用时，原样等着你。</li>
+        </ul>
+        <h3>Daily — 今天的三个盘面</h3>
+        <ul>
+            <li>每天所有人拿到同样的三个盘面：<strong>小型盘面</strong>（6×6）、<strong>中型盘面</strong>（8×8）、<strong>大型盘面</strong>（10×10），都是单星盘面。<strong>全世界的人在同一天解同样的盘面</strong>（以设备日期为准）。新的 Daily 会在设备时间的零点开放。</li>
+            <li>每个盘面分开解，结果也各自保存。规则和 Classic 一样（没有生命值，提示不限次数）。</li>
+            <li>没有时间限制，到目前为止的用时显示在盘面上方（可以在设置中隐藏）。</li>
+            <li>当天之内离开再回来也能接着解。即使选择<strong>这一局从头开始</strong>，当天的用时和提示也会继续累计（重来时只有这一项）。日期变了以后，没解完的昨天的盘面会消失，新的盘面会开放。</li>
+            <li>当天的三个盘面只要解开其中一个，这一天就计入<strong>连续</strong>；中间空一天就会中断。</li>
+            <li>主页的 <strong>Daily</strong> 卡片会显示Daily 编号和今天的日期、连续天数、今天的三个盘面和这一周的七天。每个盘面的格子上显示盘面名称、大小和状态（<strong>新的一局</strong>、<strong>继续</strong>，解开的盘面显示星光色的格子和用时），点击后可以开始解，或查看已解开盘面的结果。这一周的七天显示星期、日期和当天三个盘面的星星（解开的盘面是实心星星，今天是粗边框）。</li>
+            <li>结果画面会显示盘面种类和大小、用时、<strong>提示</strong>、<strong>连续</strong>（天数）、<strong>今天</strong>解开的盘面数、这一周的七天和距下次 Daily 的时间。没有使用提示就解开时会盖上<strong>完美</strong>印章，超过最长连续时，连续一栏会盖上<strong>新纪录</strong>印章。可以用<strong>分享</strong>发送结果（一次一个盘面）。例如：</li>
+        </ul>
+        <pre class="share-example">Huestar Daily #12 · 中 ✅ 03:41
+提示 0
+🔥 连续5天</pre>
+        <p><strong>#12</strong>是 Daily 的编号，旁边是盘面种类和用时（分:秒，超过一小时则为时:分:秒）。第一行的“Huestar Daily”在任何语言中都一样。第二行是提示次数，第三行是连续记录（两天以上才显示）。盘面本身不会放进去，因为会泄露答案。第一个 Daily 开放的那天是 #1，之后每天加一，编号和盘面种类相同就是同样的盘面。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 记录</h2>
+        <p>点击主页右上角的<strong>奖杯</strong>按钮打开。按钮上会显示完成的盘面数。</p>
+        <ul>
+            <li>最上方：<strong>完成的盘面</strong>（Classic 和 Daily）的合计，以及 Classic、Daily 各自的数量</li>
+            <li><strong>Classic</strong>：各等级的<strong>完成</strong>数、<strong>最佳</strong>用时（只算没有使用提示的盘面）、<strong>平均</strong>用时（所有盘面）和<strong>完美</strong>盘面数（没有使用提示的盘面）。还没有解开盘面的等级会变淡，用时显示为“-”。</li>
+            <li><strong>Daily</strong>：<strong>连续</strong>、<strong>最长连续</strong>、<strong>完成天数</strong>、<strong>完成</strong>。下方的日历（用两侧的按钮按月翻页）上，解开的日子是星光色的格子，格子上按当天解开的盘面数加上星星，今天会有边框。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 设置</h2>
+        <p>点击主页右上角的<strong>齿轮</strong>打开。分为四组。游戏中可以用<strong>快捷设置</strong>按钮马上更改前三组。</p>
+        <h3>声音与效果</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>音效</td><td>开关放星星和拿掉星星、打圆点、区域放满、规则冲突、提示、撤销、盘面完成、结果里的玻璃碎片等的声音</td></tr>
+            <tr><td>振动</td><td>放星星时短促，拿掉星星时更轻，区域放满时两下，解开盘面时较长。可以开关</td></tr>
+            <tr><td>减少特效</td><td>一次减少所有特效。开启期间，下面的动画、光效、彩色玻璃碎片都相当于关闭</td></tr>
+            <tr><td>动画 · 光效 · 彩色玻璃碎片</td><td>逐项开关特效。<strong>动画</strong>是星星弹跳和结果卡片，<strong>光效</strong>是星星闪烁、区域放满的光和完成的光，<strong>彩色玻璃碎片</strong>是结果画面上飘落的玻璃碎片。没有整个盘面晃动的特效</td></tr>
+        </table>
+        <h3>盘面与操作</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>操作方式</td><td>在 <strong>A 点击切换</strong>（默认）和 <strong>B 点击/长按</strong> 中选择（见第3章）</td></tr>
+            <tr><td>长按时间(毫秒)</td><td>从 250、300、350、400、500 中选择。默认 350。只在操作方式 B 时显示</td></tr>
+        </table>
+        <h3>辅助设置</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>自动圆点</td><td>在星星周围，以及已放满的行、列、区域里自动打圆点。默认开启</td></tr>
+            <tr><td>显示规则冲突</td><td>显示相邻的星星和卡住的行、列、区域。默认开启</td></tr>
+            <tr><td>立即显示失误</td><td>马上标出与答案不同的星星。默认关闭</td></tr>
+            <tr><td>显示时间</td><td>在盘面上方显示时间。默认开启</td></tr>
+            <tr><td>区域花纹</td><td>给每个区域叠上不同的线条花纹。默认关闭</td></tr>
+        </table>
+        <h3>通用</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>语言</td><td>跟随系统（默认），或从列表中直接选择</td></tr>
+            <tr><td>隐私选项</td><td>再次打开广告同意窗口。只在需要同意的地区（例如欧洲）显示</td></tr>
+            <tr><td>玩法说明</td><td>查看规则、操作方式和辅助设置（提示、自动圆点、规则冲突、没有生命值）的简短说明</td></tr>
+            <tr><td>重玩教程</td><td>再玩一次新手教程</td></tr>
+            <tr><td>关于</td><td>版本、本说明（<strong>玩法说明</strong>）、隐私政策、开源许可</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 广告与记录的保存</h2>
+        <ul>
+            <li>屏幕最下方有一条横幅广告。在新手教程中会撤下广告，只保留位置。广告只有这一条。游戏没有网络也能玩，网络只用于广告、使用统计和错误报告。</li>
+            <li>应用内没有任何付费项目。</li>
+            <li>记录和设置保存在设备中。如果开启了设备的 Google 备份（Android 自动备份），会一起备份，换设备后也能接着玩。卸载应用会删除设备中的记录。</li>
+            <li>详情请参阅<a href="../privacy/zh.html">隐私政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 联系我们</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
