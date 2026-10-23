@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Huestar - Willee Project</title>
+    <meta name="description" content="Huestar（ヒュースター）は、ステンドグラスのような盤面で遊ぶスターバトル（Star Battle）の論理パズルです。盤面は色のエリアに分かれていて、各行・各列・各エリアに星を1つずつ置いていきます。星どうしは、斜めにも隣り合えません。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/huestar/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/huestar/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/huestar/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/huestar/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/huestar/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/huestar/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Huestar - Willee Project">
+    <meta property="og:description" content="Huestar（ヒュースター）は、ステンドグラスのような盤面で遊ぶスターバトル（Star Battle）の論理パズルです。盤面は色のエリアに分かれていて、各行・各列・各エリアに星を1つずつ置いていきます。星どうしは、斜めにも隣り合えません。">
+    <meta property="og:url" content="https://willee.net/apps/huestar/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/huestar/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Huestar</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Huestar</h1>
+        <p>行・列・色のエリアごとに星を置く論理パズル</p>
+        <div class="store-cta"><span>Google Play で近日公開</span></div>
+        <div class="graphic-banner">
+            <img src="images/Huestar_ja_feature.webp" alt="Huestar — 行・列・色のエリアごとに星を置く論理パズル。推測なし、論理だけで解ける。理由がわかるヒント" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Huestar アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Huestar</h2>
+                <p>スターバトル 論理パズル · Classic · Daily</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Huestar（ヒュースター）は、ステンドグラスのような盤面で遊ぶスターバトル（Star Battle）の論理パズルです。盤面は色のエリアに分かれていて、各行・各列・各エリアに星を1つずつ置いていきます。星どうしは、斜めにも隣り合えません。どの盤面も答えは1つだけで、論理を積み重ねれば最後の星までたどり着けるので、推測に頼る場面はありません。アプリへの収録に先立ち、すべての盤面をソルバーで最初から最後まで解いて確認しています。ライフもないので、じっくり考えて大丈夫です。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Huestar_ja_01_home.webp" alt="ホーム — Classic・Daily" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_02_classic_hint.webp" alt="Classic — 理由つきのヒント" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_03_classic_result.webp" alt="Classic — 完成（完璧・新記録）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_04_two_stars.webp" alt="Classic — 星2つの10×10の盤面をプレイ中" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_05_daily_result.webp" alt="Daily — 結果（完璧・7日連続）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_06_glow.webp" alt="Classic — エリアが光る10×10の盤面（ほぼ解けたところ）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Huestar_ja_07_tutorial.webp" alt="チュートリアル — 5×5の盤面でルールを覚える" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>2つのモード</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>Classic</strong><span>時間制限なし。星1つの6×6～10×10と星2つの10×10、6つのレベルを最初から選べる。各レベル2,000盤面</span></div>
+            <div class="mode-item"><strong>Daily</strong><span>1日3つの盤面（6×6・8×8・10×10）、みんな同じ盤面。どれか1つ解けば連続記録がつながり、結果をシェア</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>ルールと操作</strong>
+                <span>すべての星を正しく置けば完成で、点はすべて打たなくてもかまいません。マスをタップするたびに、空白 → 点 → 星の順に切り替わります。空白のマスをなぞると、通ったマスにまとめて点を打てます。「元に戻す」は何回でも使え、1回のなぞりは1回の操作で取り消せます。</span>
+            </li>
+            <li>
+                <strong>理由がわかるヒント</strong>
+                <span>手が止まったら、ヒントをタップしてください。見るべきところがハイライトされ、使う考え方の名前（埋まった行・列、閉じ込められたエリアなど）が表示されます。もう一度タップすると、星や点を置くマスと、その理由が表示されます。間違った星や点があれば、真っ先に教えます。ヒントは自分が打った点を根拠にしないので、点を間違えてもヒントがずれることはありません。回数に上限はありません。</span>
+            </li>
+            <li>
+                <strong>光が差し込むガラスの盤面</strong>
+                <span>エリアは太い鉛線で縁取られた色ガラスです。星が埋まったエリアは、光を受けたガラスのように明るくなります。盤面を完成させると光が2度広がり、結果画面に色ガラスのかけらが舞います。「エフェクトを減らす」をオンにすると演出全体が控えめになり、動き・光・ガラスのかけらを個別にオフにすることもできます。</span>
+            </li>
+            <li>
+                <strong>記録</strong>
+                <span>レベルごとに、クリアした盤面の数、最短タイム、平均タイム、完璧スタンプの数を記録します。Dailyでは連続記録、最長連続、クリアした日がわかるカレンダーを見られます。最短タイムも「完璧」のスタンプも、ヒントを使わずに解いた盤面が対象です。</span>
+            </li>
+            <li>
+                <strong>見やすく、押しやすく</strong>
+                <span>盤面は常に画面の幅に収まるので、拡大やスクロールは要りません。設定で操作を「タップで星、長押しで点」に変えることもできます。自動の点が、星の周りと星が埋まった行・列・エリアに点を打ちます。ルール違反は起きた瞬間に表示され、色だけでなく輪や縞模様でも示します。</span>
+            </li>
+            <li>
+                <strong>エリアの模様</strong>
+                <span>色の見分けがつきにくいときは、設定でエリアの模様をオンにすると、エリアごとに違う線の模様が重なります。赤と緑の区別がつきにくい方に似て見える色は、できるだけ隣り合うエリアに置かないようにしています。</span>
+            </li>
+            <li>
+                <strong>6ステップのチュートリアル</strong>
+                <span>はじめて開くと、5×5の盤面で6ステップのチュートリアルが始まります。スキップも、設定からもう一度遊ぶこともできます。</span>
+            </li>
+            <li>
+                <strong>オフラインで遊べる</strong>
+                <span>アカウント登録もログインも不要で、記録は端末に保存されます。インターネットがなくても遊べます（Dailyも）。</span>
+            </li>
+            <li>
+                <strong>多言語対応</strong>
+                <span>日本語・韓国語・英語・中国語（簡体字・繁体字）に対応し、端末の言語に従うか、設定で選べます。</span>
+            </li>
+            <li>
+                <strong>無料で提供</strong>
+                <span>広告は画面の最下部に出る細いバナー1つだけです。全画面広告はなく、アプリ内課金もありません。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>Huestar アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>Huestar アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
