@@ -19,7 +19,7 @@
     <meta property="og:title" content="タロヨ ユーザーマニュアル - Willee Project">
     <meta property="og:description" content="タロヨ ユーザーマニュアル — タロヨは、タロットカード78枚の中からカードを引き、その結果を AI チャットが解釈できるプロンプト（質問文）に仕上げてくれるアプリです。">
     <meta property="og:url" content="https://willee.net/apps/tarotyo/manual/ja.html">
-    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image.jpg">
+    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image_ja.jpg">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="500">
     <meta property="og:locale" content="ja_JP">
@@ -110,14 +110,14 @@
     <div class="container">
         <h2>スクリーンショット</h2>
         <div class="screenshot-gallery">
-            <img src="../images/TarotYo_001.webp" alt="スプレッド選択" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_002.webp" alt="カード一覧" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_003.webp" alt="カード詳細" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_004.webp" alt="質問の入力" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_005.webp" alt="カードの確認" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_006.webp" alt="カードを選ぶ" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_007.webp" alt="プロンプト生成中" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_008.webp" alt="プロンプト完成" width="720" height="1600" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_01_home.webp" alt="ホーム（スプレッド選択）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_02_question.webp" alt="二者択一の質問" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_03_draw.webp" alt="カードを引く" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_04_confirm.webp" alt="選んだカードの確認" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_05_result.webp" alt="プロンプト完成" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_06_gallery.webp" alt="カード一覧" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_07_card.webp" alt="カードの拡大表示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ja_08_history.webp" alt="過去のカード記録" width="1080" height="2160" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -127,7 +127,7 @@
         <h2>アプリについて</h2>
         <table class="info-table">
             <tr><th>アプリ名</th><td>タロヨ (TarotYo)</td></tr>
-            <tr><th>バージョン</th><td>1.0.1</td></tr>
+            <tr><th>バージョン</th><td>1.1.0</td></tr>
             <tr><th>開発</th><td>Willee Project</td></tr>
             <tr><th>対応プラットフォーム</th><td>Android</td></tr>
         </table>
@@ -163,7 +163,7 @@
         <table class="info-table">
             <tr><th>カード引き</th><td>質問を決めてカードを引き、プロンプトを作成します。</td></tr>
             <tr><th>カード一覧</th><td>タロット78枚を見て回ります。</td></tr>
-            <tr><th>設定</th><td>カードの裏面・言語・ご利用案内を設定します。</td></tr>
+            <tr><th>設定</th><td>過去のカード記録・ご利用案内・アプリ情報を見たり、カードの裏面・言語を設定したりします。</td></tr>
         </table>
     </div>
 </section>
@@ -177,6 +177,7 @@
         <p>質問の性質に合った<strong>スプレッド(カードの並べ方)</strong>を選びます。</p>
         <table class="info-table">
             <tr><th>スプレッド</th><th>カード枚数</th><th>こんな時に</th></tr>
+            <tr><td>アドバイスカード</td><td>1枚</td><td>手軽に見たい時や、追加の助言に</td></tr>
             <tr><td>スリーカード</td><td>3枚</td><td>全体の流れを手軽に見たい時に</td></tr>
             <tr><td>二者択一</td><td>5枚</td><td>二つの選択肢で迷っている時に</td></tr>
             <tr><td>状況アドバイス</td><td>5枚</td><td>具体的な流れと助言が欲しい時に</td></tr>
@@ -185,13 +186,13 @@
         </table>
 
         <h3>ステップ2 · 質問の入力</h3>
-        <p>気になることを入力します。質問は具体的であるほど良い結果が得られます。(例:「新しい職場へ転職することは私にとって良い選択でしょうか?」)質問なしで進めることもできます。</p>
+        <p>気になることを入力します。質問は具体的であるほど良い結果が得られます。(例:「新しい職場へ転職することは私にとって良い選択でしょうか?」)質問なしで進めることもできます。<strong>二者択一</strong>では、質問の下の2つの欄に一つ目・二つ目の選択肢を分けて書くことができ、書いた選択肢はプロンプトに含まれます。</p>
 
         <h3>ステップ3 · カード選択</h3>
         <p>扇状に広げられたカードを左右にスワイプしながら、心が引かれるカードをスプレッドの枚数だけ選びます。</p>
 
         <h3>ステップ4 · 選択の確認</h3>
-        <p>選んだカードを確認します。選び直したい場合は、前のステップに戻ることができます。</p>
+        <p>選んだカードを確認します。選び直したい場合は、前のステップに戻って<strong>選び直す</strong>を押してください。そのまま進む場合は<strong>次へ</strong>を押します。</p>
 
         <h3>ステップ5 · プロンプト生成</h3>
         <p>しばらく待つと、カードとポジション(位置)の意味を盛り込んだプロンプトが作成されます。</p>
@@ -239,9 +240,11 @@
     <div class="container">
         <h2>設定</h2>
         <table class="info-table">
+            <tr><th>過去のカード記録</th><td>直近50件のリーディングの日時・スプレッド・引いたカードを見られます。質問とプロンプトは保存せず、記録は1件ずつ、またはすべて削除できます。</td></tr>
             <tr><th>カード裏面デザイン</th><td>カードを引く時に見える裏面を選びます。</td></tr>
             <tr><th>言語設定</th><td>韓国語・英語・日本語・中国語から選ぶか、システム既定に従います。</td></tr>
-            <tr><th>ご利用案内</th><td>アプリの紹介と、ユーザーマニュアル・プライバシーポリシーへのリンクを提供します。</td></tr>
+            <tr><th>ご利用案内</th><td>アプリの紹介を表示します。</td></tr>
+            <tr><th>アプリ情報</th><td>アプリのバージョンを確認し、ユーザーマニュアル・プライバシーポリシー・オープンソースライセンスを開きます。</td></tr>
         </table>
     </div>
 </section>

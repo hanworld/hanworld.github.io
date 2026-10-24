@@ -19,7 +19,7 @@
     <meta property="og:title" content="타로요 사용 설명서 - 윌리 프로젝트">
     <meta property="og:description" content="타로요 사용 설명서 — 타로요는 타로 카드 78장 중에서 카드를 뽑아, 그 결과를 AI 챗봇이 해석할 수 있는 프롬프트(질문 문장)로 만들어 주는 앱입니다.">
     <meta property="og:url" content="https://willee.net/apps/tarotyo/manual/ko.html">
-    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image.jpg">
+    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image_ko.jpg">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="500">
     <meta property="og:locale" content="ko_KR">
@@ -109,14 +109,14 @@
     <div class="container">
         <h2>스크린샷</h2>
         <div class="screenshot-gallery">
-            <img src="../images/TarotYo_001.webp" alt="스프레드 선택" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_002.webp" alt="카드 둘러보기" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_003.webp" alt="카드 상세 보기" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_004.webp" alt="질문 입력" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_005.webp" alt="뽑은 카드 검토" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_006.webp" alt="카드 선택" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_007.webp" alt="프롬프트 생성 중" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_008.webp" alt="프롬프트 완성" width="720" height="1600" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_01_home.webp" alt="홈(스프레드 선택)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_02_question.webp" alt="양자택일 질문" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_03_draw.webp" alt="카드 뽑기" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_04_confirm.webp" alt="선택한 카드 확인" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_05_result.webp" alt="프롬프트 준비 완료" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_06_gallery.webp" alt="카드구경" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_07_card.webp" alt="카드 크게 보기" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_ko_08_history.webp" alt="지난 카드 기록" width="1080" height="2160" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -126,7 +126,7 @@
         <h2>앱 정보</h2>
         <table class="info-table">
             <tr><th>앱 이름</th><td>타로요 (TarotYo)</td></tr>
-            <tr><th>버전</th><td>1.0.1</td></tr>
+            <tr><th>버전</th><td>1.1.0</td></tr>
             <tr><th>개발</th><td>Willee Project</td></tr>
             <tr><th>지원 플랫폼</th><td>Android</td></tr>
         </table>
@@ -162,7 +162,7 @@
         <table class="info-table">
             <tr><th>카드뽑기</th><td>질문을 정하고 카드를 뽑아 프롬프트를 만듭니다.</td></tr>
             <tr><th>카드구경</th><td>타로 78장을 둘러봅니다.</td></tr>
-            <tr><th>설정</th><td>카드 뒷면·언어·이용 안내를 설정합니다.</td></tr>
+            <tr><th>설정</th><td>지난 카드 기록과 이용 안내·앱 정보를 보고, 카드 뒷면·언어를 설정합니다.</td></tr>
         </table>
     </div>
 </section>
@@ -176,6 +176,7 @@
         <p>질문 성격에 맞는 <strong>스프레드(카드 배열)</strong>를 고릅니다.</p>
         <table class="info-table">
             <tr><th>스프레드</th><th>카드 수</th><th>이럴 때</th></tr>
+            <tr><td>조언카드</td><td>1장</td><td>간단하게 보고 싶을 때, 추가 조언 카드 뽑기</td></tr>
             <tr><td>쓰리카드</td><td>3장</td><td>간단하게 흐름을 보고 싶을 때</td></tr>
             <tr><td>양자택일</td><td>5장</td><td>두 가지 선택지 사이에서 고민될 때</td></tr>
             <tr><td>상황조언</td><td>5장</td><td>구체적인 흐름과 조언을 받고 싶을 때</td></tr>
@@ -184,13 +185,13 @@
         </table>
 
         <h3>2단계 · 질문 입력</h3>
-        <p>궁금한 점을 입력합니다. 질문은 구체적일수록 좋습니다. (예: “새로운 직장으로 이직하는 것이 나에게 좋은 선택일까요?”) 질문 없이 진행할 수도 있습니다.</p>
+        <p>궁금한 점을 입력합니다. 질문은 구체적일수록 좋습니다. (예: “새로운 직장으로 이직하는 것이 나에게 좋은 선택일까요?”) 질문 없이 진행할 수도 있습니다. <strong>양자택일</strong>은 질문 아래의 두 칸에 첫 번째·두 번째 선택지를 나누어 적을 수 있으며, 적은 선택지는 프롬프트에 함께 들어갑니다.</p>
 
         <h3>3단계 · 카드 선택</h3>
         <p>부채꼴로 펼쳐진 카드를 좌우로 넘기며, 마음이 가는 카드를 스프레드 장수만큼 선택합니다.</p>
 
         <h3>4단계 · 선택 확인</h3>
-        <p>고른 카드를 확인합니다. 다시 고르고 싶으면 이전 단계로 돌아갈 수 있습니다.</p>
+        <p>고른 카드를 확인합니다. 다시 고르고 싶으면 이전 단계로 돌아가 <strong>다시 고르기</strong>를 누르세요. 그대로 진행하려면 <strong>다음</strong>을 누르면 됩니다.</p>
 
         <h3>5단계 · 프롬프트 생성</h3>
         <p>잠시 기다리면 카드와 포지션(자리) 의미를 담은 프롬프트가 만들어집니다.</p>
@@ -238,9 +239,11 @@
     <div class="container">
         <h2>설정</h2>
         <table class="info-table">
+            <tr><th>지난 카드 기록</th><td>최근 50번의 리딩 날짜·스프레드·뽑은 카드를 봅니다. 질문과 프롬프트는 저장하지 않으며, 기록은 하나씩 또는 모두 지울 수 있습니다.</td></tr>
             <tr><th>카드 뒷면 디자인</th><td>카드를 뽑을 때 보이는 뒷면을 고릅니다.</td></tr>
             <tr><th>언어 설정</th><td>한국어·영어·일본어·중국어 중 선택하거나 시스템 기본값을 따릅니다.</td></tr>
-            <tr><th>이용 안내</th><td>앱 소개와 사용자 매뉴얼·개인정보 처리방침 링크를 제공합니다.</td></tr>
+            <tr><th>이용 안내</th><td>앱 소개를 봅니다.</td></tr>
+            <tr><th>앱 정보</th><td>앱 버전을 확인하고, 사용자 매뉴얼·개인정보 처리방침·오픈소스 라이선스를 봅니다.</td></tr>
         </table>
     </div>
 </section>

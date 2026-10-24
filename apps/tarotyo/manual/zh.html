@@ -19,7 +19,7 @@
     <meta property="og:title" content="塔罗哟 使用手册 - Willee Project">
     <meta property="og:description" content="塔罗哟 使用手册 — 塔罗哟是一款会从 78 张塔罗牌中为您抽牌，并将抽牌结果整理成可供 AI 聊天工具解读的提示词（问题文本）的应用。">
     <meta property="og:url" content="https://willee.net/apps/tarotyo/manual/zh.html">
-    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image.jpg">
+    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image_zh.jpg">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="500">
     <meta property="og:locale" content="zh_CN">
@@ -109,14 +109,14 @@
     <div class="container">
         <h2>截图</h2>
         <div class="screenshot-gallery">
-            <img src="../images/TarotYo_001.webp" alt="选择牌阵" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_002.webp" alt="浏览卡牌" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_003.webp" alt="卡牌详情" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_004.webp" alt="输入问题" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_005.webp" alt="查看抽到的牌" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_006.webp" alt="选择卡牌" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_007.webp" alt="生成提示词中" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_008.webp" alt="提示词已就绪" width="720" height="1600" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_01_home.webp" alt="主页（选择牌阵）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_02_question.webp" alt="二选一提问" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_03_draw.webp" alt="抽牌" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_04_confirm.webp" alt="确认所选卡牌" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_05_result.webp" alt="提示词已就绪" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_06_gallery.webp" alt="浏览卡牌" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_07_card.webp" alt="卡牌大图" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_zh_08_history.webp" alt="过往抽牌记录" width="1080" height="2160" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -126,7 +126,7 @@
         <h2>关于应用</h2>
         <table class="info-table">
             <tr><th>应用名称</th><td>塔罗哟 (TarotYo)</td></tr>
-            <tr><th>版本</th><td>1.0.1</td></tr>
+            <tr><th>版本</th><td>1.1.0</td></tr>
             <tr><th>开发</th><td>Willee Project</td></tr>
             <tr><th>支持平台</th><td>Android</td></tr>
         </table>
@@ -162,7 +162,7 @@
         <table class="info-table">
             <tr><th>抽牌</th><td>确定问题并抽牌，生成提示词。</td></tr>
             <tr><th>卡牌一览</th><td>浏览全部 78 张塔罗牌。</td></tr>
-            <tr><th>设置</th><td>设置卡牌背面、语言与使用指南。</td></tr>
+            <tr><th>设置</th><td>查看过往抽牌记录、使用指南与应用信息，设置卡牌背面与语言。</td></tr>
         </table>
     </div>
 </section>
@@ -176,6 +176,7 @@
         <p>请挑选与问题性质相符的<strong>牌阵（卡牌排列）</strong>。</p>
         <table class="info-table">
             <tr><th>牌阵</th><th>卡牌数</th><th>适用场景</th></tr>
+            <tr><td>建议卡</td><td>1 张</td><td>想简单看看，或再抽一张建议卡时</td></tr>
             <tr><td>三张牌</td><td>3 张</td><td>想简单看一下整体走势时</td></tr>
             <tr><td>二选一</td><td>5 张</td><td>在两个选择之间犹豫时</td></tr>
             <tr><td>情境建议</td><td>5 张</td><td>想获得具体的走势与建议时</td></tr>
@@ -184,13 +185,13 @@
         </table>
 
         <h3>第 2 步 · 输入问题</h3>
-        <p>请输入您想了解的事情。问题越具体越好。（例如：「跳槽到新公司对我来说是好选择吗？」）也可以不输入问题直接继续。</p>
+        <p>请输入您想了解的事情。问题越具体越好。（例如：「跳槽到新公司对我来说是好选择吗？」）也可以不输入问题直接继续。选择<strong>二选一</strong>时，可在问题下方的两个输入框中分别填写第一个和第二个选择，填写的内容会一并写入提示词。</p>
 
         <h3>第 3 步 · 选择卡牌</h3>
         <p>左右滑动以浏览呈扇形展开的卡牌，按牌阵所需的张数，选出您心中所向的卡牌。</p>
 
         <h3>第 4 步 · 确认所选</h3>
-        <p>确认所选的卡牌。如果想重新选择，可以返回上一步。</p>
+        <p>确认所选的卡牌。如果想重新选择，请返回上一步并点按<strong>重新选择</strong>；如要继续，请点按<strong>下一步</strong>。</p>
 
         <h3>第 5 步 · 生成提示词</h3>
         <p>稍等片刻，包含卡牌与位置（牌位）含义的提示词便会生成。</p>
@@ -238,9 +239,11 @@
     <div class="container">
         <h2>设置</h2>
         <table class="info-table">
+            <tr><th>过往抽牌记录</th><td>查看最近 50 次解读的日期、牌阵与抽到的牌。不保存问题和提示词，可逐条或全部删除记录。</td></tr>
             <tr><th>卡牌背面设计</th><td>选择抽牌时显示的卡牌背面。</td></tr>
             <tr><th>语言设置</th><td>在韩语、英语、日语、中文中选择，或跟随系统默认值。</td></tr>
-            <tr><th>使用指南</th><td>提供应用介绍，以及用户手册、隐私政策的链接。</td></tr>
+            <tr><th>使用指南</th><td>显示应用介绍。</td></tr>
+            <tr><th>应用信息</th><td>查看应用版本，并打开用户手册、隐私政策与开源许可。</td></tr>
         </table>
     </div>
 </section>

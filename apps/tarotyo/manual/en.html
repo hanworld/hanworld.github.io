@@ -19,7 +19,7 @@
     <meta property="og:title" content="TarotYo User Manual - Willee Project">
     <meta property="og:description" content="TarotYo User Manual — TarotYo is an app that draws cards from the 78 tarot cards and turns the result into a prompt (a question to ask) that an AI chatbot can interpret.">
     <meta property="og:url" content="https://willee.net/apps/tarotyo/manual/en.html">
-    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image.jpg">
+    <meta property="og:image" content="https://willee.net/apps/tarotyo/images/og_image_en.jpg">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="500">
     <meta property="og:locale" content="en_US">
@@ -109,14 +109,14 @@
     <div class="container">
         <h2>Screenshots</h2>
         <div class="screenshot-gallery">
-            <img src="../images/TarotYo_001.webp" alt="Spread selection" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_002.webp" alt="Browse cards" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_003.webp" alt="Card detail" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_004.webp" alt="Enter your question" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_005.webp" alt="Review your cards" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_006.webp" alt="Choose the cards" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_007.webp" alt="Generating prompt" width="720" height="1600" loading="lazy" decoding="async">
-            <img src="../images/TarotYo_008.webp" alt="Prompt is ready" width="720" height="1600" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_01_home.webp" alt="Home (choose a spread)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_02_question.webp" alt="Two Choices question" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_03_draw.webp" alt="Draw cards" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_04_confirm.webp" alt="Review your cards" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_05_result.webp" alt="Prompt is ready" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_06_gallery.webp" alt="Browse cards" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_07_card.webp" alt="Card detail" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/TarotYo_en_08_history.webp" alt="Card history" width="1080" height="2160" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -126,7 +126,7 @@
         <h2>App Info</h2>
         <table class="info-table">
             <tr><th>App Name</th><td>TarotYo</td></tr>
-            <tr><th>Version</th><td>1.0.1</td></tr>
+            <tr><th>Version</th><td>1.1.0</td></tr>
             <tr><th>Developer</th><td>Willee Project</td></tr>
             <tr><th>Platforms</th><td>Android</td></tr>
         </table>
@@ -162,7 +162,7 @@
         <table class="info-table">
             <tr><th>Reading</th><td>Set your question, draw cards, and create a prompt.</td></tr>
             <tr><th>Cards</th><td>Browse all 78 tarot cards.</td></tr>
-            <tr><th>Settings</th><td>Configure the card back, language, and About information.</td></tr>
+            <tr><th>Settings</th><td>View your card history, About, and App Info, and set the card back and language.</td></tr>
         </table>
     </div>
 </section>
@@ -176,6 +176,7 @@
         <p>Choose a <strong>spread (card layout)</strong> that fits the nature of your question.</p>
         <table class="info-table">
             <tr><th>Spread</th><th>Cards</th><th>When to use</th></tr>
+            <tr><td>Advice Card</td><td>1</td><td>A quick look, or an extra advice card</td></tr>
             <tr><td>Three Card</td><td>3</td><td>When you want a quick look at the flow</td></tr>
             <tr><td>Two Choices</td><td>5</td><td>When you are torn between two options</td></tr>
             <tr><td>Situation Advice</td><td>5</td><td>When you want specific flow and advice</td></tr>
@@ -184,13 +185,13 @@
         </table>
 
         <h3>Step 2 · Enter your question</h3>
-        <p>Enter what you are curious about. The more specific the question, the better. (For example: "Is moving to a new job a good choice for me?") You can also proceed without a question.</p>
+        <p>Enter what you are curious about. The more specific the question, the better. (For example: "Is moving to a new job a good choice for me?") You can also proceed without a question. For <strong>Two Choices</strong>, you can write your first and second choices separately in the two fields below the question; they are included in the prompt.</p>
 
         <h3>Step 3 · Select cards</h3>
         <p>Swipe left and right through the fan of spread-out cards, and select as many cards as the spread requires, following your intuition.</p>
 
         <h3>Step 4 · Confirm your selection</h3>
-        <p>Review the cards you chose. If you want to choose again, you can go back to the previous step.</p>
+        <p>Review the cards you chose. To choose again, go back to the previous step and tap <strong>Pick Again</strong>; to keep your cards, tap <strong>Next</strong>.</p>
 
         <h3>Step 5 · Generate the prompt</h3>
         <p>Wait a moment, and a prompt containing the meanings of the cards and their positions is created.</p>
@@ -238,9 +239,11 @@
     <div class="container">
         <h2>Settings</h2>
         <table class="info-table">
+            <tr><th>Card History</th><td>See the date, spread, and cards of your 50 most recent readings. Questions and prompts are not saved, and you can delete entries one by one or all at once.</td></tr>
             <tr><th>Card Back Design</th><td>Choose the card back shown when you draw cards.</td></tr>
             <tr><th>Language</th><td>Choose Korean, English, Japanese, or Chinese, or follow the system default.</td></tr>
-            <tr><th>About</th><td>Provides an introduction to the app and links to the user manual and privacy policy.</td></tr>
+            <tr><th>About</th><td>Shows an introduction to the app.</td></tr>
+            <tr><th>App Info</th><td>Shows the app version and opens the user manual, privacy policy, and open-source licenses.</td></tr>
         </table>
     </div>
 </section>

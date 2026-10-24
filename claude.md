@@ -270,7 +270,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 홈페이지에 Windows/iOS 등 타 플랫폼 '출시 예정'·'지원 예정' 표기 금지 (2026-09-20 전부 삭제)
 
 ### TarotYo (타로요)
-- 타로 카드 리딩 + AI 프롬프트 생성 앱 (5가지 스프레드, 카드 78장 구경)
+- 타로 카드 리딩 + AI 프롬프트 생성 앱 (6가지 스프레드, 카드 78장 구경, 지난 카드 기록)
 - 앱이 직접 카드를 해석하지 않고 AI가 해석할 프롬프트를 생성
 - 플랫폼: Android (Google Play 출시)
 - 패키지 ID: net.willee.tarotyo
@@ -349,7 +349,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
-  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar·TarotYo)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
   - 스크린샷과 배너는 WebP로 둔다.
