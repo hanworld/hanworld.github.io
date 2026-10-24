@@ -96,8 +96,9 @@ body:has(#services) header img { height: 6.5rem !important; }
 body:has(#services) header h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); }
 
 .graphic-banner { max-width: 900px; margin-top: 40px; border-radius: 28px; box-shadow: 0 30px 80px -20px rgba(129, 216, 208, .35), 0 20px 40px -20px rgba(0, 0, 0, .5); }
-/* 크기 속성(width/height)을 넣은 이미지가 CSS 크기에 맞춰 비율을 지키게 한다 */
-.graphic-banner img { height: auto; }
+/* 크기 속성(width/height)을 넣은 이미지가 CSS 크기에 맞춰 비율을 지키게 한다.
+   여백은 0: 몇몇 소개 페이지의 `header img { margin-bottom: 12px }`가 걸리면 배너 아래에 남색 띠가 생긴다 */
+.graphic-banner img { height: auto; margin: 0; }
 
 /* 소개 페이지 머리글의 내려받기 단추 */
 .store-cta { margin-top: 28px; display: flex; justify-content: center; }
