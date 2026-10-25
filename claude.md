@@ -320,7 +320,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Minewise
 - 숫자 단서만으로 지뢰를 피해 지뢰가 아닌 칸을 모두 여는, 추측 없는 지뢰찾기 퍼즐(모든 판이 찍지 않고 논리만으로 풀림). Classic(시간 제한 없음, 다섯 등급 9×9~16×30)·하드(지뢰를 밟으면 끝, 힌트 없음)·Daily(매일 작은·중간·큰 판 셋) 모드
-- 플랫폼: Android (출시 예정 — 플레이 내부 테스트 중)
+- 플랫폼: Android (Google Play 출시, 2026-10-25)
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.minewise
 - 패키지 ID: net.willee.minewise
 - 원본 문서: 앱 저장소(A34.Minewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/minewise/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: 'Microsoft Minesweeper', 'Hexcells' 등을 쓰지 않음. 'minesweeper'·'지뢰찾기'·'マインスイーパー'·'扫雷'·'踩地雷'는 장르 이름으로만 씀(앱 저장소 `docs/README.md` 규칙)
