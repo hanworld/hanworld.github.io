@@ -325,7 +325,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 패키지 ID: net.willee.minewise
 - 원본 문서: 앱 저장소(A34.Minewise) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/minewise/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: 'Microsoft Minesweeper', 'Hexcells' 등을 쓰지 않음. 'minesweeper'·'지뢰찾기'·'マインスイーパー'·'扫雷'·'踩地雷'는 장르 이름으로만 씀(앱 저장소 `docs/README.md` 규칙)
-- 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음. 쓸 수 있는 것은 '전면·영상(·보상형) 광고 없음'까지(A34 요청, 앱 저장소 `listing.md`)
+- 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음. 쓸 수 있는 것은 '전면·영상(·보상형) 광고 없음'까지(A34 요청, 앱 저장소 `listing.md`). '영상'은 2026-10-27에 배너 단위의 동영상을 꺼서 쓸 수 있음. 다시 켜게 되면 그 전에 A34가 문구 수정을 요청함
 
 ### Huestar
 - 색 구역으로 나뉜 판의 가로줄·세로줄·구역마다 별을 놓되 별끼리 붙지 않게 하는 논리 퍼즐(스타배틀). 모든 판이 답 하나이고 찍지 않고 논리만으로 풀림. Classic(시간 제한 없음, 여섯 등급 6×6~10×10, 등급 6은 별 둘)·Daily(매일 작은·중간·큰 판 셋) 모드
@@ -334,7 +334,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 패키지 ID: net.willee.huestar
 - 원본 문서: 앱 저장소(A35.Huestar) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/huestar/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: 'Queens'·'LinkedIn'·'Two Not Touch'·'Cat Sudoku'·'Meowdoku'와 '-doku'로 끝나는 이름, '星战'·'星星大作战'을 쓰지 않고 왕관·여왕 그림도 쓰지 않음. 'Star Battle'·'스타배틀'·'スターバトル'은 장르 이름으로만 씀. 'Classic'·'Daily'·'Huestar'는 모든 언어에서 영어로 씀(앱 저장소 `docs/README.md`·`listing.md` 규칙)
-- 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음. 쓸 수 있는 것은 '전면 광고 없음'까지이고, 배너 단위가 동영상도 받으므로 '영상 광고 없음'은 쓰지 않음(A35 요청, 앱 저장소 `listing.md`)
+- 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음. 쓸 수 있는 것은 '전면 광고 없음'까지이고, Huestar 배너 단위가 동영상도 받으므로 '영상 광고 없음'은 쓰지 않음(A35 요청, 앱 저장소 `listing.md`)
 - 한국어에 '(휴스타)'를 병기하지 않음(2026-10-23 사용자 결정, 앱 저장소 `listing.md`)
 
 ## 공통 스타일·검색 정보 (2026-10-09)
