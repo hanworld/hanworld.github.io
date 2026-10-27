@@ -329,7 +329,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Huestar
 - 색 구역으로 나뉜 판의 가로줄·세로줄·구역마다 별을 놓되 별끼리 붙지 않게 하는 논리 퍼즐(스타배틀). 모든 판이 답 하나이고 찍지 않고 논리만으로 풀림. Classic(시간 제한 없음, 여섯 등급 6×6~10×10, 등급 6은 별 둘)·Daily(매일 작은·중간·큰 판 셋) 모드
-- 플랫폼: Android (출시 예정 — 플레이 내부 테스트 중)
+- 플랫폼: Android (Google Play 출시, 2026-10-27)
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.huestar
 - 패키지 ID: net.willee.huestar
 - 원본 문서: 앱 저장소(A35.Huestar) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/huestar/{manual,privacy}/{언어}.html`을 열고 Play Console·AdMob 유럽 동의 메시지에 방침 주소를 등록하므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - **다른 회사 게임 이름·상표 표기 금지**: 'Queens'·'LinkedIn'·'Two Not Touch'·'Cat Sudoku'·'Meowdoku'와 '-doku'로 끝나는 이름, '星战'·'星星大作战'을 쓰지 않고 왕관·여왕 그림도 쓰지 않음. 'Star Battle'·'스타배틀'·'スターバトル'은 장르 이름으로만 씀. 'Classic'·'Daily'·'Huestar'는 모든 언어에서 영어로 씀(앱 저장소 `docs/README.md`·`listing.md` 규칙)
