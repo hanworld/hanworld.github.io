@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Railjoin 玩法说明 - Willee Project</title>
+    <meta name="description" content="Railjoin 玩法说明 — Railjoin 是一款用一条铁轨把入口 A 连到出口 B 的逻辑谜题。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/railjoin/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Railjoin 玩法说明 - Willee Project">
+    <meta property="og:description" content="Railjoin 玩法说明 — Railjoin 是一款用一条铁轨把入口 A 连到出口 B 的逻辑谜题。">
+    <meta property="og:url" content="https://willee.net/apps/railjoin/manual/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/railjoin/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">Railjoin</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Railjoin" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Railjoin</h1>
+                <p>玩法说明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Railjoin_zh_01_hint.webp" alt="Classic — 附带理由的提示" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_02_train.webp" alt="Classic — 小火车开过连通的10×10盘面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_03_home.webp" alt="主页 — Daily·Classic" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_04_expert.webp" alt="Classic — 放大后正在玩专家12×12盘面" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_05_result.webp" alt="Classic — 结果（无提示·新纪录）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_06_daily.webp" alt="Daily — 结果（无提示·连续7天）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Railjoin_zh_07_tutorial.webp" alt="新手教程 — 用6×6盘面学习铺设铁轨" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>Railjoin</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android</td></tr>
+        </table>
+        <p>Railjoin 是一款用一条铁轨把入口 A 连到出口 B 的逻辑谜题。盘面上方和右侧的数字，是那一列、那一行里铁轨经过的格子数。每个盘面都只有一个答案，不靠猜测、只靠逻辑就能解到最后。</p>
+        <ul>
+            <li>没有生命值，也不统计失误次数。提示不限次数、免费使用，也没有时间限制。</li>
+            <li>无需注册，也无需登录。第一次打开时，会先用一个6×6的练习盘面进行<strong>新手教程</strong>，带你熟悉操作和规则。点击<strong>跳过</strong>可以随时结束。</li>
+            <li><strong>没有网络也能玩。</strong> 只有屏幕下方的广告，以及发送使用统计和错误报告时才会用到网络。</li>
+            <li>语言跟随设备设置。支持中文（简体、繁体）、英语、韩语、日语，也可以在设置中直接选择。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 规则</h2>
+        <ul>
+            <li>盘面是正方形的格子。每<strong>列</strong>的上方、每<strong>行</strong>的右侧都有一个数字，表示这一列或这一行里<strong>铁轨经过的格子数</strong>。</li>
+            <li>盘面左侧是入口 <strong>A</strong>，下方是出口 <strong>B</strong>。铁轨是<strong>从 A 到 B 不间断的一条线</strong>。</li>
+            <li>铁轨经过的格子会与相邻的两个格子相连（笔直或拐弯）。<strong>没有分岔、没有交叉、没有闭合的环</strong>，也不能斜向连接。</li>
+            <li>有几个格子里一开始就放着铁轨（<strong>给定的格子</strong>）。它们不能擦除或更改。紧挨着 A 和 B 的格子也一定是给定的格子。</li>
+            <li>铁轨从 A 到 B 连成一条线，除此之外没有别的铁轨，并且每一行、每一列的数字都对上，就<strong>完成</strong>了。×和●不必全部放上。</li>
+            <li>每个盘面都只有一个答案，不靠猜测、只靠逻辑就能解到最后。不会出现必须靠猜才能确定某个格子的盘面。</li>
+            <li>没有生命值，也不统计失误。连错了盘面也不会结束，撤销不限次数。</li>
+            <li><strong>最佳用时只计算没有使用提示的盘面。</strong> 不使用提示就解开时，结果上会盖上<strong>无提示</strong>印章。</li>
+        </ul>
+        <h3>盘面怎么看</h3>
+        <ul>
+            <li>数字在盘面上方（列）和右侧（行）。入口 <strong>A</strong> 在盘面外的左侧，出口 <strong>B</strong> 在盘面外的下方，都是圆形标牌。</li>
+            <li>给定的格子底色不同，里面已经放着铁轨。给定的铁轨枕木颜色不同，所以能和自己铺设的铁轨（枕木是朱红色）区分开。</li>
+            <li><strong>×</strong>是自己做的标记，表示“这个格子里没有铁轨经过”；<strong>●</strong>也是自己做的标记，表示“这个格子里有铁轨经过（方向还不知道）”。解题时并非必须，但把已经弄清的情况标出来，剩下的格子会更容易看清。</li>
+            <li>某一行或某一列里铁轨经过的格子数达到数字时，这个数字会变淡（●也算铁轨经过的格子）。只靠给定的格子就已经满足数字的行或列，一开始就是淡的。</li>
+            <li><strong>规则冲突</strong>（默认开启）：超过数字的行或列，其数字外会出现红色边框；出现分岔的格子和闭合的环，铁轨会变红，格子外会出现红色边框。只依据规则来提示，不参考答案。</li>
+            <li>被淡蓝色标出的行或列、带虚线圈的格子，以及虚线，是提示所指的地方。错误的标记会用红色边框指出（见第4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 解题要点</h2>
+        <p>新手教程用一个6×6的盘面教你基础，分七步：<strong>铺设铁轨 → 放置× → 放置● → 规则冲突 → 撤销 → 提示 → 独立完成</strong>。每一步都会让要操作的地方亮起，只有亮起的地方才有反应。教程盘面不计入记录，全部完成后点击<strong>开始</strong>就会进入主页。提示会用名称告诉你用了哪种要点。从最容易的开始，如下。</p>
+        <ul>
+            <li><strong>只有两个方向</strong>：铁轨经过的格子，如果铁轨能出去的方向（开口）只有两个，就向这两个方向连接。</li>
+            <li><strong>死路</strong>：开口不到两个的格子，铁轨无法经过。这个格子是×。</li>
+            <li><strong>已满的行或列</strong>：铁轨经过的格子已经和数字一样多的行或列，剩下的格子都是×。</li>
+            <li><strong>剩下全是铁轨</strong>：行或列要达到数字，需要剩下的所有格子时，剩下的格子都有铁轨经过（●）。</li>
+            <li><strong>防止成环</strong>：把同一段铁轨的两端连起来会形成闭合的环，所以这两端之间不连接。</li>
+            <li><strong>防止提前完成</strong>：把通向入口的铁轨和通向出口的铁轨连起来，从 A 到 B 的路线就结束了。只有连上之后所有数字正好都对上时才连接，数字还没对上就不连。</li>
+            <li><strong>穿线奇偶</strong>：铁轨每穿过一次横跨盘面的线（相邻两行或两列之间），就会换到另一侧。A 和 B 在这条线的两侧，就穿过奇数次；在同一侧，就穿过偶数次。只剩一处可以穿过时，根据到目前为止穿过的次数是奇数还是偶数，就能确定是否在那里穿过。</li>
+            <li><strong>邻格推理</strong>：把相邻的格子也考虑进去。如果开口只有两个的格子里有铁轨经过，就会一直连到相邻的格子，使这一行或这一列超过数字，那么这个格子是×。反过来，如果把某个格子空着，相邻的格子就会被堵住，使这一行或这一列里铁轨能经过的格子比数字还少，那么这个格子有铁轨经过（●）。</li>
+        </ul>
+        <p>入门和简单的盘面用前四个（从<strong>只有两个方向</strong>到<strong>剩下全是铁轨</strong>）就能解开。普通会出现需要用到<strong>防止成环</strong>和<strong>防止提前完成</strong>的盘面，困难会出现需要用到<strong>穿线奇偶</strong>的盘面，专家会出现需要用到<strong>邻格推理</strong>的盘面。更难的要点，会由提示连同理由一起告诉你（见第4章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 操作</h2>
+        <ul>
+            <li><strong>铺设铁轨</strong>：用一根手指从一个格子拖到相邻的格子，两个格子之间就会铺上铁轨。手指进入相邻格子中央的方块（格子宽度的70%）后，才会连到那个格子。在格子边缘手指抖动也不会误连，快速拖动跳过的格子，会用手指经过的格子补上。一次拖动可以连很多格，不会斜向连接。</li>
+            <li><strong>折返</strong>：铺设途中沿着刚画的路线折返，刚铺上的铁轨会被擦掉。</li>
+            <li><strong>擦除</strong>：从自己已经铺好的铁轨上开始拖动，就不是继续铺设，而是沿着铁轨一路擦掉。擦的时候折返，擦掉的铁轨会恢复；回到起点格子，这次拖动就相当于什么都没做。想接着铁轨末端继续铺，但手指落在了末端格子前一格时，只要越过末端格子拖向空格，就不会擦掉铁轨，而是从末端格子接着铺。</li>
+            <li><strong>走不过的地方</strong>：有×的格子、给定的格子里铁轨不经过的边、盘面外沿，都过不去。给定的铁轨可以顺着走过去，也不会被擦掉。有●的格子不会挡路。</li>
+            <li><strong>拖动时的显示</strong>：当前格子上会出现比手指大的圆环，这个格子所在的行和列会淡淡亮起，它们的数字会加上边框。这次拖动铺上的铁轨颜色不同，手指挡住了也能看出连到了哪里。</li>
+            <li><strong>放置×和●</strong>：每点一下空格，就按<strong>× → ● → 清除</strong>切换。铁轨经过的格子和给定的格子上不能放。有×的格子里不能铺铁轨。</li>
+            <li><strong>撤销</strong>：用盘面下方的<strong>撤销</strong>取消最后一步操作。次数不限，一次拖动、放置一次×或●、一次提示的<strong>采用</strong>，各只需撤销一次。关闭应用再打开，撤销也能接着用。</li>
+            <li><strong>缩放·移动</strong>：用两根手指张开、捏合来放大缩小，两根手指一起拖动来移动盘面。一根手指不会移动盘面，始终用来铺设铁轨或点击。第二根手指一碰到屏幕，正在进行的拖动就会作废，像没发生过一样，所有手指抬起之前不接受其他操作。所以用来缩放的手指不会铺出铁轨或放上×。</li>
+            <li><strong>格子太小的盘面</strong>：整个盘面显示时格子会太小的盘面（多数手机上是专家 12×12，屏幕较窄的手机上困难 10×10 也一样）会放大后打开。先显示入口 A 一侧，用两根手指捏合就能看到整个盘面。放大后拖动时，手指碰到屏幕边缘，盘面会自动往那边移动。上方和右侧的数字在放大移动时也会贴在屏幕边缘跟着走，入口和出口的标牌随盘面一起移动。</li>
+            <li><strong>按住放大</strong>：盘面缩小、格子看起来太小的时候（一个格子小于约 5 毫米），只能看。用一根手指按下再抬起，碰到的位置会在0.35秒内慢慢放大。铺设铁轨和放置×、●都在放大后的盘面上进行。打开<strong>减少特效</strong>时，会不带动画直接放大。</li>
+            <li>铁轨连完后，会显示整个盘面，小火车沿着铁轨从 A 开到 B，然后显示结果（关闭<strong>完成时的火车</strong>或打开<strong>减少特效</strong>时，不会有火车，直接显示结果）。</li>
+        </ul>
+        <p>顶部栏左侧是返回按钮，以及模式、等级和盘面大小（例如 Classic · 普通 · 8×8），下面的小字是盘面编号。Daily 显示 Daily 编号和盘面种类（例如 Daily #12 · 中型盘面），下面是盘面大小和盘面编号。右侧是时间（可以在设置中用<strong>显示时间</strong>隐藏）和<strong>快捷设置</strong>按钮。</p>
+        <table class="info-table">
+            <tr><th>按钮</th><th>作用</th></tr>
+            <tr><td>返回（←）</td><td>回到主页。正在解的盘面会自动保存</td></tr>
+            <tr><td><strong>快捷设置</strong></td><td>打开一个面板，不离开游戏画面就能更改效果和辅助设置（见第5、8章）。往下拉或点击面板外就能关闭</td></tr>
+        </table>
+        <p>盘面下方的工具栏：</p>
+        <table class="info-table">
+            <tr><th>按钮</th><th>作用</th></tr>
+            <tr><td><strong>撤销</strong></td><td>取消最后一步操作。没有可撤销的内容时会变淡、不能点击</td></tr>
+            <tr><td><strong>重来</strong></td><td>打开选择<strong>这一局从头开始</strong>或<strong>新的一局</strong>的面板（见下）</td></tr>
+            <tr><td><strong>提示</strong></td><td>告诉你下一步和理由（见第4章）。用过提示后会带上次数，例如<strong>提示 3</strong></td></tr>
+        </table>
+        <p><strong>重来</strong>面板：</p>
+        <table class="info-table">
+            <tr><th>选项</th><th>内容</th></tr>
+            <tr><td><strong>这一局从头开始</strong></td><td>擦掉所有铺上的铁轨和×、●，也清空撤销记录。Classic 的用时和提示也从头算，Daily 则继续累计当天的用时和提示。还没有开始操作的盘面会变淡、不能点击</td></tr>
+            <tr><td><strong>新的一局</strong>（Classic）</td><td>放弃这一局，换一局同等级的盘面。放弃的盘面不算完成。Daily 没有这一项</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 提示</h2>
+        <p><strong>提示</strong>按钮会告诉你解题的下一步，并说明理由。提示不限次数，免费使用。提示气泡出现在下方工具栏的位置，会暂时盖住工具栏。气泡如果会挡住提示所指的格子、行、列或数字，就会移到盘面上方，这时工具栏会重新显示。</p>
+        <p>按钮要依次按：<strong>提示</strong> → <strong>显示更多</strong> → <strong>采用</strong>。</p>
+        <ul>
+            <li>第一步：点击<strong>提示</strong>，只会告诉你要看的地方。作为依据的行或列会盖上淡蓝色，数字外加边框，作为依据的格子会加上虚线圈（<strong>穿线奇偶</strong>会画出一条横跨盘面的虚线）。气泡上的名称是所用的要点（见第2章）。例如：“比较高亮的行的数字和铁轨经过的格子。”</li>
+            <li>第二步：点击<strong>显示更多</strong>，要确定的内容会淡淡地显示在盘面上，同时给出理由。要铺的铁轨显示为淡淡的铁轨，要放的×、●显示为淡淡的×、●，不连接的边显示为一小段短杠。理由里不用行、列的编号，而是指向高亮的地方。例如：“高亮的行中，铁轨经过的格子已经和数字一样多。剩下的格子都是×。”</li>
+            <li>第三步：点击<strong>采用</strong>，会照此铺上铁轨或放上×、●。撤销一次即可还原。</li>
+            <li><strong>直到下一段铁轨</strong>（第二步时）：一次放上直到下一个铺设铁轨的步骤之前的所有×、●，然后直接显示下一个铺设铁轨的步骤的理由。撤销一次即可还原。</li>
+            <li>如果有<strong>错误的标记</strong>，会先指出它们（名称<strong>错误的铁轨</strong>、<strong>错误的×</strong>、<strong>错误的●</strong>）。不在答案里的铁轨、放在答案铁轨所在格子上的×、放在答案里没有铁轨的格子上的●，会从最先放下的开始逐个指出。会直接进入第二步，点击<strong>采用</strong>就会擦掉那个标记。</li>
+            <li>如果前面还有盘面上看不到的步骤，会在理由前加上“首先：…”，把那个理由一并说明。</li>
+            <li>提示只根据给定的格子和你铺的正确铁轨来推理。你自己放的×、●不会被当作依据，所以即使一个×、●也没放，或者放错了，提示也永远是对的。盘面上已经全部看得到的步骤会被跳过。</li>
+            <li>用过的提示次数会显示在提示按钮和结果里，也会写进 Daily 的分享文字。请求提示时（第一步）算一次。<strong>显示更多</strong>、<strong>采用</strong>、<strong>直到下一段铁轨</strong>不另算，关闭后再请求会多算一次。</li>
+            <li>点击气泡上的关闭（X），或者在盘面上铺铁轨、放×、●，或者撤销，提示就会关闭。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 辅助设置</h2>
+        <p>在设置的<strong>辅助设置</strong>中开关。游戏中可以用<strong>快捷设置</strong>马上更改。</p>
+        <ul>
+            <li><strong>显示规则冲突</strong>（默认开启）：显示超过数字的行或列、出现分岔的格子和闭合的环（见第1章）。</li>
+            <li><strong>立即显示失误</strong>（默认关闭）：马上用红色圆圈里的×标出三种错误：与答案不同的铁轨、放在答案铁轨所在格子上的×、放在答案里没有铁轨的格子上的●（和提示的“错误的标记”是同样的三种）。关闭时，错误的标记要等提示指出才会告诉你。打开它解开的盘面，只要没用提示，也算<strong>无提示</strong>，并计入最佳用时。</li>
+            <li><strong>显示时间</strong>（默认开启）：在顶部栏显示时间。关闭后只是不显示，时间仍在计算。解开的盘面的用时会显示在结果里。</li>
+        </ul>
+        <p>新手教程的盘面不受这些设置影响：始终显示规则冲突，不使用立即显示失误。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 模式</h2>
+        <h3>主页</h3>
+        <p>上方是应用名称，右侧是柱状图形状的<strong>记录</strong>按钮和齿轮形状的<strong>设置</strong>按钮。下面是 Daily 卡片和 <strong>Classic</strong> 的五个等级，最下方的<strong>重玩教程</strong>可以再玩一次新手教程（练习盘面不计入记录）。</p>
+        <h3>Classic — 自选等级，不限时</h3>
+        <ul>
+            <li>在主页的 <strong>Classic</strong> 下点击要玩的等级即可开始。每个等级显示名称和盘面大小、<strong>完成</strong>的盘面数和<strong>最佳</strong>用时（只算没有使用提示的盘面），有进行中的盘面时会显示<strong>继续</strong>。第一次玩建议从入门开始。</li>
+            <li>等级按盘面大小和解题所需的最难要点（见第2章）划分。所有等级一开始就开放，每个等级有2,000个盘面。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>等级</th><th>盘面大小</th><th>所需的最难要点</th></tr>
+            <tr><td>入门</td><td>6×6</td><td>前四个（<strong>只有两个方向</strong>到<strong>剩下全是铁轨</strong>）</td></tr>
+            <tr><td>简单</td><td>8×8</td><td>前四个</td></tr>
+            <tr><td>普通</td><td>8×8</td><td><strong>防止成环</strong>、<strong>防止提前完成</strong></td></tr>
+            <tr><td>困难</td><td>10×10</td><td><strong>穿线奇偶</strong></td></tr>
+            <tr><td>专家</td><td>12×12</td><td><strong>邻格推理</strong></td></tr>
+        </table>
+        <ul>
+            <li>盘面会从还没解开的盘面里随机选出。解开过的盘面不会再出现；某个等级的盘面全部解开后，会从最早解开的那一局开始再次出现。</li>
+            <li>连完铁轨后，会有声音和振动（开启时），小火车从 A 开到 B，然后出现结果卡片（<strong>连通了！</strong>）。上面有用时、<strong>提示</strong>、<strong>最佳</strong>（只算没有使用提示的盘面；超过原来的纪录时会盖上<strong>新纪录</strong>印章）和<strong>完成</strong>的盘面数。没有使用提示就解开时会盖上<strong>无提示</strong>印章。点击<strong>下一局</strong>会接着出同一等级的下一局，点击<strong>主页</strong>回到主页。</li>
+            <li>进行中的盘面会自动保存。离开或关闭再打开应用后，每个等级都能接着解。打开盘面画面后开始计时，离开应用或离开画面期间不计时。没有操作就离开的盘面不会留下用时，原样等着你。</li>
+        </ul>
+        <h3>Daily — 今天的三个盘面</h3>
+        <ul>
+            <li>每天所有人拿到同样的三个盘面：<strong>小型盘面</strong>（6×6）、<strong>中型盘面</strong>（8×8）、<strong>大型盘面</strong>（10×10），难度分别与入门、普通、困难等级相同。<strong>全世界的人在同一天解同样的盘面</strong>（以设备日期为准）。新的 Daily 会在设备时间的零点开放，应用开着过了零点，主页会自动换成新的一天。</li>
+            <li>每个盘面分开解，结果也各自保存。规则和 Classic 一样（没有生命值，提示不限次数）。</li>
+            <li>没有时间限制，到目前为止的用时显示在盘面画面的上方（可以在设置中隐藏）。</li>
+            <li>当天之内离开再回来也能接着解。即使选择<strong>这一局从头开始</strong>，当天的用时和提示也会继续累计（重来时只有这一项）。日期变了以后，没解完的昨天的盘面会消失，新的盘面会开放。</li>
+            <li>当天的三个盘面只要完成其中一个，这一天就计入<strong>连续</strong>；中间空一天就会中断。</li>
+            <li>主页的 <strong>Daily</strong> 卡片会显示 Daily 编号和今天的日期、连续天数（🔥）和今天的三个盘面。每个盘面显示盘面名称、大小和状态（<strong>开始</strong>、<strong>继续 · 1:23</strong>，解开的盘面显示 ✓ 和用时、提示次数），点击后可以开始解，或查看已解开盘面的结果。</li>
+            <li>结果画面会显示连完铁轨的盘面图、用时、<strong>提示</strong>、<strong>连续</strong>（天数）、<strong>今天</strong>完成的盘面数（例如 2/3）和距下次 Daily 的时间。没有使用提示就解开时会盖上<strong>无提示</strong>印章，刚解开的盘面使连续超过最长连续时，连续一栏会盖上<strong>新纪录</strong>印章。可以用<strong>分享</strong>发送结果（一次一个盘面）。例如：</li>
+        </ul>
+        <pre class="share-example">Railjoin Daily #12 · 中型盘面 ✅ 3:41
+提示 0次
+🔥 连续5天</pre>
+        <p><strong>#12</strong>是 Daily 的编号，旁边是盘面种类和用时（分:秒，超过一小时则为时:分:秒）。第一行的“Railjoin Daily”在任何语言中都一样。第二行是提示次数，第三行是连续记录（两天以上才显示）。盘面本身不会放进去，因为会泄露答案。第一个 Daily 开放的那天是 #1，之后每天加一，编号和盘面种类相同就是同样的盘面。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 记录</h2>
+        <p>点击主页右上角柱状图形状的<strong>记录</strong>按钮打开。</p>
+        <ul>
+            <li>最上方：Classic 和 Daily 合计的<strong>完成的盘面</strong>数</li>
+            <li><strong>Daily</strong>：<strong>连续</strong>、<strong>最长</strong>连续、<strong>完成天数</strong>、<strong>完成</strong>的盘面数。中间空一天，连续就会中断。</li>
+            <li><strong>Classic</strong>：各等级（及盘面大小）的<strong>完成</strong>数、<strong>无提示</strong>完成的数量、<strong>最佳</strong>用时（只算没有使用提示的盘面）、<strong>平均</strong>用时（所有完成的盘面）。还没有完成盘面的等级，用时显示为“-”。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 设置</h2>
+        <p>点击主页右上角的<strong>设置</strong>（齿轮）打开。分为三组。游戏中可以用<strong>快捷设置</strong>按钮马上更改前两组。</p>
+        <h3>声音与效果</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>音效</td><td>开关铺设和擦除铁轨、放置和清除×、●、行或列的数字达标、规则冲突、提示、撤销、盘面完成、行驶中的火车等的声音</td></tr>
+            <tr><td>振动</td><td>铺设铁轨时短促，擦除铁轨或放置×、●时更轻，行或列的数字达标时两下，规则冲突时短促而沉重的两下，连完铁轨时较长。可以开关</td></tr>
+            <tr><td>减少特效</td><td>一次减少所有特效。开启期间，下面的<strong>连接时的光效</strong>和<strong>完成时的火车</strong>都相当于关闭（开关不能点，原来的值会保留），按住放大也会不带动画直接放大</td></tr>
+            <tr><td>连接时的光效</td><td>铺设铁轨的格子会短暂发亮。默认开启</td></tr>
+            <tr><td>完成时的火车</td><td>连通后，在显示结果前火车会从 A 开到 B。关闭后直接显示结果。默认开启</td></tr>
+        </table>
+        <p>没有整个盘面晃动的特效。</p>
+        <h3>辅助设置</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>显示规则冲突</td><td>显示超过数字的行或列、分岔和闭合的环。默认开启</td></tr>
+            <tr><td>立即显示失误</td><td>马上标出与答案不同的铁轨和×、●。默认关闭</td></tr>
+            <tr><td>显示时间</td><td>在顶部栏显示时间。默认开启</td></tr>
+        </table>
+        <h3>通用</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>内容</th></tr>
+            <tr><td>语言</td><td><strong>跟随系统</strong>（默认），或从列表（English · 日本語 · 한국어 · 简体中文 · 繁體中文）中直接选择</td></tr>
+            <tr><td>隐私选项</td><td>再次打开广告同意窗口。只在需要同意的地区（例如欧洲）显示</td></tr>
+            <tr><td>关于</td><td>版本、本说明（<strong>玩法说明</strong>）、<strong>隐私政策</strong>、<strong>开源许可</strong></td></tr>
+        </table>
+        <p>屏幕颜色跟随设备的深色模式设置。应用内没有单独的开关。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 广告与记录的保存</h2>
+        <ul>
+            <li>屏幕最下方有一条横幅广告。在盘面画面中，工具栏和广告之间留有间隔，避免误点广告。在新手教程中会撤下广告，只保留位置。广告只有这一条。游戏没有网络也能玩，网络只用于广告、使用统计和错误报告。</li>
+            <li>在需要同意的地区（例如欧洲），第一次打开应用时会出现广告同意窗口。以后可以在设置的<strong>隐私选项</strong>中更改。</li>
+            <li>应用内没有任何付费项目。</li>
+            <li>记录和设置保存在设备中。如果开启了设备的 Google 备份（Android 自动备份），会一起备份，换设备后也能接着玩。卸载应用会删除设备中的记录。</li>
+            <li>详情请参阅<a href="../privacy/zh.html">隐私政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 联系我们</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="../zh.html">Railjoin</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

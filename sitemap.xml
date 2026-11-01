@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://willee.net/ko/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://willee.net/en/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://willee.net/ja/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://willee.net/zh/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -1422,6 +1422,148 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/huestar/privacy/zh.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/huestar/privacy/zh-Hant.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/huestar/privacy/en.html"/>
+  </url>
+
+  <!-- Railjoin 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/railjoin/ko.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/en.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/ja.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/zh.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/en.html"/>
+  </url>
+
+  <!-- Railjoin 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/railjoin/manual/ko.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/manual/en.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/manual/ja.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/manual/zh.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/manual/zh-Hant.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/manual/en.html"/>
+  </url>
+
+  <!-- Railjoin 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/railjoin/privacy/ko.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/privacy/en.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/privacy/ja.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/privacy/zh.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/railjoin/privacy/zh-Hant.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/railjoin/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/railjoin/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/railjoin/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/railjoin/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/railjoin/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/railjoin/privacy/en.html"/>
   </url>
 
 </urlset>
