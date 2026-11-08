@@ -398,7 +398,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
-  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar·Railjoin·TarotYo·Good Timer)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar·Railjoin·TarotYo·Good Timer·Twenty Four Hours)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
   - 배너가 아직 없는 Cometdive 방침은 메인과 같은 `images/og_image.png`를 쓴다(M4에 배너가 생기면 `og_image_{언어}.jpg`로 바꿈).
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
