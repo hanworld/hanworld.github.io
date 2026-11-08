@@ -297,6 +297,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 패키지 ID: net.willee.goodtimer
 - Google Play: https://play.google.com/store/apps/details?id=net.willee.goodtimer
 - 홈페이지에 Windows/iOS 등 타 플랫폼 '출시 예정'·'지원 예정' 표기 금지 (2026-09-20 전부 삭제)
+- **'뽀모도로·타바타' 표기 금지** (2026-11-08 사용자 결정, 남의 상표일 수 있음): 소개·설명서에 Pomodoro·Tabata·ポモドーロ·タバタ·番茄钟을 쓰지 않고 '집중 25분 + 휴식 5분'처럼 내용으로 씀. 앱 안 프리셋 이름은 그대로(앱 저장소 `docs/store/listing.md` 규칙)
 
 ### TarotYo (타로요)
 - 타로 카드 리딩 + AI 프롬프트 생성 앱 (6가지 스프레드, 카드 78장 구경, 지난 카드 기록)
