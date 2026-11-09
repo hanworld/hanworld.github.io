@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>Cometdive - Willee Project</title>
+    <meta name="description" content="Cometdive（コメットダイブ）は、片手で遊べるオフライン対応の縦画面アーケード・スペースシューティングです。画面のどこでも左右にドラッグすると自機が動き、攻撃は自動です。敵は編隊を組んで現れ、急降下してきます。急降下する敵を倒して彗星ゲージをためると、自機が彗星になって編隊を一気に貫きます。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cometdive/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cometdive/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cometdive/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cometdive/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cometdive/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cometdive/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cometdive - Willee Project">
+    <meta property="og:description" content="Cometdive（コメットダイブ）は、片手で遊べるオフライン対応の縦画面アーケード・スペースシューティングです。画面のどこでも左右にドラッグすると自機が動き、攻撃は自動です。敵は編隊を組んで現れ、急降下してきます。急降下する敵を倒して彗星ゲージをためると、自機が彗星になって編隊を一気に貫きます。">
+    <meta property="og:url" content="https://willee.net/apps/cometdive/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/cometdive/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .modes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+        @media (max-width: 600px) { .modes-grid { grid-template-columns: 1fr; } }
+        .mode-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px; }
+        .mode-item strong { display: block; color: #1A365D; margin-bottom: 2px; }
+        .mode-item span { color: #64748B; font-size: 0.9rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Cometdive</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Cometdive</h1>
+        <p>彗星となって、突入せよ</p>
+        <div class="store-cta"><span>Google Play で近日公開</span></div>
+        <div class="graphic-banner">
+            <img src="images/Cometdive_ja_feature.webp" alt="Cometdive — 彗星となって、突入せよ。急降下する敵を倒してゲージをため、編隊を貫け" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="Cometdive アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>Cometdive</h2>
+                <p>スペースシューティング · Classic · Daily</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">Cometdive（コメットダイブ）は、片手で遊べるオフライン対応の縦画面アーケード・スペースシューティングです。画面のどこでも左右にドラッグすると自機が動き、攻撃は自動です。敵は編隊を組んで現れ、急降下してきます。急降下する敵を倒して彗星ゲージをためると、自機が彗星になって編隊を一気に貫きます。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/Cometdive_ja_01_wave.webp" alt="セクター20 — 編隊から急降下してくる敵と、満タンの彗星ゲージ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_02_dash.webp" alt="彗星突進 — 自機が彗星となって編隊を貫く瞬間" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_03_boss.webp" alt="ボス戦 — セクター32のタイタン II（第2形態）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_04_map.webp" alt="セクター選択 — 銀河2（セクター9〜16）のマップ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_05_hangar.webp" alt="格納庫 — MK VIII クエーサーと強化の系統" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_06_cards.webp" alt="カード選択 — ウェーブ1クリア後、4枚から1枚を選ぶ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="images/Cometdive_ja_07_result.webp" alt="リザルト — セクター12 クリア（新記録）" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="modes">
+    <div class="container">
+        <h2>2つのモード</h2>
+        <div class="modes-grid">
+            <div class="mode-item"><strong>Classic</strong><span>8セクターで1つの銀河、セクター9からは終わりなく続く。銀河の最後にはボス、スコア倍率は銀河が進むごとに上がって最大×3。記録は到達した最高セクター</span></div>
+            <div class="mode-item"><strong>Daily</strong><span>1日1セクター。同じ日に同じボスと出会った人どうしは同じウェーブとカード候補、格納庫の強化なしで全員が同じ自機。最後まで遊ぶと連続記録が続く</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>彗星突進</strong>
+                <span>急降下中の敵はスコアが2倍で、編隊にいる敵より早くゲージをためられます。ゲージが満タンになったら、上にすばやくはじくか、画面下の操作バーをタップしてください。自機が彗星となって画面を駆け上がります。ゲージはためなおしなので、使いどころを見極めましょう。</span>
+            </li>
+            <li>
+                <strong>片手で操作</strong>
+                <span>画面のどこでも左右にドラッグすると自機が動き、攻撃は自動です。画面下の操作バーはドラッグもできるので、指が自機を隠しません。短いチュートリアルで操作を覚えられます。スキップも、設定からの見直しもできます。</span>
+            </li>
+            <li>
+                <strong>ウェーブごとにカード</strong>
+                <span>ウェーブが終わるたびに、3枚のカードから1枚を選びます。マルチショット、拡散ショット、高速連射、貫通弾、ホーミングミサイル、ウイングドローン、シールド、サイドガン、連鎖電撃、パルスレーザーなどがあります。カードはセクターごとにゼロからやり直しで、ローグライク風に選ぶたび違う自機に育ちます。</span>
+            </li>
+            <li>
+                <strong>敵とボス</strong>
+                <span>敵は16種類で、段階が上がるほど強くなり、エリート、漂う岩、機雷、ビーム、重力の渦も登場します。ボス6体（タイタン、ネビュラ、プリズム、恒星炉、天球儀、イオン塔）は、それぞれ第2形態で再登場します。強力な攻撃には事前に警告が出るので、被弾は覚えて避けられるものです。</span>
+            </li>
+            <li>
+                <strong>格納庫</strong>
+                <span>プレイで集めたコアを使い、格納庫で5つの系統（主砲、彗星、エンジン、装甲、戦術）の全35段階を強化します。強化が重なると、自機の形がMK IからMK Xまで10種類に変わり、たどってきた形はいつでも見返せます。戦術では、ウェーブ1の前にカードを選べるほか、カードを引き直せます。</span>
+            </li>
+            <li>
+                <strong>図鑑</strong>
+                <span>図鑑には、敵、エリート、ボス、障害物、カード、敵弾の109項目があります。まだ発見していないものはシルエットで表示され、遊ぶほどに埋まっていきます。</span>
+            </li>
+            <li>
+                <strong>サウンドとエフェクト</strong>
+                <span>設定では、ゲーム音楽、メニューBGM、音楽と効果音の音量、画面の揺れ、エフェクトを減らすを選べます。</span>
+            </li>
+            <li>
+                <strong>オフラインで遊べる</strong>
+                <span>Dailyも含め、すべてインターネットなしで遊べます。アカウント登録は不要で、記録は端末にだけ残ります。</span>
+            </li>
+            <li>
+                <strong>多言語対応</strong>
+                <span>日本語・韓国語・英語・中国語（簡体字・繁体字）に対応し、端末の言語に従うか、設定で選べます。</span>
+            </li>
+            <li>
+                <strong>広告と課金</strong>
+                <span>プレイ中に広告や課金はありません。ホーム、セクター選択、記録の画面の下にバナー広告があり、リザルト画面のあとに全画面広告が出ることがあります。表示は約20分遊んだあとからで、15分に1回までです。アプリ内で購入するものはありません。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>Cometdive アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>How to Play</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>遊び方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>玩法说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>玩法說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>Cometdive アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

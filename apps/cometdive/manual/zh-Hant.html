@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Cometdive 玩法說明 - Willee Project</title>
+    <meta name="description" content="Cometdive 玩法說明 — Cometdive 是一款單手就能玩的直式街機太空射擊遊戲。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cometdive/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cometdive/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cometdive/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cometdive/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cometdive/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cometdive/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cometdive/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cometdive 玩法說明 - Willee Project">
+    <meta property="og:description" content="Cometdive 玩法說明 — Cometdive 是一款單手就能玩的直式街機太空射擊遊戲。">
+    <meta property="og:url" content="https://willee.net/apps/cometdive/manual/zh-Hant.html">
+    <meta property="og:image" content="https://willee.net/apps/cometdive/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">Cometdive</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Cometdive" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Cometdive</h1>
+                <p>玩法說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Cometdive_zh-Hant_01_wave.webp" alt="區域 20 — 從編隊中俯衝而來的敵人，彗星能量已滿" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_02_dash.webp" alt="彗星衝刺 — 戰機化身彗星貫穿編隊的瞬間" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_03_boss.webp" alt="首領戰 — 區域 32 的泰坦 II（第二形態）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_04_map.webp" alt="選擇區域 — 星域 2（區域 9 至 16）的地圖" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_05_hangar.webp" alt="機庫 — MK VIII 類星體與強化分支" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_06_cards.webp" alt="選擇卡牌 — 第 1 波完成後從四張卡牌中選一張" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_zh-Hant_07_result.webp" alt="結算 — 區域 12 通關（新紀錄）" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>Cometdive</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>Cometdive 是一款單手就能玩的直式街機太空射擊遊戲。在螢幕任意位置左右拖曳，戰機就會移動，射擊自動進行。敵人成群結隊飛來，並俯衝攻擊你。擊落俯衝的敵人來填充彗星能量槽，戰機就會化身彗星，筆直貫穿整個編隊（<strong>彗星衝刺</strong>）。</p>
+        <ul>
+            <li>沒有註冊，也不用登入。第一次開啟時，會先進入<strong>新手教學</strong>，在練習區域裡學會操作和彗星衝刺。隨時可以點<strong>跳過</strong>結束，也可以在設定裡重看。</li>
+            <li><strong>沒有網路也能玩。</strong> 網路只用於廣告，以及傳送使用統計和錯誤回報。</li>
+            <li>語言跟隨裝置設定。支援繁體中文、簡體中文、英語、日語和韓語，也可以在設定裡自己選擇。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 規則</h2>
+        <ul>
+            <li>一個<strong>區域</strong>由三波敵人和一名首領組成。擊落一波的所有敵人就進入下一波，第三波之後首領出現。擊敗首領即<strong>通關</strong>，大約需要三分鐘。</li>
+            <li>每個區域開始時你有<strong>三架戰機</strong>。被擊中會損失一架戰機，並短暫無敵。三架都損失，區域就失敗，<strong>沒有續關</strong>。護盾能擋下一次攻擊，讓你不損失戰機（來自卡牌和機庫的裝甲）。</li>
+            <li>擊落敵人會得分。<strong>俯衝中</strong>的敵人<strong>得分加倍</strong>，彗星能量槽也充得更多。</li>
+            <li><strong>連擊</strong>：擊落一個敵人後約 1.2 秒內再擊落下一個，連擊就加一（最高 ×8），擊落得分會乘以連擊數。超過時間就回到 ×1。</li>
+            <li>每波結束和區域通關時，會獲得獎勵分數。用彗星衝刺擊落的敵人越多，或一次都沒被擊中就通關（<strong>無傷通關</strong>），獎勵就越高。</li>
+            <li>通關一個區域，就會解鎖下一個區域（第 3、6 章）。</li>
+            <li>遊戲過程中的狀態不會儲存。回到首頁後，這個區域要從頭再來。</li>
+        </ul>
+        <h3>怎麼看遊戲畫面</h3>
+        <ul>
+            <li>頂部列：分數（八位數）、<strong>SECTOR</strong> 和 <strong>WAVE</strong>、<strong>COMBO</strong> 與連擊剩餘時間條，以及暫停按鈕。首領出場時會出現首領血量框，出場前 <strong>WARNING</strong> 條會閃爍。</li>
+            <li>戰場下方：剩餘戰機數和 <strong>COMET</strong> 能量槽（10 格），能量槽滿格時 <strong>READY</strong> 亮起。</li>
+            <li>最底部圓角的一塊就是<strong>操作條</strong>（第 2 章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 操作</h2>
+        <ul>
+            <li><strong>拖曳</strong>：在螢幕任意位置按住並左右拖曳，戰機會依你拖曳的距離左右移動。手指不必放在戰機上，戰機只在螢幕下方左右移動。</li>
+            <li><strong>下方操作條</strong>：在戰場下方的操作條上拖曳也一樣，手指不會擋住戰機。拖向哪一側，那一側的 ‹ 或 › 就會亮起，能量槽滿格時整條操作條會泛起橙光。</li>
+            <li><strong>射擊自動進行。</strong> 移動到敵人下方去命中它們就行。</li>
+            <li><strong>暫停</strong>：點頂部列的暫停按鈕。按返回鍵或把應用程式切到背景，也會暫停。暫停視窗裡有<strong>繼續</strong>、<strong>重來</strong>（這個區域從頭開始）、<strong>設定</strong>和<strong>首頁</strong>。在暫停裡更改設定，會立刻用到這一局。</li>
+            <li>拖曳靈敏度是固定的，設定裡沒有。在機庫強化引擎，靈敏度會和移動速度一起提高（第 7 章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 彗星衝刺</h2>
+        <ul>
+            <li>擊落敵人會填充 <strong>COMET</strong> 能量槽。隊形中的敵人充得少，俯衝中的敵人充得多。10 格充滿後，<strong>READY</strong> 亮起，下方操作條泛起橙光。</li>
+            <li>能量槽滿格後，用下面兩種方式之一發動。
+                <ul>
+                    <li><strong>向上滑</strong>：在螢幕上快速向上滑動手指（<strong>↑ 快速上滑：彗星衝刺</strong>）。</li>
+                    <li><strong>點按操作條</strong>：在下方操作條的任何位置輕點一下再放開（<strong>也可以點按下方的操作條</strong>）。長按或拖曳不會發動。</li>
+                </ul>
+            </li>
+            <li>戰機會化作彗星，在大約 0.8 秒內衝上螢幕，貫穿路徑上的敵人。能量槽滿格時，會顯示衝刺路徑（山形標記）和路徑內敵人的圓環。衝刺途中也可以左右拖曳，把路徑稍微拐一點。</li>
+            <li>衝刺可以擊穿披著護盾環的敵人，也能傷到首領，但無法擊破光束。衝刺會用掉能量槽，需要重新充滿。</li>
+            <li>用彗星衝刺擊落的數量會顯示在結算畫面和紀錄裡，也計入區域通關獎勵。</li>
+            <li>遊戲中，在最初幾次衝刺之前會出現提示文字，告訴你怎麼做。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 卡牌</h2>
+        <ul>
+            <li>每波結束後，從<strong>三張卡牌中選一張</strong>（<strong>第 N 波完成 · 選擇一張卡牌</strong>）。選中的卡牌只在這個區域內疊加，下一個區域從頭開始。</li>
+            <li>再次選到同一張卡牌，會升到 2 級。有些卡牌只有一級。</li>
+            <li>一開始只有十種卡牌，其餘的會隨著星域的提升，一張一張加入候選（表中的「星域」）。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>卡牌</th><th>效果</th></tr>
+            <tr><td>多列彈</td><td>子彈變為兩列 → 三列</td></tr>
+            <tr><td>散射彈</td><td>向兩側斜射一對子彈 → 兩對</td></tr>
+            <tr><td>快速連射</td><td>射擊間隔縮短（最多 3 次）</td></tr>
+            <tr><td>穿透</td><td>子彈可穿透一個敵人 → 兩個</td></tr>
+            <tr><td>追蹤飛彈</td><td>發射追蹤最近敵人的飛彈 → 更頻繁</td></tr>
+            <tr><td>輔助無人機</td><td>一架無人機在旁邊一同射擊 → 兩架</td></tr>
+            <tr><td>護盾</td><td>一層護盾：被擊中也不會損失戰機 → 再增加一層（選擇時全部補滿）</td></tr>
+            <tr><td>彗星充能</td><td>彗星能量槽充能更快 → 快得多</td></tr>
+            <tr><td>俯衝預警</td><td>敵人俯衝前會閃爍橙光</td></tr>
+            <tr><td>額外戰機</td><td>備用戰機增加一架</td></tr>
+            <tr><td>側砲（星域 2 起）</td><td>翼尖斜向射擊 → 更頻繁</td></tr>
+            <tr><td>重彈（星域 3）</td><td>每第 4 次射擊，直線子彈傷害加倍 → 每第 3 次</td></tr>
+            <tr><td>連擊保持（星域 4）</td><td>連擊維持更久，分數更高 → 維持很久</td></tr>
+            <tr><td>俯衝獵手（星域 5）</td><td>對俯衝中的敵人傷害加倍 → 俯衝擊破時彗星能量也充得更快</td></tr>
+            <tr><td>連鎖電流（星域 6）</td><td>擊破後電擊附近一個敵人 → 兩個</td></tr>
+            <tr><td>彗星爆發（星域 7）</td><td>彗星衝刺在上方釋放衝擊波 → 返回原位時也釋放衝擊波，清除敵彈</td></tr>
+            <tr><td>脈衝雷射（星域 8）</td><td>定期向上發射貫穿雷射 → 更頻繁</td></tr>
+            <tr><td>彗星尾跡（星域 9）</td><td>彗星衝刺的路徑上留下灼燒敵人的火星 → 火星持續更久</td></tr>
+        </table>
+        <ul>
+            <li>強化機庫的<strong>戰術</strong>分支，能讓你把卡牌用得更好。第 1 波前先選一張卡牌（<strong>出擊前選擇一張卡牌</strong>），每個區域可以<strong>重抽</strong>（1～3 次，卡牌介面的<strong>重抽（剩餘 N 次）</strong>按鈕），再往後可以<strong>從四張卡牌中選擇</strong>（第 7 章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 敵人、障礙物和首領</h2>
+        <p>這些都可以在圖鑑裡再看一遍（第 8 章）。某個區域裡第一次出現你沒遇過的敵人或首領時，開場會彈出介紹卡片。</p>
+        <h3>敵人與階級</h3>
+        <p>敵人有 16 個系列，隨著星域提升，會出現同一系列的更高<strong>階級</strong>。階級越高越結實，4 級多一種攻擊。階級可以透過機體顏色和白色條紋分辨。</p>
+        <table class="info-table">
+            <tr><th>名稱</th><th>行為</th></tr>
+            <tr><td>夸克</td><td>編隊的主力。在編隊中偶爾射擊，俯衝時也會射出一發。</td></tr>
+            <tr><td>星鰩</td><td>翻身迅速俯衝，下降途中射出兩發。</td></tr>
+            <tr><td>奧爾特</td><td>堅硬難碎。俯衝時呈扇形撒出針彈。</td></tr>
+            <tr><td>星團</td><td>十分結實，第一次被擊中時放出兩架微中子。</td></tr>
+            <tr><td>伽馬</td><td>在編隊中用針彈精準瞄準我方戰機。</td></tr>
+            <tr><td>微中子</td><td>由星團和首領放出，直接俯衝而下。</td></tr>
+            <tr><td>太陽帆</td><td>以之字形俯衝，每次轉向都會投下子彈。</td></tr>
+            <tr><td>電漿槍</td><td>俯衝途中停頓，隨後沿直線猛扎下來。</td></tr>
+            <tr><td>隕石砲</td><td>先加熱砲管，再發射又大又慢的砲彈。</td></tr>
+            <tr><td>拉格朗日</td><td>搖晃著下沉，並排向正下方投下兩發子彈。</td></tr>
+            <tr><td>重力彈弓</td><td>用會向下轉彎的子彈壓縮你的路線。</td></tr>
+            <tr><td>月食</td><td>俯衝到一半時開火，然後返回原位。</td></tr>
+            <tr><td>星塵</td><td>橫穿飛行，沿途留下空雷。</td></tr>
+            <tr><td>象限</td><td>旋轉著俯衝，向四個方向散射子彈。</td></tr>
+            <tr><td>太陽透鏡</td><td>先畫出預警線，再沿線射下光束。</td></tr>
+            <tr><td>極光</td><td>用護罩包住下方的敵人。先打它。</td></tr>
+        </table>
+        <h3>精英</h3>
+        <p>精英是帶著標記的強化敵人。</p>
+        <table class="info-table">
+            <tr><th>名稱</th><th>行為</th></tr>
+            <tr><td>護盾環</td><td>身披能擋住兩發子彈的護環。擋不住彗星衝刺。</td></tr>
+            <tr><td>賞金</td><td>擊破可得高分和彗星能量。俯衝一次後就會逃走。</td></tr>
+            <tr><td>前裝甲</td><td>在編隊中會彈開子彈。趁它俯衝時攻擊。</td></tr>
+            <tr><td>加速</td><td>俯衝得更快、更頻繁。</td></tr>
+            <tr><td>分裂</td><td>擊毀後會迸出兩架微中子。</td></tr>
+            <tr><td>雷尾</td><td>被擊毀的地方會留下一枚空雷。</td></tr>
+        </table>
+        <h3>障礙物</h3>
+        <table class="info-table">
+            <tr><th>名稱</th><th>行為</th></tr>
+            <tr><td>小行星</td><td>緩緩墜落的岩石。擊碎後會裂成兩塊小石頭。</td></tr>
+            <tr><td>爆裂晶體</td><td>射擊引爆後，會一併摧毀周圍的敵人。</td></tr>
+            <tr><td>殘骸</td><td>無法摧毀的殘骸，會擋住雙方的子彈。</td></tr>
+            <tr><td>流星雨</td><td>警告之後，小流星沿一條線傾瀉而下。</td></tr>
+            <tr><td>重力井</td><td>會把你的子彈拉向中心的漩渦。</td></tr>
+            <tr><td>電弧柱</td><td>流動的電流會擋住你的子彈。擊毀一根柱子就會斷開。</td></tr>
+        </table>
+        <h3>敵方子彈</h3>
+        <p>敵方子彈不只靠顏色區分，還能透過形狀和光效分辨。</p>
+        <table class="info-table">
+            <tr><th>名稱</th><th>行為</th></tr>
+            <tr><td>球彈</td><td>圓而慢，是最常見的敵方子彈。</td></tr>
+            <tr><td>針彈</td><td>細而快，有時呈扇形散開。</td></tr>
+            <tr><td>砲彈</td><td>又大又慢，會壓縮你的閃避空間。</td></tr>
+            <tr><td>折轉彈</td><td>在固定時刻轉向一次。</td></tr>
+            <tr><td>空雷</td><td>停下後閃爍，再炸成一圈子彈。兩發即可熄滅。</td></tr>
+            <tr><td>光束</td><td>沿預警線落下的光柱。彗星衝刺也無法擊破。</td></tr>
+        </table>
+        <h3>危險攻擊的預警</h3>
+        <p>危險的攻擊從剛開始的那一刻起就會有預警，讓你看得清楚。比如光束會先畫出預警線，空雷在爆炸前會閃爍，流星雨在警告之後傾瀉而下，彈幕簾的縫隙會顯示為一條空出來的通路。首領出場時會出現 <strong>WARNING</strong> 條。選擇<strong>俯衝預警</strong>卡牌，敵人在俯衝前會閃爍橙光。</p>
+        <h3>首領</h3>
+        <p>每個區域的最後都有首領。星域的最後一個區域，會出現新的首領，或首領的<strong>第二形態</strong>（名稱後加 II），第二形態的攻擊會有所不同。</p>
+        <table class="info-table">
+            <tr><th>首領</th><th>行為</th><th>第二形態（II）</th></tr>
+            <tr><td>泰坦</td><td>用兩座砲塔瞄準射擊，並從艦體放出環形與螺旋彈幕。</td><td>砲塔護罩被炸飛，露出三根砲管。它會移動位置，並降下留有縫隙的彈幕簾。</td></tr>
+            <tr><td>星雲</td><td>從翼砲扇形射出針彈，並放出環形與螺旋彈幕。</td><td>展開鰭翼猛衝，兩門翼砲交錯掃射彈幕。</td></tr>
+            <tr><td>稜鏡</td><td>兩塊晶體碎片射出針彈環，本體放出螺旋彈幕。</td><td>晶刃裂開，碎片環繞旋轉，並豎起光束柵欄。</td></tr>
+            <tr><td>恆星爐</td><td>從排氣砲瞄準發射砲彈，並降下留有縫隙的彈幕簾。</td><td>爐柵打開，火球湧出。它會猛衝、降下彈幕簾，並拋撒空雷。</td></tr>
+            <tr><td>天球儀</td><td>四個球體一邊旋轉一邊向外射擊，扇形折轉彈會轉向你。</td><td>圓環傾斜，球體加速。它會拋撒空雷並發射折轉彈。</td></tr>
+            <tr><td>離子塔</td><td>豎起光束柵欄，並從兩個電容器扇形掃射。</td><td>線圈纏上電環。它會依次點亮光束柵欄、降下彈幕簾，並召喚重力彈弓。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 模式</h2>
+        <h3>首頁</h3>
+        <p>頂部有標題和首頁畫面的動態效果，右上角是齒輪形的<strong>設定</strong>按鈕。下面有兩個大按鈕和三個小按鈕。</p>
+        <table class="info-table">
+            <tr><th>按鈕</th><th>作用</th></tr>
+            <tr><td><strong>開始區域 N</strong></td><td>直接開始已解鎖的區域中最靠後的一個，並顯示它的首領和你的最高分</td></tr>
+            <tr><td><strong>Daily</strong></td><td>開始今天的 Daily。會顯示今天的首領，如果今天已經完成過，還會顯示今日最高和連續天數</td></tr>
+            <tr><td><strong>選擇區域</strong></td><td>從已解鎖的區域中挑選（見下文）。會顯示目前所在星域的編號</td></tr>
+            <tr><td><strong>機庫</strong></td><td>用核心強化戰機（第 7 章）。會顯示核心餘額，有買得起的強化時會出現圓點</td></tr>
+            <tr><td><strong>紀錄</strong></td><td>開啟紀錄和圖鑑（第 8 章）。會顯示最高區域</td></tr>
+        </table>
+        <h3>Classic</h3>
+        <ul>
+            <li><strong>八個區域為一個星域。</strong> <strong>星域 1</strong> 是區域 1～8，從區域 9 起會無止境地繼續下去（星域 2、星域 3……）。</li>
+            <li>通關一個區域，就會解鎖下一個區域。已解鎖的區域隨時可以重玩，並保留最高分。尚未解鎖的區域顯示為<strong>未解鎖</strong>，<strong>通關上一個區域後解鎖</strong>。</li>
+            <li>星域的最後一個區域（第八個）會有新的首領，或首領的第二形態在等你。通關後會出現<strong>星域 N 突破</strong>。</li>
+            <li><strong>得分倍率</strong>隨著星域提升而提高，最高 ×3。紀錄的重點是你到達的<strong>最高區域</strong>。</li>
+            <li>在機庫買到的強化，在 Classic 裡生效（第 7 章）。</li>
+        </ul>
+        <h3>選擇區域</h3>
+        <ul>
+            <li>每個星域是一頁，上下滑動翻頁（下面是之前的星域，上面是下一個星域）。一開始顯示你接下來要玩的區域所在的星域，只能翻到那個星域為止。</li>
+            <li>每一頁是一條曲折向上的航線，每個區域是一個六邊形格子，裡面是首領的圖案（星域的最後一格更大）。尚未解鎖的區域，首領會被 <strong>?</strong> 遮住。你接下來要玩的區域上方懸浮著你的戰機。</li>
+            <li>格子外側的標籤顯示區域編號、兩個獎章位（<strong>通關</strong>、<strong>無傷通關</strong>）和最高分（沒有紀錄時顯示<strong>新區域</strong>，未解鎖時顯示<strong>未解鎖</strong>）。</li>
+            <li>地圖上方的角落裡是星域名稱、區域範圍和已通關的數量，右側邊緣的細線表示目前星域所在的位置。</li>
+            <li>點按已解鎖的格子就會開始那個區域，點按未解鎖的格子會告訴你怎樣解鎖。</li>
+        </ul>
+        <h3>結算畫面</h3>
+        <p>區域結束後，分數會往上跳動，隨後顯示結算。你會看到<strong>分數</strong>、<strong>最高分</strong>（超過時顯示<strong>新紀錄</strong>）、<strong>被擊中次數</strong>、<strong>彗星衝刺擊破</strong>、<strong>時間</strong>，以及三個獎章位（<strong>通關</strong>、<strong>無傷通關</strong>、<strong>彗星 ×N</strong>）。通關時會出現<strong>區域 N 已解鎖</strong>，並顯示獲得的核心（<strong>首次通關 +N</strong>、<strong>星域最終區域首次通關 +N</strong>）。如果有買得起的強化，會出現<strong>可強化 N 項</strong>和<strong>機庫</strong>按鈕。按鈕有<strong>下一區域</strong>（通關時）、<strong>重來</strong>和<strong>首頁</strong>。</p>
+        <h3>Daily</h3>
+        <ul>
+            <li>每天開放一個區域。日期以裝置的日期為準，午夜進入新的一天。</li>
+            <li>同一天，遇到同一名首領的玩家會得到相同的波次和相同的卡牌候選。首領會在<strong>你到目前為止遇過的首領中</strong>按天輪替，所以沒遇過的首領不會出現在 Daily 裡（如果一個都沒遇到，就是第一名首領泰坦）。首領的第二形態不會出現在 Daily 裡。當天的首領在你第一次查看時就確定，當天不會再變，新遇到的首領從隔天起加入輪替。</li>
+            <li><strong>Daily 中所有人使用相同的戰機，不計機庫強化。</strong> 開場卡片上會顯示 <strong>STANDARD</strong>。</li>
+            <li>一天可以玩多次，保留當天的最高分。</li>
+            <li>完成一局（無論通關還是失敗）的那天，會讓<strong>連續</strong>天數接上，漏掉一天就中斷。連續天數會顯示在紀錄畫面、首頁的 Daily 按鈕和結算畫面上。</li>
+            <li>Daily 也能獲得核心：依分數得到的核心，再加上當天第一次完成的獎勵（<strong>今日首次完成 +N</strong>）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 機庫</h2>
+        <p>機庫是用遊戲中獲得的<strong>核心</strong>強化戰機的地方。從首頁的<strong>機庫</strong>，或結算畫面的<strong>機庫</strong>按鈕進入。這個畫面沒有橫幅廣告。</p>
+        <h3>怎樣獲得核心</h3>
+        <ul>
+            <li>無論 Classic 還是 Daily，每打完一局，都會獲得「分數 ÷ 2,000」（無條件捨去）的核心，沒通關也一樣。</li>
+            <li>第一次通關某個區域，會額外獲得 50；第一次通關星域的最後一個區域，再額外獲得 200。Daily 在當天第一次完成時額外獲得 50。</li>
+            <li>核心只能靠遊玩獲得，無法在應用程式內購買。</li>
+        </ul>
+        <h3>強化</h3>
+        <ul>
+            <li>一共五個分支，合計 35 個階段。頂部列顯示核心餘額，戰機面板顯示目前形態，下面是五行分支（階段格、「目前 → 下一級」的效果、價格按鈕），最底部是<strong>出擊 · 區域 N</strong>。</li>
+            <li>價格按鈕點一次，會在 2 秒內變成<strong>確認 N</strong>，再點一次才會購買。核心不夠時按鈕會變暗，無法購買。不能退還。</li>
+            <li>效果用簡單的數字顯示，例如「射速 1 → 2」。第一次來時會出現提示便條。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>分支</th><th>階段</th><th>提升的內容</th></tr>
+            <tr><td>主砲</td><td>10</td><td>射速、子彈粗細、子彈傷害</td></tr>
+            <tr><td>彗星</td><td>10</td><td>初始能量槽、衝刺寬度、衝刺對首領的傷害</td></tr>
+            <tr><td>引擎</td><td>5</td><td>移動速度</td></tr>
+            <tr><td>裝甲</td><td>5</td><td>初始護盾、首領戰前補充一格空護盾、護盾破碎時清除周圍敵彈（範圍也會變大）</td></tr>
+            <tr><td>戰術</td><td>5</td><td>第 1 波前選擇一張卡牌、每個區域的重抽次數（1～3 次）、從四張卡牌中選擇</td></tr>
+        </table>
+        <ul>
+            <li>引擎一行的<strong>對局中的移動速度</strong> ‹ › ，可以在已購買的階段裡降低對局中使用的移動速度（覺得戰機太快的時候）。</li>
+            <li>階段越高，所需核心越多，全部買齊大約需要 16 萬 4 千核心。</li>
+            <li>機庫強化<strong>只在 Classic 裡生效</strong>。Daily 和新手教學始終使用同樣的基礎戰機。</li>
+        </ul>
+        <h3>戰機形態</h3>
+        <p>已購買階段的總數增加，戰機的<strong>形態</strong>會在十種之間變化：MK I（星火）、MK II（耀斑）、MK III（烈焰）、MK IV（煉獄）、MK V（超新星）、MK VI（脈衝星）、MK VII（磁星）、MK VIII（類星體）、MK IX（極超新星）、MK X（大爆炸）。階段總數達到 3、7、12、19、23、26、29、32、35 時會變化。形態改變的是外觀，能力由買到的強化決定。變化的瞬間會播放演出，並顯示<strong>下次出擊起為 MK N</strong>。</p>
+        <ul>
+            <li>形態一行裡，已達到的形態有圖案，未達到的是剪影。點按已達到的形態，可以查看那架戰機（<strong>目前戰機：MK N</strong> 維持不變）。這只是查看，實際駕駛的戰機不會改變。</li>
+            <li>戰機面板會顯示距下一形態還差幾級（<strong>距下一形態還差 N 級</strong>，最後是<strong>最終形態</strong>）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 紀錄和圖鑑</h2>
+        <p>從首頁的<strong>紀錄</strong>進入。</p>
+        <ul>
+            <li><strong>最高區域</strong>（大數字）、<strong>已通關區域</strong>、<strong>無傷通關區域</strong>、<strong>最高分</strong></li>
+            <li><strong>星域紀錄</strong>：點按後可以查看所有星域的紀錄（每個星域八個區域的首領和最高分）。</li>
+            <li><strong>Daily</strong>：<strong>目前連續</strong>、<strong>最長連續</strong>、<strong>今日最高</strong>、<strong>歷史最高</strong>、<strong>遊玩天數</strong></li>
+            <li><strong>累計紀錄</strong>：<strong>遊玩時間</strong>、<strong>完成局數</strong>、<strong>通關次數</strong>、<strong>無傷通關</strong>、<strong>擊破敵人</strong>、<strong>彗星衝刺擊破敵人</strong>、<strong>彗星衝刺</strong>、<strong>最高連擊</strong>、<strong>擊破首領</strong>、<strong>損失戰機</strong></li>
+            <li><strong>圖鑑</strong>：敵機、精英、首領、障礙物、卡牌、敵方子彈，共 109 個條目。每個分類會顯示最近發現的條目圖案、<strong>已發現 N/M</strong> 和進度條，點按分類可以瀏覽其中的條目。條目在遊戲中第一次遇到時填入，還沒遇到的顯示為剪影，並標註<strong>尚未發現</strong>。<strong>戰機形態</strong>一欄會填入你在機庫裡達到的形態。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 設定</h2>
+        <p>從首頁右上角的<strong>設定</strong>（齒輪）進入。遊戲過程中也可以從暫停視窗進入。分為<strong>遊戲</strong>和<strong>一般</strong>兩組。</p>
+        <h3>遊戲</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>說明</th></tr>
+            <tr><td>音效</td><td>開關音效</td></tr>
+            <tr><td>震動</td><td>開關震動（被擊中、擊敗首領、彗星衝刺、戰機形態改變時）</td></tr>
+            <tr><td>減少特效</td><td>減少晃動、閃爍等特效</td></tr>
+            <tr><td>遊戲音樂</td><td>開關遊戲過程中的背景音樂</td></tr>
+            <tr><td>選單音樂</td><td>開關主畫面和選單中播放的音樂</td></tr>
+            <tr><td>音樂音量</td><td>以 10% 為單位選擇遊戲音樂和選單音樂的音量。兩者至少有一個開啟時才能調整</td></tr>
+            <tr><td>音效音量</td><td>以 10% 為單位選擇音效的音量。音效開啟時才能調整</td></tr>
+            <tr><td>畫面晃動</td><td>被擊中或大爆炸時畫面會晃動。可以關閉</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>說明</th></tr>
+            <tr><td>語言</td><td><strong>跟隨系統</strong>（預設），或從清單（English·日本語·한국어·简体中文·繁體中文）中自己選擇</td></tr>
+            <tr><td>重看新手教學</td><td>重新玩一遍新手教學。不計入紀錄</td></tr>
+            <tr><td>隱私權選項</td><td>查看或變更廣告同意設定。只在需要同意的地區（如歐洲）顯示</td></tr>
+            <tr><td>關於</td><td>版本、本說明（<strong>玩法說明</strong>）、<strong>隱私權政策</strong>、<strong>開放原始碼授權</strong>。在授權清單中可以看到製作圖片和音樂所用的工具</td></tr>
+        </table>
+        <p>畫面顏色只有一種深色主題。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 廣告與紀錄保存</h2>
+        <ul>
+            <li><strong>遊戲過程中沒有廣告，也沒有付費。</strong> 遊戲畫面、卡牌選擇、暫停、新手教學、結算畫面和機庫裡都沒有廣告。</li>
+            <li>首頁、選擇區域和紀錄畫面的最底部有一條<strong>橫幅廣告</strong>。</li>
+            <li><strong>全螢幕廣告</strong>只會在結算畫面點按了下一步操作（下一區域、重來、首頁等）之後，偶爾出現。遊戲時間（只計算遊玩進行的時間，選單和暫停不算）累計滿 20 分鐘後才可能出現，之後要在上一次廣告之後再玩 15 分鐘才會再出現。開啟應用程式後第一局的結算、失敗後立刻點<strong>重來</strong>、以及新手教學之後，都不會出現。</li>
+            <li>在需要同意的地區（如歐洲），會出現廣告同意畫面。之後可以在設定的<strong>隱私權選項</strong>中變更。</li>
+            <li>應用程式內沒有任何需要付費購買的內容。</li>
+            <li>網路只用於廣告以及使用統計和錯誤回報。</li>
+            <li>紀錄和設定儲存在裝置裡。如果裝置的 Google 備份（Android 自動備份）是開啟的，它們會一起進入備份，換裝置後可以接著玩。解除安裝應用程式也會刪除裝置上的紀錄。</li>
+            <li>詳情請見<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. 聯絡方式</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="../zh.html">Cometdive</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

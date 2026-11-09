@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Cometdive 遊び方 - Willee Project</title>
+    <meta name="description" content="Cometdive 遊び方 — Cometdive（コメットダイブ）は、片手で遊べる縦画面のアーケード・スペースシューティングです。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cometdive/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cometdive/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cometdive/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cometdive/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cometdive/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cometdive/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cometdive/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cometdive 遊び方 - Willee Project">
+    <meta property="og:description" content="Cometdive 遊び方 — Cometdive（コメットダイブ）は、片手で遊べる縦画面のアーケード・スペースシューティングです。">
+    <meta property="og:url" content="https://willee.net/apps/cometdive/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/cometdive/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ja.html">Cometdive</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Cometdive" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Cometdive</h1>
+                <p>遊び方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Cometdive_ja_01_wave.webp" alt="セクター20 — 編隊から急降下してくる敵と、満タンの彗星ゲージ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_02_dash.webp" alt="彗星突進 — 自機が彗星となって編隊を貫く瞬間" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_03_boss.webp" alt="ボス戦 — セクター32のタイタン II（第2形態）" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_04_map.webp" alt="セクター選択 — 銀河2（セクター9〜16）のマップ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_05_hangar.webp" alt="格納庫 — MK VIII クエーサーと強化の系統" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_06_cards.webp" alt="カード選択 — ウェーブ1クリア後、4枚から1枚を選ぶ" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_ja_07_result.webp" alt="リザルト — セクター12 クリア（新記録）" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>Cometdive</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>Cometdive（コメットダイブ）は、片手で遊べる縦画面のアーケード・スペースシューティングです。画面のどこでも左右にドラッグすると自機が動き、攻撃は自動です。敵は編隊を組んで現れ、急降下してきます。急降下する敵を倒して彗星ゲージをためると、自機が彗星になって編隊をまっすぐ貫きます（<strong>彗星突進</strong>）。</p>
+        <ul>
+            <li>アカウント登録もログインもありません。初めて開くと、練習用のセクターで操作と彗星突進を覚える<strong>チュートリアル</strong>から始まります。<strong>スキップ</strong>でいつでも終えられ、設定からもう一度見ることもできます。</li>
+            <li><strong>インターネットがなくてもゲームは遊べます。</strong> インターネットは広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応していて、設定で自分で選ぶこともできます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. ルール</h2>
+        <ul>
+            <li><strong>セクター</strong>は、ウェーブ3つとボスでできています。ウェーブの敵を全部倒すと次のウェーブに進み、3つ目のウェーブのあとにボスが現れます。ボスを倒すとセクター<strong>クリア</strong>で、かかる時間は3分ほどです。</li>
+            <li>自機は、セクターごとに<strong>3機</strong>で始まります。被弾すると1機を失い、少しのあいだ無敵になります。3機とも失うとセクター失敗で、<strong>コンティニューはありません</strong>。シールドは、被弾しても自機を失わずに防いでくれます（カードと、格納庫の装甲）。</li>
+            <li>敵を倒すとスコアが入ります。<strong>急降下中</strong>の敵は<strong>スコア2倍</strong>で、彗星ゲージも多くたまります。</li>
+            <li><strong>コンボ</strong>: 1体倒してから約1.2秒以内に次の敵を倒すとコンボが1つ上がり（最大×8）、撃破のスコアにコンボ数がかかります。時間が切れると×1に戻ります。</li>
+            <li>ウェーブを終えたときとセクターをクリアしたときに、ボーナススコアが入ります。彗星突進で倒した敵が多いほど、また一度も被弾せずにクリア（<strong>ノーダメージクリア</strong>）するほど、ボーナスが大きくなります。</li>
+            <li>セクターをクリアすると次のセクターが解放されます（3章・6章）。</li>
+            <li>プレイ途中の状態は保存されません。ホームに戻ると、そのセクターは最初からやり直しです。</li>
+        </ul>
+        <h3>プレイ画面の見方</h3>
+        <ul>
+            <li>上のバー: スコア（8桁）、<strong>SECTOR</strong>と<strong>WAVE</strong>、<strong>COMBO</strong>とコンボが続く残り時間のバー、一時停止ボタンがあります。ボスが出るとボスの体力枠が出て、現れる前には<strong>WARNING</strong>の帯が点滅します。</li>
+            <li>盤面の下: 残りの自機数と<strong>COMET</strong>ゲージ（10マス）が見え、ゲージが満タンになると<strong>READY</strong>が点灯します。</li>
+            <li>いちばん下の丸みのある板が<strong>操作バー</strong>です（2章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 操作</h2>
+        <ul>
+            <li><strong>ドラッグ</strong>: 画面のどこでも、指を置いたまま左右にドラッグすると、動かした分だけ自機が左右に動きます。指を自機の上に置く必要はなく、自機は画面の下を左右にだけ動きます。</li>
+            <li><strong>下の操作バー</strong>: 盤面の下のバーでドラッグしても同じです。指が自機を隠さないので便利です。ドラッグしている側の ‹ か › が明るくなり、ゲージが満タンになるとバー全体がオレンジに光ります。</li>
+            <li><strong>攻撃は自動です。</strong> 敵の下に移動して当てましょう。</li>
+            <li><strong>一時停止</strong>: 上のバーの一時停止ボタンを押します。戻るボタンを押したり、アプリをバックグラウンドにしても一時停止になります。一時停止の画面には<strong>再開</strong>、<strong>リトライ</strong>（このセクターを最初から）、<strong>設定</strong>、<strong>ホーム</strong>があります。一時停止から設定を変えると、そのプレイにすぐ反映されます。</li>
+            <li>ドラッグの感度は固定で、設定にはありません。格納庫でエンジンを強化すると、移動速度といっしょに上がります（7章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 彗星突進</h2>
+        <ul>
+            <li>敵を倒すと<strong>COMET</strong>ゲージがたまります。編隊にいる敵は少し、急降下中の敵は多くたまります。10マスが満タンになると<strong>READY</strong>が点灯し、下の操作バーがオレンジに光ります。</li>
+            <li>ゲージがたまったら、次のどちらかで発動します。
+                <ul>
+                    <li><strong>上にはじく</strong>: 画面で指を上へすばやくはじきます（<strong>↑ 上にはじくと彗星突進</strong>）。</li>
+                    <li><strong>下の操作バーをタップ</strong>: 下のバーのどこでもいいので、ポンと押して離します（<strong>下のバーをタップしてもOK</strong>）。長押しやドラッグでは発動しません。</li>
+                </ul>
+            </li>
+            <li>自機は約0.8秒のあいだ彗星となって画面を駆け上がり、進路上の敵を貫きます。ゲージがたまると、突進の進路（山形のマーク）と、進路上の敵にリングが表示されます。突進中も左右にドラッグすると、進路を少しだけ曲げられます。</li>
+            <li>突進は、シールドリングをまとった敵も貫き、ボスにもダメージを与えます。ただし光線は壊せません。突進するとゲージを使うので、またためなおします。</li>
+            <li>彗星突進で倒した数は、リザルト画面と記録に残り、セクタークリアのボーナスにも入ります。</li>
+            <li>プレイ中は、最初の何回かの突進まで、やり方を知らせる文が出ます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. カード</h2>
+        <ul>
+            <li>ウェーブを終えるたびに、カード<strong>3枚から1枚</strong>を選びます（<strong>ウェーブN クリア · カードをひとつ選んでください</strong>）。選んだカードはそのセクターの中だけで重なり、次のセクターはゼロからやり直しです。</li>
+            <li>同じカードをもう一度選ぶと、レベル2に上がります。レベルが1つだけのカードもあります。</li>
+            <li>最初は10種類のカードで始まり、残りは銀河が進むにつれて1つずつ候補に加わります（表の「銀河」）。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>カード</th><th>効果</th></tr>
+            <tr><td>マルチショット</td><td>弾が2列で飛ぶ → 3列</td></tr>
+            <tr><td>拡散ショット</td><td>左右に斜めの弾を1組追加 → 2組</td></tr>
+            <tr><td>連射アップ</td><td>撃つ間隔が短くなる（最大3回）</td></tr>
+            <tr><td>貫通</td><td>弾が敵を1体貫通する → 2体</td></tr>
+            <tr><td>追尾ミサイル</td><td>近くの敵を追うミサイルを撃つ → もっと頻繁に</td></tr>
+            <tr><td>サポートドローン</td><td>ドローンが横で一緒に撃つ → 2機</td></tr>
+            <tr><td>シールド</td><td>シールド1枚: 被弾しても自機を失わない → もう1枚増える（選ぶと全回復）</td></tr>
+            <tr><td>彗星チャージ</td><td>彗星ゲージが速くたまる → さらに速く</td></tr>
+            <tr><td>急降下予告</td><td>急降下の前に敵がオレンジに点滅する</td></tr>
+            <tr><td>残機+1</td><td>残機が1機増える</td></tr>
+            <tr><td>サイド砲（銀河2から）</td><td>翼の先から斜めに撃つ → もっと頻繁に</td></tr>
+            <tr><td>ヘビー弾（銀河3）</td><td>4回目の射撃ごとに、まっすぐな弾のダメージが2倍 → 3回目ごと</td></tr>
+            <tr><td>コンボキープ（銀河4）</td><td>コンボが長くつながり、スコアが伸びる → さらに長く</td></tr>
+            <tr><td>急降下ハンター（銀河5）</td><td>急降下中の敵へのダメージが2倍 → 急降下中の撃破で彗星ゲージも速くたまる</td></tr>
+            <tr><td>連鎖電流（銀河6）</td><td>撃破すると近くの敵1体へ電撃 → 2体</td></tr>
+            <tr><td>彗星爆発（銀河7）</td><td>彗星突進が上のほうで衝撃波を出す → 戻った場所でも衝撃波を出し、敵弾を消す</td></tr>
+            <tr><td>パルスレーザー（銀河8）</td><td>一定の間隔で上へ貫通レーザーを撃つ → もっと頻繁に</td></tr>
+            <tr><td>彗星の尾（銀河9）</td><td>彗星突進の跡に火の粉が残り、敵を焼く → 火の粉がより長く残る</td></tr>
+        </table>
+        <ul>
+            <li>格納庫の<strong>戦術</strong>を強化すると、カードをより活かせます。ウェーブ1の前にカードをひとつ先に選べ（<strong>出撃前にカードをひとつ選んでください</strong>）、セクターごとに<strong>引き直し</strong>（1〜3回、カード画面の<strong>引き直し（残りN回）</strong>ボタン）ができ、さらに進むと<strong>カード4枚から</strong>選べます（7章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 敵・障害物・ボス</h2>
+        <p>これらは図鑑（8章）でもう一度見られます。まだ会っていない敵やボスが初めて出るセクターでは、始まるときに紹介カードが出ます。</p>
+        <h3>敵と段階</h3>
+        <p>敵は16系統あり、銀河が進むと同じ系統のより高い<strong>段階</strong>が出てきます。段階が高いほど硬く、4段階には攻撃がもう1つあります。段階は、体の色と白いしま模様で見分けられます。</p>
+        <table class="info-table">
+            <tr><th>名前</th><th>動き</th></tr>
+            <tr><td>クォーク</td><td>編隊の基本。編隊からときどき撃ち、急降下中にも1発撃つ。</td></tr>
+            <tr><td>スターレイ</td><td>体を翻して素早く急降下し、降りながら2発撃つ。</td></tr>
+            <tr><td>オールト</td><td>硬くて砕けにくい。急降下しながら針を扇状にばらまく。</td></tr>
+            <tr><td>クラスター</td><td>頑丈で、初めて当たるとニュートリノを2機放つ。</td></tr>
+            <tr><td>ガンマ</td><td>編隊から針で自機を正確に狙う。</td></tr>
+            <tr><td>ニュートリノ</td><td>クラスターとボスが放つ。まっすぐ降りてくる。</td></tr>
+            <tr><td>ソーラーセイル</td><td>ジグザグに降りてきて、曲がるたびに弾を落とす。</td></tr>
+            <tr><td>プラズマランス</td><td>急降下の途中で止まり、そのまま真下へ突っ込む。</td></tr>
+            <tr><td>隕石砲</td><td>砲身を熱してから、大きく遅い砲弾を撃つ。</td></tr>
+            <tr><td>ラグランジュ</td><td>揺れながら沈み、真下へ2発を並べて落とす。</td></tr>
+            <tr><td>スイングバイ</td><td>下へ曲がる弾で進路を狭める。</td></tr>
+            <tr><td>月食</td><td>途中まで降りて撃ち、元の位置へ戻る。</td></tr>
+            <tr><td>スターダスト</td><td>横切って飛びながら機雷を残す。</td></tr>
+            <tr><td>クアドラント</td><td>回りながら降下し、4方向へ弾をばらまく。</td></tr>
+            <tr><td>太陽レンズ</td><td>予告線を引いてから、光線を撃ち下ろす。</td></tr>
+            <tr><td>オーロラ</td><td>下にいる敵をバリアで包む。先に狙え。</td></tr>
+        </table>
+        <h3>精鋭</h3>
+        <p>精鋭は、目印のついた強化された敵です。</p>
+        <table class="info-table">
+            <tr><th>名前</th><th>動き</th></tr>
+            <tr><td>シールドリング</td><td>弾を2発防ぐリングをまとっている。彗星突進は防げない。</td></tr>
+            <tr><td>賞金首</td><td>倒せば大きな得点と彗星ゲージ。一度急降下すると逃げ去る。</td></tr>
+            <tr><td>前装甲</td><td>編隊にいる間は弾をはじく。急降下中を狙え。</td></tr>
+            <tr><td>加速</td><td>より速く、より頻繁に急降下する。</td></tr>
+            <tr><td>分裂</td><td>倒すとニュートリノ2機が飛び出す。</td></tr>
+            <tr><td>機雷尾</td><td>倒した場所に機雷を残す。</td></tr>
+        </table>
+        <h3>障害物</h3>
+        <table class="info-table">
+            <tr><th>名前</th><th>動き</th></tr>
+            <tr><td>小惑星</td><td>ゆっくり落ちてくる岩。壊すと小さな石2つに割れる。</td></tr>
+            <tr><td>爆裂結晶</td><td>撃って爆発させると、周りの敵もまとめて壊す。</td></tr>
+            <tr><td>残骸</td><td>壊れない残骸。どちらの弾も防ぐ。</td></tr>
+            <tr><td>流星群</td><td>警告のあと、小さな流星が一列に降り注ぐ。</td></tr>
+            <tr><td>重力井戸</td><td>自機の弾を中心へ曲げる渦。</td></tr>
+            <tr><td>放電柱</td><td>流れる電流が自機の弾を防ぐ。柱を壊すと止まる。</td></tr>
+        </table>
+        <h3>敵弾</h3>
+        <p>敵弾は、色だけでなく形と光でも見分けられます。</p>
+        <table class="info-table">
+            <tr><th>名前</th><th>動き</th></tr>
+            <tr><td>球弾</td><td>丸くて遅い。最もよく見る敵弾。</td></tr>
+            <tr><td>針弾</td><td>細くて速い。扇状に広がることもある。</td></tr>
+            <tr><td>砲弾</td><td>大きくて遅い。よけられる場所を狭める。</td></tr>
+            <tr><td>屈折弾</td><td>決まったタイミングで一度だけ曲がる。</td></tr>
+            <tr><td>機雷</td><td>止まって点滅し、輪になって破裂する。2発で消える。</td></tr>
+            <tr><td>光線</td><td>予告線に沿って撃ち下ろす光の柱。彗星突進でも壊せない。</td></tr>
+        </table>
+        <h3>危険な攻撃の予告</h3>
+        <p>危険な攻撃は、始まった瞬間から見えるように予告が出ます。たとえば光線は先に予告線が引かれ、機雷は破裂する前に点滅し、流星群は警告のあとに降り注ぎ、弾のカーテンはすき間が空いた通り道として見えます。ボスが現れるときは<strong>WARNING</strong>の帯が出ます。カード<strong>急降下予告</strong>を選ぶと、急降下の前に敵がオレンジに点滅します。</p>
+        <h3>ボス</h3>
+        <p>セクターの最後にはボスが現れます。銀河の最後のセクターでは、新しいボスか、ボスの<strong>第2形態</strong>（名前のあとにII）が現れ、第2形態は攻撃が変わります。</p>
+        <table class="info-table">
+            <tr><th>ボス</th><th>動き</th><th>第2形態（II）</th></tr>
+            <tr><td>タイタン</td><td>2基の砲塔で狙い撃ち、船体から輪と螺旋を放つ。</td><td>砲塔のカバーが吹き飛び、3本の砲身があらわになる。位置を変えながら、すき間のある弾のカーテンを降らせる。</td></tr>
+            <tr><td>ネビュラ</td><td>翼砲から針を扇状に撃ち、輪と螺旋を放つ。</td><td>ひれを広げて突進し、2門の翼砲が交差しながら弾を掃き撒く。</td></tr>
+            <tr><td>プリズム</td><td>2つの結晶の欠片が針の輪を撃ち、本体が螺旋を放つ。</td><td>結晶の刃が割れて欠片が周りを回り、光線の柵を立てる。</td></tr>
+            <tr><td>恒星炉</td><td>排気砲から砲弾を狙い撃ち、すき間のある弾のカーテンを降らせる。</td><td>火格子が開いて火の玉があふれ出る。突進し、弾のカーテンを降らせ、機雷をばらまく。</td></tr>
+            <tr><td>天球儀</td><td>4つの球体が回りながら外へ撃ち、屈折弾の扇がこちらへ曲がる。</td><td>輪が傾き、球体が速くなる。機雷をばらまき、屈折弾を撃つ。</td></tr>
+            <tr><td>イオン塔</td><td>光線の柵を立て、2つの蓄電器から扇状に撃ち払う。</td><td>コイルに電流の輪が巻きつく。順に灯る光線の柵と弾の幕を使い、スイングバイを呼ぶ。</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. モード</h2>
+        <h3>ホーム</h3>
+        <p>上にタイトルとホーム画面の演出があり、右上に歯車形の<strong>設定</strong>ボタンがあります。その下に大きなボタンが2つと、小さなボタンが3つあります。</p>
+        <table class="info-table">
+            <tr><th>ボタン</th><th>動作</th></tr>
+            <tr><td><strong>セクターN開始</strong></td><td>解放済みのセクターのうちいちばん先のセクターをすぐ始めます。そのボスと、ベストスコアが見えます</td></tr>
+            <tr><td><strong>Daily</strong></td><td>今日のDailyを始めます。今日のボスが見え、今日最後まで遊んでいれば今日のベストと連続日数が見えます</td></tr>
+            <tr><td><strong>セクター選択</strong></td><td>解放済みのセクターから選んで遊びます（下記）。今いる銀河の番号が見えます</td></tr>
+            <tr><td><strong>格納庫</strong></td><td>コアで自機を強化します（7章）。コアの残高が見え、買える強化があると点が付きます</td></tr>
+            <tr><td><strong>記録</strong></td><td>記録と図鑑を開きます（8章）。最高セクターが見えます</td></tr>
+        </table>
+        <h3>Classic</h3>
+        <ul>
+            <li><strong>8セクターで1つの銀河</strong>です。<strong>銀河1</strong>はセクター1〜8で、セクター9からは終わりなく続きます（銀河2、銀河3、…）。</li>
+            <li>セクターをクリアすると次のセクターが解放されます。解放済みのセクターはいつでも遊び直せて、ベストスコアが残ります。解放されていないセクターは<strong>ロック中</strong>で、<strong>前のセクターをクリアすると解放されます</strong>。</li>
+            <li>銀河の最後のセクター（8番目）では、新しいボスか、ボスの第2形態が待っています。クリアすると<strong>銀河N 突破</strong>が出ます。</li>
+            <li><strong>スコア倍率</strong>は銀河が進むごとに上がり、×3まで上がります。記録の中心は、たどり着いた<strong>最高セクター</strong>です。</li>
+            <li>格納庫で買った強化は、Classicで効果を発揮します（7章）。</li>
+        </ul>
+        <h3>セクター選択</h3>
+        <ul>
+            <li>銀河ごとに1ページで、上下にスワイプしてめくります（下が前の銀河、上が次の銀河）。最初は次に遊ぶセクターがある銀河が見えていて、そこまでしかめくれません。</li>
+            <li>1ページは、ジグザグに上っていく航路で、セクターごとの六角形のマスにボスの絵があります（銀河の最後は大きなマス）。解放されていないセクターのボスは<strong>?</strong>で隠れます。次に遊ぶセクターには自機が浮かんでいます。</li>
+            <li>マスの外側のラベルには、セクター番号、メダル枠2つ（<strong>クリア</strong>、<strong>ノーダメージクリア</strong>）、ベストスコア（なければ<strong>新セクター</strong>、ロックされていれば<strong>ロック中</strong>）が見えます。</li>
+            <li>マップの上の隅に銀河の名前・セクターの範囲・クリアした数があり、右端の細い線が今の銀河の位置です。</li>
+            <li>解放済みのマスをタップするとそのセクターが始まり、ロックされたマスをタップすると開け方が表示されます。</li>
+        </ul>
+        <h3>リザルト画面</h3>
+        <p>セクターが終わると、スコアが数え上がってリザルトが出ます。<strong>スコア</strong>、<strong>ベストスコア</strong>（超えたら<strong>新記録</strong>）、<strong>被弾数</strong>、<strong>彗星突進で撃破</strong>、<strong>タイム</strong>、メダル枠3つ（<strong>クリア</strong>、<strong>ノーダメージクリア</strong>、<strong>彗星 ×N</strong>）が見えます。クリアすると<strong>セクターN 解放</strong>が出て、得たコアが表示されます（<strong>初クリア +N</strong>、<strong>銀河最後の初クリア +N</strong>）。買える強化があると<strong>強化できる項目 N</strong>と<strong>格納庫</strong>ボタンが出ます。ボタンは<strong>次のセクター</strong>（クリアしたとき）、<strong>リトライ</strong>、<strong>ホーム</strong>です。</p>
+        <h3>Daily</h3>
+        <ul>
+            <li>1日にセクターがひとつ開きます。日付は端末の日付に従い、真夜中に新しい日になります。</li>
+            <li>同じ日に同じボスと出会った人どうしは、同じウェーブと同じカード候補になります。ボスは<strong>これまでに出会ったボスのなかから</strong>日替わりで決まるので、まだ出会っていないボスはDailyに出ません（誰とも出会っていなければ最初のボス、タイタンです）。ボスの第2形態はDailyには出ません。その日のボスは最初に見たときに決まってその日のあいだは変わらず、新しく出会ったボスは翌日から順番に入ります。</li>
+            <li><strong>Dailyは格納庫の強化なしで、全員が同じ自機で競います。</strong> 開始カードには<strong>STANDARD</strong>と表示されます。</li>
+            <li>1日に何度でも遊べて、その日のベストスコアが残ります。</li>
+            <li>最後まで遊んだ日（クリアでも失敗でも）が<strong>連続</strong>につながり、1日空くと途切れます。連続は、記録画面、ホームのDailyボタン、リザルト画面に表示されます。</li>
+            <li>Dailyでもコアがもらえます。スコアに応じたコアと、その日の初完走のボーナス（<strong>今日の初完走 +N</strong>）があります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 格納庫</h2>
+        <p>プレイで集めた<strong>コア</strong>を使って自機を強化する場所です。ホームの<strong>格納庫</strong>か、リザルト画面の<strong>格納庫</strong>ボタンで開きます。この画面にはバナーはありません。</p>
+        <h3>コアの手に入れ方</h3>
+        <ul>
+            <li>ClassicでもDailyでも、プレイが最後まで終わるたびに、スコア ÷ 2,000（小数点以下切り捨て）のコアが入ります。クリアできなくても入ります。</li>
+            <li>セクターを初めてクリアすると50、銀河最後のセクターを初めてクリアするとさらに200が入ります。Dailyは、その日の初完走で50が入ります。</li>
+            <li>コアはプレイでしか手に入らず、アプリ内で購入することはできません。</li>
+        </ul>
+        <h3>強化</h3>
+        <ul>
+            <li>系統は5つ、段階は合計35です。上のバーにコアの残高、機体パネルに今の形態、その下に系統5行（段階マス、「今 → 次」の効果、価格ボタン）、いちばん下に<strong>出撃 · セクターN</strong>があります。</li>
+            <li>価格ボタンを1回押すと2秒間<strong>確認 N</strong>に変わり、もう一度押すと購入します。コアが足りないとボタンが薄くなり、買えません。売り戻しはできません。</li>
+            <li>効果は「連射 1 → 2」のような簡単な数で表示されます。初めて来たときは案内のメモが出ます。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>系統</th><th>段階</th><th>上がるもの</th></tr>
+            <tr><td>主砲</td><td>10</td><td>連射、弾の太さ、弾のダメージ</td></tr>
+            <tr><td>彗星</td><td>10</td><td>開始時のゲージ、突進の幅、突進のボスへのダメージ</td></tr>
+            <tr><td>エンジン</td><td>5</td><td>移動速度</td></tr>
+            <tr><td>装甲</td><td>5</td><td>開始時のシールド、ボス戦の前に空いたシールドを1つ補充、シールドが割れると周りの敵弾を消す（範囲も広がる）</td></tr>
+            <tr><td>戦術</td><td>5</td><td>ウェーブ1の前にカードをひとつ選ぶ、セクターごとの引き直し（1〜3回）、カード4枚から選ぶ</td></tr>
+        </table>
+        <ul>
+            <li>エンジンの行の<strong>プレイで使う移動速度</strong> ‹ › で、買った段階のうちプレイで使う移動速度を下げられます（自機が速すぎると感じるとき）。</li>
+            <li>段階が上がるほど必要なコアが増え、すべて買うにはコアが約16万4千必要です。</li>
+            <li>格納庫の強化は<strong>Classicでのみ</strong>効果があります。Dailyとチュートリアルは、いつも同じ基本の自機です。</li>
+        </ul>
+        <h3>自機の形態</h3>
+        <p>買った段階の合計が増えると、自機の<strong>形態</strong>が10種類のうちのひとつに変わります。MK I（スパーク）、MK II（フレア）、MK III（ブレイズ）、MK IV（インフェルノ）、MK V（スーパーノヴァ）、MK VI（パルサー）、MK VII（マグネター）、MK VIII（クエーサー）、MK IX（ハイパーノヴァ）、MK X（ビッグバン）で、段階の合計が3・7・12・19・23・26・29・32・35のときに変わります。形態が変わるのは見た目で、能力は買った強化で決まります。変わる瞬間に演出が出て、<strong>次の出撃から MK N</strong>と表示されます。</p>
+        <ul>
+            <li>形態の列には、到達した形態の絵があり、まだの形態はシルエットです。到達した形態をタップすると、その機体を見られます（<strong>搭乗中: MK N</strong>はそのままです）。見るだけで、乗る機体は変わりません。</li>
+            <li>次の形態までの残り段階は機体パネルに表示されます（<strong>次の形態まであとN段階</strong>、最後は<strong>最終形態</strong>）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 記録と図鑑</h2>
+        <p>ホームの<strong>記録</strong>から開きます。</p>
+        <ul>
+            <li><strong>最高セクター</strong>（大きな数字）、<strong>クリアしたセクター</strong>、<strong>ノーダメージクリア数</strong>、<strong>ベストスコア</strong></li>
+            <li><strong>銀河の記録</strong>: タップすると、すべての銀河の記録（銀河ごとの8セクターのボスとベストスコア）が見られます。</li>
+            <li><strong>Daily</strong>: <strong>現在の連続日数</strong>、<strong>最長連続日数</strong>、<strong>今日のベスト</strong>、<strong>歴代ベスト</strong>、<strong>プレイした日数</strong></li>
+            <li><strong>通算記録</strong>: <strong>プレイ時間</strong>、<strong>最後まで遊んだ回数</strong>、<strong>クリア回数</strong>、<strong>ノーダメージクリア</strong>、<strong>撃破した敵</strong>、<strong>彗星突進で撃破した敵</strong>、<strong>彗星突進</strong>、<strong>最大コンボ</strong>、<strong>撃破したボス</strong>、<strong>失った自機</strong></li>
+            <li><strong>図鑑</strong>: 敵、精鋭、ボス、障害物、カード、敵弾で全109項目あります。分類ごとに、いちばん最近発見した項目の絵と<strong>発見 N/M</strong>、進み具合のバーが見え、分類をタップすると項目を見られます。項目はプレイで初めて出会ったときに埋まり、まだ出会っていないものはシルエットと<strong>未発見</strong>で表示されます。<strong>機体の形態</strong>の欄には、格納庫で到達した形態が埋まります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 設定</h2>
+        <p>ホーム右上の<strong>設定</strong>（歯車）で開きます。プレイ中は一時停止の画面からも開けます。グループは<strong>ゲーム</strong>と<strong>一般</strong>です。</p>
+        <h3>ゲーム</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>効果音のオン・オフ</td></tr>
+            <tr><td>バイブレーション</td><td>被弾したとき、ボスを倒したとき、彗星突進のとき、機体の形態が変わるときの振動のオン・オフ</td></tr>
+            <tr><td>エフェクトを減らす</td><td>揺れや点滅などの演出を控えめにします</td></tr>
+            <tr><td>ゲームBGM</td><td>プレイ中のBGMのオン・オフ</td></tr>
+            <tr><td>メニューBGM</td><td>ホームやメニューで流れる音楽のオン・オフ</td></tr>
+            <tr><td>BGMの音量</td><td>ゲームBGMとメニューBGMの音量を10%刻みで選びます。どちらかがオンのときに変えられます</td></tr>
+            <tr><td>効果音の音量</td><td>効果音の音量を10%刻みで選びます。効果音がオンのときに変えられます</td></tr>
+            <tr><td>画面の揺れ</td><td>被弾時や大きな爆発で画面が揺れます。オフにできます</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>言語</td><td><strong>端末の言語</strong>に従う（初期値）か、一覧（English・日本語・한국어・简体中文・繁體中文）から選びます</td></tr>
+            <tr><td>チュートリアルをもう一度見る</td><td>チュートリアルをもう一度遊びます。記録には残りません</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意内容を確認・変更します。同意が必要な地域（ヨーロッパなど）でのみ表示されます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明（<strong>遊び方</strong>）、<strong>プライバシーポリシー</strong>、<strong>オープンソースライセンス</strong>。ライセンス一覧で、絵と音楽をつくったツールを確認できます</td></tr>
+        </table>
+        <p>画面の色は、暗い色の1種類です。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 広告と記録の保管</h2>
+        <ul>
+            <li><strong>プレイ中は、広告も課金もありません。</strong> プレイ画面、カード選択、一時停止、チュートリアル、リザルト画面、格納庫に広告はありません。</li>
+            <li>ホーム、セクター選択、記録の画面のいちばん下に<strong>バナー広告</strong>が1本入ります。</li>
+            <li><strong>全画面広告</strong>は、リザルト画面で次の操作（次のセクター、リトライ、ホームなど）を押したあとにだけ、ときどき出ます。ゲームを遊んだ時間（プレイを進めた時間だけを数え、メニューと一時停止は除きます）が20分になってから出ることがあり、その後は最後の広告からゲームをさらに15分遊ぶまで出ません。アプリを開いてから最初のプレイのリザルト、失敗した直後の<strong>リトライ</strong>、チュートリアルのあとには出ません。</li>
+            <li>同意が必要な地域（ヨーロッパなど）では、広告の同意画面が出ます。あとで設定の<strong>プライバシー設定</strong>から変えられます。</li>
+            <li>アプリ内で支払うものはありません。</li>
+            <li>インターネットは、広告と利用統計・エラー報告にだけ使います。</li>
+            <li>記録と設定は端末の中に保存されます。端末のGoogleバックアップ（Androidの自動バックアップ）がオンなら一緒にバックアップされ、端末を替えても続きから遊べます。アプリを削除すると端末の記録も消えます。</li>
+            <li>詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">Cometdive</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

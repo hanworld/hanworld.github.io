@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>Cometdive: How to Play - Willee Project</title>
+    <meta name="description" content="Cometdive: How to Play — Cometdive is a vertical arcade space shooter you play with one hand.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/cometdive/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/cometdive/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/cometdive/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/cometdive/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/cometdive/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/cometdive/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/cometdive/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="Cometdive: How to Play - Willee Project">
+    <meta property="og:description" content="Cometdive: How to Play — Cometdive is a vertical arcade space shooter you play with one hand.">
+    <meta property="og:url" content="https://willee.net/apps/cometdive/manual/en.html">
+    <meta property="og:image" content="https://willee.net/apps/cometdive/images/og_image_en.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../en.html">Cometdive</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="Cometdive" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>Cometdive</h1>
+                <p>How to Play</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/Cometdive_en_01_wave.webp" alt="Sector 20 — enemies diving out of formation, comet gauge full" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_02_dash.webp" alt="Comet Dive — the ship becomes a comet and pierces the formation" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_03_boss.webp" alt="Boss fight — Titan II (second form) in sector 32" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_04_map.webp" alt="Sectors — the Zone 2 map (sectors 9–16)" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_05_hangar.webp" alt="Hangar — MK VIII Quasar and the upgrade branches" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_06_cards.webp" alt="Card pick — choose one of four cards after clearing wave 1" width="1080" height="2160" loading="lazy" decoding="async">
+            <img src="../images/Cometdive_en_07_result.webp" alt="Result — Sector 12 clear (New best)" width="1080" height="2160" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>Cometdive</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>Cometdive is a vertical arcade space shooter you play with one hand. Drag left or right anywhere on the screen to move your ship; it fires on its own. Enemies fly in as formations and dive at you. Catch the divers to fill the comet gauge, then your ship becomes a comet and pierces straight through the formation (the <strong>Comet Dive</strong>).</p>
+        <ul>
+            <li>There is no sign-up and no login. The first time you open the app, a <strong>tutorial</strong> on a practice sector teaches the controls and the Comet Dive. You can end it at any time with <strong>Skip</strong>, and replay it from Settings.</li>
+            <li><strong>The game works without an internet connection.</strong> The internet is only used for ads and for sending usage statistics and crash reports.</li>
+            <li>The app follows your device language. It supports English, Korean, Japanese and Chinese (Simplified and Traditional), and you can also pick a language in Settings.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Rules</h2>
+        <ul>
+            <li>A <strong>sector</strong> is three waves and a boss. Destroy every enemy in a wave to move on to the next, and the boss arrives after the third wave. Defeat the boss to <strong>clear</strong> the sector. A sector takes about three minutes.</li>
+            <li>You start every sector with <strong>three ships</strong>. A hit costs you a ship and gives you a moment of invulnerability. Lose all three and the sector is failed. <strong>There are no continues.</strong> A shield absorbs a hit without losing a ship (from cards and from the Hangar's Hull branch).</li>
+            <li>Enemies give you points. A <strong>diving</strong> enemy is worth <strong>double</strong> and fills the comet gauge more.</li>
+            <li><strong>Combo</strong>: destroy another enemy within about 1.2 seconds of the last one and the combo goes up by one (to a maximum of ×8). Your combo multiplies the points of each kill. Let the time run out and it drops back to ×1.</li>
+            <li>Bonus points are added when you finish a wave and when you clear a sector. The bonus grows with the number of enemies you destroyed with the Comet Dive, and with a <strong>No-hit clear</strong>, a clear in which you were never hit.</li>
+            <li>Clearing a sector unlocks the next one (chapters 3 and 6).</li>
+            <li>A run in progress is not saved. If you leave to Home, that sector starts over.</li>
+        </ul>
+        <h3>Reading the play screen</h3>
+        <ul>
+            <li>Top bar: your score (eight digits), <strong>SECTOR</strong> and <strong>WAVE</strong>, <strong>COMBO</strong> with a bar for the time you have left to continue it, and the pause button. When a boss appears, its health frame shows up, and a <strong>WARNING</strong> strip flashes just before it arrives.</li>
+            <li>Under the board: your remaining ships and the <strong>COMET</strong> gauge (10 cells). <strong>READY</strong> lights when the gauge is full.</li>
+            <li>The rounded pad at the very bottom is the <strong>control strip</strong> (chapter 2).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Controls</h2>
+        <ul>
+            <li><strong>Drag</strong>: touch anywhere on the screen and drag left or right, and the ship moves by as much as you drag. Your finger does not have to be on the ship, and the ship only moves left and right along the bottom of the screen.</li>
+            <li><strong>The control strip below the board</strong>: dragging on it works the same way, and your finger never covers the ship. The ‹ or › on the side you drag toward lights up, and the whole strip glows orange when the gauge is full.</li>
+            <li><strong>Your ship fires on its own.</strong> Get under the enemies and hit them.</li>
+            <li><strong>Pause</strong>: tap the pause button on the top bar. Pressing Back, or sending the app to the background, also pauses. The pause window offers <strong>Resume</strong>, <strong>Restart</strong> (this sector from the beginning), <strong>Settings</strong> and <strong>Home</strong>. Anything you change in Settings from there applies to the run at once.</li>
+            <li>Drag sensitivity is fixed and is not a setting. Upgrading the engine in the Hangar raises it together with your move speed (chapter 7).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. Comet Dive</h2>
+        <ul>
+            <li>Destroying enemies fills the <strong>COMET</strong> gauge: a little for enemies holding formation, a lot for diving ones. When all 10 cells are full, <strong>READY</strong> lights up and the control strip glows orange.</li>
+            <li>With a full gauge, start the Comet Dive in one of two ways.
+                <ul>
+                    <li><strong>Flick up</strong>: flick your finger up the screen fast (<strong>↑ Flick up: Comet Dive</strong>).</li>
+                    <li><strong>Tap the strip</strong>: tap anywhere on the control strip and lift (<strong>Or tap the strip below</strong>). A long press or a drag does not trigger it.</li>
+                </ul>
+            </li>
+            <li>For about 0.8 seconds your ship surges up the screen as a comet and pierces the enemies in its path. When the gauge is full, the dive lane (chevrons) and rings around the enemies in it are shown. You can still drag left and right during the dive to bend your path a little.</li>
+            <li>The dive breaks through enemies wearing a ring shield and also damages bosses. It cannot break a beam. The dive uses up the gauge, so you fill it again.</li>
+            <li>The number of enemies you destroyed with the Comet Dive is shown in the result and in Records, and counts toward the sector clear bonus.</li>
+            <li>During play, a hint appears for your first few dives to remind you how.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Cards</h2>
+        <ul>
+            <li>After each wave you pick <strong>one of three cards</strong> (<strong>Wave N clear · Choose a card</strong>). Cards stack only within that sector, and the next sector starts over from nothing.</li>
+            <li>Picking the same card again raises it to level 2. Some cards have only one level.</li>
+            <li>You begin with ten kinds of cards, and the rest join the pool one at a time as the zones go up (the Zone column in the table).</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>Card</th><th>Effect</th></tr>
+            <tr><td>Multi-shot</td><td>Fire two parallel shots → three</td></tr>
+            <tr><td>Spread shot</td><td>Add an angled pair of shots → two angled pairs</td></tr>
+            <tr><td>Rapid fire</td><td>Less time between shots (up to 3 times)</td></tr>
+            <tr><td>Piercing shot</td><td>Shots go through one enemy → two</td></tr>
+            <tr><td>Homing missiles</td><td>Fire missiles that chase the nearest enemy → more often</td></tr>
+            <tr><td>Wing drone</td><td>A drone fires beside you → two drones</td></tr>
+            <tr><td>Shield</td><td>One shield: take a hit without losing a ship → one more (refills all when chosen)</td></tr>
+            <tr><td>Comet charge</td><td>The comet gauge fills faster → much faster</td></tr>
+            <tr><td>Dive warning</td><td>Enemies flash orange before they dive</td></tr>
+            <tr><td>Extra ship</td><td>One more ship in reserve</td></tr>
+            <tr><td>Side guns (from Zone 2)</td><td>Your wingtips fire angled shots → more often</td></tr>
+            <tr><td>Heavy rounds (Zone 3)</td><td>Every 4th volley, straight shots deal double damage → every 3rd</td></tr>
+            <tr><td>Combo keeper (Zone 4)</td><td>Combos last longer, raising your score → much longer</td></tr>
+            <tr><td>Dive hunter (Zone 5)</td><td>Double damage to diving enemies → diving kills also fill the comet gauge faster</td></tr>
+            <tr><td>Chain arc (Zone 6)</td><td>Kills arc to one nearby enemy → two</td></tr>
+            <tr><td>Comet nova (Zone 7)</td><td>Your Comet Dive bursts a shockwave near the top → a second shockwave where you land clears nearby shots</td></tr>
+            <tr><td>Pulse laser (Zone 8)</td><td>Fires a piercing laser upward at intervals → more often</td></tr>
+            <tr><td>Comet wake (Zone 9)</td><td>Your Comet Dive leaves embers that burn enemies → the embers last longer</td></tr>
+        </table>
+        <ul>
+            <li>Upgrading the Hangar's <strong>Tactics</strong> branch helps you use cards. You choose a card before wave 1 (<strong>Choose a card before launch</strong>), you can <strong>Reroll</strong> the choices (1 to 3 times per sector, with the <strong>Reroll (N left)</strong> button on the card screen), and later you choose from <strong>four cards</strong> (chapter 7).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Enemies, obstacles and bosses</h2>
+        <p>You can look at all of these again in the Codex (chapter 8). When a sector brings a new enemy or boss you have not met, an introduction card appears at the start.</p>
+        <h3>Enemies and tiers</h3>
+        <p>There are 16 enemy families. As the zones go up, higher <strong>tiers</strong> of the same family appear. A higher tier is tougher, and tier 4 has one more attack. Tiers are told apart by body color and white stripes.</p>
+        <table class="info-table">
+            <tr><th>Name</th><th>What it does</th></tr>
+            <tr><td>Quark</td><td>The backbone of the formation. Fires now and then, and once while diving.</td></tr>
+            <tr><td>Starray</td><td>Curls and dives fast, firing twice on the way down.</td></tr>
+            <tr><td>Oort</td><td>Hard to crack. Sprays a fan of needles as it dives.</td></tr>
+            <tr><td>Cluster</td><td>Sturdy. Releases two Neutrinos when first hit.</td></tr>
+            <tr><td>Gamma</td><td>Takes precise aim at you with needles from the formation.</td></tr>
+            <tr><td>Neutrino</td><td>Released by Clusters and bosses. Swoops straight down.</td></tr>
+            <tr><td>Solar Sail</td><td>Zigzags down and drops a shot at every turn.</td></tr>
+            <tr><td>Plasma Lance</td><td>Pauses mid-dive, then spears straight down its lane.</td></tr>
+            <tr><td>Meteor Gun</td><td>Heats its barrels, then fires big, slow shells.</td></tr>
+            <tr><td>Lagrange</td><td>Sways as it sinks and drops two shots side by side.</td></tr>
+            <tr><td>Swingby</td><td>Fires hook shots that turn down and narrow your path.</td></tr>
+            <tr><td>Eclipse</td><td>Swoops halfway down, fires, and returns to its place.</td></tr>
+            <tr><td>Stardust</td><td>Crosses the field and leaves mines behind.</td></tr>
+            <tr><td>Quadrant</td><td>Spins down and scatters four shots in an X.</td></tr>
+            <tr><td>Sun Lens</td><td>Draws a warning line, then drops a beam along it.</td></tr>
+            <tr><td>Aurora</td><td>Wraps the enemy below it in a barrier. Take it out first.</td></tr>
+        </table>
+        <h3>Elites</h3>
+        <p>Elites are stronger enemies that carry a marker.</p>
+        <table class="info-table">
+            <tr><th>Name</th><th>What it does</th></tr>
+            <tr><td>Ringshield</td><td>Wears a ring that blocks two shots. A Comet Dive breaks through.</td></tr>
+            <tr><td>Bounty</td><td>Big score and comet gauge if you catch it. It flees after one dive.</td></tr>
+            <tr><td>Prowplate</td><td>Shrugs off your shots in formation. Hit it while it dives.</td></tr>
+            <tr><td>Overdrive</td><td>Dives faster and more often.</td></tr>
+            <tr><td>Splitter</td><td>Bursts into two Neutrinos when destroyed.</td></tr>
+            <tr><td>Minetail</td><td>Leaves a mine where it was destroyed.</td></tr>
+        </table>
+        <h3>Obstacles</h3>
+        <table class="info-table">
+            <tr><th>Name</th><th>What it does</th></tr>
+            <tr><td>Driftrock</td><td>A slow-falling rock. Break it and it splits into two pebbles.</td></tr>
+            <tr><td>Volatile crystal</td><td>Shoot it to burst and wreck the enemies around it.</td></tr>
+            <tr><td>Wreck</td><td>Unbreakable debris that blocks shots from both sides.</td></tr>
+            <tr><td>Meteor shower</td><td>After a warning, small meteors pour down in one line.</td></tr>
+            <tr><td>Gravity well</td><td>A vortex that bends your shots toward its center.</td></tr>
+            <tr><td>Arc pylons</td><td>Their current blocks your shots. Destroy one to cut it.</td></tr>
+        </table>
+        <h3>Enemy shots</h3>
+        <p>Enemy shots are told apart by shape and glow, not by color alone.</p>
+        <table class="info-table">
+            <tr><th>Name</th><th>What it does</th></tr>
+            <tr><td>Orb</td><td>Round and slow. The most common enemy shot.</td></tr>
+            <tr><td>Needle</td><td>Thin and fast. Often comes in a fan.</td></tr>
+            <tr><td>Shell</td><td>Big and slow. It narrows your room to dodge.</td></tr>
+            <tr><td>Hook</td><td>Turns once at a set moment.</td></tr>
+            <tr><td>Mine</td><td>Stops, blinks, and bursts into a ring. Two shots put it out.</td></tr>
+            <tr><td>Beam</td><td>A pillar of light that strikes along the warning line. Your Comet Dive can't break it.</td></tr>
+        </table>
+        <h3>Warnings before dangerous attacks</h3>
+        <p>Dangerous attacks show a warning from the moment they begin. A beam draws a warning line first, a mine blinks before it bursts, a meteor shower pours down after a warning, and a bullet curtain shows its gap as an open lane. A <strong>WARNING</strong> strip appears when a boss arrives. The <strong>Dive warning</strong> card makes enemies flash orange before they dive.</p>
+        <h3>Bosses</h3>
+        <p>Every sector ends with a boss. At the last sector of a zone you meet a new boss or a boss in its <strong>second form</strong> (the name followed by II), and the second form attacks differently.</p>
+        <table class="info-table">
+            <tr><th>Boss</th><th>What it does</th><th>Second form (II)</th></tr>
+            <tr><td>Titan</td><td>Aims from its twin turrets and bursts rings and spirals from its hull.</td><td>Its turret covers blow off to bare three barrels. It shifts and drops bullet curtains with a gap.</td></tr>
+            <tr><td>Nebula</td><td>Aims fans of needles from its wing cannons and bursts rings and spirals.</td><td>Spreads its fins and lunges, then its wing cannons sweep fans of shots across each other.</td></tr>
+            <tr><td>Prism</td><td>Its two crystal shards fire needle rings while its body spins spirals.</td><td>Its blades split and its shards circle it, then it raises fences of beams.</td></tr>
+            <tr><td>Star Furnace</td><td>Aims shells from its exhaust guns and drops bullet curtains with a gap.</td><td>Its grate bursts open and spills fire. It lunges, drops bullet curtains, and scatters mines.</td></tr>
+            <tr><td>Orrery</td><td>Four orbiting spheres fire outward, and fans of hook shots turn toward you.</td><td>Its rings tilt and its spheres speed up. It sows mines and fires turning shots.</td></tr>
+            <tr><td>Ion Spire</td><td>Raises fences of beams and sweeps the field from its two capacitors.</td><td>Lightning wraps its coil. It raises staggered beam fences and bullet curtains, and calls Swingbys.</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Modes</h2>
+        <h3>Home</h3>
+        <p>The top has the title and the home-screen visuals, and the gear-shaped <strong>Settings</strong> button is at the top right. Below are two large buttons and three small ones.</p>
+        <table class="info-table">
+            <tr><th>Button</th><th>What it does</th></tr>
+            <tr><td><strong>Start sector N</strong></td><td>Starts the furthest sector you have unlocked, with its boss and your best score for it shown.</td></tr>
+            <tr><td><strong>Daily</strong></td><td>Starts today's Daily. It shows today's boss, and if you have finished a run today, today's best and your streak.</td></tr>
+            <tr><td><strong>Sectors</strong></td><td>Pick any unlocked sector (below). It shows your current zone number.</td></tr>
+            <tr><td><strong>Hangar</strong></td><td>Spend cores to upgrade your ship (chapter 7). It shows your core balance, and a dot appears when you can afford an upgrade.</td></tr>
+            <tr><td><strong>Records</strong></td><td>Opens your records and the Codex (chapter 8). It shows your highest sector.</td></tr>
+        </table>
+        <h3>Classic</h3>
+        <ul>
+            <li><strong>Eight sectors make a zone.</strong> <strong>Zone 1</strong> is sectors 1 to 8, and from sector 9 the sectors keep coming with no end (Zone 2, Zone 3, and so on).</li>
+            <li>Clearing a sector unlocks the next one. You can replay any unlocked sector at any time, and your best score is kept. A sector you have not unlocked is <strong>Locked</strong>: <strong>Clear the previous sector</strong> to open it.</li>
+            <li>The last sector of a zone (the eighth) is where a new boss, or a boss in its second form, waits. Clear it and <strong>Zone N cleared</strong> appears.</li>
+            <li>The <strong>score multiplier</strong> rises with every zone, up to ×3. Your record centers on the <strong>highest sector</strong> you have reached.</li>
+            <li>Hangar upgrades you have bought take effect in Classic (chapter 7).</li>
+        </ul>
+        <h3>Sectors</h3>
+        <ul>
+            <li>Each zone is one page, and you swipe up and down to turn between them (the earlier zone is below, the next one above). At first you see the zone with the sector you are due to play, and you can only swipe as far as that zone.</li>
+            <li>A page is a route that zigzags upward, with a hexagonal tile for every sector showing its boss (the zone's last tile is larger). The boss of a sector you have not unlocked is hidden behind a <strong>?</strong>. Your ship hovers over the sector to play next.</li>
+            <li>The label outside each tile shows the sector number, two medal slots (<strong>Clear</strong> and <strong>No-hit clear</strong>), and your best score (<strong>New</strong> if you have none, <strong>Locked</strong> if it is not open yet).</li>
+            <li>The zone name, sector range and number of sectors cleared are in the top corner of the map, and the thin line along the right edge shows where the current zone sits.</li>
+            <li>Tap an unlocked tile to start that sector. Tap a locked one to be told how to open it.</li>
+        </ul>
+        <h3>Result screen</h3>
+        <p>When a sector ends, the result counts up. You see <strong>Score</strong>, <strong>Best score</strong> (<strong>New best</strong> if you beat it), <strong>Hits</strong>, <strong>Comet Dive kills</strong>, <strong>Time</strong>, and three medal slots (<strong>Clear</strong>, <strong>No-hit clear</strong>, <strong>Comet ×N</strong>). On a clear, <strong>Sector N unlocked</strong> appears, and the cores you earned are shown (<strong>First clear +N</strong>, <strong>Zone finale first clear +N</strong>). If you can afford an upgrade, <strong>N upgrades ready</strong> and a <strong>Hangar</strong> button appear. The buttons are <strong>Next sector</strong> (after a clear), <strong>Restart</strong> and <strong>Home</strong>.</p>
+        <h3>Daily</h3>
+        <ul>
+            <li>One sector opens each day. The date is your device's date, and a new day begins at midnight.</li>
+            <li>On the same day, players who meet the same boss get the same waves and the same card choices. The boss is chosen day by day from <strong>the bosses you have met so far</strong>, so a boss you have not met never shows up in Daily (if you have met none, it is the first boss, Titan). Bosses never appear in their second form in Daily. The day's boss is fixed the first time you look at it and does not change that day, and a boss you meet newly joins the rotation from the next day.</li>
+            <li><strong>In Daily, everyone flies the same ship, without Hangar upgrades.</strong> The start card says <strong>STANDARD</strong>.</li>
+            <li>You can play it more than once a day, and your best score of the day is kept.</li>
+            <li>A day on which you finish a run (cleared or failed) extends your <strong>streak</strong>, and missing a day breaks it. The streak shows in Records, on the Daily button on Home, and on the result screen.</li>
+            <li>Daily earns cores too: cores for your score, plus a bonus for your first finish of the day (<strong>Today's first finish +N</strong>).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Hangar</h2>
+        <p>The Hangar is where you spend the <strong>cores</strong> you earn in play to upgrade your ship. Open it from <strong>Hangar</strong> on Home or from the <strong>Hangar</strong> button on the result screen. There is no banner on this screen.</p>
+        <h3>Earning cores</h3>
+        <ul>
+            <li>In both Classic and Daily, every finished run earns cores equal to your score ÷ 2,000 (rounded down), cleared or not.</li>
+            <li>You earn 50 more the first time you clear a sector, 200 more the first time you clear the last sector of a zone, and 50 more for your first finish of the day in Daily.</li>
+            <li>Cores come only from play. They cannot be bought in the app.</li>
+        </ul>
+        <h3>Upgrades</h3>
+        <ul>
+            <li>There are five branches and 35 steps in all. The top bar shows your core balance, the ship panel shows your current form, below it are five branch rows (step cells, a "now → next" effect line and a price button), and at the bottom is <strong>Launch · Sector N</strong>.</li>
+            <li>Tap a price button once and it turns into <strong>Confirm N</strong> for 2 seconds. Tap again to buy. If you are short of cores the button is dim and you cannot buy. There are no refunds.</li>
+            <li>Effects are shown as simple numbers, like "Fire rate 1 → 2". A note appears the first time you visit.</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>Branch</th><th>Steps</th><th>What goes up</th></tr>
+            <tr><td>Main gun</td><td>10</td><td>Fire rate, shot size, shot damage</td></tr>
+            <tr><td>Comet</td><td>10</td><td>Starting gauge, dive width, dive damage to bosses</td></tr>
+            <tr><td>Engine</td><td>5</td><td>Move speed</td></tr>
+            <tr><td>Hull</td><td>5</td><td>Starting shield, refill one empty shield before the boss, a breaking shield clears nearby enemy shots (and clears a wider area)</td></tr>
+            <tr><td>Tactics</td><td>5</td><td>Choose a card before wave 1, rerolls per sector (1 to 3), choose from four cards</td></tr>
+        </table>
+        <ul>
+            <li>On the Engine row, <strong>Move speed in play</strong> ‹ › lets you lower the move speed used in play, among the steps you have bought, if the ship feels too fast.</li>
+            <li>Steps get more expensive as they go up, and buying all of them takes about 164,000 cores.</li>
+            <li>Hangar upgrades work <strong>only in Classic</strong>. Daily and the tutorial always use the same basic ship.</li>
+        </ul>
+        <h3>Ship forms</h3>
+        <p>As your total steps grow, your ship changes <strong>form</strong> through ten of them: MK I (Spark), MK II (Flare), MK III (Blaze), MK IV (Inferno), MK V (Supernova), MK VI (Pulsar), MK VII (Magnetar), MK VIII (Quasar), MK IX (Hypernova) and MK X (Big Bang). It changes at 3, 7, 12, 19, 23, 26, 29, 32 and 35 total steps. A form changes how the ship looks; its strength comes from the upgrades you have bought. When it changes, a short effect plays and <strong>From your next launch: MK N</strong> appears.</p>
+        <ul>
+            <li>The form row shows a picture for each form you have reached and a silhouette for those you have not. Tap a reached form to look at that ship (<strong>Now flying: MK N</strong> stays the same). It is view-only, and the ship you fly does not change.</li>
+            <li>The ship panel shows how far it is to the next form (<strong>N more upgrades to the next form</strong>, or <strong>Final form</strong> at the end).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. Records and Codex</h2>
+        <p>Open them from <strong>Records</strong> on Home.</p>
+        <ul>
+            <li><strong>Highest sector</strong> (the big number), <strong>Sectors cleared</strong>, <strong>No-hit clears</strong>, <strong>Best score</strong></li>
+            <li><strong>Zone Records</strong>: tap it to see the records of every zone (each zone's eight sectors with their bosses and best scores).</li>
+            <li><strong>Daily</strong>: <strong>Current streak</strong>, <strong>Longest streak</strong>, <strong>Today's best</strong>, <strong>Best ever</strong>, <strong>Days played</strong></li>
+            <li><strong>Totals</strong>: <strong>Play time</strong>, <strong>Runs</strong>, <strong>Clears</strong>, <strong>No-hit clears</strong>, <strong>Enemies destroyed</strong>, <strong>Comet Dive kills</strong>, <strong>Comet Dives</strong>, <strong>Best combo</strong>, <strong>Bosses destroyed</strong>, <strong>Ships lost</strong></li>
+            <li><strong>Codex</strong>: enemies, elites, bosses, obstacles, cards and enemy shots make 109 entries in all. Each category shows the most recent entry you found, <strong>Found N/M</strong> and a progress bar, and tapping a category lets you browse its entries. Entries fill in when you first meet them in play, and ones you have not met yet show as silhouettes marked <strong>Not found yet</strong>. The <strong>Ship forms</strong> section fills in with the forms you have reached in the Hangar.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. Settings</h2>
+        <p>Open <strong>Settings</strong> (the gear) at the top right of Home. During play you can also open it from the pause window. There are two groups: <strong>Game</strong> and <strong>General</strong>.</p>
+        <h3>Game</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Sound effects</td><td>Turns sound effects on and off</td></tr>
+            <tr><td>Vibration</td><td>Turns vibration on and off (when you are hit, when a boss falls, on a Comet Dive, and when your ship changes form)</td></tr>
+            <tr><td>Reduce effects</td><td>Tones down effects like shaking and flashing</td></tr>
+            <tr><td>Game music</td><td>Turns the music during play on and off</td></tr>
+            <tr><td>Menu music</td><td>Turns the music on Home and in menus on and off</td></tr>
+            <tr><td>Music volume</td><td>Sets the volume of game and menu music in 10% steps. You can change it when at least one of the two is on</td></tr>
+            <tr><td>Sound effect volume</td><td>Sets the volume of sound effects in 10% steps. You can change it when sound effects are on</td></tr>
+            <tr><td>Screen shake</td><td>The screen shakes when you are hit and on big explosions. You can turn it off</td></tr>
+        </table>
+        <h3>General</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Language</td><td>Follow your <strong>Device language</strong> (the default), or pick from the list (English, 日本語, 한국어, 简体中文, 繁體中文)</td></tr>
+            <tr><td>Replay the tutorial</td><td>Plays the tutorial again. It is not recorded</td></tr>
+            <tr><td>Privacy options</td><td>Review or change your ad consent. Shown only in regions where consent is required (such as Europe)</td></tr>
+            <tr><td>About</td><td>Version, this guide (<strong>How to play</strong>), <strong>Privacy policy</strong> and <strong>Open-source licenses</strong>. In the licenses list you can see the tools used to make the art and music</td></tr>
+        </table>
+        <p>The screen colors are one dark theme.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. Ads and where your records are kept</h2>
+        <ul>
+            <li><strong>There are no ads and no purchases during play.</strong> The play screen, card choice, pause, the tutorial, the result screen and the Hangar have no ads.</li>
+            <li>A <strong>banner ad</strong> sits at the very bottom of Home, Sectors and Records.</li>
+            <li>A <strong>full-screen ad</strong> can appear only after you tap a next action on the result screen (Next sector, Restart, Home and so on), and only now and then. It can appear once you have played 20 minutes (only time spent in a run counts, not menus or pauses), and after that you must play another 15 minutes after the last ad before one can appear again. None appears after the result of the first run since you opened the app, after a <strong>Restart</strong> right after a failed run, or after the tutorial.</li>
+            <li>In regions where consent is required (such as Europe), an ad consent screen appears. You can change it later in Settings under <strong>Privacy options</strong>.</li>
+            <li>There is nothing to buy in the app.</li>
+            <li>The internet is only used for ads and for usage statistics and crash reports.</li>
+            <li>Your records and settings are stored on your device. If your device's Google backup (Android Auto Backup) is on, they are included in the backup, so you can carry on after changing devices. Deleting the app also deletes the records on the device.</li>
+            <li>For details, see the <a href="../privacy/en.html">Privacy policy</a>.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. Contact</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="../en.html">Cometdive</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
