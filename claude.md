@@ -242,7 +242,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── railjoin/           # Railjoin 앱 (출시 예정)
+│   └── railjoin/           # Railjoin 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -389,7 +389,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Railjoin
 - 판 위쪽·오른쪽 숫자(그 줄에서 선로가 놓이는 칸 수)에 맞춰 입구에서 출구까지 끊기지 않는 선로 한 줄을 잇는 기찻길 논리 퍼즐. 모든 판이 답 하나이고 찍지 않고 논리만으로 풀림. Classic(다섯 등급 6×6~12×12)·Daily(매일 6×6·8×8·10×10 셋) 모드
-- 플랫폼: Android (출시 예정 — 2026-11-01 설명서·소개 페이지·홈 카드 게시. 스토어 제목은 2026-11-05 확정 `Train Tracks Puzzle: Railjoin`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'Railjoin')
+- 플랫폼: Android (Google Play 출시, 2026-11-09. 스토어 제목 `Train Tracks Puzzle: Railjoin`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'Railjoin')
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.railjoin
 - 패키지 ID: net.willee.railjoin
 - 원본 문서: 앱 저장소(A37.Railjoin) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/railjoin/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지가 `privacy/en.html`을 쓰므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - 'Classic'·'Daily'·'Railjoin'은 모든 언어에서 영어로 씀. '기찻길 퍼즐'·'Train Tracks Puzzle'·'線路パズル'은 장르 이름으로만 쓰고 다른 회사 게임 이름은 쓰지 않음('Tracks' 한 낱말을 제목처럼 쓰지 않고 'Connect Tracks'·'Traindoku'도 쓰지 않음, 앱 저장소 `docs/README.md`·`CLAUDE.md` 규칙). 'railway puzzle'·'기차 퍼즐'은 일반어로만 쓰고 'train tracks'·'기차 선로' 바로 뒤에 잇거나 '기차 퍼즐 게임'처럼 쓰지 않음(같은 장르 앱 이름에 든 구절, 앱 저장소 `listing.md`)
