@@ -222,7 +222,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   ├── cometdive/          # Cometdive 앱 (출시 예정)
+│   ├── cometdive/          # Cometdive 앱
 │   │   ├── index.html      # 한국어로 리다이렉트
 │   │   ├── ko.html
 │   │   ├── en.html
@@ -380,7 +380,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### Cometdive
 - 적 편대가 급강하해 오는 세로 화면 우주 슈팅. 배를 좌우로 끌어 피하고 사격은 자동. 급강하하는 적을 잡아 혜성 게이지를 채우면 배가 혜성이 되어 편대를 꿰뚫음(혜성 돌진). Classic(섹터 8개가 은하 하나, 섹터 9부터 끝없이 이어지고 은하 끝 섹터에 새 보스나 보스의 둘째 형태)·Daily(하루 한 섹터, 같은 날 같은 보스면 같은 웨이브, 연속 기록) 모드
-- 플랫폼: Android (출시 예정 — 2026-11-09 설명서·소개 페이지·홈 카드 게시. 스토어 제목은 2026-11-09 확정 `Space Shooter: Cometdive`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'Cometdive')
+- 플랫폼: Android (Google Play 출시, 2026-11-11. 스토어 제목 `Space Shooter: Cometdive`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'Cometdive')
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.cometdive
 - 패키지 ID: net.willee.cometdive
 - 원본 문서: 앱 저장소(A36.Cometdive) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/cometdive/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지에 `privacy/en.html`이 등록되어 있으므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - 'Classic'·'Daily'·'Cometdive'는 모든 언어에서 영어로 씀(앱 저장소 `docs/README.md` 규칙). 이름은 늘 한 낱말(Cometdive, 코멧다이브, コメットダイブ)이고 'Comet'·'코멧'만 따로 쓰지 않음(장치 이름 'Comet Dive'·'혜성 돌진'은 앱 문구대로). 영어는 'zone'을 쓰고 'galaxy'를 쓰지 않음. 다른 회사·경쟁작 이름을 쓰지 않고, AI로 만든 그림·음악이 있어 '손으로 그린'·'작곡한' 같은 말도 쓰지 않음(앱 저장소 `listing.md`)
