@@ -51,8 +51,8 @@
         .app-head { display: flex; align-items: center; gap: 14px; }
         .app-head:hover { text-decoration: none; }
         .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
-        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
-        .app-head:hover h3 { color: #1D7A5F; }
+        .app-head h4 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h4 { color: #1D7A5F; }
         .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
@@ -66,10 +66,6 @@
         .support-box { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
-
-        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
-        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
-        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -112,6 +108,7 @@
     </div>
 </header>
 
+<main>
 <section id="about">
     <div class="container">
         <h2>关于 Willee Project</h2>
@@ -140,104 +137,122 @@
 <section id="services">
     <div class="container">
         <h2>应用服务</h2>
-        <ul class="app-list">
-            <li>
-                <a class="app-head" href="/apps/twenty-four-hours/zh.html">
-                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Twenty Four Hours</h3>
-                </a>
-                <p>一款将24小时模拟/数字时钟与日程管理相结合的应用。具有统计仪表板、云同步和多语言支持功能。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/good-timer/zh.html">
-                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Good Timer</h3>
-                </a>
-                <p>提供可自由配置的间隔计时器和支持分段记录的秒表的通用计时器应用。支持预设、记录/统计和云同步。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tarotyo/zh.html">
-                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>塔罗哟</h3>
-                </a>
-                <p>抽取 78 张塔罗牌，并生成可供 AI 聊天工具解读的提示词的塔罗解读应用。6 种牌阵、卡牌浏览、多语言支持。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/board-games/zh.html">
-                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>棋盘游戏</h3>
-                </a>
-                <p>将五子棋、黑白棋、西洋跳棋、西洋双陆棋、四子棋、点格棋、井字棋等七款棋盘游戏装进一个应用的游戏合集。AI 对战（三档难度）与本地双人对战，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/nums-to-one/zh.html">
-                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Nums to One</h3>
-                </a>
-                <p>用加减乘除把 4 张数字卡片凑成 24 的数字益智游戏。经典、极速（60 秒）、每日挑战（每天 3 题）三种模式，分步提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tenmates/zh.html">
-                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Tenmates</h3>
-                </a>
-                <p>消除相同或相加为 10 的数字、清空盘面的数字益智游戏。经典、极速（90 秒）、每日挑战（每天一盘）三种模式，会往前看的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/keepsum/zh.html">
-                    <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Keepsum</h3>
-                </a>
-                <p>选出要保留和要消除的数字，让每一行和每一列的和都等于目标和的逻辑益智游戏。经典、每日挑战（每天一题）、极速（3 分钟）三种模式，会说明理由的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cagewise/zh.html">
-                    <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cagewise</h3>
-                </a>
-                <p>以虚线框起的笼子之和为线索，填满 9×9 盘面的杀手数独。经典（六个难度）、每日挑战（每天一题）两种模式，会讲清理由的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/minewise/zh.html">
-                    <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Minewise</h3>
-                </a>
-                <p>无需猜测的扫雷，每个盘面都只靠逻辑就能解开。Classic（五个等级）、困难（踩到地雷就结束）、Daily（每天三个盘面）三种模式，会说明理由的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/huestar/zh.html">
-                    <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Huestar</h3>
-                </a>
-                <p>在每行、每列和每个颜色区域放星星的 Star Battle 逻辑谜题。Classic（六个等级）、Daily（每天三个盘面）两种模式，会说明理由的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/railjoin/zh.html">
-                    <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Railjoin</h3>
-                </a>
-                <p>用一条铁轨把入口 A 连到出口 B 的逻辑谜题。Classic（五个等级）、Daily（每天三个盘面）两种模式，会说明理由的提示，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cometdive/zh.html">
-                    <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cometdive</h3>
-                </a>
-                <p>击落俯冲的敌人充满彗星能量，用彗星冲刺贯穿编队的竖屏太空射击游戏。Classic（无尽延续的区域）、Daily（每天一个区域）两种模式，卡牌与机库强化，支持离线、多语言。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-        </ul>
+        <nav class="app-group-nav" aria-label="应用分类">
+            <a href="#apps-puzzle">益智解谜</a>
+            <a href="#apps-games">游戏</a>
+            <a href="#apps-everyday">生活</a>
+        </nav>
+        <div class="app-group" id="apps-puzzle">
+            <h3>益智解谜</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/railjoin/zh.html">
+                        <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Railjoin</h4>
+                    </a>
+                    <p>用一条铁轨把入口 A 连到出口 B 的逻辑谜题。Classic（五个等级）、Daily（每天三个盘面）两种模式，会说明理由的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/huestar/zh.html">
+                        <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Huestar</h4>
+                    </a>
+                    <p>在每行、每列和每个颜色区域放星星的 Star Battle 逻辑谜题。Classic（六个等级）、Daily（每天三个盘面）两种模式，会说明理由的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/minewise/zh.html">
+                        <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Minewise</h4>
+                    </a>
+                    <p>无需猜测的扫雷，每个盘面都只靠逻辑就能解开。Classic（五个等级）、困难（踩到地雷就结束）、Daily（每天三个盘面）三种模式，会说明理由的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/cagewise/zh.html">
+                        <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cagewise</h4>
+                    </a>
+                    <p>以虚线框起的笼子之和为线索，填满 9×9 盘面的杀手数独。经典（六个难度）、每日挑战（每天一题）两种模式，会讲清理由的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/keepsum/zh.html">
+                        <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Keepsum</h4>
+                    </a>
+                    <p>选出要保留和要消除的数字，让每一行和每一列的和都等于目标和的逻辑益智游戏。经典、每日挑战（每天一题）、极速（3 分钟）三种模式，会说明理由的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/tenmates/zh.html">
+                        <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Tenmates</h4>
+                    </a>
+                    <p>消除相同或相加为 10 的数字、清空盘面的数字益智游戏。经典、极速（90 秒）、每日挑战（每天一盘）三种模式，会往前看的提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/nums-to-one/zh.html">
+                        <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Nums to One</h4>
+                    </a>
+                    <p>用加减乘除把 4 张数字卡片凑成 24 的数字益智游戏。经典、极速（60 秒）、每日挑战（每天 3 题）三种模式，分步提示，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-games">
+            <h3>游戏</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/cometdive/zh.html">
+                        <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cometdive</h4>
+                    </a>
+                    <p>击落俯冲的敌人充满彗星能量，用彗星冲刺贯穿编队的竖屏太空射击游戏。Classic（无尽延续的区域）、Daily（每天一个区域）两种模式，卡牌与机库强化，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/board-games/zh.html">
+                        <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>棋盘游戏</h4>
+                    </a>
+                    <p>将五子棋、黑白棋、西洋跳棋、西洋双陆棋、四子棋、点格棋、井字棋等七款棋盘游戏装进一个应用的游戏合集。AI 对战（三档难度）与本地双人对战，支持离线、多语言。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-everyday">
+            <h3>生活</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/tarotyo/zh.html">
+                        <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>塔罗哟</h4>
+                    </a>
+                    <p>抽取 78 张塔罗牌，并生成可供 AI 聊天工具解读的提示词的塔罗解读应用。6 种牌阵、卡牌浏览、多语言支持。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/good-timer/zh.html">
+                        <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Good Timer</h4>
+                    </a>
+                    <p>提供可自由配置的间隔计时器和支持分段记录的秒表的通用计时器应用。支持预设、记录/统计和云同步。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/twenty-four-hours/zh.html">
+                        <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Twenty Four Hours</h4>
+                    </a>
+                    <p>一款将24小时模拟/数字时钟与日程管理相结合的应用。具有统计仪表板、云同步和多语言支持功能。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -248,24 +263,11 @@
             <p><strong>电子邮件:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>响应时间:</strong> 1-3个工作日内</p>
             <p><strong>组织名称:</strong> Willee Project</p>
-            <p><strong>应用支持页面:</strong></p>
-            <ul class="support-links">
-                <li><a href="/apps/twenty-four-hours/zh.html">Twenty Four Hours</a></li>
-                <li><a href="/apps/good-timer/zh.html">Good Timer</a></li>
-                <li><a href="/apps/tarotyo/zh.html">塔罗哟</a></li>
-                <li><a href="/apps/board-games/zh.html">棋盘游戏</a></li>
-                <li><a href="/apps/nums-to-one/zh.html">Nums to One</a></li>
-                <li><a href="/apps/tenmates/zh.html">Tenmates</a></li>
-                <li><a href="/apps/keepsum/zh.html">Keepsum</a></li>
-                <li><a href="/apps/cagewise/zh.html">Cagewise</a></li>
-                <li><a href="/apps/minewise/zh.html">Minewise</a></li>
-                <li><a href="/apps/huestar/zh.html">Huestar</a></li>
-                <li><a href="/apps/railjoin/zh.html">Railjoin</a></li>
-                <li><a href="/apps/cometdive/zh.html">Cometdive</a></li>
-            </ul>
+            <p><strong>各应用的使用手册和隐私政策:</strong> 在上方<a href="#services">应用列表</a>中选择应用，即可在该应用的介绍页面找到。</p>
         </div>
     </div>
 </section>
+</main>
 
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>

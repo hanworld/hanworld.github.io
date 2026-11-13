@@ -51,8 +51,8 @@
         .app-head { display: flex; align-items: center; gap: 14px; }
         .app-head:hover { text-decoration: none; }
         .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
-        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
-        .app-head:hover h3 { color: #1D7A5F; }
+        .app-head h4 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h4 { color: #1D7A5F; }
         .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
@@ -66,10 +66,6 @@
         .support-box { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
-
-        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
-        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
-        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -113,6 +109,7 @@
     </div>
 </header>
 
+<main>
 <section id="about">
     <div class="container">
         <h2>Willee Projectについて</h2>
@@ -141,104 +138,122 @@
 <section id="services">
     <div class="container">
         <h2>アプリサービス</h2>
-        <ul class="app-list">
-            <li>
-                <a class="app-head" href="/apps/twenty-four-hours/ja.html">
-                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Twenty Four Hours</h3>
-                </a>
-                <p>24時間アナログ/デジタル時計とスケジュール管理を組み合わせたアプリ。統計ダッシュボード、クラウド同期、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/good-timer/ja.html">
-                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Good Timer</h3>
-                </a>
-                <p>自由に設定できるインターバルタイマーとラップ記録が可能なストップウォッチを備えた汎用タイマーアプリ。プリセット、履歴/統計、クラウド同期対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tarotyo/ja.html">
-                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>タロヨ</h3>
-                </a>
-                <p>タロットカード78枚を引き、AIチャットが解釈できるプロンプトを作成するタロットリーディングアプリ。6種類のスプレッド、カード一覧、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/board-games/ja.html">
-                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>ボードゲーム</h3>
-                </a>
-                <p>五目並べ・リバーシ・チェッカー・バックギャモン・四目並べ・ドット＆ボックス・三目並べなど7つのボードゲームを一つのアプリに。AI対戦(3段階の難易度)とローカル2人対戦、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/nums-to-one/ja.html">
-                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Nums to One</h3>
-                </a>
-                <p>4枚の数字カードを四則演算で合わせて24を作る数字パズル。クラシック・ラッシュ(60秒)・デイリー(毎日3問)の3つのモード、段階的なヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tenmates/ja.html">
-                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Tenmates</h3>
-                </a>
-                <p>同じ数字か合計10のペアを消して盤面を空にする数字パズル。クラシック・ラッシュ(90秒)・デイリー(毎日1面)の3つのモード、先を読むヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/keepsum/ja.html">
-                    <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Keepsum</h3>
-                </a>
-                <p>残す数字と消す数字を選び、すべての行と列の和を合計に合わせる論理パズル。クラシック・デイリー(毎日1問)・ラッシュ(3分)の3つのモード、理由を教えるヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cagewise/ja.html">
-                    <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cagewise</h3>
-                </a>
-                <p>点線で囲んだケージの合計を手がかりに9×9の盤面を埋めるキラーナンプレ。クラシック(6つの難易度)・デイリー(毎日1問)の2つのモード、理由を教えるヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/minewise/ja.html">
-                    <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Minewise</h3>
-                </a>
-                <p>どの盤面も論理だけで解ける、推測のいらないマインスイーパー。Classic(5つのレベル)・ハード(地雷を踏んだら終わり)・Daily(1日3つの盤面)の3つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/huestar/ja.html">
-                    <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Huestar</h3>
-                </a>
-                <p>行・列・色のエリアごとに星を置く、スターバトルの論理パズル。Classic(6つのレベル)・Daily(1日3つの盤面)の2つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/railjoin/ja.html">
-                    <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Railjoin</h3>
-                </a>
-                <p>入口Aから出口Bまで線路を1本つなぐ論理パズル(線路パズル)。Classic(5つのレベル)・Daily(1日3つの盤面)の2つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cometdive/ja.html">
-                    <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cometdive</h3>
-                </a>
-                <p>急降下する敵を倒して彗星ゲージをため、彗星突進で編隊を貫く縦画面のスペースシューティング。Classic(終わりなく続くセクター)・Daily(1日1セクター)の2つのモード、カードと格納庫の強化、オフライン対応、多言語対応。</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-        </ul>
+        <nav class="app-group-nav" aria-label="アプリの種類">
+            <a href="#apps-puzzle">パズル</a>
+            <a href="#apps-games">ゲーム</a>
+            <a href="#apps-everyday">暮らし</a>
+        </nav>
+        <div class="app-group" id="apps-puzzle">
+            <h3>パズル</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/railjoin/ja.html">
+                        <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Railjoin</h4>
+                    </a>
+                    <p>入口Aから出口Bまで線路を1本つなぐ論理パズル(線路パズル)。Classic(5つのレベル)・Daily(1日3つの盤面)の2つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/huestar/ja.html">
+                        <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Huestar</h4>
+                    </a>
+                    <p>行・列・色のエリアごとに星を置く、スターバトルの論理パズル。Classic(6つのレベル)・Daily(1日3つの盤面)の2つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/minewise/ja.html">
+                        <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Minewise</h4>
+                    </a>
+                    <p>どの盤面も論理だけで解ける、推測のいらないマインスイーパー。Classic(5つのレベル)・ハード(地雷を踏んだら終わり)・Daily(1日3つの盤面)の3つのモード、理由がわかるヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/cagewise/ja.html">
+                        <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cagewise</h4>
+                    </a>
+                    <p>点線で囲んだケージの合計を手がかりに9×9の盤面を埋めるキラーナンプレ。クラシック(6つの難易度)・デイリー(毎日1問)の2つのモード、理由を教えるヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/keepsum/ja.html">
+                        <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Keepsum</h4>
+                    </a>
+                    <p>残す数字と消す数字を選び、すべての行と列の和を合計に合わせる論理パズル。クラシック・デイリー(毎日1問)・ラッシュ(3分)の3つのモード、理由を教えるヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/tenmates/ja.html">
+                        <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Tenmates</h4>
+                    </a>
+                    <p>同じ数字か合計10のペアを消して盤面を空にする数字パズル。クラシック・ラッシュ(90秒)・デイリー(毎日1面)の3つのモード、先を読むヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/nums-to-one/ja.html">
+                        <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Nums to One</h4>
+                    </a>
+                    <p>4枚の数字カードを四則演算で合わせて24を作る数字パズル。クラシック・ラッシュ(60秒)・デイリー(毎日3問)の3つのモード、段階的なヒント、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-games">
+            <h3>ゲーム</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/cometdive/ja.html">
+                        <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cometdive</h4>
+                    </a>
+                    <p>急降下する敵を倒して彗星ゲージをため、彗星突進で編隊を貫く縦画面のスペースシューティング。Classic(終わりなく続くセクター)・Daily(1日1セクター)の2つのモード、カードと格納庫の強化、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/board-games/ja.html">
+                        <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>ボードゲーム</h4>
+                    </a>
+                    <p>五目並べ・リバーシ・チェッカー・バックギャモン・四目並べ・ドット＆ボックス・三目並べなど7つのボードゲームを一つのアプリに。AI対戦(3段階の難易度)とローカル2人対戦、オフライン対応、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-everyday">
+            <h3>暮らし</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/tarotyo/ja.html">
+                        <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>タロヨ</h4>
+                    </a>
+                    <p>タロットカード78枚を引き、AIチャットが解釈できるプロンプトを作成するタロットリーディングアプリ。6種類のスプレッド、カード一覧、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/good-timer/ja.html">
+                        <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Good Timer</h4>
+                    </a>
+                    <p>自由に設定できるインターバルタイマーとラップ記録が可能なストップウォッチを備えた汎用タイマーアプリ。プリセット、履歴/統計、クラウド同期対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/twenty-four-hours/ja.html">
+                        <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Twenty Four Hours</h4>
+                    </a>
+                    <p>24時間アナログ/デジタル時計とスケジュール管理を組み合わせたアプリ。統計ダッシュボード、クラウド同期、多言語対応。</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -249,24 +264,11 @@
             <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>返信時間:</strong> 営業日1〜3日以内</p>
             <p><strong>組織名:</strong> Willee Project</p>
-            <p><strong>アプリ別サポートページ:</strong></p>
-            <ul class="support-links">
-                <li><a href="/apps/twenty-four-hours/ja.html">Twenty Four Hours</a></li>
-                <li><a href="/apps/good-timer/ja.html">Good Timer</a></li>
-                <li><a href="/apps/tarotyo/ja.html">タロヨ</a></li>
-                <li><a href="/apps/board-games/ja.html">ボードゲーム</a></li>
-                <li><a href="/apps/nums-to-one/ja.html">Nums to One</a></li>
-                <li><a href="/apps/tenmates/ja.html">Tenmates</a></li>
-                <li><a href="/apps/keepsum/ja.html">Keepsum</a></li>
-                <li><a href="/apps/cagewise/ja.html">Cagewise</a></li>
-                <li><a href="/apps/minewise/ja.html">Minewise</a></li>
-                <li><a href="/apps/huestar/ja.html">Huestar</a></li>
-                <li><a href="/apps/railjoin/ja.html">Railjoin</a></li>
-                <li><a href="/apps/cometdive/ja.html">Cometdive</a></li>
-            </ul>
+            <p><strong>アプリ別ユーザーマニュアル・プライバシーポリシー:</strong> 上の<a href="#services">アプリ一覧</a>でアプリを選ぶと、そのアプリの紹介ページにあります。</p>
         </div>
     </div>
 </section>
+</main>
 
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>

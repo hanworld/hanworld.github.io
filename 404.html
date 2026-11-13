@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <title>Page Not Found - Willee Project</title>
+    <meta name="description" content="The page you were looking for could not be found. Go to the Willee Project home page or see all apps.">
+    <meta name="theme-color" content="#122847">
+    <meta name="robots" content="noindex">
+    <script>
+        /* 없는 주소에 GitHub Pages가 이 페이지를 보여 준다. 어느 주소에서든 열리므로 경로는 모두 / 로 시작한다.
+           안내 언어는 주소(/ko/…, …/ja.html, …/zh-Hant.html)로, 없으면 브라우저 언어로 고른다. 아무것도 저장하지 않는다. */
+        (function () {
+            var path = location.pathname;
+            var m = path.match(/^\/(ko|en|ja|zh)\//i) || path.match(/\/(ko|en|ja|zh|zh-hant)\.html$/i);
+            var lang = m ? m[1] : (navigator.language || 'en');
+            if (/^zh-(hant|tw|hk|mo)/i.test(lang)) lang = 'zh-Hant';
+            else lang = lang.split('-')[0].toLowerCase();
+            if (['ko', 'en', 'ja', 'zh', 'zh-Hant'].indexOf(lang) < 0) lang = 'en';
+            document.documentElement.lang = lang;
+            if (lang === 'ja') {
+                var l = document.createElement('link');
+                l.rel = 'stylesheet';
+                l.href = '/fonts/pretendard-jp.css';
+                document.head.appendChild(l);
+            }
+        })();
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 200px; transition: border-color 0.2s, background 0.2s; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/" data-href="home" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+        </div>
+        <div class="lang-switch">
+            <a href="/ko/" data-lang="ko">한국어</a>
+            <a href="/en/" data-lang="en">EN</a>
+            <a href="/ja/" data-lang="ja">日本語</a>
+            <a href="/zh/" data-lang="zh">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="/images/willee_project_logo.svg" alt="Willee Project Logo" data-t="alt" style="height:5.5rem;">
+            <div style="text-align:left;">
+                <h1 data-t="h1">Page not found</h1>
+                <p data-t="sub">Willee Project</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <p data-t="lead">The page may have moved, or the address may be mistyped. Try one of these instead.</p>
+        <div class="platforms">
+            <a href="/en/" class="platform" data-href="home" style="text-decoration:none; color:inherit;">
+                <strong data-t="home">Home</strong>
+                <span data-t="homeSub">Willee Project home page</span>
+            </a>
+            <a href="/en/#services" class="platform" data-href="apps" style="text-decoration:none; color:inherit;">
+                <strong data-t="apps">All apps</strong>
+                <span data-t="appsSub">App pages, user manuals and privacy policies</span>
+            </a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;" data-t="biz">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/privacy.html" data-href="privacy" data-t="privacy">Privacy Policy</a> | <a href="/en/terms.html" data-href="terms" data-t="terms">Terms of Service</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg><span data-t="blog">Blog</span></a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+<script>
+    (function () {
+        var T = {
+            ko: { title: '페이지를 찾을 수 없습니다 - 윌리 프로젝트', h1: '페이지를 찾을 수 없습니다', sub: '윌리 프로젝트',
+                  lead: '주소가 바뀌었거나 잘못 입력되었을 수 있습니다. 아래에서 찾으시는 곳으로 가 보세요.',
+                  home: '홈', homeSub: '윌리 프로젝트 첫 화면', apps: '앱 목록', appsSub: '앱 소개·사용 설명서·개인정보처리방침',
+                  alt: '윌리 프로젝트 로고', biz: '사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호',
+                  privacy: '개인정보처리방침', terms: '서비스 이용약관', blog: '블로그', base: 'ko' },
+            en: { title: 'Page Not Found - Willee Project', h1: 'Page not found', sub: 'Willee Project',
+                  lead: 'The page may have moved, or the address may be mistyped. Try one of these instead.',
+                  home: 'Home', homeSub: 'Willee Project home page', apps: 'All apps', appsSub: 'App pages, user manuals and privacy policies',
+                  alt: 'Willee Project Logo', biz: 'Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057',
+                  privacy: 'Privacy Policy', terms: 'Terms of Service', blog: 'Blog', base: 'en' },
+            ja: { title: 'ページが見つかりません - Willee Project', h1: 'ページが見つかりません', sub: 'Willee Project',
+                  lead: 'ページが移動したか、アドレスが間違っている可能性があります。下のリンクからお探しください。',
+                  home: 'ホーム', homeSub: 'Willee Project のトップページ', apps: 'アプリ一覧', appsSub: 'アプリ紹介・ユーザーマニュアル・プライバシーポリシー',
+                  alt: 'Willee Project ロゴ', biz: '事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号',
+                  privacy: 'プライバシーポリシー', terms: '利用規約', blog: 'ブログ', base: 'ja' },
+            zh: { title: '找不到页面 - Willee Project', h1: '找不到页面', sub: 'Willee Project',
+                  lead: '页面可能已移动，或网址输入有误。请从下面的链接继续浏览。',
+                  home: '首页', homeSub: 'Willee Project 首页', apps: '应用列表', appsSub: '应用介绍、使用手册和隐私政策',
+                  alt: 'Willee Project 标志', biz: '营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号',
+                  privacy: '隐私政策', terms: '服务条款', blog: '博客', base: 'zh' },
+            'zh-Hant': { title: '找不到頁面 - Willee Project', h1: '找不到頁面', sub: 'Willee Project',
+                  lead: '頁面可能已移動，或網址輸入有誤。請從下面的連結繼續瀏覽。',
+                  home: '首頁', homeSub: 'Willee Project 首頁', apps: '應用程式列表', appsSub: '應用程式介紹、使用手冊和隱私權政策',
+                  alt: 'Willee Project 標誌', biz: '營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號',
+                  privacy: '隱私權政策', terms: '服務條款', blog: '部落格', base: 'zh' }
+        };
+        var t = T[document.documentElement.lang] || T.en;
+        var href = { home: '/' + t.base + '/', apps: '/' + t.base + '/#services',
+                     privacy: '/' + t.base + '/privacy.html', terms: '/' + t.base + '/terms.html' };
+        document.title = t.title;
+        document.querySelectorAll('[data-t]').forEach(function (el) {
+            var k = el.getAttribute('data-t');
+            if (k === 'alt') el.alt = t.alt; else el.textContent = t[k];
+        });
+        document.querySelectorAll('[data-href]').forEach(function (el) { el.href = href[el.getAttribute('data-href')]; });
+        document.querySelectorAll('.lang-switch a').forEach(function (el) {
+            if (el.getAttribute('data-lang') === t.base) el.className = 'active';
+        });
+    })();
+</script>
+
+</body>
+</html>

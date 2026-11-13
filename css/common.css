@@ -60,6 +60,10 @@ a { color: var(--link); }
 a:hover { color: var(--link-hover); text-decoration: none; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--tiffany); outline-offset: 2px; border-radius: 4px; }
 
+/* 본문 문장 안의 링크는 색만이 아니라 밑줄로도 구분한다 (카드·배지·단추처럼 이름표가 있는 링크는 빼고) */
+section :is(p, li, td) a:not([class]) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+section :is(p, li, td) a:not([class]):hover { text-decoration: underline; text-decoration-color: currentColor; }
+
 /* ---------- 맨 위 메뉴줄 (늘 짙은 남색) ---------- */
 .breadcrumb {
     background: rgba(10, 26, 51, .9); -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px);
@@ -138,8 +142,8 @@ body:not(:has(#overview)):not(:has(#services)) section h2 { font-size: clamp(1.3
 .app-list { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .app-list li { padding: 24px; gap: 14px; }
 .app-head img { width: 60px; height: 60px; border-radius: 15px; box-shadow: 0 4px 14px rgba(15, 27, 45, .14); }
-.app-head h3 { color: var(--ink); font-weight: 750; font-size: 1.15rem; letter-spacing: -0.02em; }
-.app-head:hover h3 { color: var(--link); }
+.app-head h4 { color: var(--ink); font-weight: 750; font-size: 1.15rem; letter-spacing: -0.02em; }
+.app-head:hover h4 { color: var(--link); }
 .app-list li p { color: var(--muted); line-height: 1.65; }
 /* 카드 어디를 눌러도 앱 소개로 간다: 제목 링크의 누르는 영역을 카드 전체로 넓힌다.
    스토어 배지는 그 위에 올려 따로 눌린다. 키보드로 제목에 오면 카드 전체에 테두리를 그린다. */
@@ -149,8 +153,15 @@ body:not(:has(#overview)):not(:has(#services)) section h2 { font-size: clamp(1.3
 .app-list .app-head:focus-visible { outline: none; }
 .app-list li:has(.app-head:focus-visible) { outline: 2px solid var(--tiffany); outline-offset: 3px; }
 .support-box { padding: 28px; }
-.support-links a { background: var(--card); border-color: var(--line); color: var(--ink); font-weight: 600; padding: 6px 14px; }
-.support-links a:hover { border-color: var(--tiffany); color: var(--link); }
+
+/* 메인: 앱 갈래 (퍼즐·게임·생활). 갈래 안에서는 새 앱이 앞에 온다 */
+.app-group-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 36px; }
+.app-group-nav a { padding: 7px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font-weight: 650; font-size: .95rem; box-shadow: var(--shadow); transition: border-color .2s ease, color .2s ease; }
+.app-group-nav a:hover { border-color: var(--tiffany); color: var(--link); }
+.app-group { scroll-margin-top: 72px; }
+.app-group + .app-group { margin-top: 48px; }
+.app-group > h3 { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 18px; }
+.app-group > h3::before { content: ""; width: 4px; height: 1.05em; border-radius: 2px; background: var(--tiffany); }
 
 /* 배지: 티파니민트 알약 (출시 예정은 테두리만) */
 .badge { background: var(--tiffany); color: var(--on-tiffany) !important; font-weight: 700; font-size: .8rem; padding: 6px 14px; border-radius: 999px; }
@@ -231,6 +242,9 @@ footer a:hover { color: var(--gold); }
     .app-meta h2 { font-size: 1.6rem; }
     .screenshot-gallery img { height: 380px; border-radius: 22px; }
     .graphic-banner { margin-top: 28px; border-radius: 20px; }
+    .app-group-nav { margin-bottom: 28px; }
+    .app-group + .app-group { margin-top: 40px; }
+    .app-list li { padding: 20px; gap: 12px; }
 
     /* 앱 페이지 위치줄: 홈은 집 아이콘만 남긴다 (화면 읽기 프로그램은 이름을 그대로 읽음) */
     .breadcrumb .container > div:not(.lang-switch) > a:first-child { font-size: 0; }

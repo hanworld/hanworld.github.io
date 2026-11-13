@@ -51,8 +51,8 @@
         .app-head { display: flex; align-items: center; gap: 14px; }
         .app-head:hover { text-decoration: none; }
         .app-head img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
-        .app-head h3 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
-        .app-head:hover h3 { color: #1D7A5F; }
+        .app-head h4 { font-size: 1.1rem; color: #2EC4B6; transition: color 0.2s; }
+        .app-head:hover h4 { color: #1D7A5F; }
         .app-list li p { color: #64748B; font-size: 0.95rem; margin: 0; flex: 1; }
         .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
         a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
@@ -66,10 +66,6 @@
         .support-box { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 12px; }
         .support-box p { margin-bottom: 8px; }
         .support-box p:last-child { margin-bottom: 0; }
-
-        .support-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; }
-        .support-links a { display: inline-block; padding: 4px 12px; border: 1px solid #E2E8F0; border-radius: 16px; background: #F0FDFC; font-size: 0.9rem; transition: border-color 0.2s; }
-        .support-links a:hover { border-color: #2EC4B6; text-decoration: none; }
 
         footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
         footer a { color: #2EC4B6; }
@@ -112,6 +108,7 @@
     </div>
 </header>
 
+<main>
 <section id="about">
     <div class="container">
         <h2>About Willee Project</h2>
@@ -140,104 +137,122 @@
 <section id="services">
     <div class="container">
         <h2>App Services</h2>
-        <ul class="app-list">
-            <li>
-                <a class="app-head" href="/apps/twenty-four-hours/en.html">
-                    <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Twenty Four Hours</h3>
-                </a>
-                <p>An app combining 24-hour analog/digital clock with schedule management. Features statistics dashboard, cloud sync, and multi-language support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/good-timer/en.html">
-                    <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Good Timer</h3>
-                </a>
-                <p>A versatile timer app with customizable interval timer and stopwatch with lap recording. Features presets, history/statistics, and cloud sync.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tarotyo/en.html">
-                    <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>TarotYo</h3>
-                </a>
-                <p>A tarot reading app that draws from the 78 tarot cards and creates prompts an AI chatbot can interpret. Six spreads, card browsing, and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/board-games/en.html">
-                    <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Board Games</h3>
-                </a>
-                <p>A collection of seven board games in one app — Gomoku, Reversi, Checkers, Backgammon, Four in a Row, Dots and Boxes, and Tic-Tac-Toe. Play vs AI (three difficulties) or a friend on one device, offline, with multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/nums-to-one/en.html">
-                    <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Nums to One</h3>
-                </a>
-                <p>A number puzzle: merge four number cards with + − × ÷ to make 24. Three modes — Classic, Rush (60 seconds) and Daily (three puzzles a day) — with step-by-step hints, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/tenmates/en.html">
-                    <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Tenmates</h3>
-                </a>
-                <p>A number puzzle: clear pairs that are equal or add up to 10 to empty the board. Three modes — Classic, Rush (90 seconds) and Daily (one board a day) — with hints that think ahead, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/keepsum/en.html">
-                    <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Keepsum</h3>
-                </a>
-                <p>A logic puzzle: keep or erase numbers so that every row and column adds up to its clue. Three modes — Classic, Daily (one puzzle a day) and Rush (3 minutes) — with hints that explain why, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cagewise/en.html">
-                    <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cagewise</h3>
-                </a>
-                <p>Killer sudoku: fill the 9×9 grid using the sums of the dotted cages as clues. Two modes — Classic (six levels) and Daily (one puzzle a day) — with hints that explain why, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/minewise/en.html">
-                    <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Minewise</h3>
-                </a>
-                <p>No-guess minesweeper where every board can be solved by logic alone. Three modes — Classic (five levels), Hard (a mine ends it) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/huestar/en.html">
-                    <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Huestar</h3>
-                </a>
-                <p>Star Battle logic puzzle: place stars in every row, column and color region. Two modes — Classic (six levels) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/railjoin/en.html">
-                    <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Railjoin</h3>
-                </a>
-                <p>Train tracks logic puzzle: join entrance A to exit B with one line of track. Two modes — Classic (five levels) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-            <li>
-                <a class="app-head" href="/apps/cometdive/en.html">
-                    <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
-                    <h3>Cometdive</h3>
-                </a>
-                <p>Vertical space shooter: catch diving enemies to fill the comet gauge, then Comet Dive through the formation. Two modes — Classic (endless sectors) and Daily (one sector a day) — with cards, Hangar upgrades, offline play and multilingual support.</p>
-                <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
-            </li>
-        </ul>
+        <nav class="app-group-nav" aria-label="App categories">
+            <a href="#apps-puzzle">Puzzles</a>
+            <a href="#apps-games">Games</a>
+            <a href="#apps-everyday">Everyday</a>
+        </nav>
+        <div class="app-group" id="apps-puzzle">
+            <h3>Puzzles</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/railjoin/en.html">
+                        <img src="/apps/railjoin/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Railjoin</h4>
+                    </a>
+                    <p>Train tracks logic puzzle: join entrance A to exit B with one line of track. Two modes — Classic (five levels) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.railjoin" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/huestar/en.html">
+                        <img src="/apps/huestar/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Huestar</h4>
+                    </a>
+                    <p>Star Battle logic puzzle: place stars in every row, column and color region. Two modes — Classic (six levels) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.huestar" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/minewise/en.html">
+                        <img src="/apps/minewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Minewise</h4>
+                    </a>
+                    <p>No-guess minesweeper where every board can be solved by logic alone. Three modes — Classic (five levels), Hard (a mine ends it) and Daily (three boards a day) — with hints that explain why, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.minewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/cagewise/en.html">
+                        <img src="/apps/cagewise/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cagewise</h4>
+                    </a>
+                    <p>Killer sudoku: fill the 9×9 grid using the sums of the dotted cages as clues. Two modes — Classic (six levels) and Daily (one puzzle a day) — with hints that explain why, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cagewise" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/keepsum/en.html">
+                        <img src="/apps/keepsum/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Keepsum</h4>
+                    </a>
+                    <p>A logic puzzle: keep or erase numbers so that every row and column adds up to its clue. Three modes — Classic, Daily (one puzzle a day) and Rush (3 minutes) — with hints that explain why, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.keepsum" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/tenmates/en.html">
+                        <img src="/apps/tenmates/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Tenmates</h4>
+                    </a>
+                    <p>A number puzzle: clear pairs that are equal or add up to 10 to empty the board. Three modes — Classic, Rush (90 seconds) and Daily (one board a day) — with hints that think ahead, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tenmates" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/nums-to-one/en.html">
+                        <img src="/apps/nums-to-one/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Nums to One</h4>
+                    </a>
+                    <p>A number puzzle: merge four number cards with + − × ÷ to make 24. Three modes — Classic, Rush (60 seconds) and Daily (three puzzles a day) — with step-by-step hints, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.numstoone" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-games">
+            <h3>Games</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/cometdive/en.html">
+                        <img src="/apps/cometdive/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Cometdive</h4>
+                    </a>
+                    <p>Vertical space shooter: catch diving enemies to fill the comet gauge, then Comet Dive through the formation. Two modes — Classic (endless sectors) and Daily (one sector a day) — with cards, Hangar upgrades, offline play and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.cometdive" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/board-games/en.html">
+                        <img src="/apps/board-games/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Board Games</h4>
+                    </a>
+                    <p>A collection of seven board games in one app — Gomoku, Reversi, Checkers, Backgammon, Four in a Row, Dots and Boxes, and Tic-Tac-Toe. Play vs AI (three difficulties) or a friend on one device, offline, with multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.boardgames" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="app-group" id="apps-everyday">
+            <h3>Everyday</h3>
+            <ul class="app-list">
+                <li>
+                    <a class="app-head" href="/apps/tarotyo/en.html">
+                        <img src="/apps/tarotyo/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>TarotYo</h4>
+                    </a>
+                    <p>A tarot reading app that draws from the 78 tarot cards and creates prompts an AI chatbot can interpret. Six spreads, card browsing, and multilingual support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.tarotyo" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/good-timer/en.html">
+                        <img src="/apps/good-timer/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Good Timer</h4>
+                    </a>
+                    <p>A versatile timer app with customizable interval timer and stopwatch with lap recording. Features presets, history/statistics, and cloud sync.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.goodtimer" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+                <li>
+                    <a class="app-head" href="/apps/twenty-four-hours/en.html">
+                        <img src="/apps/twenty-four-hours/images/app_icon.webp" alt="" width="56" height="56">
+                        <h4>Twenty Four Hours</h4>
+                    </a>
+                    <p>An app combining 24-hour analog/digital clock with schedule management. Features statistics dashboard, cloud sync, and multi-language support.</p>
+                    <div class="app-badges"><a href="https://play.google.com/store/apps/details?id=net.willee.twentyfourhours" target="_blank" rel="noopener" class="badge" style="text-decoration:none;color:#fff;">Android (Google Play)</a></div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -248,24 +263,11 @@
             <p><strong>Email:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
             <p><strong>Response Time:</strong> Within 1-3 business days</p>
             <p><strong>Organization:</strong> Willee Project</p>
-            <p><strong>App Support Pages:</strong></p>
-            <ul class="support-links">
-                <li><a href="/apps/twenty-four-hours/en.html">Twenty Four Hours</a></li>
-                <li><a href="/apps/good-timer/en.html">Good Timer</a></li>
-                <li><a href="/apps/tarotyo/en.html">TarotYo</a></li>
-                <li><a href="/apps/board-games/en.html">Board Games</a></li>
-                <li><a href="/apps/nums-to-one/en.html">Nums to One</a></li>
-                <li><a href="/apps/tenmates/en.html">Tenmates</a></li>
-                <li><a href="/apps/keepsum/en.html">Keepsum</a></li>
-                <li><a href="/apps/cagewise/en.html">Cagewise</a></li>
-                <li><a href="/apps/minewise/en.html">Minewise</a></li>
-                <li><a href="/apps/huestar/en.html">Huestar</a></li>
-                <li><a href="/apps/railjoin/en.html">Railjoin</a></li>
-                <li><a href="/apps/cometdive/en.html">Cometdive</a></li>
-            </ul>
+            <p><strong>User Manuals &amp; Privacy Policies:</strong> Select an app in the <a href="#services">app list</a> above to find them on its page.</p>
         </div>
     </div>
 </section>
+</main>
 
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>

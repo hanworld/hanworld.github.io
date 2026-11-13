@@ -8,6 +8,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ```
 /
 ├── index.html              # 루트 (브라우저 언어 감지 후 리다이렉트)
+├── 404.html                # 없는 주소 안내 (4개 언어, 언어는 주소·브라우저로 고름)
 ├── css/
 │   └── common.css          # 모든 페이지 공통 스타일 (아래 '공통 스타일·검색 정보'·'디자인')
 ├── fonts/                  # Pretendard·Pretendard JP (OFL, 글자 묶음별 woff2)
@@ -399,16 +400,22 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 한국어·일본어 소개 첫 문장에는 'Railjoin(레일조인)'·'Railjoin（レールジョイン）'을 함께 적음(2026-11-01 사용자 결정, 앱 저장소 `listing.md`. Huestar의 '(휴스타)' 금지와 다름)
 
 ## 공통 스타일·검색 정보 (2026-10-09)
-- **공통 스타일:** 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
+- **공통 스타일:**
+  - 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
+  - 본문 구역(`<section>`)들은 `<main>`으로 감싼다. 메뉴줄(`<nav class="breadcrumb">`)·머리글(`<header>`)·꼬리말(`<footer>`)은 그 밖에 둔다(2026-11-13).
 - **`<head>` 틀:**
   - `<title>` 바로 다음에 `<meta name="description">`과 `<meta name="theme-color" content="#122847">`를 둔다.
   - hreflang 목록 다음에는 공유 미리보기 태그를 둔다: `og:type`, `og:site_name`(ko는 윌리 프로젝트), `og:title`(=title), `og:description`(=description), `og:url`(=canonical), `og:image`(+width·height), `og:locale`, `twitter:card`.
   - 새 페이지도 같은 틀로 만든다.
+  - `404.html`은 예외다. 없는 주소 어디에서나 열리므로 경로를 모두 `/`로 시작하고, canonical·hreflang·공유 미리보기 대신 `<meta name="robots" content="noindex">`를 둔다. sitemap에도 넣지 않는다.
+- **소개 페이지 제목(2026-11-13):** `앱 이름: 검색 구절 - 윌리 프로젝트`(다른 언어는 `- Willee Project`). og:title도 같게 쓴다.
+  - 검색 구절은 스토어 제목에서 앱 이름을 뺀 부분이다(앱 저장소 `docs/store/listing.md`, 보드게임은 등록자료 `02_스토어_등록정보_4개언어.txt`, 타로요는 `docs/play_store_listing.md`). 스토어 제목이 바뀌면 이 제목도 고친다.
+  - 스토어 제목에 구절이 없는 Twenty Four Hours는 소개 페이지의 장르 줄을 쓴다. Cometdive 한국어는 장르 줄처럼 '오프라인'을 뺀다.
 - **설명 문구:**
   - 소개 페이지는 overview 첫 문장(들)을 쓴다.
   - 설명서는 "제목 — 앱 정보 첫 문장"으로 쓴다.
   - 방침은 언어별 정형 문구를 쓴다.
-  - 메인은 앱 이름을 나열한다. **새 앱을 추가하면 메인 4개 언어 description에 앱 이름도 넣는다.**
+  - 메인은 앱 이름을 나열한다. **새 앱을 추가하면 메인 4개 언어 description에 앱 이름도 넣는다.** 첫 주소 `index.html`(언어 고르기)의 description·og:description에도 넣는다.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
@@ -416,7 +423,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
   - 스크린샷과 배너는 WebP로 둔다.
-  - 스크린샷 `<img>`에는 원본 크기 `width`·`height`와 `loading="lazy" decoding="async"`를 넣는다.
+  - 스크린샷은 높이 960px로 줄인다: `magick in.png -resize x960 -quality 85 out.webp`(1080×2160 원본이면 480×960). 화면에는 높이 380~440px로만 보여 원본 크기는 무게만 늘린다(2026-11-13). 배너(1024×500)는 그대로 둔다.
+  - 스크린샷 `<img>`에는 줄인 그림의 `width`·`height`와 `loading="lazy" decoding="async"`를 넣는다.
   - 머리글 배너에는 `width`·`height`만 넣는다.
 
 ## 디자인 (2026-10-18)
@@ -425,6 +433,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **글꼴:** 한국어·영어는 Pretendard, 일본어는 Pretendard JP(일본어 페이지는 `common.css` 앞에 `<link rel="stylesheet" href="/fonts/pretendard-jp.css">`), 중국어는 기기 글꼴(Pretendard의 한국식 한자가 섞이지 않게). 글꼴은 `/fonts/`에 직접 두고 다른 서버에서 불러오지 않는다.
 - **내려받기 단추:** 소개 페이지 머리글의 한 줄 소개 아래에 `<div class="store-cta">`를 둔다. 출시 전에는 `<span>Google Play 출시 예정</span>`, 출시 뒤에는 스토어 링크(`<a>` + 내려받기 아이콘). '출시 예정'을 스토어 링크로 바꿀 때 이 단추도 함께 바꾼다.
 - **폰:** 언어 고르기는 PC에서만 알약 모양이고, 폰에서는 글자만 둔다(메뉴줄을 한 줄로 지키려고).
+- **메인 앱 목록(2026-11-13):** 앱 카드는 갈래(퍼즐·게임·생활)별로 묶고, 갈래 안에서는 새 앱을 맨 앞에 둔다. 새 앱을 추가하면 4개 언어 메인의 그 갈래 `<ul class="app-list">` 맨 앞에 카드를 넣는다(카드 안 앱 이름은 `<h4>`). 갈래를 더하면 위쪽 갈래 단추(`.app-group-nav`)에도 넣는다.
+- **본문 링크:** 문단·목록·표 안의 `class` 없는 링크에는 밑줄이 그어진다(색만으로 구분하지 않게, `common.css`). 카드·배지·단추처럼 모양이 있는 링크에는 `class`를 준다.
 
 ## 페이지 공통 요소
 - **Breadcrumb**: 언어 선택 포함, sticky 상단 고정. 폰에서는 홈 링크를 집 아이콘만 남기고, 설명서·방침은 현재 페이지 이름(머리글에 크게 있음)을 뺀다(`common.css`)
