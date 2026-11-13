@@ -11,6 +11,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ├── 404.html                # 없는 주소 안내 (4개 언어, 언어는 주소·브라우저로 고름)
 ├── css/
 │   └── common.css          # 모든 페이지 공통 스타일 (아래 '공통 스타일·검색 정보'·'디자인')
+├── js/
+│   └── theme.js            # 밝게·어둡게 단추 (모든 페이지 <head>, 아래 '디자인')
 ├── fonts/                  # Pretendard·Pretendard JP (OFL, 글자 묶음별 woff2)
 │   ├── pretendard.css      # common.css가 불러옴
 │   └── pretendard-jp.css   # 일본어 페이지만 연결
@@ -402,6 +404,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 ## 공통 스타일·검색 정보 (2026-10-09)
 - **공통 스타일:**
   - 모든 페이지는 페이지 안 `<style>` 바로 뒤에 `<link rel="stylesheet" href="/css/common.css">`를 연결한다. 여기에는 폰 화면(600px 이하) 여백, 한국어 줄바꿈(`keep-all`), 메뉴줄 줄넘김, 표·긴 주소 끊기 규칙이 있다. 여러 페이지에 공통인 수정은 이 파일에서 한다.
+  - 그 바로 뒤에 두 줄을 둔다(밝게·어둡게 단추, 아래 '디자인'. 404 페이지도 같다). 저장 값을 그리기 전에 적용하는 한 줄 `<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>`과 `<script src="/js/theme.js" defer></script>`. theme.js를 defer 없이 부르면 요청 하나가 화면 그리기를 막는다(폰 LCP 0.3초 늘어남, 2026-11-13).
   - 본문 구역(`<section>`)들은 `<main>`으로 감싼다. 메뉴줄(`<nav class="breadcrumb">`)·머리글(`<header>`)·꼬리말(`<footer>`)은 그 밖에 둔다(2026-11-13).
 - **`<head>` 틀:**
   - `<title>` 바로 다음에 `<meta name="description">`과 `<meta name="theme-color" content="#122847">`를 둔다.
@@ -429,11 +432,12 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ## 디자인 (2026-10-18)
 - **모양:** 남색 머리띠·메뉴줄·꼬리말에 티파니민트 강조, 둥근 카드와 그림자. 메인·소개는 넓게(1080px, 앱 카드 3열), 설명서·방침은 읽기 좋은 폭(800px) 그대로.
-- **색:** `common.css` 맨 위 변수(`--tiffany`, `--bg`, `--card`, `--ink`, `--text`, `--muted`, `--link` 등)로만 쓴다. 다크 모드는 `prefers-color-scheme: dark`에서 변수만 바꾼다. 페이지 안 `<style>`의 색은 `common.css`가 같은 선택자로 덮는다. 새 이름표를 만들면 `common.css`에도 변수로 색을 준다.
+- **색:** `common.css` 맨 위 변수(`--tiffany`, `--bg`, `--card`, `--ink`, `--text`, `--muted`, `--link` 등)로만 쓴다. 다크 모드는 변수만 바꾼다. 기기 설정(`prefers-color-scheme: dark`)과 단추로 고른 값(`:root[data-theme="dark"]`) 두 곳에 같은 값을 둔다. 페이지 안 `<style>`의 색은 `common.css`가 같은 선택자로 덮는다. 새 이름표를 만들면 `common.css`에도 변수로 색을 준다.
 - **글꼴:** 한국어·영어는 Pretendard, 일본어는 Pretendard JP(일본어 페이지는 `common.css` 앞에 `<link rel="stylesheet" href="/fonts/pretendard-jp.css">`), 중국어는 기기 글꼴(Pretendard의 한국식 한자가 섞이지 않게). 글꼴은 `/fonts/`에 직접 두고 다른 서버에서 불러오지 않는다.
 - **내려받기 단추:** 소개 페이지 머리글의 한 줄 소개 아래에 `<div class="store-cta">`를 둔다. 출시 전에는 `<span>Google Play 출시 예정</span>`, 출시 뒤에는 스토어 링크(`<a>` + 내려받기 아이콘). '출시 예정'을 스토어 링크로 바꿀 때 이 단추도 함께 바꾼다.
 - **폰:** 언어 고르기는 PC에서만 알약 모양이고, 폰에서는 글자만 둔다(메뉴줄을 한 줄로 지키려고).
 - **메인 앱 목록(2026-11-13):** 앱 카드는 갈래(퍼즐·게임·생활)별로 묶고, 갈래 안에서는 새 앱을 맨 앞에 둔다. 새 앱을 추가하면 4개 언어 메인의 그 갈래 `<ul class="app-list">` 맨 앞에 카드를 넣는다(카드 안 앱 이름은 `<h4>`). 갈래를 더하면 위쪽 갈래 단추(`.app-group-nav`)에도 넣는다.
+- **밝게·어둡게 단추(2026-11-13):** `js/theme.js`가 넣는다. 900px보다 넓으면 메뉴줄의 언어 고르기 뒤, 그 이하는 머리글 오른쪽 위다(좁은 화면의 메뉴줄은 이미 꽉 차 있어 넣으면 두 줄이 된다). 처음에는 기기 설정을 따르고, 고른 값이 기기 설정과 다를 때만 localStorage(`theme`)에 둔다. 회사 개인정보처리방침 2장에 이렇게 적었으므로 저장하는 값을 늘리거나 바꾸려면 방침부터 고친다.
 - **본문 링크:** 문단·목록·표 안의 `class` 없는 링크에는 밑줄이 그어진다(색만으로 구분하지 않게, `common.css`). 카드·배지·단추처럼 모양이 있는 링크에는 `class`를 준다.
 
 ## 페이지 공통 요소

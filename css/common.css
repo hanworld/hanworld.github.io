@@ -26,8 +26,10 @@
     --shot-shadow: 0 14px 30px -10px rgba(15, 27, 45, .35);
     --radius: 18px;
 }
+/* 어두운 화면: 기기 설정을 따르되, 메뉴줄 단추로 고른 값(js/theme.js가 붙이는 data-theme)이 먼저다.
+   아래 두 곳의 변수 값은 같아야 한다. 하나를 고치면 다른 쪽도 고친다. */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: #0A1524; --bg-alt: #0D1B2E; --card: #12223A; --line: #22354F;
         --ink: #EEF4FA; --text: #C9D5E2; --muted: #9AABC0;
         --link: #81D8D0; --link-hover: #B7EBE6;
@@ -39,6 +41,19 @@
         --shot-shadow: 0 14px 30px -10px rgba(0, 0, 0, .7);
     }
 }
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0A1524; --bg-alt: #0D1B2E; --card: #12223A; --line: #22354F;
+    --ink: #EEF4FA; --text: #C9D5E2; --muted: #9AABC0;
+    --link: #81D8D0; --link-hover: #B7EBE6;
+    --accent-line: #3E8F89;
+    --code-bg: #0D1B2E; --th-bg: #15283F;
+    --tip-bg: rgba(212, 175, 55, .10); --tip-line: rgba(212, 175, 55, .55); --tip-ink: #F2D98B;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    --shadow-hover: 0 2px 6px rgba(0, 0, 0, .35), 0 18px 36px rgba(0, 0, 0, .4);
+    --shot-shadow: 0 14px 30px -10px rgba(0, 0, 0, .7);
+}
+:root[data-theme="light"] { color-scheme: light; }
 
 /* ---------- 글꼴과 글자 ---------- */
 body {
@@ -80,6 +95,25 @@ section :is(p, li, td) a:not([class]):hover { text-decoration: underline; text-d
 .lang-switch a { color: #A9B8CC; padding: 2px 11px; border-radius: 999px; font-weight: 550; }
 .lang-switch a:hover { color: #fff; }
 .lang-switch a.active { background: var(--tiffany); color: var(--on-tiffany); font-weight: 700; }
+
+/* ---------- 밝게·어둡게 단추 (js/theme.js가 두 곳에 넣고, 여기서 화면 폭에 따라 하나만 보인다) ----------
+   900px보다 넓으면 메뉴줄의 언어 고르기 뒤(--nav), 그 이하는 머리글 오른쪽 위(--header).
+   좁은 화면의 메뉴줄은 이미 꽉 차 있어 단추를 넣으면 두 줄이 된다. */
+.breadcrumb .container > :first-child { margin-right: auto; }
+.theme-toggle {
+    display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+    width: 32px; height: 32px; margin-left: -6px; padding: 0; border: 0; border-radius: 999px;
+    background: rgba(255, 255, 255, .08); color: #C9D6E5; cursor: pointer; font: inherit;
+    transition: background .2s ease, color .2s ease;
+}
+.theme-toggle:hover { background: rgba(255, 255, 255, .16); color: #fff; }
+.theme-toggle svg { display: block; width: 16px; height: 16px; }
+.theme-toggle--header { display: none; }
+@media (max-width: 900px) {
+    .theme-toggle--nav { display: none; }
+    header { position: relative; }
+    .theme-toggle--header { display: inline-flex; position: absolute; top: 6px; right: 12px; margin: 0; }
+}
 
 /* ---------- 머리글 (늘 짙은 남색, 티파니민트와 금빛) ---------- */
 header {
@@ -269,6 +303,6 @@ footer a:hover { color: var(--gold); }
 
 /* 움직임 줄이기를 켠 기기 */
 @media (prefers-reduced-motion: reduce) {
-    .value-item, .app-list li, .features li, .mode-item, .platform, .support-box, .game-item, .store-cta a { transition: none; }
+    .value-item, .app-list li, .features li, .mode-item, .platform, .support-box, .game-item, .store-cta a, .theme-toggle { transition: none; }
     .app-list li:hover, a.platform:hover, .store-cta a:hover { transform: none; }
 }
