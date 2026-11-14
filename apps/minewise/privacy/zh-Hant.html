@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-22</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>無需註冊，無需登入，沒有帳號。我們不會詢問您的姓名、電子郵件或電話號碼。</li>
@@ -129,6 +129,7 @@
                     <li>應用程式停止運作時的<strong>錯誤報告</strong>（Firebase Crashlytics）</li>
                 </ul>
             </li>
+            <li>解完盤面並看到結果畫面後，可能會出現一次 Google Play 評論視窗。評分和評論不經過應用程式，直接傳送到 Google Play（第 6 節）。</li>
             <li>在歐洲經濟區（EEA）、英國和瑞士，我們會在顯示廣告前<strong>徵求您的同意</strong>。</li>
         </ul>
     </div>
@@ -152,6 +153,7 @@
             <tr><th>項目</th><th>內容</th></tr>
             <tr><td>遊戲紀錄</td><td>Classic 各等級的成功盤面數、沒有失誤也沒用提示的盤面數、最佳用時（只計算沒有失誤的盤面）、用於計算平均的總用時和成功盤面的編號，困難模式各等級的結束盤面數、成功盤面數、最佳用時、連續成功紀錄和結束盤面的編號，進行中的盤面（含地雷位置的盤面本身、已打開的格子、旗子和踩到的地雷的紀錄、提示與失誤的次數、已用時間；Classic 和困難模式每個等級一局，Daily 為當天每個盤面一局），Daily 的結果（過關的日子，以及每個盤面的用時、失誤和提示次數）與連續紀錄，在首頁最後選擇的等級和模式（Classic 或困難），是否完成了新手教學</td></tr>
             <tr><td>設定</td><td>音效、震動、減少特效、各項特效的開關（動畫、光效、彩紙），操作設定（操作方式、長按時間、點擊數字打開周圍），盤面設定（顯示時間、立即顯示失誤、大號數字），語言</td></tr>
+            <tr><td>評論請求紀錄</td><td>解完盤面並看到結果畫面的次數及第一次的時間，是否請求過 Google Play 評論視窗及請求的時間。僅用於讓 Google Play 評論視窗只出現一次</td></tr>
         </table>
         <p>這些資訊不會傳送給開發者，解除安裝應用程式時會一併刪除。</p>
         <p><strong>裝置備份。</strong> 如果您開啟了裝置的 Google 備份（Android 自動備份），上述紀錄和設定會包含在該備份中，在更換裝置或重新安裝應用程式時還原。備份儲存在您自己的 Google 帳戶中，開發者無法查看。如不需要，可在 Android 設定的備份選單中關閉。</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>處理什麼</th><th>例子</th><th>用於什麼</th></tr>
             <tr><td>應用程式執行個體 ID</td><td>安裝應用程式時產生的隨機 ID</td><td>統計同一台裝置隔天是否再次使用（續用率）</td></tr>
-            <tr><td>遊戲事件</td><td>盤面的編號、模式（Classic、困難、Daily）、等級、Daily 的盤面大小（小盤面、中盤面、大盤面）、打開起始格開始一局、一局的結果（過關、在困難模式中踩到地雷而結束、換一局、從頭開始）和用時，提示與失誤的次數，操作方式（點擊與長按，或畫面下方的「打開」「插旗」按鈕）以及是否開啟「點擊數字打開周圍」，解完新手教學的盤面（包括在設定中重新查看的）及用時，點擊分享按鈕（以及是哪個 Daily 盤面）</td><td>依照實際遊玩調整盤面的難度分級（等級），改善各模式與功能</td></tr>
+            <tr><td>遊戲事件</td><td>盤面的編號、模式（Classic、困難、Daily）、等級、Daily 的盤面大小（小盤面、中盤面、大盤面）、打開起始格開始一局、一局的結果（過關、在困難模式中踩到地雷而結束、換一局、從頭開始）和用時，提示與失誤的次數，操作方式（點擊與長按，或畫面下方的「打開」「插旗」按鈕）以及是否開啟「點擊數字打開周圍」，解完新手教學的盤面（包括在設定中重新查看的）及用時，點擊分享按鈕（以及是哪個 Daily 盤面），向 Google Play 請求評論視窗，在「關於」中點擊<strong>在 Google Play 上評分</strong>，在「關於」的<strong>更多遊戲</strong>中點擊的遊戲（或<strong>查看全部遊戲</strong>）</td><td>依照實際遊玩調整盤面的難度分級（等級），改善各模式與功能</td></tr>
             <tr><td>應用程式使用</td><td>應用程式啟動、使用時間、應用程式更新</td><td>了解續用率和遊玩時間</td></tr>
             <tr><td>裝置與應用程式資訊</td><td>機型、Android 版本、應用程式版本、語言、國家（依 IP 位址推估；不儲存 IP 位址本身）</td><td>找出特定機型的問題，了解各語言的使用情形</td></tr>
         </table>
@@ -230,12 +232,15 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在 Daily 的結果畫面點擊<strong>分享</strong>時，結果文字會交給裝置的分享面板。文字如下。第三行（連續紀錄）只在連續兩天以上時才有。</p>
+        <h2>6. 分享與 Google Play</h2>
+        <p>在 Daily 的結果畫面點擊<strong>分享</strong>時，結果文字會交給裝置的分享面板。文字如下。第三行（連續紀錄）只在連續兩天以上時才有，最後一行是 Minewise 的 Google Play 頁面連結。</p>
         <pre class="share-example">Minewise Daily 小盤面 #12 ✅ 03:41
 失誤 0 · 提示 1
-🔥 連續5天</pre>
+🔥 連續5天
+https://play.google.com/store/apps/details?id=net.willee.minewise&amp;utm_source=share&amp;utm_campaign=daily</pre>
         <p>要傳送到哪裡由您選擇，應用程式本身不會把它傳送到任何地方。</p>
+        <p><strong>商店連結。</strong> 「關於」中的<strong>在 Google Play 上評分</strong>和<strong>更多遊戲</strong>會開啟 Google Play。分享文字中的連結和在<strong>更多遊戲</strong>中點擊的遊戲的連結帶有表示連結來源（是分享的結果還是遊戲列表、由哪個應用程式送出）的值（<code>utm_source</code>、<code>utm_campaign</code>），這些值會傳給 Google Play。<strong>在 Google Play 上評分</strong>和<strong>查看全部遊戲</strong>的連結不帶這些值。其中不包含能識別個人的資訊。開發者只能在 Google Play Console 中看到依這些值彙總的造訪次數。</p>
+        <p><strong>評論視窗。</strong> 解完盤面並看到結果畫面後，應用程式可能會向 Google Play 請求一次評論視窗。是否顯示由 Google Play 決定。您留下的評分和評論不經過應用程式，直接傳送到 Google Play，應用程式不會收到。它們會像其他評分和評論一樣發布在 Google Play 上（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>）。</p>
     </div>
 </section>
 
@@ -308,7 +313,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-22</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

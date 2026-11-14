@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-10-22</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -129,6 +129,7 @@
                     <li><strong>crash reports</strong> when the app stops working (Firebase Crashlytics)</li>
                 </ul>
             </li>
+            <li>After you clear a board and see the result screen, a Google Play review window may appear once. Ratings and reviews go straight to Google Play without passing through the app (section 6).</li>
             <li>In the European Economic Area (EEA), the UK and Switzerland, we <strong>ask for your consent</strong> before showing ads.</li>
         </ul>
     </div>
@@ -152,6 +153,7 @@
             <tr><th>What</th><th>Details</th></tr>
             <tr><td>Game records</td><td>For each Classic level: boards cleared, boards cleared with no mistakes and no hints, best time (counting only boards cleared with no mistakes), total time (for the average) and the numbers of the boards you cleared; for each Hard level: boards finished, boards cleared, best time, win streaks and the numbers of the boards you finished; the board in progress (the board itself with the positions of its mines, a record of the cells you opened, flags and mines you hit, hints and mistakes counts, and time spent; one per level in Classic and Hard, and one per Daily board for that day); Daily results (days cleared, and the time, mistakes and hints of each board) and streaks; the level and mode (Classic or Hard) you last chose on the home screen; whether you finished the first-run tutorial</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, each effect's on/off switch (Motion, Light, Confetti), control settings (control method, long-press time, tap a number to open around it), board settings (show time, show mistakes right away, big numbers), language</td></tr>
+            <tr><td>Review prompt record</td><td>How many times you cleared a board and saw the result screen and when that first happened, and whether and when a Google Play review window was requested. Used only to show the Google Play review window no more than once</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the records and settings above are included in that backup, so they come back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Board number, mode (Classic, Hard or Daily), level, Daily board size (Small, Medium or Large), starting a board (opening its start cell), how a board ended (cleared, ended by hitting a mine on Hard, replaced by a new board, or restarted) with the time, hints and mistakes; control method (tap and long press, or the on-screen Open and Flag buttons) and whether "Tap a number to open around it" is on; finishing the first-run tutorial (including replays from Settings) and how long it took; tapping Share (and which Daily board)</td><td>Tuning board difficulty (levels) to real play, improving the modes and features</td></tr>
+            <tr><td>Game events</td><td>Board number, mode (Classic, Hard or Daily), level, Daily board size (Small, Medium or Large), starting a board (opening its start cell), how a board ended (cleared, ended by hitting a mine on Hard, replaced by a new board, or restarted) with the time, hints and mistakes; control method (tap and long press, or the on-screen Open and Flag buttons) and whether "Tap a number to open around it" is on; finishing the first-run tutorial (including replays from Settings) and how long it took; tapping Share (and which Daily board); requesting a Google Play review window; tapping <strong>Rate on Google Play</strong> in About; the game tapped under <strong>More games</strong> in About (or <strong>See all games</strong>)</td><td>Tuning board difficulty (levels) to real play, improving the modes and features</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -230,12 +232,15 @@
 
 <section>
     <div class="container">
-        <h2>6. Sharing</h2>
-        <p>When you tap <strong>Share</strong> on the Daily result screen, the result text is passed to your device's share sheet. It looks like this. The third line (your streak) appears only when the streak is two days or longer.</p>
+        <h2>6. Sharing and Google Play</h2>
+        <p>When you tap <strong>Share</strong> on the Daily result screen, the result text is passed to your device's share sheet. It looks like this. The third line (your streak) appears only when the streak is two days or longer, and the last line is a link to Minewise on Google Play.</p>
         <pre class="share-example">Minewise Daily Small #12 ✅ 03:41
 Mistakes 0 · Hints 1
-🔥 5-day streak</pre>
+🔥 5-day streak
+https://play.google.com/store/apps/details?id=net.willee.minewise&amp;utm_source=share&amp;utm_campaign=daily</pre>
         <p>You choose where it goes; the app itself does not send it anywhere.</p>
+        <p><strong>Store links.</strong> <strong>Rate on Google Play</strong> and <strong>More games</strong> in About open Google Play. The link in the shared text and the link of a game you tap under <strong>More games</strong> carry values that show where the link came from (a shared result or the games list, and which app sent it) (<code>utm_source</code>, <code>utm_campaign</code>), and these reach Google Play. The links behind <strong>Rate on Google Play</strong> and <strong>See all games</strong> carry no such values. They contain nothing that identifies you. In Google Play Console the developer sees only visit counts grouped by these values.</p>
+        <p><strong>Review window.</strong> After you clear a board and see the result screen, the app may ask Google Play once to show its review window. Google Play decides whether to show it. Any rating and review you leave go straight to Google Play without passing through the app; the app does not receive them. Like other ratings and reviews, they are posted on Google Play (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</p>
     </div>
 </section>
 
@@ -308,7 +313,7 @@ Mistakes 0 · Hints 1
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-10-22</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>
