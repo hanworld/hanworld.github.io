@@ -412,8 +412,9 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
   - 새 페이지도 같은 틀로 만든다.
   - `404.html`은 예외다. 없는 주소 어디에서나 열리므로 경로를 모두 `/`로 시작하고, canonical·hreflang·공유 미리보기 대신 `<meta name="robots" content="noindex">`를 둔다. sitemap에도 넣지 않는다.
 - **소개 페이지 제목(2026-11-13):** `앱 이름: 검색 구절 - 윌리 프로젝트`(다른 언어는 `- Willee Project`). og:title도 같게 쓴다.
-  - 검색 구절은 스토어 제목에서 앱 이름을 뺀 부분이다(앱 저장소 `docs/store/listing.md`, 보드게임은 등록자료 `02_스토어_등록정보_4개언어.txt`, 타로요는 `docs/play_store_listing.md`). 스토어 제목이 바뀌면 이 제목도 고친다.
-  - 스토어 제목에 구절이 없는 Twenty Four Hours는 소개 페이지의 장르 줄을 쓴다. Cometdive 한국어는 장르 줄처럼 '오프라인'을 뺀다.
+  - 검색 구절은 스토어 제목에서 앱 이름을 뺀 부분이다(앱 저장소 `docs/store/listing.md`, 보드게임은 등록자료 `02_스토어_등록정보_4개언어.txt`, 타로요는 `docs/play_store_listing.md`, Twenty Four Hours는 앱 저장소 `CLAUDE.md`의 Play 표시 이름). 스토어 제목이 바뀌면 이 제목도 고친다. 원고가 늦게 고쳐지기도 하니 Play 웹 제목과 맞춰 본다.
+  - 스토어 제목이 '검색 구절: 앱 이름' 순서여도(Cagewise·Minewise·Huestar·Cometdive·Railjoin, Keepsum 영어) 앱 이름을 앞에 둔다.
+  - Cometdive 한국어는 장르 줄처럼 '오프라인'을 뺀다.
 - **설명 문구:**
   - 소개 페이지는 overview 첫 문장(들)을 쓴다.
   - 설명서는 "제목 — 앱 정보 첫 문장"으로 쓴다.
