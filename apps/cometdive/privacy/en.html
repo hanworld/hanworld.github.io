@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-08</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -129,6 +129,7 @@
                     <li><strong>crash reports</strong> when the app stops working (Firebase Crashlytics)</li>
                 </ul>
             </li>
+            <li>Google Play's review window may appear once on a result screen. Any rating or review you leave goes to Google Play without passing through the app and is posted publicly like other reviews; the app does not receive it (section 2).</li>
             <li>There are no ads while you are playing a sector.</li>
             <li>In the European Economic Area (EEA), the UK and Switzerland, we <strong>ask for your consent</strong> before showing ads.</li>
         </ul>
@@ -155,10 +156,12 @@
             <tr><td>Game records</td><td>Unlocked sectors; your best score for each sector; sectors cleared and sectors cleared without being hit; Daily records (today's best, best ever, days played, current and longest streak, the day's boss); totals (runs finished, clears, no-hit clears, enemies destroyed, Comet Dives and enemies destroyed by them, bosses destroyed, ships lost, best combo, play time); the hangar (cores held and cores earned, the upgrade level of each branch, the move speed used in play, the ship forms you have seen); the Codex (enemies, bosses, cards and enemy shots found, and how many of each enemy you destroyed); whether you finished the tutorial</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, menu music, game music, music volume, sound effect volume, screen shake, the menu track played last, language</td></tr>
             <tr><td>Ad spacing</td><td>The total time you have spent playing and when the last full-screen ad was shown. Used only to keep full-screen ads from appearing too often</td></tr>
+            <tr><td>Review requests</td><td>How many result screens were counted after you cleared a run with a new best or destroyed a boss for the first time, and when that first happened; whether and when the app asked Google Play to show its review window. Used only to ask for a review no more than once, and never sent off the device</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the data in the table above is included in that backup, so it comes back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
         <p>Separately, the ad SDK and Firebase store consent records (such as your choice in the EEA) and the identifiers listed below on your device.</p>
+        <p><strong>Rating and other games.</strong> When you clear a run with a new best or destroy a boss for the first time, the app may ask Google Play once, on the result screen, to show its review window. Google Play decides whether the window appears. Any rating or review you leave goes to Google Play without passing through the app and is posted publicly like other reviews, under Google's policies (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>); the app does not receive it. <strong>Rate on Google Play</strong> and <strong>More games</strong> in About (<strong>Settings → General → About</strong>) open Google Play. Only the links to the games listed under <strong>More games</strong> carry a mark showing they came from Cometdive's About screen (<code>utm_source=other_games&amp;utm_campaign=cometdive</code>); <strong>Rate on Google Play</strong> and <strong>See all games</strong> do not. The mark reaches Google Play when you open the link and contains nothing that identifies a person. We only see how many visits came this way, as totals in Google Play Console.</p>
     </div>
 </section>
 
@@ -170,7 +173,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Starting a sector (mode Classic or Daily; sector and zone number, or Daily day number; rule version and attempt number); how a run ended (cleared or failed) with the score, hits, enemies destroyed by Comet Dives, time, the stage reached, the number of Comet Dives by method (flick up or tap the strip below), cores earned, the total hangar upgrade level and ship form, rerolls used and whether you chose a card before wave 1; the card you chose between waves (the offered cards, your choice and its level); defeating a boss (which boss, how long it took); buying a hangar upgrade (branch, level, cost in cores, total upgrade level and ship form, sector, time spent playing); the ship changing form; changing the move speed used in play; finishing the tutorial on first launch and how long it took; the button you pressed on the result screen and whether a full-screen ad was shown (and if not, why), with the total time you have spent playing (in minutes)</td><td>Tuning sector difficulty to real play, improving cards, the hangar and modes, spacing full-screen ads</td></tr>
+            <tr><td>Game events</td><td>Starting a sector (mode Classic or Daily; sector and zone number, or Daily day number; rule version and attempt number); how a run ended (cleared or failed) with the score, hits, enemies destroyed by Comet Dives, time, the stage reached, the number of Comet Dives by method (flick up or tap the strip below), cores earned, the total hangar upgrade level and ship form, rerolls used and whether you chose a card before wave 1; the card you chose between waves (the offered cards, your choice and its level); defeating a boss (which boss, how long it took); buying a hangar upgrade (branch, level, cost in cores, total upgrade level and ship form, sector, time spent playing); the ship changing form; changing the move speed used in play; finishing the tutorial on first launch and how long it took; the button you pressed on the result screen and whether a full-screen ad was shown (and if not, why), with the total time you have spent playing (in minutes); asking Google Play to show its review window on a result screen; tapping <strong>Rate on Google Play</strong> in About; tapping a game or <strong>See all games</strong> under <strong>More games</strong> in About (which game)</td><td>Tuning sector difficulty to real play, improving cards, the hangar and modes, spacing full-screen ads, seeing whether the review request and the More games list are used</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -305,7 +308,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-08</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>

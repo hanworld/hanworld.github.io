@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-09</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>無需註冊，無需登入，沒有帳號。我們不會詢問您的姓名、電子郵件或電話號碼。</li>
@@ -130,6 +130,7 @@
                 </ul>
             </li>
             <li>在歐洲經濟區（EEA）、英國和瑞士，我們會在顯示廣告前<strong>徵求您的同意</strong>。</li>
+            <li>清空盤面並看到結果後，Google Play 可能會顯示一次評價視窗。您留下的評分和評論不經過應用程式，直接傳送到 Google Play（第 6 節）。</li>
         </ul>
     </div>
 </section>
@@ -152,6 +153,7 @@
             <tr><th>項目</th><th>內容</th></tr>
             <tr><td>遊戲紀錄</td><td>已解鎖的盤面尺寸，各尺寸的成功局數、最佳用時和成功盤面的編號，進行中的盤面（每個尺寸一盤，以及當天的每日挑戰一盤），極速模式的最高分、最遠關卡和局數，每日挑戰的結果（成功的日子和放棄的日子）與連續紀錄，在主畫面最後選擇的盤面尺寸，是否完成首次引導</td></tr>
             <tr><td>設定</td><td>音效、震動、減少特效、各項特效的開關、大號數字、語言</td></tr>
+            <tr><td>評價請求紀錄</td><td>看到清空盤面的結果畫面（極速模式為創下最高分）的次數和第一次的時間，是否以及何時請 Google Play 顯示評價視窗（為了不向同一位使用者請求兩次而計數）</td></tr>
         </table>
         <p>這些資訊不會傳送給開發者，解除安裝應用程式時會一併刪除。</p>
         <p><strong>裝置備份。</strong> 如果您開啟了裝置的 Google 備份（Android 自動備份），上述紀錄和設定會包含在該備份中，在更換裝置或重新安裝應用程式時還原。備份儲存在您自己的 Google 帳戶中，開發者無法查看。如不需要，可在 Android 設定的備份選單中關閉。</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>處理什麼</th><th>例子</th><th>用於什麼</th></tr>
             <tr><td>應用程式執行個體 ID</td><td>安裝應用程式時產生的隨機 ID</td><td>統計同一台裝置隔天是否再次使用（續用率）</td></tr>
-            <tr><td>遊戲事件</td><td>盤面的編號、尺寸、結果和用時，新增數字、提示與復原的次數，新解鎖的盤面尺寸，極速模式的分數和關卡，完成首次引導，點按分享按鈕</td><td>依照實際遊玩調整盤面難度（等級），改善各模式</td></tr>
+            <tr><td>遊戲事件</td><td>盤面的編號、尺寸、結果和用時，新增數字、提示與復原的次數，新解鎖的盤面尺寸，極速模式的分數和關卡，完成首次引導，點按分享按鈕，請 Google Play 顯示評價視窗，在「關於」中點按<strong>在 Google Play 上評分</strong>、<strong>更多遊戲</strong>中的遊戲或<strong>查看全部遊戲</strong>（哪個遊戲）</td><td>依照實際遊玩調整盤面難度（等級），改善各模式和功能</td></tr>
             <tr><td>應用程式使用</td><td>應用程式啟動、使用時間、應用程式更新</td><td>了解續用率和遊玩時間</td></tr>
             <tr><td>裝置與應用程式資訊</td><td>機型、Android 版本、應用程式版本、語言、國家（依 IP 位址推估；不儲存 IP 位址本身）</td><td>找出特定機型的問題，了解各語言的使用情形</td></tr>
         </table>
@@ -230,8 +232,13 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在結果畫面點按<strong>分享</strong>時，結果文字（例如 <code>Tenmates 每日挑戰 #12 ✅ 4:12</code>）會交給裝置的分享面板。要傳送到哪裡由您選擇，應用程式本身不會把它傳送到任何地方。</p>
+        <h2>6. 分享與 Google Play</h2>
+        <p>在結果畫面點按<strong>分享</strong>時，結果文字會交給裝置的分享面板。要傳送到哪裡由您選擇，應用程式本身不會把它傳送到任何地方。例如：</p>
+        <pre class="share-example">Tenmates 每日挑戰 #12 ✅ 4:12
+新增 1 · 提示 0
+https://play.google.com/store/apps/details?id=net.willee.tenmates&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>最後一行是 Google Play 上 Tenmates 頁面的連結。結尾的 <code>utm_source=share&amp;utm_campaign=daily</code> 表示造訪來自分享的每日挑戰結果。開發者只能在 Google Play Console 中看到透過這個標記來的造訪總數，無法得知是誰。連結中不包含能識別個人的資訊。</p>
+        <p><strong>評分與更多遊戲。</strong> 「關於」中的<strong>在 Google Play 上評分</strong>和<strong>更多遊戲</strong>會開啟 Google Play。在更多遊戲清單中點按的遊戲連結帶有同樣形式的標記（<code>utm_source=other_games&amp;utm_campaign=tenmates</code>），表示來自 Tenmates 的「關於」畫面。<strong>在 Google Play 上評分</strong>和<strong>查看全部遊戲</strong>的連結不帶標記。清空盤面並看到結果後，應用程式可能會請 Google Play 顯示一次評價視窗，是否顯示由 Google Play 決定。您留下的評分和評論不經過應用程式，直接傳送到 Google Play，應用程式不會收到。評論會像其他評論一樣在 Google Play 上公開（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>）。</p>
     </div>
 </section>
 
@@ -304,7 +311,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-09</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-10-09</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -130,6 +130,7 @@
                 </ul>
             </li>
             <li>In the European Economic Area (EEA), the UK and Switzerland, we <strong>ask for your consent</strong> before showing ads.</li>
+            <li>After you clear a board and see the result, Google Play may show its review window once. Any rating or review you leave goes to Google Play without passing through the app (section 6).</li>
         </ul>
     </div>
 </section>
@@ -152,6 +153,7 @@
             <tr><th>What</th><th>Details</th></tr>
             <tr><td>Game records</td><td>Board sizes you have unlocked; boards cleared, best time and the numbers of the boards you cleared for each size; boards in progress (one per size and that day's Daily); Rush best score, furthest stage and games played; Daily results (days cleared and days given up) and streaks; the board size you last chose on the home screen; whether you finished the first-run guide</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, each effect's on/off switch, large numbers, language</td></tr>
+            <tr><td>Review requests</td><td>How many times you saw the result of a cleared board (or of a Rush best score) and when the first time was; whether and when the app asked Google Play to show its review window (counted so that you are asked at most once)</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the records and settings above are included in that backup, so they come back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Board number, size, result and time; numbers added, hints and undos used; newly unlocked board size; Rush score and stage; finishing the first-run guide; tapping Share</td><td>Tuning board difficulty (grades) to real play, improving the modes</td></tr>
+            <tr><td>Game events</td><td>Board number, size, result and time; numbers added, hints and undos used; newly unlocked board size; Rush score and stage; finishing the first-run guide; tapping Share; asking Google Play to show its review window; tapping <strong>Rate on Google Play</strong>, a game under <strong>More games</strong> or <strong>See all games</strong> in About (and which game)</td><td>Tuning board difficulty (grades) to real play, improving the modes and features</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -230,8 +232,13 @@
 
 <section>
     <div class="container">
-        <h2>6. Sharing</h2>
-        <p>When you tap <strong>Share</strong> on a result screen, the result text (for example <code>Tenmates Daily #12 ✅ 4:12</code>) is passed to your device's share sheet. You choose where it goes; the app itself does not send it anywhere.</p>
+        <h2>6. Sharing and Google Play</h2>
+        <p>When you tap <strong>Share</strong> on a result screen, the result text is passed to your device's share sheet. You choose where it goes; the app itself does not send it anywhere. For example:</p>
+        <pre class="share-example">Tenmates Daily #12 ✅ 4:12
+Adds 1 · Hints 0
+https://play.google.com/store/apps/details?id=net.willee.tenmates&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>The last line is a link to Tenmates on Google Play. The <code>utm_source=share&amp;utm_campaign=daily</code> at its end marks visits that came from a shared Daily result. We only see how many visits came this way, as totals in Google Play Console, never who they were. The link carries nothing that identifies you.</p>
+        <p><strong>Rating and other games.</strong> <strong>Rate on Google Play</strong> and <strong>More games</strong> in About open Google Play. Links to the games listed under More games carry the same kind of mark (<code>utm_source=other_games&amp;utm_campaign=tenmates</code>), showing they came from Tenmates' About screen. The <strong>Rate on Google Play</strong> and <strong>See all games</strong> links carry no mark. After you clear a board and see the result, the app may ask Google Play once to show its review window. Google Play decides whether the window appears. Any rating or review you leave goes straight to Google Play without passing through the app, and the app never receives it. It is made public there like any other review (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</p>
     </div>
 </section>
 
@@ -304,7 +311,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-10-09</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>

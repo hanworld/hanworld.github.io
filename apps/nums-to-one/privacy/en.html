@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-10-05</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -152,6 +152,7 @@
             <tr><th>What</th><th>Details</th></tr>
             <tr><td>Game records</td><td>IDs and solve times of the puzzles you solved, success rate by tier, skill rating per target, Rush best score and games played, Daily results, streak and the days you finished, the Classic target you last chose on the home screen, whether you finished the first-run guide</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, language</td></tr>
+            <tr><td>Review request record</td><td>How many times you saw a result screen after finishing all Daily puzzles or setting a Rush best, when that first happened, and whether and when the Google Play review window was requested. Used only to show the review window once (section 6)</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the records and settings above are included in that backup, so they come back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
@@ -167,7 +168,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Puzzle ID, result and solve time, hints and undos used, Rush score, Daily results, finishing the first-run guide, tapping Share</td><td>Tuning puzzle difficulty to real play, improving the modes</td></tr>
+            <tr><td>Game events</td><td>Puzzle ID, result and solve time, hints and undos used, Rush score, Daily results, finishing the first-run guide, tapping Share, requesting the review window, tapping "Rate on Google Play" or a game under "More games" (including "See all games") in About</td><td>Tuning puzzle difficulty to real play, improving the modes, seeing whether the rating and other-games links are used</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -230,8 +231,13 @@
 
 <section>
     <div class="container">
-        <h2>6. Sharing</h2>
-        <p>When you tap <strong>Share</strong> on a result screen, the result text (for example <code>Nums to One #42  🔥7</code>) is passed to your device's share sheet. You choose where it goes; the app itself does not send it anywhere.</p>
+        <h2>6. Sharing and Google Play</h2>
+        <p><strong>Sharing.</strong> When you tap <strong>Share</strong> on a result screen, the result text is passed to your device's share sheet, with a link to this game on Google Play at the end. You choose where it goes; the app itself does not send it anywhere.</p>
+        <pre class="share-example">Nums to One #42  🔥7
+🟩🟩🟨  1:42
+https://play.google.com/store/apps/details?id=net.willee.numstoone&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p><strong>Source values in store links.</strong> The link in shared text and the links under "More games" in About carry values that show where the link came from (the kind of result shared, or the other-games list and the app it was opened from). When the link is opened, these values reach Google Play. They contain nothing that identifies you.</p>
+        <p><strong>Review window.</strong> A Google Play review window may appear once on a result screen. Your rating and review go straight to Google Play without passing through the app, and are published on Google Play like other reviews. The app does not receive them.</p>
     </div>
 </section>
 
@@ -242,8 +248,8 @@
             <tr><th>What</th><th>Legal basis</th></tr>
             <tr><td>Personalized ads</td><td><strong>Consent</strong> (Art. 6(1)(a)), obtained in the consent window above</td></tr>
             <tr><td>Non-personalized ads, fraud and abuse prevention, ad delivery</td><td><strong>Consent</strong> or <strong>legitimate interests</strong> (Art. 6(1)(f)), depending on local law</td></tr>
-            <tr><td>Usage statistics, crash reports</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): fixing errors in the app and tuning puzzle difficulty. It also covers viewing ad revenue together with usage metrics, to keep this free app running on ads. In the EEA, storage for statistics is limited according to your choice in the consent window.</td></tr>
-            <tr><td>Game records on the device</td><td>Not processed by us, since they are never sent to us</td></tr>
+            <tr><td>Usage statistics, crash reports</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): fixing errors in the app and tuning puzzle difficulty. It also covers viewing ad revenue together with usage metrics, to keep this free app running on ads, and seeing whether the in-app rating and other-games links are used. In the EEA, storage for statistics is limited according to your choice in the consent window.</td></tr>
+            <tr><td>Game records and the review request record on the device</td><td>Not processed by us, since they are never sent to us</td></tr>
         </table>
     </div>
 </section>
@@ -304,7 +310,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-10-05</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>

@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026-10-09</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">한눈에</h2>
         <ul>
             <li>회원가입도, 로그인도, 계정도 없습니다. 이름·이메일·전화번호를 묻지 않습니다.</li>
@@ -130,6 +130,7 @@
                 </ul>
             </li>
             <li>유럽경제지역(EEA)·영국·스위스에서는 광고를 띄우기 전에 <strong>동의를 여쭙습니다.</strong></li>
+            <li>판을 비우고 결과를 본 뒤 Google Play의 리뷰 창이 한 번 뜰 수 있습니다. 남기신 별점과 리뷰는 앱을 거치지 않고 Google Play로 갑니다(6장).</li>
         </ul>
     </div>
 </section>
@@ -152,6 +153,7 @@
             <tr><th>무엇</th><th>내용</th></tr>
             <tr><td>게임 기록</td><td>연 판 크기, 크기별 성공한 판 수·최고 시간·성공한 판의 번호, 푸는 중인 판(크기마다 하나와 그날의 Daily 하나), Rush 최고 점수·가장 먼 단계·한 판 수, Daily 결과(성공한 날·그만둔 날)와 연속 기록, 홈에서 마지막으로 고른 판 크기, 첫 실행 안내를 마쳤는지</td></tr>
             <tr><td>설정</td><td>효과음·진동·효과 줄이기·효과마다 켜고 끄기·큰 숫자·언어</td></tr>
+            <tr><td>리뷰 요청 기록</td><td>판을 비운 결과 화면(Rush는 최고 점수)을 본 횟수와 처음 본 때, Google Play에 리뷰 창을 청했는지와 그때(같은 분께 두 번 청하지 않으려고 셉니다)</td></tr>
         </table>
         <p>이 정보는 개발자에게 전송되지 않습니다. 앱을 지우면 함께 사라집니다.</p>
         <p><strong>기기 백업.</strong> 기기의 Google 백업(Android 자동 백업)을 켜 두셨다면 위 기록과 설정이 그 백업에 함께 들어가, 기기를 바꾸거나 앱을 다시 설치할 때 되살아납니다. 백업은 이용자의 Google 계정에 저장되며 개발자는 볼 수 없습니다. 원하지 않으시면 Android 설정의 백업 메뉴에서 끄실 수 있습니다.</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>무엇을</th><th>예</th><th>무엇에 쓰나</th></tr>
             <tr><td>앱 인스턴스 ID</td><td>앱을 설치할 때 만들어지는 무작위 ID</td><td>같은 기기가 다음 날 다시 왔는지(재방문율) 세기</td></tr>
-            <tr><td>게임 이벤트</td><td>판의 번호·크기·결과·걸린 시간, 숫자 추가·힌트·되돌리기 횟수, 새로 연 판 크기, Rush 점수·단계, 첫 실행 안내를 마침, 공유 단추를 누름</td><td>판 난이도(등급)를 실제 플레이에 맞춰 고치기, 모드 개선</td></tr>
+            <tr><td>게임 이벤트</td><td>판의 번호·크기·결과·걸린 시간, 숫자 추가·힌트·되돌리기 횟수, 새로 연 판 크기, Rush 점수·단계, 첫 실행 안내를 마침, 공유 단추를 누름, Google Play에 리뷰 창을 청함, 앱 정보에서 <strong>스토어에서 평가하기</strong>나 <strong>다른 게임</strong>의 게임·<strong>모든 게임 보기</strong>를 누름(어느 게임인지)</td><td>판 난이도(등급)를 실제 플레이에 맞춰 고치기, 모드와 기능 개선</td></tr>
             <tr><td>앱 사용</td><td>앱 실행, 사용 시간, 앱 업데이트</td><td>재방문율과 플레이 시간 파악</td></tr>
             <tr><td>기기·앱 정보</td><td>기종, Android 버전, 앱 버전, 언어, 나라(IP 주소로 짐작. IP 주소 자체는 저장하지 않음)</td><td>기기별 문제 찾기, 언어별 이용 파악</td></tr>
         </table>
@@ -230,8 +232,13 @@
 
 <section>
     <div class="container">
-        <h2>6. 공유</h2>
-        <p>결과 화면의 <strong>공유</strong> 단추를 누르시면, 결과 글(예: <code>Tenmates Daily #12 ✅ 4:12</code>)을 기기의 공유 창으로 넘깁니다. 어디로 보낼지는 이용자가 고르고, 앱이 직접 어디로 보내지는 않습니다.</p>
+        <h2>6. 공유와 Google Play</h2>
+        <p>결과 화면의 <strong>공유</strong> 단추를 누르시면, 결과 글을 기기의 공유 창으로 넘깁니다. 어디로 보낼지는 이용자가 고르고, 앱이 직접 어디로 보내지는 않습니다. 예:</p>
+        <pre class="share-example">Tenmates Daily #12 ✅ 4:12
+숫자 추가 1 · 힌트 0
+https://play.google.com/store/apps/details?id=net.willee.tenmates&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>마지막 줄은 Google Play의 Tenmates 페이지 링크입니다. 끝의 <code>utm_source=share&amp;utm_campaign=daily</code>는 공유한 Daily 결과에서 왔다는 표시입니다. 개발자는 Google Play Console에서 이 표시로 온 방문 수를 모아서만 보고, 누가 왔는지는 알 수 없습니다. 링크에는 개인을 알아볼 수 있는 정보를 담지 않습니다.</p>
+        <p><strong>스토어 평가와 다른 게임.</strong> 앱 정보의 <strong>스토어에서 평가하기</strong>와 <strong>다른 게임</strong>은 Google Play를 엽니다. 다른 게임 목록에서 누른 게임의 링크에는 Tenmates의 앱 정보에서 왔다는 같은 꼴의 표시(<code>utm_source=other_games&amp;utm_campaign=tenmates</code>)가 붙습니다. <strong>스토어에서 평가하기</strong>와 <strong>모든 게임 보기</strong>의 링크에는 표시가 붙지 않습니다. 판을 비우고 결과를 본 뒤에는 앱이 Google Play에 리뷰 창을 한 번 청할 수 있습니다. 창을 띄울지는 Google Play가 정합니다. 남기신 별점과 리뷰는 앱을 거치지 않고 Google Play로 바로 가며, 앱은 받지 않습니다. 리뷰는 다른 리뷰처럼 Google Play에 공개됩니다(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>).</p>
     </div>
 </section>
 
@@ -304,7 +311,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026-10-09</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026-11-14</p>
     </div>
 </section>
 </main>

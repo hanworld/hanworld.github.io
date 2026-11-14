@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-10-10</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -152,6 +152,7 @@
             <tr><th>What</th><th>Details</th></tr>
             <tr><td>Game records</td><td>Board sizes you have unlocked (and which one is new); for each size, boards solved, best time, total time (for the average) and the numbers of the boards you solved; boards in progress and the order of the cells you set on them (one per size and that day's Daily); Rush best (boards solved) and runs played; Daily results (days solved, time spent and hints) and streaks; the board size you last chose on the home screen; whether you finished the first-run guide</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, each effect's on/off switch, board settings (large numbers, show mistakes, show current sums, erase the rest automatically, row and column guide), language</td></tr>
+            <tr><td>Review request record</td><td>How many times you have seen a result screen after solving a board and when you first did, and whether and when the Google Play review window was requested. Used only to request the review window no more than once (section 6)</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the records and settings above are included in that backup, so they come back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
@@ -167,7 +168,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Board number, size, grade, result and time; hints and undos used; newly unlocked board size; boards solved, last grade and play time in Rush; finishing the first-run guide; tapping Share</td><td>Tuning board difficulty (grades) to real play, improving the modes</td></tr>
+            <tr><td>Game events</td><td>Board number, size, grade, result and time; hints and undos used; newly unlocked board size; boards solved, last grade and play time in Rush; finishing the first-run guide; tapping Share; requesting the Google Play review window; tapping "Rate on Google Play" or a game in "More games" (including "See all games") in About</td><td>Tuning board difficulty (grades) to real play, improving the modes, seeing whether rating and More games are used</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -230,8 +231,13 @@
 
 <section>
     <div class="container">
-        <h2>6. Sharing</h2>
-        <p>When you tap <strong>Share</strong> on a result screen, the result text (for example <code>Keepsum Daily #12 ✅ 6:41</code>) is passed to your device's share sheet. You choose where it goes; the app itself does not send it anywhere.</p>
+        <h2>6. Sharing, store links and the review window</h2>
+        <p>When you tap <strong>Share</strong> on a result screen, the result text is passed to your device's share sheet, with a link to Keepsum on Google Play as its last line. You choose where it goes; the app itself does not send it anywhere. For example:</p>
+        <pre class="share-example">Keepsum Daily #12 ✅ 6:41
+Hints 1
+https://play.google.com/store/apps/details?id=net.willee.keepsum&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p><strong>Store links.</strong> The link in shared text and the links under "More games" in About carry values that show where the link came from (sharing, or the More games list and the app it was opened from). They reach Google Play when the link is opened. They contain nothing that identifies you.</p>
+        <p><strong>Review window.</strong> After you solve a board, the Google Play review window may appear once on the result screen (Google Play decides whether to show it). Your rating and review go to Google Play without passing through the app and are published like any other review; the app does not receive them. <strong>Rate on Google Play</strong> in About opens Keepsum's page on Google Play.</p>
     </div>
 </section>
 
@@ -243,7 +249,7 @@
             <tr><td>Personalized ads</td><td><strong>Consent</strong> (Art. 6(1)(a)), obtained in the consent window above</td></tr>
             <tr><td>Non-personalized ads, fraud and abuse prevention, ad delivery</td><td><strong>Consent</strong> or <strong>legitimate interests</strong> (Art. 6(1)(f)), depending on local law</td></tr>
             <tr><td>Usage statistics, crash reports</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): fixing errors in the app and tuning board difficulty. It also covers viewing ad revenue together with usage metrics, to keep this free app running on ads. In the EEA, storage for statistics is limited according to your choice in the consent window.</td></tr>
-            <tr><td>Game records on the device</td><td>Not processed by us, since they are never sent to us</td></tr>
+            <tr><td>Game and review request records on the device</td><td>Not processed by us, since they are never sent to us</td></tr>
         </table>
     </div>
 </section>
@@ -304,7 +310,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-10-10</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>

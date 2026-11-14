@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-18</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。我们不会询问您的姓名、邮箱或电话号码。</li>
@@ -129,6 +129,7 @@
                     <li>应用停止运行时的<strong>错误报告</strong>（Firebase Crashlytics）</li>
                 </ul>
             </li>
+            <li>解开题目并看到结果画面后，可能会弹出一次 Google Play 评价窗口。您的评分和评价不经过应用，直接发送到 Google Play（第 6 节）。</li>
             <li>在欧洲经济区（EEA）、英国和瑞士，我们会在展示广告前<strong>征求您的同意</strong>。</li>
         </ul>
     </div>
@@ -152,6 +153,7 @@
             <tr><th>是什么</th><th>内容</th></tr>
             <tr><td>游戏记录</td><td>各难度的成功题数、最佳用时、用于计算平均的总用时和成功题目的编号，进行中的题目（含笼子和答案的题目本身、已填数字与笔记的记录、提示与撤销的次数、已用时间；每个难度一题，以及当天的每日挑战一题），每日挑战的结果（成功的日子、用时和提示次数）与连续记录，在主页最后选择的难度，是否完成了首次引导</td></tr>
             <tr><td>设置</td><td>音效、振动、减少特效、各项特效的开关，盘面设置（大号数字、先选数字、自动整理笔记、高亮相同数字、显示规则冲突、笼子组合助手、立即显示错误），语言</td></tr>
+            <tr><td>评价请求记录</td><td>解开题目后看到结果画面的次数及第一次的时间，是否请求过 Google Play 评价窗口及其时间。仅用于让 Google Play 评价窗口最多只弹出一次</td></tr>
         </table>
         <p>这些信息不会发送给开发者，卸载应用时一并删除。</p>
         <p><strong>设备备份。</strong> 如果您开启了设备的 Google 备份（Android 自动备份），上述记录和设置会包含在该备份中，在更换设备或重新安装应用时恢复。备份保存在您自己的 Google 账号中，开发者无法查看。如不需要，可在 Android 设置的备份菜单中关闭。</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
             <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备第二天是否再次使用（留存率）</td></tr>
-            <tr><td>游戏事件</td><td>题目的编号、模式（经典、每日挑战）、难度、结果（解开、从头开始、换一题）和用时，提示与撤销的次数，输入方式（是否开启“先选数字”）以及是否开启“笼子组合助手”，完成引导（首次引导和设置中的“玩法”）及用时，点按分享按钮</td><td>根据实际游玩调整题目的难度分级，改进各模式与功能</td></tr>
+            <tr><td>游戏事件</td><td>题目的编号、模式（经典、每日挑战）、难度、结果（解开、从头开始、换一题）和用时，提示与撤销的次数，输入方式（是否开启“先选数字”）以及是否开启“笼子组合助手”，完成引导（首次引导和设置中的“玩法”）及用时，点按分享按钮，向 Google Play 请求评价窗口，在“关于”中点按<strong>在 Google Play 上评分</strong>，在“关于”的<strong>更多游戏</strong>中点按的游戏（或<strong>查看全部游戏</strong>）</td><td>根据实际游玩调整题目的难度分级，改进各模式与功能</td></tr>
             <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和游玩时长</td></tr>
             <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
         </table>
@@ -230,12 +232,15 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在每日挑战的结果画面点按<strong>分享</strong>时，结果文字会交给设备的分享面板。文字如下。第三行（连续记录）只在连续两天以上时才有。</p>
+        <h2>6. 分享与 Google Play</h2>
+        <p>在每日挑战的结果画面点按<strong>分享</strong>时，结果文字会交给设备的分享面板。文字如下。第三行（连续记录）只在连续两天以上时才有。最后一行是 Google Play 上 Cagewise 页面的链接。</p>
         <pre class="share-example">Cagewise Daily #12 ✅ 18:41
 提示1次
-🔥 连续5天</pre>
+🔥 连续5天
+https://play.google.com/store/apps/details?id=net.willee.cagewise&amp;utm_source=share&amp;utm_campaign=daily</pre>
         <p>发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+        <p><strong>商店链接。</strong> “关于”中的<strong>在 Google Play 上评分</strong>和<strong>更多游戏</strong>会打开 Google Play。分享文字中的链接和<strong>更多游戏</strong>列表中各游戏的链接带有表示链接来源（分享的结果还是更多游戏列表，以及从哪个应用打开）的参数（<code>utm_source</code>、<code>utm_campaign</code>），会传给 Google Play。<strong>在 Google Play 上评分</strong>和<strong>查看全部游戏</strong>不带这些参数。这些参数不包含能识别个人的信息。开发者只在 Google Play Console 中查看按这些参数汇总的访问次数。</p>
+        <p><strong>评价窗口。</strong> 解开题目并看到结果画面后，应用可能会请求 Google Play 弹出一次评价窗口。是否弹出由 Google Play 决定。您的评分和评价不经过应用，直接发送到 Google Play，应用不会收到。它们会像其他评分和评价一样显示在 Google Play 上（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。</p>
     </div>
 </section>
 
@@ -308,7 +313,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-18</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

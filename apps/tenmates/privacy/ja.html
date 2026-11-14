@@ -118,7 +118,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>施行日: 2026-10-09</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>施行日: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">ひと目で</h2>
         <ul>
             <li>会員登録もログインもアカウントもありません。氏名・メールアドレス・電話番号をおうかがいすることはありません。</li>
@@ -131,6 +131,7 @@
                 </ul>
             </li>
             <li>欧州経済領域(EEA)・英国・スイスでは、広告を表示する前に<strong>同意をおうかがいします。</strong></li>
+            <li>盤面を空にして結果を見たあと、Google Play のレビュー画面が一度表示されることがあります。付けた評価やレビューはアプリを通らずに Google Play に届きます(6章)。</li>
         </ul>
     </div>
 </section>
@@ -153,6 +154,7 @@
             <tr><th>何を</th><th>中身</th></tr>
             <tr><td>プレイ記録</td><td>解放した盤面サイズ、サイズごとのクリア数・ベストタイム・クリアした盤面の番号、途中の盤面(サイズごとに1つとその日のデイリー1つ)、ラッシュのベストスコア・最高ステージ・プレイ回数、デイリーの結果(クリアした日・ギブアップした日)と連続記録、ホームで最後に選んだ盤面サイズ、初回ガイドを終えたかどうか</td></tr>
             <tr><td>設定</td><td>効果音・バイブレーション・エフェクトを減らす・演出ごとのオン・オフ・数字を大きく・言語</td></tr>
+            <tr><td>レビュー依頼の記録</td><td>盤面を空にした結果画面(ラッシュはベストスコア)を見た回数と最初に見たとき、Google Play にレビュー画面の表示を依頼したかどうかとそのとき(同じ方に二度依頼しないために数えます)</td></tr>
         </table>
         <p>これらが開発者に送信されることはありません。アプリを削除すると一緒に消えます。</p>
         <p><strong>端末のバックアップ。</strong> 端末の Google バックアップ(Android の自動バックアップ)をオンにしている場合、上の記録と設定がそのバックアップに含まれ、機種変更やアプリの再インストールのときに戻ります。バックアップはご自身の Google アカウントに保存され、開発者は見ることができません。不要な場合は Android の設定のバックアップのメニューでオフにできます。</p>
@@ -168,7 +170,7 @@
         <table class="info-table">
             <tr><th>何を</th><th>例</th><th>何のために</th></tr>
             <tr><td>アプリ インスタンス ID</td><td>アプリのインストール時に作られるランダムな ID</td><td>同じ端末が翌日も使ったか(継続率)を数える</td></tr>
-            <tr><td>ゲームのイベント</td><td>盤面の番号・サイズ・結果・かかった時間、数字の追加・ヒント・戻すの回数、新しく解放した盤面サイズ、ラッシュのスコアとステージ、初回ガイドの完了、シェアボタンを押したこと</td><td>実際のプレイに合わせて盤面の難しさ(ランク)を直す、モードの改善</td></tr>
+            <tr><td>ゲームのイベント</td><td>盤面の番号・サイズ・結果・かかった時間、数字の追加・ヒント・戻すの回数、新しく解放した盤面サイズ、ラッシュのスコアとステージ、初回ガイドの完了、シェアボタンを押したこと、Google Play にレビュー画面の表示を依頼したこと、「このアプリについて」で<strong>Google Playで評価する</strong>、<strong>ほかのゲーム</strong>のゲーム、<strong>すべてのゲームを見る</strong>を押したこと(どのゲームか)</td><td>実際のプレイに合わせて盤面の難しさ(ランク)を直す、モードと機能の改善</td></tr>
             <tr><td>アプリの利用</td><td>アプリの起動、利用時間、アプリのアップデート</td><td>継続率とプレイ時間の把握</td></tr>
             <tr><td>端末・アプリの情報</td><td>機種、Android のバージョン、アプリのバージョン、言語、国(IP アドレスから推定。IP アドレスそのものは保存しません)</td><td>機種ごとの不具合を見つける、言語ごとの利用の把握</td></tr>
         </table>
@@ -231,8 +233,13 @@
 
 <section>
     <div class="container">
-        <h2>6. シェア</h2>
-        <p>結果画面の<strong>シェア</strong>ボタンを押すと、結果の文章(例: <code>Tenmates デイリー #12 ✅ 4:12</code>)を端末の共有画面に渡します。送り先はご自身で選び、アプリが自分でどこかへ送ることはありません。</p>
+        <h2>6. シェアと Google Play</h2>
+        <p>結果画面の<strong>シェア</strong>ボタンを押すと、結果の文章を端末の共有画面に渡します。送り先はご自身で選び、アプリが自分でどこかへ送ることはありません。例:</p>
+        <pre class="share-example">Tenmates デイリー #12 ✅ 4:12
+追加 1 · ヒント 0
+https://play.google.com/store/apps/details?id=net.willee.tenmates&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>最後の行は Google Play の Tenmates のページへのリンクです。末尾の <code>utm_source=share&amp;utm_campaign=daily</code> は、シェアされたデイリーの結果から来たことを示す印です。開発者は Google Play Console でこの印から来た訪問の数をまとめて見るだけで、誰が来たかはわかりません。リンクに個人を特定できる情報は含まれません。</p>
+        <p><strong>評価とほかのゲーム。</strong> 「このアプリについて」の<strong>Google Playで評価する</strong>と<strong>ほかのゲーム</strong>は Google Play を開きます。ほかのゲームの一覧で押したゲームのリンクには、Tenmates の「このアプリについて」から来たことを示す同じ形の印(<code>utm_source=other_games&amp;utm_campaign=tenmates</code>)が付きます。<strong>Google Playで評価する</strong>と<strong>すべてのゲームを見る</strong>のリンクには印は付きません。盤面を空にして結果を見たあと、アプリが Google Play にレビュー画面の表示を一度依頼することがあります。表示するかどうかは Google Play が決めます。付けた評価やレビューはアプリを通らずに直接 Google Play に届き、アプリが受け取ることはありません。ほかのレビューと同じように Google Play に公開されます(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシー ポリシー</a>)。</p>
     </div>
 </section>
 
@@ -305,7 +312,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">施行日: 2026-10-09</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">施行日: 2026-11-14</p>
     </div>
 </section>
 </main>

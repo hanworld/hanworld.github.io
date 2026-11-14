@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-10-23</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>Effective date: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">At a glance</h2>
         <ul>
             <li>No sign-up, no login, no account. We never ask for your name, email or phone number.</li>
@@ -129,6 +129,7 @@
                     <li><strong>crash reports</strong> when the app stops working (Firebase Crashlytics)</li>
                 </ul>
             </li>
+            <li>After you solve a board and see the result, the app may ask Google Play once to show its review window. Any rating or review you leave goes to Google Play without passing through the app (section 6).</li>
             <li>In the European Economic Area (EEA), the UK and Switzerland, we <strong>ask for your consent</strong> before showing ads.</li>
         </ul>
     </div>
@@ -152,6 +153,7 @@
             <tr><th>What</th><th>Details</th></tr>
             <tr><td>Game records</td><td>For each Classic level: boards solved, boards solved without hints, best time (counting only boards solved without hints), total time (for the average) and the numbers of the boards you solved; the board in progress (the board itself including its answer, region map and color assignment, a record of the stars and dots you placed, the hint count and time spent; one per level in Classic and one per Daily board for that day); Daily results (days solved, and the time and hints of each board) and streaks; the level you last chose on the home screen; whether you finished the tutorial</td></tr>
             <tr><td>Settings</td><td>Sound effects, vibration, reduce effects, each effect's on/off switch (Motion, Light effects, Glass confetti), control settings (control method, long-press time, auto dots), board settings (region patterns, show rule conflicts, show mistakes instantly, show timer), language</td></tr>
+            <tr><td>Review requests</td><td>How many times you solved a board and saw its result, and when you first did; whether and when the app asked Google Play to show its review window (counted so that you are asked only once)</td></tr>
         </table>
         <p>This data is never sent to us. It is deleted when you uninstall the app.</p>
         <p><strong>Device backup.</strong> If you have turned on your device's Google backup (Android Auto Backup), the records and settings above are included in that backup, so they come back when you switch devices or reinstall the app. The backup is stored in your Google account; we cannot see it. You can turn it off in the backup menu of your Android settings.</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>What</th><th>Examples</th><th>Why</th></tr>
             <tr><td>App instance ID</td><td>A random ID created when the app is installed</td><td>Counting whether the same device comes back the next day (retention)</td></tr>
-            <tr><td>Game events</td><td>Board number, mode (Classic or Daily), level, board size and number of stars, Daily board size (Small, Medium or Large), starting a board (the first time you touch it), how a board ended (solved, left, or restarted) with the time and hint count; control method (A: tap to cycle, or B: tap · hold) and whether auto dots are on; finishing the tutorial on first launch and how long it took; tapping Share (and which Daily board)</td><td>Tuning board difficulty (levels) to real play, improving the modes and features</td></tr>
+            <tr><td>Game events</td><td>Board number, mode (Classic or Daily), level, board size and number of stars, Daily board size (Small, Medium or Large), starting a board (the first time you touch it), how a board ended (solved, left, or restarted) with the time and hint count; control method (A: tap to cycle, or B: tap · hold) and whether auto dots are on; finishing the tutorial on first launch and how long it took; tapping Share (and which Daily board); asking Google Play to show its review window; tapping <strong>Rate on Google Play</strong>, a game under <strong>More games</strong> or <strong>See all games</strong> in About (and which game)</td><td>Tuning board difficulty (levels) to real play, improving the modes and features</td></tr>
             <tr><td>App usage</td><td>App launches, time spent, app updates</td><td>Understanding retention and play time</td></tr>
             <tr><td>Device and app info</td><td>Device model, Android version, app version, language, country (estimated from the IP address; the IP address itself is not stored)</td><td>Finding device-specific problems, understanding use by language</td></tr>
         </table>
@@ -234,8 +236,11 @@
         <p>When you tap <strong>Share</strong> on the Daily result screen, the result text is passed to your device's share sheet. It looks like this. The third line (your streak) appears only when the streak is two days or longer.</p>
         <pre class="share-example">Huestar Daily #12 · Medium ✅ 03:41
 Hints 0
-🔥 5-day streak</pre>
+🔥 5-day streak
+https://play.google.com/store/apps/details?id=net.willee.huestar&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>The last line is a link to Huestar on Google Play. The <code>utm_source=share&amp;utm_campaign=daily</code> at its end marks visits that came from a shared result. We only see how many visits came this way, as totals in Google Play Console, never who they were. The link contains nothing that identifies you.</p>
         <p>You choose where it goes; the app itself does not send it anywhere.</p>
+        <p><strong>Rating and other games.</strong> <strong>Rate on Google Play</strong> and <strong>More games</strong> in About open Google Play. Links under More games carry the same kind of mark, showing they came from Huestar's About screen. After you solve a board and see the result, the app may ask Google Play once to show its review window. Google Play decides whether the window appears. Any rating or review you leave goes straight to Google Play without passing through the app (the app never receives it), and is posted there like any other review (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</p>
     </div>
 </section>
 
@@ -308,7 +313,7 @@ Hints 0
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-10-23</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">Effective date: 2026-11-14</p>
     </div>
 </section>
 </main>

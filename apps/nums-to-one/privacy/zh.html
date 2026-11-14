@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-05</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。我们不会询问您的姓名、邮箱或电话号码。</li>
@@ -152,6 +152,7 @@
             <tr><th>是什么</th><th>内容</th></tr>
             <tr><td>游戏记录</td><td>已解题目的编号和用时、各难度正确率、每个目标值的实力分数、极速模式的最高分和局数、每日挑战的结果、连续记录和完成的日期、在主页最后选择的经典目标值、是否完成了首次引导</td></tr>
             <tr><td>设置</td><td>音效、振动、减少特效、语言</td></tr>
+            <tr><td>评价请求记录</td><td>在全部解完每日挑战或创下极速模式最高分后看到结果画面的次数、第一次的时间，以及是否请求过 Google Play 评价窗口和请求的时间。仅用于让评价窗口只出现一次（第 6 节）</td></tr>
         </table>
         <p>这些信息不会发送给开发者，卸载应用时一并删除。</p>
         <p><strong>设备备份。</strong> 如果您开启了设备的 Google 备份（Android 自动备份），上述记录和设置会包含在该备份中，在更换设备或重新安装应用时恢复。备份保存在您自己的 Google 账号中，开发者无法查看。如不需要，可在 Android 设置的备份菜单中关闭。</p>
@@ -167,7 +168,7 @@
         <table class="info-table">
             <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
             <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备第二天是否再次使用（留存率）</td></tr>
-            <tr><td>游戏事件</td><td>已解题目的编号、结果和用时，提示与撤销的次数，极速模式分数，每日挑战结果，完成首次引导，点按分享按钮</td><td>根据实际游玩调整题目难度，改进各模式</td></tr>
+            <tr><td>游戏事件</td><td>已解题目的编号、结果和用时，提示与撤销的次数，极速模式分数，每日挑战结果，完成首次引导，点按分享按钮，请求评价窗口，在“关于”中点按“在 Google Play 上评分”或“更多游戏”中的游戏（包括“查看全部游戏”）</td><td>根据实际游玩调整题目难度，改进各模式，了解评分和其他游戏的入口是否有人使用</td></tr>
             <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和游玩时长</td></tr>
             <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
         </table>
@@ -230,8 +231,13 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在结果画面点按<strong>分享</strong>时，结果文字（例如 <code>Nums to One #42  🔥7</code>）会交给设备的分享面板。发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+        <h2>6. 分享与 Google Play</h2>
+        <p><strong>分享。</strong> 在结果画面点按<strong>分享</strong>时，结果文字会交给设备的分享面板，文字末尾附有本游戏的 Google Play 链接。发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+        <pre class="share-example">Nums to One #42  🔥7
+🟩🟩🟨  1:42
+https://play.google.com/store/apps/details?id=net.willee.numstoone&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p><strong>商店链接中的来源值。</strong> 分享文字中的链接和“关于”页面“更多游戏”中的链接带有表示链接来源的值（所分享结果的类型，或其他游戏列表及来源应用），打开链接时会传给 Google Play。这些值不包含可识别个人的信息。</p>
+        <p><strong>评价窗口。</strong> 结果画面可能会出现一次 Google Play 评价窗口。您的评分和评价不经过应用，直接发送到 Google Play，并像其他评价一样在 Google Play 上公开。应用不会收到这些内容。</p>
     </div>
 </section>
 
@@ -242,8 +248,8 @@
             <tr><th>处理什么</th><th>依据</th></tr>
             <tr><td>个性化广告</td><td><strong>同意</strong>（第 6 条第 1 款 (a) 项），通过上述同意窗口获得</td></tr>
             <tr><td>非个性化广告、防止欺诈与滥用、投放广告</td><td>视当地法律而定，为<strong>同意</strong>或<strong>正当利益</strong>（第 6 条第 1 款 (f) 项）</td></tr>
-            <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第 6 条第 1 款 (f) 项）：为了修复应用错误并调整题目难度。也包括为了靠广告运营这款免费应用，把广告收入与使用指标放在一起查看。在欧洲经济区，统计的存储会按您在同意窗口中的选择受到限制。</td></tr>
-            <tr><td>设备内的游戏记录</td><td>不会传给开发者，因此开发者方面不存在处理</td></tr>
+            <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第 6 条第 1 款 (f) 项）：为了修复应用错误并调整题目难度。也包括为了靠广告运营这款免费应用，把广告收入与使用指标放在一起查看，以及了解应用内评分和其他游戏的入口是否有人使用。在欧洲经济区，统计的存储会按您在同意窗口中的选择受到限制。</td></tr>
+            <tr><td>设备内的游戏记录、评价请求记录</td><td>不会传给开发者，因此开发者方面不存在处理</td></tr>
         </table>
     </div>
 </section>
@@ -304,7 +310,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-05</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

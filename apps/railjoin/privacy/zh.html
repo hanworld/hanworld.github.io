@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-07</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。我们不会询问您的姓名、邮箱或电话号码。</li>
@@ -129,6 +129,7 @@
                     <li>应用停止运行时的<strong>错误报告</strong>（Firebase Crashlytics）</li>
                 </ul>
             </li>
+            <li>解开盘面并看到结果后，应用可能会向 Google Play 请求一次评分窗口。您留下的评分和评价不经过应用，直接发送到 Google Play，并像其他评价一样公开，应用不会收到（第 6 节）。</li>
             <li>在欧洲经济区（EEA）、英国和瑞士，我们会在展示广告前<strong>征求您的同意</strong>。</li>
         </ul>
     </div>
@@ -153,6 +154,7 @@
             <tr><th>是什么</th><th>内容</th></tr>
             <tr><td>游戏记录</td><td>Classic 各等级的完成盘面数、未使用提示完成的盘面数、最佳用时（只计算未使用提示的盘面）、用于计算平均的总用时、使用提示的总次数和完成盘面的编号，进行中的盘面（盘面本身，放置的铁轨与×、●的记录、提示次数、撤销次数、已用时间；Classic 每个等级一局，Daily 为当天每种大小的盘面一局），Daily 的结果（完成的日子，以及每个盘面的用时与提示次数）与连续记录，在主页最后选择的等级，是否完成了新手教程</td></tr>
             <tr><td>设置</td><td>音效、振动、减少特效、各项特效的开关（连接时的光效、完成时的火车、车票纸屑），辅助设置（显示规则冲突、立即显示失误、显示时间），语言</td></tr>
+            <tr><td>评分请求</td><td>解开盘面并看完结果的次数与第一次的时间，是否向 Google Play 请求过评分窗口及其时间。仅用于只请求一次评分窗口</td></tr>
         </table>
         <p>这些信息不会发送给开发者，卸载应用时一并删除。</p>
         <p><strong>设备备份。</strong> 如果您开启了设备的 Google 备份（Android 自动备份），上述记录和设置会包含在该备份中，在更换设备或重新安装应用时恢复。备份保存在您自己的 Google 账号中，开发者无法查看。如不需要，可在 Android 设置的备份菜单中关闭。</p>
@@ -168,7 +170,7 @@
         <table class="info-table">
             <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
             <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备第二天是否再次使用（留存率）</td></tr>
-            <tr><td>游戏事件</td><td>盘面的编号、模式（Classic、Daily）、等级、盘面大小，开始一局（第一次操作时），完成一局及用时、提示次数、撤销次数，查看提示（提示所用解题技巧的名称或提示指出的错误铁轨、×、●的种类，提示的第 1 或第 2 阶段，以及是否通过[直到下一段铁轨]查看），完成 Daily 盘面（Daily 编号和盘面大小），首次启动时完成新手教程（连到终点）及用时，点击分享按钮（以及是哪个 Daily 盘面）</td><td>根据实际游玩调整盘面的难度分级（等级）和提示，改进各模式与功能</td></tr>
+            <tr><td>游戏事件</td><td>盘面的编号、模式（Classic、Daily）、等级、盘面大小，开始一局（第一次操作时），完成一局及用时、提示次数、撤销次数，查看提示（提示所用解题技巧的名称或提示指出的错误铁轨、×、●的种类，提示的第 1 或第 2 阶段，以及是否通过[直到下一段铁轨]查看），完成 Daily 盘面（Daily 编号和盘面大小），首次启动时完成新手教程（连到终点）及用时，点击分享按钮（以及是哪个 Daily 盘面），向 Google Play 请求评分窗口（第几次请求），在“关于”中点击<strong>在 Google Play 上评分</strong>，或<strong>更多游戏</strong>中的游戏或<strong>查看全部游戏</strong>（以及是哪一项）</td><td>根据实际游玩调整盘面的难度分级（等级）和提示，改进各模式与功能</td></tr>
             <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和游玩时长</td></tr>
             <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
         </table>
@@ -235,8 +237,11 @@
         <p>在 Daily 的结果画面点击<strong>分享</strong>时，结果文字会交给设备的分享面板。文字如下。第三行（连续记录）只在连续两天以上时才有。不会附上会泄露答案的盘面图片。</p>
         <pre class="share-example">Railjoin Daily #12 · 中型盘面 ✅ 3:41
 提示 0次
-🔥 连续5天</pre>
+🔥 连续5天
+https://play.google.com/store/apps/details?id=net.willee.railjoin&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p>最后一行是 Google Play 上 Railjoin 页面的链接。末尾的 <code>utm_source=share&amp;utm_campaign=daily</code> 表示访问来自分享的结果。打开链接时，这个标记会传给 Google Play，其中不包含可识别个人身份的信息。开发者只能在 Google Play Console 中看到经由这个标记来访的总次数。</p>
         <p>发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+        <p><strong>评分与更多游戏。</strong> “关于”中的<strong>在 Google Play 上评分</strong>和<strong>更多游戏</strong>会打开 Google Play。从“更多游戏”列表中选择的游戏链接也会附上同样形式的标记，表示来自 Railjoin 的“关于”画面（不包含可识别个人身份的信息）。<strong>在 Google Play 上评分</strong>和<strong>查看全部游戏</strong>不会附上这种标记。解开盘面并看到结果后，应用可能会向 Google Play 请求一次显示评分窗口。是否显示由 Google Play 决定。您留下的评分和评价不经过应用，直接发送到 Google Play，并像其他评价一样公开，应用不会收到（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。</p>
     </div>
 </section>
 
@@ -311,7 +316,7 @@
             <p>个人信息保护负责部门：Willee Project</p>
             <p>电子邮件：<a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-07</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

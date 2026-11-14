@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-18</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>無需註冊，無需登入，沒有帳號。我們不會詢問您的姓名、電子郵件或電話號碼。</li>
@@ -129,6 +129,7 @@
                     <li>應用程式停止運作時的<strong>錯誤報告</strong>（Firebase Crashlytics）</li>
                 </ul>
             </li>
+            <li>解開題目並看到結果畫面後，可能會出現一次 Google Play 評分視窗。您的評分和評論不經過應用程式，直接傳送到 Google Play（第 6 節）。</li>
             <li>在歐洲經濟區（EEA）、英國和瑞士，我們會在顯示廣告前<strong>徵求您的同意</strong>。</li>
         </ul>
     </div>
@@ -152,6 +153,7 @@
             <tr><th>項目</th><th>內容</th></tr>
             <tr><td>遊戲紀錄</td><td>各難度的成功題數、最佳用時、用於計算平均的總用時和成功題目的編號，進行中的題目（含籠子和答案的題目本身、已填數字與筆記的紀錄、提示與復原的次數、已用時間；每個難度一題，以及當天的每日挑戰一題），每日挑戰的結果（成功的日子、用時和提示次數）與連續紀錄，在首頁最後選擇的難度，是否完成首次引導</td></tr>
             <tr><td>設定</td><td>音效、震動、減少特效、各項特效的開關，盤面設定（大號數字、先選數字、自動整理筆記、醒目顯示相同數字、顯示規則衝突、籠子組合助手、立即顯示錯誤），語言</td></tr>
+            <tr><td>評分請求紀錄</td><td>解開題目後看到結果畫面的次數及第一次的時間，是否請求過 Google Play 評分視窗及其時間。僅用於讓 Google Play 評分視窗最多只出現一次</td></tr>
         </table>
         <p>這些資訊不會傳送給開發者，解除安裝應用程式時會一併刪除。</p>
         <p><strong>裝置備份。</strong> 如果您開啟了裝置的 Google 備份（Android 自動備份），上述紀錄和設定會包含在該備份中，在更換裝置或重新安裝應用程式時還原。備份儲存在您自己的 Google 帳戶中，開發者無法查看。如不需要，可在 Android 設定的備份選單中關閉。</p>
@@ -167,7 +169,7 @@
         <table class="info-table">
             <tr><th>處理什麼</th><th>例子</th><th>用於什麼</th></tr>
             <tr><td>應用程式執行個體 ID</td><td>安裝應用程式時產生的隨機 ID</td><td>統計同一台裝置隔天是否再次使用（續用率）</td></tr>
-            <tr><td>遊戲事件</td><td>題目的編號、模式（經典、每日挑戰）、難度、結果（解開、從頭開始、換一題）和用時，提示與復原的次數，輸入方式（是否開啟「先選數字」）以及是否開啟「籠子組合助手」，完成引導（首次引導和設定中的「玩法」）及用時，點按分享按鈕</td><td>依照實際遊玩調整題目的難度分級，改善各模式與功能</td></tr>
+            <tr><td>遊戲事件</td><td>題目的編號、模式（經典、每日挑戰）、難度、結果（解開、從頭開始、換一題）和用時，提示與復原的次數，輸入方式（是否開啟「先選數字」）以及是否開啟「籠子組合助手」，完成引導（首次引導和設定中的「玩法」）及用時，點按分享按鈕，向 Google Play 請求評分視窗，在「關於」中點按<strong>在 Google Play 上評分</strong>，在「關於」的<strong>更多遊戲</strong>中點按的遊戲（或<strong>查看全部遊戲</strong>）</td><td>依照實際遊玩調整題目的難度分級，改善各模式與功能</td></tr>
             <tr><td>應用程式使用</td><td>應用程式啟動、使用時間、應用程式更新</td><td>了解續用率和遊玩時間</td></tr>
             <tr><td>裝置與應用程式資訊</td><td>機型、Android 版本、應用程式版本、語言、國家（依 IP 位址推估；不儲存 IP 位址本身）</td><td>找出特定機型的問題，了解各語言的使用情形</td></tr>
         </table>
@@ -230,12 +232,15 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在每日挑戰的結果畫面點按<strong>分享</strong>時，結果文字會交給裝置的分享面板。文字如下。第三行（連續紀錄）只在連續兩天以上時才有。</p>
+        <h2>6. 分享與 Google Play</h2>
+        <p>在每日挑戰的結果畫面點按<strong>分享</strong>時，結果文字會交給裝置的分享面板。文字如下。第三行（連續紀錄）只在連續兩天以上時才有。最後一行是 Google Play 上 Cagewise 頁面的連結。</p>
         <pre class="share-example">Cagewise Daily #12 ✅ 18:41
 提示1次
-🔥 連續5天</pre>
+🔥 連續5天
+https://play.google.com/store/apps/details?id=net.willee.cagewise&amp;utm_source=share&amp;utm_campaign=daily</pre>
         <p>要傳送到哪裡由您選擇，應用程式本身不會把它傳送到任何地方。</p>
+        <p><strong>商店連結。</strong> 「關於」中的<strong>在 Google Play 上評分</strong>和<strong>更多遊戲</strong>會開啟 Google Play。分享文字中的連結和<strong>更多遊戲</strong>清單中各遊戲的連結帶有表示連結來源（分享的結果還是更多遊戲清單，以及從哪個應用程式開啟）的參數（<code>utm_source</code>、<code>utm_campaign</code>），會傳給 Google Play。<strong>在 Google Play 上評分</strong>和<strong>查看全部遊戲</strong>不帶這些參數。這些參數不包含可識別個人的資訊。開發者只在 Google Play Console 中查看按這些參數彙總的造訪次數。</p>
+        <p><strong>評分視窗。</strong> 解開題目並看到結果畫面後，應用程式可能會請求 Google Play 顯示一次評分視窗。是否顯示由 Google Play 決定。您的評分和評論不經過應用程式，直接傳送到 Google Play，應用程式不會收到。它們會像其他評分和評論一樣顯示在 Google Play 上（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>）。</p>
     </div>
 </section>
 
@@ -308,7 +313,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-18</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

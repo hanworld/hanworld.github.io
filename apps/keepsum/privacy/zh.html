@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-10-10</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>生效日期：2026-11-14</strong></p>
         <h2 style="margin-top:16px;">一目了然</h2>
         <ul>
             <li>无需注册，无需登录，没有账号。我们不会询问您的姓名、邮箱或电话号码。</li>
@@ -152,6 +152,7 @@
             <tr><th>是什么</th><th>内容</th></tr>
             <tr><td>游戏记录</td><td>已解锁的盘面尺寸（包括新解锁尺寸的标记），各尺寸的成功局数、最佳用时、用于计算平均的总用时和成功盘面的编号，进行中的盘面及其中已定格子的顺序（每个尺寸一盘，以及当天的每日挑战一盘），极速模式的最佳纪录（解开的题数）和挑战次数，每日挑战的结果（成功的日子、用时和提示次数）与连续记录，在主页最后选择的盘面尺寸，是否完成了首次引导</td></tr>
             <tr><td>设置</td><td>音效、振动、减少特效、各项特效的开关，盘面设置（大号数字、立即显示错误、显示当前的和、自动消除其余数字、行列辅助线），语言</td></tr>
+            <tr><td>评分请求记录</td><td>解题后看到结果画面的次数和第一次看到的时间，是否已请求 Google Play 评分窗口及请求时间。仅用于让评分窗口只请求一次（第 6 节）</td></tr>
         </table>
         <p>这些信息不会发送给开发者，卸载应用时一并删除。</p>
         <p><strong>设备备份。</strong> 如果您开启了设备的 Google 备份（Android 自动备份），上述记录和设置会包含在该备份中，在更换设备或重新安装应用时恢复。备份保存在您自己的 Google 账号中，开发者无法查看。如不需要，可在 Android 设置的备份菜单中关闭。</p>
@@ -167,7 +168,7 @@
         <table class="info-table">
             <tr><th>处理什么</th><th>例子</th><th>用于什么</th></tr>
             <tr><td>应用实例 ID</td><td>安装应用时生成的随机 ID</td><td>统计同一台设备第二天是否再次使用（留存率）</td></tr>
-            <tr><td>游戏事件</td><td>盘面的编号、尺寸、等级、结果和用时，提示与撤销的次数，新解锁的盘面尺寸，极速模式中解开的题数、最后的等级和游玩时间，完成首次引导，点按分享按钮</td><td>根据实际游玩调整盘面难度（等级），改进各模式</td></tr>
+            <tr><td>游戏事件</td><td>盘面的编号、尺寸、等级、结果和用时，提示与撤销的次数，新解锁的盘面尺寸，极速模式中解开的题数、最后的等级和游玩时间，完成首次引导，点按分享按钮，请求 Google Play 评分窗口，在“关于”中点按“在 Google Play 上评分”或“更多游戏”中的游戏（包括“查看全部游戏”）</td><td>根据实际游玩调整盘面难度（等级），改进各模式，了解评分与更多游戏是否有人使用</td></tr>
             <tr><td>应用使用</td><td>应用启动、使用时长、应用更新</td><td>了解留存率和游玩时长</td></tr>
             <tr><td>设备与应用信息</td><td>机型、Android 版本、应用版本、语言、国家（根据 IP 地址推测；不保存 IP 地址本身）</td><td>发现特定机型的问题，了解各语言的使用情况</td></tr>
         </table>
@@ -230,8 +231,13 @@
 
 <section>
     <div class="container">
-        <h2>6. 分享</h2>
-        <p>在结果画面点按<strong>分享</strong>时，结果文字（例如 <code>Keepsum 每日挑战 #12 ✅ 6:41</code>）会交给设备的分享面板。发送到哪里由您选择，应用本身不会把它发送到任何地方。</p>
+        <h2>6. 分享、商店链接和评分窗口</h2>
+        <p>在结果画面点按<strong>分享</strong>时，结果文字会交给设备的分享面板，最后一行附上 Keepsum 的 Google Play 链接。发送到哪里由您选择，应用本身不会把它发送到任何地方。例如：</p>
+        <pre class="share-example">Keepsum 每日挑战 #12 ✅ 6:41
+提示 1
+https://play.google.com/store/apps/details?id=net.willee.keepsum&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p><strong>商店链接。</strong> 分享文字中的链接和“关于”中“更多游戏”的链接带有表示链接来源（分享，或更多游戏列表及发出链接的应用）的参数，打开链接时会传给 Google Play。其中不包含可识别个人身份的信息。</p>
+        <p><strong>评分窗口。</strong> 解题后在结果画面上，Google Play 的评分窗口可能会出现一次（是否显示由 Google Play 决定）。评分和评论不经过应用，直接发送给 Google Play，并像其他评论一样公开；应用不会收到。“关于”中的<strong>在 Google Play 上评分</strong>会打开 Keepsum 的 Google Play 页面。</p>
     </div>
 </section>
 
@@ -243,7 +249,7 @@
             <tr><td>个性化广告</td><td><strong>同意</strong>（第 6 条第 1 款 (a) 项），通过上述同意窗口获得</td></tr>
             <tr><td>非个性化广告、防止欺诈与滥用、投放广告</td><td>视当地法律而定，为<strong>同意</strong>或<strong>正当利益</strong>（第 6 条第 1 款 (f) 项）</td></tr>
             <tr><td>使用统计、错误报告</td><td><strong>正当利益</strong>（第 6 条第 1 款 (f) 项）：为了修复应用错误并调整盘面难度。也包括为了靠广告运营这款免费应用，把广告收入与使用指标放在一起查看。在欧洲经济区，统计的存储会按您在同意窗口中的选择受到限制。</td></tr>
-            <tr><td>设备内的游戏记录</td><td>不会传给开发者，因此开发者方面不存在处理</td></tr>
+            <tr><td>设备内的游戏记录和评分请求记录</td><td>不会传给开发者，因此开发者方面不存在处理</td></tr>
         </table>
     </div>
 </section>
@@ -304,7 +310,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-10-10</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">生效日期：2026-11-14</p>
     </div>
 </section>
 </main>

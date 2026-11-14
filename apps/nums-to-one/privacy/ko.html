@@ -117,7 +117,7 @@
 <main>
 <section>
     <div class="container">
-        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026-10-05</strong></p>
+        <p style="color:#64748b; font-size:0.9rem;"><strong>시행일: 2026-11-14</strong></p>
         <h2 style="margin-top:16px;">한눈에</h2>
         <ul>
             <li>회원가입도, 로그인도, 계정도 없습니다. 이름·이메일·전화번호를 묻지 않습니다.</li>
@@ -152,6 +152,7 @@
             <tr><th>무엇</th><th>내용</th></tr>
             <tr><td>게임 기록</td><td>푼 문제의 번호와 풀이 시간, 등급별 정답률, 목표값별 실력 점수, Rush 최고 점수와 판 수, Daily 결과·연속 기록·마친 날, 홈에서 마지막으로 고른 Classic 목표값, 첫 실행 안내를 마쳤는지</td></tr>
             <tr><td>설정</td><td>효과음·진동·효과 줄이기·언어</td></tr>
+            <tr><td>리뷰 요청 기록</td><td>Daily를 모두 풀었거나 Rush 최고 기록을 낸 결과 화면을 본 횟수, 그 첫 시각, Google Play 리뷰 창을 요청했는지와 그 시각. 리뷰 창을 한 번만 띄우는 데만 씁니다(6장)</td></tr>
         </table>
         <p>이 정보는 개발자에게 전송되지 않습니다. 앱을 지우면 함께 사라집니다.</p>
         <p><strong>기기 백업.</strong> 기기의 Google 백업(Android 자동 백업)을 켜 두셨다면 위 기록과 설정이 그 백업에 함께 들어가, 기기를 바꾸거나 앱을 다시 설치할 때 되살아납니다. 백업은 이용자의 Google 계정에 저장되며 개발자는 볼 수 없습니다. 원하지 않으시면 Android 설정의 백업 메뉴에서 끄실 수 있습니다.</p>
@@ -167,7 +168,7 @@
         <table class="info-table">
             <tr><th>무엇을</th><th>예</th><th>무엇에 쓰나</th></tr>
             <tr><td>앱 인스턴스 ID</td><td>앱을 설치할 때 만들어지는 무작위 ID</td><td>같은 기기가 다음 날 다시 왔는지(재방문율) 세기</td></tr>
-            <tr><td>게임 이벤트</td><td>푼 문제의 번호·결과·풀이 시간, 힌트·되돌리기 횟수, Rush 점수, Daily 결과, 첫 실행 안내를 마침, 공유 단추를 누름</td><td>문제 난이도를 실제 풀이에 맞춰 고치기, 모드 개선</td></tr>
+            <tr><td>게임 이벤트</td><td>푼 문제의 번호·결과·풀이 시간, 힌트·되돌리기 횟수, Rush 점수, Daily 결과, 첫 실행 안내를 마침, 공유 단추를 누름, 리뷰 창을 요청함, 앱 정보에서 '스토어에서 평가하기'나 '다른 게임'의 게임('모든 게임 보기' 포함)을 누름</td><td>문제 난이도를 실제 풀이에 맞춰 고치기, 모드 개선, 평가·다른 게임 안내가 쓰이는지 보기</td></tr>
             <tr><td>앱 사용</td><td>앱 실행, 사용 시간, 앱 업데이트</td><td>재방문율과 플레이 시간 파악</td></tr>
             <tr><td>기기·앱 정보</td><td>기종, Android 버전, 앱 버전, 언어, 나라(IP 주소로 짐작. IP 주소 자체는 저장하지 않음)</td><td>기기별 문제 찾기, 언어별 이용 파악</td></tr>
         </table>
@@ -230,8 +231,13 @@
 
 <section>
     <div class="container">
-        <h2>6. 공유</h2>
-        <p>결과 화면의 <strong>공유</strong> 단추를 누르시면, 결과 글(예: <code>Nums to One #42  🔥7</code>)을 기기의 공유 창으로 넘깁니다. 어디로 보낼지는 이용자가 고르고, 앱이 직접 어디로 보내지는 않습니다.</p>
+        <h2>6. 공유와 Google Play</h2>
+        <p><strong>공유.</strong> 결과 화면의 <strong>공유</strong> 단추를 누르시면, 결과 글을 기기의 공유 창으로 넘깁니다. 글 끝에는 이 게임의 Google Play 주소가 붙습니다. 어디로 보낼지는 이용자가 고르고, 앱이 직접 어디로 보내지는 않습니다.</p>
+        <pre class="share-example">Nums to One #42  🔥7
+🟩🟩🟨  1:42
+https://play.google.com/store/apps/details?id=net.willee.numstoone&amp;utm_source=share&amp;utm_campaign=daily</pre>
+        <p><strong>스토어 링크의 출처 값.</strong> 공유 글의 링크와 앱 정보 화면 '다른 게임'의 링크에는 어디서 온 링크인지(공유한 결과의 종류, 또는 다른 게임 목록과 보낸 앱)를 나타내는 값이 붙어, 링크를 열면 Google Play에 전해집니다. 개인을 알아볼 수 있는 정보는 담지 않습니다.</p>
+        <p><strong>리뷰 창.</strong> 결과 화면에서 Google Play 리뷰 창이 한 번 뜰 수 있습니다. 별점과 리뷰 글은 앱을 거치지 않고 Google Play로 바로 가며, Google Play의 다른 리뷰처럼 공개됩니다. 앱은 그 내용을 받지 않습니다.</p>
     </div>
 </section>
 
@@ -242,8 +248,8 @@
             <tr><th>무엇을</th><th>근거</th></tr>
             <tr><td>개인화 광고</td><td><strong>동의</strong> (제6조 제1항 (a)). 위 동의 창에서 받습니다.</td></tr>
             <tr><td>개인화되지 않은 광고, 사기·남용 방지, 광고 전송</td><td>해당 지역 법에 따라 <strong>동의</strong> 또는 <strong>정당한 이익</strong> (제6조 제1항 (f))</td></tr>
-            <tr><td>이용 통계, 오류 보고</td><td><strong>정당한 이익</strong> (제6조 제1항 (f)): 앱의 오류를 고치고 문제 난이도를 맞추기 위해서입니다. 무료 앱을 광고로 운영하려고 광고 수익을 이용 지표와 함께 보는 것도 포함합니다. 유럽경제지역에서는 동의 창의 선택에 따라 통계 저장이 제한됩니다.</td></tr>
-            <tr><td>기기 안의 게임 기록</td><td>개발자에게 전달되지 않으므로 개발자 쪽 처리가 없습니다</td></tr>
+            <tr><td>이용 통계, 오류 보고</td><td><strong>정당한 이익</strong> (제6조 제1항 (f)): 앱의 오류를 고치고 문제 난이도를 맞추기 위해서입니다. 무료 앱을 광고로 운영하려고 광고 수익을 이용 지표와 함께 보는 것, 앱 안의 평가·다른 게임 안내가 쓰이는지 보는 것도 포함합니다. 유럽경제지역에서는 동의 창의 선택에 따라 통계 저장이 제한됩니다.</td></tr>
+            <tr><td>기기 안의 게임 기록, 리뷰 요청 기록</td><td>개발자에게 전달되지 않으므로 개발자 쪽 처리가 없습니다</td></tr>
         </table>
     </div>
 </section>
@@ -304,7 +310,7 @@
         <div class="contact-box">
             <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
         </div>
-        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026-10-05</p>
+        <p style="color:#64748b; font-size:0.9rem; margin-top:16px;">시행일: 2026-11-14</p>
     </div>
 </section>
 </main>
