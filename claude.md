@@ -265,7 +265,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── rotapick/           # RotaPick 앱 (출시 예정)
+│   └── rotapick/           # RotaPick 앱
 │       ├── index.html      # 한국어로 리다이렉트
 │       ├── ko.html
 │       ├── en.html
@@ -423,7 +423,8 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 
 ### RotaPick
 - 선택지를 적으면 색 칸으로 나뉜 원판이 생기고, 돌리면 바늘 아래 멈춘 칸이 뽑히는 돌림판. 게임이 아니라 도구 앱(메인에서는 '생활' 갈래). 판 여러 개 저장, 칸마다 비율, 뽑힌 칸 빼기, 판마다 최근 결과 50개 기록
-- 플랫폼: Android (출시 예정 — 2026-11-15 설명서·소개 페이지·홈 카드 게시, 그때 Play 내부 테스트 중. 스토어 제목 `Spin Wheel: RotaPick`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'RotaPick')
+- 플랫폼: Android (Google Play 출시, 2026-11-15. 스토어 제목 `Spin Wheel: RotaPick`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'RotaPick')
+- Google Play: https://play.google.com/store/apps/details?id=net.willee.rotapick
 - 패키지 ID: net.willee.rotapick
 - 원본 문서: 앱 저장소(A39.RotaPick) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/rotapick/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지가 `privacy/en.html`을 쓰므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
 - 이름은 늘 'RotaPick'(R·P 대문자, 한국어로 적을 때는 로타픽). 다른 앱·회사 이름을 쓰지 않고, 'Spin the Wheel'(미국 등록 상표)은 쓰지 않음. 카지노·도박 표현(칩·베팅 등)과 'free'·'무료'·'無料'·'免费'를 쓰지 않고, 번체는 '輪盤' 대신 '轉盤'(앱 저장소 `CLAUDE.md`·`docs/store/listing.md` 규칙)
