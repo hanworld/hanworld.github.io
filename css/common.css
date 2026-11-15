@@ -282,9 +282,12 @@ footer a:hover { color: var(--gold); }
 
     /* 앱 페이지 위치줄: 홈은 집 아이콘만 남긴다 (화면 읽기 프로그램은 이름을 그대로 읽음) */
     .breadcrumb .container > div:not(.lang-switch) > a:first-child { font-size: 0; }
-    /* 설명서·방침 위치줄: 현재 페이지 이름은 바로 아래 머리글에 크게 있으므로 뺀다 */
+    /* 설명서·방침 위치줄: 현재 페이지 이름은 바로 아래 머리글에 크게 있으므로 뺀다
+       (방침만 먼저 올린 앱은 소개 페이지가 없어 앱 이름이 링크가 아닌 <span>이다) */
     .breadcrumb .container > div:not(.lang-switch) > a ~ a + svg,
-    .breadcrumb .container > div:not(.lang-switch) > a ~ a + svg + span { display: none; }
+    .breadcrumb .container > div:not(.lang-switch) > a ~ a + svg + span,
+    .breadcrumb .container > div:not(.lang-switch) > span + svg,
+    .breadcrumb .container > div:not(.lang-switch) > span + svg + span { display: none; }
 
     /* 긴 주소는 아무 데서나 끊는다 */
     section a[href^="http"] { overflow-wrap: anywhere; }
