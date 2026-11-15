@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>RotaPick: ルーレット - Willee Project</title>
+    <meta name="description" content="RotaPickは、選択肢を入力するとカラフルなルーレットになり、回して針の下に止まったマスが選ばれるアプリです。ランチのメニュー、順番決め、発表の順番、当番、チーム分け、はい/いいえなど、迷うことを手軽に決められます。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/rotapick/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/rotapick/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/rotapick/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/rotapick/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/rotapick/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/rotapick/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="RotaPick: ルーレット - Willee Project">
+    <meta property="og:description" content="RotaPickは、選択肢を入力するとカラフルなルーレットになり、回して針の下に止まったマスが選ばれるアプリです。ランチのメニュー、順番決め、発表の順番、当番、チーム分け、はい/いいえなど、迷うことを手軽に決められます。">
+    <meta property="og:url" content="https://willee.net/apps/rotapick/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/rotapick/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>RotaPick</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>RotaPick</h1>
+        <p>選択肢を書いて回せば、ルーレットが選んでくれます。</p>
+        <div class="store-cta"><span>Google Play で近日公開</span></div>
+        <div class="graphic-banner">
+            <img src="images/RotaPick_ja_feature.webp" alt="RotaPick — 選択肢を書いて回せば、ルーレットが選んでくれます。" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="RotaPick アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>RotaPick</h2>
+                <p>ルーレット</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">RotaPickは、選択肢を入力するとカラフルなルーレットになり、回して針の下に止まったマスが選ばれるアプリです。ランチのメニュー、順番決め、発表の順番、当番、チーム分け、はい/いいえなど、迷うことを手軽に決められます。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/RotaPick_ja_01_spin.webp" alt="ルーレット画面 — 回っているランチのルーレット" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_02_result.webp" alt="結果 — 選ばれたマスの色が画面いっぱいに広がった結果と花火" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_03_boards.webp" alt="ルーレット一覧 — ルーレットのカードと「ルーレットを作る」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_04_edit.webp" alt="編集 — マスごとの比率と色、開いた行の順番ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_05_order.webp" alt="順番決め — 「選ばれたマスを外す」と選ばれた順の帯" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_06_many.webp" alt="数字 1〜30 — 30マスのルーレット" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ja_07_dark.webp" alt="ダークモード — 回っているランチのルーレット" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>使い方</strong>
+                <span>ひとつのルーレットに選択肢を2〜100個入力すると、マスごとに色が付きます。「回す」を軽くタップすると標準の強さで回り、長押しすると強さバーが1秒ほどで満ちて、指を離した強さで回ります。指でルーレットをはじいても回せます。針がマスの境目を通るたびにカチッという音と軽い振動があり、止まると選ばれたマスが飛び出し、そのマスの色が画面いっぱいに広がって、結果が大きく表示されます。マスの色は8色から選ぶか、隣のマスと違う色に自動で決まり、マスが30個を超えると文字は小さくなります。回転時間は設定で約3秒、5秒、8秒から選べます。</span>
+            </li>
+            <li>
+                <strong>公平さが目で見えます</strong>
+                <span>マスの広さがそのまま確率です。マスごとに比率を×1〜×10で設定すると、その分だけマスが広くなり、比率がルーレット上にそのまま見えます。隠れた比率はありません。結果は事前に決まっておらず、止まった角度でマスが決まるので、強さをうまく合わせても狙ったマスを出すことはできません。</span>
+            </li>
+            <li>
+                <strong>「選ばれたマスを外す」</strong>
+                <span>「選ばれたマスを外す」をオンにすると、針が止まったマスは「元に戻す」を押すまでルーレットから外れます。順番決めや名前の抽選、ひとつずつ割り当てたいときに便利です。</span>
+            </li>
+            <li>
+                <strong>テンプレートですぐ開始</strong>
+                <span>アプリを開くと最後に使ったルーレットがすぐ表示され、最初に入っているルーレットはランチです。「ルーレットを作る」から、空のルーレットか、はい/いいえ、数字 1〜6、ランチ、順番決めのテンプレートで始められます。ランチは日本でよく食べられる8品です。変更はそのつど自動で保存されるので、保存ボタンはありません。</span>
+            </li>
+            <li>
+                <strong>ルーレットの保存と履歴</strong>
+                <span>ルーレットはいくつでも保存でき、名前の変更、複製、削除ができます。長押ししてドラッグすると並べ替えられます。ルーレット一覧は最近使ったものが先頭に並びます。編集では、行をドラッグするか、行を開いて並べ替えボタンで選択肢の順番を変えられます。ルーレットごとに直近50件の結果が時刻付きで「履歴」に残り、履歴は削除できます。「よく選ばれたマス」では、選ばれた回数をマスの広さと並べて見られます。結果画面の「共有」から、結果をテキストで送れます。</span>
+            </li>
+            <li>
+                <strong>見た目と音</strong>
+                <span>標準は明るい画面で、端末のダークモードに合わせます。針がマスの境目を通ると火花が散り、結果が出ると花火が上がります。効果音は木のカチッという音、マリンバの結果音、チャイムです。設定の「サウンドと効果」で効果音とバイブレーションをオフにでき、「エフェクトを減らす」をオンにすると火花と花火も出ません。</span>
+            </li>
+            <li>
+                <strong>ご利用について</strong>
+                <span>サブスクリプションも有料ロックもアプリ内課金もなく、すべての機能を使えます。広告は画面下のバナー1つだけで、全画面広告はありません。サーバーやログインなしでオフラインで使え、ルーレット・履歴・設定は端末にだけ保存されます。言語は日本語、英語、韓国語、中国語(簡体字・繁体字)で、設定の「言語」で切り替えられます。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>RotaPick アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>RotaPick アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

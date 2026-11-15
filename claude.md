@@ -265,7 +265,18 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 │   │   │   └── zh-Hant.html
 │   │   └── images/
 │   │       └── app_icon.png
-│   └── rotapick/           # RotaPick 앱 (출시 전, 지금은 방침만)
+│   └── rotapick/           # RotaPick 앱 (출시 예정)
+│       ├── index.html      # 한국어로 리다이렉트
+│       ├── ko.html
+│       ├── en.html
+│       ├── ja.html
+│       ├── zh.html
+│       ├── manual/         # 사용 설명서 (번체 zh-Hant 포함 5개 언어)
+│       │   ├── ko.html
+│       │   ├── en.html
+│       │   ├── ja.html
+│       │   ├── zh.html
+│       │   └── zh-Hant.html
 │       ├── privacy/        # 개인정보처리방침 (번체 zh-Hant 포함 5개 언어)
 │       │   ├── ko.html
 │       │   ├── en.html
@@ -411,11 +422,11 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - 한국어·일본어 소개 첫 문장에는 'Railjoin(레일조인)'·'Railjoin（レールジョイン）'을 함께 적음(2026-11-01 사용자 결정, 앱 저장소 `listing.md`. Huestar의 '(휴스타)' 금지와 다름)
 
 ### RotaPick
-- 선택지를 적으면 색 칸으로 나뉜 원판이 생기고, 돌리면 바늘 아래 멈춘 칸이 뽑히는 돌림판. 게임이 아니라 도구 앱. 판 여러 개 저장, 칸마다 비율, 뽑힌 칸 빼기, 판마다 최근 결과 50개 기록
-- 플랫폼: Android (출시 전. 방침만 먼저 게시, 소개 페이지·설명서·'출시 예정'은 M4에 따로)
+- 선택지를 적으면 색 칸으로 나뉜 원판이 생기고, 돌리면 바늘 아래 멈춘 칸이 뽑히는 돌림판. 게임이 아니라 도구 앱(메인에서는 '생활' 갈래). 판 여러 개 저장, 칸마다 비율, 뽑힌 칸 빼기, 판마다 최근 결과 50개 기록
+- 플랫폼: Android (출시 예정 — 2026-11-15 설명서·소개 페이지·홈 카드 게시, 그때 Play 내부 테스트 중. 스토어 제목 `Spin Wheel: RotaPick`(언어별은 앱 저장소 `listing.md`), 페이지 이름은 그대로 'RotaPick')
 - 패키지 ID: net.willee.rotapick
-- 원본 문서: 앱 저장소(A39.RotaPick) `docs/privacy/privacy.{ko,en,ja,zh,zh-Hant}.md`. 앱의 앱 정보 화면이 `apps/rotapick/privacy/{언어}.html`을 열고 AdMob 유럽 동의 메시지가 `privacy/en.html`을 쓰므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
-- 이름은 늘 'RotaPick'(R·P 대문자, 한국어로 적을 때는 로타픽). 다른 앱·회사 이름을 쓰지 않고, 'Spin the Wheel'(미국 등록 상표)은 제목에 쓰지 않음. 카지노·도박 표현(칩·베팅 등)을 쓰지 않고, 번체는 '輪盤' 대신 '轉盤'(앱 저장소 `CLAUDE.md`·`docs/store/listing.md` 규칙)
+- 원본 문서: 앱 저장소(A39.RotaPick) `docs/manual/manual.{ko,en,ja,zh,zh-Hant}.md`, `docs/privacy/privacy.{…}.md`, 소개 문안은 `docs/store/listing.md`. 앱의 앱 정보 화면이 `apps/rotapick/{manual,privacy}/{언어}.html`을 열고 AdMob 유럽 동의 메시지가 `privacy/en.html`을 쓰므로 폴더·파일 이름(`zh-Hant`의 대소문자 포함)을 바꾸지 말 것
+- 이름은 늘 'RotaPick'(R·P 대문자, 한국어로 적을 때는 로타픽). 다른 앱·회사 이름을 쓰지 않고, 'Spin the Wheel'(미국 등록 상표)은 쓰지 않음. 카지노·도박 표현(칩·베팅 등)과 'free'·'무료'·'無料'·'免费'를 쓰지 않고, 번체는 '輪盤' 대신 '轉盤'(앱 저장소 `CLAUDE.md`·`docs/store/listing.md` 규칙)
 - 광고는 화면 아래 배너 하나라 '광고 없음'·'No ads'로 쓰지 않음(방침은 '전면·보상형 광고 없음'까지)
 
 ## 공통 스타일·검색 정보 (2026-10-09)
@@ -430,7 +441,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
   - `404.html`은 예외다. 없는 주소 어디에서나 열리므로 경로를 모두 `/`로 시작하고, canonical·hreflang·공유 미리보기 대신 `<meta name="robots" content="noindex">`를 둔다. sitemap에도 넣지 않는다.
 - **소개 페이지 제목(2026-11-13):** `앱 이름: 검색 구절 - 윌리 프로젝트`(다른 언어는 `- Willee Project`). og:title도 같게 쓴다.
   - 검색 구절은 스토어 제목에서 앱 이름을 뺀 부분이다(앱 저장소 `docs/store/listing.md`, 보드게임은 등록자료 `02_스토어_등록정보_4개언어.txt`, 타로요는 `docs/play_store_listing.md`, Twenty Four Hours는 앱 저장소 `CLAUDE.md`의 Play 표시 이름). 스토어 제목이 바뀌면 이 제목도 고친다. 원고가 늦게 고쳐지기도 하니 Play 웹 제목과 맞춰 본다.
-  - 스토어 제목이 '검색 구절: 앱 이름' 순서여도(Cagewise·Minewise·Huestar·Cometdive·Railjoin, Keepsum 영어) 앱 이름을 앞에 둔다.
+  - 스토어 제목이 '검색 구절: 앱 이름' 순서여도(Cagewise·Minewise·Huestar·Cometdive·Railjoin·RotaPick, Keepsum 영어) 앱 이름을 앞에 둔다.
   - Cometdive 한국어는 장르 줄처럼 '오프라인'을 뺀다.
 - **설명 문구:**
   - 소개 페이지는 overview 첫 문장(들)을 쓴다.
@@ -440,8 +451,7 @@ Willee Project의 공식 홈페이지. GitHub Pages로 호스팅.
 - **공유 그림:**
   - 메인과 회사 방침·약관은 `images/og_image.png`(1200×630)를 쓴다.
   - 앱 페이지는 `apps/<앱>/images/og_image.jpg`(배너를 JPG로 바꾼 것, 1024×500)를 쓴다.
-  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar·Railjoin·Cometdive·TarotYo·Good Timer·Twenty Four Hours)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
-  - 배너가 아직 없는 RotaPick 방침은 메인과 같은 `images/og_image.png`를 쓴다(M4에 배너가 생기면 `og_image_{언어}.jpg`로 바꿈).
+  - 언어별 배너가 있는 앱(Nums to One·Tenmates·Keepsum·Cagewise·Minewise·Huestar·Railjoin·Cometdive·RotaPick·TarotYo·Good Timer·Twenty Four Hours)은 `og_image_{ko,en,ja,zh}.jpg`를 쓰고, zh-Hant는 zh 그림을 쓴다.
   - 공유 미리보기는 WebP를 못 읽는 곳이 있어 JPG·PNG로 둔다.
 - **이미지:**
   - 스크린샷과 배너는 WebP로 둔다.

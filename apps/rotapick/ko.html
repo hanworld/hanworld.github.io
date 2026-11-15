@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>RotaPick: 돌림판 - 윌리 프로젝트</title>
+    <meta name="description" content="RotaPick은 선택지를 적으면 색 칸으로 나뉜 돌림판(룰렛)이 생기는 앱이에요. 돌리면 바늘 아래에 멈춘 칸이 뽑혀요. 점심 메뉴, 복불복, 이름 뽑기, 순서 정하기, 예/아니오처럼 고르기 어려운 일을 랜덤으로 정할 때 써 보세요.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/rotapick/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/rotapick/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/rotapick/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/rotapick/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/rotapick/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/rotapick/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="RotaPick: 돌림판 - 윌리 프로젝트">
+    <meta property="og:description" content="RotaPick은 선택지를 적으면 색 칸으로 나뉜 돌림판(룰렛)이 생기는 앱이에요. 돌리면 바늘 아래에 멈춘 칸이 뽑혀요. 점심 메뉴, 복불복, 이름 뽑기, 순서 정하기, 예/아니오처럼 고르기 어려운 일을 랜덤으로 정할 때 써 보세요.">
+    <meta property="og:url" content="https://willee.net/apps/rotapick/ko.html">
+    <meta property="og:image" content="https://willee.net/apps/rotapick/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>RotaPick</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>RotaPick</h1>
+        <p>선택지를 적고 돌리면 돌림판이 골라 줘요.</p>
+        <div class="store-cta"><span>Google Play 출시 예정</span></div>
+        <div class="graphic-banner">
+            <img src="images/RotaPick_ko_feature.webp" alt="RotaPick — 선택지를 적고 돌리면 돌림판이 골라 줘요." width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="RotaPick 아이콘" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>RotaPick</h2>
+                <p>돌림판</p>
+                <div>
+                    <span class="badge">Android (출시 예정)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">RotaPick은 선택지를 적으면 색 칸으로 나뉜 돌림판(룰렛)이 생기는 앱이에요. 돌리면 바늘 아래에 멈춘 칸이 뽑혀요. 점심 메뉴, 복불복, 이름 뽑기, 순서 정하기, 예/아니오처럼 고르기 어려운 일을 랜덤으로 정할 때 써 보세요.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="images/RotaPick_ko_01_spin.webp" alt="판 화면 — 점심 메뉴 원판이 도는 중" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_02_result.webp" alt="결과 — 뽑힌 칸의 색이 화면을 채운 큰 결과와 폭죽" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_03_boards.webp" alt="판 목록 — 판 카드와 새 판 만들기" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_04_edit.webp" alt="편집 — 칸마다 비율과 색, 펼친 줄의 순서 단추" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_05_order.webp" alt="순서 정하기 — 뽑힌 칸 빼기와 뽑힌 차례 띠" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_06_many.webp" alt="숫자 1~30 — 칸이 30개인 원판" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/RotaPick_ko_07_dark.webp" alt="어두운 화면 — 점심 메뉴 원판이 도는 중" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>주요 기능</h2>
+        <ul class="features">
+            <li>
+                <strong>쓰는 방법</strong>
+                <span>판 하나에 선택지를 2개부터 100개까지 적으면 칸마다 색이 정해져요. '돌리기'를 톡 누르면 보통 세기로 돌고, 길게 누르면 세기 막대가 1초 남짓 차오르다가 손을 떼면 그 세기로 돌아요. 손가락으로 원판을 튕겨도 돌아요. 바늘이 칸 경계를 넘을 때마다 틱 소리와 가벼운 진동이 나고, 멈추면 뽑힌 칸이 튀어나오고 그 칸 색이 화면을 채우며 결과가 크게 보여요. 칸 색은 8가지 중에서 직접 고르거나 이웃한 칸과 다르게 자동으로 정해지고, 칸이 30개를 넘으면 칸 글자가 작아져요. 돌아가는 시간은 설정에서 약 3초, 5초, 8초 중에 골라요.</span>
+            </li>
+            <li>
+                <strong>공정함이 눈에 보여요</strong>
+                <span>칸 넓이가 곧 확률이에요. 칸마다 비율을 ×1에서 ×10까지 주면 그만큼 칸이 넓어져서 비율이 원판에 그대로 보이고, 숨은 비율은 없어요. 결과를 미리 정하지 않고 멈춘 각도가 칸을 정하기 때문에, 세기를 아무리 잘 맞춰도 원하는 칸을 노릴 수 없어요.</span>
+            </li>
+            <li>
+                <strong>뽑힌 칸 빼기</strong>
+                <span>'뽑힌 칸 빼기'를 켜면 뽑힌 칸이 '다시 채우기'를 누를 때까지 원판에서 빠져요. 순서 정하기, 이름 뽑기, 하나씩 나눠 갖기에 알맞아요.</span>
+            </li>
+            <li>
+                <strong>틀로 바로 시작</strong>
+                <span>앱을 켜면 마지막에 쓴 판이 바로 열리고, 처음 판은 점심 메뉴예요. '새 판 만들기'에서 빈 판으로 시작하거나 예/아니오, 숫자 1~6, 점심 메뉴(흔한 여덟 가지), 순서 정하기 틀 중에 골라 바로 돌릴 수 있어요. 고치는 대로 저장되니 저장 단추를 따로 누를 필요가 없어요.</span>
+            </li>
+            <li>
+                <strong>판과 기록</strong>
+                <span>판을 여러 개 저장하고 이름 바꾸기, 복제, 지우기를 할 수 있고, 길게 눌러 끌면 순서가 바뀌어요. 판 목록은 최근에 쓴 판이 앞에 와요. 편집에서는 줄을 끌거나 줄을 펼쳐 순서 단추로 선택지 순서를 옮길 수 있어요. 판마다 최근 결과 50개를 시각과 함께 '기록'에 남기고, 기록은 지울 수 있어요. '많이 나온 칸'에서는 뽑힌 횟수를 칸 넓이와 나란히 볼 수 있어요. 결과 화면의 '공유'로 결과를 글로 보내요.</span>
+            </li>
+            <li>
+                <strong>보기와 소리</strong>
+                <span>밝은 화면이 기본이고 기기의 어두운 모드를 따라가요. 바늘이 칸 경계를 넘을 때 불꽃이 튀고, 결과가 나오면 폭죽이 터져요. 효과음은 나무 딸깍 소리, 마림바 결과음, 띠리링 소리예요. 설정의 '소리와 효과'에서 효과음과 진동을 끄고, '효과 줄이기'를 켜면 불꽃과 폭죽도 나오지 않아요.</span>
+            </li>
+            <li>
+                <strong>이용 조건</strong>
+                <span>구독, 유료 잠금, 앱 안 결제가 없고 모든 기능을 쓸 수 있어요. 광고는 화면 아래 배너 하나이고 전면 광고는 없어요. 서버나 로그인 없이 오프라인으로 쓰고, 판과 기록과 설정은 기기에만 저장돼요. 언어는 한국어, 영어, 일본어, 중국어(간체·번체)이며 설정의 '언어'에서 바꿔요.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>지원 플랫폼</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>출시 예정</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>사용 설명서</h2>
+        <p>RotaPick의 사용 설명서를 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>개인정보처리방침</h2>
+        <p>RotaPick의 개인정보처리방침을 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>문의</h2>
+        <p>앱 관련 문의사항은 아래로 연락해주세요.</p>
+        <p><strong>이메일:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>개발:</strong> <a href="/ko/">윌리 프로젝트 (Willee Project)</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="privacy/ko.html">개인정보처리방침</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>RotaPick 使い方 - Willee Project</title>
+    <meta name="description" content="RotaPick 使い方 — 選択肢を書くと、色分けされたマスに分かれたルーレットができます。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/rotapick/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/rotapick/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/rotapick/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/rotapick/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/rotapick/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/rotapick/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/rotapick/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="RotaPick 使い方 - Willee Project">
+    <meta property="og:description" content="RotaPick 使い方 — 選択肢を書くと、色分けされたマスに分かれたルーレットができます。">
+    <meta property="og:url" content="https://willee.net/apps/rotapick/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/rotapick/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../ja.html">RotaPick</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="RotaPick" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>RotaPick</h1>
+                <p>使い方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/RotaPick_ja_01_spin.webp" alt="ルーレット画面 — 回っているランチのルーレット" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_02_result.webp" alt="結果 — 選ばれたマスの色が画面いっぱいに広がった結果と花火" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_03_boards.webp" alt="ルーレット一覧 — ルーレットのカードと「ルーレットを作る」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_04_edit.webp" alt="編集 — マスごとの比率と色、開いた行の順番ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_05_order.webp" alt="順番決め — 「選ばれたマスを外す」と選ばれた順の帯" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_06_many.webp" alt="数字 1〜30 — 30マスのルーレット" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_ja_07_dark.webp" alt="ダークモード — 回っているランチのルーレット" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>RotaPick</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>選択肢を書くと、色分けされたマスに分かれたルーレットができます。回すと、ポインターの下で止まったマスが選ばれます。ランチ、順番決め、はい/いいえ、くじ引きなど、1つ選びたいときに使います。</p>
+        <ul>
+            <li>会員登録もログインもありません。作ったルーレットと履歴は端末の中に保存されます。</li>
+            <li><strong>インターネットがなくても使えます。</strong> インターネットは画面下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+            <li>結果はあらかじめ決まっていません。マスの広さがそのまま選ばれる確率です（8章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. はじめに</h2>
+        <ul>
+            <li>初めて開くと、<strong>ランチ</strong>のルーレットがすぐに開きます。名前の下に「名前をタップすると他のルーレット・新規作成」という案内が一度だけ出ます。</li>
+            <li>次からは、最後に開いたルーレットがすぐに開きます。</li>
+            <li>名前のプレートか、上のバーの<strong>ルーレット一覧</strong>をタップすると一覧に移ります。新しいルーレットはそこで作ります（4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. ルーレット画面</h2>
+        <p>中央にルーレットがあり、上にはルーレットの名前のプレートとボタン3つ（<strong>ルーレット一覧</strong>・<strong>履歴</strong>・<strong>編集</strong>）、下には<strong>強さ</strong>バーと<strong>回す</strong>ボタンがあります。</p>
+        <h3>回し方</h3>
+        <ul>
+            <li><strong>ポンと押す:</strong> <strong>回す</strong>を短く押すと、普通の強さで回ります。</li>
+            <li><strong>長押し:</strong> 押し続けると<strong>強さ</strong>バーがたまります（約1.2秒で満タン）。離した瞬間の強さで回ります。強いほど出だしが速く、長く回ります。</li>
+            <li><strong>はじく:</strong> ルーレットを指ではじいても回ります。速くはじくほど強く回ります。</li>
+            <li>バーの数字は強さ（0〜10）です。押している間はためた強さ、はじいている間は指の速さ、回っている間はルーレットの速さを表します。</li>
+            <li>強さを調整しても、マスを狙うことはできません。最後の1周の中は均等に選ばれます。</li>
+            <li>回る時間は設定の<strong>回転時間</strong>（短め約3秒・普通約5秒・長め約8秒）に従い、強さによって少し長くなったり短くなったりします（7章）。</li>
+            <li>ポインターがマスの境目を越えるたびに、ティック音と振動が出ます。回っている間は、名前の場所にポインターの下のマスの名前が表示されます。</li>
+        </ul>
+        <h3>「選ばれたマスを外す」がオンのとき</h3>
+        <p>ルーレットの下（強さバーの上）に<strong>選ばれた順</strong>の帯が出て、選ばれたマスと残りの数を表示します。結果を閉じると、選ばれたマスがルーレットから縮んで消えます。<strong>元に戻す</strong>を押すと、すべて戻ります。全部選ばれると「すべて選ばれました。」と<strong>元に戻す</strong>が出ます。文字の入った選択肢が1つだけのときは、「選択肢を2つ以上書いてください。」と<strong>編集</strong>ボタンが出ます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 結果</h2>
+        <ul>
+            <li>ルーレットが止まると、選ばれたマスが外に飛び出し、マスの色が画面に広がって、結果の文字が大きく表示されます。そのマスの<strong>選ばれる確率</strong>も一緒に表示されます。</li>
+            <li><strong>共有</strong>: 結果とストアのリンクを入れたメッセージを、ほかのアプリに送ります。</li>
+            <li><strong>もう一度回す</strong>: すぐにもう一度回します。このボタンも長押しすると強さがたまります。</li>
+            <li>左上の<strong>×</strong>か、<strong>画面のどこか</strong>をタップするとルーレットに戻ります（広告のすぐ上の細い帯は反応しません）。</li>
+            <li>結果は選ばれた瞬間に<strong>履歴</strong>に残ります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. ルーレット一覧</h2>
+        <ul>
+            <li>ルーレットは大きな丸いカードで、1行に2つ表示されます。カードには名前、選択肢の数、最後に使った時（たった今・時刻・昨日・日付）が出ます。「選ばれたマスを外す」をオンにしたルーレットには<strong>残り/全体</strong>も出ます。</li>
+            <li><strong>最近使ったルーレットが先頭</strong>に来ます。いま使ったものには、ティール色の縁と左上の時計マークが付きます。</li>
+            <li>カードをタップするとそのルーレットを開きます。</li>
+            <li>カードのメニュー: <strong>名前を変更</strong>、<strong>複製</strong>（元のルーレットのすぐ次の位置（2列のため横になることもあります）に「{名前} のコピー」ができ、外れたマスは戻り、履歴は空になります）、<strong>削除</strong>（一度確認します）。</li>
+            <li>カードを<strong>長押ししてドラッグ</strong>すると、順番を変えられます。</li>
+            <li><strong>ルーレットを作る</strong>カードで、<strong>空</strong>から始めるか、4つのテンプレートから選びます。作ったルーレットは一覧の先頭に来ます。<strong>空</strong>から作ると、すぐに編集が開き、テンプレートを選ぶと、そのルーレットの画面がすぐに開きます。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>テンプレート</th><th>選択肢</th></tr>
+            <tr><td>はい/いいえ</td><td>はい、いいえ</td></tr>
+            <tr><td>数字 1〜6</td><td>1から6まで</td></tr>
+            <tr><td>ランチ</td><td>ラーメン、カレー、うどん、そば、牛丼、寿司、定食、パスタ</td></tr>
+            <tr><td>順番決め</td><td>A、B、C、D（「選ばれたマスを外す」がオンで始まります）</td></tr>
+        </table>
+        <p>設定（7章）は、一覧画面の上にある設定ボタンで開きます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 編集</h2>
+        <p>ルーレット画面の<strong>編集</strong>ボタンで開きます。<strong>入力するたびに自動で保存され</strong>、保存ボタンはありません。</p>
+        <p>上には、プレビューのルーレット、<strong>ルーレットの名前</strong>、「回るマス n · 外れたマス m」、<strong>選ばれたマスを外す</strong>スイッチがあります。その下が選択肢の行です。</p>
+        <ul>
+            <li><strong>選択肢 n / 100</strong>: 1つのルーレットには選択肢が2〜100個あります。<strong>追加</strong>で行を足せます。最後の行でキーボードの「次へ」を押しても新しい行ができます。</li>
+            <li>行ごとに、色の点、文字、<strong>×n</strong>（比率）、選ばれる確率（%）が表示されます。確率は今のルーレットで選ばれる確率です。</li>
+            <li>行をタップすると開きます。<strong>比率</strong>を×1〜×10に変えたり（比率の分だけマスが広くなります）、<strong>削除</strong>したりできます。削除すると「選択肢を削除しました」と<strong>取り消す</strong>がしばらく表示されます。</li>
+            <li><strong>色</strong>: 色の点をタップすると、8色と<strong>自動</strong>が出ます。自動は隣のマスと違う色になり、行を動かしたり削除したりしても、色はマスについていきます。</li>
+            <li><strong>並べ替え:</strong> 行のハンドルをつかんでドラッグするか、開いた行の<strong>順番</strong>ボタン（<strong>一番上へ</strong>・<strong>上へ</strong>・<strong>下へ</strong>・<strong>一番下へ</strong>）を押します。</li>
+            <li><strong>選ばれたマスを外す</strong>をオンにすると、選ばれたマスは<strong>元に戻す</strong>を押すまでルーレットから外れます。外れたマスは薄く表示され、「選ばれた」と出ます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 履歴</h2>
+        <p>ルーレット画面の<strong>履歴</strong>ボタンで開きます。ルーレットごとに直近50件を残します。</p>
+        <ul>
+            <li><strong>よく選ばれたマス</strong>: 選ばれた回数のバーと、マスの広さ（%）を並べて見られます。回数は実際に出た結果、%はそのマスが出るはずの割合です。</li>
+            <li>その下に、今日・昨日・日付ごとにまとめた結果が新しい順に並びます。</li>
+            <li><strong>履歴を消す</strong>を押すと、一度確認してから、そのルーレットの履歴を消します。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 設定</h2>
+        <p>ルーレット一覧の設定ボタンで開きます。グループは2つです。</p>
+        <h3>サウンドと効果</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>働き</th></tr>
+            <tr><td>効果音</td><td>ティック・停止・結果・花火の音をオン/オフします</td></tr>
+            <tr><td>バイブレーション</td><td>回っているときと止まるときの振動をオン/オフします</td></tr>
+            <tr><td>エフェクトを減らす</td><td>火花・花火・色の広がりなどの演出を控えめにします</td></tr>
+            <tr><td>回転時間</td><td><strong>短め(約3秒)</strong>、<strong>普通(約5秒)</strong>、<strong>長め(約8秒)</strong>から選びます</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>働き</th></tr>
+            <tr><td>言語</td><td><strong>端末の言語</strong>（初期設定）に従うか、一覧から選びます（English · 日本語 · 한국어 · 简体中文 · 繁體中文）</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意画面を開き直します。同意が必要な地域（ヨーロッパなど）でのみ表示されます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明（<strong>使い方</strong>）、<strong>Google Playで評価する</strong>、<strong>プライバシーポリシー</strong>、<strong>オープンソースライセンス</strong>、<strong>ほかのアプリ</strong>（タップするとGoogle Playが開きます）、<strong>すべてのアプリを見る</strong></td></tr>
+        </table>
+        <p>画面の色は端末のダークモード設定に従います。アプリの中にスイッチはありません。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 公平さ</h2>
+        <ul>
+            <li><strong>マスの広さがそのまま確率です。</strong> 隠れた比率はありません。×2のマスは×1のマスの2倍の広さで、選ばれる確率も2倍です。</li>
+            <li>結果はあらかじめ決まっていません。回すたびに、最初の速さと減速の仕方をランダムに決め、止まった角度がマスを決めます。</li>
+            <li>強さと回転時間は演出であり、マスを選ぶのには使えません。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 広告とデータ</h2>
+        <ul>
+            <li>画面の一番下にバナー広告が1つあります。これが唯一の広告で、ルーレット画面の<strong>回す</strong>ボタンとルーレットは広告から十分に離れています。キーボードが出ている間、広告の帯は隠れます。</li>
+            <li>同意が必要な地域（ヨーロッパなど）では、初めて開いたときに広告の同意画面が出ます。あとから設定の<strong>プライバシー設定</strong>で変更できます。</li>
+            <li>アプリ内課金はありません。</li>
+            <li>ルーレット・選択肢・色・比率・履歴・設定は端末にだけ保存され、サーバーには送られません。Googleバックアップ（Android自動バックアップ）がオンなら、一緒にバックアップされます。アプリを削除すると、端末のデータも消えます。</li>
+            <li>くわしくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">RotaPick</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>RotaPick 使用說明 - Willee Project</title>
+    <meta name="description" content="RotaPick 使用說明 — 寫下選項，就會產生一個分成彩色格子的轉盤。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/rotapick/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/rotapick/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/rotapick/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/rotapick/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/rotapick/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/rotapick/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/rotapick/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="RotaPick 使用說明 - Willee Project">
+    <meta property="og:description" content="RotaPick 使用說明 — 寫下選項，就會產生一個分成彩色格子的轉盤。">
+    <meta property="og:url" content="https://willee.net/apps/rotapick/manual/zh-Hant.html">
+    <meta property="og:image" content="https://willee.net/apps/rotapick/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <a href="../zh.html">RotaPick</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手冊</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html" class="active">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="RotaPick" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>RotaPick</h1>
+                <p>使用說明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>截圖</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/RotaPick_zh-Hant_01_spin.webp" alt="轉盤畫面 — 正在轉動的「午餐吃什麼」轉盤" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_02_result.webp" alt="結果 — 抽中格子的顏色鋪滿螢幕，還有煙火" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_03_boards.webp" alt="轉盤列表 — 轉盤卡片和「新增轉盤」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_04_edit.webp" alt="編輯 — 每個格子的比例和顏色，展開列裡的順序按鈕" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_05_order.webp" alt="決定順序 — 「去掉選中的」和抽中順序條" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_06_many.webp" alt="數字 1~30 — 有 30 個格子的轉盤" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/RotaPick_zh-Hant_07_dark.webp" alt="深色模式 — 正在轉動的「午餐吃什麼」轉盤" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>關於應用程式</h2>
+        <table class="info-table">
+            <tr><th>應用程式名稱</th><td>RotaPick</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>開發</th><td>Willee Project</td></tr>
+            <tr><th>支援平台</th><td>Android</td></tr>
+        </table>
+        <p>寫下選項，就會產生一個分成彩色格子的轉盤。轉動後，停在指針下的格子就是抽中的結果。午餐吃什麼、決定順序、是/否、抽籤，需要從中選一個時都能用。</p>
+        <ul>
+            <li>沒有註冊，也不用登入。你建立的轉盤和紀錄都儲存在裝置裡。</li>
+            <li><strong>沒有網路也能使用。</strong> 網路只用於螢幕下方的廣告，以及傳送使用統計和錯誤回報。</li>
+            <li>語言跟隨裝置設定。支援英文、韓文、日文、中文（簡體、繁體），也可以在設定裡自己選。</li>
+            <li>結果不是事先定好的。格子的寬度就是抽中的機率（第8章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 開始使用</h2>
+        <ul>
+            <li>第一次開啟時，會直接開啟<strong>午餐吃什麼</strong>轉盤。名稱下方會出現一次提示「點名稱可換轉盤或新增」。</li>
+            <li>之後會直接開啟你最後使用的轉盤。</li>
+            <li>點名稱牌，或點上方列裡的<strong>轉盤列表</strong>，就能進入轉盤列表。新轉盤在那裡建立（第4章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 轉盤畫面</h2>
+        <p>中間是轉盤，上方是轉盤名稱牌和三個按鈕（<strong>轉盤列表</strong>·<strong>紀錄</strong>·<strong>編輯</strong>），下方是<strong>力度</strong>條和<strong>轉動</strong>按鈕。</p>
+        <h3>轉動</h3>
+        <ul>
+            <li><strong>輕點：</strong> 短按<strong>轉動</strong>，以普通力度轉。</li>
+            <li><strong>長按：</strong> 按住不放，<strong>力度</strong>條會慢慢變滿（約1.2秒滿）。放手的瞬間，就以當時的力度轉。力度越大，起轉越快，轉得也越久。</li>
+            <li><strong>撥動：</strong> 也可以用手指撥動轉盤。撥得越快，轉得越用力。</li>
+            <li>力度條上的數字是力度（0~10）。按住時顯示累積的力度，撥動時顯示手指的速度，轉動時顯示轉盤的速度。</li>
+            <li>調好力度也無法瞄準某一格。最後一圈之內是均勻抽取的。</li>
+            <li>轉動時間跟隨設定裡的<strong>轉動時間</strong>（短約3秒、普通約5秒、長約8秒），並會隨力度略微變長或變短（第7章）。</li>
+            <li>指針每越過一條格子邊界，就會有嘀嗒聲和震動。轉動時，原本顯示轉盤名稱的位置會顯示指針下方格子的名稱。</li>
+        </ul>
+        <h3>開啟「去掉選中的」時</h3>
+        <p>轉盤下方（力度條上方）會出現<strong>抽中順序</strong>條，顯示已抽中的格子和剩下的數量。關閉結果後，抽中的格子會縮小並從轉盤上消失。點<strong>全部放回</strong>，它們都會回來。全部抽完時，會出現「已經全部選完了。」和<strong>全部放回</strong>。如果只有一個選項有文字，會出現「請至少寫兩個選項。」和<strong>編輯</strong>按鈕。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 結果</h2>
+        <ul>
+            <li>轉盤停下後，抽中的格子會從轉盤上彈出來，格子的顏色鋪滿螢幕，結果以大字顯示，旁邊還有它的<strong>抽中機率</strong>。</li>
+            <li><strong>分享</strong>：把包含結果和應用程式商店連結的文字傳給其他應用程式。</li>
+            <li><strong>再轉一次</strong>：立刻再轉一次。這個按鈕也可以長按來累積力度。</li>
+            <li>點左上角的<strong>×</strong>，或<strong>點螢幕任意處</strong>，就會回到轉盤（廣告正上方的細條沒有反應）。</li>
+            <li>結果在抽中的瞬間就會記入<strong>紀錄</strong>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 轉盤列表</h2>
+        <ul>
+            <li>轉盤以大圓盤卡片的形式顯示，每列兩個。卡片上有轉盤名稱、選項數量和上次使用的時間（剛剛、時刻、昨天或日期）。開啟「去掉選中的」的轉盤還會顯示<strong>剩下/總數</strong>。</li>
+            <li><strong>最近使用的轉盤排在最前面。</strong> 剛用過的會帶有青綠色邊框和左上角的時鐘標記。</li>
+            <li>點卡片就會開啟那個轉盤。</li>
+            <li>卡片選單：<strong>重新命名</strong>、<strong>複製</strong>（會出現在原轉盤的下一個位置（每列兩個，所以也可能在旁邊）「{名稱} 副本」，已去掉的格子會恢復，紀錄為空）、<strong>刪除</strong>（會先確認一次）。</li>
+            <li><strong>長按卡片並拖曳</strong>可以調整順序。</li>
+            <li>在<strong>新增轉盤</strong>卡片裡，可以從<strong>空白</strong>開始，也可以選四個範本之一。新增的轉盤排在列表最前面。從<strong>空白</strong>建立會直接開啟編輯；選範本建立會直接開啟該轉盤的畫面。</li>
+        </ul>
+        <table class="info-table">
+            <tr><th>範本</th><th>選項</th></tr>
+            <tr><td>是/否</td><td>是、否</td></tr>
+            <tr><td>數字 1~6</td><td>1 到 6</td></tr>
+            <tr><td>午餐吃什麼</td><td>牛肉麵、滷肉飯、便當、水餃、火鍋、拉麵、炒飯、義大利麵</td></tr>
+            <tr><td>決定順序</td><td>A、B、C、D（開啟「去掉選中的」開始）</td></tr>
+        </table>
+        <p>設定（第7章）透過列表畫面上方的設定按鈕開啟。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 編輯</h2>
+        <p>在轉盤畫面點<strong>編輯</strong>按鈕開啟。<strong>修改後會立即儲存</strong>，沒有儲存按鈕。</p>
+        <p>上方有預覽轉盤、<strong>轉盤名稱</strong>、「轉盤上 n 格 · 已去掉 m 格」和<strong>去掉選中的</strong>開關。下面是選項列。</p>
+        <ul>
+            <li><strong>選項 n / 100：</strong> 一個轉盤有2~100個選項。點<strong>新增</strong>增加一列，在最後一列按鍵盤上的「下一項」也會新增一列。</li>
+            <li>每一列顯示顏色點、文字、<strong>×n</strong>（比例）和抽中機率（%）。機率是現在這個轉盤上的抽中機率。</li>
+            <li>點一列會展開。可以把<strong>比例</strong>改成×1~×10（格子會按比例變寬），也可以點<strong>刪除</strong>。刪除後會短暫出現「已刪除選項」和<strong>復原</strong>。</li>
+            <li><strong>顏色：</strong> 點顏色點會出現8種顏色和<strong>自動</strong>。自動會選與相鄰格子不同的顏色，移動或刪除列時，顏色會跟著格子走。</li>
+            <li><strong>調整順序：</strong> 按住列的把手拖曳，或使用展開列裡的<strong>順序</strong>按鈕（<strong>移到最上面</strong>·<strong>上移</strong>·<strong>下移</strong>·<strong>移到最下面</strong>）。</li>
+            <li>開啟<strong>去掉選中的</strong>後，抽中的格子會離開轉盤，直到你點<strong>全部放回</strong>。已去掉的格子會變淡，並標上「已選中」。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 紀錄</h2>
+        <p>在轉盤畫面點<strong>紀錄</strong>按鈕開啟。每個轉盤保留最近50筆。</p>
+        <ul>
+            <li><strong>抽中最多：</strong> 抽中次數條和格子的寬度（%）並排顯示。次數是實際抽到的結果，%是這個格子應得的份額。</li>
+            <li>下方依今天、昨天和日期分組，由新到舊顯示結果。</li>
+            <li>點<strong>清除紀錄</strong>，確認一次後，就會清除該轉盤的紀錄。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 設定</h2>
+        <p>透過轉盤列表的設定按鈕開啟。分為兩組。</p>
+        <h3>聲音與效果</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>作用</th></tr>
+            <tr><td>音效</td><td>開啟或關閉嘀嗒、停止、結果和煙火的聲音</td></tr>
+            <tr><td>震動</td><td>開啟或關閉轉動和停止時的震動</td></tr>
+            <tr><td>減少特效</td><td>減少火花、煙火、顏色擴散等特效</td></tr>
+            <tr><td>轉動時間</td><td>在<strong>短（約3秒）</strong>、<strong>普通（約5秒）</strong>、<strong>長（約8秒）</strong>中選擇</td></tr>
+        </table>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>作用</th></tr>
+            <tr><td>語言</td><td>選擇<strong>跟隨系統</strong>（預設），或從列表中選擇（English · 日本語 · 한국어 · 简体中文 · 繁體中文）</td></tr>
+            <tr><td>隱私權選項</td><td>重新開啟廣告同意表單。僅在需要同意的地區（如歐洲）顯示</td></tr>
+            <tr><td>關於</td><td>版本、本說明（<strong>使用說明</strong>）、<strong>在 Google Play 上評分</strong>、<strong>隱私權政策</strong>、<strong>開放原始碼授權</strong>、<strong>更多應用程式</strong>（點一下會開啟 Google Play）和<strong>查看全部應用程式</strong></td></tr>
+        </table>
+        <p>螢幕顏色跟隨裝置的深色模式設定，應用程式內沒有單獨的開關。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 公平性</h2>
+        <ul>
+            <li><strong>格子的寬度就是機率。</strong> 沒有隱藏的比例。×2的格子是×1格子的兩倍寬，抽中的機率也是兩倍。</li>
+            <li>結果不是事先定好的。每次轉動都會隨機抽取起轉速度和減速方式，停下時的角度決定哪一格。</li>
+            <li>力度和轉動時間只是演出，不能用來選格子。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 廣告與資料</h2>
+        <ul>
+            <li>螢幕最下方有一個橫幅廣告。這是唯一的廣告，轉盤畫面的<strong>轉動</strong>按鈕和轉盤與廣告保持著足夠的距離。開啟鍵盤時，廣告條會被隱藏。</li>
+            <li>在需要同意的地區（如歐洲），第一次開啟時會出現廣告同意表單。之後可以在設定的<strong>隱私權選項</strong>裡變更。</li>
+            <li>沒有應用程式內購買。</li>
+            <li>轉盤、選項、顏色、比例、紀錄和設定只儲存在裝置上，不會傳送到伺服器。如果開啟了 Google 備份（Android 自動備份），它們會一併備份。解除安裝應用程式會刪除裝置上的資料。</li>
+            <li>詳情請見<a href="../privacy/zh-Hant.html">隱私權政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 聯絡我們</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">營業執照號: 157-05-00709 | 電商經營許可證號: 第2026-華城東灘-1057號</p>
+    <p style="margin-top:8px;"><a href="/zh/">首頁</a> | <a href="../zh.html">RotaPick</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>部落格</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
