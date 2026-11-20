@@ -20,9 +20,9 @@
     <meta property="og:title" content="TapAlot 使い方 - Willee Project">
     <meta property="og:description" content="TapAlot 使い方 — タップするたびに数が1つずつ増えるカウンターアプリです。">
     <meta property="og:url" content="https://willee.net/apps/tapalot/manual/ja.html">
-    <meta property="og:image" content="https://willee.net/images/og_image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://willee.net/apps/tapalot/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
     <style>
@@ -89,7 +89,7 @@
         <div style="display:flex;align-items:center;">
             <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-            <span>TapAlot</span>
+            <a href="../ja.html">TapAlot</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
             <span>マニュアル</span>
         </div>
@@ -116,6 +116,21 @@
 </header>
 
 <main>
+<section>
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/TapAlot_ja_01_count.webp" alt="カウント画面 — 来場者 128、目標 200 までのバーと大きな+1ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_02_counters.webp" alt="カウンター一覧 — 来場者、プールの往復、編み物の段数、腕立て伏せ" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_03_history.webp" alt="記録 — 来場者の日ごとの記録と、開いた今日の時刻ごとの行" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_04_edit.webp" alt="カウンターを編集 — プールの往復の「1回で足す数」2、「目標」40、「何回ごとに知らせる」10" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_05_settings.webp" alt="設定 — 「サウンドと効果」と、オンにした「音量ボタンで数える」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_06_dark.webp" alt="ダークモード — 音量ボタンで数えている腕立て伏せ 45 と+5ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ja_07_widget.webp" alt="ホーム画面のウィジェット — アプリを開かずにタップで数える来場者のウィジェット" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="container">
         <h2>アプリについて</h2>
@@ -155,7 +170,7 @@
             <li><strong>1を引く</strong>: 数を1減らします。初期設定では0より下には減りません（4章の<strong>0より下も数える</strong>）。</li>
             <li><strong>元に戻す</strong>: 直前の変化（足す・引く・0に戻す・数の変更）を取り消します。続けて押すと、その前の変化も順に戻ります。</li>
             <li><strong>0に戻す</strong>: 数を0に戻します。先に「0に戻しますか？」という確認の画面が出ます。今の数は記録に残り、<strong>元に戻す</strong>で戻せます。</li>
-            <li>数が変わると、数字が少し弾みます。設定の<strong>エフェクトを減らす</strong>をオンにすると弾みません。</li>
+            <li>数が変わると、数字が弾みます。設定の<strong>エフェクトを減らす</strong>をオンにするか、端末のユーザー補助の設定でアニメーションをオフにすると弾みません。</li>
             <li>ボタンと広告のあいだの細い帯は、タップしても反応しません。</li>
         </ul>
     </div>
@@ -210,7 +225,8 @@
         <h3>記録</h3>
         <p>上のバーの<strong>記録</strong>ボタンで開きます。数が変わるたびに1行ずつ残った記録を表示します。</p>
         <ul>
-            <li>記録は、そのときの現地の日付ごとにまとめられます。日付の行には、その日に数えた数、<strong>最後の数</strong>（「最後の数 120」）、<strong>0に戻す</strong>回数（「0に戻す 2回」）が表示されます。</li>
+            <li>最初は数える画面のカウンターの記録が表示されます。上のカウンター名のボタンをタップすると、ほかのカウンターを選んでその記録を見られます。数える画面のカウンターは変わりません。</li>
+            <li>記録は、そのときの現地の日付ごとにまとめられます。日付の行には、<strong>数えた数</strong>（「数えた数 +16」。その日に足した数から引いた数を引いたもので、0に戻すと数の変更は含みません）、<strong>最後の数</strong>（「最後の数 120」。その日の最後の数）、<strong>0に戻す</strong>回数（「0に戻す 2回」）が表示されます。</li>
             <li>日付をタップすると開き、その日の行が新しいものから並びます。行ごとに時刻、変化（足す・引く・0に戻す・数を変更）、増減、数が表示され、音量ボタンやウィジェットで数えた行にはその印が付きます。1日の行がとても多いときは、最新の500件だけ表示します（エクスポートにはすべて入ります）。</li>
             <li>記録が20万行を超えると、古い日から<strong>日ごとの合計のみ</strong>を残します。そのような日は開いても行がなく、最後に「古い記録は日ごとの合計にまとめました。」と表示されます。今日の行はまとめません。</li>
             <li>右上のメニューの<strong>記録を消す</strong>は、このカウンターの記録をすべて消します。<strong>今の数はそのままです。</strong></li>
@@ -221,9 +237,13 @@
 <section>
     <div class="container">
         <h2>6. エクスポート(CSV)</h2>
-        <p>記録を CSV ファイルにして、端末の共有画面に渡します。受け取るアプリ（メール、クラウドストレージなど）はご自身で選びます。</p>
+        <p>記録を CSV ファイルにしてエクスポートします。ボタンをタップすると、<strong>共有</strong>と<strong>端末に保存</strong>のどちらかを選びます。</p>
         <ul>
-            <li><strong>1つのカウンター</strong>: 記録画面の右上のメニューで<strong>エクスポート(CSV)</strong>をタップします。</li>
+            <li><strong>共有</strong>: 端末の共有画面に渡します。受け取るアプリ（メール、クラウドストレージなど）はご自身で選びます。</li>
+            <li><strong>端末に保存</strong>: ファイルの保存画面でフォルダと名前を選び、この端末に保存します。保存すると「端末に保存しました。」が表示されます。</li>
+        </ul>
+        <ul>
+            <li><strong>1つのカウンター</strong>: 記録画面の右上の<strong>エクスポート(CSV)</strong>ボタンをタップします。記録画面で見ているカウンターの記録です。</li>
             <li><strong>すべてのカウンター</strong>: カウンター一覧の<strong>すべてエクスポート(CSV)</strong>ボタンをタップします。</li>
             <li>ファイルを作っているあいだは「CSVファイルを作成しています…」と表示されます。作れなかったときは「ファイルを作成できませんでした。もう一度お試しください。」と出ます。</li>
             <li>列は<strong>カウンター</strong>・<strong>日付</strong>・<strong>時刻</strong>・<strong>変化</strong>・<strong>増減</strong>・<strong>数</strong>・<strong>操作元</strong>です。日ごとの合計にまとめた日は、<strong>日ごとの合計</strong>の1行になります。</li>
@@ -305,7 +325,7 @@
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>
     <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
-    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="../ja.html">TapAlot</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
 </footer>
 
 </body>

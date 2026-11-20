@@ -20,9 +20,9 @@
     <meta property="og:title" content="TapAlot 사용 설명서 - 윌리 프로젝트">
     <meta property="og:description" content="TapAlot 사용 설명서 — 누를 때마다 숫자가 하나씩 오르는 계수기 앱입니다.">
     <meta property="og:url" content="https://willee.net/apps/tapalot/manual/ko.html">
-    <meta property="og:image" content="https://willee.net/images/og_image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://willee.net/apps/tapalot/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary_large_image">
     <style>
@@ -88,7 +88,7 @@
         <div style="display:flex;align-items:center;">
             <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-            <span>TapAlot</span>
+            <a href="../ko.html">TapAlot</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
             <span>매뉴얼</span>
         </div>
@@ -115,6 +115,21 @@
 </header>
 
 <main>
+<section>
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/TapAlot_ko_01_count.webp" alt="세는 화면 — 입장객 128, 목표 200 진행 막대와 큰 +1 단추" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_02_counters.webp" alt="계수기 목록 — 입장객, 수영 바퀴, 뜨개질 단수, 팔굽혀펴기" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_03_history.webp" alt="기록 — 입장객의 날짜별 기록과 펼친 오늘의 시각별 줄" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_04_edit.webp" alt="계수기 편집 — 수영 바퀴(한 번에 더하는 수 2, 목표 40, 몇 번마다 알림 10)" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_05_settings.webp" alt="설정 — 소리와 효과 묶음, 볼륨 단추로 세기 켬" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_06_dark.webp" alt="어두운 화면 — 볼륨 단추로 세는 중인 팔굽혀펴기 45와 +5 단추" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_ko_07_widget.webp" alt="홈 화면 위젯 — 앱을 열지 않고 눌러서 세는 입장객 위젯" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="container">
         <h2>앱 정보</h2>
@@ -154,7 +169,7 @@
             <li><strong>1 빼기</strong>: 값을 1 줄입니다. 기본으로는 0 아래로 내려가지 않습니다(4장의 <strong>0 아래로 내려가기</strong>).</li>
             <li><strong>되돌리기</strong>: 마지막 변화(더하기, 빼기, 0으로, 값 고침)를 취소합니다. 이어서 누르면 그 앞의 변화도 차례로 되돌립니다.</li>
             <li><strong>0으로</strong>: 값을 0으로 돌립니다. 먼저 '0으로 되돌릴까요?'라는 확인 창이 뜹니다. 지금 값은 기록에 남고, <strong>되돌리기</strong>로 다시 살릴 수 있습니다.</li>
-            <li>값이 바뀌면 숫자가 살짝 튑니다. 설정의 <strong>효과 줄이기</strong>를 켜면 튀지 않습니다.</li>
+            <li>값이 바뀌면 숫자가 톡 튑니다. 설정의 <strong>효과 줄이기</strong>를 켜거나, 기기의 접근성 설정에서 애니메이션을 끄면 튀지 않습니다.</li>
             <li>단추와 광고 사이의 좁은 띠는 눌러도 반응하지 않습니다.</li>
         </ul>
     </div>
@@ -209,7 +224,8 @@
         <h3>기록</h3>
         <p>위 막대의 <strong>기록</strong> 단추로 엽니다. 값이 바뀔 때마다 한 줄씩 남은 기록을 보여 줍니다.</p>
         <ul>
-            <li>기록은 그때의 현지 날짜로 묶입니다. 날짜 줄에는 그날 센 수, <strong>끝 값</strong>('끝 값 120'), <strong>0으로</strong> 횟수('0으로 2번')가 보입니다.</li>
+            <li>처음에는 세는 화면의 계수기 기록이 보입니다. 위의 계수기 이름 단추를 누르면 다른 계수기를 골라 그 기록을 봅니다. 세는 화면의 계수기는 바뀌지 않습니다.</li>
+            <li>기록은 그때의 현지 날짜로 묶입니다. 날짜 줄에는 <strong>센 수</strong>('센 수 +16': 그날 더한 수에서 뺀 수를 뺀 것, 0으로와 값 고침은 넣지 않음), <strong>마지막 값</strong>('마지막 값 120': 그날의 마지막 값), <strong>0으로</strong> 횟수('0으로 2번')가 보입니다.</li>
             <li>날짜를 누르면 펼쳐져 그날의 줄이 새것부터 나옵니다. 줄마다 시각, 바뀜(더함·뺌·0으로·값 고침), 바뀐 수, 값이 있고, 볼륨 단추나 위젯으로 센 줄에는 그 표시가 붙습니다. 하루에 줄이 아주 많으면 최근 500줄만 보입니다(내보내기에는 모두 들어갑니다).</li>
             <li>기록이 20만 줄을 넘으면 오래된 날부터 <strong>날짜 합계만</strong> 남깁니다. 그런 날은 펼쳐도 줄이 없고, 끝에 '오래된 기록은 날짜별 합계로 줄였어요.'가 보입니다. 오늘 줄은 줄이지 않습니다.</li>
             <li>오른쪽 위 메뉴의 <strong>기록 지우기</strong>는 이 계수기의 기록을 모두 지웁니다. <strong>지금 값은 그대로입니다.</strong></li>
@@ -220,9 +236,13 @@
 <section>
     <div class="container">
         <h2>6. 내보내기(CSV)</h2>
-        <p>기록을 CSV 파일로 만들어 기기의 공유 창으로 보냅니다. 받을 앱(메일, 클라우드 저장 공간 등)은 이용자가 고릅니다.</p>
+        <p>기록을 CSV 파일로 만들어 내보냅니다. 단추를 누르면 <strong>공유</strong>와 <strong>기기에 저장</strong> 가운데 고릅니다.</p>
         <ul>
-            <li><strong>한 계수기</strong>: 기록 화면의 오른쪽 위 메뉴에서 <strong>내보내기(CSV)</strong>를 누릅니다.</li>
+            <li><strong>공유</strong>: 기기의 공유 창으로 보냅니다. 받을 앱(메일, 클라우드 저장 공간 등)은 이용자가 고릅니다.</li>
+            <li><strong>기기에 저장</strong>: 파일 저장 창에서 폴더와 이름을 골라 이 기기에 저장합니다. 저장하면 '기기에 저장했어요.'가 보입니다.</li>
+        </ul>
+        <ul>
+            <li><strong>한 계수기</strong>: 기록 화면 오른쪽 위의 <strong>내보내기(CSV)</strong> 단추를 누릅니다. 기록 화면에서 보고 있는 계수기의 기록입니다.</li>
             <li><strong>모든 계수기</strong>: 계수기 목록의 <strong>모두 내보내기(CSV)</strong> 단추를 누릅니다.</li>
             <li>파일을 만드는 동안 'CSV 파일을 만드는 중이에요…'가 보입니다. 만들지 못하면 '파일을 만들지 못했어요. 다시 해 주세요.'가 나옵니다.</li>
             <li>열은 <strong>계수기</strong>, <strong>날짜</strong>, <strong>시각</strong>, <strong>바뀜</strong>, <strong>바뀐 수</strong>, <strong>값</strong>, <strong>어디서</strong>입니다. 날짜 합계로 줄인 날은 <strong>날짜 합계</strong> 줄 하나로 들어갑니다.</li>
@@ -304,7 +324,7 @@
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>
     <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
-    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="../ko.html">TapAlot</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
 </footer>
 
 </body>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>TapAlot: カウンター・数取器 - Willee Project</title>
+    <meta name="description" content="TapAlotは、ひとつずつ数えるものなら何にでも使えるカウンター（数取器）アプリです。大きなボタンをタップすると、指が触れた瞬間に数がひとつ増えます。数えるものごとにカウンターを分けられ、数えた記録は「記録」で見られます。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/tapalot/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tapalot/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tapalot/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tapalot/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="TapAlot: カウンター・数取器 - Willee Project">
+    <meta property="og:description" content="TapAlotは、ひとつずつ数えるものなら何にでも使えるカウンター（数取器）アプリです。大きなボタンをタップすると、指が触れた瞬間に数がひとつ増えます。数えるものごとにカウンターを分けられ、数えた記録は「記録」で見られます。">
+    <meta property="og:url" content="https://willee.net/apps/tapalot/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/tapalot/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>TapAlot</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>TapAlot</h1>
+        <p>タップするたびに1つずつ数えて、すぐに保存します。</p>
+        <div class="store-cta"><span>Google Play で近日公開</span></div>
+        <div class="graphic-banner">
+            <img src="images/TapAlot_ja_feature.webp" alt="TapAlot — タップするたびに1つずつ数えて、すぐに保存します。" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="TapAlot アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>TapAlot</h2>
+                <p>カウンター・数取器</p>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">TapAlotは、ひとつずつ数えるものなら何にでも使えるカウンター（数取器）アプリです。大きなボタンをタップすると、指が触れた瞬間に数がひとつ増えます。数えるものごとにカウンターを分けられ、数えた記録は「記録」で見られます。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/TapAlot_ja_01_count.webp" alt="カウント画面 — 来場者 128、目標 200 までのバーと大きな+1ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_02_counters.webp" alt="カウンター一覧 — 来場者、プールの往復、編み物の段数、腕立て伏せ" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_03_history.webp" alt="記録 — 来場者の日ごとの記録と、開いた今日の時刻ごとの行" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_04_edit.webp" alt="カウンターを編集 — プールの往復の「1回で足す数」2、「目標」40、「何回ごとに知らせる」10" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_05_settings.webp" alt="設定 — 「サウンドと効果」と、オンにした「音量ボタンで数える」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_06_dark.webp" alt="ダークモード — 音量ボタンで数えている腕立て伏せ 45 と+5ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_ja_07_widget.webp" alt="ホーム画面のウィジェット — アプリを開かずにタップで数える来場者のウィジェット" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>大きなボタンがひとつ</strong>
+                <span>大きな＋1ボタンは指が触れた瞬間に数え、数字が少し弾みます。その下に「1を引く」「元に戻す」「0に戻す」があります。「0に戻す」は先に確認し、今の数は記録に残るので、「元に戻す」で戻せます。「1回で足す数」は、カウンターごとに1から9999まで決められます。</span>
+            </li>
+            <li>
+                <strong>カウンターは複数</strong>
+                <span>必要なだけカウンターを作れます。カウンターごとに名前、色（8色から選択）、「開始の数」、「1回で足す数」、お好みで「目標」を設定します。「何回ごとに知らせる」をオンにすると、数がその倍数を超えるたびに音と振動でお知らせします。10なら10・20・30で知らせます。「0より下も数える」は初期設定ではオフで、オンにすると「1を引く」で0より下まで減らせます。上のバーのカウンター名をタップすると一覧が開き、ドラッグで順番を入れ替えられます。アプリを開くと、最後に使ったカウンターがすぐ表示されます。削除したカウンターは7日間「削除したカウンター」に残り、「復元」で戻せます。</span>
+            </li>
+            <li>
+                <strong>目標</strong>
+                <span>カウンターに「目標」を設定すると、数字の下に進み具合のバーが出ます。目標に届くと「目標達成」と表示され、目標用の音と振動が鳴ります。</span>
+            </li>
+            <li>
+                <strong>タップするたびに保存</strong>
+                <span>1回タップするごとにすぐ保存されるので、手動で保存する必要はありません。「記録」では、カウンターの記録を日ごとにまとめ、その日に数えた数、最後の数、0に戻した回数を表示します。日付を開くと、タップごとの時刻も見られます。古い記録は消さずに日ごとの合計にまとめ、「記録を消す」は、そのカウンターの記録だけを消します。Androidの自動バックアップをオンにしている端末では、カウンターと記録がバックアップにも含まれることがあります。端末内には1日1回、保管用のコピーも別に作ります。</span>
+            </li>
+            <li>
+                <strong>エクスポート</strong>
+                <span>「記録」の「エクスポート(CSV)」は、そのカウンターの記録を共有画面から送れます。「カウンター」一覧の「すべてエクスポート(CSV)」は、すべてのカウンターの記録が対象です。列は、カウンター、日付、時刻、変化、増減、数、操作元です。</span>
+            </li>
+            <li>
+                <strong>ホーム画面ウィジェット</strong>
+                <span>アプリを開かなくても、ホーム画面でタップして数えられます。「アプリを開く」アイコン以外ならどこをタップしても、「1回で足す数」の分だけ増えます。1×1まで小さくでき、広げるとカウンター名と数、目標の進み具合も表示されます。置いたばかりのウィジェットには、最後に使ったカウンターが入ります。別のカウンターをホーム画面に置くには、「カウンターを編集」で「ホーム画面に追加」をタップします。ウィジェットをタップすると、「バイブレーション」がオンのときは短く振動し、音は鳴らず、「記録」には「ウィジェット」として残ります。</span>
+            </li>
+            <li>
+                <strong>音量ボタンと画面</strong>
+                <span>設定で「音量ボタンで数える」をオンにすると、上ボタンで足し、下ボタンで1を引きます。カウント画面が表示されている間だけ働き、それ以外では普段どおり音量が変わります。「画面をつけたままにする」は、カウント画面で最後にタップしてから10分間、画面を消えにくくします。</span>
+            </li>
+            <li>
+                <strong>見た目と音</strong>
+                <span>数えるたびに丸みのある木の音、目標に届くとマリンバの音、短い振動が鳴ります。設定の「サウンドと効果」には「効果音」と「バイブレーション」のスイッチが別々にあり、「エフェクトを減らす」を選ぶと数字が弾まなくなります。端末がダークモードのときは、画面も暗い配色になります。</span>
+            </li>
+            <li>
+                <strong>ご利用について</strong>
+                <span>定期購読も、支払いで開く機能も、アプリ内での購入もなく、ウィジェットまで全機能をそのまま使えます。広告は画面の最下部に出るバナーひとつだけで、大きなボタンとは十分に離してあり、画面いっぱいに出る広告はありません。アカウントなしでオフラインで動き、カウンターと記録は端末に残ります。表示言語は日本語・英語・韓国語・中国語の簡体字と繁体字で、「言語」から切り替えられます。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>TapAlot アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>TapAlot アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

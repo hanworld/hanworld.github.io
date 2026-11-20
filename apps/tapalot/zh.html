@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>TapAlot: 点击计数器 - Willee Project</title>
+    <meta name="description" content="TapAlot 是一款计数器，凡是一个一个数的事都能用。点按大按钮，手指一碰到，数字就加一。每样要数的东西可以各用一个计数器，数过的记录在“记录”里查看。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/tapalot/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tapalot/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tapalot/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tapalot/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="TapAlot: 点击计数器 - Willee Project">
+    <meta property="og:description" content="TapAlot 是一款计数器，凡是一个一个数的事都能用。点按大按钮，手指一碰到，数字就加一。每样要数的东西可以各用一个计数器，数过的记录在“记录”里查看。">
+    <meta property="og:url" content="https://willee.net/apps/tapalot/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/tapalot/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>TapAlot</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>TapAlot</h1>
+        <p>每点一下就数一个，并马上保存。</p>
+        <div class="store-cta"><span>即将在 Google Play 推出</span></div>
+        <div class="graphic-banner">
+            <img src="images/TapAlot_zh_feature.webp" alt="TapAlot — 每点一下就数一个，并马上保存。" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="TapAlot 图标" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>TapAlot</h2>
+                <p>点击计数器</p>
+                <div>
+                    <span class="badge">Android (即将推出)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">TapAlot 是一款计数器，凡是一个一个数的事都能用。点按大按钮，手指一碰到，数字就加一。每样要数的东西可以各用一个计数器，数过的记录在“记录”里查看。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="images/TapAlot_zh_01_count.webp" alt="计数页面 — 入场人数 128、目标 200 的进度条和大的 +1 按钮" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_02_counters.webp" alt="计数器列表 — 入场人数、游泳圈数、编织行数、俯卧撑" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_03_history.webp" alt="记录 — 按天整理的入场人数记录，展开的“今天”里每一行的时间" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_04_edit.webp" alt="编辑计数器 — 游泳圈数的“每次增加”2、“目标”40、“每隔几次提醒”10" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_05_settings.webp" alt="设置 — “声音与效果”和已开启的“用音量键计数”" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_06_dark.webp" alt="深色模式 — 音量键计数中的俯卧撑 45 和 +5 按钮" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/TapAlot_zh_07_widget.webp" alt="主屏幕小组件 — 无需打开应用、点按即可计数的入场人数小组件" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主要功能</h2>
+        <ul class="features">
+            <li>
+                <strong>一个大按钮</strong>
+                <span>大“加 1”按钮在手指碰到时就计数，数字会轻轻一跳。下面是“减 1”“撤销”和“归零”。“归零”会先确认，当前数值保留在记录中，可用“撤销”恢复。“每次增加”可为每个计数器设为 1 到 9999。</span>
+            </li>
+            <li>
+                <strong>多个计数器</strong>
+                <span>想建几个就建几个。每个计数器有名称、颜色（8 种可选）、“起始数值”、“每次增加”，还可以设置“目标”。开启“每隔几次提醒”后，计数每经过该数的倍数，就会有声音和振动提醒；填 10，就在 10、20、30 时提醒。“允许低于 0”默认关闭，开启后用“减 1”可以减到 0 以下。点按顶部的计数器名称打开列表，拖动即可调整顺序。打开应用时，会直接显示上次用的计数器。删除的计数器会在“最近删除”里保留 7 天，可用“恢复”找回。</span>
+            </li>
+            <li>
+                <strong>目标</strong>
+                <span>给计数器设置“目标”后，数字下方会出现进度条。达到目标时显示“已达成目标”，并有专属的声音和振动。</span>
+            </li>
+            <li>
+                <strong>边点边保存</strong>
+                <span>每点一下都会马上保存，不用另外手动保存。“记录”按天整理每个计数器的记录：当天数了多少、结束时的数值、归零了几次。展开某一天，可以看到每一次点按的时间。较早的记录不会删除，而是合并为每日合计；“清除记录”只清除该计数器的记录。应用还会每天在设备上做一份保管用的副本；如果设备开启了 Android 自动备份，数据也可能包含在备份里。</span>
+            </li>
+            <li>
+                <strong>导出</strong>
+                <span>在“记录”里，“导出（CSV）”会通过分享面板发送该计数器的记录；在“计数器”列表里，“全部导出（CSV）”会发送所有计数器。列为计数器、日期、时间、变化、增减、数值、来源。</span>
+            </li>
+            <li>
+                <strong>主屏幕小组件</strong>
+                <span>不打开应用，在主屏幕上直接点按就能计数。除了“打开应用”图标，点按小组件任何位置，都会加上“每次增加”的数。可以缩小到 1×1，空间够大时还会显示计数器名称、数值和目标进度。新添加的小组件会显示上次用的计数器；想把其他计数器放到主屏幕，请打开“编辑计数器”，点按“添加到主屏幕”。开启“振动”时，点按小组件会短振一下，没有声音，并在“记录”中显示为“小组件”。</span>
+            </li>
+            <li>
+                <strong>音量键与屏幕</strong>
+                <span>在设置中开启“用音量键计数”后，音量上键加、音量下键减 1。只在计数页面显示时有效，其他地方音量键照常调节音量。“保持屏幕常亮”会在计数页面上，让屏幕在最后一次点按后保持 10 分钟不熄灭。</span>
+            </li>
+            <li>
+                <strong>外观与声音</strong>
+                <span>每数一下是圆润的木头“嗒”声，达到目标是马林巴琴音，还有短促的振动。设置的“声音与效果”里，“音效”和“振动”各有开关，打开“减少特效”，数字就不再跳动。设备切到深色模式时，界面也跟着变深。</span>
+            </li>
+            <li>
+                <strong>使用条件</strong>
+                <span>不用订阅，没有功能被付费锁住，应用里也没有内购，包括小组件在内的所有功能人人能用。唯一的广告是屏幕最下方的一条横幅，离大按钮很远，不会出现盖满屏幕的广告。无需账号，离线运行，计数器和记录留在你的设备上。界面提供五种语言：英语、韩语、日语，以及简体和繁体中文，在设置的“语言”里切换。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>支持平台</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>即将推出</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>使用手册</h2>
+        <p>查看 TapAlot 应用的使用手册。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看 TapAlot 应用的隐私政策。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <p>有关应用的咨询请通过以下方式联系我们。</p>
+        <p><strong>邮箱:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>开发:</strong> <a href="/zh/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="privacy/zh.html">隐私政策</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

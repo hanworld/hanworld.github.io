@@ -20,9 +20,9 @@
     <meta property="og:title" content="TapAlot 使用说明 - Willee Project">
     <meta property="og:description" content="TapAlot 使用说明 — 每点按一下，数字就加一的计数器应用。">
     <meta property="og:url" content="https://willee.net/apps/tapalot/manual/zh.html">
-    <meta property="og:image" content="https://willee.net/images/og_image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://willee.net/apps/tapalot/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
     <meta property="og:locale" content="zh_CN">
     <meta name="twitter:card" content="summary_large_image">
     <style>
@@ -88,7 +88,7 @@
         <div style="display:flex;align-items:center;">
             <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-            <span>TapAlot</span>
+            <a href="../zh.html">TapAlot</a>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
             <span>手册</span>
         </div>
@@ -115,6 +115,21 @@
 </header>
 
 <main>
+<section>
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/TapAlot_zh_01_count.webp" alt="计数页面 — 入场人数 128、目标 200 的进度条和大的 +1 按钮" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_02_counters.webp" alt="计数器列表 — 入场人数、游泳圈数、编织行数、俯卧撑" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_03_history.webp" alt="记录 — 按天整理的入场人数记录，展开的“今天”里每一行的时间" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_04_edit.webp" alt="编辑计数器 — 游泳圈数的“每次增加”2、“目标”40、“每隔几次提醒”10" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_05_settings.webp" alt="设置 — “声音与效果”和已开启的“用音量键计数”" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_06_dark.webp" alt="深色模式 — 音量键计数中的俯卧撑 45 和 +5 按钮" width="480" height="960" loading="lazy" decoding="async">
+            <img src="../images/TapAlot_zh_07_widget.webp" alt="主屏幕小组件 — 无需打开应用、点按即可计数的入场人数小组件" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
 <section>
     <div class="container">
         <h2>关于应用</h2>
@@ -154,7 +169,7 @@
             <li><strong>减 1</strong>：把数值减 1。默认不会减到 0 以下（第4章的<strong>允许低于 0</strong>）。</li>
             <li><strong>撤销</strong>：取消最近一次变化（增加、减少、归零、修改数值）。继续点按，会依次撤销更早的变化。</li>
             <li><strong>归零</strong>：把数值归零。会先弹出“要归零吗？”的确认窗口。当前数值会保留在记录中，可用<strong>撤销</strong>恢复。</li>
-            <li>数值变化时，数字会轻轻弹一下。在设置中打开<strong>减少特效</strong>就不会弹。</li>
+            <li>数值变化时，数字会弹一下。在设置中打开<strong>减少特效</strong>，或在设备的无障碍设置中关闭动画，就不会弹。</li>
             <li>按钮和广告之间的窄条，点按没有反应。</li>
         </ul>
     </div>
@@ -209,7 +224,8 @@
         <h3>记录</h3>
         <p>点按顶部栏的<strong>记录</strong>按钮打开。每次数值变化都会留下一行记录。</p>
         <ul>
-            <li>记录按当时的本地日期分组。日期行会显示当天数了多少、<strong>结束时</strong>（“结束时 120”）以及<strong>归零</strong>次数（“归零 2 次”）。</li>
+            <li>一开始显示计数页面中的计数器的记录。点按上方的计数器名称按钮，可以选择其他计数器并查看其记录。计数页面的计数器不会改变。</li>
+            <li>记录按当时的本地日期分组。日期行会显示<strong>计数</strong>（“计数 +16”，即当天增加的数减去减少的数，不含归零和修改数值）、<strong>结束时</strong>（“结束时 120”，即当天最后的数值）以及<strong>归零</strong>次数（“归零 2 次”）。</li>
             <li>点按日期展开，当天的记录从新到旧排列。每条记录有时间、变化（增加、减少、归零、修改数值）、增减和数值，用音量键或小组件计数的记录会带有相应标记。某天记录特别多时，只显示最近 500 条（导出文件包含全部）。</li>
             <li>记录超过 20 万行后，会从最早的日期起只保留<strong>仅每日合计</strong>。这样的日期展开后没有记录行，末尾会显示“较早的记录已合并为每日合计。”今天的记录不会被合并。</li>
             <li>右上角菜单里的<strong>清除记录</strong>会删除此计数器的全部记录。<strong>当前数值保持不变。</strong></li>
@@ -220,9 +236,13 @@
 <section>
     <div class="container">
         <h2>6. 导出（CSV）</h2>
-        <p>把记录做成 CSV 文件，交给设备的分享面板。接收的应用（邮件、云存储等）由你选择。</p>
+        <p>把记录做成 CSV 文件导出。点按按钮后，选择<strong>分享</strong>或<strong>保存到设备</strong>。</p>
         <ul>
-            <li><strong>一个计数器</strong>：在记录页面右上角菜单中点按<strong>导出（CSV）</strong>。</li>
+            <li><strong>分享</strong>：交给设备的分享面板。接收的应用（邮件、云存储等）由你选择。</li>
+            <li><strong>保存到设备</strong>：在文件保存窗口中选择文件夹和名称，保存到此设备。保存后会显示“已保存到设备。”。</li>
+        </ul>
+        <ul>
+            <li><strong>一个计数器</strong>：点按记录页面右上角的<strong>导出（CSV）</strong>按钮。导出的是记录页面中正在查看的计数器。</li>
             <li><strong>所有计数器</strong>：在计数器列表点按<strong>全部导出（CSV）</strong>按钮。</li>
             <li>生成文件时会显示“正在生成 CSV 文件…”。生成失败时会提示“无法生成文件，请重试。”</li>
             <li>列有<strong>计数器</strong>、<strong>日期</strong>、<strong>时间</strong>、<strong>变化</strong>、<strong>增减</strong>、<strong>数值</strong>和<strong>来源</strong>。已合并为合计的日期会成为一行<strong>每日合计</strong>。</li>
@@ -304,7 +324,7 @@
 <footer>
     <p>&copy; 2026 Willee Project. All rights reserved.</p>
     <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
-    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="../zh.html">TapAlot</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
 </footer>
 
 </body>
