@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>TapAlot 使い方 - Willee Project</title>
+    <meta name="description" content="TapAlot 使い方 — タップするたびに数が1つずつ増えるカウンターアプリです。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/tapalot/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tapalot/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tapalot/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tapalot/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tapalot/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="TapAlot 使い方 - Willee Project">
+    <meta property="og:description" content="TapAlot 使い方 — タップするたびに数が1つずつ増えるカウンターアプリです。">
+    <meta property="og:url" content="https://willee.net/apps/tapalot/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>TapAlot</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="TapAlot" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>TapAlot</h1>
+                <p>使い方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>TapAlot</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>タップするたびに数が1つずつ増えるカウンターアプリです。入場者、在庫、運動の回数、編み物の段数など、「何回か」を数えたいときに使います。</p>
+        <ul>
+            <li>会員登録もログインもありません。作ったカウンターと記録は端末の中に保存されます。</li>
+            <li><strong>インターネットがなくても使えます。</strong> インターネットは画面下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+            <li>数が変わるたびに、すぐ端末に保存されます（9章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. はじめに</h2>
+        <ul>
+            <li>アプリを開くと、最後に使ったカウンターのカウント画面がすぐに開きます。最初は<strong>カウンター1</strong>が開きます。</li>
+            <li>上のバーのカウンター名をタップすると、<strong>カウンター</strong>の一覧に移ります。新しいカウンターはそこで作ります（3章）。</li>
+            <li>上のバーには、カウンター名のほかに<strong>記録</strong>（5章・6章）と<strong>設定</strong>（8章）のボタンがあります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 数える</h2>
+        <p>カウント画面の中央に今の数が大きく表示され、その下に大きな<strong>+1</strong>ボタンがあります。ボタンの下には<strong>1を引く</strong>・<strong>元に戻す</strong>・<strong>0に戻す</strong>があります。</p>
+        <ul>
+            <li><strong>+1ボタン</strong>: 指が触れた瞬間に数えます。指を離すのを待たないので、速く続けてタップできます。反応するのは丸いボタンの中だけで、円の外をタップしても数えません。</li>
+            <li><strong>1を引く</strong>: 数を1減らします。初期設定では0より下には減りません（4章の<strong>0より下も数える</strong>）。</li>
+            <li><strong>元に戻す</strong>: 直前の変化（足す・引く・0に戻す・数の変更）を取り消します。続けて押すと、その前の変化も順に戻ります。</li>
+            <li><strong>0に戻す</strong>: 数を0に戻します。先に「0に戻しますか？」という確認の画面が出ます。今の数は記録に残り、<strong>元に戻す</strong>で戻せます。</li>
+            <li>数が変わると、数字が少し弾みます。設定の<strong>エフェクトを減らす</strong>をオンにすると弾みません。</li>
+            <li>ボタンと広告のあいだの細い帯は、タップしても反応しません。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. カウンター一覧</h2>
+        <p>上のバーのカウンター名をタップすると開きます。カウンターはいくつでも作れます。</p>
+        <ul>
+            <li>カウンターをタップすると、そのカウンターのカウント画面が開きます。</li>
+            <li>上の<strong>新しいカウンター</strong>ボタンで作ります。</li>
+            <li>行の右端の<strong>カウンターを編集</strong>ボタンで内容を変えます（4章）。</li>
+            <li><strong>並べ替え</strong>: 行のハンドルをドラッグするか、行を長押ししてドラッグします。</li>
+            <li><strong>削除</strong>は編集画面にあります。削除すると「削除しました: 名前」と<strong>元に戻す</strong>がしばらく出ます。削除したカウンターは、一覧の一番下の<strong>削除したカウンター</strong>に7日間残り（「N日後に消えます」）、そこで<strong>復元</strong>をタップすると記録と一緒に戻ります。7日たつと記録と一緒に消えます。</li>
+            <li>カウンターが1つだけになると、削除ボタンはありません。カウンターは常に1つ以上あります。</li>
+            <li>上の<strong>すべてエクスポート(CSV)</strong>ボタンで、すべてのカウンターの記録をファイルにして送ります（6章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. カウンターの編集</h2>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>名前</td><td>カウンターの名前です（40文字まで）。空にすると「カウンター1」のように番号付きの名前で表示されます</td></tr>
+            <tr><td>色</td><td>8色から選びます。カウント画面とウィジェットに使われます</td></tr>
+            <tr><td>開始の数</td><td>新しいカウンターを作るときだけあります。最初の数です</td></tr>
+            <tr><td>今の数</td><td>すでにあるカウンターを編集するときに出ます。数を変えると「数を変更」が記録に残り、<strong>元に戻す</strong>で戻せます</td></tr>
+            <tr><td>1回で足す数</td><td>+1ボタンを1回タップしたときに足す数です（1〜9999）。初期値は1です</td></tr>
+            <tr><td>目標</td><td>空欄なら目標なしです（5章）</td></tr>
+            <tr><td>何回ごとに知らせる</td><td>例: 10なら10・20・30で音と振動で知らせます。空欄でオフです。1回で足す数が大きくて倍数を飛び越したときも知らせます。引くときと0に戻すときは知らせません</td></tr>
+            <tr><td>0より下も数える</td><td>オンにすると、<strong>1を引く</strong>で0より下まで減らせます。初期設定はオフです</td></tr>
+        </table>
+        <ul>
+            <li><strong>保存</strong>をタップすると変更が反映されます。</li>
+            <li><strong>ホーム画面に追加</strong>: このカウンターを表示するウィジェットを置きます（7章）。</li>
+            <li><strong>削除</strong>: このカウンターを削除します（3章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 目標と記録画面</h2>
+        <h3>目標</h3>
+        <ul>
+            <li>目標を決めると、今の数の下に進み具合のバーと「目標 50」が表示されます。</li>
+            <li>数が目標に達すると「目標達成」に変わり、音と振動で知らせます。音と振動は設定に従います（8章）。</li>
+        </ul>
+        <h3>記録</h3>
+        <p>上のバーの<strong>記録</strong>ボタンで開きます。数が変わるたびに1行ずつ残った記録を表示します。</p>
+        <ul>
+            <li>記録は、そのときの現地の日付ごとにまとめられます。日付の行には、その日に数えた数、<strong>最後の数</strong>（「最後の数 120」）、<strong>0に戻す</strong>回数（「0に戻す 2回」）が表示されます。</li>
+            <li>日付をタップすると開き、その日の行が新しいものから並びます。行ごとに時刻、変化（足す・引く・0に戻す・数を変更）、増減、数が表示され、音量ボタンやウィジェットで数えた行にはその印が付きます。1日の行がとても多いときは、最新の500件だけ表示します（エクスポートにはすべて入ります）。</li>
+            <li>記録が20万行を超えると、古い日から<strong>日ごとの合計のみ</strong>を残します。そのような日は開いても行がなく、最後に「古い記録は日ごとの合計にまとめました。」と表示されます。今日の行はまとめません。</li>
+            <li>右上のメニューの<strong>記録を消す</strong>は、このカウンターの記録をすべて消します。<strong>今の数はそのままです。</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. エクスポート(CSV)</h2>
+        <p>記録を CSV ファイルにして、端末の共有画面に渡します。受け取るアプリ（メール、クラウドストレージなど）はご自身で選びます。</p>
+        <ul>
+            <li><strong>1つのカウンター</strong>: 記録画面の右上のメニューで<strong>エクスポート(CSV)</strong>をタップします。</li>
+            <li><strong>すべてのカウンター</strong>: カウンター一覧の<strong>すべてエクスポート(CSV)</strong>ボタンをタップします。</li>
+            <li>ファイルを作っているあいだは「CSVファイルを作成しています…」と表示されます。作れなかったときは「ファイルを作成できませんでした。もう一度お試しください。」と出ます。</li>
+            <li>列は<strong>カウンター</strong>・<strong>日付</strong>・<strong>時刻</strong>・<strong>変化</strong>・<strong>増減</strong>・<strong>数</strong>・<strong>操作元</strong>です。日ごとの合計にまとめた日は、<strong>日ごとの合計</strong>の1行になります。</li>
+            <li>表計算ソフトで開けます。</li>
+            <li>ファイルにはカウンターの名前と記録が入ります。開発者には送りませんが、受け取った人は読めるので、送る前にご確認ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. ホーム画面のウィジェット</h2>
+        <p>アプリを開かずに、ホーム画面でタップして数えます。</p>
+        <h3>置く</h3>
+        <ul>
+            <li><strong>アプリから</strong>: カウンターの編集画面の<strong>ホーム画面に追加</strong>をタップします。そのカウンターを表示するウィジェットが置かれます。端末がアプリからの追加に対応していないときは「ウィジェットを置く」の案内が出ます。そのカウンターを開いておくので、ホーム画面の空いている所を長押しし、「ウィジェット」から TapAlot をドラッグして置いてください。</li>
+            <li><strong>ホーム画面から</strong>: 空いている所を長押しし、ウィジェットの一覧から TapAlot の<strong>カウンター</strong>をドラッグして置きます。この方法で置いたウィジェットは、最後に使ったカウンターを表示します。</li>
+        </ul>
+        <h3>使う</h3>
+        <ul>
+            <li>ウィジェットをタップすると、アプリを開かずに「1回で足す数」だけ増え、短く振動します。振動はアプリの<strong>バイブレーション</strong>の設定に従います。音は鳴りません。</li>
+            <li>目標があるカウンターは、ウィジェットにも進み具合が表示されます。</li>
+            <li>右上の小さなアイコン（<strong>アプリを開く</strong>）をタップするとアプリが開きます。</li>
+            <li>ウィジェットを小さくすると、数字だけが表示されます。</li>
+            <li>ウィジェットで数えた分は、アプリを開いたとき・前面に戻ったときに記録へ足され、記録には「ウィジェット」と残ります。間違ってタップしたときは、アプリの<strong>元に戻す</strong>で戻します。</li>
+            <li>カウンターを削除すると、そのウィジェットには「タップしてアプリを開く」と表示され、タップするとアプリが開きます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 設定</h2>
+        <p>カウント画面の上のバーの<strong>設定</strong>ボタンで開きます。グループは二つです。</p>
+        <h3>サウンドと効果</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>タップと目標の音をオン・オフします</td></tr>
+            <tr><td>バイブレーション</td><td>タップと目標の振動をオン・オフします。ウィジェットの振動もこの設定に従います</td></tr>
+            <tr><td>エフェクトを減らす</td><td>数字が弾むなどの演出を控えめにします</td></tr>
+            <tr><td>画面をつけたままにする</td><td>カウント画面で、画面が消えないようにします。最後のタップから10分たつと解除します。初期設定はオンです</td></tr>
+            <tr><td>音量ボタンで数える</td><td>オンにすると、音量の上ボタンで足し、下ボタンで1を引きます。カウント画面でだけ使え、その間はボタンで音量が変わりません。画面が消えているあいだは数えません。初期設定はオフです</td></tr>
+        </table>
+        <p>音量ボタンで数えた行は、記録に「音量ボタン」と残ります。</p>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>言語</td><td><strong>端末の言語</strong>（初期設定）に従うか、一覧から選びます（English · 日本語 · 한국어 · 简体中文 · 繁體中文）</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意の画面を開き直します。同意が必要な地域（欧州など）でのみ表示されます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この説明書（<strong>使い方</strong>）、<strong>Google Playで評価する</strong>、<strong>プライバシーポリシー</strong>、<strong>オープンソースライセンス</strong>、<strong>ほかのアプリ</strong>（タップするとストアが開きます）と<strong>すべてのアプリを見る</strong></td></tr>
+        </table>
+        <p>画面の色は端末のダークモードに従います。アプリの中に別のスイッチはありません。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 保存・バックアップ・広告</h2>
+        <ul>
+            <li><strong>保存</strong>: 数が変わるたびに、すぐ端末に保存します。アプリを閉じたり強制終了したりしても、数えた数は残ります。1日に1回、自動バックアップに含まれない場所に保存ファイルのコピーを1つ置き、ファイルが壊れたときに戻すために使います。</li>
+            <li><strong>バックアップ</strong>: Google バックアップ（Android の自動バックアップ）がオンなら、カウンター・記録・設定も一緒にバックアップされ、機種変更やアプリの再インストールのときに戻ります。不要な場合は Android の設定のバックアップのメニューでオフにできます。アプリを削除すると、端末のデータも消えます。</li>
+            <li><strong>広告</strong>: 画面の一番下にバナー広告が1つあります。これが唯一の広告で、カウント画面の大きなボタンとバナーのあいだには余白があります。キーボードが出ているあいだは広告の帯が隠れます。同意が必要な地域（欧州など）では、最初に開いたときに広告の同意の画面が表示され、あとから設定の<strong>プライバシー設定</strong>で変更できます。</li>
+            <li>アプリ内課金はありません。サーバーへ送るものもありません。</li>
+            <li>くわしくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

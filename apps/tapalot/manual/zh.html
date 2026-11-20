@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>TapAlot 使用说明 - Willee Project</title>
+    <meta name="description" content="TapAlot 使用说明 — 每点按一下，数字就加一的计数器应用。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/tapalot/manual/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tapalot/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tapalot/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tapalot/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tapalot/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="TapAlot 使用说明 - Willee Project">
+    <meta property="og:description" content="TapAlot 使用说明 — 每点按一下，数字就加一的计数器应用。">
+    <meta property="og:url" content="https://willee.net/apps/tapalot/manual/zh.html">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>TapAlot</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>手册</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="TapAlot" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>TapAlot</h1>
+                <p>使用说明</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>关于应用</h2>
+        <table class="info-table">
+            <tr><th>应用名称</th><td>TapAlot</td></tr>
+            <tr><th>版本</th><td>1.0.0</td></tr>
+            <tr><th>开发</th><td>Willee Project</td></tr>
+            <tr><th>支持平台</th><td>Android</td></tr>
+        </table>
+        <p>每点按一下，数字就加一的计数器应用。统计入场人数、库存、锻炼次数、织毛衣的行数等，需要数“几次”时都能用。</p>
+        <ul>
+            <li>没有注册，也不用登录。你创建的计数器和记录都保存在设备里。</li>
+            <li><strong>没有网络也能使用。</strong> 网络只用于屏幕下方的广告，以及发送使用统计和错误报告。</li>
+            <li>语言跟随设备设置。支持英语、韩语、日语、中文（简体、繁体），也可以在设置里自己选。</li>
+            <li>数值每次变化都会立刻保存在设备上（第9章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. 开始使用</h2>
+        <ul>
+            <li>打开应用，会直接进入上次使用的计数器的计数页面。第一次打开的是<strong>计数器 1</strong>。</li>
+            <li>点按顶部栏里的计数器名称，进入<strong>计数器</strong>列表。新的计数器在那里创建（第3章）。</li>
+            <li>顶部栏除了计数器名称，还有<strong>记录</strong>（第5、6章）和<strong>设置</strong>（第8章）按钮。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 计数</h2>
+        <p>计数页面中央大大地显示当前数值，下方是一个大的<strong>+1</strong>按钮。按钮下面是<strong>减 1</strong>、<strong>撤销</strong>和<strong>归零</strong>。</p>
+        <ul>
+            <li><strong>+1 按钮</strong>：手指一碰到就计数，不用等手指抬起，所以可以快速连点。只有圆形按钮内会响应，圆圈外点按不计数。</li>
+            <li><strong>减 1</strong>：把数值减 1。默认不会减到 0 以下（第4章的<strong>允许低于 0</strong>）。</li>
+            <li><strong>撤销</strong>：取消最近一次变化（增加、减少、归零、修改数值）。继续点按，会依次撤销更早的变化。</li>
+            <li><strong>归零</strong>：把数值归零。会先弹出“要归零吗？”的确认窗口。当前数值会保留在记录中，可用<strong>撤销</strong>恢复。</li>
+            <li>数值变化时，数字会轻轻弹一下。在设置中打开<strong>减少特效</strong>就不会弹。</li>
+            <li>按钮和广告之间的窄条，点按没有反应。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 计数器列表</h2>
+        <p>点按顶部栏里的计数器名称即可打开。计数器可以创建多个。</p>
+        <ul>
+            <li>点按某个计数器，会打开它的计数页面。</li>
+            <li>点按上方的<strong>新建计数器</strong>来创建。</li>
+            <li>点按行末的<strong>编辑计数器</strong>来修改（第4章）。</li>
+            <li><strong>调整顺序</strong>：拖动行的手柄，或长按某一行后拖动。</li>
+            <li><strong>删除</strong>在编辑页面里。删除后会短暂出现“已删除：名称”和<strong>撤销</strong>。已删除的计数器会在列表最下方的<strong>最近删除</strong>中保留 7 天（“N 天后清除”），在那里点按<strong>恢复</strong>，就会连同记录一起回来。过了 7 天会连同记录一起清除。</li>
+            <li>只剩一个计数器时，没有删除按钮。计数器始终至少有一个。</li>
+            <li>上方的<strong>全部导出（CSV）</strong>按钮会把所有计数器的记录做成文件发出（第6章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 编辑计数器</h2>
+        <table class="info-table">
+            <tr><th>项目</th><th>作用</th></tr>
+            <tr><td>名称</td><td>计数器的名称（最多 40 个字符）。留空时会显示带编号的名称，如“计数器 1”</td></tr>
+            <tr><td>颜色</td><td>从 8 种颜色中选择。用于计数页面和小组件</td></tr>
+            <tr><td>起始数值</td><td>只在创建新计数器时有。第一个数值</td></tr>
+            <tr><td>当前数值</td><td>编辑已有计数器时显示。修改数值后，记录中会留下“修改数值”，可用<strong>撤销</strong>恢复</td></tr>
+            <tr><td>每次增加</td><td>点按一次+1 按钮增加的数（1～9999）。默认是 1</td></tr>
+            <tr><td>目标</td><td>留空表示没有目标（第5章）</td></tr>
+            <tr><td>每隔几次提醒</td><td>例如填 10，会在 10、20、30 时用声音和振动提醒。留空则关闭。每次增加的数较大而跳过倍数时也会提醒。减少和归零不会提醒</td></tr>
+            <tr><td>允许低于 0</td><td>打开后，<strong>减 1</strong>可以减到 0 以下。默认关闭</td></tr>
+        </table>
+        <ul>
+            <li>点按<strong>保存</strong>后修改才会生效。</li>
+            <li><strong>添加到主屏幕</strong>：放置一个显示此计数器的小组件（第7章）。</li>
+            <li><strong>删除</strong>：删除此计数器（第3章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. 目标与记录页面</h2>
+        <h3>目标</h3>
+        <ul>
+            <li>设定目标后，当前数值下方会出现进度条和“目标 50”。</li>
+            <li>数值达到目标时，会变成“已达成目标”，并用声音和振动提醒。声音和振动遵循设置（第8章）。</li>
+        </ul>
+        <h3>记录</h3>
+        <p>点按顶部栏的<strong>记录</strong>按钮打开。每次数值变化都会留下一行记录。</p>
+        <ul>
+            <li>记录按当时的本地日期分组。日期行会显示当天数了多少、<strong>结束时</strong>（“结束时 120”）以及<strong>归零</strong>次数（“归零 2 次”）。</li>
+            <li>点按日期展开，当天的记录从新到旧排列。每条记录有时间、变化（增加、减少、归零、修改数值）、增减和数值，用音量键或小组件计数的记录会带有相应标记。某天记录特别多时，只显示最近 500 条（导出文件包含全部）。</li>
+            <li>记录超过 20 万行后，会从最早的日期起只保留<strong>仅每日合计</strong>。这样的日期展开后没有记录行，末尾会显示“较早的记录已合并为每日合计。”今天的记录不会被合并。</li>
+            <li>右上角菜单里的<strong>清除记录</strong>会删除此计数器的全部记录。<strong>当前数值保持不变。</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 导出（CSV）</h2>
+        <p>把记录做成 CSV 文件，交给设备的分享面板。接收的应用（邮件、云存储等）由你选择。</p>
+        <ul>
+            <li><strong>一个计数器</strong>：在记录页面右上角菜单中点按<strong>导出（CSV）</strong>。</li>
+            <li><strong>所有计数器</strong>：在计数器列表点按<strong>全部导出（CSV）</strong>按钮。</li>
+            <li>生成文件时会显示“正在生成 CSV 文件…”。生成失败时会提示“无法生成文件，请重试。”</li>
+            <li>列有<strong>计数器</strong>、<strong>日期</strong>、<strong>时间</strong>、<strong>变化</strong>、<strong>增减</strong>、<strong>数值</strong>和<strong>来源</strong>。已合并为合计的日期会成为一行<strong>每日合计</strong>。</li>
+            <li>可以用电子表格程序打开。</li>
+            <li>文件中包含计数器名称和记录。不会发送给开发者，但收到文件的人可以读到内容，发送前请先确认。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. 主屏幕小组件</h2>
+        <p>不用打开应用，在主屏幕上点按就能计数。</p>
+        <h3>放置</h3>
+        <ul>
+            <li><strong>在应用中</strong>：在计数器的编辑页面点按<strong>添加到主屏幕</strong>，就会放置一个显示该计数器的小组件。如果设备不支持从应用中添加，会出现“添加小组件”的提示。应用会先打开该计数器，请长按主屏幕空白处，在“小组件”里把 TapAlot 拖到主屏幕上。</li>
+            <li><strong>在主屏幕上</strong>：长按空白处，从小组件列表中把 TapAlot 的<strong>计数器</strong>拖到主屏幕上。这样放置的小组件显示最后使用的计数器。</li>
+        </ul>
+        <h3>使用</h3>
+        <ul>
+            <li>点按小组件，不用打开应用，数值就会增加“每次增加”的数，并短暂振动。振动遵循应用中的<strong>振动</strong>设置。没有声音。</li>
+            <li>计数器有目标时，小组件上也会显示进度。</li>
+            <li>点按右上角的小图标（<strong>打开应用</strong>）会打开应用。</li>
+            <li>把小组件缩小后，只显示数字。</li>
+            <li>在小组件上数的数，会在下次打开应用或应用回到前台时加入记录，记录中标为“小组件”。点错了，可以在应用里用<strong>撤销</strong>恢复。</li>
+            <li>删除计数器后，它的小组件会显示“点按打开应用”，点按即可打开应用。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. 设置</h2>
+        <p>点按计数页面顶部栏的<strong>设置</strong>按钮打开。分为两组。</p>
+        <h3>声音与效果</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>作用</th></tr>
+            <tr><td>音效</td><td>打开或关闭点按和目标的声音</td></tr>
+            <tr><td>振动</td><td>打开或关闭点按和目标的振动。小组件的振动也遵循此设置</td></tr>
+            <tr><td>减少特效</td><td>减少数字弹动之类的特效</td></tr>
+            <tr><td>保持屏幕常亮</td><td>在计数页面不让屏幕熄灭。最后一次点按后 10 分钟解除。默认开启</td></tr>
+            <tr><td>用音量键计数</td><td>打开后，音量加键加数，音量减键减 1。仅在计数页面有效，期间按键不会调节音量。屏幕熄灭时不会计数。默认关闭</td></tr>
+        </table>
+        <p>用音量键计数的记录，会在记录中标为“音量键”。</p>
+        <h3>通用</h3>
+        <table class="info-table">
+            <tr><th>项目</th><th>作用</th></tr>
+            <tr><td>语言</td><td>选择<strong>跟随系统</strong>（默认），或从列表中选（English · 日本語 · 한국어 · 简体中文 · 繁體中文）</td></tr>
+            <tr><td>隐私选项</td><td>重新打开广告同意窗口。仅在需要同意的地区（如欧洲）显示</td></tr>
+            <tr><td>关于</td><td>版本、本说明（<strong>使用说明</strong>）、<strong>在 Google Play 上评分</strong>、<strong>隐私政策</strong>、<strong>开源许可</strong>、<strong>更多应用</strong>（点按会打开商店）和<strong>查看全部应用</strong></td></tr>
+        </table>
+        <p>屏幕颜色跟随设备的深色模式。应用内没有单独的开关。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 保存、备份和广告</h2>
+        <ul>
+            <li><strong>保存</strong>：每次数值变化都会立刻保存到设备。即使关闭或强制停止应用，数过的数也会保留。每天一次，会在自动备份不包含的位置保留一份存储文件的副本，仅在文件损坏时用于恢复。</li>
+            <li><strong>备份</strong>：如果开启了 Google 备份（Android 自动备份），计数器、记录和设置也会一起备份，在更换设备或重新安装应用时恢复。如不需要，可在 Android 设置的备份菜单中关闭。卸载应用会删除设备上的数据。</li>
+            <li><strong>广告</strong>：屏幕最下方有一条横幅广告。这是唯一的广告，计数页面的大按钮和横幅之间留有空隙。键盘弹出时，广告条会被隐藏。在需要同意的地区（如欧洲），首次打开时会出现广告同意窗口，之后可在设置的<strong>隐私选项</strong>中更改。</li>
+            <li>没有应用内购买，也不会向服务器发送任何内容。</li>
+            <li>详情请见<a href="../privacy/zh.html">隐私政策</a>。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 联系我们</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

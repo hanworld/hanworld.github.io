@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>TapAlot User Guide - Willee Project</title>
+    <meta name="description" content="TapAlot User Guide — A counter app where every tap adds one.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/tapalot/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/tapalot/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/tapalot/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/tapalot/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tapalot/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="TapAlot User Guide - Willee Project">
+    <meta property="og:description" content="TapAlot User Guide — A counter app where every tap adds one.">
+    <meta property="og:url" content="https://willee.net/apps/tapalot/manual/en.html">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>TapAlot</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="TapAlot" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>TapAlot</h1>
+                <p>User Guide</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>TapAlot</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>A counter app where every tap adds one. Use it whenever you need to count how many: visitors, stock, workouts, knitting rows.</p>
+        <ul>
+            <li>There is no sign-up and no login. The counters you make and their history are stored on your device.</li>
+            <li><strong>It works offline.</strong> The internet is used only for the ad at the bottom of the screen and for usage statistics and crash reports.</li>
+            <li>The language follows your device settings. English, Korean, Japanese and Chinese (Simplified and Traditional) are supported, and you can pick one in Settings.</li>
+            <li>Every change is saved to the device the moment it happens (chapter 9).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Getting started</h2>
+        <ul>
+            <li>When you open the app, the counting screen of the counter you used last opens right away. The first time, it is <strong>Counter 1</strong>.</li>
+            <li>Tap the counter's name in the top bar to go to the <strong>Counters</strong> list. You make new counters there (chapter 3).</li>
+            <li>Besides the counter name, the top bar has the <strong>History</strong> button (chapters 5 and 6) and the <strong>Settings</strong> button (chapter 8).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Counting</h2>
+        <p>The counting screen shows the current count large in the middle, with a big <strong>+1</strong> button below it. Under that button are <strong>Subtract 1</strong>, <strong>Undo</strong> and <strong>Reset</strong>.</p>
+        <ul>
+            <li><strong>The +1 button</strong> counts the moment your finger touches it. It does not wait for you to lift off, so you can tap as fast as you like. Only the round button reacts; touches outside the circle do not count.</li>
+            <li><strong>Subtract 1</strong> lowers the count by 1. By default the count does not go below 0 (<strong>Allow below 0</strong> in chapter 4).</li>
+            <li><strong>Undo</strong> takes back the last change (add, subtract, reset or edited). Tap it again to undo the change before that, and so on.</li>
+            <li><strong>Reset</strong> sets the count to 0. A "Reset to 0?" window asks first. The current count stays in the history, and <strong>Undo</strong> brings it back.</li>
+            <li>When the count changes, the number gives a small bounce. Turn on <strong>Reduce effects</strong> in Settings to stop it.</li>
+            <li>The narrow strip between the buttons and the ad does not react to touches.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. The counter list</h2>
+        <p>Tap the counter's name in the top bar to open it. You can make as many counters as you like.</p>
+        <ul>
+            <li>Tap a counter to open its counting screen.</li>
+            <li>Tap <strong>New counter</strong> at the top to make one.</li>
+            <li>Tap <strong>Edit counter</strong> at the end of a row to change it (chapter 4).</li>
+            <li><strong>Change the order:</strong> drag a row by its handle, or touch and hold a row and drag it.</li>
+            <li><strong>Delete</strong> is on the edit screen. After deleting, "Deleted: name" and <strong>Undo</strong> appear for a moment. A deleted counter stays for 7 days at the bottom of the list under <strong>Recently deleted</strong> ("Removed in N days"); tap <strong>Restore</strong> there and it comes back with its history. After 7 days it is removed together with its history.</li>
+            <li>When only one counter is left, it has no Delete button. There is always at least one counter.</li>
+            <li><strong>Export all (CSV)</strong> at the top sends the history of all counters as a file (chapter 6).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Editing a counter</h2>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Name</td><td>The counter's name, up to 40 characters. If you leave it empty, a numbered name such as "Counter 1" is shown</td></tr>
+            <tr><td>Color</td><td>Pick one of 8 colors. It is used on the counting screen and the widget</td></tr>
+            <tr><td>Start at</td><td>Only when making a new counter. The first count</td></tr>
+            <tr><td>Current count</td><td>Shown when you edit an existing counter. If you change it, an "Edited" record is added to the history and <strong>Undo</strong> can take it back</td></tr>
+            <tr><td>Add per tap</td><td>How much one tap on the +1 button adds (1 to 9999). The default is 1</td></tr>
+            <tr><td>Goal</td><td>Leave it empty for no goal (chapter 5)</td></tr>
+            <tr><td>Alert every</td><td>For example, 10 gives a sound and a buzz at 10, 20, 30. Leave it empty to turn it off. It also alerts when a large Add per tap skips over a multiple. Subtract and Reset never alert</td></tr>
+            <tr><td>Allow below 0</td><td>When on, <strong>Subtract 1</strong> can take the count below 0. Off by default</td></tr>
+        </table>
+        <ul>
+            <li>Changes apply only when you tap <strong>Save</strong>.</li>
+            <li><strong>Add to home screen</strong> puts a widget that shows this counter (chapter 7).</li>
+            <li><strong>Delete</strong> deletes this counter (chapter 3).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Goal and history</h2>
+        <h3>Goal</h3>
+        <ul>
+            <li>When a counter has a goal, a progress bar and "Goal 50" appear under the count.</li>
+            <li>When the count reaches the goal, the text changes to "Goal reached" and you hear a sound and feel a buzz. Sound and vibration follow your settings (chapter 8).</li>
+        </ul>
+        <h3>History</h3>
+        <p>Open it with the <strong>History</strong> button in the top bar. It shows one line for every change of the count.</p>
+        <ul>
+            <li>Records are grouped by the local date at the time. A day shows how many you counted, <strong>Ended at</strong> ("Ended at 120") and how many times you reset ("Reset 2 times").</li>
+            <li>Tap a day to open it and see that day's records, newest first. Each record shows the time, what changed (add, subtract, reset, edited), the amount and the count, and records made with the volume buttons or the widget carry that mark. On a very busy day only the latest 500 are shown (the export has them all).</li>
+            <li>When there are more than 200,000 records, the oldest days are kept as <strong>Daily total only</strong>. Such a day has no lines when opened, and the end of the history reads "Older records are kept as daily totals." Today's records are never reduced.</li>
+            <li><strong>Clear history</strong> in the menu at the top right deletes all records of this counter. <strong>The current count stays.</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Export (CSV)</h2>
+        <p>The history is made into a CSV file and sent to your device's share sheet. You choose the app that receives it (email, cloud storage and so on).</p>
+        <ul>
+            <li><strong>One counter:</strong> in the menu at the top right of the history screen, tap <strong>Export (CSV)</strong>.</li>
+            <li><strong>All counters:</strong> tap <strong>Export all (CSV)</strong> on the counter list.</li>
+            <li>While the file is made, "Making the CSV file…" is shown. If it fails, you see "Couldn't make the file. Please try again."</li>
+            <li>The columns are <strong>Counter</strong>, <strong>Date</strong>, <strong>Time</strong>, <strong>Change</strong>, <strong>Amount</strong>, <strong>Count</strong> and <strong>Source</strong>. A day that was reduced to a total becomes one <strong>Daily total</strong> line.</li>
+            <li>It opens in spreadsheet programs.</li>
+            <li>The file holds counter names and history. It is not sent to us, but whoever receives it can read it, so please check before you send.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Home screen widget</h2>
+        <p>Count from the home screen by tapping, without opening the app.</p>
+        <h3>Adding one</h3>
+        <ul>
+            <li><strong>From the app:</strong> tap <strong>Add to home screen</strong> on the counter's edit screen. A widget that shows that counter is placed. If your phone cannot add it from the app, an "Add a widget" note appears. The app opens that counter; touch and hold an empty spot on your home screen, tap Widgets and drag TapAlot there.</li>
+            <li><strong>From the home screen:</strong> touch and hold an empty spot and drag the <strong>Counter</strong> widget of TapAlot from the widget list. A widget added this way shows the counter you used last.</li>
+        </ul>
+        <h3>Using it</h3>
+        <ul>
+            <li>Tap the widget and the count goes up by the Add per tap, with a short buzz, without opening the app. The buzz follows the app's <strong>Vibration</strong> setting. There is no sound.</li>
+            <li>If the counter has a goal, the widget shows the progress too.</li>
+            <li>Tap the small icon at the top right (<strong>Open app</strong>) to open the app.</li>
+            <li>Make the widget smaller and it shows only the number.</li>
+            <li>Taps on the widget are added to the history the next time the app opens or comes to the front, marked "Widget". If you tapped by mistake, use <strong>Undo</strong> in the app.</li>
+            <li>If you delete a counter, its widget shows "Tap to open the app", and tapping it opens the app.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. Settings</h2>
+        <p>Open them with the <strong>Settings</strong> button in the top bar of the counting screen. There are two groups.</p>
+        <h3>Sound &amp; effects</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Sound effects</td><td>Turns the tap and goal sounds on or off</td></tr>
+            <tr><td>Vibration</td><td>Turns the tap and goal vibration on or off. The widget's buzz follows it too</td></tr>
+            <tr><td>Reduce effects</td><td>Tones down effects such as the bouncing number</td></tr>
+            <tr><td>Keep screen on</td><td>Keeps the screen on while you are on the counting screen, until 10 minutes after the last tap. On by default</td></tr>
+            <tr><td>Count with volume buttons</td><td>When on, the volume-up button adds and the volume-down button subtracts 1. It works only on the counting screen, and while it does the buttons do not change the volume. It does not count while the screen is off. Off by default</td></tr>
+        </table>
+        <p>Records made with the volume buttons are marked "Volume button" in the history.</p>
+        <h3>General</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Language</td><td>Follow the <strong>Device language</strong> (default) or pick from the list (English · 日本語 · 한국어 · 简体中文 · 繁體中文)</td></tr>
+            <tr><td>Privacy options</td><td>Reopens the ad consent window. Shown only in regions where consent is required (such as Europe)</td></tr>
+            <tr><td>About</td><td>The version, this guide (<strong>How to use</strong>), <strong>Rate on Google Play</strong>, <strong>Privacy policy</strong>, <strong>Open-source licenses</strong>, <strong>More apps</strong> (opens the store) and <strong>See all apps</strong></td></tr>
+        </table>
+        <p>The screen colors follow your device's dark mode. There is no separate switch in the app.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. Saving, backup and ads</h2>
+        <ul>
+            <li><strong>Saving:</strong> every change is saved on the device right away. Your count stays even if you close the app or force it to stop. Once a day the app keeps one copy of its save file in a place that automatic backup leaves out, used only to restore it if the file is damaged.</li>
+            <li><strong>Backup:</strong> if Google backup (Android Auto Backup) is on, the counters, history and settings are backed up too and come back when you switch devices or reinstall the app. You can turn it off in the backup menu of your Android settings. Uninstalling the app deletes its data on the device.</li>
+            <li><strong>Ads:</strong> there is a single banner ad at the very bottom of the screen. It is the only ad, and there is a margin between the big button on the counting screen and the banner. The ad strip is hidden when the keyboard is open. In regions where consent is required (such as Europe), an ad consent window appears the first time you open the app, and you can change it later under <strong>Privacy options</strong> in Settings.</li>
+            <li>There are no in-app purchases, and nothing is sent to a server.</li>
+            <li>For details, see the <a href="../privacy/en.html">Privacy Policy</a>.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. Contact</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
