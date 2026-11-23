@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>HowSoon User Guide - Willee Project</title>
+    <meta name="description" content="HowSoon User Guide — HowSoon counts the days until a date and the days since a date, and shows them on your home screen.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/manual/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="HowSoon User Guide - Willee Project">
+    <meta property="og:description" content="HowSoon User Guide — HowSoon counts the days until a date and the days since a date, and shows them on your home screen.">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/manual/en.html">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>Manual</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="HowSoon" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>HowSoon</h1>
+                <p>User Guide</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>App Info</h2>
+        <table class="info-table">
+            <tr><th>App Name</th><td>HowSoon</td></tr>
+            <tr><th>Version</th><td>1.0.0</td></tr>
+            <tr><th>Developer</th><td>Willee Project</td></tr>
+            <tr><th>Platform</th><td>Android</td></tr>
+        </table>
+        <p>HowSoon counts the days until a date and the days since a date, and shows them on your home screen. Use it for exams, birthdays, trips, anniversaries or any day you are waiting for or remembering.</p>
+        <ul>
+            <li>There is no sign-up and no login. Your dates and photos are stored on your device.</li>
+            <li><strong>It works offline.</strong> The internet is used only for the ad at the bottom of the app and for usage statistics and crash reports.</li>
+            <li>Widgets update by themselves at midnight, and you can set reminders for the days that matter.</li>
+            <li>The language follows your device settings. English, Korean, Japanese and Chinese (Simplified and Traditional) are supported, and you can pick one in Settings.</li>
+            <li>Every change is saved to the device the moment it happens (chapter 11).</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. Getting started</h2>
+        <ul>
+            <li>When you open the app, the list of your dates appears. The first time it is empty.</li>
+            <li>Tap <strong>Add date</strong> at the bottom to make one (chapter 2).</li>
+            <li>In the top bar, next to the HowSoon name, there are the <strong>Manage widgets</strong> button (chapter 8) and the <strong>Settings</strong> button (chapter 10).</li>
+            <li><strong>Deleted dates</strong> at the bottom left shows the dates you deleted (chapter 6).</li>
+            <li>Each card in the list shows the date's name and the number: days left, or days counted. The list shows pinned dates first, then the date whose next day comes soonest.</li>
+            <li>Tap a card to open that date: a large number, a sentence that says it in words, and the coming milestones. The <strong>Edit</strong> button is in the top bar.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. Adding a date</h2>
+        <p>Tap <strong>Add date</strong>, and under "What are you counting?" pick a template. It fills in sensible settings, and you can change all of them afterwards.</p>
+        <table class="info-table">
+            <tr><th>Template</th><th>What it starts with</th></tr>
+            <tr><td>Birthday</td><td>Every year. Reminders on the day and 1 day before</td></tr>
+            <tr><td>Couple</td><td>Count up. Milestone reminders on</td></tr>
+            <tr><td>Exam</td><td>Countdown. Reminders on the day, 1 day before and 1 week before</td></tr>
+            <tr><td>Trip</td><td>Countdown. Reminders on the day and 1 day before</td></tr>
+            <tr><td>Baby</td><td>Count up, for counting the days since a baby was born. Milestone reminders on</td></tr>
+            <tr><td>Custom</td><td>Countdown, with no reminders</td></tr>
+        </table>
+        <p>Then fill in the screen:</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Name</td><td>What the date is called, for example "Exam" or "Trip"</td></tr>
+            <tr><td>Date, or Start date</td><td>The day itself. For a count up it is the day you start counting from</td></tr>
+            <tr><td>How to count</td><td><strong>Countdown</strong>, <strong>Count up</strong>, <strong>Every year</strong> or <strong>Every month</strong> (chapter 3)</td></tr>
+            <tr><td>Count the start date as day 1</td><td>For a count up only (chapter 3)</td></tr>
+            <tr><td>Milestones</td><td>For a count up only (chapter 4)</td></tr>
+            <tr><td>Look</td><td>Emoji, color and photo (chapter 5)</td></tr>
+            <tr><td>Reminders</td><td>When to be reminded (chapter 9)</td></tr>
+            <tr><td>Pin to top</td><td>Keeps this date at the top of the list</td></tr>
+        </table>
+        <ul>
+            <li>A sentence under the settings tells you how the date will be counted, for example "Today is day 100".</li>
+            <li>Changes apply when you tap <strong>Save</strong>. <strong>Delete</strong> deletes the date (chapter 6).</li>
+            <li>If a date was made in a newer version of HowSoon, a note says so and it cannot be changed until you update the app.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. How days are counted</h2>
+        <table class="info-table">
+            <tr><th>How to count</th><th>What it shows</th></tr>
+            <tr><td>Countdown</td><td>The days left until the date. On the day itself it shows <strong>Today</strong>. The day after, it shows how many days ago it was</td></tr>
+            <tr><td>Count up</td><td>The days counted since the start date</td></tr>
+            <tr><td>Every year</td><td>The days left until the next time the date comes round, such as a birthday</td></tr>
+            <tr><td>Every month</td><td>The days left until the next time the day of the month comes round</td></tr>
+        </table>
+        <ul>
+            <li>The app never shows "D-0". The day itself is always written <strong>Today</strong>.</li>
+            <li>A day that does not exist in a month (February 29, or the 31st) falls on the last day of that month.</li>
+        </ul>
+        <h3>Day 1 or day 0</h3>
+        <p>For a count up there are two ways to count, and you choose with <strong>Count the start date as day 1</strong>:</p>
+        <ul>
+            <li><strong>On:</strong> the start date is day 1, so day 100 is the start date plus 99 days.</li>
+            <li><strong>Off:</strong> the start date is day 0.</li>
+        </ul>
+        <p>When you make the date, the sentence under the settings shows the result in words, such as "Today is day 100". The Couple and Baby templates start with this switch on when the app is in Korean or Japanese and off in the other languages. The choice is saved with each date, so changing the app language never changes your numbers.</p>
+        <p>When it is on, the 1-year anniversary falls on <strong>day 366</strong>. The sentence says so, for example "The 1-year anniversary (2027-01-31) is day 366". Turn the switch off if you want the anniversary to land on day 365.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. Milestones</h2>
+        <p>For a count up, the <strong>Milestones</strong> switches pick which days are marked:</p>
+        <ul>
+            <li><strong>Every 100 days (to 1,000)</strong>: day 100, 200 … up to 1,000.</li>
+            <li><strong>Every year</strong>: each anniversary.</li>
+        </ul>
+        <p>The date screen lists the next ones under <strong>Coming up</strong>, and the card shows how many days are left until the next one ("100-day mark in 12 days"). On the day itself, the milestone is celebrated (chapter 10), and you can get a reminder (chapter 9).</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. Look and pinning</h2>
+        <ul>
+            <li><strong>Emoji and color:</strong> pick from the lists. The color is used on the card, the date screen and the widget.</li>
+            <li><strong>Photo:</strong> <strong>Add photo</strong> opens Android's photo picker. Pick one photo. The app saves a smaller copy of it (at most 1080 pixels on the long side, without location information), and it is used as the background of the date screen and of the large widget. <strong>Change photo</strong> and <strong>Remove photo</strong> are in the same place. Photos take up to 18 MB in total; when it is full, remove a photo from another date first.</li>
+            <li><strong>Pin to top:</strong> keeps the date at the top of the list.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. Deleting and restoring</h2>
+        <ul>
+            <li><strong>Delete</strong> is on the edit screen. After deleting, "Deleted." and <strong>Undo</strong> appear for a moment.</li>
+            <li>A deleted date stays for 30 days. <strong>Deleted dates (N)</strong> at the bottom left of the list opens them.
+                <ul>
+                    <li><strong>Restore</strong> brings a date back.</li>
+                    <li><strong>Delete for good</strong> removes one date at once (a window asks first). It cannot be restored.</li>
+                    <li><strong>Empty deleted dates</strong> at the bottom removes all of them at once (a window asks first).</li>
+                </ul>
+            </li>
+            <li>After 30 days, deleted dates are removed when you open the app.</li>
+            <li>A widget that shows a deleted date reads "Deleted date · tap to choose". If you restore the date, the widget shows it again.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. Widgets and how they update</h2>
+        <p>There are three sizes, and you can place as many as you like, each with its own date:</p>
+        <table class="info-table">
+            <tr><th>Size</th><th>What it shows</th></tr>
+            <tr><td>1×1 · Number</td><td>The number</td></tr>
+            <tr><td>2×1 · Name and number</td><td>The name and the number</td></tr>
+            <tr><td>2×2 · Photo, name and number</td><td>The photo, the name, the number, the date and the next milestone</td></tr>
+        </table>
+        <p>The widget updates by itself at midnight, so the number is right when you wake up. You do not need to open the app. Tap a widget to open its date in the app.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. Adding and changing widgets</h2>
+        <h3>Three ways to add one</h3>
+        <ul>
+            <li><strong>From the home screen widget list:</strong> touch and hold an empty spot on your home screen, open <strong>Widgets</strong>, find <strong>HowSoon</strong> and drag the size you want. The <strong>Date for this widget</strong> screen opens. Pick a date, set the look if you like, and tap <strong>Done</strong>. If you have no dates yet, tap <strong>Create a date in the app</strong>. <strong>Cancel</strong> stops.</li>
+            <li><strong>From a date:</strong> on the date screen, tap <strong>Add to home screen</strong>, pick the <strong>Widget size</strong>, and the widget is placed with that date. If your home screen cannot add widgets from the app, a note says so; use the widget list above.</li>
+            <li><strong>From Manage widgets:</strong> tap the <strong>Manage widgets</strong> button in the top bar of the list, then <strong>Add widget</strong>. Choose <strong>Which date should it show?</strong> (or <strong>Create a new date</strong>), then the size.</li>
+        </ul>
+        <h3>The look</h3>
+        <p>On the <strong>Date for this widget</strong> screen you can also set:</p>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Background</td><td><strong>Date color</strong>, <strong>Light</strong>, <strong>Dark</strong> or <strong>Device</strong> (follows your device's light or dark mode)</td></tr>
+            <tr><td>Background opacity</td><td>How solid the background is</td></tr>
+            <tr><td>Text size</td><td><strong>Small</strong>, <strong>Medium</strong> or <strong>Large</strong></td></tr>
+        </table>
+        <h3>Changing one later</h3>
+        <ul>
+            <li>Touch and hold the widget on your home screen and choose its settings (the name of the button differs by phone, for example Settings). The same screen opens.</li>
+            <li>Or open <strong>Manage widgets</strong> and tap the widget. It lists every widget with its date and size.</li>
+        </ul>
+        <h3>Removing one</h3>
+        <p>To remove a widget, touch and hold it on your home screen and remove it. The app cannot remove widgets for you; Manage widgets says so.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. Reminders</h2>
+        <p>Under <strong>Reminders</strong> on a date, choose when to be reminded:</p>
+        <ul>
+            <li><strong>On the day</strong>, <strong>1 day before</strong>, <strong>1 week before</strong> (for a countdown or a yearly or monthly date)</li>
+            <li><strong>On milestone days</strong> (for a count up)</li>
+        </ul>
+        <p>A reminder arrives at the <strong>Reminder time</strong> (default 9:00 AM). Change it in <strong>Settings → General → Reminder time</strong>.</p>
+        <ul>
+            <li>The first time you save a date with a reminder, Android asks whether HowSoon may show notifications. If you say no, or notifications are off later, the app shows "Notifications are off for HowSoon." with <strong>Open settings</strong>.</li>
+            <li>A reminder names the date and says how many days are left or which milestone it is. Tap it to open that date.</li>
+            <li>Reminders are made by the app on your device. There are no ads in them.</li>
+        </ul>
+        <h3>When updates and reminders come late</h3>
+        <p>The app does not use the "exact alarm" permission, so Android decides the exact moment.</p>
+        <ul>
+            <li>Usually a widget or a reminder arrives within a few minutes of its time.</li>
+            <li>If the device is in deep sleep, it can be up to about 1 hour late. Turn the screen on and it catches up soon.</li>
+            <li>If the battery saving settings of your device restrict HowSoon, it can be late more often. <strong>Manage widgets</strong> shows "Battery use is restricted for HowSoon, so widgets may update late." Check the battery saving settings of your device.</li>
+            <li>If you force-stop the app (for example from Android's app settings), Android cancels its scheduled updates. Open the app once, and the widgets and reminders start working again.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. Settings and celebrations</h2>
+        <p>Open them with the <strong>Settings</strong> button in the top bar of the list. There are two groups.</p>
+        <h3>Sound &amp; effects</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Sound effects</td><td>Turns the sounds on or off</td></tr>
+            <tr><td>Vibration</td><td>Turns the vibration on or off</td></tr>
+            <tr><td>Reduce effects</td><td>Turns off the celebration animation</td></tr>
+        </table>
+        <p>On the day of a date, or on a milestone day, when you open the app a short celebration plays once for that date that day. With <strong>Reduce effects</strong> on there is no movement, only the sound if sound effects are on.</p>
+        <h3>General</h3>
+        <table class="info-table">
+            <tr><th>Item</th><th>What it does</th></tr>
+            <tr><td>Manage widgets</td><td>The same list as the top bar button (chapter 8)</td></tr>
+            <tr><td>Reminder time</td><td>When reminders arrive. The default is 9:00 AM</td></tr>
+            <tr><td>Export</td><td>Saves your dates and photos in one file (chapter 11)</td></tr>
+            <tr><td>Import</td><td>Merges the dates from an exported file (chapter 11)</td></tr>
+            <tr><td>Restore an earlier copy</td><td>Goes back to an automatic copy (chapter 11)</td></tr>
+            <tr><td>Language</td><td>Follow the <strong>Device language</strong> (default) or pick from the list (English · 日本語 · 한국어 · 简体中文 · 繁體中文)</td></tr>
+            <tr><td>Privacy options</td><td>Reopens the ad consent window. Shown only in regions where consent is required (such as Europe)</td></tr>
+            <tr><td>About</td><td>The version, this guide (<strong>How to use</strong>), <strong>Rate on Google Play</strong>, <strong>Privacy policy</strong>, <strong>Open-source licenses</strong>, <strong>More apps</strong> (opens the store) and <strong>See all apps</strong></td></tr>
+        </table>
+        <p>The screen colors follow your device's dark mode. There is no separate switch in the app.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. Export, import, copies and ads</h2>
+        <h3>Export</h3>
+        <p><strong>Settings → General → Export</strong> puts your dates and photos in one file named like <code>HowSoon-2026-01-31.json</code>. Choose <strong>Share</strong> to send it to the app you pick, or <strong>Save to device</strong> to save it in a folder. "Saved." appears when it is saved. The file is not sent to us, but whoever receives it can read your dates and see your photos, so please check before you send.</p>
+        <h3>Import</h3>
+        <p><strong>Settings → General → Import</strong>: pick an exported file. The app shows how many dates and photos it holds ("… Dates with the same ID keep the newer edit."). After you confirm, the dates are merged into yours: dates that are new are added, and a date that is in both keeps the version that was edited later. Photos that do not fit in the 18 MB are left out, and the app tells you. A file from a newer version asks you to update HowSoon first, and a file that is not from HowSoon is refused.</p>
+        <h3>Restore an earlier copy</h3>
+        <p>Once a day the app keeps a copy of your dates, and the latest 3 days are kept. A copy is also kept right before every import and every restore.</p>
+        <ul>
+            <li><strong>Settings → General → Restore an earlier copy</strong> lists them.</li>
+            <li>Pick one and confirm. Your dates are replaced by that copy, and your current dates are kept as a copy as well, so you can go back again.</li>
+        </ul>
+        <h3>Saving and backup</h3>
+        <ul>
+            <li><strong>Saving:</strong> every change is saved on the device right away.</li>
+            <li><strong>Backup:</strong> if Google backup (Android Auto Backup) is on, your dates, photos and settings are backed up too and come back when you switch devices or reinstall the app. You can turn it off in the backup menu of your Android settings. The daily copies are left out of it. Uninstalling the app deletes its data on the device.</li>
+        </ul>
+        <h3>Ads</h3>
+        <ul>
+            <li>There is a single banner ad at the very bottom of the app. It is the only ad. There are no ads in widgets or reminders. The ad strip is hidden when the keyboard is open.</li>
+            <li>In regions where consent is required (such as Europe), an ad consent window appears the first time you open the app, and you can change it later under <strong>Privacy options</strong> in Settings.</li>
+            <li>There are no in-app purchases, and nothing is sent to a server.</li>
+            <li>For details, see the <a href="../privacy/en.html">Privacy Policy</a>.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>12. Contact</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

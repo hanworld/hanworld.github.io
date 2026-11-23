@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+    <title>HowSoon 使い方 - Willee Project</title>
+    <meta name="description" content="HowSoon 使い方 — 大切な日まであと何日か、あの日から何日目かを数えて、ホーム画面に表示するアプリです。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/manual/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="HowSoon 使い方 - Willee Project">
+    <meta property="og:description" content="HowSoon 使い方 — 大切な日まであと何日か、あの日から何日目かを数えて、ホーム画面に表示するアプリです。">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/manual/ja.html">
+    <meta property="og:image" content="https://willee.net/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 40px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.4rem; margin-bottom: 16px; color: #1A365D; border-left: 4px solid #2EC4B6; padding-left: 12px; }
+        section h3 { font-size: 1.1rem; color: #1A365D; margin: 16px 0 8px; }
+        section p { margin-bottom: 12px; color: #64748B; }
+        section ul { padding-left: 20px; margin-bottom: 12px; }
+        section ul ul { margin: 6px 0 0; }
+        section li { margin-bottom: 6px; color: #64748B; font-size: 0.95rem; }
+        section li strong { color: #1A365D; }
+        code { white-space: pre-wrap; }
+
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        .info-table th, .info-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+        .info-table th { color: #1A365D; background: #F0FDFC; white-space: nowrap; }
+        .info-table td { color: #64748B; }
+
+        .share-example { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; font-family: Consolas, 'Courier New', monospace; color: #1A365D; line-height: 1.7; overflow-x: auto; }
+
+        .contact-box { background: #F0FDFC; border: 1px solid #2EC4B6; border-radius: 8px; padding: 20px; margin-top: 8px; }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>マニュアル</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">简体</a>
+            <a href="zh-Hant.html">繁體</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:16px;">
+            <img src="../images/app_icon.webp" alt="HowSoon" style="width:60px; height:60px; border-radius:14px;">
+            <div style="text-align:left;">
+                <h1>HowSoon</h1>
+                <p>使い方</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+<section>
+    <div class="container">
+        <h2>アプリについて</h2>
+        <table class="info-table">
+            <tr><th>アプリ名</th><td>HowSoon</td></tr>
+            <tr><th>バージョン</th><td>1.0.0</td></tr>
+            <tr><th>開発</th><td>Willee Project</td></tr>
+            <tr><th>対応プラットフォーム</th><td>Android</td></tr>
+        </table>
+        <p>大切な日まであと何日か、あの日から何日目かを数えて、ホーム画面に表示するアプリです。試験、誕生日、旅行、記念日など、待ちわびる日や覚えておきたい日に使います。</p>
+        <ul>
+            <li>会員登録もログインもありません。作った日付と写真は端末の中に保存されます。</li>
+            <li><strong>インターネットがなくても使えます。</strong> インターネットはアプリの下の広告と、利用統計・エラー報告の送信にだけ使います。</li>
+            <li>ウィジェットは真夜中に自動で切り替わり、大切な日には通知を受け取れます。</li>
+            <li>言語は端末の設定に従います。日本語・英語・韓国語・中国語（簡体字・繁体字）に対応し、設定で直接選ぶこともできます。</li>
+            <li>変更するたびに、すぐ端末に保存されます（11章）。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>1. はじめに</h2>
+        <ul>
+            <li>アプリを開くと、日付の一覧が表示されます。最初は空です。</li>
+            <li>下の<strong>日付を追加</strong>をタップして作ります（2章）。</li>
+            <li>上のバーの HowSoon の名前の隣に、<strong>ウィジェットの管理</strong>ボタン（8章）と<strong>設定</strong>ボタン（10章）があります。</li>
+            <li>左下の<strong>削除した日付</strong>で、削除した日付を見ます（6章）。</li>
+            <li>一覧のカードには、日付の名前と数字（あと何日か、何日目か）が表示されます。上に固定した日付が先に並び、そのあとは次のその日が近い順です。</li>
+            <li>カードをタップすると、その日付が開きます。大きな数字、言葉にした文、これからの記念日が表示され、上のバーに<strong>編集</strong>ボタンがあります。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>2. 日付を追加する</h2>
+        <p><strong>日付を追加</strong>をタップし、「何を数えますか?」の下でテンプレートを選びます。ちょうどよい設定があらかじめ入り、作ったあとですべて変えられます。</p>
+        <table class="info-table">
+            <tr><th>テンプレート</th><th>最初の設定</th></tr>
+            <tr><td>誕生日</td><td>毎年。当日と前日に通知</td></tr>
+            <tr><td>恋人</td><td>カウントアップ。記念日の通知をオン</td></tr>
+            <tr><td>試験</td><td>カウントダウン。当日・前日・1週間前に通知</td></tr>
+            <tr><td>旅行</td><td>カウントダウン。当日と前日に通知</td></tr>
+            <tr><td>赤ちゃん</td><td>カウントアップ（赤ちゃんが生まれた日から数える用途）。記念日の通知をオン</td></tr>
+            <tr><td>カスタム</td><td>カウントダウン。通知なし</td></tr>
+        </table>
+        <p>続いて画面を埋めます。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>名前</td><td>日付の名前です。例: 試験、旅行</td></tr>
+            <tr><td>日付、または始まった日</td><td>その日です。カウントアップでは数え始める日です</td></tr>
+            <tr><td>数え方</td><td><strong>カウントダウン</strong>、<strong>カウントアップ</strong>、<strong>毎年</strong>、<strong>毎月</strong>から選びます（3章）</td></tr>
+            <tr><td>初日を1日目にする</td><td>カウントアップにだけあります（3章）</td></tr>
+            <tr><td>記念日</td><td>カウントアップにだけあります（4章）</td></tr>
+            <tr><td>デザイン</td><td>絵文字、色、写真（5章）</td></tr>
+            <tr><td>通知</td><td>いつ知らせるかを選びます（9章）</td></tr>
+            <tr><td>上に固定</td><td>この日付を一覧の一番上に置きます</td></tr>
+        </table>
+        <ul>
+            <li>設定の下の文が、この日付がどう数えられるかを言葉で示します。例: 「今日で100日目です」。</li>
+            <li><strong>保存</strong>をタップすると反映されます。<strong>削除</strong>は日付を削除します（6章）。</li>
+            <li>新しいバージョンの HowSoon で作った日付には案内が出て、アプリを更新するまで変更できません。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>3. 数え方</h2>
+        <table class="info-table">
+            <tr><th>数え方</th><th>表示されるもの</th></tr>
+            <tr><td>カウントダウン</td><td>その日までの残り日数です。当日は<strong>今日</strong>と表示され、過ぎると何日前かが表示されます</td></tr>
+            <tr><td>カウントアップ</td><td>始まった日から数えた日数です</td></tr>
+            <tr><td>毎年</td><td>誕生日のように毎年巡ってくる、次のその日までの残り日数です</td></tr>
+            <tr><td>毎月</td><td>毎月巡ってくる、次のその日までの残り日数です</td></tr>
+        </table>
+        <ul>
+            <li>アプリは「D-0」とは表示しません。当日は常に<strong>今日</strong>と表示します。</li>
+            <li>ある月に存在しない日（2月29日や31日）は、その月の最後の日として数えます。</li>
+        </ul>
+        <h3>1日目から? 0日目から?</h3>
+        <p>カウントアップでは、<strong>初日を1日目にする</strong>で数え方を選びます。</p>
+        <ul>
+            <li><strong>オン:</strong> 始まった日が1日目です。そのため100日目は、始まった日 + 99日です。</li>
+            <li><strong>オフ:</strong> 始まった日が0日です。</li>
+        </ul>
+        <p>日付を作るとき、設定の下の文が結果を言葉で示します。例: 「今日で100日目です」。恋人と赤ちゃんのテンプレートは、アプリが日本語・韓国語のときはこのスイッチがオン、ほかの言語のときはオフで始まります。選んだ値は日付ごとに保存されるので、アプリの言語を変えても数字は変わりません。</p>
+        <p>オンのときは、1周年が<strong>366日目</strong>になります。文でもそう示されます。例: 「1周年（2027-01-31）は366日目です」。1周年を365日目にしたいときは、スイッチをオフにしてください。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>4. 記念日</h2>
+        <p>カウントアップでは、<strong>記念日</strong>のスイッチで祝う日を選びます。</p>
+        <ul>
+            <li><strong>100日ごと(1000日まで)</strong>: 100日、200日 … 1000日。</li>
+            <li><strong>毎年の記念日</strong>: 毎年の周年。</li>
+        </ul>
+        <p>日付の画面の<strong>これからの記念日</strong>に次の記念日が並び、カードには次の記念日まであと何日かが表示されます（「100日まであと12日」）。当日にはお祝いの演出があり（10章）、通知も受け取れます（9章）。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>5. デザインと固定</h2>
+        <ul>
+            <li><strong>絵文字と色</strong>: 一覧から選びます。色はカード、日付の画面、ウィジェットに使われます。</li>
+            <li><strong>写真</strong>: <strong>写真を追加</strong>をタップすると Android の写真ピッカーが開きます。写真を1枚選んでください。アプリは縮小したコピー（長辺1080ピクセル以下、位置情報なし）を保存し、日付の画面と大きなウィジェットの背景に使います。<strong>写真を変更</strong>と<strong>写真を外す</strong>も同じ場所にあります。写真は合計で18MBまでです。いっぱいになったら、先に他の日付の写真を外してください。</li>
+            <li><strong>上に固定</strong>: 日付を一覧の一番上に置きます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>6. 削除と復元</h2>
+        <ul>
+            <li><strong>削除</strong>は編集画面にあります。削除すると「削除しました。」と<strong>元に戻す</strong>がしばらく表示されます。</li>
+            <li>削除した日付は30日間残ります。一覧の左下の<strong>削除した日付 (N)</strong>で開きます。
+                <ul>
+                    <li><strong>復元</strong>: 日付を元に戻します。</li>
+                    <li><strong>完全に削除</strong>: 日付を1つ、すぐに消します（先に確認の画面が出ます）。元に戻せません。</li>
+                    <li>一番下の<strong>削除した日付を空にする</strong>: すべてをすぐに消します（先に確認の画面が出ます）。</li>
+                </ul>
+            </li>
+            <li>30日たつと、アプリを開いたときに消えます。</li>
+            <li>削除した日付を表示していたウィジェットには、「削除した日付です · タップして選ぶ」と表示されます。日付を復元すると、ウィジェットにまた表示されます。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>7. ウィジェットと更新</h2>
+        <p>サイズは3つあり、好きなだけ置けて、ウィジェットごとに日付を別々に選べます。</p>
+        <table class="info-table">
+            <tr><th>サイズ</th><th>表示されるもの</th></tr>
+            <tr><td>1×1 · 数字</td><td>数字</td></tr>
+            <tr><td>2×1 · 名前と数字</td><td>名前と数字</td></tr>
+            <tr><td>2×2 · 写真、名前と数字</td><td>写真、名前、数字、日付、次の記念日</td></tr>
+        </table>
+        <p>ウィジェットは真夜中に自動で切り替わるので、朝起きたときには数字が合っています。アプリを開く必要はありません。ウィジェットをタップすると、アプリでその日付が開きます。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>8. ウィジェットの追加と変更</h2>
+        <h3>追加する3つの方法</h3>
+        <ul>
+            <li><strong>ホーム画面のウィジェット一覧から</strong>: ホーム画面の空いたところを長押しし、<strong>ウィジェット</strong>から <strong>HowSoon</strong> を探して、好きなサイズをドラッグして置きます。<strong>ウィジェットに表示する日付</strong>の画面が開きます。日付を選び、デザインを決めて<strong>完了</strong>をタップします。まだ日付がないときは<strong>アプリで日付を作る</strong>をタップします。<strong>キャンセル</strong>でやめます。</li>
+            <li><strong>日付の画面から</strong>: 日付の画面で<strong>ホーム画面に追加</strong>をタップし、<strong>ウィジェットのサイズ</strong>を選ぶと、その日付を表示するウィジェットが置かれます。ホーム画面がアプリからの追加に対応していないときは案内が出るので、上のウィジェット一覧から置いてください。</li>
+            <li><strong>ウィジェットの管理から</strong>: 一覧の上のバーの<strong>ウィジェットの管理</strong>ボタン → <strong>ウィジェットを追加</strong>。<strong>どの日付を表示しますか？</strong>（または<strong>新しい日付を作る</strong>）を選び、サイズを選びます。</li>
+        </ul>
+        <h3>デザイン</h3>
+        <p><strong>ウィジェットに表示する日付</strong>の画面では、次も決められます。</p>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>背景</td><td><strong>日付の色</strong>、<strong>ライト</strong>、<strong>ダーク</strong>、<strong>端末の設定</strong>（端末のライト・ダークのモードに従います）</td></tr>
+            <tr><td>背景の濃さ</td><td>背景のしっかり度合い</td></tr>
+            <tr><td>文字サイズ</td><td><strong>小</strong>、<strong>中</strong>、<strong>大</strong></td></tr>
+        </table>
+        <h3>あとから変える</h3>
+        <ul>
+            <li>ホーム画面でウィジェットを長押しして、その設定を選びます（ボタンの名前は機種によって違います。例: 設定）。同じ画面が開きます。</li>
+            <li>または<strong>ウィジェットの管理</strong>を開いて、ウィジェットをタップします。置いてあるウィジェットが、日付とサイズと一緒に並びます。</li>
+        </ul>
+        <h3>削除する</h3>
+        <p>ウィジェットを削除するには、ホーム画面でウィジェットを長押しして削除します。アプリからウィジェットを削除することはできません。ウィジェットの管理の画面にもそう書いてあります。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>9. 通知</h2>
+        <p>日付の<strong>通知</strong>で、いつ知らせるかを選びます。</p>
+        <ul>
+            <li><strong>当日</strong>、<strong>前日</strong>、<strong>1週間前</strong>（カウントダウン、毎年、毎月）</li>
+            <li><strong>記念日の当日</strong>（カウントアップ）</li>
+        </ul>
+        <p>通知は<strong>通知の時刻</strong>（初期設定は午前9:00）に届きます。<strong>設定 → 一般 → 通知の時刻</strong>で変えられます。</p>
+        <ul>
+            <li>通知をオンにした日付を初めて保存するとき、Android が HowSoon に通知の表示を許可するかをたずねます。許可しなかったとき、またはあとで通知がオフになったときは、アプリに「HowSoon の通知がオフになっています。」と<strong>設定を開く</strong>が表示されます。</li>
+            <li>通知には、日付の名前と残り日数、またはどの記念日かが表示されます。タップするとその日付が開きます。</li>
+            <li>通知はアプリが端末の中で作ります。通知には広告はありません。</li>
+        </ul>
+        <h3>ウィジェットや通知が遅れるとき</h3>
+        <p>アプリは「正確なアラーム」の権限を使わないので、正確な時刻は Android が決めます。</p>
+        <ul>
+            <li>ふつう、ウィジェットや通知は予定の時刻から数分以内に届きます。</li>
+            <li>端末が深く眠っているときは、最大で1時間ほど遅れることがあります。画面をつけるとまもなく追いつきます。</li>
+            <li>端末のバッテリー節約の設定が HowSoon を制限していると、遅れることが増えます。<strong>ウィジェットの管理</strong>に「HowSoonのバッテリー使用が制限されているため、ウィジェットの更新が遅れることがあります。」と表示されます。端末のバッテリー節約の設定を確認してください。</li>
+            <li>アプリを強制終了すると（たとえば Android のアプリの設定から）、Android は予約された更新をすべて取り消します。アプリを一度開くと、ウィジェットと通知がまた動き出します。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>10. 設定とお祝い</h2>
+        <p>一覧の上のバーの<strong>設定</strong>ボタンで開きます。グループは2つです。</p>
+        <h3>サウンドと効果</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>効果音</td><td>音のオン・オフ</td></tr>
+            <tr><td>バイブレーション</td><td>振動のオン・オフ</td></tr>
+            <tr><td>エフェクトを減らす</td><td>お祝いの動きをオフにします</td></tr>
+        </table>
+        <p>日付の当日や記念日にアプリを開くと、その日、その日付の小さなお祝いの演出が1回表示されます。<strong>エフェクトを減らす</strong>をオンにすると動きはなくなり、効果音がオンなら音だけが鳴ります。</p>
+        <h3>一般</h3>
+        <table class="info-table">
+            <tr><th>項目</th><th>内容</th></tr>
+            <tr><td>ウィジェットの管理</td><td>上のバーのボタンと同じ一覧です（8章）</td></tr>
+            <tr><td>通知の時刻</td><td>通知が届く時刻です。初期設定は午前9:00</td></tr>
+            <tr><td>エクスポート</td><td>日付と写真を1つのファイルに保存します（11章）</td></tr>
+            <tr><td>インポート</td><td>エクスポートしたファイルの日付を取り込みます（11章）</td></tr>
+            <tr><td>以前のコピーに戻す</td><td>自動で残したコピーに戻します（11章）</td></tr>
+            <tr><td>言語</td><td><strong>端末の言語</strong>（初期設定）に従うか、一覧から選びます（English · 日本語 · 한국어 · 简体中文 · 繁體中文）</td></tr>
+            <tr><td>プライバシー設定</td><td>広告の同意の画面を開き直します。同意が必要な地域（欧州など）でのみ表示されます</td></tr>
+            <tr><td>このアプリについて</td><td>バージョン、この使い方（<strong>使い方</strong>）、<strong>Google Playで評価する</strong>、<strong>プライバシーポリシー</strong>、<strong>オープンソースライセンス</strong>、<strong>ほかのアプリ</strong>（タップするとストアが開きます）、<strong>すべてのアプリを見る</strong></td></tr>
+        </table>
+        <p>画面の色は端末のダークモードに従います。アプリの中に別のスイッチはありません。</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>11. エクスポート・インポート、コピー、広告</h2>
+        <h3>エクスポート</h3>
+        <p><strong>設定 → 一般 → エクスポート</strong>は、日付と写真を <code>HowSoon-2026-01-31.json</code> のような名前のファイル1つにします。<strong>共有</strong>を選ぶと選んだアプリに送り、<strong>端末に保存</strong>を選ぶとフォルダに保存します。保存すると「保存しました。」と表示されます。ファイルは開発者には送られませんが、受け取った人は日付を読み、写真を見られるので、送る前にご確認ください。</p>
+        <h3>インポート</h3>
+        <p><strong>設定 → 一般 → インポート</strong>: エクスポートしたファイルを選びます。アプリが日付と写真がいくつ入っているかを表示します（「… 同じ日付は後で編集した方を残します。」）。確認すると、日付が今の日付に統合されます。新しい日付は追加され、両方にある日付は後で編集した方が残ります。18MBに収まらない写真は外して取り込み、アプリがお知らせします。新しいバージョンで作ったファイルは先に HowSoon を更新するよう案内され、HowSoon のファイルでなければ取り込めません。</p>
+        <h3>以前のコピーに戻す</h3>
+        <p>アプリは1日に1回、日付のコピーを残し、直近3日分を保管します。インポートと元に戻す操作の直前にもコピーを残します。</p>
+        <ul>
+            <li><strong>設定 → 一般 → 以前のコピーに戻す</strong>に一覧が出ます。</li>
+            <li>1つ選んで確認すると、今の日付がそのコピーに置き換わります。今の日付もコピーとして残るので、また元に戻せます。</li>
+        </ul>
+        <h3>保存とバックアップ</h3>
+        <ul>
+            <li><strong>保存</strong>: 変更するたびにすぐ端末に保存します。</li>
+            <li><strong>バックアップ</strong>: Google バックアップ（Android の自動バックアップ）がオンなら、日付・写真・設定も一緒にバックアップされ、機種変更やアプリの再インストールのときに戻ります。不要な場合は Android の設定のバックアップのメニューでオフにできます。1日1回のコピーはバックアップに含まれません。アプリを削除すると、端末のデータも消えます。</li>
+        </ul>
+        <h3>広告</h3>
+        <ul>
+            <li>アプリのいちばん下にバナー広告が1つあります。これが唯一の広告で、ウィジェットと通知に広告はありません。キーボードが開いているときは広告の帯は隠れます。</li>
+            <li>同意が必要な地域（欧州など）では、初めて開いたときに広告の同意の画面が表示され、あとから設定の<strong>プライバシー設定</strong>で変えられます。</li>
+            <li>アプリ内課金はありません。サーバーに送るものもありません。</li>
+            <li>詳しくは<a href="../privacy/ja.html">プライバシーポリシー</a>をご覧ください。</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>12. お問い合わせ</h2>
+        <div class="contact-box">
+            <p><a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
