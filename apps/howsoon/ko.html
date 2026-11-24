@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>HowSoon: 디데이 위젯 - 윌리 프로젝트</title>
+    <meta name="description" content="HowSoon(하우순)은 다가오는 날까지 남은 날과 지난날부터 센 날을 세어서 홈 화면에 숫자로 보여 주는 디데이 앱이에요. 시험, 생일, 여행, 기념일, 크리스마스 같은 날짜를 넣으면 얼마나 남았는지 한눈에 알 수 있어요.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/ko.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="윌리 프로젝트">
+    <meta property="og:title" content="HowSoon: 디데이 위젯 - 윌리 프로젝트">
+    <meta property="og:description" content="HowSoon(하우순)은 다가오는 날까지 남은 날과 지난날부터 센 날을 세어서 홈 화면에 숫자로 보여 주는 디데이 앱이에요. 시험, 생일, 여행, 기념일, 크리스마스 같은 날짜를 넣으면 얼마나 남았는지 한눈에 알 수 있어요.">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/ko.html">
+    <meta property="og:image" content="https://willee.net/apps/howsoon/images/og_image_ko.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ko/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html" class="active">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>HowSoon</h1>
+        <p>다가오는 날까지 남은 날, 지난날부터 센 날을 홈 화면에서 봐요.</p>
+        <div class="store-cta"><span>Google Play 출시 예정</span></div>
+        <div class="graphic-banner">
+            <img src="images/HowSoon_ko_feature.webp" alt="HowSoon — 다가오는 날까지 남은 날, 지난날부터 센 날을 홈 화면에서 봐요." width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="HowSoon 아이콘" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>HowSoon</h2>
+                <p>디데이 위젯</p>
+                <div>
+                    <span class="badge">Android (출시 예정)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">HowSoon(하우순)은 다가오는 날까지 남은 날과 지난날부터 센 날을 세어서 홈 화면에 숫자로 보여 주는 디데이 앱이에요. 시험, 생일, 여행, 기념일, 크리스마스 같은 날짜를 넣으면 얼마나 남았는지 한눈에 알 수 있어요.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>스크린샷</h2>
+        <div class="screenshot-gallery">
+            <img src="images/HowSoon_ko_01_list.webp" alt="날짜 목록 — 맨 위에 고정한 기말고사 D-23, 엄마 생신 D-9, 우리 처음 만난 날 573일째, 크리스마스 D-32 등 여섯 날짜" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_02_detail.webp" alt="날짜 화면 — 우리 처음 만난 날 573일째, '오늘이 573일째예요'와 다가오는 기념일(600일, 700일, 2주년…)" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_03_create.webp" alt="날짜 고치기 — 세는 법 '지난 날', '첫날을 1일로' 켬, 미리 보기 '오늘이 573일째예요'와 '1주년(2026년 4월 30일)은 366일째예요'" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_04_decorate.webp" alt="꾸미기 — 이모지 48가지, 색 16가지와 '사진 넣기'" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_05_widgets.webp" alt="위젯 관리 — 기말고사 1×1, 우리 처음 만난 날 2×2, 크리스마스 2×1과 '위젯 추가' 단추" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_06_dark.webp" alt="어두운 화면 — 날짜 목록" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ko_07_widget.webp" alt="홈 화면 위젯 — 위젯마다 다른 날짜: 우리 처음 만난 날 2×2, 크리스마스 2×1, 기말고사 1×1" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>주요 기능</h2>
+        <ul class="features">
+            <li>
+                <strong>템플릿으로 시작</strong>
+                <span>'생일', '연인', '시험', '여행', '아기', '직접' 가운데 고르면 세는 법과 알림이 알맞게 채워지고, 만든 뒤에도 바꿀 수 있어요. 날짜마다 '남은 날', '지난 날', '매년', '매월' 중에서 정해요. 이모지(48가지)와 색(16가지)을 고르고, '맨 위에 고정'으로 중요한 날짜를 위에 둘 수 있어요.</span>
+            </li>
+            <li>
+                <strong>하루도 안 틀리게 세기</strong>
+                <span>앱마다 시작한 날을 0일로 세는지 1일로 세는지 달라서, 날짜마다 직접 정해요. '첫날을 1일로'를 켜면 100일째는 시작일 + 99일이에요. 만들 때 '오늘이 100일째예요'처럼 문장으로 미리 보여 주니 헷갈리지 않아요. 지난 날에는 다음 기념일도 보여요. '100일마다(1000일까지)'와 '주년마다'를 켜고 끌 수 있어요.</span>
+            </li>
+            <li>
+                <strong>홈 화면 위젯</strong>
+                <span>크기는 셋이에요. 1×1은 숫자, 2×1은 이름과 숫자, 2×2는 사진, 이름과 숫자에 다음 기념일까지 보여 줘요. 위젯마다 날짜가 따로 있고, 몇 개든 놓을 수 있어요. 홈 화면의 위젯 목록에서 놓고 날짜를 고르거나, 날짜 화면에서 '홈 화면에 추가'를 눌러요. '위젯 관리'에서는 위젯을 눌러 날짜와 꾸미기를 바꾸고, '위젯 추가'로 하나 더 놓을 수 있어요. 꾸미기는 '바탕'(날짜 색, 밝게, 어둡게, 기기 설정), '바탕 진하기', '글자 크기', 사진이에요.</span>
+            </li>
+            <li>
+                <strong>자정에 스스로 바뀌어요</strong>
+                <span>앱을 열지 않아도 위젯은 그 지역의 자정에 다음 날로 바뀌어요. 보통은 몇 분 안에 바뀌고, 기기가 깊이 잠들어 있으면 1시간쯤 걸릴 수 있어요. 화면을 켜면 곧 맞춰져요. 앱을 강제 종료했다면 앱을 한 번 열어야 위젯이 다시 바뀌어요. 배터리 제한이 엄격한 기기에서는 더 늦을 수도 있어요.</span>
+            </li>
+            <li>
+                <strong>알림</strong>
+                <span>날짜마다 '당일', '하루 전', '일주일 전'을 고르고, 지난 날에는 '기념일 당일'도 고를 수 있어요. 알림은 기본 오전 9시에 오고, 설정의 '알림 시각'에서 바꿔요. 몇 분 늦을 수 있어요.</span>
+            </li>
+            <li>
+                <strong>사진 넣기</strong>
+                <span>'사진 넣기'로 날짜 뒤와 2×2 위젯에 사진을 깔 수 있어요. Android의 사진 고르기로 고르니 사진 보관함에 접근하는 권한을 묻지 않아요. 사진은 크기를 줄이고 위치 정보 없이 앱 안에 저장하고, 전체 18MB까지 둘 수 있어요.</span>
+            </li>
+            <li>
+                <strong>날짜는 내 폰에만</strong>
+                <span>계정도, 로그인도, 서버도 없이 오프라인으로 돌아가요. 저장하는 순간 기기에 써요. 지운 날짜는 '지운 날짜'에 30일 동안 있고, '되살리기'나 '완전히 지우기', '지운 날짜 비우기'를 할 수 있어요. 날마다 자동으로 남긴 최근 3일 사본이 있어서 설정의 '이전 사본으로 되돌리기'로 돌려놓을 수 있어요. '내보내기'는 날짜와 사진을 파일 하나로 만들어 '공유'하거나 '기기에 저장'하고, '가져오기'로 다른 폰에 합쳐요.</span>
+            </li>
+            <li>
+                <strong>보기와 소리</strong>
+                <span>당일이나 기념일에 앱을 열면 부드러운 마림바 소리와 함께 작은 축하가 한 번 나와요. 설정의 '소리와 효과'에서 '효과음'과 '진동'을 따로 끄고, '효과 줄이기'를 켜면 축하 움직임이 꺼져요. 기기를 어두운 모드로 두면 화면도 따라가요.</span>
+            </li>
+            <li>
+                <strong>이용 조건</strong>
+                <span>구독이나 결제로 잠기는 기능, 앱 안에서 사는 것이 하나도 없어서 위젯까지 모든 기능을 마음껏 쓸 수 있어요. 광고는 앱 화면 아래쪽에 뜨는 배너 하나뿐이에요. 위젯과 알림에는 광고가 나오지 않고, 화면을 덮는 광고도 없어요. 화면 글은 한국어, 영어, 일본어, 중국어(간체·번체)로 나오고 설정의 '언어'에서 바꿔요.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>지원 플랫폼</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>출시 예정</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>사용 설명서</h2>
+        <p>HowSoon의 사용 설명서를 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>개인정보처리방침</h2>
+        <p>HowSoon의 개인정보처리방침을 확인할 수 있습니다.</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>문의</h2>
+        <p>앱 관련 문의사항은 아래로 연락해주세요.</p>
+        <p><strong>이메일:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>개발:</strong> <a href="/ko/">윌리 프로젝트 (Willee Project)</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">사업자등록번호: 157-05-00709 | 통신판매업 신고번호: 제2026-화성동탄-1057호</p>
+    <p style="margin-top:8px;"><a href="/ko/">홈</a> | <a href="privacy/ko.html">개인정보처리방침</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>블로그</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

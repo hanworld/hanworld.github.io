@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>HowSoon: Countdown Widget - Willee Project</title>
+    <meta name="description" content="HowSoon counts the days until the dates ahead of you and the days since the dates behind you, then puts the number right on your home screen. Add an exam, a birthday, a trip, an anniversary, or Christmas and see how soon it is.">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/en.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="HowSoon: Countdown Widget - Willee Project">
+    <meta property="og:description" content="HowSoon counts the days until the dates ahead of you and the days since the dates behind you, then puts the number right on your home screen. Add an exam, a birthday, a trip, an anniversary, or Christmas and see how soon it is.">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/en.html">
+    <meta property="og:image" content="https://willee.net/apps/howsoon/images/og_image_en.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/en/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html" class="active">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>HowSoon</h1>
+        <p>Count the days until and since the dates that matter, right on your home screen.</p>
+        <div class="store-cta"><span>Coming soon to Google Play</span></div>
+        <div class="graphic-banner">
+            <img src="images/HowSoon_en_feature.webp" alt="HowSoon — Count the days until and since the dates that matter, right on your home screen." width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="HowSoon icon" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>HowSoon</h2>
+                <p>Countdown widget</p>
+                <div>
+                    <span class="badge">Android (Coming Soon)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">HowSoon counts the days until the dates ahead of you and the days since the dates behind you, then puts the number right on your home screen. Add an exam, a birthday, a trip, an anniversary, or Christmas and see how soon it is.</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="images/HowSoon_en_01_list.webp" alt="Date list — six dates, with Final exams pinned at the top (23 days left), Mom's birthday (9 days left), Our first date (572 days) and Christmas (32 days left)" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_02_detail.webp" alt="Date screen — Our first date at 572 days, 572 days so far, and the milestones coming up (600-day mark, 700-day mark, 2-year anniversary…)" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_03_create.webp" alt="Edit date — Count up with Count the start date as day 1 off; the preview reads 572 days so far and 600-day mark in 28 days" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_04_decorate.webp" alt="Look — 48 emoji, 16 colors and Add photo" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_05_widgets.webp" alt="Manage widgets — Final exams 1×1, Our first date 2×2, Christmas 2×1 and the Add widget button" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_06_dark.webp" alt="Dark mode — the date list" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_en_07_widget.webp" alt="Home screen widgets — each widget with its own date: Our first date 2×2, Christmas 2×1, Final exams 1×1" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>Key Features</h2>
+        <ul class="features">
+            <li>
+                <strong>Start from a template</strong>
+                <span>Pick Birthday, Couple, Exam, Trip, Baby, or Custom. A template fills in the counting style and reminders, and you can change them afterward. Each date is a Countdown, a Count up, Every year, or Every month. Give it an emoji (48 to choose from) and a color (16), and use Pin to top to keep a date first.</span>
+            </li>
+            <li>
+                <strong>Counted the way you expect</strong>
+                <span>Apps disagree on whether the start date is day 0 or day 1, so you decide for each date. Turn on Count the start date as day 1 and day 100 is the start date plus 99 days. While you set a date up, a sentence previews the result, such as Today is day 100. A count up also shows what comes next: every 100 days up to 1,000, and every year.</span>
+            </li>
+            <li>
+                <strong>Home screen widgets</strong>
+                <span>Three sizes: 1x1 shows the number, 2x1 adds the name, and 2x2 adds a photo and the next milestone. Every widget has its own date, and you can place as many as you like. Place one from your home screen's widget list and choose its date, or open a date and choose Add to home screen. In Manage widgets, tap a widget to change its date or look, or tap Add widget to place another. Make each one yours with Background (Date color, Light, Dark, or Device), Background opacity, Text size, and a photo.</span>
+            </li>
+            <li>
+                <strong>Changes at midnight</strong>
+                <span>Widgets move on to the next day by themselves at local midnight, without opening the app. They usually update within a few minutes. A phone in deep sleep can take up to about an hour, and turning the screen on brings them up to date. After a force stop, open the app once so widgets can update again.</span>
+            </li>
+            <li>
+                <strong>Reminders</strong>
+                <span>For each date choose On the day, 1 day before, 1 week before, or On milestone days for a count up. Reminders arrive at 9:00 unless you change Reminder time in Settings, and they can be a few minutes late.</span>
+            </li>
+            <li>
+                <strong>Photos</strong>
+                <span>Add photo puts a picture behind a date and on its 2x2 widget. You pick it with Android's photo picker, so HowSoon never asks for access to your photo library. Photos are resized and kept inside the app without location data, up to 18 MB in total.</span>
+            </li>
+            <li>
+                <strong>Your dates stay on your phone</strong>
+                <span>There is no account, no sign-in, and no server, and everything works offline. A deleted date waits 30 days in Deleted dates, where you can Restore it, Delete for good, or use Empty deleted dates. The app keeps automatic daily copies for the last 3 days, and Restore an earlier copy in Settings brings one back. Export puts your dates and photos in one file that you can Share or Save to device, and Import merges that file on another phone.</span>
+            </li>
+            <li>
+                <strong>Look and sound</strong>
+                <span>On the day itself or on a milestone, opening the app plays a short celebration with a soft marimba sound. Under Sound &amp; effects in Settings, Sound effects and Vibration have separate switches, and Reduce effects turns off the celebration animation.</span>
+            </li>
+            <li>
+                <strong>Simple terms</strong>
+                <span>Everything in HowSoon, widgets included, works without a subscription, a paid unlock, or an in-app purchase. The only advertising is one banner along the base of the app's own screens; widgets and notifications show none, and there are no full-screen ads. Screens come in Chinese (Simplified or Traditional), English, Japanese, and Korean; choose under Language in Settings.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>Supported Platforms</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>Coming Soon</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>User Manual</h2>
+        <p>Check out the user manual for the HowSoon app.</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>Privacy Policy</h2>
+        <p>Check out the privacy policy for the HowSoon app.</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>For app-related inquiries, please contact us below.</p>
+        <p><strong>Email:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>Developer:</strong> <a href="/en/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">Business Reg. No.: 157-05-00709 | E-Commerce Reg. No.: 2026-Hwaseong Dongtan-1057</p>
+    <p style="margin-top:8px;"><a href="/en/">Home</a> | <a href="privacy/en.html">Privacy Policy</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Blog</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

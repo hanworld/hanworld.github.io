@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>HowSoon - Willee Project</title>
+    <meta name="description" content="HowSoon 会数出距离未来某一天还有几天、距离过去某一天已经过了几天，并把数字直接放在主屏幕上。添加考试、生日、旅行、纪念日或圣诞节，一眼就能看到还有多久。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/zh.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="HowSoon - Willee Project">
+    <meta property="og:description" content="HowSoon 会数出距离未来某一天还有几天、距离过去某一天已经过了几天，并把数字直接放在主屏幕上。添加考试、生日、旅行、纪念日或圣诞节，一眼就能看到还有多久。">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/zh.html">
+    <meta property="og:image" content="https://willee.net/apps/howsoon/images/og_image_zh.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/zh/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html">日本語</a>
+            <a href="zh.html" class="active">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>HowSoon</h1>
+        <p>距离重要的日子还有几天、已经过了几天，在主屏幕上一目了然。</p>
+        <div class="store-cta"><span>即将在 Google Play 推出</span></div>
+        <div class="graphic-banner">
+            <img src="images/HowSoon_zh_feature.webp" alt="HowSoon — 距离重要的日子还有几天、已经过了几天，在主屏幕上一目了然。" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="HowSoon 图标" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>HowSoon</h2>
+                <div>
+                    <span class="badge">Android (即将推出)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">HowSoon 会数出距离未来某一天还有几天、距离过去某一天已经过了几天，并把数字直接放在主屏幕上。添加考试、生日、旅行、纪念日或圣诞节，一眼就能看到还有多久。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>截图</h2>
+        <div class="screenshot-gallery">
+            <img src="images/HowSoon_zh_01_list.webp" alt="日子列表 — 置顶的期末考试（还有23天）、妈妈的生日（还有9天）、我们的纪念日（572天）、圣诞节（还有32天）等六个日子" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_02_detail.webp" alt="日子页面 — 我们的纪念日 572天、“已经572天了”和即将到来的纪念日（600天、700天、2周年…）" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_03_create.webp" alt="编辑日子 — “正计时”，“开始那天算第1天”已关闭，预览“已经572天了”“距离600天还有28天”" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_04_decorate.webp" alt="外观 — 48个表情符号、16种颜色和“添加照片”" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_05_widgets.webp" alt="管理小组件 — 期末考试 1×1、我们的纪念日 2×2、圣诞节 2×1 和“添加小组件”按钮" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_06_dark.webp" alt="深色模式 — 日子列表" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_zh_07_widget.webp" alt="主屏幕小组件 — 每个小组件显示不同日子：我们的纪念日 2×2、圣诞节 2×1、期末考试 1×1" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主要功能</h2>
+        <ul class="features">
+            <li>
+                <strong>从模板开始</strong>
+                <span>可选“生日”“恋爱纪念”“考试”“旅行”“宝宝”“自定义”，模板会填好计算方式和提醒，之后都能修改。每个日子可设为“倒计时”“正计时”“每年”或“每月”。图标有 48 个表情符号，颜色有 16 种，还可以用“置顶”把重要的日子放在最前面。</span>
+            </li>
+            <li>
+                <strong>数法不会出错</strong>
+                <span>各个应用对起始日算第 0 天还是第 1 天并不一致，所以每个日子都由你自己决定。打开“开始那天算第1天”，第100天就是起始日再加 99 天。设置时会用一句话预览结果，例如“今天是第100天”。正计时还会显示下一个纪念日：每100天（到1000天）和每个周年，可分别开关。</span>
+            </li>
+            <li>
+                <strong>主屏幕小组件</strong>
+                <span>有三种大小：1×1 显示数字，2×1 加上名称，2×2 再加上照片和下一个纪念日。每个小组件有各自的日子，想放几个都可以。可以从主屏幕的小组件列表添加并选择日子，也可以打开某个日子，点按“添加到主屏幕”。在“管理小组件”里，点按小组件可更改日子和外观，点按“添加小组件”可再放一个。外观可调“背景”（日子颜色、浅色、深色、跟随系统）、“背景不透明度”、“文字大小”，还可以加照片。</span>
+            </li>
+            <li>
+                <strong>到了零点自动更新</strong>
+                <span>不打开应用，小组件也会在当地零点切换到下一天。通常几分钟内就会更新；设备深度休眠时可能要等一个小时左右，点亮屏幕后很快就会跟上。强制停止应用后，请先打开一次应用，小组件才会继续更新。某些手机的电池限制很严，也可能更晚。</span>
+            </li>
+            <li>
+                <strong>提醒</strong>
+                <span>每个日子可选“当天”“提前1天”“提前1周”，正计时还可选“纪念日当天”。提醒默认在上午 9:00 送达，可在设置里的“提醒时间”修改，可能会晚几分钟。</span>
+            </li>
+            <li>
+                <strong>照片</strong>
+                <span>“添加照片”可以把图片放在日子背后和 2×2 小组件上。图片通过 Android 的照片选择器挑选，因此 HowSoon 不会请求访问你的照片库。照片会缩小并去掉位置信息后保存在应用内，总共最多 18MB。</span>
+            </li>
+            <li>
+                <strong>日子只留在你的手机里</strong>
+                <span>没有账号，不用登录，没有服务器，离线也能用。保存的那一刻就写入存储。删除的日子会在“已删除的日子”里保留 30 天，可以“恢复”、“永久删除”或“清空已删除的日子”。应用还会自动保留最近 3 天的每日副本，可在设置的“恢复到之前的副本”中找回。“导出”会把日子和照片放进一个文件，可以“分享”或“保存到设备”，换手机后用“导入”合并。</span>
+            </li>
+            <li>
+                <strong>外观与声音</strong>
+                <span>遇到当天或纪念日，打开应用会有一段简短的庆祝，伴着柔和的马林巴琴音。设置的“声音与效果”里，“音效”和“振动”可分别开关，开启“减少特效”会关闭庆祝动画。设备切到深色模式时，界面也会变深。</span>
+            </li>
+            <li>
+                <strong>使用条件</strong>
+                <span>没有订阅，没有功能被付费锁住，应用内也没有购买项目，包括小组件在内的所有功能人人可用。广告只有应用页面最下方的一条横幅，小组件和通知中没有广告，也不会出现盖满屏幕的广告。界面语言有英语、韩语、日语和中文（简体、繁体），可在设置的“语言”中选择。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>支持平台</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>即将推出</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>使用手册</h2>
+        <p>查看 HowSoon 应用的使用手册。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>隐私政策</h2>
+        <p>查看 HowSoon 应用的隐私政策。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <p>有关应用的咨询请通过以下方式联系我们。</p>
+        <p><strong>邮箱:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>开发:</strong> <a href="/zh/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">营业执照号: 157-05-00709 | 电商经营许可证号: 第2026-华城东滩-1057号</p>
+    <p style="margin-top:8px;"><a href="/zh/">首页</a> | <a href="privacy/zh.html">隐私政策</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>博客</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <!-- 메인 페이지 -->
   <url>
     <loc>https://willee.net/ko/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://willee.net/en/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://willee.net/ja/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://willee.net/zh/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/ko/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/ja/"/>
@@ -1990,6 +1990,148 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/tapalot/privacy/zh.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/tapalot/privacy/zh-Hant.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/tapalot/privacy/en.html"/>
+  </url>
+
+  <!-- HowSoon 앱 페이지 -->
+  <url>
+    <loc>https://willee.net/apps/howsoon/ko.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/en.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/ja.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/zh.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html"/>
+  </url>
+
+  <!-- HowSoon 사용 설명서 -->
+  <url>
+    <loc>https://willee.net/apps/howsoon/manual/ko.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/manual/en.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/manual/ja.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/manual/zh.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/manual/zh-Hant.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/manual/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/manual/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/manual/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/manual/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/manual/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/manual/en.html"/>
+  </url>
+
+  <!-- HowSoon 개인정보처리방침 -->
+  <url>
+    <loc>https://willee.net/apps/howsoon/privacy/ko.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/privacy/en.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/privacy/ja.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/privacy/zh.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+  </url>
+  <url>
+    <loc>https://willee.net/apps/howsoon/privacy/zh-Hant.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/privacy/ko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/privacy/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/privacy/ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/privacy/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://willee.net/apps/howsoon/privacy/zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/privacy/en.html"/>
   </url>
 
 </urlset>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <title>HowSoon - Willee Project</title>
+    <meta name="description" content="HowSoonは、これから来る日まであと何日か、あの日から何日目かを数えて、ホーム画面に数字で表示するカウントダウン・記念日アプリです。試験、誕生日、旅行、記念日、クリスマスなどの日付を入れるだけで、あとどれくらいかがひと目でわかります。">
+    <meta name="theme-color" content="#122847">
+    <link rel="canonical" href="https://willee.net/apps/howsoon/ja.html">
+    <link rel="alternate" hreflang="ko" href="https://willee.net/apps/howsoon/ko.html">
+    <link rel="alternate" hreflang="en" href="https://willee.net/apps/howsoon/en.html">
+    <link rel="alternate" hreflang="ja" href="https://willee.net/apps/howsoon/ja.html">
+    <link rel="alternate" hreflang="zh" href="https://willee.net/apps/howsoon/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://willee.net/apps/howsoon/en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Willee Project">
+    <meta property="og:title" content="HowSoon - Willee Project">
+    <meta property="og:description" content="HowSoonは、これから来る日まであと何日か、あの日から何日目かを数えて、ホーム画面に数字で表示するカウントダウン・記念日アプリです。試験、誕生日、旅行、記念日、クリスマスなどの日付を入れるだけで、あとどれくらいかがひと目でわかります。">
+    <meta property="og:url" content="https://willee.net/apps/howsoon/ja.html">
+    <meta property="og:image" content="https://willee.net/apps/howsoon/images/og_image_ja.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 윌리 프로젝트 색상 팔레트
+           민트: #2EC4B6 | 다크민트: #1D7A5F | 네이비: #1A365D
+           화이트: #FFFFFF | 골드: #D4AF37 | 라이트민트: #F0FDFC */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #1A365D; line-height: 1.6; }
+        a { color: #2EC4B6; text-decoration: none; }
+        a:hover { color: #1D7A5F; text-decoration: underline; }
+
+        header { background: #1A365D; color: #fff; padding: 48px 24px; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 4px; }
+        header p { color: #94A3B8; }
+        .breadcrumb { position: sticky; top: 0; z-index: 100; background: #122847; padding: 10px 24px; font-size: 0.9rem; color: #94A3B8; }
+        .breadcrumb a { color: #2EC4B6; }
+        .breadcrumb a:hover { color: #D4AF37; }
+        .breadcrumb .container { display: flex; align-items: center; justify-content: space-between; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-switch a { color: #94A3B8; font-size: 0.85rem; }
+        .lang-switch a:hover { color: #D4AF37; text-decoration: none; }
+        .lang-switch a.active { color: #2EC4B6; font-weight: bold; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        section { padding: 48px 24px; }
+        section:nth-child(even) { background: #F0FDFC; }
+        section h2 { font-size: 1.5rem; margin-bottom: 16px; color: #1A365D; }
+        section p { margin-bottom: 12px; }
+
+        .app-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .app-meta h2 { margin-bottom: 4px; color: #1A365D; }
+        .app-meta p { color: #64748B; margin-bottom: 4px; }
+        .badge { display: inline-block; background: #2EC4B6; color: #fff; font-size: 0.8rem; padding: 2px 10px; border-radius: 12px; margin-right: 4px; transition: background 0.2s; }
+        a.badge:hover { background: #D4AF37; color: #fff; text-decoration: none; }
+
+        .features { list-style: none; padding: 0; }
+        .features li { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .features li strong { display: block; margin-bottom: 4px; color: #2EC4B6; }
+        .features li span { color: #64748B; font-size: 0.95rem; }
+
+        .platforms { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .platform { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 14px; text-align: center; flex: 1; min-width: 120px; transition: border-color 0.2s, background 0.2s; }
+        .platform:hover { border-color: #2EC4B6; }
+        a.platform:hover { border-color: #D4AF37; background: #FFFBEB; }
+        .platform strong { display: block; font-size: 1rem; color: #1A365D; }
+        .platform span { color: #64748B; font-size: 0.85rem; }
+
+        .graphic-banner { width: 100%; max-width: 800px; margin: 24px auto 0; border-radius: 12px; overflow: hidden; }
+        .graphic-banner img { width: 100%; display: block; }
+
+        .screenshot-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; -webkit-overflow-scrolling: touch; }
+        .screenshot-gallery img { height: 400px; border-radius: 12px; border: 1px solid #E2E8F0; flex-shrink: 0; }
+
+        footer { background: #1A365D; color: #94A3B8; text-align: center; padding: 24px; font-size: 0.9rem; }
+        footer a { color: #2EC4B6; }
+        footer a:hover { color: #D4AF37; }
+    </style>
+    <link rel="stylesheet" href="/fonts/pretendard-jp.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <script src="/js/theme.js" defer></script>
+</head>
+<body>
+
+<nav class="breadcrumb">
+    <div class="container">
+        <div style="display:flex;align-items:center;">
+            <a href="/ja/" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Willee Project</a>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin:0 8px;vertical-align:middle;"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            <span>HowSoon</span>
+        </div>
+        <div class="lang-switch">
+            <a href="ko.html">한국어</a>
+            <a href="en.html">EN</a>
+            <a href="ja.html" class="active">日本語</a>
+            <a href="zh.html">中文</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>HowSoon</h1>
+        <p>大切な日まであと何日、あの日から何日目かを、ホーム画面で確かめられます。</p>
+        <div class="store-cta"><span>Google Play で近日公開</span></div>
+        <div class="graphic-banner">
+            <img src="images/HowSoon_ja_feature.webp" alt="HowSoon — 大切な日まであと何日、あの日から何日目かを、ホーム画面で確かめられます。" width="1024" height="500">
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="overview">
+    <div class="container">
+        <div class="app-header">
+            <img src="images/app_icon.webp" alt="HowSoon アイコン" style="width:100px; height:100px; border-radius:20px;">
+            <div class="app-meta">
+                <h2>HowSoon</h2>
+                <div>
+                    <span class="badge">Android (近日公開)</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:20px;">HowSoonは、これから来る日まであと何日か、あの日から何日目かを数えて、ホーム画面に数字で表示するカウントダウン・記念日アプリです。試験、誕生日、旅行、記念日、クリスマスなどの日付を入れるだけで、あとどれくらいかがひと目でわかります。</p>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <h2>スクリーンショット</h2>
+        <div class="screenshot-gallery">
+            <img src="images/HowSoon_ja_01_list.webp" alt="日付の一覧 — 上に固定した期末試験（あと23日）、お母さんの誕生日（あと9日）、付き合って記念日（573日目）、クリスマス（あと32日）など6つの日付" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_02_detail.webp" alt="日付の画面 — 付き合って記念日の573日目、「今日で573日目です」とこれからの記念日（600日、700日、2周年…）" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_03_create.webp" alt="日付を編集 — 「カウントアップ」、オンにした「初日を1日目にする」、プレビュー「今日で573日目です」「1周年（2026年4月30日）は366日目です」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_04_decorate.webp" alt="デザイン — 絵文字48種類、16色と「写真を追加」" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_05_widgets.webp" alt="ウィジェットの管理 — 期末試験 1×1、付き合って記念日 2×2、クリスマス 2×1 と「ウィジェットを追加」ボタン" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_06_dark.webp" alt="ダークモード — 日付の一覧" width="480" height="960" loading="lazy" decoding="async">
+            <img src="images/HowSoon_ja_07_widget.webp" alt="ホーム画面のウィジェット — ウィジェットごとに別の日付：付き合って記念日 2×2、クリスマス 2×1、期末試験 1×1" width="480" height="960" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>主な機能</h2>
+        <ul class="features">
+            <li>
+                <strong>テンプレートから始める</strong>
+                <span>「誕生日」「恋人」「試験」「旅行」「赤ちゃん」「カスタム」から選ぶと、数え方と通知が自動で入り、あとから変更できます。日付ごとに「カウントダウン」「カウントアップ」「毎年」「毎月」を選べます。絵文字（48種類）と色（16色）を選び、「上に固定」で大事な日付を先頭に置けます。</span>
+            </li>
+            <li>
+                <strong>数え方がずれない</strong>
+                <span>アプリによって、はじめの日を0日目と数えるか1日目と数えるかが違うので、日付ごとに自分で決めます。「初日を1日目にする」をオンにすると、100日目は開始日＋99日です。作成中は「今日で100日目です」のような文で結果を先に確認できます。カウントアップには次の記念日も表示され、「100日ごと(1000日まで)」と「毎年の記念日」をオン・オフできます。</span>
+            </li>
+            <li>
+                <strong>ホーム画面ウィジェット</strong>
+                <span>サイズは3つです。1×1は数字、2×1は名前と数字、2×2は写真、名前、数字と次の記念日を表示します。ウィジェットごとに日付を決められ、いくつでも置けます。ホーム画面のウィジェット一覧から置いて日付を選ぶか、日付の画面から「ホーム画面に追加」を選びます。「ウィジェットの管理」では、ウィジェットをタップして日付や見た目を変更でき、「ウィジェットを追加」でもう1つ置けます。見た目は「背景」（日付の色、ライト、ダーク、端末の設定）、「背景の濃さ」、「文字サイズ」、写真で変えられます。</span>
+            </li>
+            <li>
+                <strong>日付が変わると自動で更新</strong>
+                <span>アプリを開かなくても、ウィジェットは現地の午前0時に次の日へ切り替わります。通常は数分以内に変わり、端末が深いスリープ中だと1時間ほどかかることがあります。画面をつけるとすぐ追いつきます。アプリを強制終了した後は、一度アプリを開くとウィジェットがまた更新されます。電池の制限が厳しい端末では、さらに遅れることもあります。</span>
+            </li>
+            <li>
+                <strong>通知</strong>
+                <span>日付ごとに「当日」「前日」「1週間前」、カウントアップでは「記念日の当日」も選べます。通知は初期設定で午前9時に届き、設定の「通知の時刻」で変更できます。数分遅れることがあります。</span>
+            </li>
+            <li>
+                <strong>写真</strong>
+                <span>「写真を追加」で、日付の背景や2×2ウィジェットに写真を使えます。Androidの写真選択画面で選ぶため、写真ライブラリへのアクセス許可は求めません。写真は縮小し、位置情報を含めずにアプリ内に保存します。合計18MBまで置けます。</span>
+            </li>
+            <li>
+                <strong>日付は端末の中だけに</strong>
+                <span>アカウントもログインもサーバーもなく、オフラインで動きます。保存した時点で端末に書き込みます。削除した日付は「削除した日付」に30日間残り、「復元」「完全に削除」「削除した日付を空にする」ができます。毎日自動で保存した直近3日分のコピーがあり、設定の「以前のコピーに戻す」で戻せます。「エクスポート」は日付と写真を1つのファイルにして「共有」または「端末に保存」でき、別の端末では「インポート」で取り込みます。</span>
+            </li>
+            <li>
+                <strong>見た目と音</strong>
+                <span>当日や記念日にアプリを開くと、やわらかいマリンバの音とともに小さなお祝いが一度出ます。音と振動は設定で別々に切り替えられ（「サウンドと効果」の「効果音」「バイブレーション」）、お祝いの動きだけを止めたいときは「エフェクトを減らす」を選びます。端末をダークモードにしていれば、アプリの画面も暗くなります。</span>
+            </li>
+            <li>
+                <strong>ご利用について</strong>
+                <span>月額・年額の課金も、有料で解放する機能も、アプリ内の購入もありません。ウィジェットを含め、すべての機能をそのまま使えます。広告はアプリ画面の下に出るバナー1つだけで、ウィジェットと通知には表示されず、全画面の広告もありません。画面の言語は設定の「言語」で、中国語（簡体字・繁体字）、英語、韓国語、日本語から選べます。</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="platforms">
+    <div class="container">
+        <h2>対応プラットフォーム</h2>
+        <div class="platforms">
+            <div class="platform">
+                <strong>Android</strong>
+                <span>近日公開</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="manual">
+    <div class="container">
+        <h2>ユーザーマニュアル</h2>
+        <p>HowSoon アプリのユーザーマニュアルをご確認いただけます。</p>
+        <div class="platforms">
+            <a href="manual/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>사용 설명서</span>
+            </a>
+            <a href="manual/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>User Guide</span>
+            </a>
+            <a href="manual/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>使い方</span>
+            </a>
+            <a href="manual/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>使用说明</span>
+            </a>
+            <a href="manual/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>使用說明</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="privacy">
+    <div class="container">
+        <h2>プライバシーポリシー</h2>
+        <p>HowSoon アプリのプライバシーポリシーをご覧いただけます。</p>
+        <div class="platforms">
+            <a href="privacy/ko.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>한국어</strong>
+                <span>개인정보처리방침</span>
+            </a>
+            <a href="privacy/en.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>English</strong>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="privacy/ja.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>日本語</strong>
+                <span>プライバシーポリシー</span>
+            </a>
+            <a href="privacy/zh.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>简体中文</strong>
+                <span>隐私政策</span>
+            </a>
+            <a href="privacy/zh-Hant.html" class="platform" style="text-decoration:none; color:inherit;">
+                <strong>繁體中文</strong>
+                <span>隱私權政策</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>アプリに関するお問い合わせは下記までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:hanworld@willee.net">hanworld@willee.net</a></p>
+        <p><strong>開発:</strong> <a href="/ja/">Willee Project</a></p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Willee Project. All rights reserved.</p>
+    <p style="margin-top:8px;">事業者登録番号: 157-05-00709 | 通信販売業届出番号: 第2026-華城東灘-1057号</p>
+    <p style="margin-top:8px;"><a href="/ja/">ホーム</a> | <a href="privacy/ja.html">プライバシーポリシー</a> | <a href="https://willeeproject.tistory.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(2px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>ブログ</a> | <a href="https://www.youtube.com/@WiLog1202" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;vertical-align:text-bottom;transform:translateY(1px);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.12 5.5 12 5.5 12 5.5s-6.12 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94A28.8 28.8 0 0 0 1.5 12a28.8 28.8 0 0 0 .7 3.999 2.75 2.75 0 0 0 1.94 1.94c1.74.56 7.86.56 7.86.56s6.12 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94A28.8 28.8 0 0 0 22.5 12a28.8 28.8 0 0 0-.7-3.999zM9.75 15.02V8.98l5.25 3.02-5.25 3.02z"/></svg>YouTube</a></p>
+</footer>
+
+</body>
+</html>
